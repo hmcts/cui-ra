@@ -9,7 +9,9 @@ def component = "ra"
 def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
 withPipeline(type, product, component) {
+  env.YARN_ENABLE_IMMUTABLE_INSTALLS = false
   afterAlways('build') {
+    yarnBuilder.yarn('install')
     yarnBuilder.yarn('rebuild puppeteer')
     yarnBuilder.yarn('build')
   }
