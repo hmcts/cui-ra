@@ -10,8 +10,13 @@ def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
 withPipeline(type, product, component) {
   env.YARN_ENABLE_IMMUTABLE_INSTALLS = false
-  disableLegacyDeployment()
+
+  afterAlways('checkout') {
+    sh "yarn cache clean"
+  }
+
   afterAlways('build') {
+    yarnBuilder.yarn('setup')
     yarnBuilder.yarn('rebuild puppeteer')
     yarnBuilder.yarn('build')
   }
