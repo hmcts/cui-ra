@@ -7,13 +7,10 @@ USER hmcts
 
 COPY --chown=hmcts:hmcts . .
 
-RUN yarn install --production \
-  && yarn cache clean
-
 # ---- Build image ----
 FROM base as build
 
-RUN yarn install && yarn build:prod && \
+RUN yarn build:prod && \
     rm -rf webpack/ webpack.config.js
 
 # ---- Runtime image ----
