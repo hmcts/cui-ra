@@ -1,11 +1,11 @@
 nodejs:
   applicationPort: 3100
-  aadIdentityName: cui
-  ingressHost: cui-ra.{{ .Values.global.environment }}.platform.hmcts.net
-  image: 'hmctspublic.azurecr.io/cui/ra:latest'
+  aadIdentityName: rpe
+  ingressHost: rpe-expressjs-template.{{ .Values.global.environment }}.platform.hmcts.net
+  image: 'hmctspublic.azurecr.io/rpe/expressjs-template:latest'
   #  Uncomment once the vault containing the app insights key has been set up
   #  keyVaults:
-  #    cui:
+  #    rpe:
   #      secrets:
   #        - AppInsightsInstrumentationKey
   environment:
