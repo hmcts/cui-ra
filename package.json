@@ -89,7 +89,7 @@
     "husky": "^8.0.1",
     "jest": "^29.0.3",
     "jest-html-reporter": "^3.7.0",
-    "lint-staged": "^13.0.3",
+    "lint-staged": "^13.2.2",
     "mini-css-extract-plugin": "^2.6.1",
     "nock": "^13.2.9",
     "nodemon": "^2.0.19",
@@ -113,12 +113,6 @@
   "lint-staged": {
     "*.{js,ts}": "eslint --cache --fix",
     "*.{js,ts,css,md,html,json}": "prettier --write"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint",
-      "pre-push": "yarn tests && yarn test:routes"
-    }
   },
   "packageManager": "yarn@3.5.1"
 }
