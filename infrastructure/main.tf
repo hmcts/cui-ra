@@ -4,6 +4,8 @@ provider "azurerm" {
 
 locals {
   app_full_name = "${var.product}-${var.component}"
+  aseName = "core-compute-${var.env}"
+  vaultName = "${var.product}-${var.env}"
 }
 
 resource "azurerm_resource_group" "rg" {
