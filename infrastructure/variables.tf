@@ -1,8 +1,10 @@
 // Infrastructural variables
 variable "product" {
+    default = "cui"
 }
 
 variable "component" {
+    default = "ra"
 }
 
 variable "env" {
@@ -25,4 +27,9 @@ variable "jenkins_AAD_objectId" {
 }
 
 variable "subscription" {
+}
+
+variable "appinsights_location" {
+  default     = "West Europe"
+  description = "Location for Application Insights"
 }
