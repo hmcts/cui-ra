@@ -5377,7 +5377,7 @@ __metadata:
     nodemon: ^2.0.19
     nunjucks: ^3.2.3
     pa11y: ^6.2.3
-    playwright: ^1.25.2
+    playwright: ^1.34.3
     prettier: ^2.7.1
     request: ^2.88.2
     require-directory: ^2.1.1
@@ -10294,7 +10294,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright@npm:^1.25.2":
+"playwright@npm:^1.34.3":
   version: 1.34.3
   resolution: "playwright@npm:1.34.3"
   dependencies:
