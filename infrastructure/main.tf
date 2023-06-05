@@ -46,6 +46,11 @@ data "azurerm_subnet" "core_infra_redis_subnet" {
   resource_group_name = "core-infra-${var.env}"
 }
 
+data "azurerm_key_vault" "key_vault" {
+  name                = "${var.product}-${var.env}" # update these values if required
+  resource_group_name = azurerm_resource_group.rg.name # update these values if required
+}
+
 data "azurerm_key_vault" "s2s_vault" {
   name                = "s2s-${var.env}"
   resource_group_name = "rpe-service-auth-provider-${var.env}"
