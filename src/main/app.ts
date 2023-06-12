@@ -22,6 +22,7 @@ const developmentMode = env === 'development';
 
 export const app = express();
 app.locals.ENV = env;
+app.locals.appRoot = path.resolve(path.join(__dirname, '..', '..'));
 
 const logger = Logger.getLogger('app');
 
