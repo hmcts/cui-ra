@@ -1,5 +1,3 @@
-//import { execSync } from 'child_process';
-
 import path from 'path';
 
 import * as propertiesVolume from '@hmcts/properties-volume';
