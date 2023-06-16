@@ -1,56 +1,45 @@
-import axios, { AxiosResponse } from 'axios';
-import config from 'config';
+import { Logger } from './../interfaces';
+
+import autobind from 'autobind-decorator';
+import { AxiosInstance } from 'axios';
 import { authenticator } from 'otplib';
 
+@autobind
 export class S2S {
-  private readonly service: string;
-  private readonly secret: string;
-  private readonly url: string;
+  constructor(
+    private secret: string,
+    private service: string,
+    private client: AxiosInstance,
+    private readonly logger: Logger
+  ) {}
 
-  constructor() {
-    this.secret = config.get('services.s2s.secret');
-    this.url = config.get('services.s2s.endpoint');
-    this.service = config.get('serviceName');
-  }
-
-  public getToken(): string | null {
+  public async getToken(): Promise<string> {
     const oneTimePassword = authenticator.generate(this.secret);
     const microservice = this.service;
     const body = {
       microservice,
       oneTimePassword,
     };
-
-    axios
-      .post(new URL('/lease', this.url).toString(), body)
-      .then((response: AxiosResponse) => {
-        const responseData = JSON.stringify(response.data);
-        console.log(responseData);
-        return responseData;
-      })
-      .catch((error: AxiosResponse) => {
-        console.error('Error:', error);
-      });
-    return null;
+    try {
+      const response = await this.client.post('/lease', body);
+      return response.data;
+    } catch (error) {
+      this.logger.error('Failed to get S2S token');
+      throw error;
+    }
   }
 
-  public validateToken(token: string): string | null {
+  public async validateToken(token: string): Promise<string> {
     const headers = {
       'Content-Type': 'application/json',
       Authorization: token,
     };
-    axios
-      .post(new URL('/details', this.url).toString(), null, {
-        headers,
-      })
-      .then((response: AxiosResponse) => {
-        const responseData = JSON.stringify(response.data);
-        console.log(responseData);
-        return responseData;
-      })
-      .catch((error: AxiosResponse) => {
-        console.error('Error:', error);
-      });
-    return null;
+    try {
+      const response = await this.client.post('/details', null, { headers });
+      return response.data;
+    } catch (error) {
+      this.logger.error('S2S Token failed validation');
+      throw error;
+    }
   }
 }
