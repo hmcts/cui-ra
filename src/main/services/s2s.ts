@@ -22,7 +22,9 @@ export class S2S {
     };
     try {
       const response = await this.client.post('/lease', body);
-      if (typeof response.data === 'string') {return response.data;}
+      if (typeof response.data === 'string') {
+        return response.data;
+      }
       throw new Error('Response is not a string');
     } catch (error) {
       this.logger.error('Failed to get S2S token');
@@ -37,7 +39,9 @@ export class S2S {
     };
     try {
       const response = await this.client.post('/details', null, { headers });
-      if (typeof response.data === 'string') {return response.data;}
+      if (typeof response.data === 'string') {
+        return response.data;
+      }
       throw new Error('Response is not a string');
     } catch (error) {
       this.logger.error('S2S Token failed validation');
