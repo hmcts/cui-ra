@@ -3304,7 +3304,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/nunjucks@npm:^3.2.1":
+"@types/nunjucks@npm:^3.2.2":
   version: 3.2.2
   resolution: "@types/nunjucks@npm:3.2.2"
   checksum: e0fdc68f01635b34ea6f5e8845ed6d2e8d11be6347b2f28c8093636454e2401f02c26a2ad6aa459da56f2459f2d59bf72914b6e4774bcd058fa12e2ae5f0f6ef
@@ -5286,7 +5286,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"config@npm:^3.3.8":
+"config@npm:^3.3.9":
   version: 3.3.9
   resolution: "config@npm:3.3.9"
   dependencies:
@@ -5593,7 +5593,7 @@ __metadata:
     "@types/jest": ^29.4.0
     "@types/lodash": ^4.14.185
     "@types/node": ^18.7.18
-    "@types/nunjucks": ^3.2.1
+    "@types/nunjucks": ^3.2.2
     "@types/require-directory": ^2.1.2
     "@types/serve-favicon": ^2.5.3
     "@types/supertest": ^2.0.12
@@ -5610,7 +5610,7 @@ __metadata:
     chai-as-promised: ^7.1.1
     chokidar: ^3.5.3
     codeceptjs: ^3.3.6
-    config: ^3.3.8
+    config: ^3.3.9
     cookie-parser: ^1.4.6
     copy-webpack-plugin: 9.1.0
     css-loader: ^6.7.1
@@ -5621,7 +5621,7 @@ __metadata:
     eslint-plugin-import: ^2.26.0
     eslint-plugin-jest: ^27.0.4
     express: ^4.18.1
-    express-nunjucks: ^3.0.0
+    express-nunjucks: ^3.1.0
     glob: ^10.0.0
     govuk-frontend: 4.6.0
     helmet: ^7.0.0
@@ -5635,7 +5635,7 @@ __metadata:
     mini-css-extract-plugin: ^2.6.1
     nock: ^13.2.9
     nodemon: ^2.0.19
-    nunjucks: ^3.2.3
+    nunjucks: ^3.2.4
     otplib: ^12.0.1
     pa11y: ^6.2.3
     playwright: ^1.34.3
@@ -6632,15 +6632,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express-nunjucks@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "express-nunjucks@npm:3.0.0"
+"express-nunjucks@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "express-nunjucks@npm:3.1.0"
   dependencies:
     nunjucks-async-loader: ^2.0.0
   peerDependencies:
     express: ^4.18.2
     nunjucks: ^3.2.4
-  checksum: 3b1913c7719175038e59b9f13997cdfff1a0a328b86fc7e09ea54dbafd56a5d4e84e1b769bf223b35876d3fa92dc0d59ff40ef2154d287ac2c3899f76a1e815d
+  checksum: c145d1cfebcad1d263b8db91acbc86289d9a0cd27dcd32d3081ffbe5b489fea912e79f978942090c746d94ed677a828cd051bdf305d170a9e06981046c75225e
   languageName: node
   linkType: hard
 
@@ -10136,7 +10136,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nunjucks@npm:^3.2.3":
+"nunjucks@npm:^3.2.4":
   version: 3.2.4
   resolution: "nunjucks@npm:3.2.4"
   dependencies:
