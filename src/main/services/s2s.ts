@@ -14,11 +14,9 @@ export class S2S {
   ) {}
 
   public async getToken(): Promise<string> {
-    const oneTimePassword = authenticator.generate(this.secret);
-    const microservice = this.service;
     const body = {
-      microservice,
-      oneTimePassword,
+      microservice: this.service,
+      oneTimePassword: authenticator.generate(this.secret),
     };
     try {
       const response = await this.client.post('/lease', body);
