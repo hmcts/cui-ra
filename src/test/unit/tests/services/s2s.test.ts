@@ -21,20 +21,33 @@ describe('s2s service class', () => {
     expect(await service.getToken()).toEqual(expectedToken);
   });
 
-  test('Should throw and error when trying to get service token because the return is not a string', async () => {
+  test('Should fail to return a token string from Get ServiceToken', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    (axios.post as jest.Mock).mockImplementation(() =>
-      Promise.resolve({
-        data: {},
-      })
-    );
+    (axios.post as jest.Mock).mockImplementation(() => Promise.resolve(Object.assign({}, response, { status: 401 })));
 
-    const err = new Error('Response is not a string');
+    const err = new Error('Unauthorized');
 
     try {
       await service.getToken();
     } catch (error) {
-      console.debug(error);
+      expect(error).toEqual(err);
+    }
+  });
+
+  test('Should throw and error when trying to get service token because the return is not a string', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    (axios.post as jest.Mock).mockImplementation(() =>
+      Promise.resolve({
+        status: 200,
+        data: {},
+      })
+    );
+
+    const err = new Error('Response is not a valid string');
+
+    try {
+      await service.getToken();
+    } catch (error) {
       expect(error).toEqual(err);
     }
   });
@@ -56,20 +69,33 @@ describe('s2s service class', () => {
     expect(await service.validateToken(expectedToken)).toEqual(expectedToken);
   });
 
-  test('Should throw and error when trying to Validate Service Token because the return is not a string', async () => {
+  test('Validate Service Token un-successfully', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    (axios.post as jest.Mock).mockImplementation(() =>
-      Promise.resolve({
-        data: {},
-      })
-    );
+    (axios.post as jest.Mock).mockImplementation(() => Promise.resolve(Object.assign({}, response, { status: 401 })));
 
-    const err = new Error('Response is not a string');
+    const err = new Error('Invalid token');
 
     try {
       await service.validateToken(expectedToken);
     } catch (error) {
-      console.debug(error);
+      expect(error).toEqual(err);
+    }
+  });
+
+  test('Should throw and error when trying to Validate Service Token because the return is not a string', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    (axios.post as jest.Mock).mockImplementation(() =>
+      Promise.resolve({
+        status: 200,
+        data: {},
+      })
+    );
+
+    const err = new Error('Response is not a valid string');
+
+    try {
+      await service.validateToken(expectedToken);
+    } catch (error) {
       expect(error).toEqual(err);
     }
   });
