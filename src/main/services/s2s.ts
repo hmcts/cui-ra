@@ -13,12 +13,21 @@ export class S2S {
     private readonly logger: Logger
   ) {}
 
-  public async getToken(): Promise<string> {
-    const body = {
-      microservice: this.service,
-      oneTimePassword: authenticator.generate(this.secret),
-    };
+  public getOneTimeToken(): string {
     try {
+      return authenticator.generate(this.secret);
+    } catch (error) {
+      this.logger.error(error);
+      throw error;
+    }
+  }
+
+  public async getToken(): Promise<string> {
+    try {
+      const body = {
+        microservice: this.service,
+        oneTimePassword: this.getOneTimeToken(),
+      };
       const response = await this.client.post('/lease', body);
       if (response.status !== 200) {
         throw new Error('Unauthorized');

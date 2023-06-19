@@ -1,5 +1,6 @@
 import { S2S } from '../../../../main/services';
 import { mockAxios, mockLogger } from '../../mocks';
+import { authenticator } from 'otplib';
 
 const axios = mockAxios();
 const mockedLogger = mockLogger();
@@ -10,7 +11,8 @@ const response = {
   data: expectedToken,
 };
 
-const service = new S2S('randomstring', 'servicename', axios, mockedLogger);
+const secret = 'randomstring';
+const service = new S2S(secret, 'servicename', axios, mockedLogger);
 
 /* eslint-disable jest/expect-expect */
 describe('s2s service class', () => {
@@ -108,5 +110,13 @@ describe('s2s service class', () => {
     } catch (error) {
       expect(error).toEqual({ error: 'Internal Server Error' });
     }
+  });
+
+  test('Get one Time token', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+
+    const otp = authenticator.generate(secret);
+
+    expect(await service.getOneTimeToken()).toEqual(otp);
   });
 });
