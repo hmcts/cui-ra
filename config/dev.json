@@ -1,1 +1,12 @@
-{}
+{
+  "useCSRFProtection": true,
+  "appInsights": {
+    "instrumentationKey": false
+  },
+  "services": {
+    "s2s": {
+      "secret": false,
+      "endpoint": "http://rpe-service-auth-provider-aat.service.core-compute-aat.internal"
+    }
+  }
+}

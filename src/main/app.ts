@@ -2,6 +2,7 @@ import * as path from 'path';
 
 import { HTTPError } from './HttpError';
 import { AppInsights } from './modules/appinsights';
+import { Container } from './modules/awilix';
 import { Helmet } from './modules/helmet';
 import { Nunjucks } from './modules/nunjucks';
 import { PropertiesVolume } from './modules/properties-volume';
@@ -21,10 +22,12 @@ const developmentMode = env === 'development';
 
 export const app = express();
 app.locals.ENV = env;
+app.locals.appRoot = path.resolve(path.join(__dirname, '..', '..'));
 
 const logger = Logger.getLogger('app');
 
 new PropertiesVolume().enableFor(app);
+new Container().enableFor(app);
 new AppInsights().enable();
 new Nunjucks(developmentMode).enableFor(app);
 // secure the application by adding various HTTP headers to its responses

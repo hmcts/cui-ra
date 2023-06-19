@@ -2,5 +2,12 @@
   "useCSRFProtection": true,
   "appInsights": {
     "instrumentationKey": false
+  },
+  "serviceName": "cui_ra",
+  "services": {
+    "s2s": {
+      "secret": false,
+      "endpoint": "http://rpe-service-auth-provider-aat.service.core-compute-aat.internal"
+    }
   }
 }
