@@ -25,12 +25,7 @@ export class Container {
             baseURL: config.get('services.s2s.endpoint'),
           }),
         })),
-      //homeController: asClass(HomeController),
-      homeController: asClass(HomeController)
-        .singleton()
-        .inject(() => ({
-          S2S: container.resolve<S2S>('s2s'),
-        })),
+      homeController: asClass(HomeController),
     });
     app.locals.container = container;
   }
