@@ -6,6 +6,7 @@ import { Container } from './modules/awilix';
 import { Helmet } from './modules/helmet';
 import { Nunjucks } from './modules/nunjucks';
 import { PropertiesVolume } from './modules/properties-volume';
+import { Translations } from './modules/translations';
 
 import * as bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
@@ -27,9 +28,11 @@ app.locals.appRoot = path.resolve(path.join(__dirname, '..', '..'));
 const logger = Logger.getLogger('app');
 
 new PropertiesVolume().enableFor(app);
+const translations = new Translations();
+translations.enableFor(app);
 new Container().enableFor(app);
 new AppInsights().enable();
-new Nunjucks(developmentMode).enableFor(app);
+new Nunjucks(developmentMode, translations).enableFor(app);
 // secure the application by adding various HTTP headers to its responses
 new Helmet(developmentMode).enableFor(app);
 

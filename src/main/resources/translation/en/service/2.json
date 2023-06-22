@@ -1,0 +1,10 @@
+{
+  "2": {
+    "ra0001": {
+      "greeting": "Hello from flag 1 json service 2"
+    },
+    "ra0002": {
+      "greeting": "Hello from flag 2 json service 2"
+    }
+  }
+}
