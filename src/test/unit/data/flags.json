@@ -1,0 +1,214 @@
+{
+  "flags": [
+    {
+      "FlagDetails": {
+        "name": "Reasonable adjustment",
+        "name_cy": "Addasiad Rhesymol",
+        "hearingRelevant": "true",
+        "flagComment": "true",
+        "defaultStatus": "Requested",
+        "externallyAvailable": "true",
+        "flagCode": "RA0001",
+        "isParent": "true",
+        "Path": ["Party"],
+        "childFlags": [
+          {
+            "name": "Alternative formats",
+            "name_cy": "Translated welsh value CY",
+            "hearingRelevant": "true",
+            "flagComment": "true",
+            "defaultStatus": "Requested",
+            "externallyAvailable": "true",
+            "flagCode": "RA0002",
+            "isParent": "false",
+            "childFlags": [],
+            "Path": ["Party", "Reasonable adjustment"],
+            "listOfValuesLength": 0,
+            "listOfValues": []
+          },
+          {
+            "name": "Form support",
+            "name_cy": "Translated welsh value CY",
+            "hearingRelevant": "true",
+            "flagComment": "true",
+            "defaultStatus": "Requested",
+            "externallyAvailable": "true",
+            "flagCode": "RA0003",
+            "isParent": "false",
+            "childFlags": [],
+            "Path": ["Party", "Reasonable adjustment"],
+            "listOfValuesLength": 0,
+            "listOfValues": []
+          },
+          {
+            "name": "Hearing provision",
+            "name_cy": "Translated welsh value CY",
+            "hearingRelevant": "true",
+            "flagComment": "true",
+            "defaultStatus": "Requested",
+            "externallyAvailable": "true",
+            "flagCode": "RA0004",
+            "isParent": "true",
+            "Path": ["Party", "Reasonable adjustment"],
+            "childFlags": [
+              {
+                "name": "Hearing enhancement",
+                "name_cy": "Translated welsh value CY",
+                "hearingRelevant": "true",
+                "flagComment": "true",
+                "defaultStatus": "Requested",
+                "externallyAvailable": "true",
+                "flagCode": "RA0009",
+                "isParent": "true",
+                "Path": ["Party", "Reasonable adjustment"],
+                "childFlags": [
+                  {
+                    "name": "Hearing loop",
+                    "name_cy": "Translated welsh value CY",
+                    "hearingRelevant": "true",
+                    "flagComment": "true",
+                    "defaultStatus": "Requested",
+                    "externallyAvailable": "true",
+                    "flagCode": "RA0013",
+                    "isParent": "false",
+                    "Path": ["Party", "Reasonable adjustment", "Hearing provision", "Hearing enhancement"],
+                    "listOfValuesLength": 0,
+                    "listOfValues": []
+                  },
+                  {
+                    "name": "Induction loop",
+                    "name_cy": "Translated welsh value CY",
+                    "hearingRelevant": "true",
+                    "flagComment": "true",
+                    "defaultStatus": "Requested",
+                    "externallyAvailable": "true",
+                    "flagCode": "RA0014",
+                    "isParent": "false",
+                    "Path": ["Party", "Reasonable adjustment", "Hearing provision", "Hearing enhancement"],
+                    "listOfValuesLength": 0,
+                    "listOfValues": []
+                  },
+                  {
+                    "name": "Infrared system",
+                    "name_cy": "Translated welsh value CY",
+                    "hearingRelevant": "true",
+                    "flagComment": "true",
+                    "defaultStatus": "Requested",
+                    "externallyAvailable": "true",
+                    "flagCode": "RA0015",
+                    "isParent": "false",
+                    "Path": ["Party", "Reasonable adjustment", "Hearing provision", "Hearing enhancement"],
+                    "listOfValuesLength": 0,
+                    "listOfValues": []
+                  }
+                ],
+                "listOfValuesLength": 0,
+                "listOfValues": []
+              }
+            ]
+          },
+          {
+            "name": "Language support",
+            "name_cy": "Translated welsh value CY",
+            "hearingRelevant": "true",
+            "flagComment": "true",
+            "defaultStatus": "Requested",
+            "externallyAvailable": "true",
+            "flagCode": "RA0005",
+            "isParent": "true",
+            "Path": ["Party", "Reasonable adjustment"],
+            "childFlags": [
+              {
+                "name": "Sign language interpreter",
+                "name_cy": "Translated welsh value CY",
+                "hearingRelevant": "true",
+                "flagComment": "true",
+                "defaultStatus": "Requested",
+                "externallyAvailable": "true",
+                "flagCode": "RA0010",
+                "isParent": "false",
+                "Path": ["Party", "Reasonable adjustment", "Language Support"],
+                "listOfValuesLength": 0,
+                "listOfValues": []
+              },
+              {
+                "name": "Other",
+                "name_cy": "Translated welsh value CY",
+                "hearingRelevant": "true",
+                "flagComment": "true",
+                "defaultStatus": "Requested",
+                "externallyAvailable": "true",
+                "flagCode": "RA0011",
+                "isParent": "false",
+                "Path": ["Party", "Reasonable adjustment", "Language Support"],
+                "childFlags": [],
+                "listOfValuesLength": 0,
+                "listOfValues": []
+              }
+            ],
+            "listOfValuesLength": 0,
+            "listOfValues": []
+          },
+          {
+            "name": "Additional support",
+            "name_cy": "Translated welsh value CY",
+            "hearingRelevant": "true",
+            "flagComment": "true",
+            "defaultStatus": "Requested",
+            "externallyAvailable": "true",
+            "flagCode": "RA0006",
+            "isParent": "false",
+            "Path": ["Party", "Reasonable adjustment"],
+            "childFlags": [],
+            "listOfValuesLength": 0,
+            "listOfValues": []
+          },
+          {
+            "name": "Third party support",
+            "name_cy": "Translated welsh value CY",
+            "hearingRelevant": "true",
+            "flagComment": "true",
+            "defaultStatus": "Requested",
+            "externallyAvailable": "true",
+            "flagCode": "RA0007",
+            "isParent": "false",
+            "Path": ["Party", "Reasonable adjustment"],
+            "childFlags": [],
+            "listOfValuesLength": 0,
+            "listOfValues": []
+          },
+          {
+            "name": "Mobility support",
+            "name_cy": "Translated welsh value CY",
+            "hearingRelevant": "true",
+            "flagComment": "true",
+            "defaultStatus": "Requested",
+            "externallyAvailable": "true",
+            "flagCode": "RA0008",
+            "isParent": "true",
+            "Path": ["Party", "Reasonable adjustment"],
+            "childFlags": [
+              {
+                "name": "Wheelchair access",
+                "name_cy": "Translated welsh value CY",
+                "hearingRelevant": "true",
+                "flagComment": "true",
+                "defaultStatus": "Requested",
+                "externallyAvailable": "true",
+                "flagCode": "RA0012",
+                "isParent": "false",
+                "Path": ["Party", "Reasonable adjustment", "Mobility support"],
+                "listOfValuesLength": 0,
+                "listOfValues": []
+              }
+            ],
+            "listOfValuesLength": 0,
+            "listOfValues": []
+          }
+        ],
+        "listOfValuesLength": 0,
+        "listOfValues": []
+      }
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+import { ReferenceData, ReferenceDataFlagType, ServiceAuth } from './../interfaces';
+
 import autobind from 'autobind-decorator';
 import { AxiosInstance, HttpStatusCode } from 'axios';
 
@@ -6,11 +8,15 @@ export enum flagResourceType {
   CASE = 'CASE',
 }
 
-export type QueryParams = {
-  [key: string]: string | number;
-};
+export class RefDataResponseDetail {
+  public FlagDetails?: RefDataFlagType;
+}
 
-export class FlagType {
+export class RefDataResponse {
+  public flags: RefDataResponseDetail[] = [];
+}
+
+export class RefDataFlagType implements ReferenceDataFlagType {
   public name = '';
   public name_cy = '';
   public hearingRelevant = false;
@@ -18,22 +24,29 @@ export class FlagType {
   public defaultStatus: string | undefined;
   public externallyAvailable = false;
   public flagCode = '';
-  public isParent = 'false';
+  public isParent = false;
   // Note: property is deliberately spelt "Path" and not "path" because the Reference Data Common API returns the former
   public Path: string[] = [];
-  public childFlags: FlagType[] = [];
+  public childFlags: RefDataFlagType[] = [];
   public listOfValuesLength = 0;
   public listOfValues: { key: string; value: string }[] = [];
 }
 
 @autobind
-export class RefData {
-  constructor(private client: AxiosInstance) {}
+export class RefData implements ReferenceData {
+  constructor(private client: AxiosInstance, private serviceAuth: ServiceAuth) {}
 
-  public async getFlags(serviceId: string, flagType?: flagResourceType, welsh?: boolean): Promise<FlagType> {
+  public async getFlags(
+    accessToken: string,
+    serviceId: string,
+    flagType: flagResourceType,
+    welsh = false
+  ): Promise<RefDataFlagType> {
+    const ServiceToken = await this.serviceAuth.getToken();
+
     const path = `/flag/${serviceId}`;
 
-    const queryParams: QueryParams = {};
+    const queryParams: { [key: string]: string | number } = {};
 
     if (typeof flagType !== 'undefined') {
       Object.assign(queryParams, { 'flag-type': flagType });
@@ -51,15 +64,20 @@ export class RefData {
         .join('&');
     }
 
-    const response = await this.client.get(`${path}?${queryString}`);
+    const response = await this.client.get(`${path}?${queryString}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        ServiceAuthorization: 'Bearer ' + ServiceToken,
+        Authorization: 'Bearer ' + accessToken,
+      },
+    });
 
     if (
       response.status !== HttpStatusCode.Ok ||
       !response.data ||
       !response.data.flags ||
       !response.data.flags.length ||
-      !response.data.flags[0].FlagDetails ||
-      !response.data.flags[0].FlagDetails.length
+      !response.data.flags[0].FlagDetails
     ) {
       // Note: Reference Data Common API appears to respond with a 404 error rather than send an empty response,
       // so this may be redundant

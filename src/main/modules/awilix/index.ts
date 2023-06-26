@@ -1,5 +1,5 @@
 import { HomeController } from './../../controllers';
-import { S2S } from './../../services';
+import { RefData, S2S } from './../../services';
 
 import { InjectionMode, asClass, asValue, createContainer } from 'awilix';
 import axios from 'axios';
@@ -16,13 +16,20 @@ export class Container {
     });
     container.register({
       logger: asValue(logger),
-      s2s: asClass(S2S)
+      serviceAuth: asClass(S2S)
         .singleton()
         .inject(() => ({
           secret: config.get('services.s2s.secret'),
           service: config.get('serviceName'),
           client: axios.create({
             baseURL: config.get('services.s2s.endpoint'),
+          }),
+        })),
+      refdata: asClass(RefData)
+        .singleton()
+        .inject(() => ({
+          client: axios.create({
+            baseURL: config.get('services.refdata.endpoint'),
           }),
         })),
       homeController: asClass(HomeController),
