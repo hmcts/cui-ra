@@ -14,7 +14,7 @@ export interface ReferenceDataFlagType {
   listOfValues: { key: string; value: string }[];
 }
 
-interface flagResourceType {
+export interface FlagResourceType {
   [index: number]: string;
 }
 
@@ -22,7 +22,7 @@ export interface ReferenceData {
   getFlags(
     accessToken: string,
     serviceId: string,
-    flagType: flagResourceType,
+    flagType: FlagResourceType,
     welsh: boolean
   ): Promise<ReferenceDataFlagType>;
 }

@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { RefData, flagResourceType } from '../../../../main/services';
+import { RefData, flagResourceType, RefDataFlagType } from '../../../../main/services';
 import { mockAxios, mockServiceAuth } from '../../mocks';
 
 const axios = mockAxios();
@@ -72,5 +72,14 @@ describe('refdata service class', () => {
     } catch (error) {
       expect(error).toEqual(err);
     }
+  });
+
+  test('should initialize flag type and set name', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    const name = 'flag';
+    let flag = new RefDataFlagType();
+    flag.name = name;
+
+    expect(flag.name).toEqual(name);
   });
 });
