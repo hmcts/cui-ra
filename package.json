@@ -20,7 +20,11 @@
     "test:smoke": "NODE_TLS_REJECT_UNAUTHORIZED=0 jest -c jest.smoke.config.js",
     "test:functional": "NODE_TLS_REJECT_UNAUTHORIZED=0 codeceptjs --config ./src/test/functional/codecept.conf.js run --steps",
     "cichecks": "yarn build && yarn rebuild puppeteer && yarn lint && yarn test && yarn test:routes && yarn test:a11y",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "pvmount:demo": "REMOTE_ENV=cui-demo NAMESPACE=cui node bin/mount-property-volume.js",
+    "pvmount:aat": "REMOTE_ENV=cui-aat NAMESPACE=cui node bin/mount-property-volume.js",
+    "pvmount:perftest": "REMOTE_ENV=cui-perftest NAMESPACE=cui node bin/mount-property-volume.js",
+    "pvmount:ithc": "REMOTE_ENV=cui-ithc NAMESPACE=cui node bin/mount-property-volume.js"
   },
   "dependencies": {
     "@hmcts/info-provider": "^1.0.0",
@@ -70,6 +74,8 @@
     "typescript": "^5.0.0"
   },
   "devDependencies": {
+    "@azure/identity": "^3.2.2",
+    "@azure/keyvault-secrets": "^4.7.0",
     "@babel/core": "^7.19.0",
     "@babel/eslint-parser": "^7.18.9",
     "@babel/preset-env": "^7.19.0",

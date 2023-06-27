@@ -7,6 +7,9 @@
     "s2s": {
       "secret": false,
       "endpoint": "http://rpe-service-auth-provider-aat.service.core-compute-aat.internal"
+    },
+    "refdata": {
+      "endpoint": "http://rd-commondata-api-aat.service.core-compute-aat.internal"
     }
   }
 }

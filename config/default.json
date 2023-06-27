@@ -7,7 +7,10 @@
   "services": {
     "s2s": {
       "secret": false,
-      "endpoint": "http://rpe-service-auth-provider-aat.service.core-compute-aat.internal"
+      "endpoint": "http://localhost:4502"
+    },
+    "refdata": {
+      "endpoint": "http://rd-commondata-api-aat.service.core-compute-aat.internal"
     }
   }
 }
