@@ -79,7 +79,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:27.2.2"],\
             ["express", "npm:4.18.2"],\
             ["express-nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.1.0"],\
-            ["glob", "npm:10.2.7"],\
+            ["glob", "npm:10.3.0"],\
             ["govuk-frontend", "npm:4.6.0"],\
             ["helmet", "npm:7.0.0"],\
             ["html-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.5.3"],\
@@ -7812,7 +7812,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:27.2.2"],\
             ["express", "npm:4.18.2"],\
             ["express-nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.1.0"],\
-            ["glob", "npm:10.2.7"],\
+            ["glob", "npm:10.3.0"],\
             ["govuk-frontend", "npm:4.6.0"],\
             ["helmet", "npm:7.0.0"],\
             ["html-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.5.3"],\
@@ -9762,10 +9762,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["glob", [\
-        ["npm:10.2.7", {\
-          "packageLocation": "./.yarn/cache/glob-npm-10.2.7-25e89f4e5c-555205a746.zip/node_modules/glob/",\
+        ["npm:10.3.0", {\
+          "packageLocation": "./.yarn/cache/glob-npm-10.3.0-da3187b4ef-6fa4ac0a86.zip/node_modules/glob/",\
           "packageDependencies": [\
-            ["glob", "npm:10.2.7"],\
+            ["glob", "npm:10.3.0"],\
             ["foreground-child", "npm:3.1.1"],\
             ["jackspeak", "npm:2.2.0"],\
             ["minimatch", "npm:9.0.1"],\
