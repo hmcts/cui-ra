@@ -5496,6 +5496,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cui-ra@workspace:."
   dependencies:
+    "@azure/identity": ^3.2.2
+    "@azure/keyvault-secrets": ^4.7.0
     "@babel/core": ^7.19.0
     "@babel/eslint-parser": ^7.18.9
     "@babel/preset-env": ^7.19.0
