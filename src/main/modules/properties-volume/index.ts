@@ -14,6 +14,8 @@ export class PropertiesVolume {
     }
     this.setSecret('secrets.cui.AppInsightsInstrumentationKey', 'appInsights.instrumentationKey');
     this.setSecret('secrets.cui.s2s-secret', 'services.s2s.secret');
+
+    this.setSecret('secrets.cui.redis-access-key', 'session.redis.key');
   }
 
   private setSecret(fromPath: string, toPath: string): void {

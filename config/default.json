@@ -4,6 +4,14 @@
     "instrumentationKey": false
   },
   "serviceName": "cui_ra",
+  "session":{
+    "secret":"local",
+    "maxAge": 1260000,
+    "redis": {
+      "host":"http://localhost:6379",
+      "key": false
+    }
+  },
   "services": {
     "s2s": {
       "secret": false,
