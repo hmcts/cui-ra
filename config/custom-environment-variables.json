@@ -1,0 +1,16 @@
+{
+  "serviceName": "cui_ra",
+  "session": {
+    "redis": {
+      "host": "REDIS_HOST"
+    }
+  },
+  "services": {
+    "s2s": {
+      "endpoint": "SERVICES_S2S_ENDPOINT"
+    },
+    "refdata": {
+      "endpoint": "SERVICES_REFDATA_ENDPOINT"
+    }
+  }
+}
