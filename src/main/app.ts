@@ -1,12 +1,16 @@
 import * as path from 'path';
 
 import { HTTPError } from './HttpError';
-import { AppInsights } from './modules/appinsights';
-import { Container } from './modules/awilix';
-import { Helmet } from './modules/helmet';
-import { Nunjucks } from './modules/nunjucks';
-import { PropertiesVolume } from './modules/properties-volume';
-import { Translation } from './modules/translation';
+import {
+  AppInsights,
+  Container,
+  HealthCheck,
+  Helmet,
+  Nunjucks,
+  PropertiesVolume,
+  SessionStorage,
+  Translation,
+} from './modules';
 
 import * as bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
@@ -27,20 +31,23 @@ app.locals.appRoot = path.resolve(path.join(__dirname, '..', '..'));
 
 const logger = Logger.getLogger('app');
 
-new PropertiesVolume().enableFor(app);
-new Container().enableFor(app);
-new AppInsights().enable();
-new Translation().enableFor(app);
-new Nunjucks(developmentMode).enableFor(app);
-// secure the application by adding various HTTP headers to its responses
-new Helmet(developmentMode).enableFor(app);
-
 app.use(favicon(path.join(__dirname, '/public/assets/images/favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+new PropertiesVolume().enableFor(app);
+new Container().enableFor(app, logger);
+new AppInsights().enable();
+new SessionStorage().enableFor(app, logger);
+new Translation().enableFor(app);
+new Nunjucks(developmentMode).enableFor(app);
+// secure the application by adding various HTTP headers to its responses
+new Helmet(developmentMode).enableFor(app);
+new HealthCheck().enableFor(app);
+
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use((req, res, next) => {
   res.setHeader('Cache-Control', 'no-cache, max-age=0, must-revalidate, no-store');
   next();
