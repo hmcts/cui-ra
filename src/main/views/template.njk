@@ -4,6 +4,55 @@
   {% include "webpack/css.njk" %}
 {% endblock %}
 
+{% block header %}
+  {{ govukHeader({
+    serviceName: _t('header.title')
+  }) }}
+{% endblock %}
+
+{% block main %}
+  <div class="govuk-width-container {{ containerClasses }}">
+    {% block beforeContent %}{% endblock %}
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+      {% block content %}{% endblock %}
+      {{ _t('contact.content') | safe }}
+    </main>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  {{ govukFooter({
+    meta: {
+      items: [
+        {
+          href: "#",
+          text: _t('footer.cookies')
+        },
+        {
+          href: "#",
+          text: _t('footer.privacy_policy')
+        },
+        {
+          href: "#",
+          text: _t('footer.terms_and_conditions')
+        },
+        {
+          href: "#",
+          text: _t('footer.help_using_gov_uk')
+        },
+        {
+          href: "#",
+          text: _t('footer.contact_us')
+        },
+        {
+          href: "#",
+          text: _t('footer.accessibility_statement')
+        }
+      ]
+    }
+  }) }}
+{% endblock %}
+
 {% block bodyEnd %}
   {# Run JavaScript at end of the <body>, to avoid blocking the initial render. #}
   {% include "webpack/js.njk" %}
