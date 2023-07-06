@@ -1,4 +1,5 @@
 import { HomeController } from './../../controllers';
+import { Logger } from './../../interfaces';
 import { RefData, S2S } from './../../services';
 
 import { InjectionMode, asClass, asValue, createContainer } from 'awilix';
@@ -6,11 +7,8 @@ import axios from 'axios';
 import config from 'config';
 import { Application } from 'express';
 
-const { Logger } = require('@hmcts/nodejs-logging');
-const logger = Logger.getLogger('app');
-
 export class Container {
-  public enableFor(app: Application): void {
+  public enableFor(app: Application, logger: Logger): void {
     const container = createContainer({
       injectionMode: InjectionMode.CLASSIC,
     });

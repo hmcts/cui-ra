@@ -1,1 +1,6 @@
-{}
+{
+  "flag_0001": "flag 0001 text from en flags.json v3 - WELSH",
+  "deeper": {
+    "flag_0002": "flag 0002 text from en flags.json v3 - WELSH"
+  }
+}

@@ -4,10 +4,18 @@
     "instrumentationKey": false
   },
   "serviceName": "cui_ra",
+  "session": {
+    "secret": "local",
+    "maxAge": 1260000,
+    "redis": {
+      "host": "http://localhost:6379",
+      "key": ""
+    }
+  },
   "services": {
     "s2s": {
-      "secret": false,
-      "endpoint": "http://localhost:4502"
+      "secret": "",
+      "endpoint": "http://rpe-service-auth-provider-aat.service.core-compute-aat.internal"
     },
     "refdata": {
       "endpoint": "http://rd-commondata-api-aat.service.core-compute-aat.internal"
