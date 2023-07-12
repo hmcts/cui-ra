@@ -1,7 +1,65 @@
+{% from "./govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
 {% extends "govuk/template.njk" %}
 
 {% block head %}
   {% include "webpack/css.njk" %}
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+    serviceName: _t('header.title')
+  }) }}
+{% endblock %}
+
+{% set feedbackHtml %}
+This is a new service – your <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/your_support/?pageurl={{ fullUrl }}">feedback</a> will help us to improve it.
+{% endset -%}
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Beta"
+    },
+    html: feedbackHtml
+  }) }}
+{% endblock %}
+
+{% block content %}
+  {% block mainContent %}{% endblock %}
+  {{ _t('contact.content') | safe }}
+{% endblock %}
+
+{% block footer %}
+  {{ govukFooter({
+    meta: {
+      items: [
+        {
+          href: "#",
+          text: _t('footer.cookies')
+        },
+        {
+          href: "#",
+          text: _t('footer.privacy_policy')
+        },
+        {
+          href: "#",
+          text: _t('footer.terms_and_conditions')
+        },
+        {
+          href: "#",
+          text: _t('footer.help_using_gov_uk')
+        },
+        {
+          href: "#",
+          text: _t('footer.contact_us')
+        },
+        {
+          href: "#",
+          text: _t('footer.accessibility_statement')
+        }
+      ]
+    }
+  }) }}
 {% endblock %}
 
 {% block bodyEnd %}

@@ -18,6 +18,7 @@ export class Nunjucks {
 
     app.use((req, res, next) => {
       res.locals.pagePath = req.path;
+      res.locals.fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
       res.locals._t = (key: string) => {
         const serviceId = 'PFL'; // The service ID will need to be pulled from the cache
 

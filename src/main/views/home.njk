@@ -1,8 +1,12 @@
 {% extends "template.njk" %}
 
-{% block content %}
+{% block mainContent %}
   <h1 class="govuk-heading-xl">Default page template</h1>
   <p>From Resource File: {{ _t('helloworld') }}</p>
+  <p>Sign out from common file: {{ _t('header1.sign_out') }} </p>
+  <p>Other from common file: {{ _t('header1.other') }} </p>
+  <p>Footer cookies from common file: {{ _t('footer.cookies') }} </p>
+  <p>From common file: {{ _t('helloworld_5') }}</p>
   <p>Flag 1: {{ _t('flag_0001') }}</p>
   <p>Flag 2: {{ _t('deeper.flag_0002') }}</p>
   <p>OTHER</p>
