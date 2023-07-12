@@ -1,5 +1,17 @@
 {
-  "helloworld": "helloworld text loaded from en common.json v3",
+  "helloworld_5": "helloworld text loaded from en common.json v3",
   "phase": "Beta",
-  "feedback": "This is a new service – your <a href=\"{smartSurveyFeedbackUrl}?pageurl={currentPageUrl}\" class=\"govuk-link\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"Feedback: This link will open in a new tab. You'll need to return to this tab to continue with your application.\">feedback</a> will help us to improve it."
+  "feedback": "This is a new service – your <a href=\"{smartSurveyFeedbackUrl}?pageurl={currentPageUrl}\" class=\"govuk-link\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"Feedback: This link will open in a new tab. You'll need to return to this tab to continue with your application.\">feedback</a> will help us to improve it.",
+  "header1": {
+    "sign_out": "Sign out",
+    "other": "Some other header text"
+  },
+  "footer": {
+    "cookies": "Cookies",
+    "privacy_policy": "Privacy Policy",
+    "terms_and_conditions": "Terms and Conditions",
+    "help_using_gov_uk": "Help using GOV.UK",
+    "contact_us": "Contact us",
+    "accessibility_statement": "Accessibility statement"
+  }
 }
