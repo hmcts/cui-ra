@@ -1,3 +1,5 @@
+{% from "./govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
 {% extends "govuk/template.njk" %}
 
 {% block head %}
@@ -10,14 +12,21 @@
   }) }}
 {% endblock %}
 
-{% block main %}
-  <div class="govuk-width-container {{ containerClasses }}">
-    {% block beforeContent %}{% endblock %}
-    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
-      {% block content %}{% endblock %}
-      {{ _t('contact.content') | safe }}
-    </main>
-  </div>
+{% set feedbackHtml %}
+This is a new service – your <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/your_support/?pageurl={{ fullUrl }}">feedback</a> will help us to improve it.
+{% endset -%}
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Beta"
+    },
+    html: feedbackHtml
+  }) }}
+{% endblock %}
+
+{% block content %}
+  {% block mainContent %}{% endblock %}
+  {{ _t('contact.content') | safe }}
 {% endblock %}
 
 {% block footer %}
