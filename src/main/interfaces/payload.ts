@@ -3,7 +3,7 @@ export interface PayloadYesNo {
 }
 
 export interface PayloadBase {
-  serviceId: string;
+  hmctsServiceId: string;
   serviceToken: string;
   idamToken: string;
   masterFlagCode: string;
@@ -11,7 +11,6 @@ export interface PayloadBase {
 }
 
 export interface PayloadInbound extends PayloadBase {
-  language: string;
   callbackUrl: string;
   logoutUrl: string;
   existingFlags: PayloadDetail;
