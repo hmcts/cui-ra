@@ -89,13 +89,12 @@ export class DataProcessor {
 
     //loop and add children
     if (flag.childFlags && flag.childFlags.length > 0) {
-      flag.childFlags.map((child: ReferenceDataFlagType) => {
+      flag.childFlags.forEach((child: ReferenceDataFlagType) => {
         data.push(...this.process(dateTime, child, id));
       });
       //add other item
       data.push(...this.process(dateTime, this.generateOther(flag), id));
     }
-
     return data;
   }
 }
