@@ -37,7 +37,7 @@ export class DataManager<T> implements DataManagerInterface<T> {
 
   public save(data: Partial<T>[]): void {
     //Map new partial data back to full collection
-    
+
     data.forEach((load: Partial<T>) => {
       const dataItem = this.data.find(item => item['id'] === load['id']);
       if (!dataItem) {
