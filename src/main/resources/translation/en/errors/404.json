@@ -1,7 +1,7 @@
 {
-    "404": {
-        "heading": "Page not found",
-        "paragraph_1": "If you typed the web address, check it is correct.",
-        "paragraph_2": "If you pasted the web address, check you copied the entire address."
-    }
+  "404": {
+    "heading": "Page not found",
+    "paragraph_1": "If you typed the web address, check it is correct.",
+    "paragraph_2": "If you pasted the web address, check you copied the entire address."
+  }
 }
