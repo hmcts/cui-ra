@@ -1,18 +1,18 @@
 nav.single-item-navigation {
-    @include govuk-media-query($from: desktop) {
-        float: right;
-        margin-right: govuk-spacing(2);
-    }
+  @include govuk-media-query($from: desktop) {
+    float: right;
+    margin-right: govuk-spacing(2);
+  }
 
-    text-align: right;
+  text-align: right;
 
-    ul {
-        li.govuk-header__navigation-item--active {
-            a:link,
-            a:hover,
-            a:visited {
-                color: govuk-colour("white");
-            }
-        }
+  ul {
+    li.govuk-header__navigation-item--active {
+      a:link,
+      a:hover,
+      a:visited {
+        color: govuk-colour('white');
+      }
     }
+  }
 }
