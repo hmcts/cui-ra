@@ -60,7 +60,7 @@
                 "externallyAvailable": "true",
                 "flagCode": "RA0009",
                 "isParent": "true",
-                "Path": ["Party", "Reasonable adjustment"],
+                "Path": ["Party", "Reasonable adjustment", "Hearing provision"],
                 "childFlags": [
                   {
                     "name": "Hearing loop",
