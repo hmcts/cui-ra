@@ -64,6 +64,8 @@ export class Translation {
   private mergeObjects(target, ...sources) {
     sources.forEach(source => {
       Object.keys(source).forEach(key => {
+        if (!source.hasOwnProperty(key)) {return;}
+        if (key === '__proto__' || key === 'constructor') {return;}
         const s_val = source[key];
         const t_val = target[key];
         target[key] =
