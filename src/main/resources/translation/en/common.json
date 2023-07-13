@@ -8,5 +8,8 @@
     "help_using_gov_uk": "Help using GOV.UK",
     "contact_us": "Contact us",
     "accessibility_statement": "Accessibility statement"
+  },
+  "header": {
+    "menu-text": "Menu"
   }
 }
