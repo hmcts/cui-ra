@@ -8,7 +8,16 @@
 
 {% block header %}
   {{ govukHeader({
-    serviceName: _t('header.title')
+    serviceName: _t('header.title'),
+    navigation: [
+      {
+        href: "#",
+        text: _t('header.sign_out'),
+        active: true
+      }
+    ],
+    navigationClasses: "single-item-navigation",
+    menuButtonText: _t('header.menu-text')
   }) }}
 {% endblock %}
 
