@@ -42,7 +42,7 @@ export class Translation {
   }
 
   private loadTranslations(directory: string): object {
-    const translations = {};
+    let translations = {};
 
     const files = fs.readdirSync(directory);
     files.forEach((file: string) => {
@@ -51,13 +51,27 @@ export class Translation {
 
       if (stats.isDirectory()) {
         const dirTranslations = this.loadTranslations(filePath);
-        Object.assign(translations, dirTranslations);
+        this.mergeObjects(translations, dirTranslations);
       } else if (file.endsWith('.json')) {
         const translationData = require(filePath);
-        Object.assign(translations, translationData);
+        this.mergeObjects(translations, translationData);
       }
     });
 
     return translations;
+  }
+
+  private mergeObjects (target, ...sources) {
+    sources.forEach(source => {
+      Object.keys(source).forEach(key => {
+        const s_val = source[key]
+        const t_val = target[key]
+        target[key] = t_val && s_val && typeof t_val === 'object' && typeof s_val === 'object'
+                    ? this.mergeObjects(t_val, s_val)
+                    : s_val
+      })
+    })
+    
+    return target
   }
 }
