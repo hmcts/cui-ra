@@ -51,13 +51,34 @@ export class Translation {
 
       if (stats.isDirectory()) {
         const dirTranslations = this.loadTranslations(filePath);
-        Object.assign(translations, dirTranslations);
+        this.mergeObjects(translations, dirTranslations);
       } else if (file.endsWith('.json')) {
         const translationData = require(filePath);
-        Object.assign(translations, translationData);
+        this.mergeObjects(translations, translationData);
       }
     });
 
     return translations;
+  }
+
+  private mergeObjects(target, ...sources) {
+    sources.forEach(source => {
+      Object.keys(source).forEach(key => {
+        if (!source.hasOwnProperty(key)) {
+          return;
+        }
+        if (key === '__proto__' || key === 'constructor') {
+          return;
+        }
+        const s_val = source[key];
+        const t_val = target[key];
+        target[key] =
+          t_val && s_val && typeof t_val === 'object' && typeof s_val === 'object'
+            ? this.mergeObjects(t_val, s_val)
+            : s_val;
+      });
+    });
+
+    return target;
   }
 }
