@@ -1,0 +1,96 @@
+{% extends "template.njk" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: _t('back'),
+        href: headers['referer']
+    }) }}
+{% endblock %}
+
+{% block mainContent %}
+  <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">
+                <span class="govuk-caption-l">Reasonable adjustments {{ _r(_t('for_name'), { name:'Ben' }) }}</span>
+                Do you have a physical, mental or learning disability or health condition that means you need support during your case
+            </h1>
+
+            {{ govukInsetText({
+                text: "We know some people need support to access information and use our services. We often call this a reasonable adjustment..."
+            }) }}
+
+            {% set emailHtml %}
+            {{ govukInput({
+            id: "contact-by-email",
+            name: "contact-by-email",
+            type: "email",
+            autocomplete: "email",
+            spellcheck: false,
+            label: {
+                text: "Email address"
+            }
+            }) }}
+            {% endset -%}
+
+            {{ govukCheckboxes({
+            name: "contact",
+            hint: {
+                text: "Select all that apply to you - specific requirements can be given next"
+            },
+            items: [
+                {
+                    value: "email",
+                    text: "I need documents in an alternative format",
+                    hint: {
+                        text: "for example, braille or different colours and text sizes"
+                    },
+                    conditional: {
+                        html: emailHtml
+                    }
+                },
+                {
+                    value: "phone",
+                    text: "I need help communicating and understanding",
+                    hint: {
+                        text: "for example, hearing, speaking or interpretation"
+                    }
+                },
+                {
+                    value: "text message",
+                    text: "I need to bring support with me to a hearing",
+                    hint: {
+                        text: "for example, someone you know or an assistance dog"
+                    }
+                }
+            ]
+            }) }}
+
+            <p class="govuk-body">{{ _t('or') }}</p>
+
+            {{ govukCheckboxes({
+            name: "other",
+            items: [
+                {
+                    value: "not-required",
+                    text: "No, I do not need any support at this time"
+                }
+            ]
+            }) }}
+
+            <div class="govuk-button-group">
+                {{ govukButton({
+                    text: _t('continue')
+                }) }}
+
+                <a class="govuk-link" href="#">{{ _t('cancel') }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
