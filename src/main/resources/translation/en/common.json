@@ -1,6 +1,12 @@
 {
   "phase": "Beta",
   "feedback": "This is a new service – your <a href=\"{smartSurveyFeedbackUrl}?pageurl={currentPageUrl}\" class=\"govuk-link\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"Feedback: This link will open in a new tab. You'll need to return to this tab to continue with your application.\">feedback</a> will help us to improve it.",
+  "start_now": "Start now",
+  "cancel": "Cancel",
+  "back": "Back",
+  "header": {
+    "menu-text": "Menu"
+  },
   "footer": {
     "cookies": "Cookies",
     "privacy_policy": "Privacy Policy",
@@ -9,7 +15,9 @@
     "contact_us": "Contact us",
     "accessibility_statement": "Accessibility statement"
   },
-  "header": {
-    "menu-text": "Menu"
+  "intro": {
+    "heading": "I want to tell you that my support needs have changed",
+    "paragraph_1": "Use this form to tell us if your support needs have changed. You might not need something any more, or you can request something new.",
+    "blurb": "You will be able to review your application before you submit it."
   }
 }
