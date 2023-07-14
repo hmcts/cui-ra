@@ -1,0 +1,72 @@
+{% extends "template.njk" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: _t('back'),
+        href: headers['referer']
+    }) }}
+{% endblock %}
+
+{% block mainContent %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">{{ _r(_t('support_for_name'), { name:'Ben' }) }}</h1>
+
+        <a href="#" class="govuk-link govuk-link--no-visited-state">{{ _t('overview.change_my_support_options') }}</a>
+
+        {{ govukTable({
+        caption: _t('overview.table_heading'),
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: false,
+        classes: "govuk-!-margin-top-8",
+        head: [
+            {
+            text: _t('overview.column_1_heading')
+            },
+            {
+            text: _t('overview.column_2_heading')
+            }
+        ],
+        rows: [
+            [
+            {
+                text: "Step free / wheelchair access"
+            },
+            {
+                html: "<strong class='govuk-tag govuk-tag--yellow'>Requested</strong>"
+            }
+            ],
+            [
+            {
+                text: "Documents in large print"
+            },
+            {
+                html: "<strong class='govuk-tag govuk-tag--turquoise'>Approved</strong>"
+            }
+            ],
+            [
+            {
+                text: "Sign language interpreter"
+            },
+            {
+                html: "<strong class='govuk-tag govuk-tag--grey'>No longer needed</strong>"
+            }
+            ],
+            [
+            {
+                text: "Other"
+            },
+            {
+                html: "<strong class='govuk-tag govuk-tag--orange'>Not approved</strong>"
+            }
+            ]
+        ]
+        }) }}
+    </div>
+  </div>
+{% endblock %}

@@ -1,7 +1,7 @@
 {
   "PFL": {
     "contact": {
-      "content": "<h1>Contact</h1><p>Service specific contact information</p>"
+      "content": "<h2 class='govuk-heading-m'>Contact</h2><p class='govuk-body'>Service specific contact information</p>"
     }
   }
 }

@@ -4,6 +4,7 @@
   "start_now": "Start now",
   "cancel": "Cancel",
   "back": "Back",
+  "support_for_name": "Support for {name}",
   "header": {
     "menu-text": "Menu"
   },
@@ -14,6 +15,12 @@
     "help_using_gov_uk": "Help using GOV.UK",
     "contact_us": "Contact us",
     "accessibility_statement": "Accessibility statement"
+  },
+  "overview": {
+    "change_my_support_options": "Change my support options",
+    "table_heading": "Reasonable adjustments",
+    "column_1_heading": "Adjustment type",
+    "column_2_heading": "Status"
   },
   "intro": {
     "heading": "I want to tell you that my support needs have changed",
