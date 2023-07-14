@@ -43,6 +43,14 @@ export class Nunjucks {
         return res.__(key);
       };
 
+      res.locals._r = (text: string | undefined, values: { [key: string]: string } = {}) => {
+        if (!values || !text) {
+          return text;
+        }
+        const reg = /\{([^}]+)\}/g;
+        return text.replace(reg, (matched: string, key: string) => values[key] || matched);
+      };
+
       next();
     });
   }
