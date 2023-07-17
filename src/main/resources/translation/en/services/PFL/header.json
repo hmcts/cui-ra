@@ -1,7 +1,8 @@
 {
   "PFL": {
     "header": {
-      "title": "Your support"
+      "title": "Your support",
+      "sign_out": "Sign out"
     }
   }
 }
