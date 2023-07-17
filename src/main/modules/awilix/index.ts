@@ -1,4 +1,4 @@
-import { HomeController } from './../../controllers';
+import { ApiController, HomeController } from './../../controllers';
 import { Logger } from './../../interfaces';
 import { RefData, S2S } from './../../services';
 
@@ -31,6 +31,7 @@ export class Container {
           }),
         })),
       homeController: asClass(HomeController),
+      apiController: asClass(ApiController),
     });
     app.locals.container = container;
   }
