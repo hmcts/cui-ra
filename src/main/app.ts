@@ -11,11 +11,11 @@ import {
   SessionStorage,
   Translation,
 } from './modules';
+import routes from './routes';
 
 import * as bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import express from 'express';
-import { glob } from 'glob';
 import favicon from 'serve-favicon';
 
 const { setupDev } = require('./development');
@@ -53,10 +53,8 @@ app.use((req, res, next) => {
   next();
 });
 
-glob
-  .sync(__dirname + '/routes/**/*.+(ts|js)')
-  .map(filename => require(filename))
-  .forEach(route => route.default(app));
+//Set up routes
+routes(app);
 
 setupDev(app, developmentMode);
 // returning "not found" page for requests with paths not resolved by the router
