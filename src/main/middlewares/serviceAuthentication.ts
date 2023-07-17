@@ -7,7 +7,7 @@ import { NextFunction, Request, Response } from 'express';
 export class ServiceAuthentication {
   constructor(private serviceAuth: ServiceAuth) {}
 
-  public async check(req: Request, res: Response, next: NextFunction): Promise<Response|void> {
+  public async check(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
     let serviceToken: string | string[] | undefined;
     try {
       serviceToken = req.headers['service-token'];
