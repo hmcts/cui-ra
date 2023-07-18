@@ -10425,14 +10425,14 @@ __metadata:
   linkType: hard
 
 "nock@npm:^13.2.9":
-  version: 13.3.1
-  resolution: "nock@npm:13.3.1"
+  version: 13.3.2
+  resolution: "nock@npm:13.3.2"
   dependencies:
     debug: ^4.1.0
     json-stringify-safe: ^5.0.1
     lodash: ^4.17.21
     propagate: ^2.0.0
-  checksum: 0f2a73e8432f6b5650656c53eef99f9e5bbde3df538dc2f07057edc4438cfc61a394c9d06dd82e60f6e86d42433f20f3c04364a1f088beee7bf03a24e3f0fdd0
+  checksum: 1d7d5fda1816a3a0d2cb47f10283db139fcd15be6975db6f9b260efa781d5f0eeadf9bd7aab6db61191c519dd99bcd4c5c061e77880341be60abc39cd6163c1f
   languageName: node
   linkType: hard
 
@@ -11101,23 +11101,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright-core@npm:1.36.0":
-  version: 1.36.0
-  resolution: "playwright-core@npm:1.36.0"
+"playwright-core@npm:1.36.1":
+  version: 1.36.1
+  resolution: "playwright-core@npm:1.36.1"
   bin:
     playwright-core: cli.js
-  checksum: d6b5fed5ae95238dc36a1be3e2cfd250221810e6a2d20592c29d7044a2d1f96e8e6cfff83d937605b6e26d7c3058231d16784e17979fbb11208880829e406e85
+  checksum: bbde807294053b50f0dbbc81f0dacc43fe525830ce1526e6ca74012582dd1645eae2391719cfb020051abea90704057cfabcbfe45ca530b37becc491e9459790
   languageName: node
   linkType: hard
 
 "playwright@npm:^1.34.3":
-  version: 1.36.0
-  resolution: "playwright@npm:1.36.0"
+  version: 1.36.1
+  resolution: "playwright@npm:1.36.1"
   dependencies:
-    playwright-core: 1.36.0
+    playwright-core: 1.36.1
   bin:
     playwright: cli.js
-  checksum: c49ed1666b28f8b9177f4682b51e0bc77a83d32265725bc29a8210c0fe83a92e1f1b7051e315a7299fa39c6e952eebe0fe80a22c174569636a27a5a737b3aef4
+  checksum: 21940ccd174eb03a52b13e26dc7e0e90db05298caeab1dd71d21e996b65d959b82aa133f3c9fafb99b5e0bd37265338802d3fbcee1b567e0f75212ddbde5ebae
   languageName: node
   linkType: hard
 
