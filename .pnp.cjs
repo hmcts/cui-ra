@@ -107,7 +107,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["reflect-metadata", "npm:0.1.13"],\
             ["request", "npm:2.88.2"],\
             ["require-directory", "npm:2.1.1"],\
-            ["sass", "npm:1.63.6"],\
+            ["sass", "npm:1.64.0"],\
             ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:13.3.2"],\
             ["serve-favicon", "npm:2.5.0"],\
             ["session-file-store", "npm:1.5.0"],\
@@ -8344,7 +8344,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["reflect-metadata", "npm:0.1.13"],\
             ["request", "npm:2.88.2"],\
             ["require-directory", "npm:2.1.1"],\
-            ["sass", "npm:1.63.6"],\
+            ["sass", "npm:1.64.0"],\
             ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:13.3.2"],\
             ["serve-favicon", "npm:2.5.0"],\
             ["session-file-store", "npm:1.5.0"],\
@@ -15378,10 +15378,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["sass", [\
-        ["npm:1.63.6", {\
-          "packageLocation": "./.yarn/cache/sass-npm-1.63.6-f415fe5e15-3372319904.zip/node_modules/sass/",\
+        ["npm:1.64.0", {\
+          "packageLocation": "./.yarn/cache/sass-npm-1.64.0-637fa4382e-b4eb9b1bde.zip/node_modules/sass/",\
           "packageDependencies": [\
-            ["sass", "npm:1.63.6"],\
+            ["sass", "npm:1.64.0"],\
             ["chokidar", "npm:3.5.3"],\
             ["immutable", "npm:4.1.0"],\
             ["source-map-js", "npm:1.0.2"]\
@@ -15409,7 +15409,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fibers", null],\
             ["neo-async", "npm:2.6.2"],\
             ["node-sass", null],\
-            ["sass", "npm:1.63.6"],\
+            ["sass", "npm:1.64.0"],\
             ["sass-embedded", null],\
             ["webpack", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.88.2"]\
           ],\
