@@ -4,15 +4,13 @@ export interface PayloadYesNo {
 
 export interface PayloadBase {
   hmctsServiceId: string;
-  serviceToken: string;
-  idamToken: string;
   masterFlagCode: string;
   correlationId: string;
 }
 
 export interface PayloadInbound extends PayloadBase {
   callbackUrl: string;
-  logoutUrl: string;
+  logoutUrl: string | undefined;
   existingFlags: PayloadDetail;
 }
 

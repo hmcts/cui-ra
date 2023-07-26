@@ -1,8 +1,8 @@
-import { PayloadFlagData, ReferenceDataFlagType } from './../interfaces';
-import { DataManagerDataType, DataManagerYesNo } from './../managers';
+import { DataManagerDataObject, FlagProcessorInterface, PayloadFlagData, ReferenceDataFlagType } from '../interfaces';
+import { DataManagerDataType, DataManagerYesNo } from '../managers';
 
-export class DataProcessor {
-  private static generateOther(flag: ReferenceDataFlagType) {
+export class FlagProcessor implements FlagProcessorInterface {
+  private generateOther(flag: ReferenceDataFlagType) {
     const path = flag.Path;
     path.push(flag.name);
     return {
@@ -21,12 +21,12 @@ export class DataProcessor {
     } as ReferenceDataFlagType;
   }
 
-  public static process(
+  public process(
     dateTime: string,
     flag: ReferenceDataFlagType,
     parentId: string | null = null
-  ): DataManagerDataType[] {
-    const data: DataManagerDataType[] = [];
+  ): DataManagerDataObject[] {
+    const data: DataManagerDataObject[] = [];
 
     //Concatinate the id (flagcode) with the parent id to create unique ids
     let id: string = flag.flagCode;

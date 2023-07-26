@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 
 import { RequireIdam } from './../../../../main/middlewares';
+import { ErrorMessages } from './../../../../main/constants';
 
 describe('RequireIdam', () => {
   let req: Request;
@@ -22,7 +23,7 @@ describe('RequireIdam', () => {
     await requireIdam.check(req, res, next);
 
     expect(res.status).toHaveBeenCalledWith(401);
-    expect(res.json).toHaveBeenCalledWith({ error: 'idam token is missing' });
+    expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.IDAM_TOKEN_MISSING });
     expect(next).not.toHaveBeenCalled();
   });
 
