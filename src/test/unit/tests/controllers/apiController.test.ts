@@ -3,6 +3,9 @@ import { ApiController } from '../../../../main/controllers';
 import { RedisClientInterface } from './../../../../main/interfaces';
 import { ErrorMessages, HeaderParams } from './../../../../main/constants';
 import { RedisClientType, createClient } from 'redis';
+import { mockLogger } from './../../mocks';
+
+let mockedLogger = mockLogger();
 
 // Mock the RedisClientInterface
 const mockRedisClient: RedisClientInterface = {
@@ -36,7 +39,8 @@ describe('ApiController', () => {
   let controller: ApiController;
 
   beforeEach(() => {
-    controller = new ApiController(mockRedisClient);
+    
+    controller = new ApiController(mockedLogger,mockRedisClient);
   });
 
   describe('postPayload', () => {
@@ -76,9 +80,9 @@ describe('ApiController', () => {
 
       await controller.postPayload(req, res);
 
-      expect(res.status).toHaveBeenCalledWith(500);
+      expect(res.status).toHaveBeenCalledWith(401);
 
-      expect(res.send).toHaveBeenCalledWith(ErrorMessages.TOKENS_NOT_FOUND);
+      expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.TOKENS_NOT_FOUND });
     });
 
     test('should throw an error when tokens are not in correct format', async () => {
@@ -87,8 +91,8 @@ describe('ApiController', () => {
 
       await controller.postPayload(req, res);
 
-      expect(res.status).toHaveBeenCalledWith(500);
-      expect(res.send).toHaveBeenCalledWith(ErrorMessages.TOKENS_INCORRECT_FORMAT);
+      expect(res.status).toHaveBeenCalledWith(401);
+      expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.TOKENS_INCORRECT_FORMAT });
     });
   });
 
@@ -124,7 +128,7 @@ describe('ApiController', () => {
       await controller.getPayload(req, res);
 
       expect(res.status).toHaveBeenCalledWith(404);
-      expect(res.send).toHaveBeenCalledWith({ error: ErrorMessages.DATA_NOT_FOUND });
+      expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.DATA_NOT_FOUND });
     });
   });
 });

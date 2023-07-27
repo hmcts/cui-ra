@@ -11,7 +11,7 @@ jest.mock('redis', () => {
     get: jest.fn(),
     exists: jest.fn(),
     del: jest.fn(),
-  };
+  } as unknown as RedisClientType;
   const createClient = () => mockClient;
   return {
     createClient,

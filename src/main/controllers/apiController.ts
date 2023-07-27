@@ -1,7 +1,7 @@
 import { randomUUID } from 'crypto';
 
 import { ErrorMessages, HeaderParams, Route } from './../constants';
-import { RedisClientInterface } from './../interfaces';
+import { RedisClientInterface, Logger } from './../interfaces';
 import { InboundPayload, InboundPayloadStore } from './../models';
 import { UrlRoute } from './../utilities';
 
@@ -11,7 +11,7 @@ import { Request, Response } from 'express';
 
 @autobind
 export class ApiController {
-  constructor(private redisClient: RedisClientInterface) {}
+  constructor(private logger:Logger, private redisClient: RedisClientInterface) {}
 
   private async generateUUID(): Promise<string> {
     let uuid: string = randomUUID();
@@ -27,11 +27,11 @@ export class ApiController {
       const serviceToken = req.headers[HeaderParams.SERVICE_TOKEN];
 
       if (!idamToken || !serviceToken) {
-        throw Error(ErrorMessages.TOKENS_NOT_FOUND);
+        return res.status(401).json({ error: ErrorMessages.TOKENS_NOT_FOUND});
       }
 
       if (typeof idamToken !== 'string' || typeof serviceToken !== 'string') {
-        throw Error(ErrorMessages.TOKENS_INCORRECT_FORMAT);
+        return res.status(401).json({ error: ErrorMessages.TOKENS_INCORRECT_FORMAT});
       }
 
       //Bind posted data to class
@@ -51,7 +51,8 @@ export class ApiController {
         url,
       });
     } catch (e) {
-      return res.status(500).send(e.message);
+      this.logger.error(e.message);
+      return res.status(500).json(e.message);
     }
   }
 
@@ -60,7 +61,7 @@ export class ApiController {
     try {
       //Check the key exists
       if (!(await this.redisClient.exists(id))) {
-        res.status(404).send({ error: ErrorMessages.DATA_NOT_FOUND });
+        res.status(404).json({ error: ErrorMessages.DATA_NOT_FOUND });
       }
 
       //Get data from redis store
@@ -76,7 +77,8 @@ export class ApiController {
 
       return res.status(200).json(data);
     } catch (e) {
-      return res.status(500).send(e.message);
+      this.logger.error(e.message);
+      return res.status(500).json(e.message);
     }
   }
 }
