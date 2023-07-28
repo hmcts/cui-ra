@@ -11,7 +11,7 @@ export const mockRedisNode = (): RedisClientType => {
     del: jest.fn(),
   } as unknown as RedisClientType;
   return mock as RedisClientType;
-}
+};
 
 export const mockRedisClient = (): RedisClientInterface => {
   const mockRedis: RedisClientInterface = {
