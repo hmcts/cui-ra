@@ -1,5 +1,17 @@
-import { RedisClientType, createClient } from 'redis';
+import { RedisClientType } from 'redis';
 import { RedisClientInterface } from './../../../main/interfaces';
+
+export const mockRedisNode = (): RedisClientType => {
+  const mock: RedisClientType = {
+    connect: jest.fn(),
+    set: jest.fn(),
+    get: jest.fn(),
+    on: jest.fn(),
+    exist: jest.fn(),
+    del: jest.fn(),
+  } as unknown as RedisClientType;
+  return mock as RedisClientType;
+}
 
 export const mockRedisClient = (): RedisClientInterface => {
   const mockRedis: RedisClientInterface = {
@@ -25,7 +37,7 @@ export const mockRedisClient = (): RedisClientInterface => {
       return true;
     },
     getClient(): RedisClientType {
-      return createClient();
+      return mockRedisNode();
     },
   };
 
