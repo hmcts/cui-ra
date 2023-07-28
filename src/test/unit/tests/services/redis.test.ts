@@ -1,26 +1,28 @@
 import { RedisClient } from './../../../../main/services';
-import { mockLogger } from './../../mocks';
-import { RedisClientType } from 'redis';
+import { mockLogger, mockRedisNode } from './../../mocks';
+import redis from 'redis';
 
 // Mock the necessary dependencies for RedisClient
-jest.mock('redis', () => {
-  const mockClient: RedisClientType = {
-    connect: jest.fn(),
-    on: jest.fn(),
-    set: jest.fn(),
-    get: jest.fn(),
-    exists: jest.fn(),
-    del: jest.fn(),
-  } as unknown as RedisClientType;
-  const createClient = () => mockClient;
-  return {
-    createClient,
-  };
-});
+// jest.mock('redis', () => {
+//   const createClient = () => mockedRedisNode;
+//   return {
+//     mockedRedisNode()
+//   };
+// });
+jest.mock('redis', () => ({
+  createClient: jest.fn(),
+}));
 
 describe('RedisClient', () => {
   let mockedLogger = mockLogger();
+  let mockedRedisNode = mockRedisNode();
   let redisClient: RedisClient;
+  (redis.createClient as jest.Mock).mockReturnValue(mockedRedisNode);
+
+  //const createClientMock = jest.fn();
+  //createClientMock.mockImplementation(() => mockedRedisNode());
+  //jest.spyOn(redis, 'createClient').mockImplementation(() => mockedRedisNode);
+  //jest.spyOn(redis, 'createClient').mockReturnValue(mockedRedisNode());
 
   const host = 'localhost';
   const port = '6379';

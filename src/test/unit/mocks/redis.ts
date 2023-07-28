@@ -4,10 +4,10 @@ import { RedisClientInterface } from './../../../main/interfaces';
 export const mockRedisNode = (): RedisClientType => {
   const mock: RedisClientType = {
     connect: jest.fn(),
+    on: jest.fn(),
     set: jest.fn(),
     get: jest.fn(),
-    on: jest.fn(),
-    exist: jest.fn(),
+    exists: jest.fn(),
     del: jest.fn(),
   } as unknown as RedisClientType;
   return mock as RedisClientType;
