@@ -24,7 +24,7 @@ export class RedisClient implements RedisClientInterface {
   }
 
   private onError(error: string): void {
-    this.logger.error(error);
+    //this.logger.error(error);
   }
 
   private onConnect(): void {
@@ -44,7 +44,7 @@ export class RedisClient implements RedisClientInterface {
 
   private onReconnect(): void {
     this.connected = false;
-    this.logger.info('Redis attempting to Re-Connected');
+    //this.logger.info('Redis attempting to Re-Connected');
   }
 
   public isConnected(): boolean {
