@@ -1,6 +1,8 @@
-import { Logger, RedisClientInterface } from './../interfaces';
-import autobind from 'autobind-decorator';
 import fs from 'fs';
+
+import { Logger, RedisClientInterface } from './../interfaces';
+
+import autobind from 'autobind-decorator';
 
 @autobind
 export class FileStorageClient implements RedisClientInterface {
