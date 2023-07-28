@@ -7,5 +7,5 @@ export interface RedisClientInterface {
   delete(key: string): Promise<boolean>;
   isConnected(): boolean;
   isReady(): boolean;
-  getClient(): RedisClientType;
+  getClient(): RedisClientType | null;
 }

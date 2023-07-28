@@ -31,9 +31,8 @@ export class SessionStorage {
   }
 
   private getStore() {
-    if (config.get('session.redis.host') as string) {
-      //app.locals.redisClient = client;
-      const client = this.redisClient.getClient();
+    const client = this.redisClient.getClient();
+    if (config.get('session.redis.host') as string && client) {
       return new RedisStore({ client });
     }
 

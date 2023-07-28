@@ -1,7 +1,7 @@
 import { ApiController, DataController, HomeController } from './../../controllers';
 import { Logger } from './../../interfaces';
 import { FlagProcessor } from './../../processors';
-import { RedisClient, RefData, S2S } from './../../services';
+import { RedisClient, FileStorageClient, RefData, S2S } from './../../services';
 
 import { InjectionMode, asClass, asValue, createContainer } from 'awilix';
 import axios from 'axios';
@@ -31,7 +31,7 @@ export class Container {
             baseURL: config.get('services.refdata.endpoint'),
           }),
         })),
-      redisClient: asClass(RedisClient)
+      redisClient: (app.locals.ENV === 'test') ? asClass(FileStorageClient) : asClass(RedisClient)
         .singleton()
         .inject(() => ({
           host: config.get('session.redis.host'),

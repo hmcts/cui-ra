@@ -2,13 +2,6 @@ import { RedisClient } from './../../../../main/services';
 import { mockLogger, mockRedisNode } from './../../mocks';
 import redis from 'redis';
 
-// Mock the necessary dependencies for RedisClient
-// jest.mock('redis', () => {
-//   const createClient = () => mockedRedisNode;
-//   return {
-//     mockedRedisNode()
-//   };
-// });
 jest.mock('redis', () => ({
   createClient: jest.fn(),
 }));
