@@ -1,7 +1,7 @@
 import { randomUUID } from 'crypto';
 
 import { ErrorMessages, HeaderParams, Route } from './../constants';
-import { RedisClientInterface, Logger } from './../interfaces';
+import { Logger, RedisClientInterface } from './../interfaces';
 import { InboundPayload, InboundPayloadStore } from './../models';
 import { UrlRoute } from './../utilities';
 
@@ -11,7 +11,7 @@ import { Request, Response } from 'express';
 
 @autobind
 export class ApiController {
-  constructor(private logger:Logger, private redisClient: RedisClientInterface) {}
+  constructor(private logger: Logger, private redisClient: RedisClientInterface) {}
 
   private async generateUUID(): Promise<string> {
     let uuid: string = randomUUID();
@@ -27,11 +27,11 @@ export class ApiController {
       const serviceToken = req.headers[HeaderParams.SERVICE_TOKEN];
 
       if (!idamToken || !serviceToken) {
-        return res.status(401).json({ error: ErrorMessages.TOKENS_NOT_FOUND});
+        return res.status(401).json({ error: ErrorMessages.TOKENS_NOT_FOUND });
       }
 
       if (typeof idamToken !== 'string' || typeof serviceToken !== 'string') {
-        return res.status(401).json({ error: ErrorMessages.TOKENS_INCORRECT_FORMAT});
+        return res.status(401).json({ error: ErrorMessages.TOKENS_INCORRECT_FORMAT });
       }
 
       //Bind posted data to class
@@ -52,7 +52,7 @@ export class ApiController {
       });
     } catch (e) {
       this.logger.error(e.message);
-      return res.status(500).json(e.message);
+      return res.status(500).json({ error: ErrorMessages.UNEXPECTED_ERROR });
     }
   }
 
@@ -78,7 +78,7 @@ export class ApiController {
       return res.status(200).json(data);
     } catch (e) {
       this.logger.error(e.message);
-      return res.status(500).json(e.message);
+      return res.status(500).json({ error: ErrorMessages.UNEXPECTED_ERROR });
     }
   }
 }

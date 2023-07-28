@@ -3,3 +3,6 @@ export * from './response';
 export * from './axios';
 export * from './logger';
 export * from './serviceAuth';
+export * from './redis';
+export * from './refData';
+export * from './flagProcessor';

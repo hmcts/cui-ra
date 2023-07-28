@@ -1,46 +1,16 @@
 import { Request, Response } from 'express';
 import { ApiController } from '../../../../main/controllers';
-import { RedisClientInterface } from './../../../../main/interfaces';
 import { ErrorMessages, HeaderParams } from './../../../../main/constants';
-import { RedisClientType, createClient } from 'redis';
-import { mockLogger } from './../../mocks';
+import { mockLogger, mockRedisClient } from './../../mocks';
 
 let mockedLogger = mockLogger();
-
-// Mock the RedisClientInterface
-const mockRedisClient: RedisClientInterface = {
-  async exists(key: string): Promise<boolean> {
-    return key === 'existing_key';
-  },
-  async get(key: string): Promise<string | null> {
-    if (key === 'existing_key') {
-      return JSON.stringify({ test: 'data' });
-    }
-    return null;
-  },
-  async set(key: string, value: string): Promise<void> {
-    // Mock the set method if needed
-  },
-  async delete(key: string): Promise<boolean> {
-    return true;
-  },
-  isConnected(): boolean {
-    return true;
-  },
-  isReady(): boolean {
-    return true;
-  },
-  getClient(): RedisClientType {
-    return createClient();
-  },
-};
+let mockedRedis = mockRedisClient();
 
 describe('ApiController', () => {
   let controller: ApiController;
 
   beforeEach(() => {
-    
-    controller = new ApiController(mockedLogger,mockRedisClient);
+    controller = new ApiController(mockedLogger, mockedRedis);
   });
 
   describe('postPayload', () => {

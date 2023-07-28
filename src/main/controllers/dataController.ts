@@ -1,5 +1,12 @@
 import { ErrorMessages, Route } from './../constants';
-import { DataManagerDataObject, FlagProcessorInterface, RedisClientInterface, ReferenceData } from './../interfaces';
+import {
+  DataManagerDataObject,
+  FlagProcessorInterface,
+  Logger,
+  RedisClientInterface,
+  ReferenceData,
+  ServiceAuth,
+} from './../interfaces';
 import { ExistingFlagsManager, NewFlagsManager } from './../managers';
 import { InboundPayloadStore } from './../models';
 import { flagResourceType } from './../services';
@@ -12,24 +19,26 @@ import { Request, Response } from 'express';
 @autobind
 export class DataController {
   constructor(
+    private logger: Logger,
     private redisClient: RedisClientInterface,
     private refdata: ReferenceData,
-    private flagProcessor: FlagProcessorInterface
+    private flagProcessor: FlagProcessorInterface,
+    private serviceAuth: ServiceAuth
   ) {}
 
   public async process(req: Request, res: Response): Promise<Response | void> {
-    const id: string = req.params.id;
+    const id: string = req.params.id.toString();
     try {
       //Check the key exists
       if (!(await this.redisClient.exists(id))) {
-        throw Error(ErrorMessages.DATA_NOT_FOUND);
+        return res.status(404).send(ErrorMessages.DATA_NOT_FOUND);
       }
 
       //Get data from redis store
       const data: string | null = await this.redisClient.get(id);
 
       if (!data) {
-        throw Error(ErrorMessages.DATA_NOT_FOUND);
+        return res.status(404).send(ErrorMessages.DATA_NOT_FOUND);
       }
 
       const payloadStore: InboundPayloadStore = plainToClass(
@@ -46,8 +55,11 @@ export class DataController {
         new ExistingFlagsManager().set(payloadStore.payload.existingFlags.details)
       );
 
+      const serviceToken = await this.serviceAuth.getToken();
+
       //Get Reference data - Always use true for welsh.
       const refdata = await this.refdata.getFlags(
+        serviceToken,
         payloadStore.idamToken,
         payloadStore.payload.hmctsServiceId,
         flagResourceType.CASE,
@@ -65,13 +77,14 @@ export class DataController {
       //Redirect to the correct location
       if (payloadStore.payload.existingFlags.details.length === 0) {
         //No Payload found redirect to new flags setup
-        return res.status(301).redirect(UrlRoute.make(Route.DATA_PROCESS, {}, UrlRoute.url(req)));
+        return res.status(301).redirect(UrlRoute.make(Route.JOURNEY_NEW_FLAGS, {}, UrlRoute.url(req)));
       } else {
         //Exisitng flags found redirect to exisiting flags
-        return res.status(301).redirect(UrlRoute.make(Route.DATA_PROCESS, {}, UrlRoute.url(req)));
+        return res.status(301).redirect(UrlRoute.make(Route.JOURNEY_EXSITING_FLAGS, {}, UrlRoute.url(req)));
       }
     } catch (e) {
-      return res.status(500).send(e.message);
+      this.logger.error(e.message);
+      return res.status(500).send(ErrorMessages.UNEXPECTED_ERROR);
     }
   }
 }

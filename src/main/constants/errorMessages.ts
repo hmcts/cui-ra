@@ -5,5 +5,6 @@ export const ErrorMessages = {
   SERVICE_TOKEN_MISSING: 'Service token is missing',
   SERVICE_TOKEN_INCORRECT_FORMAT: 'Service token incorrect format. string required',
   IDAM_TOKEN_MISSING: 'idam token is missing',
+  UNEXPECTED_ERROR: 'the server encountered an unexpected condition that prevented it from fulfilling the request',
   UNAUTHORISED: 'Unauthorised',
 } as const;

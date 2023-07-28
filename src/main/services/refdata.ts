@@ -1,4 +1,4 @@
-import { ReferenceData, ReferenceDataFlagType, ServiceAuth } from './../interfaces';
+import { ReferenceData, ReferenceDataFlagType } from './../interfaces';
 
 import autobind from 'autobind-decorator';
 import { AxiosInstance, HttpStatusCode } from 'axios';
@@ -34,16 +34,15 @@ export class RefDataFlagType implements ReferenceDataFlagType {
 
 @autobind
 export class RefData implements ReferenceData {
-  constructor(private client: AxiosInstance, private serviceAuth: ServiceAuth) {}
+  constructor(private client: AxiosInstance) {}
 
   public async getFlags(
+    serviceToken: string,
     accessToken: string,
     serviceId: string,
     flagType: flagResourceType,
     welsh = false
   ): Promise<RefDataFlagType> {
-    const ServiceToken = await this.serviceAuth.getToken();
-
     const path = `/flag/${serviceId}`;
 
     const queryParams: { [key: string]: string | number } = {};
@@ -67,7 +66,7 @@ export class RefData implements ReferenceData {
     const response = await this.client.get(`${path}?${queryString}`, {
       headers: {
         'Content-Type': 'application/json',
-        ServiceAuthorization: 'Bearer ' + ServiceToken,
+        ServiceAuthorization: 'Bearer ' + serviceToken,
         Authorization: 'Bearer ' + accessToken,
       },
     });
