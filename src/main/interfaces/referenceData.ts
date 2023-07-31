@@ -20,6 +20,7 @@ export interface FlagResourceType {
 
 export interface ReferenceData {
   getFlags(
+    serviceToken: string,
     accessToken: string,
     serviceId: string,
     flagType: FlagResourceType,

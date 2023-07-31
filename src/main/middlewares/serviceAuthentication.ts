@@ -1,4 +1,5 @@
 import { ServiceAuth } from './../../main/interfaces';
+import { ErrorMessages } from './../constants';
 
 import autobind from 'autobind-decorator';
 import { NextFunction, Request, Response } from 'express';
@@ -12,11 +13,11 @@ export class ServiceAuthentication {
     try {
       serviceToken = req.headers['service-token'];
     } catch {
-      return res.status(401).json({ error: 'Service token is missing' });
+      return res.status(401).json({ error: ErrorMessages.SERVICE_TOKEN_MISSING });
     }
 
     if (typeof serviceToken !== 'string') {
-      return res.status(400).json({ error: 'Service token incorrect format. string required' });
+      return res.status(400).json({ error: ErrorMessages.SERVICE_TOKEN_INCORRECT_FORMAT });
     }
 
     try {
@@ -25,7 +26,7 @@ export class ServiceAuthentication {
         next();
       }
     } catch (ex) {
-      return res.status(401).json({ error: 'Unauthorised' });
+      return res.status(401).json({ error: ErrorMessages.UNAUTHORISED });
     }
   }
 }
