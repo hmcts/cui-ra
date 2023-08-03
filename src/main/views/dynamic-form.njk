@@ -16,6 +16,8 @@
 {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
 {% from "govuk/components/error-message/macro.njk" import govukErrorMessage %}
 
+{% from "components/accessible-autocomplete/macro.njk" import accessibleAutocomplete %}
+
 {% block beforeContent %}
     {{ super() }}
     {{ govukBackLink({
@@ -71,17 +73,25 @@
             }) }}
             {% endset -%}
 
+            {# Add the accessible autocomplete component here #}
+            {{ accessibleAutocomplete({
+                name: "default AA",
+                text: "Accessible autocomplete control heading",
+                hint: "Add a hint for the accessible autocomplete",
+                opts: opts
+            })
+            }}
 
             {# Typeahead code #}
-            {{ govukSelect({
-            id: "country",
+{#             {{ govukSelect({
+            id: "custom-accessible-autocomplete",
             name: "country",
             label: {
                 text: "Select your country"
             },
             items: opts
             }) }}
-            <div id="my-autocomplete-container"></div>
+            <div id="my-autocomplete-container"></div> #}
 
             {{ govukCheckboxes({
             name: "contact",
@@ -115,6 +125,14 @@
                     hint: {
                         text: "for example, someone you know or an assistance dog"
                     }
+                },
+                {
+                    divider: "or"
+                },
+                {
+                    value: "none",
+                    text: "No, I will not be travelling to any of these countries",
+                    behaviour: "exclusive"
                 }
             ]
             }) }}
