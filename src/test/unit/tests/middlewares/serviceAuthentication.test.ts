@@ -3,6 +3,7 @@ import { Request, Response, NextFunction } from 'express';
 import { mockServiceAuth } from './../../mocks';
 import { ServiceAuthentication } from './../../../../main/middlewares';
 import { ServiceAuth } from './../../../../main/interfaces';
+import { ErrorMessages } from './../../../../main/constants';
 
 describe('ServiceAuthentication', () => {
   let req: Request;
@@ -26,7 +27,7 @@ describe('ServiceAuthentication', () => {
     await serviceAuthentication.check(req, res, next);
 
     expect(res.status).toHaveBeenCalledWith(401);
-    expect(res.json).toHaveBeenCalledWith({ error: 'Service token is missing' });
+    expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.SERVICE_TOKEN_MISSING });
     expect(next).not.toHaveBeenCalled();
   });
 
@@ -36,7 +37,7 @@ describe('ServiceAuthentication', () => {
     await serviceAuthentication.check(req, res, next);
 
     expect(res.status).toHaveBeenCalledWith(400);
-    expect(res.json).toHaveBeenCalledWith({ error: 'Service token incorrect format. string required' });
+    expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.SERVICE_TOKEN_INCORRECT_FORMAT });
     expect(next).not.toHaveBeenCalled();
   });
 
@@ -63,7 +64,7 @@ describe('ServiceAuthentication', () => {
 
     expect(serviceMock.validateToken).toHaveBeenCalledWith('invalidToken');
     expect(res.status).toHaveBeenCalledWith(401);
-    expect(res.json).toHaveBeenCalledWith({ error: 'Unauthorised' });
+    expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.UNAUTHORISED });
     expect(next).not.toHaveBeenCalled();
   });
 });

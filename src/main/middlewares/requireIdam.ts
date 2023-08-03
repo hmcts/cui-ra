@@ -1,3 +1,5 @@
+import { ErrorMessages } from './../constants';
+
 import autobind from 'autobind-decorator';
 import { NextFunction, Request, Response } from 'express';
 
@@ -10,7 +12,7 @@ export class RequireIdam {
         next();
       }
     } catch {
-      return res.status(401).json({ error: 'idam token is missing' });
+      return res.status(401).json({ error: ErrorMessages.IDAM_TOKEN_MISSING });
     }
   }
 }
