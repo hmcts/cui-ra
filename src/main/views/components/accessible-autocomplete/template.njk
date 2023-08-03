@@ -1,0 +1,23 @@
+{% from "../../govuk/components/select/macro.njk" import govukSelect %}
+
+{% if params.text and params.opts %}
+    {% if params.name %}
+        {% set name = params.name %}
+    {% else %}
+        {% set name = "custom-accessible-autocomplete" %}
+    {% endif %}
+
+    {{ govukSelect({
+        id: "custom-accessible-autocomplete",
+        name: name,
+        label: {
+            text: params.text
+        },
+        hint: {
+            text: params.hint
+        },
+        items: params.opts
+    }) }}
+
+    <div id="my-autocomplete-container"></div>
+{% endif %}
