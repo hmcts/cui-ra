@@ -7,4 +7,6 @@ export const Route = {
   JOURNEY_NEW_FLAGS: '/journey/flags/new',
   JOURNEY_EXSITING_FLAGS: '/journey/flags/exisiting',
   INFO: '/info',
+  OVERVIEW: '/home/overview',
+  INTRO: '/home/intro'
 } as const;

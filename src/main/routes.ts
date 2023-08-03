@@ -12,8 +12,8 @@ const validator = new SchemaValidator();
 export default function (app: Application): void {
   // Home Controller
   app.get(Route.ROOT, app.locals.container.cradle.homeController.get);
-  app.get('/home/overview', app.locals.container.cradle.homeController.overview);
-  app.get('/home/intro', app.locals.container.cradle.homeController.intro);
+  app.get(Route.OVERVIEW, app.locals.container.cradle.homeController.overview);
+  app.get(Route.INTRO, app.locals.container.cradle.homeController.intro);
 
   //Secure api
   app.use(Route.API_ROOT, new ServiceAuthentication(app.locals.container.cradle.serviceAuth).check);

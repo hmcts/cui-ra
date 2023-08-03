@@ -1,4 +1,4 @@
-import { ApiController, FormController, DataController, HomeController } from './../../controllers';
+import { ApiController, DataController, FormController, HomeController } from './../../controllers';
 import { Logger } from './../../interfaces';
 import { FlagProcessor } from './../../processors';
 import { FileStorageClient, RedisClient, RefData, S2S } from './../../services';
