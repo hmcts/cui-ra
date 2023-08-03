@@ -1,4 +1,4 @@
-import { ApiController, HomeController, FormController } from './../../controllers';
+import { ApiController, FormController, HomeController } from './../../controllers';
 import { Logger } from './../../interfaces';
 import { RefData, S2S } from './../../services';
 
