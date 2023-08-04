@@ -40,7 +40,11 @@
                 {% for item in requested %}
                     <tr class="govuk-table__row">
                         <td scope="row" class="govuk-table__cell">
-                            {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
+                            {% if item.value.flagCode !== 'OT0001' %}
+                                {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %} 
+                            {% else %}
+                                {% if welsh === false %}{{ item.value.otherDescription }}{% else %}{{ item.value.otherDescription_cy }}{% endif %}
+                            {% endif %}
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
                             <a class='govuk-link govuk-link--no-visited-state' href='#'>{{ _t('review.actions.remove') }}</a>
@@ -59,7 +63,11 @@
                 {% for item in new %}
                     <tr class="govuk-table__row">
                         <td scope="row" class="govuk-table__cell">
-                            {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
+                            {% if item.value.flagCode !== 'OT0001' %}
+                                {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %} 
+                            {% else %}
+                                {% if welsh === false %}{{ item.value.otherDescription }}{% else %}{{ item.value.otherDescription_cy }}{% endif %}
+                            {% endif %}
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
                             <a class='govuk-link govuk-link--no-visited-state' href='#'>{{ _t("review.actions.change") }}</a>
@@ -78,7 +86,11 @@
                 {% for item in notRequired %}
                     <tr class="govuk-table__row">
                         <td scope="row" class="govuk-table__cell">
-                            {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
+                            {% if item.value.flagCode !== 'OT0001' %}
+                                {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %} 
+                            {% else %}
+                                {% if welsh === false %}{{ item.value.otherDescription }}{% else %}{{ item.value.otherDescription_cy }}{% endif %}
+                            {% endif %}
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
                             <a class='govuk-link govuk-link--no-visited-state' href='#'>{{ _t("review.actions.add") }}</a>
