@@ -1,4 +1,4 @@
-import { ApiController, DataController, HomeController } from './../../controllers';
+import { ApiController, DataController, HomeController, DemoController } from './../../controllers';
 import { Logger } from './../../interfaces';
 import { FlagProcessor } from './../../processors';
 import { FileStorageClient, RedisClient, RefData, S2S } from './../../services';
@@ -45,6 +45,7 @@ export class Container {
       homeController: asClass(HomeController),
       apiController: asClass(ApiController),
       dataController: asClass(DataController),
+      demoController: asClass(DemoController),
     });
     app.locals.container = container;
   }
