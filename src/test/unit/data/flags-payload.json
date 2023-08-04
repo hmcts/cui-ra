@@ -251,7 +251,7 @@
       ],
       "hearingRelevant": "Yes",
       "flagCode": "OT0001",
-      "status": "Requested",
+      "status": "Inactive",
       "availableExternally": "Yes"
     }
   },
@@ -492,7 +492,8 @@
       "hearingRelevant": "Yes",
       "flagCode": "OT0001",
       "status": "Requested",
-      "availableExternally": "Yes"
+      "availableExternally": "Yes",
+      "otherDescription": "Default input for 'Other' flag"
     }
   }
 ]

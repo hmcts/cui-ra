@@ -1,0 +1,117 @@
+{% extends "template.njk" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: _t('back'),
+        href: headers['referer']
+    }) }}
+{% endblock %}
+
+{% block mainContent %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">{{ _t('review.heading') }}</h1>
+
+        <h2 class="govuk-heading-m">Reasonable Adjustments<h2>
+
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                        <span class='govuk-!-font-weight-bold'>{{ _t('review.name_of_party') }}</span>
+                    </th>
+                    <td class="govuk-table__cell">
+                        {{ partyname }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        {# Active or already requested #}
+        {% if requested|length > 0 %}
+        <h3 class="govuk-heading-s">{{ _t('review.support.previous') }}</h3>
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                {% for item in requested %}
+                    <tr class="govuk-table__row">
+                        <td scope="row" class="govuk-table__cell">
+                            {% if item.value.flagCode !== 'OT0001' %}
+                                {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %} 
+                            {% else %}
+                                {% if welsh === false %}{{ item.value.otherDescription }}{% else %}{{ item.value.otherDescription_cy }}{% endif %}
+                            {% endif %}
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">
+                            <a class='govuk-link govuk-link--no-visited-state' href='#'>{{ _t('review.actions.remove') }}</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+
+        {# Newely requested #}
+        {% if new|length > 0 %}
+        <h3 class="govuk-heading-s">{{ _t('review.support.new') }}</h3>
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                {% for item in new %}
+                    <tr class="govuk-table__row">
+                        <td scope="row" class="govuk-table__cell">
+                            {% if item.value.flagCode !== 'OT0001' %}
+                                {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %} 
+                            {% else %}
+                                {% if welsh === false %}{{ item.value.otherDescription }}{% else %}{{ item.value.otherDescription_cy }}{% endif %}
+                            {% endif %}
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">
+                            <a class='govuk-link govuk-link--no-visited-state' href='#'>{{ _t("review.actions.change") }}</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+
+        {# No longer required #}
+        {% if notRequired|length > 0 %}
+        <h3 class="govuk-heading-s">{{ _t('review.support.not_needed') }}</h3>
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                {% for item in notRequired %}
+                    <tr class="govuk-table__row">
+                        <td scope="row" class="govuk-table__cell">
+                            {% if item.value.flagCode !== 'OT0001' %}
+                                {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %} 
+                            {% else %}
+                                {% if welsh === false %}{{ item.value.otherDescription }}{% else %}{{ item.value.otherDescription_cy }}{% endif %}
+                            {% endif %}
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">
+                            <a class='govuk-link govuk-link--no-visited-state' href='#'>{{ _t("review.actions.add") }}</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            {{ _t("review.actions.new") }}
+        </button>
+
+        <div class="govuk-button-group">
+            <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+                {{ _t('review.actions.submit') }}
+            </button>
+
+            <a class="govuk-link govuk-link--no-visited-state" href="#">{{ _t('cancel') }}</a>
+        </div>
+    </div>
+  </div>
+{% endblock %}
