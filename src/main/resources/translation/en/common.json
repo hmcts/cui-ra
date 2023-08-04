@@ -26,5 +26,21 @@
     "heading": "I want to tell you that my support needs have changed",
     "paragraph_1": "Use this form to tell us if your support needs have changed. You might not need something any more, or you can request something new.",
     "blurb": "You will be able to review your application before you submit it."
+  },
+  "review": {
+    "heading": "Review the support you've requested",
+    "name_of_party": "Name of party",
+    "support": {
+      "previous": "Support you've already requested",
+      "new": "New support you want to request now",
+      "not_needed": "Support you no longer need"
+    },
+    "actions": {
+      "remove": "I no longer need this",
+      "add": "I still need this",
+      "change": "Change",
+      "new": "Add a new support request",
+      "submit": "Submit"
+    }
   }
 }
