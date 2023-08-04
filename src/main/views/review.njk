@@ -15,96 +15,84 @@
 {% block mainContent %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Review the support you've requested</h1>
+        <h1 class="govuk-heading-l">{{ _t('review.heading') }}</h1>
 
         <h2 class="govuk-heading-m">Reasonable Adjustments<h2>
 
-        {{ govukTable({
-            firstCellIsHeader: false,      
-            rows: [
-                [
-                {
-                    html: "<span class='govuk-!-font-weight-bold'>Name of Party</span>"
-                },
-                {
-                    html: "Some random name that is really long and Some random name that is really long and"
-                }
-                ]
-            ]
-        }) }}
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                        <span class='govuk-!-font-weight-bold'>{{ _t('review.name_of_party') }}</span>
+                    </th>
+                    <td class="govuk-table__cell">
+                        {{ partyname }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
         {# Active or already requested #}
-        <h3 class="govuk-heading-s">Support you've already requested</h3>
-        {{ govukTable({
-        firstCellIsHeader: false,      
-        rows: [
-            [
-            {
-                text: "Step free / wheelchair access"
-            },
-            {
-                html: "<a class='govuk-link govuk-link--no-visited-state' href='#'>I no longer need this</a>",
-                format: "numeric"
-            }
-            ]
-        ]
-        }) }}
+        <h3 class="govuk-heading-s">{{ _t('review.support.previous') }}</h3>
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                {% for reqFlag in requested %}
+                    <tr class="govuk-table__row">
+                        <td scope="row" class="govuk-table__cell">
+                            {{ reqFlag.value.name }}
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">
+                            <a class='govuk-link govuk-link--no-visited-state' href='#'>{{ _t('review.actions.remove') }}</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
 
         {# Newely requested #}
-        <h3 class="govuk-heading-s">New support you want to request now</h3>
-        {{ govukTable({
-        firstCellIsHeader: false,      
-        rows: [
-            [
-            {
-                text: "Documents in large print"
-            },
-            {
-                html: "<a class='govuk-link govuk-link--no-visited-state' href='#'>Change</a>",
-                format: "numeric"
-            }
-            ],
-            [
-            {
-                text: "Sign language interpreter"
-            },
-            {
-                html: "<a class='govuk-link govuk-link--no-visited-state' href='#'>Change</a>",
-                format: "numeric"
-            }
-            ]
-        ]
-        }) }}
+        <h3 class="govuk-heading-s">{{ _t('review.support.new') }}</h3>
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                {% for reqFlag in new %}
+                    <tr class="govuk-table__row">
+                        <td scope="row" class="govuk-table__cell">
+                            {{ reqFlag.value.name }}
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">
+                            <a class='govuk-link govuk-link--no-visited-state' href='#'>{{ _t("review.actions.change") }}</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
 
         {# No longer required #}
-        <h3 class="govuk-heading-s">Support you no longer need</h3>
-        {{ govukTable({
-        firstCellIsHeader: false,      
-        rows: [
-            [
-            {
-                text: "Other"
-            },
-            {
-                html: "<a class='govuk-link govuk-link--no-visited-state' href='#'>I still need this</a>",
-                format: "numeric"
-            }
-            ]
-        ]
-        }) }}
+        <h3 class="govuk-heading-s">{{ _t('review.support.not_needed') }}</h3>
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                {% for reqFlag in notRequired %}
+                    <tr class="govuk-table__row">
+                        <td scope="row" class="govuk-table__cell">
+                            {{ reqFlag.value.name }}
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">
+                            <a class='govuk-link govuk-link--no-visited-state' href='#'>{{ _t("review.actions.add") }}</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
 
-        {{ govukButton({
-            text: "Add a new support request",
-            classes: "govuk-button--secondary"
-        }) }}
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            {{ _t("review.actions.new") }}
+        </button>
 
         <div class="govuk-button-group">
-            {{ govukButton({
-                text: "Submit",
-                preventDoubleClick: true
-            }) }}
+            <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+                {{ _t('review.actions.submit') }}
+            </button>
 
-            <a class="govuk-link govuk-link--no-visited-state" href="#">Cancel</a>
+            <a class="govuk-link govuk-link--no-visited-state" href="#">{{ _t('cancel') }}</a>
         </div>
     </div>
   </div>
