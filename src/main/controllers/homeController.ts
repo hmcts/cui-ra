@@ -62,6 +62,7 @@ export class HomeController {
     */
 
     res.render('review', {
+      welsh: false,
       partyname: req.session.partyname,
       requested: dataManagerExisting.find("status", "Requested").splice(16),
       //new: dataManagerNew.find("_enabled", "true"),
