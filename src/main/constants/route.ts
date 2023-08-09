@@ -10,4 +10,5 @@ export const Route = {
   OVERVIEW: '/home/overview',
   INTRO: '/home/intro',
   REVIEW: '/home/review',
+  DEMO: '/demo',
 } as const;

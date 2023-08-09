@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { Request, Response } from 'express';
-import { HomeController } from '../../../../main/controllers';
+import { DemoController } from '../../../../main/controllers';
 import { Session, SessionData } from 'express-session';
 import { PayloadCollectionItem } from '../../../../main/interfaces';
 import { ExistingFlagsManager } from '../../../../main/managers';
@@ -9,15 +9,15 @@ const host = 'www.test.com';
 const protocol = 'https';
 
 /* eslint-disable jest/expect-expect */
-describe('Home Controller', () => {
-  let homeController: HomeController;
+describe('Demo Controller', () => {
+  let demoController: DemoController;
   let mockRequest: Partial<Request>;
   let mockResponse: Partial<Response>;
 
   beforeEach(() => {
     // Initialize the mock objects and dependencies
     mockRequest = {
-      body: {},
+      body: { action: 'demo' },
       params: {},
       session: { partyName: '', existingManager: {} } as unknown as Session & Partial<SessionData>,
       protocol: protocol,
@@ -31,17 +31,25 @@ describe('Home Controller', () => {
       redirect: jest.fn().mockReturnThis(),
       render: jest.fn().mockReturnThis(),
     };
-    homeController = new HomeController();
+    demoController = new DemoController();
   });
 
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  test('Should render home page', async () => {
+  test('Should render demo page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    homeController.get(mockRequest as Request, mockResponse as Response);
-    expect(mockResponse.render).toBeCalledWith('home');
+    await demoController.get(mockRequest as Request, mockResponse as Response);
+    expect(mockResponse.render).toBeCalledWith('demo');
+  });
+
+  test('Should render intro page', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    mockRequest.body = { action: 'new' };
+
+    demoController.post(mockRequest as Request, mockResponse as Response);
+    expect(mockResponse.redirect).toBeCalledWith('home/intro');
   });
 
   test('Should render overview page', async () => {
@@ -52,25 +60,14 @@ describe('Home Controller', () => {
     const dataManagerExisting: ExistingFlagsManager = new ExistingFlagsManager();
     dataManagerExisting.set(existingJson);
 
-    // Need to set stuff on an actual session here and not the request??
+    mockRequest.body = { action: 'existing' };
+
     mockRequest.session = {
       partyName: 'demo',
       existingManager: dataManagerExisting,
     } as unknown as Session & Partial<SessionData>;
 
-    homeController.overview(mockRequest as Request, mockResponse as Response);
-    expect(mockResponse.render).toBeCalledWith('overview', expect.any(Object));
-  });
-
-  test('Should render intro page', async () => {
-    // eslint-disable-line @typescript-eslint/no-empty-function
-    homeController.intro(mockRequest as Request, mockResponse as Response);
-    expect(mockResponse.render).toBeCalledWith('intro');
-  });
-
-  test('Should render review page', async () => {
-    // eslint-disable-line @typescript-eslint/no-empty-function
-    homeController.review(mockRequest as Request, mockResponse as Response);
-    expect(mockResponse.render).toBeCalledWith('review', expect.any(Object));
+    demoController.post(mockRequest as Request, mockResponse as Response);
+    expect(mockResponse.redirect).toBeCalledWith('home/overview');
   });
 });

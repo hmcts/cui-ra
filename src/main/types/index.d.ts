@@ -1,3 +1,4 @@
+import { ExistingFlagsManager } from './../managers';
 import { SessionData } from 'express-session';
 declare module 'express-session' {
   export interface SessionData {
@@ -5,7 +6,7 @@ declare module 'express-session' {
     roleoncase?: string;
     callbackUrl?: string;
     logoutUrl?: string;
-    exisitingmanager?: string;
+    existingmanager?: ExistingFlagsManager;
     newmanager?: string;
   }
 }

@@ -15,58 +15,52 @@
 {% block mainContent %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">{{ _r(_t('support_for_name'), { name:'Ben' }) }}</h1>
+        <h1 class="govuk-heading-xl">{{ _r(_t('support_for_name'), { name: partyName }) }}</h1>
+        <a href="/home/intro" class="govuk-link govuk-link--no-visited-state">{{ _t('overview.change_my_support_options') }}</a>
 
-        <a href="#" class="govuk-link govuk-link--no-visited-state">{{ _t('overview.change_my_support_options') }}</a>
-
-        {{ govukTable({
-        caption: _t('overview.table_heading'),
-        captionClasses: "govuk-table__caption--m",
-        firstCellIsHeader: false,
-        classes: "govuk-!-margin-top-8",
-        head: [
-            {
-            text: _t('overview.column_1_heading')
-            },
-            {
-            text: _t('overview.column_2_heading')
-            }
-        ],
-        rows: [
-            [
-            {
-                text: "Step free / wheelchair access"
-            },
-            {
-                html: "<strong class='govuk-tag govuk-tag--yellow'>Requested</strong>"
-            }
-            ],
-            [
-            {
-                text: "Documents in large print"
-            },
-            {
-                html: "<strong class='govuk-tag govuk-tag--turquoise'>Approved</strong>"
-            }
-            ],
-            [
-            {
-                text: "Sign language interpreter"
-            },
-            {
-                html: "<strong class='govuk-tag govuk-tag--grey'>No longer needed</strong>"
-            }
-            ],
-            [
-            {
-                text: "Other"
-            },
-            {
-                html: "<strong class='govuk-tag govuk-tag--orange'>Not approved</strong>"
-            }
-            ]
-        ]
-        }) }}
+        <table class="govuk-table govuk-!-margin-top-8">
+            <caption class="govuk-table__caption govuk-table__caption--m">{{ _t('overview.table_heading') }}</caption>
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">{{ _t('overview.column_1_heading') }}</th>
+                <th scope="col" class="govuk-table__header">{{ _t('overview.column_2_heading') }}</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                {% for item in existingFlags %}
+                    <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell">
+                        {{ item.value.name }}
+                    </td>
+                    {% if item.value.status == 'Requested' %}
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--yellow">
+                                {{ _t('overview.status.requested') }}
+                            </strong>
+                        </td>
+                    {% elseif item.value.status == 'Active' %}
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--turquoise">
+                                {{ _t('overview.status.active') }}
+                            </strong>
+                        </td>
+                    {% elseif item.value.status == 'Inactive' %}
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--grey">
+                                {{ _t('overview.status.inactive') }}
+                            </strong>
+                        </td>
+                    {% elseif item.value.status == 'Not Approved' %}
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--orange">
+                                {{ _t('overview.status.not_approved') }}
+                            </strong>
+                        </td>
+                    {% endif %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
   </div>
 {% endblock %}
