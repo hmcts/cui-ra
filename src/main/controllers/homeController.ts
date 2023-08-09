@@ -15,7 +15,12 @@ export class HomeController {
   }
 
   public async overview(req: Request, res: Response): Promise<void> {
-    res.render('overview');
+    // Add checks here to ensure the required data is on the session???
+
+    res.render('overview', {
+      partyName: req.session.partyname,
+      existingFlags: req.session.existingmanager?.data,
+    });
   }
 
   public async intro(req: Request, res: Response): Promise<void> {
@@ -23,10 +28,7 @@ export class HomeController {
   }
 
   public async review(req: Request, res: Response): Promise<void> {
-    // Hard code data for review page
-    req.session.partyname = 'Hard coded party name rendered from controller';
-
-    // EXISTING
+    // Existing flags
     const existingJson: PayloadCollectionItem[] = JSON.parse(
       fs.readFileSync(__dirname + '/../../test/unit/data/flags-payload.json', 'utf-8')
     );
@@ -34,13 +36,7 @@ export class HomeController {
     const dataManagerExisting: ExistingFlagsManager = new ExistingFlagsManager();
     dataManagerExisting.set(existingJson);
 
-    /*     
-      req.session.exisitingmanager = JSON.stringify(
-      new ExistingFlagsManager().set(payloadStore.payload.existingFlags.details)
-    ); 
-    */
-
-    // NEW
+    // New flags
     const newJson = JSON.parse(fs.readFileSync(__dirname + '/../../test/unit/data/flags.json', 'utf-8'));
 
     const flagProcessor = new FlagProcessor();
@@ -54,18 +50,12 @@ export class HomeController {
     const dataManagerNew: NewFlagsManager = new NewFlagsManager();
     dataManagerNew.set(processedData);
 
-    /*     
-    req.session.newmanager = JSON.stringify(
-      new ExistingFlagsManager().set(payloadStore.payload.existingFlags.details)
-    );  
-    */
-
     res.render('review', {
       welsh: false,
-      partyname: req.session.partyname,
+      partyName: req.session.partyname,
       requested: dataManagerExisting.find('status', 'Requested').splice(16),
       //new: dataManagerNew.find("_enabled", "true"),
-      new: dataManagerNew.find('status', 'Requested').splice(18),
+      new: dataManagerNew.find('status', 'Requested').splice(18), // To be replaced with _enabled once work has been completed
       notRequired: dataManagerExisting.find('status', 'Inactive'),
     });
   }
