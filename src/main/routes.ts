@@ -23,6 +23,8 @@ export default function (app: Application): void {
 
   // Review Controller
   app.get(Route.REVIEW, app.locals.container.cradle.reviewController.get);
+  app.get(Route.REMOVE_REQUEST, app.locals.container.cradle.reviewController.removeRequest);
+  app.get(Route.ADD_REQUEST, app.locals.container.cradle.reviewController.addRequest);
 
   //DataController
   app.get(Route.DATA_PROCESS, app.locals.container.cradle.dataController.process);

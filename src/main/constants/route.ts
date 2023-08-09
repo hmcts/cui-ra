@@ -10,5 +10,7 @@ export const Route = {
   OVERVIEW: '/home/overview',
   INTRO: '/home/intro',
   REVIEW: '/review',
+  REMOVE_REQUEST: '/review/remove-request',
+  ADD_REQUEST: '/review/add-request',
   DEMO: '/demo',
 } as const;

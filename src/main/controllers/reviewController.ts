@@ -4,6 +4,7 @@ import { DataManagerDataObject } from './../interfaces';
 import { ExistingFlagsManager, NewFlagsManager } from './../managers';
 import { FlagProcessor } from './../processors';
 import { DataTimeUtilities } from './../utilities';
+import { Route, Status } from './../constants';
 
 import autobind from 'autobind-decorator';
 import { Request, Response } from 'express';
@@ -35,34 +36,29 @@ export class ReviewController {
           //new: dataManagerNew.find("_enabled", "true"),
           new: dataManagerNew.find('status', 'Requested').splice(18), // To be replaced with _enabled once work has been completed
           notRequired: dataManagerExisting.find('status', 'Inactive') || [],
+          route: Route,
         });
     }
 
-    public async addRequest(req: Request, res: Response): Promise<void> {
-        //const id = req.params.id;
-        
-/* 
+    public async addRequest(req: Request, res: Response): Promise<void> {      
+        const id: string = req.query.id as string;
+  
         const dataManagerExisting: ExistingFlagsManager = new ExistingFlagsManager() ;
         dataManagerExisting.set(req.session.existingmanager?.data || []);
+        dataManagerExisting.setStatus(id, Status.REQUESTED);
+        req.session.existingmanager = dataManagerExisting;
 
-        dataManagerExisting.find(item => item.id !== id);
-        req.session.existingmanager = req.session.existingmanager?.filter(item => item.id !== id); 
-*/
-
-        res.redirect('review');
+        res.redirect(Route.REVIEW);
     }
 
     public async removeRequest(req: Request, res: Response): Promise<void> {
-        //const id = req.params.id;
-
-/* 
+        const id: string = req.query.id as string;
+ 
         const dataManagerExisting: ExistingFlagsManager = new ExistingFlagsManager() ;
         dataManagerExisting.set(req.session.existingmanager?.data || []);
+        dataManagerExisting.setStatus(id, Status.INACTIVE);
+        req.session.existingmanager = dataManagerExisting;
 
-        dataManagerExisting.find(item => item.id !== id);
-        req.session.existingmanager = req.session.existingmanager?.filter(item => item.id !== id); 
-*/
-
-        res.redirect('review');
+        res.redirect(Route.REVIEW);
     }
 }
