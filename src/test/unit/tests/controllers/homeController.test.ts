@@ -67,10 +67,4 @@ describe('Home Controller', () => {
     homeController.intro(mockRequest as Request, mockResponse as Response);
     expect(mockResponse.render).toBeCalledWith('intro');
   });
-
-  test('Should render review page', async () => {
-    // eslint-disable-line @typescript-eslint/no-empty-function
-    homeController.review(mockRequest as Request, mockResponse as Response);
-    expect(mockResponse.render).toBeCalledWith('review', expect.any(Object));
-  });
 });

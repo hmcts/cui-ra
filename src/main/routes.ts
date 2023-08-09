@@ -14,13 +14,15 @@ export default function (app: Application): void {
   app.get(Route.ROOT, app.locals.container.cradle.homeController.get);
   app.get(Route.OVERVIEW, app.locals.container.cradle.homeController.overview);
   app.get(Route.INTRO, app.locals.container.cradle.homeController.intro);
-  app.get(Route.REVIEW, app.locals.container.cradle.homeController.review);
 
   // Demo Controller
   if (app.locals.ENV !== 'production') {
     app.get(Route.DEMO, app.locals.container.cradle.demoController.get);
     app.post(Route.DEMO, app.locals.container.cradle.demoController.post);
   }
+
+  // Review Controller
+  app.get(Route.REVIEW, app.locals.container.cradle.reviewController.get);
 
   //DataController
   app.get(Route.DATA_PROCESS, app.locals.container.cradle.dataController.process);
