@@ -9,6 +9,6 @@ export const Route = {
   INFO: '/info',
   OVERVIEW: '/home/overview',
   INTRO: '/home/intro',
-  REVIEW: '/home/review',
+  REVIEW: '/review',
   DEMO: '/demo',
 } as const;
