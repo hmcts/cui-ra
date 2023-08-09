@@ -20,7 +20,13 @@
     "change_my_support_options": "Change my support options",
     "table_heading": "Reasonable adjustments",
     "column_1_heading": "Adjustment type",
-    "column_2_heading": "Status"
+    "column_2_heading": "Status",
+    "status": {
+      "requested": "Requested",
+      "active": "Approved",
+      "inactive": "No longer needed",
+      "not_approved": "Not Approved"
+    }
   },
   "intro": {
     "heading": "I want to tell you that my support needs have changed",
