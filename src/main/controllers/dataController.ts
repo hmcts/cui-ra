@@ -46,18 +46,18 @@ export class DataController {
         JSON.parse(data) as InboundPayloadStore
       );
 
-      //Store the exisitng flags manages in session data
+      // Store the exisitng flags manages in session data
       req.session.partyname = payloadStore.payload.existingFlags.partyName;
       req.session.roleoncase = payloadStore.payload.existingFlags.roleOnCase;
       req.session.callbackUrl = payloadStore.payload.callbackUrl;
       req.session.logoutUrl = payloadStore.payload.logoutUrl;
-      req.session.exisitingmanager = JSON.stringify(
-        new ExistingFlagsManager().set(payloadStore.payload.existingFlags.details)
-      );
+      const existingManager = new ExistingFlagsManager();
+      existingManager.set(payloadStore.payload.existingFlags.details);
+      req.session.existingmanager = existingManager;
 
       const serviceToken = await this.serviceAuth.getToken();
 
-      //Get Reference data - Always use true for welsh.
+      // Get Reference data - Always use true for welsh.
       const refdata = await this.refdata.getFlags(
         serviceToken,
         payloadStore.idamToken,
