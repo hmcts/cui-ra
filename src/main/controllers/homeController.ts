@@ -1,6 +1,6 @@
 import autobind from 'autobind-decorator';
 import { Request, Response } from 'express';
-import { Status } from '../constants';
+import { Status, Route } from '../constants';
 
 @autobind
 export class HomeController {
@@ -19,6 +19,8 @@ export class HomeController {
   }
 
   public async intro(req: Request, res: Response): Promise<void> {
-    res.render('intro');
+    res.render('intro', {
+      route: Route,
+    });
   }
 }
