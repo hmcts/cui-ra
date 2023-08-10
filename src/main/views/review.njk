@@ -47,7 +47,7 @@
                             {% endif %}
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
-                            <a class='govuk-link govuk-link--no-visited-state' href='#'>{{ _t('review.actions.remove') }}</a>
+                            <a class='govuk-link govuk-link--no-visited-state' href="{{ route.SET_INACTIVE }}?id={{ item.id }}">{{ _t('review.actions.remove') }}</a>
                         </td>
                     </tr>
                 {% endfor %}
@@ -70,7 +70,7 @@
                             {% endif %}
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
-                            <a class='govuk-link govuk-link--no-visited-state' href='#'>{{ _t("review.actions.change") }}</a>
+                            <a class='govuk-link govuk-link--no-visited-state' href="#">{{ _t("review.actions.change") }}</a>
                         </td>
                     </tr>
                 {% endfor %}
@@ -93,7 +93,7 @@
                             {% endif %}
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
-                            <a class='govuk-link govuk-link--no-visited-state' href='#'>{{ _t("review.actions.add") }}</a>
+                            <a class='govuk-link govuk-link--no-visited-state' href="{{ route.SET_REQUESTED }}?id={{ item.id }}">{{ _t("review.actions.add") }}</a>
                         </td>
                     </tr>
                 {% endfor %}

@@ -10,6 +10,8 @@ export const Route = {
   INFO: '/info',
   OVERVIEW: '/home/overview',
   INTRO: '/home/intro',
-  REVIEW: '/home/review',
+  REVIEW: '/review',
+  SET_INACTIVE: '/review/set-inactive',
+  SET_REQUESTED: '/review/set-requested',
   DEMO: '/demo',
 } as const;
