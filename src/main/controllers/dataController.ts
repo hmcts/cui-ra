@@ -79,7 +79,7 @@ export class DataController {
 
       const master: DataManagerDataObject[] = req.session.newmanager.find(
         'flagCode',
-        payloadStore.payload.masterFlagCode
+        req.session.masterflagcode
       );
       if (master.length > 0) {
         req.session.mastername = master[0].value.name;

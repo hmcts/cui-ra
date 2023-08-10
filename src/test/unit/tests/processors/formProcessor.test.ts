@@ -100,4 +100,45 @@ describe('FormProcessor', () => {
 
     expect(error).toBe(ErrorMessages.UNEXPECTED_ERROR);
   });
+
+  test('should process radio-group form data correctly', () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'RA0001-RA0005-RA0016-RA0017'
+    )[0];
+    const children: DataManagerDataObject[] = [];
+
+    const body = new Form();
+
+    body.selected = comment;
+
+    const results: DataManagerDataObject[] = FormProcessor.process(body, parent, children);
+
+    const item: DataManagerDataObject | undefined = results.find(
+      (i: DataManagerDataObject) => i.id === 'RA0001-RA0005-RA0016-RA0017'
+    );
+
+    if (item) {
+      expect(item._enabled).toBe(true);
+      expect(item.value.subTypeValue).toBe(comment);
+    }
+  });
+
+  test('should fail to process typeahead form data', () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'RA0001-RA0005-RA0016-RA0017'
+    )[0];
+    const children: DataManagerDataObject[] = [];
+
+    const body = new Form();
+
+    let error = '';
+
+    try {
+      FormProcessor.process(body, parent, children);
+    } catch (e) {
+      error = e.message;
+    }
+
+    expect(error).toBe(ErrorMessages.UNEXPECTED_ERROR);
+  });
 });

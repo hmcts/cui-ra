@@ -14,6 +14,8 @@ describe('Flag Processor', () => {
   test('Should return a collection of DataManagerDateObject', async () => {
     const dateTime = '12-07-2023 13:28:21';
     const data: DataManagerDataObject[] = flagProcessor.process(dateTime, flagJson.flags[0].FlagDetails);
+
+    //console.log(JSON.stringify(data));
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(data).toEqual(dataProcessorResultJson);
   });

@@ -101,7 +101,10 @@
     "_enabled": false,
     "_isParent": true,
     "_errors": [],
-    "_childIds": ["RA0001-RA0004-RA0009", "RA0001-RA0004-OT0001"],
+    "_childIds": [
+      "RA0001-RA0004-RA0009",
+      "RA0001-RA0004-OT0001"
+    ],
     "id": "RA0001-RA0004",
     "value": {
       "name": "Hearing provision",
@@ -346,7 +349,12 @@
     "_errors": [],
     "_listOfValuesLength": 0,
     "_listOfValues": [],
-    "_childIds": ["RA0001-RA0005-RA0010", "RA0001-RA0005-RA0011", "RA0001-RA0005-OT0001"],
+    "_childIds": [
+      "RA0001-RA0005-RA0010",
+      "RA0001-RA0005-RA0016",
+      "RA0001-RA0005-RA0011",
+      "RA0001-RA0005-OT0001"
+    ],
     "id": "RA0001-RA0005",
     "value": {
       "name": "Language support",
@@ -456,6 +464,124 @@
       "availableExternally": "Yes"
     },
     "_parentId": "RA0001-RA0005"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "RA0001-RA0005-RA0016-RA0017",
+      "RA0001-RA0005-RA0016-OT0001"
+    ],
+    "id": "RA0001-RA0005-RA0016",
+    "value": {
+      "name": "Language support - radio",
+      "name_cy": "Translated welsh value CY - radio",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0016",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "RA0001-RA0005"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_isParent": false,
+    "_errors": [],
+    "_listOfValuesLength": 4,
+    "_listOfValues": [
+      {
+        "key": "AL",
+        "value": "Albanian",
+        "value_cy": "translated text"
+      },
+      {
+        "key": "ES",
+        "value": "Spanish",
+        "value_cy": "translated text"
+      },
+      {
+        "key": "PT",
+        "value": "Portugese",
+        "value_cy": "translated text"
+      },
+      {
+        "key": "GB",
+        "value": "Britan",
+        "value_cy": "translated text"
+      }
+    ],
+    "_childIds": [],
+    "id": "RA0001-RA0005-RA0016-RA0017",
+    "value": {
+      "name": "Sign language interpreter",
+      "name_cy": "Translated welsh value CY",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "Language Support"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0017",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "RA0001-RA0005-RA0016"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_isParent": false,
+    "_errors": [],
+    "_listOfValuesLength": 0,
+    "_listOfValues": [],
+    "_childIds": [],
+    "id": "RA0001-RA0005-RA0016-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "Language support - radio"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "RA0001-RA0005-RA0016"
   },
   {
     "_flagComment": true,
@@ -591,7 +717,10 @@
     "_errors": [],
     "_listOfValuesLength": 0,
     "_listOfValues": [],
-    "_childIds": ["RA0001-RA0008-RA0012", "RA0001-RA0008-OT0001"],
+    "_childIds": [
+      "RA0001-RA0008-RA0012",
+      "RA0001-RA0008-OT0001"
+    ],
     "id": "RA0001-RA0008",
     "value": {
       "name": "Mobility support",

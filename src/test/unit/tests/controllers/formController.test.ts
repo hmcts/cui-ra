@@ -73,6 +73,30 @@ describe('FormController', () => {
     expect(mockedResponse.render).toHaveBeenCalledWith('forms/type-ahead', expect.any(Object));
   });
 
+  test('should display the form with forms/radio-group with valid flag', async () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'RA0001-RA0005-RA0016-RA0017'
+    )[0];
+
+    const mockSession = {
+      newmanager: {
+        get: jest.fn().mockReturnValue(parent),
+        getChildren: jest.fn().mockReturnValue([]),
+      },
+    };
+
+    mockedRequest = mockRequest(null);
+    mockedResponse = mockResponse();
+
+    mockedRequest.params = { id: 'someId' };
+    mockedRequest.session = mockSession;
+
+    await formController.display(mockedRequest, mockedResponse);
+
+    // Assert expected behavior here
+    expect(mockedResponse.render).toHaveBeenCalledWith('forms/radio-group', expect.any(Object));
+  });
+
   test('should handle post request with valid flag and data', async () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
       (item: DataManagerDataObject) => item.id === 'RA0001'
