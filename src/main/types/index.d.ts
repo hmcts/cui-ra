@@ -1,3 +1,4 @@
+import { ExistingFlagsManager } from './../managers';
 import { SessionData } from 'express-session';
 import { ExistingFlagsManager, NewFlagsManager } from './../managers';
 

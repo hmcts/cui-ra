@@ -23,7 +23,13 @@
     "change_my_support_options": "Change my support options",
     "table_heading": "Reasonable adjustments",
     "column_1_heading": "Adjustment type",
-    "column_2_heading": "Status"
+    "column_2_heading": "Status",
+    "status": {
+      "requested": "Requested",
+      "active": "Approved",
+      "inactive": "No longer needed",
+      "not_approved": "Not Approved"
+    }
   },
   "intro": {
     "heading": "I want to tell you that my support needs have changed",
@@ -46,5 +52,21 @@
     "no_support": "I do not need any support at this time",
     "problem": "There is a problem",
     "submit_button": "Save and continue"
+  },
+  "review": {
+    "heading": "Review the support you've requested",
+    "name_of_party": "Name of party",
+    "support": {
+      "previous": "Support you've already requested",
+      "new": "New support you want to request now",
+      "not_needed": "Support you no longer need"
+    },
+    "actions": {
+      "remove": "I no longer need this",
+      "add": "I still need this",
+      "change": "Change",
+      "new": "Add a new support request",
+      "submit": "Submit"
+    }
   }
 }

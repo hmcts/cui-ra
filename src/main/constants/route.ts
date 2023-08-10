@@ -9,5 +9,7 @@ export const Route = {
   JOURNEY_DISPLAY_FLAGS: '/journey/flags/display/:id',
   INFO: '/info',
   OVERVIEW: '/home/overview',
-  INTRO: '/home/intro'
+  INTRO: '/home/intro',
+  REVIEW: '/home/review',
+  DEMO: '/demo',
 } as const;

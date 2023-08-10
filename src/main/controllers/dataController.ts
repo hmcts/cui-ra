@@ -46,7 +46,7 @@ export class DataController {
         JSON.parse(data) as InboundPayloadStore
       );
 
-      //Store the exisitng flags manages in session data
+      // Store the exisitng flags manages in session data
       req.session.partyname = payloadStore.payload.existingFlags.partyName;
       req.session.roleoncase = payloadStore.payload.existingFlags.roleOnCase;
       req.session.callbackUrl = payloadStore.payload.callbackUrl;
@@ -59,7 +59,7 @@ export class DataController {
 
       const serviceToken = await this.serviceAuth.getToken();
 
-      //Get Reference data - Always use true for welsh.
+      // Get Reference data - Always use true for welsh.
       const refdata = await this.refdata.getFlags(
         serviceToken,
         payloadStore.idamToken,
