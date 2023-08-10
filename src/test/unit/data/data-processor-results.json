@@ -101,10 +101,7 @@
     "_enabled": false,
     "_isParent": true,
     "_errors": [],
-    "_childIds": [
-      "RA0001-RA0004-RA0009",
-      "RA0001-RA0004-OT0001"
-    ],
+    "_childIds": ["RA0001-RA0004-RA0009", "RA0001-RA0004-OT0001"],
     "id": "RA0001-RA0004",
     "value": {
       "name": "Hearing provision",
@@ -349,11 +346,7 @@
     "_errors": [],
     "_listOfValuesLength": 0,
     "_listOfValues": [],
-    "_childIds": [
-      "RA0001-RA0005-RA0010",
-      "RA0001-RA0005-RA0011",
-      "RA0001-RA0005-OT0001"
-    ],
+    "_childIds": ["RA0001-RA0005-RA0010", "RA0001-RA0005-RA0011", "RA0001-RA0005-OT0001"],
     "id": "RA0001-RA0005",
     "value": {
       "name": "Language support",
@@ -598,10 +591,7 @@
     "_errors": [],
     "_listOfValuesLength": 0,
     "_listOfValues": [],
-    "_childIds": [
-      "RA0001-RA0008-RA0012",
-      "RA0001-RA0008-OT0001"
-    ],
+    "_childIds": ["RA0001-RA0008-RA0012", "RA0001-RA0008-OT0001"],
     "id": "RA0001-RA0008",
     "value": {
       "name": "Mobility support",

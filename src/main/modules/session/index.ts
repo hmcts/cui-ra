@@ -1,12 +1,12 @@
 import { RedisClientInterface } from './../../interfaces';
+import { ExistingFlagsManager, NewFlagsManager } from './../../managers';
 
+import { plainToClass } from 'class-transformer';
 import config from 'config';
 import RedisStore from 'connect-redis';
 import { Application } from 'express';
 import session from 'express-session';
-import { ExistingFlagsManager, NewFlagsManager } from './../../managers';
 import FileStoreFactory from 'session-file-store';
-import { plainToClass } from 'class-transformer';
 
 const FileStore = FileStoreFactory(session);
 
@@ -37,16 +37,16 @@ export class SessionStorage {
       res.locals.mastername_cy = req.session.mastername_cy;
 
       //init to class from json
-      if(req.session.existingmanager && (typeof(req.session.existingmanager) !== typeof(ExistingFlagsManager))){
+      if (req.session.existingmanager && typeof req.session.existingmanager !== typeof ExistingFlagsManager) {
         req.session.existingmanager = plainToClass(ExistingFlagsManager, req.session.existingmanager);
-      } else if (!req.session.existingmanager){
+      } else if (!req.session.existingmanager) {
         req.session.existingmanager = new ExistingFlagsManager();
       }
 
       //init to class from json
-      if(req.session.newmanager && (typeof(req.session.newmanager) !== typeof(NewFlagsManager))){
+      if (req.session.newmanager && typeof req.session.newmanager !== typeof NewFlagsManager) {
         req.session.newmanager = plainToClass(NewFlagsManager, req.session.newmanager);
-      }else if (!req.session.newmanager){
+      } else if (!req.session.newmanager) {
         req.session.newmanager = new NewFlagsManager();
       }
 

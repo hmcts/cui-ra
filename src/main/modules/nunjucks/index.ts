@@ -1,8 +1,9 @@
 import * as path from 'path';
 
+import { Route } from './../../constants';
+
 import * as express from 'express';
 import * as nunjucks from 'nunjucks';
-import { Route } from './../../constants';
 
 export class Nunjucks {
   constructor(public developmentMode: boolean) {

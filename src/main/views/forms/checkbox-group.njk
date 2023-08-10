@@ -33,7 +33,7 @@
             {% endif %}
 
             <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="_enabled-{{ item.id }}" name="form.enabled" type="checkbox" value="{{ item.id }}"  {% if item._isCategoryPage === false and item._flagComment %}data-aria-controls="conditional-{{ item.id }}"{% endif %} {% if item._enabled %}checked{% endif %}>
+                <input class="govuk-checkboxes__input" id="_enabled-{{ item.id }}" name="enabled" type="checkbox" value="{{ item.id }}"  {% if item._isCategoryPage === false and item._flagComment %}data-aria-controls="conditional-{{ item.id }}"{% endif %} {% if item._enabled %}checked{% endif %}>
                 <label class="govuk-label govuk-checkboxes__label" for="waste">
                     {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
                 </label>
@@ -62,7 +62,7 @@
                                     {% endfor %}
                                 </p>
                             {% endif %}
-                            <textarea id="{{inputName}}-{{ item.id }}" rows="{{row}}" aria-describedby="{{inputName}}-{{ item.id }}-info {{inputName}}-{{ item.id }}-hint" class="govuk-textarea govuk-js-character-count {% if item._errors|length %}govuk-input--error{% endif %}" name="form.data[{{ item.id }}][{{inputName}}]" type="text" spellcheck="false" value="{{ item.value[inputName] }}"></textarea>
+                            <textarea id="{{inputName}}-{{ item.id }}" rows="{{row}}" aria-describedby="{{inputName}}-{{ item.id }}-info {{inputName}}-{{ item.id }}-hint" class="govuk-textarea govuk-js-character-count {% if item._errors|length %}govuk-input--error{% endif %}" name="data[{{ item.id }}][{{inputName}}]" type="text" spellcheck="false" value="{{ item.value[inputName] }}"></textarea>
                         </div>
                         <div id="{{inputName}}-{{ item.id }}-info" class="govuk-hint govuk-character-count__message">
                             {{ _r(_t('form.char_count.hint'), count) }}
@@ -75,7 +75,7 @@
       <div class="govuk-checkboxes__divider">or</div>
 
         <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="_enabled-0" name="form.enabled" type="checkbox" value="0"  {% if item._enabled %}checked{% endif %} data-behaviour="exclusive">
+            <input class="govuk-checkboxes__input" id="_enabled-0" name="enabled" type="checkbox" value="0"  {% if item._enabled %}checked{% endif %} data-behaviour="exclusive">
             <label class="govuk-label govuk-checkboxes__label">
                 {{ _t('form.no_support') }}
             </label>

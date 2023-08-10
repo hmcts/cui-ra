@@ -35,7 +35,7 @@
 
         {% for item in data._listOfValues %}
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="_enabled-{{ item.id }}" name="form.selected" type="radio" value="{{ item.key }}">
+            <input class="govuk-radios__input" id="_enabled-{{ item.id }}" name="selected" type="radio" value="{{ item.key }}">
             <label class="govuk-label govuk-radios__label" for="_enabled{{ item.id }}">
               {{item[radioValue]}}
             </label>
@@ -43,7 +43,7 @@
         {% endfor %}
 
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="other" name="form.selected" type="radio" data-aria-controls="conditional-other" value="OT0001">
+          <input class="govuk-radios__input" id="other" name="selected" type="radio" data-aria-controls="conditional-other" value="OT0001">
           <label class="govuk-label govuk-radios__label" for="other">
             {{ _t('other') }}
           </label>
@@ -73,7 +73,7 @@
         <div class="govuk-radios__divider">or</div>
 
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="none" name="form.selected" type="radio" value="0">
+          <input class="govuk-radios__input" id="none" name="selected" type="radio" value="0">
           <label class="govuk-label govuk-radios__label" for="none">
             {{ _t('form.no_support') }}
           </label>

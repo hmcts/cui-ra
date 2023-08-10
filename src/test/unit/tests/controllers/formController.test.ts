@@ -13,20 +13,24 @@ describe('FormController', () => {
   let formController: FormController;
   let mockedRequest = mockRequest(null);
   let mockedResponse = mockResponse();
-  
+
   beforeEach(() => {
     formController = new FormController();
   });
 
   test('should display the form with forms/checkbox with valid flag', async () => {
-    const parent:DataManagerDataObject = dataProcessorResultJson.filter((item:DataManagerDataObject) => item.id === 'RA0001')[0];
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'RA0001'
+    )[0];
 
     const mockSession = {
       newmanager: {
         get: jest.fn().mockReturnValue(parent),
-        getChildren: jest.fn().mockReturnValue(
-          dataProcessorResultJson.filter((item:DataManagerDataObject) => parent._childIds.includes(item.id))
-        ),
+        getChildren: jest
+          .fn()
+          .mockReturnValue(
+            dataProcessorResultJson.filter((item: DataManagerDataObject) => parent._childIds.includes(item.id))
+          ),
       },
     };
 
@@ -43,7 +47,9 @@ describe('FormController', () => {
   });
 
   test('should display the form with forms/type-ahead with valid flag', async () => {
-    const parent:DataManagerDataObject = dataProcessorResultJson.filter((item:DataManagerDataObject) => item.id === 'RA0001-RA0005-RA0010')[0];
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'RA0001-RA0005-RA0010'
+    )[0];
 
     const mockSession = {
       newmanager: {
