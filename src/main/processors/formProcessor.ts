@@ -12,9 +12,15 @@ export class FormProcessor {
 
     if (parent?._listOfValuesLength && parent?._listOfValuesLength > 0 && parent?._listOfValuesLength < 10) {
       //radio
+      if (!body.selected) {
+        throw new Error(ErrorMessages.UNEXPECTED_ERROR);
+      }
       return [];
     } else if (parent?._listOfValuesLength && parent?._listOfValuesLength >= 10) {
       //typeahead
+      if (!body.selected) {
+        throw new Error(ErrorMessages.UNEXPECTED_ERROR);
+      }
       return [];
     } else if (parent?._isCategoryPage) {
       //checkbox

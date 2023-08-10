@@ -2,6 +2,7 @@ import fs from 'fs';
 import { DataManagerDataObject } from './../../../../main/interfaces';
 import { FormProcessor } from './../../../../main/processors';
 import { Form, FormData } from './../../../../main/models';
+import { ErrorMessages } from './../../../../main/constants';
 
 const dataProcessorResultJson: DataManagerDataObject[] = JSON.parse(
   fs.readFileSync(__dirname + '/../../data/data-processor-results.json', 'utf-8')
@@ -38,6 +39,27 @@ describe('FormProcessor', () => {
     }
   });
 
+  test('should fail to process checkbox form data', () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'RA0001'
+    )[0];
+    const children: DataManagerDataObject[] = dataProcessorResultJson.filter((item: DataManagerDataObject) =>
+      parent._childIds.includes(item.id)
+    );
+
+    const body = new Form();
+
+    let error = '';
+
+    try {
+      FormProcessor.process(body, parent, children);
+    } catch (e) {
+      error = e.message;
+    }
+
+    expect(error).toBe(ErrorMessages.UNEXPECTED_ERROR);
+  });
+
   test('should process typeahead form data correctly', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
       (item: DataManagerDataObject) => item.id === 'RA0001-RA0005-RA0010'
@@ -58,5 +80,24 @@ describe('FormProcessor', () => {
       expect(item._enabled).toBe(true);
       expect(item.value.subTypeValue).toBe(comment);
     }
+  });
+
+  test('should fail to process typeahead form data', () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'RA0001-RA0005-RA0010'
+    )[0];
+    const children: DataManagerDataObject[] = [];
+
+    const body = new Form();
+
+    let error = '';
+
+    try {
+      FormProcessor.process(body, parent, children);
+    } catch (e) {
+      error = e.message;
+    }
+
+    expect(error).toBe(ErrorMessages.UNEXPECTED_ERROR);
   });
 });
