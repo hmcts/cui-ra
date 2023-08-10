@@ -26,7 +26,7 @@
                         <span class='govuk-!-font-weight-bold'>{{ _t('review.name_of_party') }}</span>
                     </th>
                     <td class="govuk-table__cell">
-                        {{ partyName }}
+                        {{ partyname }}
                     </td>
                 </tr>
             </tbody>
@@ -61,6 +61,11 @@
         <table class="govuk-table">
             <tbody class="govuk-table__body">
                 {% for item in new %}
+                    {% if item._isCategoryPage %}
+                        {% set page = item.id %}
+                    {% else %}
+                        {% set page = item._parentId %}
+                    {% endif %}
                     <tr class="govuk-table__row">
                         <td scope="row" class="govuk-table__cell">
                             {% if item.value.flagCode !== 'OT0001' %}
@@ -70,7 +75,7 @@
                             {% endif %}
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
-                            <a class='govuk-link govuk-link--no-visited-state' href="#">{{ _t("review.actions.change") }}</a>
+                            <a class='govuk-link govuk-link--no-visited-state' href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: page } ) }}">{{ _t("review.actions.change") }}</a>
                         </td>
                     </tr>
                 {% endfor %}
@@ -101,9 +106,9 @@
         </table>
         {% endif %}
 
-        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        <a href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: 'RA0001' } ) }}" class="govuk-button govuk-button--secondary" data-module="govuk-button">
             {{ _t("review.actions.new") }}
-        </button>
+        </a>
 
         <div class="govuk-button-group">
             <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">

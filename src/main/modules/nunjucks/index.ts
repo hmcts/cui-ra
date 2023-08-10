@@ -1,6 +1,7 @@
 import * as path from 'path';
 
 import { Route } from './../../constants';
+import { UrlRoute } from './../../utilities';
 
 import * as express from 'express';
 import * as nunjucks from 'nunjucks';
@@ -46,6 +47,10 @@ export class Nunjucks {
         }
         const reg = /\{([^}]+)\}/g;
         return text.replace(reg, (matched: string, key: string) => values[key] || matched);
+      };
+
+      res.locals._route = (route: string, params: { [key: string]: string } = {}) => {
+        return UrlRoute.make(route, params, UrlRoute.url(req));
       };
 
       next();

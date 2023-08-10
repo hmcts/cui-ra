@@ -1,4 +1,4 @@
-import { Route, Status } from '../constants';
+import { Status } from '../constants';
 
 import autobind from 'autobind-decorator';
 import { Request, Response } from 'express';
@@ -13,15 +13,12 @@ export class HomeController {
     // Add checks here to ensure the required data is on the session???
 
     res.render('overview', {
-      partyName: req.session.partyname,
       existingFlags: req.session.existingmanager?.data,
       status: Status,
     });
   }
 
   public async intro(req: Request, res: Response): Promise<void> {
-    res.render('intro', {
-      route: Route,
-    });
+    res.render('intro');
   }
 }

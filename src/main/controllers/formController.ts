@@ -66,7 +66,7 @@ export class FormController {
 
     if (!next) {
       //go to summary page as there are no more steps
-      return res.redirect(Route.OVERVIEW);
+      return res.redirect(Route.REVIEW);
     }
 
     return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: next.id }, UrlRoute.url(req)));
