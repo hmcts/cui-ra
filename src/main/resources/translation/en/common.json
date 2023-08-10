@@ -29,5 +29,22 @@
     "heading": "I want to tell you that my support needs have changed",
     "paragraph_1": "Use this form to tell us if your support needs have changed. You might not need something any more, or you can request something new.",
     "blurb": "You will be able to review your application before you submit it."
+  },
+  "form": {
+    "char_count": {
+      "hint": "You can enter up to {count} characters",
+      "characters_under_limit":{
+        "other": "You have %{count} characters remaining",
+        "one": "You have %{count} character remaining"
+      },
+      "characters_at_limit":"You have 0 characters remaining",
+      "characters_over_limit":{
+        "other": "You have %{count} characters too many",
+        "one": "You have %{count} character too many"
+      }
+    },
+    "no_support": "I do not need any support at this time",
+    "problem": "There is a problem",
+    "submit_button": "Save and continue"
   }
 }

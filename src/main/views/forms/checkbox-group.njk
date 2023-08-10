@@ -1,0 +1,88 @@
+{% extends "./base.njk" %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+
+
+{% set welsh = false %}
+
+{% if welsh === false %}
+    {% set inputName = 'flagComment' %}
+{% else %}
+    {% set inputName = 'flagComment_cy' %}
+{% endif %}
+
+{% block form %}
+
+  <div class="govuk-form-group {% if validationErrors and (validationErrors | length > 0) %}govuk-form-group--error{% endif %}">
+    <fieldset class="govuk-fieldset" aria-describedby="main-hint">
+      <div id="main-hint" class="govuk-hint">
+        Select all that apply to you.
+      </div>
+
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+      {% for item in children %}
+
+            {% if item.value.flagCode === 'OT0001' %}
+                {% set count = '200' %}
+                {% set row = '5' %}
+            {% else %}
+                {% set count = '80' %}
+                {% set row = '1' %}
+            {% endif %}
+
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="_enabled-{{ item.id }}" name="form.enabled" type="checkbox" value="{{ item.id }}"  {% if item._isCategoryPage === false and item._flagComment %}data-aria-controls="conditional-{{ item.id }}"{% endif %} {% if item._enabled %}checked{% endif %}>
+                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                    {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
+                </label>
+                <div id="{{inputName}}-{{ item.id }}-hint" class="govuk-hint govuk-checkboxes__hint">
+                    {{ _t(item.value.flagCode + '.hint') }}
+                </div>
+            </div>
+
+            {% if item._isCategoryPage === false and item._flagComment %} 
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-{{ item.id }}">
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="{{count}}" 
+                        data-i18n.characters-under-limit.other="{{ _t('form.char_count.characters_under_limit.other') }}"
+                        data-i18n.characters-under-limit.one="{{ _t('form.char_count.characters_under_limit.one') }}"
+                        data-i18n.characters-at-limit="{{ _t('form.char_count.characters_at_limit') }}"
+                        data-i18n.characters-over-limit.other="{{ _t('form.char_count.characters_over_limit.one') }}"
+                        data-i18n.characters-over-limit.one="{{ _t('form.char_count.characters_over_limit.one') }}"
+                    >
+                        <div class="govuk-form-group">
+                            <label id="{{inputName}}-{{ item.id }}-control" class="govuk-label" for="{{inputName}}-{{ item.id }}">
+                                {{ _t(item.value.flagCode + '.control') }}
+                            </label>
+                            {% if item._errors|length %}
+                                <p id="more-detail-error" class="govuk-error-message">
+                                    {% for error in item._errors %}
+                                        <span class="govuk-visually-hidden">Error:</span> {{error}}
+                                    {% endfor %}
+                                </p>
+                            {% endif %}
+                            <textarea id="{{inputName}}-{{ item.id }}" rows="{{row}}" aria-describedby="{{inputName}}-{{ item.id }}-info {{inputName}}-{{ item.id }}-hint" class="govuk-textarea govuk-js-character-count {% if item._errors|length %}govuk-input--error{% endif %}" name="form.data[{{ item.id }}][{{inputName}}]" type="text" spellcheck="false" value="{{ item.value[inputName] }}"></textarea>
+                        </div>
+                        <div id="{{inputName}}-{{ item.id }}-info" class="govuk-hint govuk-character-count__message">
+                            {{ _r(_t('form.char_count.hint'), count) }}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+      {% endfor %}
+
+      <div class="govuk-checkboxes__divider">or</div>
+
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="_enabled-0" name="form.enabled" type="checkbox" value="0"  {% if item._enabled %}checked{% endif %} data-behaviour="exclusive">
+            <label class="govuk-label govuk-checkboxes__label">
+                {{ _t('form.no_support') }}
+            </label>
+        </div>
+
+      </div>
+    </fieldset>
+  </div>
+
+{% endblock %}

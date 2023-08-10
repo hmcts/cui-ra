@@ -2,6 +2,7 @@ import * as path from 'path';
 
 import * as express from 'express';
 import * as nunjucks from 'nunjucks';
+import { Route } from './../../constants';
 
 export class Nunjucks {
   constructor(public developmentMode: boolean) {
@@ -17,30 +18,25 @@ export class Nunjucks {
     });
 
     app.use((req, res, next) => {
+      res.locals.route = Route;
       res.locals.pagePath = req.path;
       res.locals.fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
       res.locals._t = (key: string) => {
-        const serviceId = 'PFL'; // The service ID will need to be pulled from the cache
-
-        if (!serviceId) {
-          return res.__(key);
+        const serviceId = req.session.hmctsserviceid;
+        let result;
+        if (serviceId) {
+          const serviceKey = `${serviceId}.${key}`;
+          const fallback = res.__(key);
+          result = res.__(`${serviceKey}:${fallback}`);
+          if (result !== (serviceKey && key)) {
+            return result;
+          }
         }
-
-        const serviceKey = `${serviceId}.${key}`;
-        const fallback = res.__(key);
-        let result = res.__(`${serviceKey}:${fallback}`);
-
-        if (result !== (serviceKey || key)) {
+        result = res.__(key);
+        if (result !== key) {
           return result;
         }
-
-        result = res.__(serviceKey);
-
-        if (result !== serviceKey) {
-          return result;
-        }
-
-        return res.__(key);
+        return null;
       };
 
       res.locals._r = (text: string | undefined, values: { [key: string]: string } = {}) => {

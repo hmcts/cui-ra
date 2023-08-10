@@ -1,6 +1,17 @@
 {
-  "flag_0001": "flag 0001 text from en flags.json v3",
-  "deeper": {
-    "flag_0002": "flag 0002 text from en flags.json v3"
+  "RA0001": {
+    "hint": "Select all that apply to you - specific requirements can be given next",
+    "description": "We know some people need support to access information and use our services. We often call this a reasonable adjustment. Some reasonable adjustments need to be agreed by the judge or HMCTS. You can discuss with the court if your needs change.",
+    "full_question": "Do you have a physical, mental or learning disability or health condition that means you need support during your case?",
+    "error": {
+      "empty":"Select whether you need support"
+    }
+  },
+  "RA0002": {
+    "hint": "For example, braille or different colours and text sizes",
+    "description": "Think about all communications with the court, as well as what you might need at a hearing. Consider remote and in-person hearings, in case your preferred hearing type is not possible.",
+    "error": {
+      "empty":"Select whether you need documents in an alternate format"
+    }
   }
 }

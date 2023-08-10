@@ -128,8 +128,63 @@
                 "flagCode": "RA0010",
                 "isParent": "false",
                 "Path": ["Party", "Reasonable adjustment", "Language Support"],
-                "listOfValuesLength": 0,
-                "listOfValues": []
+                "listOfValuesLength": 11,
+                "listOfValues": [ {
+                  "key": "AL",
+                  "value": "Albanian",
+                  "value_cy": "translated text"
+                },
+                {
+                  "key": "ES",
+                  "value": "Spanish",
+                  "value_cy": "translated text"
+                },
+                {
+                  "key": "PT",
+                  "value": "Portugese",
+                  "value_cy": "translated text"
+                },
+                {
+                  "key": "GB",
+                  "value": "Britan",
+                  "value_cy": "translated text"
+                },
+                {
+                  "key": "KU",
+                  "value": "Ukrain",
+                  "value_cy": "translated text"
+                },
+                {
+                  "key": "ES",
+                  "value": "Spanish",
+                  "value_cy": "translated text"
+                },
+                {
+                  "key": "PT",
+                  "value": "Portugese",
+                  "value_cy": "translated text"
+                },
+                {
+                  "key": "ES",
+                  "value": "Spanish",
+                  "value_cy": "translated text"
+                },
+                {
+                  "key": "PT",
+                  "value": "Portugese",
+                  "value_cy": "translated text"
+                },
+                {
+                  "key": "ES",
+                  "value": "Spanish",
+                  "value_cy": "translated text"
+                },
+                {
+                  "key": "PT",
+                  "value": "Portugese",
+                  "value_cy": "translated text"
+                }
+                ]
               },
               {
                 "name": "Other",
