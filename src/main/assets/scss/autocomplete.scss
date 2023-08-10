@@ -162,9 +162,6 @@
       color: HighlightText;
 
       // Prefer SelectedItem / SelectedItemText in browsers that support it
-      background-color: SelectedItem;
-      border-color: SelectedItem;
-      color: SelectedItemText;
       outline-color: SelectedItemText;
     }
   }
