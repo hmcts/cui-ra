@@ -198,38 +198,39 @@
                 "isParent": "true",
                 "Path": ["Party", "Reasonable adjustment"],
                 "childFlags": [
-                {
-                  "name": "Sign language interpreter",
-                  "name_cy": "Translated welsh value CY",
-                  "hearingRelevant": "true",
-                  "flagComment": "true",
-                  "defaultStatus": "Requested",
-                  "externallyAvailable": "true",
-                  "flagCode": "RA0017",
-                  "isParent": "false",
-                  "Path": ["Party", "Reasonable adjustment", "Language Support"],
-                  "listOfValuesLength": 4,
-                  "listOfValues": [
-                    {
-                      "key": "AL",
-                      "value": "Albanian",
-                      "value_cy": "translated text"
-                    },
-                    {
-                      "key": "ES",
-                      "value": "Spanish",
-                      "value_cy": "translated text"
-                    },
-                    {
-                      "key": "PT",
-                      "value": "Portugese",
-                      "value_cy": "translated text"
-                    },
-                    {
-                      "key": "GB",
-                      "value": "Britan",
-                      "value_cy": "translated text"
-                    }]
+                  {
+                    "name": "Sign language interpreter",
+                    "name_cy": "Translated welsh value CY",
+                    "hearingRelevant": "true",
+                    "flagComment": "true",
+                    "defaultStatus": "Requested",
+                    "externallyAvailable": "true",
+                    "flagCode": "RA0017",
+                    "isParent": "false",
+                    "Path": ["Party", "Reasonable adjustment", "Language Support"],
+                    "listOfValuesLength": 4,
+                    "listOfValues": [
+                      {
+                        "key": "AL",
+                        "value": "Albanian",
+                        "value_cy": "translated text"
+                      },
+                      {
+                        "key": "ES",
+                        "value": "Spanish",
+                        "value_cy": "translated text"
+                      },
+                      {
+                        "key": "PT",
+                        "value": "Portugese",
+                        "value_cy": "translated text"
+                      },
+                      {
+                        "key": "GB",
+                        "value": "Britan",
+                        "value_cy": "translated text"
+                      }
+                    ]
                   }
                 ]
               },

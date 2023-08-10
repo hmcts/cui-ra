@@ -77,10 +77,7 @@ export class DataController {
       req.session.newmanager = new NewFlagsManager();
       req.session.newmanager.set(processedData);
 
-      const master: DataManagerDataObject[] = req.session.newmanager.find(
-        'flagCode',
-        req.session.masterflagcode
-      );
+      const master: DataManagerDataObject[] = req.session.newmanager.find('flagCode', req.session.masterflagcode);
       if (master.length > 0) {
         req.session.mastername = master[0].value.name;
         req.session.mastername_cy = master[0].value.name_cy;
