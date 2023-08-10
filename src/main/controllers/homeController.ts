@@ -1,6 +1,7 @@
+import { Route, Status } from '../constants';
+
 import autobind from 'autobind-decorator';
 import { Request, Response } from 'express';
-import { Status, Route } from '../constants';
 
 @autobind
 export class HomeController {
