@@ -74,9 +74,15 @@ describe('FormController', () => {
   });
 
   test('should handle post request with valid flag and data', async () => {
-    const parent:DataManagerDataObject = dataProcessorResultJson.filter((item:DataManagerDataObject) => item.id === 'RA0001')[0];
-    const child:DataManagerDataObject[] = dataProcessorResultJson.filter((item:DataManagerDataObject) => parent._childIds.includes(item.id));
-    const next:DataManagerDataObject = dataProcessorResultJson.filter((item:DataManagerDataObject) => item.id === 'RA0001-RA0004')[0];
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'RA0001'
+    )[0];
+    const child: DataManagerDataObject[] = dataProcessorResultJson.filter((item: DataManagerDataObject) =>
+      parent._childIds.includes(item.id)
+    );
+    const next: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'RA0001-RA0004'
+    )[0];
     // Set up mock data and session
     const mockSession = {
       newmanager: {
@@ -94,24 +100,25 @@ describe('FormController', () => {
     mockedRequest.session = mockSession;
     mockedRequest.protocol = protocol;
     mockedRequest.headers = {
-      host: host
-    }
+      host: host,
+    };
 
     const PostData = {
-      'RA0001-RA0002':{
-        'flagComment':'one'
-      }
-    }
+      'RA0001-RA0002': {
+        flagComment: 'one',
+      },
+    };
 
     mockedRequest.body = {
-        'data': PostData,
-        'enabled': ['RA0001-RA0004']
+      data: PostData,
+      enabled: ['RA0001-RA0004'],
     }; // Mock request body
 
     await formController.post(mockedRequest, mockedResponse);
 
     // Assert expected behavior here
-    expect(mockedResponse.redirect).toHaveBeenCalledWith(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: next.id }, UrlRoute.url(mockedRequest)));
+    expect(mockedResponse.redirect).toHaveBeenCalledWith(
+      UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: next.id }, UrlRoute.url(mockedRequest))
+    );
   });
-
 });
