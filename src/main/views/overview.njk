@@ -32,25 +32,25 @@
                     <td scope="row" class="govuk-table__cell">
                         {{ item.value.name }}
                     </td>
-                    {% if item.value.status == 'Requested' %}
+                    {% if item.value.status == status.REQUESTED %}
                         <td class="govuk-table__cell">
                             <strong class="govuk-tag govuk-tag--yellow">
                                 {{ _t('overview.status.requested') }}
                             </strong>
                         </td>
-                    {% elseif item.value.status == 'Active' %}
+                    {% elseif item.value.status == status.ACTIVE %}
                         <td class="govuk-table__cell">
                             <strong class="govuk-tag govuk-tag--turquoise">
                                 {{ _t('overview.status.active') }}
                             </strong>
                         </td>
-                    {% elseif item.value.status == 'Inactive' %}
+                    {% elseif item.value.status == status.INACTIVE %}
                         <td class="govuk-table__cell">
                             <strong class="govuk-tag govuk-tag--grey">
                                 {{ _t('overview.status.inactive') }}
                             </strong>
                         </td>
-                    {% elseif item.value.status == 'Not Approved' %}
+                    {% elseif item.value.status == status.NOT_APPROVED %}
                         <td class="govuk-table__cell">
                             <strong class="govuk-tag govuk-tag--orange">
                                 {{ _t('overview.status.not_approved') }}
