@@ -57,7 +57,7 @@ describe('Review Controller', () => {
 
     // Need to set stuff on an actual session here and not the request??
     mockRequest.session = {
-      partyName: 'demo',
+      partyName: 'demo name',
       existingmanager: dataManagerExisting,
     } as unknown as Session & Partial<SessionData>;
 
@@ -89,7 +89,7 @@ describe('Review Controller', () => {
 
     // Need to set stuff on an actual session here and not the request??
     mockRequest.session = {
-      partyName: 'demo',
+      partyName: 'demo name',
       existingmanager: dataManagerExisting,
     } as unknown as Session & Partial<SessionData>;
 
