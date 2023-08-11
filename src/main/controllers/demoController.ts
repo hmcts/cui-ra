@@ -41,8 +41,6 @@ export class DemoController {
       req.session.existingmanager = new ExistingFlagsManager();
 
       return res.status(301).redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'RA0001' }, UrlRoute.url(req)));
-
-      res.redirect('home/intro'); // This will need to be the dynamic form once it has been pulled in
     } else if (action === 'existing') {
       // Redirect user to overview page with demo data
       const dataManagerExisting: ExistingFlagsManager = new ExistingFlagsManager();
