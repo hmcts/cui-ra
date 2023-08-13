@@ -28,7 +28,7 @@ describe('Exisiting Flags Manager', () => {
   });
 
   test('Find Data Items', async () => {
-    const items: PayloadCollectionItem[] = dataManager.find('name', 'Hearing provision');
+    const items: PayloadCollectionItem[] = dataManager.find('value.name', 'Hearing provision');
 
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(items[0].id).toEqual(itemId);

@@ -53,6 +53,7 @@ export class DemoController {
       req.session.mastername = 'Reasonable Adjustments';
       req.session.partyname = 'john doe';
       req.session.existingmanager = dataManagerExisting;
+      req.session.newmanager = NewFlag;
 
       res.redirect('home/overview');
     } else {

@@ -13,7 +13,6 @@
 {% endif %}
 
 {% block form %}
-
   <div class="govuk-form-group {% if validationErrors and (validationErrors | length > 0) %}govuk-form-group--error{% endif %}">
     <fieldset class="govuk-fieldset" aria-describedby="main-hint">
       <div id="main-hint" class="govuk-hint">
@@ -23,7 +22,7 @@
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 
       {% for item in children %}
-
+      
             {% if item.value.flagCode === 'OT0001' %}
                 {% set count = '200' %}
                 {% set row = '5' %}
@@ -62,7 +61,7 @@
                                     {% endfor %}
                                 </p>
                             {% endif %}
-                            <textarea id="{{inputName}}-{{ item.id }}" rows="{{row}}" aria-describedby="{{inputName}}-{{ item.id }}-info {{inputName}}-{{ item.id }}-hint" class="govuk-textarea govuk-js-character-count {% if item._errors|length %}govuk-input--error{% endif %}" name="data[{{ item.id }}][{{inputName}}]" type="text" spellcheck="false" value="{{ item.value[inputName] }}"></textarea>
+                            <textarea id="{{inputName}}-{{ item.id }}" rows="{{row}}" aria-describedby="{{inputName}}-{{ item.id }}-info {{inputName}}-{{ item.id }}-hint" class="govuk-textarea govuk-js-character-count {% if item._errors|length %}govuk-input--error{% endif %}" name="data[{{ item.id }}][{{inputName}}]" type="text" spellcheck="false">{{ item.value[inputName] }}</textarea>
                         </div>
                         <div id="{{inputName}}-{{ item.id }}-info" class="govuk-hint govuk-character-count__message">
                             {{ _r(_t('form.char_count.hint'), count) }}

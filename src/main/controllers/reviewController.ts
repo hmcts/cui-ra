@@ -8,9 +8,9 @@ export class ReviewController {
   public async get(req: Request, res: Response): Promise<void> {
     res.render('review', {
       welsh: false,
-      requested: req.session.existingmanager?.find('status', 'Requested'),
-      new: req.session.newmanager?.find('status', 'Requested').splice(18), // To be replaced with _enabled once work has been completed
-      notRequired: req.session.existingmanager?.find('status', 'Inactive') || [],
+      requested: req.session.existingmanager?.find('value.status', 'Requested'),
+      new: req.session.newmanager?.find('_enabled', true),
+      notRequired: req.session.existingmanager?.find('value.status', 'Inactive') || [],
       route: Route,
     });
   }

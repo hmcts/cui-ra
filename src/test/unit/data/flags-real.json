@@ -8,7 +8,7 @@
                   "flagComment": false,
                   "defaultStatus": "Active",
                   "externallyAvailable": false,
-                  "flagCode": "PF0001",
+                  "flagCode": "CATGRY",
                   "childFlags": [
                       {
                           "name": "Reasonable adjustment",
@@ -16,7 +16,7 @@
                           "flagComment": false,
                           "defaultStatus": "Active",
                           "externallyAvailable": false,
-                          "flagCode": "RA0001",
+                          "flagCode": "CATGRY",
                           "childFlags": [
                               {
                                   "name": "I need documents in an alternative format",
@@ -24,7 +24,7 @@
                                   "flagComment": false,
                                   "defaultStatus": "Active",
                                   "externallyAvailable": false,
-                                  "flagCode": "RA0002",
+                                  "flagCode": "CATGRY",
                                   "childFlags": [
                                       {
                                           "name": "Documents in a specified colour",
@@ -159,7 +159,7 @@
                                   "flagComment": false,
                                   "defaultStatus": "Active",
                                   "externallyAvailable": false,
-                                  "flagCode": "RA0003",
+                                  "flagCode": "CATGRY",
                                   "childFlags": [
                                       {
                                           "name": "Guidance on how to complete forms",
@@ -219,7 +219,7 @@
                                   "flagComment": false,
                                   "defaultStatus": "Active",
                                   "externallyAvailable": false,
-                                  "flagCode": "RA0004",
+                                  "flagCode": "CATGRY",
                                   "childFlags": [
                                       {
                                           "name": "Step free / wheelchair access",
@@ -354,7 +354,7 @@
                                   "flagComment": false,
                                   "defaultStatus": "Active",
                                   "externallyAvailable": false,
-                                  "flagCode": "RA0005",
+                                  "flagCode": "CATGRY",
                                   "childFlags": [
                                       {
                                           "name": "Support worker or carer with me",
@@ -444,7 +444,7 @@
                                   "flagComment": false,
                                   "defaultStatus": "Active",
                                   "externallyAvailable": false,
-                                  "flagCode": "RA0006",
+                                  "flagCode": "CATGRY",
                                   "childFlags": [
                                       {
                                           "name": "Appropriate lighting",
@@ -534,7 +534,7 @@
                                   "flagComment": false,
                                   "defaultStatus": "Active",
                                   "externallyAvailable": false,
-                                  "flagCode": "RA0007",
+                                  "flagCode": "CATGRY",
                                   "childFlags": [
                                       {
                                           "name": "In person hearing",
@@ -609,7 +609,7 @@
                                   "flagComment": false,
                                   "defaultStatus": "Active",
                                   "externallyAvailable": false,
-                                  "flagCode": "RA0008",
+                                  "flagCode": "CATGRY",
                                   "childFlags": [
                                       {
                                           "name": "Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)",
@@ -617,7 +617,7 @@
                                           "flagComment": false,
                                           "defaultStatus": "Active",
                                           "externallyAvailable": false,
-                                          "flagCode": "RA0009",
+                                          "flagCode": "CATGRY",
                                           "childFlags": [
                                               {
                                                   "name": "Hearing loop (hearing enhancement system)",
@@ -1741,37 +1741,6 @@
                           "Path": [
                               "Party"
                           ]
-                      },
-                      {
-                        "name": "Language Interpreter - radio",
-                        "hearingRelevant": true,
-                        "flagComment": false,
-                        "defaultStatus": "Requested",
-                        "externallyAvailable": true,
-                        "flagCode": "PF1115",
-                        "listOfValuesLength": 4,
-                        "listOfValues": [
-                            {
-                                "key": "abr",
-                                "value": "Brong"
-                            },
-                            {
-                                "key": "ach",
-                                "value": "Acholi"
-                            },
-                            {
-                                "key": "afr",
-                                "value": "Afrikaans"
-                            },
-                            {
-                                "key": "aii",
-                                "value": "Assyrian"
-                            }
-                        ],
-                        "isParent": false,
-                        "Path": [
-                            "Party"
-                        ]
                       },
                       {
                           "name": "Other",

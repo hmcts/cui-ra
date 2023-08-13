@@ -12,7 +12,7 @@ const comment = 'Comment for child1';
 describe('FormProcessor', () => {
   test('should process checkbox form data correctly', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
-      (item: DataManagerDataObject) => item.id === 'RA0001'
+      (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
     )[0];
     const children: DataManagerDataObject[] = dataProcessorResultJson.filter((item: DataManagerDataObject) =>
       parent._childIds.includes(item.id)
@@ -22,15 +22,15 @@ describe('FormProcessor', () => {
     const formdata = new FormData();
     formdata.flagComment = comment;
 
-    body.enabled = ['RA0001-RA0002'];
+    body.enabled = ['PF0001-RA0001-RA0002-RA0010'];
     body.data = {
-      'RA0001-RA0002': formdata,
+      'PF0001-RA0001-RA0002-RA0010': formdata,
     };
 
     const results: DataManagerDataObject[] = FormProcessor.process(body, parent, children);
 
     const item: DataManagerDataObject | undefined = results.find(
-      (i: DataManagerDataObject) => i.id === 'RA0001-RA0002'
+      (i: DataManagerDataObject) => i.id === 'PF0001-RA0001-RA0002-RA0010'
     );
 
     if (item) {
@@ -41,7 +41,7 @@ describe('FormProcessor', () => {
 
   test('should fail to process checkbox form data', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
-      (item: DataManagerDataObject) => item.id === 'RA0001'
+      (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
     )[0];
     const children: DataManagerDataObject[] = dataProcessorResultJson.filter((item: DataManagerDataObject) =>
       parent._childIds.includes(item.id)
@@ -62,7 +62,7 @@ describe('FormProcessor', () => {
 
   test('should process typeahead form data correctly', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
-      (item: DataManagerDataObject) => item.id === 'RA0001-RA0005-RA0010'
+      (item: DataManagerDataObject) => item.id === 'PF0001-PF0015'
     )[0];
     const children: DataManagerDataObject[] = [];
 
@@ -73,7 +73,7 @@ describe('FormProcessor', () => {
     const results: DataManagerDataObject[] = FormProcessor.process(body, parent, children);
 
     const item: DataManagerDataObject | undefined = results.find(
-      (i: DataManagerDataObject) => i.id === 'RA0001-RA0005-RA0010'
+      (i: DataManagerDataObject) => i.id === 'PF0001-PF0015'
     );
 
     if (item) {
@@ -84,7 +84,7 @@ describe('FormProcessor', () => {
 
   test('should fail to process typeahead form data', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
-      (item: DataManagerDataObject) => item.id === 'RA0001-RA0005-RA0010'
+      (item: DataManagerDataObject) => item.id === 'PF0001-PF0015'
     )[0];
     const children: DataManagerDataObject[] = [];
 
@@ -103,7 +103,7 @@ describe('FormProcessor', () => {
 
   test('should process radio-group form data correctly', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
-      (item: DataManagerDataObject) => item.id === 'RA0001-RA0005-RA0016-RA0017'
+      (item: DataManagerDataObject) => item.id === 'PF0001-PF1115'
     )[0];
     const children: DataManagerDataObject[] = [];
 
@@ -114,7 +114,7 @@ describe('FormProcessor', () => {
     const results: DataManagerDataObject[] = FormProcessor.process(body, parent, children);
 
     const item: DataManagerDataObject | undefined = results.find(
-      (i: DataManagerDataObject) => i.id === 'RA0001-RA0005-RA0016-RA0017'
+      (i: DataManagerDataObject) => i.id === 'PF0001-PF1115'
     );
 
     if (item) {

@@ -23,7 +23,7 @@ describe('FormController', () => {
 
   test('should display the form with forms/checkbox with valid flag', async () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
-      (item: DataManagerDataObject) => item.id === 'RA0001'
+      (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
     )[0];
 
     const mockSession = {
@@ -51,7 +51,7 @@ describe('FormController', () => {
 
   test('should display the form with forms/type-ahead with valid flag', async () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
-      (item: DataManagerDataObject) => item.id === 'RA0001-RA0005-RA0010'
+      (item: DataManagerDataObject) => item.id === 'PF0001-PF0015'
     )[0];
 
     const mockSession = {
@@ -75,7 +75,7 @@ describe('FormController', () => {
 
   test('should display the form with forms/radio-group with valid flag', async () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
-      (item: DataManagerDataObject) => item.id === 'RA0001-RA0005-RA0016-RA0017'
+      (item: DataManagerDataObject) => item.id === 'PF0001-PF1115'
     )[0];
 
     const mockSession = {
@@ -99,13 +99,13 @@ describe('FormController', () => {
 
   test('should handle post request with valid flag and data', async () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
-      (item: DataManagerDataObject) => item.id === 'RA0001'
+      (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
     )[0];
     const child: DataManagerDataObject[] = dataProcessorResultJson.filter((item: DataManagerDataObject) =>
       parent._childIds.includes(item.id)
     );
     const next: DataManagerDataObject = dataProcessorResultJson.filter(
-      (item: DataManagerDataObject) => item.id === 'RA0001-RA0004'
+      (item: DataManagerDataObject) => item.id === 'PF0001-RA0001-RA0004'
     )[0];
     // Set up mock data and session
     const mockSession = {
@@ -128,14 +128,14 @@ describe('FormController', () => {
     };
 
     const PostData = {
-      'RA0001-RA0002': {
+      'PF0001-RA0001-RA0002': {
         flagComment: 'one',
       },
     };
 
     mockedRequest.body = {
       data: PostData,
-      enabled: ['RA0001-RA0004'],
+      enabled: ['PF0001-RA0001-RA0004'],
     }; // Mock request body
 
     await formController.post(mockedRequest, mockedResponse);

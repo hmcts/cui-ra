@@ -6,7 +6,7 @@ const dataJson: DataManagerDataObject[] = JSON.parse(
   fs.readFileSync(__dirname + '/../../data/data-processor-results.json', 'utf-8')
 );
 const dataManager: DataManager<DataManagerDataObject> = new DataManager<DataManagerDataObject>();
-const itemId = 'RA0001-RA0004';
+const itemId = 'PF0001-RA0001-RA0008-RA0009';
 const testString = 'this is a test string';
 
 /* eslint-disable jest/expect-expect */
@@ -24,7 +24,7 @@ describe('Data Manager', () => {
   });
 
   test('Find Data Items', async () => {
-    const items: DataManagerDataObject[] = dataManager.find('name', 'Hearing provision');
+    const items: DataManagerDataObject[] = dataManager.find('value.name', 'Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)');
 
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(items[0].id).toEqual(itemId);

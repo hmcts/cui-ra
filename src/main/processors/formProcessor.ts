@@ -53,6 +53,7 @@ export class FormProcessor {
           return item;
         }
       });
+
       return children || [];
     } else {
       throw new Error(ErrorMessages.UNEXPECTED_ERROR);

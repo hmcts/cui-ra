@@ -49,7 +49,7 @@ export class FlagProcessor implements FlagProcessorInterface {
       dateTimeModified: dateTime,
       dateTimeCreated: dateTime,
       path:
-        flag.Path.length > 0
+        (flag.Path && flag.Path.length > 0)
           ? flag.Path.map(str => {
               return {
                 id: undefined,
