@@ -27,7 +27,10 @@ describe('New Flags Manager', () => {
   });
 
   test('Find Data Items', async () => {
-    const items: DataManagerDataObject[] = dataManager.find('value.name', 'I need adjustments to get to, into and around our buildings');
+    const items: DataManagerDataObject[] = dataManager.find(
+      'value.name',
+      'I need adjustments to get to, into and around our buildings'
+    );
 
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(items[0].id).toEqual(itemId);
@@ -50,7 +53,7 @@ describe('New Flags Manager', () => {
     //This test will mock a form submission
     const childItems: DataManagerDataObject[] = dataManager.getChildren(itemId);
     // eslint-disable-line @typescript-eslint/no-empty-function
-    expect(childItems.length).toEqual(9);
+    expect(childItems.length).toEqual(8);
   });
 
   test('Get Next Category Page', async () => {

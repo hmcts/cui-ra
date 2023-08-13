@@ -5,13 +5,7 @@
     "_enabled": false,
     "_isParent": true,
     "_errors": [],
-    "_childIds": [
-      "PF0001-RA0001",
-      "PF0001-PF0015",
-      "PF0001-PF1115",
-      "PF0001-OT0001",
-      "PF0001-OT0001"
-    ],
+    "_childIds": ["PF0001-RA0001", "PF0001-PF0015", "PF0001-PF1115", "PF0001-OT0001"],
     "id": "PF0001",
     "value": {
       "name": "Party",
@@ -43,7 +37,6 @@
       "PF0001-RA0001-RA0006",
       "PF0001-RA0001-RA0007",
       "PF0001-RA0001-RA0008",
-      "PF0001-RA0001-OT0001",
       "PF0001-RA0001-OT0001"
     ],
     "id": "PF0001-RA0001",
@@ -77,7 +70,6 @@
       "PF0001-RA0001-RA0002-RA0014",
       "PF0001-RA0001-RA0002-RA0015",
       "PF0001-RA0001-RA0002-RA0016",
-      "PF0001-RA0001-RA0002-OT0001",
       "PF0001-RA0001-RA0002-OT0001"
     ],
     "id": "PF0001-RA0001-RA0002",
@@ -342,49 +334,11 @@
   },
   {
     "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_isParent": false,
-    "_errors": [],
-    "_listOfValuesLength": 0,
-    "_listOfValues": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0002-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need documents in an alternative format"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0002"
-  },
-  {
-    "_flagComment": true,
     "_isCategoryPage": true,
     "_enabled": false,
     "_isParent": true,
     "_errors": [],
-    "_childIds": [
-      "PF0001-RA0001-RA0003-RA0017",
-      "PF0001-RA0001-RA0003-RA0018",
-      "PF0001-RA0001-RA0003-OT0001",
-      "PF0001-RA0001-RA0003-OT0001"
-    ],
+    "_childIds": ["PF0001-RA0001-RA0003-RA0017", "PF0001-RA0001-RA0003-RA0018", "PF0001-RA0001-RA0003-OT0001"],
     "id": "PF0001-RA0001-RA0003",
     "value": {
       "name": "I need help with forms",
@@ -497,39 +451,6 @@
   },
   {
     "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_isParent": false,
-    "_errors": [],
-    "_listOfValuesLength": 0,
-    "_listOfValues": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0003-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help with forms"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0003"
-  },
-  {
-    "_flagComment": true,
     "_isCategoryPage": true,
     "_enabled": false,
     "_isParent": true,
@@ -542,7 +463,6 @@
       "PF0001-RA0001-RA0004-RA0023",
       "PF0001-RA0001-RA0004-RA0024",
       "PF0001-RA0001-RA0004-RA0025",
-      "PF0001-RA0001-RA0004-OT0001",
       "PF0001-RA0001-RA0004-OT0001"
     ],
     "id": "PF0001-RA0001-RA0004",
@@ -807,39 +727,6 @@
   },
   {
     "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_isParent": false,
-    "_errors": [],
-    "_listOfValuesLength": 0,
-    "_listOfValues": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0004-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need adjustments to get to, into and around our buildings"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0004"
-  },
-  {
-    "_flagComment": true,
     "_isCategoryPage": true,
     "_enabled": false,
     "_isParent": true,
@@ -849,7 +736,6 @@
       "PF0001-RA0001-RA0005-RA0027",
       "PF0001-RA0001-RA0005-RA0028",
       "PF0001-RA0001-RA0005-RA0029",
-      "PF0001-RA0001-RA0005-OT0001",
       "PF0001-RA0001-RA0005-OT0001"
     ],
     "id": "PF0001-RA0001-RA0005",
@@ -1024,39 +910,6 @@
   },
   {
     "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_isParent": false,
-    "_errors": [],
-    "_listOfValuesLength": 0,
-    "_listOfValues": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0005-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need to bring support with me to a hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0005"
-  },
-  {
-    "_flagComment": true,
     "_isCategoryPage": true,
     "_enabled": false,
     "_isParent": true,
@@ -1066,7 +919,6 @@
       "PF0001-RA0001-RA0006-RA0031",
       "PF0001-RA0001-RA0006-RA0032",
       "PF0001-RA0001-RA0006-RA0033",
-      "PF0001-RA0001-RA0006-OT0001",
       "PF0001-RA0001-RA0006-OT0001"
     ],
     "id": "PF0001-RA0001-RA0006",
@@ -1241,39 +1093,6 @@
   },
   {
     "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_isParent": false,
-    "_errors": [],
-    "_listOfValuesLength": 0,
-    "_listOfValues": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0006-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need something to feel comfortable during my hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0006"
-  },
-  {
-    "_flagComment": true,
     "_isCategoryPage": true,
     "_enabled": false,
     "_isParent": true,
@@ -1282,7 +1101,6 @@
       "PF0001-RA0001-RA0007-RA0034",
       "PF0001-RA0001-RA0007-RA0035",
       "PF0001-RA0001-RA0007-RA0036",
-      "PF0001-RA0001-RA0007-OT0001",
       "PF0001-RA0001-RA0007-OT0001"
     ],
     "id": "PF0001-RA0001-RA0007",
@@ -1427,39 +1245,6 @@
   },
   {
     "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_isParent": false,
-    "_errors": [],
-    "_listOfValuesLength": 0,
-    "_listOfValues": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0007-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need to request a certain type of hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0007"
-  },
-  {
-    "_flagComment": true,
     "_isCategoryPage": true,
     "_enabled": false,
     "_isParent": true,
@@ -1474,7 +1259,6 @@
       "PF0001-RA0001-RA0008-RA0042",
       "PF0001-RA0001-RA0008-RA0046",
       "PF0001-RA0001-RA0008-RA0047",
-      "PF0001-RA0001-RA0008-OT0001",
       "PF0001-RA0001-RA0008-OT0001"
     ],
     "id": "PF0001-RA0001-RA0008",
@@ -1507,7 +1291,6 @@
       "PF0001-RA0001-RA0008-RA0009-RA0043",
       "PF0001-RA0001-RA0008-RA0009-RA0044",
       "PF0001-RA0001-RA0008-RA0009-RA0045",
-      "PF0001-RA0001-RA0008-RA0009-OT0001",
       "PF0001-RA0001-RA0008-RA0009-OT0001"
     ],
     "id": "PF0001-RA0001-RA0008-RA0009",
@@ -1668,42 +1451,6 @@
         },
         {
           "name": "Induction Loop, Infrared Receiver)"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0008-RA0009"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_isParent": false,
-    "_errors": [],
-    "_listOfValuesLength": 0,
-    "_listOfValues": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0008-RA0009-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help communicating and understanding"
-        },
-        {
-          "name": "Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)"
         }
       ],
       "hearingRelevant": "Yes",
@@ -2040,73 +1787,10 @@
     "_enabled": false,
     "_isParent": false,
     "_errors": [],
-    "_listOfValuesLength": 0,
-    "_listOfValues": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0008-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help communicating and understanding"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0008"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_isParent": false,
-    "_errors": [],
     "_childIds": [],
     "id": "PF0001-RA0001-OT0001",
     "value": {
       "name": "Other",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_isParent": false,
-    "_errors": [],
-    "_listOfValuesLength": 0,
-    "_listOfValues": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
       "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
@@ -3027,36 +2711,6 @@
       "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
-        {
-          "name": "Party"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_isParent": false,
-    "_errors": [],
-    "_listOfValuesLength": 0,
-    "_listOfValues": [],
-    "_childIds": [],
-    "id": "PF0001-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": ""
-        },
         {
           "name": "Party"
         }

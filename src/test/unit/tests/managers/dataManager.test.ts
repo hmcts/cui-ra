@@ -24,7 +24,10 @@ describe('Data Manager', () => {
   });
 
   test('Find Data Items', async () => {
-    const items: DataManagerDataObject[] = dataManager.find('value.name', 'Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)');
+    const items: DataManagerDataObject[] = dataManager.find(
+      'value.name',
+      'Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)'
+    );
 
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(items[0].id).toEqual(itemId);

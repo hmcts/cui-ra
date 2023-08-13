@@ -40,7 +40,9 @@ export class DemoController {
       req.session.newmanager = NewFlag;
       req.session.existingmanager = new ExistingFlagsManager();
 
-      return res.status(301).redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'RA0001' }, UrlRoute.url(req)));
+      return res
+        .status(301)
+        .redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
     } else if (action === 'existing') {
       // Redirect user to overview page with demo data
       const dataManagerExisting: ExistingFlagsManager = new ExistingFlagsManager();

@@ -48,7 +48,7 @@ describe('Demo Controller', () => {
 
   test('Should render intro page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    const id = 'RA0001';
+    const id = 'PF0001-RA0001';
     mockRequest.body = { action: 'new' };
     demoController.post(mockRequest, mockResponse);
 
