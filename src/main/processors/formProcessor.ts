@@ -54,7 +54,7 @@ export class FormProcessor {
         }
       });
 
-      return children || [];
+      return children ?? [];
     } else {
       throw new Error(ErrorMessages.UNEXPECTED_ERROR);
     }
