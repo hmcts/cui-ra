@@ -58,7 +58,7 @@
               >
                   <div class="govuk-form-group">
                       <label id="other-control" class="govuk-label" for="other">
-                          Enter the type of support you need to request
+                          {{ _t('form.typeahead.control') }}
                       </label>
                       <textarea id="other" rows="{{row}}" aria-describedby="other-info other-hint" class="govuk-textarea govuk-js-character-count {% if item._errors|length %}govuk-input--error{% endif %}" name="data[{{ item.id }}][{{inputName}}]" type="text" spellcheck="false" value="{{ item.value[inputName] }}"></textarea>
                   </div>
