@@ -1,0 +1,20 @@
+[
+  {
+    "name": "name",
+    "type": "string",
+    "required": false,
+    "description": "The HTML name of the element. Defaults to pre-named ID if blank."
+  },
+  {
+    "name": "text",
+    "type": "string",
+    "required": true,
+    "description": "the text to display above the accessible autocomplete control. The select list will not render if this is not provided."
+  },
+  {
+    "name": "opts",
+    "type": "object",
+    "required": true,
+    "description": "All of the potential options to be displayed in the select list. The select list will not render if these are not provided."
+  }
+]

@@ -1,4 +1,11 @@
-import { ApiController, DataController, DemoController, HomeController, ReviewController } from './../../controllers';
+import {
+  ApiController,
+  DataController,
+  DemoController,
+  FormController,
+  HomeController,
+  ReviewController,
+} from './../../controllers';
 import { Logger } from './../../interfaces';
 import { FlagProcessor } from './../../processors';
 import { FileStorageClient, RedisClient, RefData, S2S } from './../../services';
@@ -44,6 +51,7 @@ export class Container {
       flagProcessor: asClass(FlagProcessor),
       homeController: asClass(HomeController),
       apiController: asClass(ApiController),
+      formController: asClass(FormController),
       dataController: asClass(DataController),
       demoController: asClass(DemoController),
       reviewController: asClass(ReviewController),

@@ -6,9 +6,9 @@ const dataJson: DataManagerDataObject[] = JSON.parse(
   fs.readFileSync(__dirname + '/../../data/data-processor-results.json', 'utf-8')
 );
 const dataManager: NewFlagsManager = new NewFlagsManager();
-const itemId = 'RA0001-RA0004';
-const nextId = 'RA0001-RA0004-RA0009';
-const previousId = 'RA0001';
+const itemId = 'PF0001-RA0001-RA0004';
+const nextId = 'PF0001-RA0001-RA0005';
+const previousId = 'PF0001-RA0001';
 
 const testString = 'this is a test string';
 
@@ -27,7 +27,10 @@ describe('New Flags Manager', () => {
   });
 
   test('Find Data Items', async () => {
-    const items: DataManagerDataObject[] = dataManager.find('name', 'Hearing provision');
+    const items: DataManagerDataObject[] = dataManager.find(
+      'value.name',
+      'I need adjustments to get to, into and around our buildings'
+    );
 
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(items[0].id).toEqual(itemId);
@@ -50,7 +53,7 @@ describe('New Flags Manager', () => {
     //This test will mock a form submission
     const childItems: DataManagerDataObject[] = dataManager.getChildren(itemId);
     // eslint-disable-line @typescript-eslint/no-empty-function
-    expect(childItems.length).toEqual(2);
+    expect(childItems.length).toEqual(8);
   });
 
   test('Get Next Category Page', async () => {

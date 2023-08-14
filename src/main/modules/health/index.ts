@@ -3,7 +3,7 @@ import os from 'os';
 //import { RedisClientInterface } from './../../interfaces';
 
 import healthcheck from '@hmcts/nodejs-healthcheck';
-import config from 'config';
+//import config from 'config';
 import { Application } from 'express';
 
 /**
@@ -24,8 +24,8 @@ export class HealthCheck {
     healthcheck.addTo(app, {
       checks: {
         //...redis,
-        'service-auth': healthcheck.web(new URL('/health', config.get('services.s2s.endpoint'))),
-        'reference-data': healthcheck.web(new URL('/health', config.get('services.refdata.endpoint'))),
+        //'service-auth': healthcheck.web(new URL('/health', config.get('services.s2s.endpoint'))),
+        //'reference-data': healthcheck.web(new URL('/health', config.get('services.refdata.endpoint'))),
       },
       readinessChecks: {
         //redis,

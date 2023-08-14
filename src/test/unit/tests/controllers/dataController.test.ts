@@ -78,6 +78,7 @@ describe('DataController', () => {
         payload: {
           existingFlags: { details: [] },
           hmctsServiceId: 'mockHmctsServiceId',
+          masterFlagCode: 'RA0001',
           callbackUrl: 'mockCallbackUrl',
           logoutUrl: 'mockLogoutUrl',
         },

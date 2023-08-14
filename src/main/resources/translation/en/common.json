@@ -2,8 +2,11 @@
   "phase": "Beta",
   "feedback": "This is a new service – your <a href=\"{smartSurveyFeedbackUrl}?pageurl={currentPageUrl}\" class=\"govuk-link\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"Feedback: This link will open in a new tab. You'll need to return to this tab to continue with your application.\">feedback</a> will help us to improve it.",
   "start_now": "Start now",
+  "continue": "Continue",
   "cancel": "Cancel",
   "back": "Back",
+  "or": "or",
+  "for_name": "for {name}",
   "support_for_name": "Support for {name}",
   "header": {
     "menu-text": "Menu"
@@ -32,6 +35,23 @@
     "heading": "I want to tell you that my support needs have changed",
     "paragraph_1": "Use this form to tell us if your support needs have changed. You might not need something any more, or you can request something new.",
     "blurb": "You will be able to review your application before you submit it."
+  },
+  "form": {
+    "char_count": {
+      "hint": "You can enter up to {count} characters",
+      "characters_under_limit": {
+        "other": "You have %{count} characters remaining",
+        "one": "You have %{count} character remaining"
+      },
+      "characters_at_limit": "You have 0 characters remaining",
+      "characters_over_limit": {
+        "other": "You have %{count} characters too many",
+        "one": "You have %{count} character too many"
+      }
+    },
+    "no_support": "I do not need any support at this time",
+    "problem": "There is a problem",
+    "submit_button": "Save and continue"
   },
   "review": {
     "heading": "Review the support you've requested",

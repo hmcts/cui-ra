@@ -1,0 +1,86 @@
+{% extends "./base.njk" %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+
+
+{% set welsh = false %}
+
+{% if welsh === false %}
+    {% set inputName = 'flagComment' %}
+    {% set radioValue = 'value' %}
+{% else %}
+    {% set inputName = 'flagComment_cy' %}
+    {% set radioValue = 'value_cy' %}
+{% endif %}
+
+{% block form %}
+
+{% set count = '200' %}
+
+  <div class="govuk-form-group {% if validationErrors and (validationErrors | length > 0) %}govuk-form-group--error{% endif %}">
+    <fieldset class="govuk-fieldset" aria-describedby="radio-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          {{ currentFlag.name }}
+        </h1>
+      </legend>
+      <div id="radio-hint" class="govuk-hint">
+        Select all that apply.
+      </div>
+
+      <div class="govuk-radios" data-module="govuk-radios">
+
+        {% for item in data._listOfValues %}
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="_enabled-{{ item.id }}" name="selected" type="radio" value="{{ item.key }}">
+            <label class="govuk-label govuk-radios__label" for="_enabled{{ item.id }}">
+              {{item[radioValue]}}
+            </label>
+          </div>
+        {% endfor %}
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="other" name="selected" type="radio" data-aria-controls="conditional-other" value="OT0001">
+          <label class="govuk-label govuk-radios__label" for="other">
+            {{ _t('other') }}
+          </label>
+        </div>
+
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other">
+            <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="{{count}}" 
+                data-i18n.characters-under-limit.other="{{ _t('form.char_count.characters_under_limit.other') }}"
+                data-i18n.characters-under-limit.one="{{ _t('form.char_count.characters_under_limit.one') }}"
+                data-i18n.characters-at-limit="{{ _t('form.char_count.characters_at_limit') }}"
+                data-i18n.characters-over-limit.other="{{ _t('form.char_count.characters_over_limit.other') }}"
+                data-i18n.characters-over-limit.one="{{ _t('form.char_count.characters_over_limit.one') }}"
+            >
+                <div class="govuk-form-group">
+                    <label id="other-control" class="govuk-label" for="other">
+                        {{ _t(item.value.flagCode + '.control') }}
+                    </label>
+                    <textarea id="other" rows="5" aria-describedby="other-info other-hint" class="govuk-textarea govuk-js-character-count 
+                    {% if item._errors|length %}govuk-input--error{% endif %}" name="other" type="text" spellcheck="false" value="OT0001"></textarea>
+                </div>
+                <div id="other-info" class="govuk-hint govuk-character-count__message">
+                    {{ _r(_t('form.char_count.hint'), count) }}
+                </div>
+            </div>
+        </div>
+
+        <div class="govuk-radios__divider">or</div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="none" name="selected" type="radio" value="0">
+          <label class="govuk-label govuk-radios__label" for="none">
+            {{ _t('form.no_support') }}
+          </label>
+        </div>
+
+      </div>
+    </fieldset>
+  </div>
+
+{% endblock %}

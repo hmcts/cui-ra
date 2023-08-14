@@ -1,0 +1,222 @@
+{% extends "template.njk" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+{#{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}#}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{% from "govuk/components/error-message/macro.njk" import govukErrorMessage %}
+
+{% from "components/accessible-autocomplete/macro.njk" import accessibleAutocomplete %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: _t('back'),
+        href: headers['referer']
+    }) }}
+{% endblock %}
+
+{% block mainContent %}
+  <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            {% if true %}
+            {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: [
+                {
+                text: "Select whether you need support",
+                href: "#contact"
+                },
+                {
+                text: "Please enter a valid email",
+                href: "#contact-by-email"
+                }
+            ]
+            }) }}
+            {% endif %}
+
+            <h1 class="govuk-heading-l">
+                <span class="govuk-caption-l">Reasonable adjustments {{ _r(_t('for_name'), { name:'Ben' }) }}</span>
+                Do you have a physical, mental or learning disability or health condition that means you need support during your case
+            </h1>
+
+            {{ govukInsetText({
+                text: "We know some people need support to access information and use our services. We often call this a reasonable adjustment..."
+            }) }}
+
+            {% set emailHtml %}
+            {{ govukInput({
+                id: "contact-by-email",
+                name: "contact-by-email",
+                type: "email",
+                autocomplete: "email",
+                spellcheck: false,
+                label: {
+                    text: "Email address"
+                },
+                hint: {
+                    text: "enter the email address you would like to be contacted via"
+                },
+                errorMessage: {
+                    text: "Please enter a valid email"
+                }
+            }) }}
+            {% endset -%}
+
+            {# Add the accessible autocomplete component here #}
+            {{ accessibleAutocomplete({
+                name: "default AA",
+                text: "Accessible autocomplete control heading",
+                hint: "Add a hint for the accessible autocomplete",
+                opts: opts
+            })
+            }}
+
+            {# Typeahead code #}
+{#             {{ govukSelect({
+            id: "custom-accessible-autocomplete",
+            name: "country",
+            label: {
+                text: "Select your country"
+            },
+            items: opts
+            }) }}
+            <div id="my-autocomplete-container"></div> #}
+
+            {{ govukCheckboxes({
+            name: "contact",
+            hint: {
+                text: "Select all that apply to you - specific requirements can be given next"
+            },
+            errorMessage: {
+                text: "Select whether you need support"
+            },
+            items: [
+                {
+                    value: "email",
+                    text: "I need documents in an alternative format",
+                    hint: {
+                        text: "for example, braille or different colours and text sizes"
+                    },
+                    conditional: {
+                        html: emailHtml
+                    }
+                },
+                {
+                    value: "phone",
+                    text: "I need help communicating and understanding",
+                    hint: {
+                        text: "for example, hearing, speaking or interpretation"
+                    }
+                },
+                {
+                    value: "text message",
+                    text: "I need to bring support with me to a hearing",
+                    hint: {
+                        text: "for example, someone you know or an assistance dog"
+                    }
+                },
+                {
+                    divider: "or"
+                },
+                {
+                    value: "none",
+                    text: "No, I will not be travelling to any of these countries",
+                    behaviour: "exclusive"
+                }
+            ]
+            }) }}
+
+            <p class="govuk-body">{{ _t('or') }}</p>
+
+            {{ govukCheckboxes({
+            name: "other",
+            items: [
+                {
+                    value: "not-required",
+                    text: "No, I do not need any support at this time"
+                }
+            ]
+            }) }}
+
+            {# 
+            {% set otherHtml %}
+                {{ govukCharacterCount({
+                    id: "live-other",
+                    name: "live-other",
+                    type: "text",
+                    maxlength: 200,
+                    label: {
+                        text: "Other help text??"
+                    },
+                    hint: {
+                        text: "add hint text here"
+                    },
+                    errorMessage: {
+                        text: "Other must be 200 characters or less"
+                    }
+                }) }}
+            {% endset -%}
+            #}
+
+            {{ govukRadios({
+                name: "where-do-you-live",
+                fieldset: {
+                    legend: {
+                        text: "Where do you live?"
+                    }
+                },
+                items: [
+                    {
+                        value: "england",
+                        text: "England"
+                    },
+                    {
+                        value: "scotland",
+                        text: "Scotland"
+                    },
+                    {
+                        value: "wales",
+                        text: "Wales"
+                    },
+                    {
+                        value: "northern-ireland",
+                        text: "Northern Ireland"
+                    },
+                    {
+                        value: "other",
+                        text: "Other",
+                        conditional: {
+                            html: otherHtml
+                        }
+                    },
+                    {
+                        value: "none",
+                        text: "I do not need any support at this time"
+                    }
+                ],
+                errorMessage: {
+                    text: "Select the country where you live"
+                }
+            }) }}
+
+            <div class="govuk-button-group">
+                {{ govukButton({
+                    text: _t('continue')
+                }) }}
+
+                <a class="govuk-link" href="#">{{ _t('cancel') }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

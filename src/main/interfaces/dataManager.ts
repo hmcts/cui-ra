@@ -20,6 +20,6 @@ export interface DataManager<T> {
   //Save partial data into the manager
   save(data: Partial<T>[]): void;
   get(id: string): T | null;
-  find(key: string, value: string): T[];
+  find(key: string, value: string | boolean | number): T[];
   getDateTime(): string;
 }

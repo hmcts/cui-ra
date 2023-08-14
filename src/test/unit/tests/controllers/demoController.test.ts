@@ -4,6 +4,8 @@ import { DemoController } from '../../../../main/controllers';
 import { Session, SessionData } from 'express-session';
 import { PayloadCollectionItem } from '../../../../main/interfaces';
 import { ExistingFlagsManager } from '../../../../main/managers';
+import { UrlRoute } from './../../../../main/utilities';
+import { Route } from './../../../../main/constants';
 
 const host = 'www.test.com';
 const protocol = 'https';
@@ -11,8 +13,8 @@ const protocol = 'https';
 /* eslint-disable jest/expect-expect */
 describe('Demo Controller', () => {
   let demoController: DemoController;
-  let mockRequest: Partial<Request>;
-  let mockResponse: Partial<Response>;
+  let mockRequest: Request;
+  let mockResponse: Response;
 
   beforeEach(() => {
     // Initialize the mock objects and dependencies
@@ -24,13 +26,13 @@ describe('Demo Controller', () => {
       headers: {
         host: host,
       },
-    };
+    } as unknown as Request;
     mockResponse = {
       status: jest.fn().mockReturnThis(),
       send: jest.fn(),
       redirect: jest.fn().mockReturnThis(),
       render: jest.fn().mockReturnThis(),
-    };
+    } as unknown as Response;
     demoController = new DemoController();
   });
 
@@ -40,16 +42,19 @@ describe('Demo Controller', () => {
 
   test('Should render demo page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    await demoController.get(mockRequest as Request, mockResponse as Response);
+    await demoController.get(mockRequest, mockResponse);
     expect(mockResponse.render).toBeCalledWith('demo');
   });
 
   test('Should render intro page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
+    const id = 'PF0001-RA0001';
     mockRequest.body = { action: 'new' };
+    demoController.post(mockRequest, mockResponse);
 
-    demoController.post(mockRequest as Request, mockResponse as Response);
-    expect(mockResponse.redirect).toBeCalledWith('home/intro');
+    expect(mockResponse.redirect).toBeCalledWith(
+      UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: id }, UrlRoute.url(mockRequest))
+    );
   });
 
   test('Should render overview page', async () => {
@@ -67,7 +72,7 @@ describe('Demo Controller', () => {
       existingManager: dataManagerExisting,
     } as unknown as Session & Partial<SessionData>;
 
-    demoController.post(mockRequest as Request, mockResponse as Response);
+    demoController.post(mockRequest, mockResponse);
     expect(mockResponse.redirect).toBeCalledWith('home/overview');
   });
 });

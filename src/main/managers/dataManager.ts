@@ -58,8 +58,22 @@ export class DataManager<T> implements DataManagerInterface<T> {
     return null;
   }
 
-  public find(key: string, value: string): T[] {
-    return this.data.filter((item: T) => item['value'][key] === value);
+  public find(key: string, value: string | boolean | number): T[] {
+    return this.data.filter((item: T) => this.getObjectValueByDotKey(item, key) === value);
+  }
+
+  private getObjectValueByDotKey(item: T, key: string): T | undefined {
+    const keys = key.split('.');
+    let value = item;
+
+    for (const k of keys) {
+      if (value && typeof value === 'object' && k in value) {
+        value = value[k];
+      } else {
+        return undefined;
+      }
+    }
+    return value;
   }
 
   public getDateTime(): string {

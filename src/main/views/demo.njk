@@ -1,7 +1,17 @@
 {% extends "template.njk" %}
 
+{% set welsh = false %}
+
+{% if welsh === false %}
+    {% set nameValue = 'name' %}
+    {% set master_name = mastername %}
+{% else %}
+    {% set nameValue = 'name_cy' %}
+    {% set master_name = mastername_cy %}
+{% endif %}
+
 {% block content %}
-    <span class="govuk-caption-xl">Reasonable Adjustments</span>
+    <span class="govuk-caption-xl">{{ master_name }}</span>
     <h1 class="govuk-heading-xl">Demo</h1>
 
     <p class="govuk-body govuk-!-font-weight-bold">New User - Go into start of flags</p>

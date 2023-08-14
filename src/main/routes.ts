@@ -40,6 +40,10 @@ export default function (app: Application): void {
   );
   app.get(Route.API_GET_PAYLOAD, app.locals.container.cradle.apiController.getPayload);
 
+  // Form Controller
+  app.get(Route.JOURNEY_DISPLAY_FLAGS, app.locals.container.cradle.formController.display);
+  app.post(Route.JOURNEY_DISPLAY_FLAGS, app.locals.container.cradle.formController.post);
+
   app.get(
     Route.INFO,
     infoRequestHandler({

@@ -1,0 +1,103 @@
+{% extends "./base.njk" %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "components/accessible-autocomplete/macro.njk" import accessibleAutocomplete %}
+
+
+
+{% set welsh = false %}
+{% set count = '200' %}
+
+{% if welsh === false %}
+    {% set inputName = 'flagComment' %}
+    {% set radioValue = 'value' %}
+{% else %}
+    {% set inputName = 'flagComment_cy' %}
+    {% set radioValue = 'value_cy' %}
+{% endif %}
+
+{% block form %}
+
+  <div class="govuk-form-group {% if validationErrors and (validationErrors | length > 0) %}govuk-form-group--error{% endif %}">
+    <fieldset class="govuk-fieldset" aria-describedby="radio-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          {{ currentFlag.name }}
+        </h1>
+      </legend>
+      <div id="radio-hint" class="govuk-hint">
+        Select all that apply.
+      </div>
+
+        {{ accessibleAutocomplete({
+                name: "selected",
+                text: "Accessible autocomplete control heading",
+                hint: "Add a hint for the accessible autocomplete",
+                opts: [
+                {
+                  value: '',
+                  text: 'Select a country'
+                },
+                {
+                  value: 'France',
+                  text: 'France'
+                },
+                {
+                  value: 'Wales',
+                  text: 'Wales',
+                  selected: true
+                },
+                {
+                  value: 'England',
+                  text: 'England'
+                }]
+        }) }}
+
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="_enabled-other" name="enabled" type="checkbox" value="OT0001"  data-aria-controls="conditional-other" {% if item._enabled %}checked{% endif %}>
+          <label class="govuk-label govuk-checkboxes__label" for="other">
+              The support is not listed
+          </label>
+          <div id="{{inputName}}-{{ item.id }}-hint" class="govuk-hint govuk-checkboxes__hint">
+              {{ _t('OT0001.hint') }}
+          </div>
+        </div>
+
+        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-other">
+              <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="{{count}}" 
+                  data-i18n.characters-under-limit.other="{{ _t('form.char_count.characters_under_limit.other') }}"
+                  data-i18n.characters-under-limit.one="{{ _t('form.char_count.characters_under_limit.one') }}"
+                  data-i18n.characters-at-limit="{{ _t('form.char_count.characters_at_limit') }}"
+                  data-i18n.characters-over-limit.other="{{ _t('form.char_count.characters_over_limit.other') }}"
+                  data-i18n.characters-over-limit.one="{{ _t('form.char_count.characters_over_limit.one') }}"
+              >
+                  <div class="govuk-form-group">
+                      <label id="other-control" class="govuk-label" for="other">
+                          Enter the type of support you need to request
+                      </label>
+                      <textarea id="other" rows="{{row}}" aria-describedby="other-info other-hint" class="govuk-textarea govuk-js-character-count {% if item._errors|length %}govuk-input--error{% endif %}" name="data[{{ item.id }}][{{inputName}}]" type="text" spellcheck="false" value="{{ item.value[inputName] }}"></textarea>
+                  </div>
+                  <div id="other-info" class="govuk-hint govuk-character-count__message">
+                      {{ _r(_t('form.char_count.hint'), count) }}
+                  </div>
+              </div>
+          </div>
+
+       <div class="govuk-checkboxes__divider">or</div>
+
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="_enabled-0" name="enabled" type="checkbox" value="0"  {% if item._enabled %}checked{% endif %} data-behaviour="exclusive">
+            <label class="govuk-label govuk-checkboxes__label">
+                {{ _t('form.no_support') }}
+            </label>
+        </div>
+
+      </div>
+    </fieldset>
+  </div>
+
+{% endblock %}

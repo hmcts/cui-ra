@@ -1,5 +1,7 @@
 import { RedisClientInterface } from './../../interfaces';
+import { ExistingFlagsManager, NewFlagsManager } from './../../managers';
 
+import { plainToClass } from 'class-transformer';
 import config from 'config';
 import RedisStore from 'connect-redis';
 import { Application } from 'express';
@@ -28,6 +30,28 @@ export class SessionStorage {
         store: this.getStore(),
       })
     );
+    //populate response from session data
+    app.use((req, res, next) => {
+      res.locals.partyname = req.session.partyname;
+      res.locals.mastername = req.session.mastername;
+      res.locals.mastername_cy = req.session.mastername_cy;
+
+      //init to class from json
+      if (req.session.existingmanager && typeof req.session.existingmanager !== typeof ExistingFlagsManager) {
+        req.session.existingmanager = plainToClass(ExistingFlagsManager, req.session.existingmanager);
+      } else if (!req.session.existingmanager) {
+        req.session.existingmanager = new ExistingFlagsManager();
+      }
+
+      //init to class from json
+      if (req.session.newmanager && typeof req.session.newmanager !== typeof NewFlagsManager) {
+        req.session.newmanager = plainToClass(NewFlagsManager, req.session.newmanager);
+      } else if (!req.session.newmanager) {
+        req.session.newmanager = new NewFlagsManager();
+      }
+
+      next();
+    });
   }
 
   private getStore() {

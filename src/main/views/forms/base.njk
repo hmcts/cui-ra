@@ -1,0 +1,77 @@
+{% extends "./../template.njk" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+{% set welsh = false %}
+
+{% if welsh === false %}
+    {% set nameValue = 'name' %}
+    {% set master_name = mastername %}
+{% else %}
+    {% set nameValue = 'name_cy' %}
+    {% set master_name = mastername_cy %}
+{% endif %}
+
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: _t('back'),
+        href: headers['referer']
+    }) }}
+{% endblock %}
+
+{% block mainContent %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form method="POST">
+
+      {% if validationErrors and (validationErrors | length > 0) %}
+        <div class="govuk-error-summary" data-module="govuk-error-summary">
+          <div role="alert">
+            <h2 class="govuk-error-summary__title">
+              {{ _t('form.problem') }}
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                {% for error in validationErrors %}
+                <li>
+                  <a href="#passport-issued-year">{{ error }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+      <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">{{ master_name }} {% if partyname %}{{ _r(_t('for_name'), { name:partyname }) }}{% endif %}</span>
+          {% if _t(parent.value.flagCode + ".full_question") %}
+            {{ _t(parent.value.flagCode  + ".full_question") }}
+          {% else %}
+            {{ parent.value[nameValue] }}
+          {% endif %}
+      </h1>
+
+      {% if _t(parent.value.flagCode+ ".description") %}
+        {{ govukInsetText({
+            text: _t(parent.value.flagCode + ".description")
+        }) }}
+      {% endif %}
+
+      {% block form %}
+      {% endblock %}
+
+      {{ govukButton({
+        text: _t('form.submit_button'),
+        type: "submit"
+      }) }}
+    </form>
+
+  </div>
+</div>
+{% endblock %}
