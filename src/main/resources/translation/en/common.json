@@ -51,7 +51,11 @@
     },
     "no_support": "I do not need any support at this time",
     "problem": "There is a problem",
-    "submit_button": "Save and continue"
+    "submit_button": "Save and continue",
+    "typeahead": {
+      "hint": "Start typing to choose the support, or select 'The support is not listed",
+      "not_listed": "The support is not listed"
+    }
   },
   "review": {
     "heading": "Review the support you've requested",

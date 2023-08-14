@@ -8,7 +8,8 @@
 
 
 {% set welsh = false %}
-{% set count = '200' %}
+{% set count = '80' %}
+{% set row = '1' %}
 
 {% if welsh === false %}
     {% set inputName = 'flagComment' %}
@@ -27,32 +28,12 @@
           {{ currentFlag.name }}
         </h1>
       </legend>
-      <div id="radio-hint" class="govuk-hint">
-        Select all that apply.
-      </div>
 
         {{ accessibleAutocomplete({
                 name: "selected",
-                text: "Accessible autocomplete control heading",
-                hint: "Add a hint for the accessible autocomplete",
-                opts: [
-                {
-                  value: '',
-                  text: 'Select a country'
-                },
-                {
-                  value: 'France',
-                  text: 'France'
-                },
-                {
-                  value: 'Wales',
-                  text: 'Wales',
-                  selected: true
-                },
-                {
-                  value: 'England',
-                  text: 'England'
-                }]
+                hint: _t('form.typeahead.hint'),
+                opts: parent._listOfValues,
+                value: parent.value.subTypeKey
         }) }}
 
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -60,7 +41,7 @@
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="_enabled-other" name="enabled" type="checkbox" value="OT0001"  data-aria-controls="conditional-other" {% if item._enabled %}checked{% endif %}>
           <label class="govuk-label govuk-checkboxes__label" for="other">
-              The support is not listed
+              {{_t('form.typeahead.not_listed')}}
           </label>
           <div id="{{inputName}}-{{ item.id }}-hint" class="govuk-hint govuk-checkboxes__hint">
               {{ _t('OT0001.hint') }}
