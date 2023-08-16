@@ -39,7 +39,7 @@ export class Container {
           }),
         })),
       redisClient:
-        app.locals.ENV === 'test'
+        (!config.has('session.redis.host') || (config.get('session.redis.host') as string === '') || (config.get('session.redis.host') as string === null))
           ? asClass(FileStorageClient)
           : asClass(RedisClient)
               .singleton()
