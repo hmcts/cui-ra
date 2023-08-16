@@ -29,7 +29,7 @@
         <select class="govuk-select" id="custom-accessible-autocomplete" name="{{name}}">
              <option value="0"></option>
             {% for item in params.opts %}
-                <option value="{{item.key}}" {% if item.key === params.subTypeKey %}selected{% endif %}>{{item[radioValue]}}</option>
+                <option value="{{item.key}}" {% if item.key === params.value %}selected{% endif %}>{{item[radioValue]}}</option>
             {% endfor %}
         </select>
     </div>

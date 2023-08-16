@@ -8,55 +8,97 @@ export class FormProcessor {
     parent: DataManagerDataObject,
     children: DataManagerDataObject[] | null = null
   ): DataManagerDataObject[] {
-    //check body has data
+    if (parent._listOfValuesLength) {
+      return this.processListValues(body, parent);
+    }
 
-    if (parent?._listOfValuesLength && parent?._listOfValuesLength > 0 && parent?._listOfValuesLength < 10) {
-      //radio
-      if (!body.selected) {
-        throw new Error(ErrorMessages.UNEXPECTED_ERROR);
-      }
-      return [];
-    } else if (parent?._listOfValuesLength && parent?._listOfValuesLength >= 10) {
-      //typeahead
-      if (!body.selected) {
-        throw new Error(ErrorMessages.UNEXPECTED_ERROR);
-      }
-      return [];
-    } else if (parent?._isCategoryPage) {
-      //checkbox
-      if (body.enabled && body.enabled.length <= 0) {
-        throw new Error(ErrorMessages.UNEXPECTED_ERROR);
-      }
-      if (!body.data) {
-        throw new Error(ErrorMessages.UNEXPECTED_ERROR);
-      }
-      //loop possible options and enable or disable
-      //if enabled merge data
-      //SECURITY NOTE - make sure only flagComment can get set/
-      //Changing the html element name for example would merge to the wrong item and could
-      //allow a user to change the status of a requested item
-      children?.map(function (item: DataManagerDataObject) {
-        item._errors = [];
-        if (body.enabled.includes(item.id)) {
-          item._enabled = true;
-          //merge data
-          if (body.data && body.data[item.id]) {
-            Object.assign(item.value, body.data[item.id]);
-          }
-          return item;
-        } else {
-          item._enabled = false;
-          Object.assign(item.value, {
-            flagComment: '',
-            flagComment_cy: '',
-          });
-          return item;
-        }
-      });
+    if (parent._isCategoryPage) {
+      return this.processCategoryPage(body, parent, children);
+    }
 
-      return children ?? [];
-    } else {
+    throw new Error(ErrorMessages.UNEXPECTED_ERROR);
+  }
+
+  private static processCategoryPage(
+    body: Form,
+    parent: DataManagerDataObject,
+    children: DataManagerDataObject[] | null
+  ): DataManagerDataObject[] {
+    if (!body.enabled || !body.data) {
       throw new Error(ErrorMessages.UNEXPECTED_ERROR);
     }
+
+    return children?.map((item) => {
+      item._errors = [];
+      item._enabled = body.enabled.includes(item.id);
+
+      if (item._enabled && body.data && body.data[item.id]) {
+        item.value.flagComment = body.data[item.id].flagComment;
+        item.value.flagComment_cy = body.data[item.id].flagComment_cy;
+      } else {
+        Object.assign(item.value, {
+          flagComment: '',
+          flagComment_cy: '',
+        });
+      }
+
+      return item;
+    }) ?? [];
+  }
+
+  private static processListValues(body: Form, parent: DataManagerDataObject): DataManagerDataObject[] {
+    const isRadioType = parent._listOfValuesLength > 0 && parent._listOfValuesLength < 10;
+
+    parent._enabled = true;
+    parent.value.subTypeKey = undefined;
+    parent.value.subTypeValue = undefined;
+    parent.value.subTypeValue_cy = undefined;
+
+    if (isRadioType) {
+      return this.processRadioType(body, parent);
+    }
+
+    return this.processTypeAheadType(body, parent);
+  }
+
+  private static processRadioType(body: Form, parent: DataManagerDataObject): DataManagerDataObject[] {
+    if (!body.selected) {
+      throw new Error(ErrorMessages.UNEXPECTED_ERROR);
+    }
+
+    if (body.selected === 'OT0001') {
+      parent._other = true;
+      if (body.data) {
+        parent.value.subTypeValue = body.data[parent.id].subTypeValue;
+        parent.value.subTypeValue_cy = body.data[parent.id].subTypeValue_cy;
+      }
+      return [parent];
+    }
+
+    const selectedItem = parent._listOfValues.find((item) => item.key === body.selected);
+
+    if (selectedItem) {
+      parent.value.subTypeKey = selectedItem.key;
+      parent.value.subTypeValue = selectedItem.value;
+      parent.value.subTypeValue_cy = selectedItem.value_cy;
+    }
+
+    return [parent];
+  }
+
+  private static processTypeAheadType(body: Form, parent: DataManagerDataObject): DataManagerDataObject[] {
+    if (!body.selected) {
+      return [parent];
+    }
+
+    const selectedItem = parent._listOfValues.find((item) => item.key === body.selected);
+
+    if (selectedItem) {
+      parent.value.subTypeKey = selectedItem.key;
+      parent.value.subTypeValue = selectedItem.value;
+      parent.value.subTypeValue_cy = selectedItem.value_cy;
+    }
+
+    return [parent];
   }
 }

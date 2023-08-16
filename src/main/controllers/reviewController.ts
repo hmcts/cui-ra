@@ -2,6 +2,7 @@ import { Route, Status } from './../constants';
 
 import autobind from 'autobind-decorator';
 import { Request, Response } from 'express';
+import { DataManagerDataObject } from '../interfaces';
 
 @autobind
 export class ReviewController {
@@ -9,7 +10,7 @@ export class ReviewController {
     res.render('review', {
       welsh: false,
       requested: req.session.existingmanager?.find('value.status', 'Requested'),
-      new: req.session.newmanager?.find('_enabled', true),
+      new: req.session.newmanager?.find('_enabled', true)?.filter((item:DataManagerDataObject) => item._isParent === false),
       notRequired: req.session.existingmanager?.find('value.status', 'Inactive') || [],
       route: Route,
     });

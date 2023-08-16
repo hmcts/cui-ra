@@ -12,12 +12,13 @@ export class DataManagerDataType implements DataManagerDataObject {
   public _flagComment = true;
   public _isCategoryPage = false;
   public _enabled = false;
+  public _other = false;
   public _isParent = false;
 
   public _parentId: string | null;
   public _errors: string[] = [];
   public _listOfValuesLength = 0;
-  public _listOfValues: { key: string; value: string }[] = [];
+  public _listOfValues: { key: string; value: string; value_cy: string|undefined }[] = [];
   public _childIds: string[] = [];
 
   constructor(id: string, value: PayloadFlagData, parentId: string | null = null) {

@@ -12,10 +12,10 @@
 {% set row = '1' %}
 
 {% if welsh === false %}
-    {% set inputName = 'flagComment' %}
+    {% set inputName = 'subTypeValue' %}
     {% set radioValue = 'value' %}
 {% else %}
-    {% set inputName = 'flagComment_cy' %}
+    {% set inputName = 'subTypeValue_cy' %}
     {% set radioValue = 'value_cy' %}
 {% endif %}
 
@@ -39,11 +39,11 @@
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 
         <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="_enabled-other" name="enabled" type="checkbox" value="OT0001"  data-aria-controls="conditional-other" {% if item._enabled %}checked{% endif %}>
+          <input class="govuk-checkboxes__input" id="_enabled-other" name="enabled" type="checkbox" value="OT0001"  data-aria-controls="conditional-other" {% if parent._other === true %}checked{% endif %}>
           <label class="govuk-label govuk-checkboxes__label" for="other">
               {{_t('form.typeahead.not_listed')}}
           </label>
-          <div id="{{inputName}}-{{ item.id }}-hint" class="govuk-hint govuk-checkboxes__hint">
+          <div id="{{inputName}}-{{ parent.id }}-hint" class="govuk-hint govuk-checkboxes__hint">
               {{ _t('OT0001.hint') }}
           </div>
         </div>
@@ -60,7 +60,7 @@
                       <label id="other-control" class="govuk-label" for="other">
                           {{ _t('form.typeahead.control') }}
                       </label>
-                      <textarea id="other" rows="{{row}}" aria-describedby="other-info other-hint" class="govuk-textarea govuk-js-character-count {% if item._errors|length %}govuk-input--error{% endif %}" name="data[{{ item.id }}][{{inputName}}]" type="text" spellcheck="false" value="{{ item.value[inputName] }}"></textarea>
+                      <textarea id="other" rows="{{row}}" aria-describedby="other-info other-hint" class="govuk-textarea govuk-js-character-count {% if parent._errors|length %}govuk-input--error{% endif %}" name="data[{{ parent.id }}][{{inputName}}]" type="text" spellcheck="false">{% if parent.value.subTypeKey === null or  parent.value.subTypeKey === undefined %}{{ parent.value[inputName] }}{% endif %}</textarea>
                   </div>
                   <div id="other-info" class="govuk-hint govuk-character-count__message">
                       {{ _r(_t('form.char_count.hint'), count) }}
@@ -68,10 +68,10 @@
               </div>
           </div>
 
-       <div class="govuk-checkboxes__divider">{{ _t('or') }}</div>
+       <div class="govuk-checkboxes__divider">{{ _t('or_divider') }}</div>
 
         <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="_enabled-0" name="enabled" type="checkbox" value="0"  {% if item._enabled %}checked{% endif %} data-behaviour="exclusive">
+            <input class="govuk-checkboxes__input" id="_enabled-0" name="enabled" type="checkbox" value="0"  data-behaviour="exclusive">
             <label class="govuk-label govuk-checkboxes__label">
                 {{ _t('form.no_support') }}
             </label>
