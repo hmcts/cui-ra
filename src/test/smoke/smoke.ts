@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-const servicesToCheck = [
-  { name: 'Self health-check', url: process.env.TEST_URL || 'http://localhost:3100' },
-];
+const servicesToCheck = [{ name: 'Self health-check', url: process.env.TEST_URL || 'http://localhost:3100' }];
 
 const checkService = async (url: string) => {
   const response = await axios.get(url);
