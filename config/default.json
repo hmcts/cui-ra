@@ -8,8 +8,8 @@
     "secret": "local",
     "maxAge": 1260000,
     "redis": {
-      "host": "localhost",
-      "port": "6380",
+      "host": "",
+      "port": "6379",
       "key": "password"
     }
   },

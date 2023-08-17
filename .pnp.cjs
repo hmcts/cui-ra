@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.22.10"],\
             ["@babel/eslint-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.22.10"],\
             ["@babel/preset-env", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.22.10"],\
+            ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
             ["@codeceptjs/configure", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:0.10.0"],\
             ["@hmcts/info-provider", "npm:1.1.0"],\
             ["@hmcts/nodejs-healthcheck", "npm:1.8.0"],\
@@ -3405,6 +3406,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@codeceptjs/allure-legacy", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/@codeceptjs-allure-legacy-npm-1.0.2-eda18d0834-e53d684041.zip/node_modules/@codeceptjs/allure-legacy/",\
+          "packageDependencies": [\
+            ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
+            ["allure-js-commons", "npm:1.3.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@codeceptjs/configure", [\
         ["npm:0.10.0", {\
           "packageLocation": "./.yarn/cache/@codeceptjs-configure-npm-0.10.0-ba73c0a5e7-e4556a9c1f.zip/node_modules/@codeceptjs/configure/",\
@@ -6257,6 +6268,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["allure-js-commons", [\
+        ["npm:1.3.2", {\
+          "packageLocation": "./.yarn/cache/allure-js-commons-npm-1.3.2-0f1f7412a0-9e7433579e.zip/node_modules/allure-js-commons/",\
+          "packageDependencies": [\
+            ["allure-js-commons", "npm:1.3.2"],\
+            ["file-type", "npm:7.7.1"],\
+            ["fs-extra", "npm:6.0.1"],\
+            ["js2xmlparser", "npm:3.0.0"],\
+            ["mime", "npm:2.6.0"],\
+            ["object-assign", "npm:4.1.1"],\
+            ["uuid", "npm:3.4.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["ansi-colors", [\
         ["npm:4.1.1", {\
           "packageLocation": "./.yarn/cache/ansi-colors-npm-4.1.1-97ad42f223-138d04a510.zip/node_modules/ansi-colors/",\
@@ -8324,6 +8350,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.22.10"],\
             ["@babel/eslint-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.22.10"],\
             ["@babel/preset-env", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.22.10"],\
+            ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
             ["@codeceptjs/configure", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:0.10.0"],\
             ["@hmcts/info-provider", "npm:1.1.0"],\
             ["@hmcts/nodejs-healthcheck", "npm:1.8.0"],\
@@ -9992,6 +10019,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["file-type", [\
+        ["npm:7.7.1", {\
+          "packageLocation": "./.yarn/cache/file-type-npm-7.7.1-f941f0a9c4-1c4f8cb2bd.zip/node_modules/file-type/",\
+          "packageDependencies": [\
+            ["file-type", "npm:7.7.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["fill-range", [\
         ["npm:7.0.1", {\
           "packageLocation": "./.yarn/cache/fill-range-npm-7.0.1-b8b1817caa-cc283f4e65.zip/node_modules/fill-range/",\
@@ -10222,6 +10258,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["fs-extra", [\
+        ["npm:6.0.1", {\
+          "packageLocation": "./.yarn/cache/fs-extra-npm-6.0.1-fe74e3ae93-133dbd765e.zip/node_modules/fs-extra/",\
+          "packageDependencies": [\
+            ["fs-extra", "npm:6.0.1"],\
+            ["graceful-fs", "npm:4.2.10"],\
+            ["jsonfile", "npm:4.0.0"],\
+            ["universalify", "npm:0.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:8.1.0", {\
           "packageLocation": "./.yarn/cache/fs-extra-npm-8.1.0-197473387f-bf44f0e6ce.zip/node_modules/fs-extra/",\
           "packageDependencies": [\
@@ -12402,6 +12448,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["js-yaml", "npm:4.1.0"],\
             ["argparse", "npm:2.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["js2xmlparser", [\
+        ["npm:3.0.0", {\
+          "packageLocation": "./.yarn/cache/js2xmlparser-npm-3.0.0-2a2e575bd8-4e0ff6b695.zip/node_modules/js2xmlparser/",\
+          "packageDependencies": [\
+            ["js2xmlparser", "npm:3.0.0"],\
+            ["xmlcreate", "npm:1.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -17997,6 +18053,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/xmlbuilder-npm-15.0.0-0f2878a2cb-b1917a90c3.zip/node_modules/xmlbuilder/",\
           "packageDependencies": [\
             ["xmlbuilder", "npm:15.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["xmlcreate", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/xmlcreate-npm-1.0.2-0203cde341-2fbe0303fa.zip/node_modules/xmlcreate/",\
+          "packageDependencies": [\
+            ["xmlcreate", "npm:1.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
