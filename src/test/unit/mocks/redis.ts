@@ -6,9 +6,9 @@ export const mockRedisNode = (): RedisClientType => {
     connect: jest.fn(),
     on: jest.fn(),
     set: jest.fn(),
-    get: jest.fn(),
-    exists: jest.fn(),
-    del: jest.fn(),
+    get: jest.fn().mockResolvedValue('testValue'),
+    exists: jest.fn().mockResolvedValue(true),
+    del: jest.fn().mockResolvedValue(true),
   } as unknown as RedisClientType;
   return mock as RedisClientType;
 };
