@@ -64,4 +64,43 @@ describe('RedisClient', () => {
     expect(result).toBe(true);
     expect(mockedRedisNode.del).toHaveBeenCalledWith('testKey');
   });
+
+  test('should set ready to true and log ready', () => {
+    redisClient['ready'] = true; // Simulate being connected
+
+    // Call the onDisconnect method
+    redisClient['onReady']();
+
+    // Check if connected is set to false
+    expect(redisClient['ready']).toBe(true);
+
+    // Check if logger.info is called with the correct message
+    expect(mockedLogger.info).toHaveBeenCalledWith(`Redis Ready`);
+  });
+
+  test('should set connected to false and log disconnection', () => {
+    redisClient['connected'] = true; // Simulate being connected
+
+    // Call the onDisconnect method
+    redisClient['onDisconnect']();
+
+    // Check if connected is set to false
+    expect(redisClient['connected']).toBe(false);
+
+    // Check if logger.info is called with the correct message
+    expect(mockedLogger.info).toHaveBeenCalledWith(`Redis Disconnect from ${redisClient['url']}`);
+  });
+
+  test('should set connected to false and log reconnect', () => {
+    redisClient['connected'] = false; // Simulate being connected
+
+    // Call the onDisconnect method
+    redisClient['onReconnect']();
+
+    // Check if connected is set to false
+    expect(redisClient['connected']).toBe(false);
+
+    // Check if logger.info is called with the correct message
+    expect(mockedLogger.info).toHaveBeenCalledWith(`Redis attempting to Re-Connected to ${redisClient['url']}`);
+  });
 });
