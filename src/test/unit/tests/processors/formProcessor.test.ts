@@ -82,6 +82,35 @@ describe('FormProcessor', () => {
     }
   });
 
+  test('should process typeahead form other data correctly', () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-PF0015'
+    )[0];
+    const children: DataManagerDataObject[] = [];
+
+    const body = new Form();
+
+    body.enabled = ['OT0001'];
+
+    const formdata = new FormData();
+    formdata.subTypeValue = comment;
+
+    body.data = {
+      'PF0001-PF0015': formdata,
+    };
+
+    const results: DataManagerDataObject[] = FormProcessor.process(body, parent, children);
+
+    const item: DataManagerDataObject | undefined = results.find(
+      (i: DataManagerDataObject) => i.id === 'PF0001-PF0015'
+    );
+
+    if (item) {
+      expect(item._enabled).toBe(true);
+      expect(item.value.subTypeValue).toBe(comment);
+    }
+  });
+
   test('should fail to process typeahead form data', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
       (item: DataManagerDataObject) => item.id === 'PF0001-PF0015'
@@ -120,6 +149,35 @@ describe('FormProcessor', () => {
     if (item) {
       expect(item._enabled).toBe(true);
       expect(item.value.subTypeValue).toBe('Brong');
+    }
+  });
+
+  test('should process radio-group form other data correctly', () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-PF1115'
+    )[0];
+    const children: DataManagerDataObject[] = [];
+
+    const body = new Form();
+
+    body.selected = 'OT0001';
+
+    const formdata = new FormData();
+    formdata.subTypeValue = comment;
+
+    body.data = {
+      'PF0001-PF1115': formdata,
+    };
+
+    const results: DataManagerDataObject[] = FormProcessor.process(body, parent, children);
+
+    const item: DataManagerDataObject | undefined = results.find(
+      (i: DataManagerDataObject) => i.id === 'PF0001-PF1115'
+    );
+
+    if (item) {
+      expect(item._enabled).toBe(true);
+      expect(item.value.subTypeValue).toBe(comment);
     }
   });
 
