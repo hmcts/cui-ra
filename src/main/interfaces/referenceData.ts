@@ -11,7 +11,7 @@ export interface ReferenceDataFlagType {
   Path: string[];
   childFlags: ReferenceDataFlagType[];
   listOfValuesLength: number;
-  listOfValues: { key: string; value: string }[];
+  listOfValues: { key: string; value: string; value_cy: string | undefined }[];
 }
 
 export interface FlagResourceType {
