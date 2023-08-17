@@ -9,10 +9,12 @@ export const config: CodeceptJS.MainConfig = {
   gherkin: testConfig.Gherkin,
   output: '../../../functional-output/functional/reports',
   helpers: testConfig.helpers,
+  timeout: 59000,
   tests: './src/test/functional',
   plugins: {
     allure: {
       enabled: true,
+      require: '@codeceptjs/allure-legacy',
     },
     pauseOnFail: {
       enabled: !testConfig.TestHeadlessBrowser,

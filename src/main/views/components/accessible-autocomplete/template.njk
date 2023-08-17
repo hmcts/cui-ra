@@ -1,23 +1,38 @@
 {% from "../../govuk/components/select/macro.njk" import govukSelect %}
 
-{% if params.text and params.opts %}
+{% set welsh = false %}
+
+{% if welsh === false %}
+    {% set radioValue = 'value' %}
+{% else %}
+    {% set radioValue = 'value_cy' %}
+{% endif %}
+
+{% if params.opts %}
     {% if params.name %}
         {% set name = params.name %}
     {% else %}
         {% set name = "custom-accessible-autocomplete" %}
     {% endif %}
 
-    {{ govukSelect({
-        id: "custom-accessible-autocomplete",
-        name: name,
-        label: {
-            text: params.text
-        },
-        hint: {
-            text: params.hint
-        },
-        items: params.opts
-    }) }}
+    <div class="govuk-form-group">
+        {% if params.text %}
+            <label class="govuk-label" for="{{name}}">
+                {{params.text}}
+            </label>
+        {% endif %}
+        {% if params.hint %}
+            <div id="subject-hint" class="govuk-hint">
+                {{params.hint}}
+            </div>
+        {% endif %}
+        <select class="govuk-select" id="custom-accessible-autocomplete" name="{{name}}">
+             <option value="0"></option>
+            {% for item in params.opts %}
+                <option value="{{item.key}}" {% if item.key === params.value %}selected{% endif %}>{{item[radioValue]}}</option>
+            {% endfor %}
+        </select>
+    </div>
 
     <div id="my-autocomplete-container"></div>
 {% endif %}

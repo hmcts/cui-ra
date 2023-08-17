@@ -2,25 +2,6 @@ import { DataManagerDataObject, FlagProcessorInterface, PayloadFlagData, Referen
 import { DataManagerDataType, DataManagerYesNo } from '../managers';
 
 export class FlagProcessor implements FlagProcessorInterface {
-  // private generateOther(flag: ReferenceDataFlagType) {
-  //   const path = flag.Path;
-  //   path.push(flag.name);
-  //   return {
-  //     name: 'Other',
-  //     name_cy: 'Arall',
-  //     hearingRelevant: true,
-  //     flagComment: true,
-  //     flagCode: 'OT0001',
-  //     defaultStatus: 'Requested',
-  //     externallyAvailable: true,
-  //     isParent: false,
-  //     Path: path,
-  //     childFlags: [],
-  //     listOfValues: [],
-  //     listOfValuesLength: 0,
-  //   } as ReferenceDataFlagType;
-  // }
-
   public process(
     dateTime: string,
     flag: ReferenceDataFlagType,
@@ -77,7 +58,6 @@ export class FlagProcessor implements FlagProcessorInterface {
       dataItem._childIds = flag.childFlags.map(child => {
         return `${id}-${child.flagCode}`;
       });
-      //dataItem._childIds.push(`${id}-OT0001`);
     }
 
     if (flag.listOfValuesLength > 0) {
@@ -92,8 +72,6 @@ export class FlagProcessor implements FlagProcessorInterface {
       flag.childFlags.forEach((child: ReferenceDataFlagType) => {
         data.push(...this.process(dateTime, child, id));
       });
-      //add other item
-      //data.push(...this.process(dateTime, this.generateOther(flag), id));
     }
     return data;
   }
