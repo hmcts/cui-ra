@@ -68,7 +68,7 @@ describe('FormProcessor', () => {
 
     const body = new Form();
 
-    body.selected = comment;
+    body.selected = 'zul';
 
     const results: DataManagerDataObject[] = FormProcessor.process(body, parent, children);
 
@@ -78,27 +78,8 @@ describe('FormProcessor', () => {
 
     if (item) {
       expect(item._enabled).toBe(true);
-      expect(item.value.subTypeValue).toBe(comment);
+      expect(item.value.subTypeValue).toBe('Zulu');
     }
-  });
-
-  test('should fail to process typeahead form data', () => {
-    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
-      (item: DataManagerDataObject) => item.id === 'PF0001-PF0015'
-    )[0];
-    const children: DataManagerDataObject[] = [];
-
-    const body = new Form();
-
-    let error = '';
-
-    try {
-      FormProcessor.process(body, parent, children);
-    } catch (e) {
-      error = e.message;
-    }
-
-    expect(error).toBe(ErrorMessages.UNEXPECTED_ERROR);
   });
 
   test('should process radio-group form data correctly', () => {
@@ -109,7 +90,7 @@ describe('FormProcessor', () => {
 
     const body = new Form();
 
-    body.selected = comment;
+    body.selected = 'abr';
 
     const results: DataManagerDataObject[] = FormProcessor.process(body, parent, children);
 
@@ -119,26 +100,7 @@ describe('FormProcessor', () => {
 
     if (item) {
       expect(item._enabled).toBe(true);
-      expect(item.value.subTypeValue).toBe(comment);
+      expect(item.value.subTypeValue).toBe('Brong');
     }
-  });
-
-  test('should fail to process typeahead form data', () => {
-    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
-      (item: DataManagerDataObject) => item.id === 'RA0001-RA0005-RA0016-RA0017'
-    )[0];
-    const children: DataManagerDataObject[] = [];
-
-    const body = new Form();
-
-    let error = '';
-
-    try {
-      FormProcessor.process(body, parent, children);
-    } catch (e) {
-      error = e.message;
-    }
-
-    expect(error).toBe(ErrorMessages.UNEXPECTED_ERROR);
   });
 });

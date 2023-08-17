@@ -52,6 +52,7 @@ export class FormProcessor {
     const isRadioType = parent._listOfValuesLength > 0 && parent._listOfValuesLength < 10;
 
     parent._enabled = true;
+    parent._other = false;
     parent.value.subTypeKey = undefined;
     parent.value.subTypeValue = undefined;
     parent.value.subTypeValue_cy = undefined;
@@ -89,6 +90,14 @@ export class FormProcessor {
   }
 
   private static processTypeAheadType(body: Form, parent: DataManagerDataObject): DataManagerDataObject[] {
+    //other selected
+    if(body.data && body.enabled.includes('OT0001')){
+      parent.value.subTypeValue = body.data[parent.id].subTypeValue;
+      parent.value.subTypeValue_cy = body.data[parent.id].subTypeValue;
+      parent._other = true;
+      return [parent]
+    }
+
     if (!body.selected) {
       return [parent];
     }
