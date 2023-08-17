@@ -65,6 +65,26 @@ describe('RedisClient', () => {
     expect(mockedRedisNode.del).toHaveBeenCalledWith('testKey');
   });
 
+  test('should set connected to true and log connected', () => {
+    redisClient['connected'] = true; // Simulate being connected
+
+    // Call the onDisconnect method
+    redisClient['onConnect']();
+
+    // Check if connected is set to false
+    expect(redisClient['connected']).toBe(true);
+
+    // Check if logger.info is called with the correct message
+    expect(mockedLogger.info).toHaveBeenCalledWith(`Redis Connected to ${redisClient['url']}`);
+  });
+
+  test('should log error', () => {
+    // Call the onDisconnect method
+    redisClient['onError']('error');
+    // Check if logger.info is called with the correct message
+    expect(mockedLogger.error).toHaveBeenCalledWith(`error`);
+  });
+
   test('should set ready to true and log ready', () => {
     redisClient['ready'] = true; // Simulate being connected
 
