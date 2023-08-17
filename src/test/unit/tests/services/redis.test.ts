@@ -64,5 +64,4 @@ describe('RedisClient', () => {
     expect(result).toBe(true);
     expect(mockedRedisNode.del).toHaveBeenCalledWith('testKey');
   });
-
 });
