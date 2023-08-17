@@ -99,7 +99,7 @@ export class FormProcessor {
     }
 
     if (!body.selected) {
-      return [parent];
+      throw new Error(ErrorMessages.UNEXPECTED_ERROR);
     }
 
     const selectedItem = parent._listOfValues.find(item => item.key === body.selected);

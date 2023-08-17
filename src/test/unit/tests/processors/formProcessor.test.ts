@@ -82,6 +82,25 @@ describe('FormProcessor', () => {
     }
   });
 
+  test('should fail to process typeahead form data', () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-PF0015'
+    )[0];
+    const children: DataManagerDataObject[] = [];
+
+    const body = new Form();
+
+    let error = '';
+
+    try {
+      FormProcessor.process(body, parent, children);
+    } catch (e) {
+      error = e.message;
+    }
+
+    expect(error).toBe(ErrorMessages.UNEXPECTED_ERROR);
+  });
+
   test('should process radio-group form data correctly', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
       (item: DataManagerDataObject) => item.id === 'PF0001-PF1115'
@@ -102,5 +121,24 @@ describe('FormProcessor', () => {
       expect(item._enabled).toBe(true);
       expect(item.value.subTypeValue).toBe('Brong');
     }
+  });
+
+  test('should fail to process typeahead form data', () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-PF1115'
+    )[0];
+    const children: DataManagerDataObject[] = [];
+
+    const body = new Form();
+
+    let error = '';
+
+    try {
+      FormProcessor.process(body, parent, children);
+    } catch (e) {
+      error = e.message;
+    }
+
+    expect(error).toBe(ErrorMessages.UNEXPECTED_ERROR);
   });
 });
