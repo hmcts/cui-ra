@@ -28,22 +28,24 @@ export class FormProcessor {
       throw new Error(ErrorMessages.UNEXPECTED_ERROR);
     }
 
-    return children?.map((item) => {
-      item._errors = [];
-      item._enabled = body.enabled.includes(item.id);
+    return (
+      children?.map(item => {
+        item._errors = [];
+        item._enabled = body.enabled.includes(item.id);
 
-      if (item._enabled && body.data && body.data[item.id]) {
-        item.value.flagComment = body.data[item.id].flagComment;
-        item.value.flagComment_cy = body.data[item.id].flagComment_cy;
-      } else {
-        Object.assign(item.value, {
-          flagComment: '',
-          flagComment_cy: '',
-        });
-      }
+        if (item._enabled && body.data && body.data[item.id]) {
+          item.value.flagComment = body.data[item.id].flagComment;
+          item.value.flagComment_cy = body.data[item.id].flagComment_cy;
+        } else {
+          Object.assign(item.value, {
+            flagComment: '',
+            flagComment_cy: '',
+          });
+        }
 
-      return item;
-    }) ?? [];
+        return item;
+      }) ?? []
+    );
   }
 
   private static processListValues(body: Form, parent: DataManagerDataObject): DataManagerDataObject[] {
@@ -75,7 +77,7 @@ export class FormProcessor {
       return [parent];
     }
 
-    const selectedItem = parent._listOfValues.find((item) => item.key === body.selected);
+    const selectedItem = parent._listOfValues.find(item => item.key === body.selected);
 
     if (selectedItem) {
       parent.value.subTypeKey = selectedItem.key;
@@ -91,7 +93,7 @@ export class FormProcessor {
       return [parent];
     }
 
-    const selectedItem = parent._listOfValues.find((item) => item.key === body.selected);
+    const selectedItem = parent._listOfValues.find(item => item.key === body.selected);
 
     if (selectedItem) {
       parent.value.subTypeKey = selectedItem.key;

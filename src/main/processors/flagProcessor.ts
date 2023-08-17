@@ -2,7 +2,6 @@ import { DataManagerDataObject, FlagProcessorInterface, PayloadFlagData, Referen
 import { DataManagerDataType, DataManagerYesNo } from '../managers';
 
 export class FlagProcessor implements FlagProcessorInterface {
-
   public process(
     dateTime: string,
     flag: ReferenceDataFlagType,

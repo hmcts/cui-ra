@@ -29,7 +29,7 @@ export class RefDataFlagType implements ReferenceDataFlagType {
   public Path: string[] = [];
   public childFlags: RefDataFlagType[] = [];
   public listOfValuesLength = 0;
-  public listOfValues: { key: string; value: string; value_cy: string|undefined }[] = [];
+  public listOfValues: { key: string; value: string; value_cy: string | undefined }[] = [];
 }
 
 @autobind

@@ -9,7 +9,7 @@ export interface DataManagerDataObject extends PayloadCollectionItem {
   _isParent: boolean;
   _errors: string[];
   _listOfValuesLength: number;
-  _listOfValues: { key: string; value: string; value_cy: string|undefined }[];
+  _listOfValues: { key: string; value: string; value_cy: string | undefined }[];
   _childIds: string[];
 }
 
