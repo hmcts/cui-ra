@@ -8,13 +8,13 @@ export class RedisClient implements RedisClientInterface {
   private client: RedisClientType;
   private connected = false;
   private ready = false;
-  private url:string;
+  private url: string;
 
   constructor(private logger: Logger, private host: string, private port: string, private key: string) {
     this.url = `redis://:**REDACTED**@${this.host}:${this.port}`;
     this.client = createClient({
       url: `redis://:${this.key}@${this.host}:${this.port}`,
-      legacyMode: true
+      legacyMode: true,
     });
     //Setup on Events before init connect
     this.client.on('connect', this.onConnect);
@@ -23,9 +23,7 @@ export class RedisClient implements RedisClientInterface {
     this.client.on('reconnecting', this.onReconnect);
     this.client.on('error', (err: Error) => this.onError(err.message));
     //Init connect to redis
-    this.client.connect().then(() => {
-      
-    });
+    this.client.connect().then(() => {});
   }
 
   private onError(error: string): void {
