@@ -8,10 +8,13 @@ export class RedisClient implements RedisClientInterface {
   private client: RedisClientType;
   private connected = false;
   private ready = false;
+  private url:string;
 
   constructor(private logger: Logger, private host: string, private port: string, private key: string) {
+    this.url = `redis://:**REDACTED**@${this.host}:${this.port}`;
     this.client = createClient({
       url: `redis://:${this.key}@${this.host}:${this.port}`,
+      legacyMode: true
     });
     //Setup on Events before init connect
     this.client.on('connect', this.onConnect);
@@ -20,7 +23,9 @@ export class RedisClient implements RedisClientInterface {
     this.client.on('reconnecting', this.onReconnect);
     this.client.on('error', (err: Error) => this.onError(err.message));
     //Init connect to redis
-    this.client.connect();
+    this.client.connect().then(() => {
+      
+    });
   }
 
   private onError(error: string): void {
@@ -29,7 +34,7 @@ export class RedisClient implements RedisClientInterface {
 
   private onConnect(): void {
     this.connected = true;
-    this.logger.info('Redis Connected');
+    this.logger.info(`Redis Connected to ${this.url}`);
   }
 
   private onReady(): void {
@@ -39,12 +44,12 @@ export class RedisClient implements RedisClientInterface {
 
   private onDisconnect(): void {
     this.connected = false;
-    this.logger.info('Redis Disconnect');
+    this.logger.info(`Redis Disconnect from ${this.url}`);
   }
 
   private onReconnect(): void {
     this.connected = false;
-    this.logger.info('Redis attempting to Re-Connected');
+    this.logger.info(`Redis attempting to Re-Connected to ${this.url}`);
   }
 
   public isConnected(): boolean {
