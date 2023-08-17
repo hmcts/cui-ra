@@ -13,8 +13,7 @@ export class RedisClient implements RedisClientInterface {
   constructor(private logger: Logger, private host: string, private port: string, private key: string) {
     this.url = `redis://:**REDACTED**@${this.host}:${this.port}`;
     this.client = createClient({
-      url: `redis://:${this.key}@${this.host}:${this.port}`,
-      legacyMode: true,
+      url: `redis://:${this.key}@${this.host}:${this.port}`
     });
     //Setup on Events before init connect
     this.client.on('connect', this.onConnect);

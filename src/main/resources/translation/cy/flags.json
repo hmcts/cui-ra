@@ -116,48 +116,28 @@
   "RA0011": {
     "hint": "gwybodaeth wedi'i hysgrifennu mewn iaith syml gyda lluniau"
   },
-  "RA0012": {
-
-  },
+  "RA0012": {},
   "RA0013": {
     "control": "Disgrifiwch maint y testun sydd ei angen arnoch",
     "error": {
       "empty": "Disgrifiwch pa fath o brint neu ffont sydd ei angen arnoch"
     }
   },
-  "RA0014": {
-
-  },
-  "RA0015": {
-
-  },
-  "RA0016": {
-
-  },
-  "RA0017": {
-
-  },
-  "RA0018": {
-
-  },
-  "RA0019": {
-
-  },
-  "RA0020": {
-
-  },
+  "RA0014": {},
+  "RA0015": {},
+  "RA0016": {},
+  "RA0017": {},
+  "RA0018": {},
+  "RA0019": {},
+  "RA0020": {},
   "RA0021": {
     "control": "Dywedwch wrthym pam fod arnoch angen lle parcio gerllaw",
     "error": {
       "empty": "Dywedwch wrthym pam fod arnoch angen lle parcio gerllaw"
     }
   },
-  "RA0022": {
-
-  },
-  "RA0023": {
-
-  },
+  "RA0022": {},
+  "RA0023": {},
   "RA0024": {
     "hint": "Er enghraifft, cadair â chymorth cefn",
     "control": "Disgrifiwch pa fath o gadair sydd ei hangen arnoch",
@@ -165,9 +145,7 @@
       "empty": "Disgrifiwch pa fath o gadair sydd ei hangen arnoch"
     }
   },
-  "RA0025": {
-
-  },
+  "RA0025": {},
   "RA0026": {
     "control": "Dywedwch wrthym pwy fyddwch yn dod efo chi",
     "error": {
@@ -180,9 +158,7 @@
       "empty": "Dywedwch wrthym pwy fyddwch yn dod efo chi"
     }
   },
-  "RA0028": {
-
-  },
+  "RA0028": {},
   "RA0029": {
     "control": "Dywedwch wrthym pa fath o anifail therapi sydd ei angen arnoch",
     "error": {
@@ -195,39 +171,19 @@
       "empty": "Disgrifiwch pa fath o oleuadau sydd eu hangen arnoch"
     }
   },
-  "RA0031": {
-
-  },
-  "RA0032": {
-
-  },
-  "RA0033": {
-
-  },
-  "RA0034": {
-
-  },
-  "RA0035": {
-
-  },
-  "RA0036": {
-
-  },
-  "RA0037": {
-
-  },
+  "RA0031": {},
+  "RA0032": {},
+  "RA0033": {},
+  "RA0034": {},
+  "RA0035": {},
+  "RA0036": {},
+  "RA0037": {},
   "RA0038": {
     "hint": "rhywun i’ch helpu os oes gennych anghenion cyfathrebu drwy ddarparu cymorth proffesiynol i gymryd rhan mewn gwrandawiad"
   },
-  "RA0039": {
-
-  },
-  "RA0040": {
-
-  },
-  "RA0041": {
-
-  },
+  "RA0039": {},
+  "RA0040": {},
+  "RA0041": {},
   "RA0042": {
     "hint": "gallwch ddweud wrthym pa fath o ddehonglydd yn y cam nesaf",
     "control": "Pa gefnogaeth [dehonglydd iaith arwyddion] sydd ei angen arnoch?",
@@ -235,10 +191,6 @@
       "empty": "Dewiswch iaith neu nodwch yr iaith â llaw"
     }
   },
-  "RA0046": {
-
-  },
-  "RA0047": {
-
-  }
+  "RA0046": {},
+  "RA0047": {}
 }

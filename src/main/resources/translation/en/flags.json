@@ -116,48 +116,28 @@
   "RA0011": {
     "hint": "information written in simple language with pictures"
   },
-  "RA0012": {
-
-  },
+  "RA0012": {},
   "RA0013": {
     "control": "Describe what print size you need",
     "error": {
       "empty": "Describe what type of print or font you need to request"
     }
   },
-  "RA0014": {
-
-  },
-  "RA0015": {
-
-  },
-  "RA0016": {
-
-  },
-  "RA0017": {
-
-  },
-  "RA0018": {
-
-  },
-  "RA0019": {
-
-  },
-  "RA0020": {
-
-  },
+  "RA0014": {},
+  "RA0015": {},
+  "RA0016": {},
+  "RA0017": {},
+  "RA0018": {},
+  "RA0019": {},
+  "RA0020": {},
   "RA0021": {
     "control": "Describe what print size you need",
     "error": {
       "empty": "Describe what type of print or font you need to request"
     }
   },
-  "RA0022": {
-
-  },
-  "RA0023": {
-
-  },
+  "RA0022": {},
+  "RA0023": {},
   "RA0024": {
     "hint": "For example, a chair with back support",
     "control": "Describe what type of chair you need",
@@ -165,9 +145,7 @@
       "empty": "Describe what type of chair you need"
     }
   },
-  "RA0025": {
-
-  },
+  "RA0025": {},
   "RA0026": {
     "control": "Tell us who you will bring",
     "error": {
@@ -180,9 +158,7 @@
       "empty": "Tell us who you will bring"
     }
   },
-  "RA0028": {
-
-  },
+  "RA0028": {},
   "RA0029": {
     "control": "Tell us what type of therapy animal you need to request",
     "error": {
@@ -195,39 +171,19 @@
       "empty": "Describe what type of lighting you need"
     }
   },
-  "RA0031": {
-
-  },
-  "RA0032": {
-
-  },
-  "RA0033": {
-
-  },
-  "RA0034": {
-
-  },
-  "RA0035": {
-
-  },
-  "RA0036": {
-
-  },
-  "RA0037": {
-
-  },
+  "RA0031": {},
+  "RA0032": {},
+  "RA0033": {},
+  "RA0034": {},
+  "RA0035": {},
+  "RA0036": {},
+  "RA0037": {},
   "RA0038": {
     "hint": "a person to help you if you have communication needs by providing professional support to participate in a hearing"
   },
-  "RA0039": {
-
-  },
-  "RA0040": {
-
-  },
-  "RA0041": {
-
-  },
+  "RA0039": {},
+  "RA0040": {},
+  "RA0041": {},
   "RA0042": {
     "hint": "you can tell us which type of interpreter in the next step",
     "control": "Which sign language interpreter support do you need to request?",
@@ -235,10 +191,6 @@
       "empty": "Select a language or enter the language manually"
     }
   },
-  "RA0046": {
-
-  },
-  "RA0047": {
-
-  }
+  "RA0046": {},
+  "RA0047": {}
 }
