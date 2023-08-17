@@ -6,12 +6,7 @@
     "_other": false,
     "_isParent": true,
     "_errors": [],
-    "_childIds": [
-      "PF0001-RA0001",
-      "PF0001-PF0015",
-      "PF0001-PF1115",
-      "PF0001-OT0001"
-    ],
+    "_childIds": ["PF0001-RA0001", "PF0001-PF0015", "PF0001-PF1115", "PF0001-OT0001"],
     "id": "PF0001",
     "value": {
       "name": "Party",
@@ -355,11 +350,7 @@
     "_other": false,
     "_isParent": true,
     "_errors": [],
-    "_childIds": [
-      "PF0001-RA0001-RA0003-RA0017",
-      "PF0001-RA0001-RA0003-RA0018",
-      "PF0001-RA0001-RA0003-OT0001"
-    ],
+    "_childIds": ["PF0001-RA0001-RA0003-RA0017", "PF0001-RA0001-RA0003-RA0018", "PF0001-RA0001-RA0003-OT0001"],
     "id": "PF0001-RA0001-RA0003",
     "value": {
       "name": "I need help with forms",
