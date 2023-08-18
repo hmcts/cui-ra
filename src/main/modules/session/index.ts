@@ -1,19 +1,20 @@
-import { RedisClientInterface } from './../../interfaces';
 import { ExistingFlagsManager, NewFlagsManager } from './../../managers';
-
 import { plainToClass } from 'class-transformer';
 import config from 'config';
 import RedisStore from 'connect-redis';
 import { Application } from 'express';
 import session from 'express-session';
 import FileStoreFactory from 'session-file-store';
+//import * as Redis from 'ioredis';
 
+const Redis = require("ioredis");
 const FileStore = FileStoreFactory(session);
 
 export class SessionStorage {
-  constructor(private redisClient: RedisClientInterface) {}
+  constructor() {}
 
   public enableFor(app: Application): void {
+
     app.use(
       session({
         name: 'cui-session',
@@ -32,6 +33,9 @@ export class SessionStorage {
     );
     //populate response from session data
     app.use((req, res, next) => {
+      if(!req.session){
+        next();
+      }
       res.locals.partyname = req.session.partyname;
       res.locals.mastername = req.session.mastername;
       res.locals.mastername_cy = req.session.mastername_cy;
@@ -55,8 +59,22 @@ export class SessionStorage {
   }
 
   private getStore() {
-    const client = this.redisClient.getClient();
-    if ((config.get('session.redis.host') as string) !== '' && client) {
+    const host = config.get('session.redis.host');
+    const port = config.get('session.redis.port');
+    const key = config.get('session.redis.key');
+
+    if (host) {
+
+      const client = new Redis({
+          host: host as string,
+          port: port as number,
+          password: key as string,
+      });
+
+      client.on('error', function (err) {
+        console.log('Could not establish a connection with redis. ' + err);
+      });
+
       return new RedisStore({ client });
     }
 
