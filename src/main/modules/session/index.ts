@@ -64,7 +64,7 @@ export class SessionStorage {
     const port = config.get('session.redis.port');
     const key = config.get('session.redis.key');
 
-    if (host) {
+    if (host && host !== '') {
       const client = new Redis({
         host: host as string,
         port: port as number,
