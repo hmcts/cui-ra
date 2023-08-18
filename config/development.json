@@ -1,0 +1,11 @@
+{
+  "session": {
+    "secret": "local",
+    "maxAge": 1260000,
+    "redis": {
+      "host": "localhost",
+      "port": "6379",
+      "key": "password"
+    }
+  }
+}
