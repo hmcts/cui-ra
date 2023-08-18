@@ -2,10 +2,6 @@ nodejs:
   applicationPort: 3100
   aadIdentityName: cui
   ingressHost: cui-ra.{{ .Values.global.environment }}.platform.hmcts.net
-  registerAdditionalDns:
-    enabled: true
-    prefix: cui-ra
-    primaryIngressHost: cui-ra.{{ .Values.global.environment }}.platform.hmcts.net
   image: 'hmctspublic.azurecr.io/cui/ra:latest'
   #  Uncomment once the vault containing the app insights key has been set up
   readinessDelay: 45
@@ -14,13 +10,6 @@ nodejs:
   livenessDelay: 45
   livenessTimeout: 5
   livenessPeriod: 15
-  memoryLimits: '256Mi'
-  memoryRequests: '256Mi'
-  cpuLimits: '1000m'
-  cpuRequests: '200m'
-  devcpuRequests: '400m'
-  devmemoryLimits: '256Mi'
-  devmemoryRequests: '256Mi'
   keyVaults:
     cui:
       secrets:
