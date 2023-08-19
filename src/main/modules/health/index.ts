@@ -23,6 +23,7 @@ export class HealthCheck {
 
     healthcheck.addTo(app, {
       checks: {
+        sampleCheck: healthcheck.raw(() => healthcheck.up()),
         //...redis,
         //'service-auth': healthcheck.web(new URL('/health', config.get('services.s2s.endpoint'))),
         //'reference-data': healthcheck.web(new URL('/health', config.get('services.refdata.endpoint'))),
