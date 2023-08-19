@@ -3,51 +3,50 @@ import { plainToClass } from 'class-transformer';
 import { InitSession } from './../../../../main/middlewares';
 import { ExistingFlagsManager, NewFlagsManager } from './../../../../main/managers';
 
-
 // Mocking the required dependencies
 jest.mock('class-transformer', () => ({
-    plainToClass: jest.fn(),
+  plainToClass: jest.fn(),
 }));
 jest.mock('autobind-decorator');
 jest.mock('express');
 
 describe('InitSession', () => {
-let initSession: InitSession;
-let req: Request;
-let res: Response;
-let next: NextFunction;
+  let initSession: InitSession;
+  let req: Request;
+  let res: Response;
+  let next: NextFunction;
 
-beforeEach(() => {
+  beforeEach(() => {
     initSession = new InitSession();
     req = {
-        session: {
-            partyname: undefined,
-            mastername: undefined,
-            mastername_cy: undefined,
-            existingmanager: undefined,
-            newmanager: undefined
-        },
+      session: {
+        partyname: undefined,
+        mastername: undefined,
+        mastername_cy: undefined,
+        existingmanager: undefined,
+        newmanager: undefined,
+      },
     } as Request;
     res = {
-    locals: {},
+      locals: {},
     } as Response;
     next = jest.fn() as NextFunction;
-});
+  });
 
-afterEach(() => {
+  afterEach(() => {
     jest.clearAllMocks();
-});
+  });
 
-test('should initialize session properties and call next if req.session is not present', async () => {
+  test('should initialize session properties and call next if req.session is not present', async () => {
     req = {
-        session: {}
+      session: {},
     } as Request;
     await initSession.init(req, res, next);
 
     expect(next).toHaveBeenCalled();
-});
+  });
 
-test('should initialize session properties and call next', async () => {
+  test('should initialize session properties and call next', async () => {
     req.session.partyname = 'party';
     req.session.mastername = 'master';
     req.session.mastername_cy = 'cyber';
@@ -65,19 +64,19 @@ test('should initialize session properties and call next', async () => {
     expect(res.locals.mastername_cy).toBe('cyber');
     expect(plainToClass).toHaveBeenCalledTimes(2);
     expect(next).toHaveBeenCalled();
-});
+  });
 
-test('should call next if plainToClass throws an error', async () => {
+  test('should call next if plainToClass throws an error', async () => {
     req.session.partyname = 'party';
     req.session.mastername = 'master';
     req.session.mastername_cy = 'cyber';
 
     (plainToClass as jest.Mock).mockImplementation(() => {
-    throw new Error('Mocked error');
+      throw new Error('Mocked error');
     });
 
     await initSession.init(req, res, next);
 
     expect(next).toHaveBeenCalled();
-});
+  });
 });

@@ -1,15 +1,14 @@
 import { ExistingFlagsManager, NewFlagsManager } from './../managers';
 
-import { plainToClass } from 'class-transformer';
-
 import autobind from 'autobind-decorator';
+import { plainToClass } from 'class-transformer';
 import { NextFunction, Request, Response } from 'express';
 
 @autobind
 export class InitSession {
   public async init(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
     if (!req.session) {
-        next();
+      next();
     }
     res.locals.partyname = req.session.partyname;
     res.locals.mastername = req.session.mastername;
@@ -25,8 +24,7 @@ export class InitSession {
         req.session.newmanager = plainToClass(NewFlagsManager, req.session.newmanager);
       }
     } finally {
-        next();
+      next();
     }
-
   }
 }
