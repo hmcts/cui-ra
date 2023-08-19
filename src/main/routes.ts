@@ -1,7 +1,7 @@
 import * as os from 'os';
 
 import { Route } from './constants';
-import { RequireIdam, SchemaValidator, ServiceAuthentication, InitSession } from './middlewares';
+import { InitSession, RequireIdam, SchemaValidator, ServiceAuthentication } from './middlewares';
 import { InboundPayloadSchema } from './schemas';
 
 import { infoRequestHandler } from '@hmcts/info-provider';
