@@ -1,6 +1,6 @@
-import { ExistingFlagsManager } from './../managers';
 import { SessionData } from 'express-session';
 import { ExistingFlagsManager, NewFlagsManager } from './../managers';
+import { SessionData } from './../interfaces';
 
 declare module 'express-session' {
   export interface SessionData {
