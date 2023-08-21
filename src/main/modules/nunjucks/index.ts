@@ -24,7 +24,7 @@ export class Nunjucks {
       res.locals.pagePath = req.path;
       res.locals.fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
       res.locals._t = (key: string) => {
-        const serviceId = req.session.hmctsserviceid;
+        const serviceId = req.session && req.session.hmctsserviceid ? req.session.hmctsserviceid : null;
         let result;
         if (serviceId) {
           const serviceKey = `${serviceId}.${key}`;
