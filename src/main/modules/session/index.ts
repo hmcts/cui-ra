@@ -10,7 +10,7 @@ import FileStoreFactory from 'session-file-store';
 const FileStore = FileStoreFactory(session);
 
 export class SessionStorage {
-  constructor(private logger: Logger) {}
+  constructor(/*private logger: Logger*/) {}
 
   public enableFor(app: Application): void {
     app.use(
