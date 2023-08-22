@@ -30,7 +30,7 @@ export class SessionStorage {
       })
     );
   }
-
+  /*
   private getStore() {
     const host = config.get('session.redis.host');
     const port = config.get('session.redis.port');
@@ -50,4 +50,5 @@ export class SessionStorage {
 
     return new FileStore({ path: '/tmp' });
   }
+  */
 }
