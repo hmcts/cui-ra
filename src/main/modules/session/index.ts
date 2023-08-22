@@ -1,16 +1,16 @@
-import { Logger } from '../../interfaces';
+//import { Logger } from '../../interfaces';
 
 import config from 'config';
-import RedisStore from 'connect-redis';
+//import RedisStore from 'connect-redis';
 import { Application } from 'express';
 import session from 'express-session';
 import FileStoreFactory from 'session-file-store';
 
-const Redis = require('ioredis');
+//const Redis = require('ioredis');
 const FileStore = FileStoreFactory(session);
 
 export class SessionStorage {
-  constructor(private logger: Logger) {}
+  constructor(/*private logger: Logger*/) {}
 
   public enableFor(app: Application): void {
     app.use(
@@ -26,11 +26,11 @@ export class SessionStorage {
           secure: !app.locals.developmentMode,
         },
         rolling: true, // Renew the cookie for another 20 minutes on each request
-        store: this.getStore(),
+        store: new FileStore({ path: '/tmp' }), //this.getStore(),
       })
     );
   }
-
+  /*
   private getStore() {
     const host = config.get('session.redis.host');
     const port = config.get('session.redis.port');
@@ -50,4 +50,5 @@ export class SessionStorage {
 
     return new FileStore({ path: '/tmp' });
   }
+  */
 }
