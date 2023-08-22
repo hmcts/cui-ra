@@ -17,10 +17,10 @@ export default function (app: Application): void {
   app.get(Route.INTRO, app.locals.container.cradle.homeController.intro);
 
   // Demo Controller
-  if (app.locals.ENV !== 'production') {
-    app.get(Route.DEMO, initSession.init, app.locals.container.cradle.demoController.get);
-    app.post(Route.DEMO, initSession.init, app.locals.container.cradle.demoController.post);
-  }
+  //if (app.locals.ENV !== 'production') {
+  app.get(Route.DEMO, initSession.init, app.locals.container.cradle.demoController.get);
+  app.post(Route.DEMO, initSession.init, app.locals.container.cradle.demoController.post);
+  //}
 
   // Review Controller
   app.get(Route.REVIEW, initSession.init, app.locals.container.cradle.reviewController.get);
