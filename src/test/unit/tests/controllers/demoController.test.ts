@@ -50,7 +50,7 @@ describe('Demo Controller', () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     const id = 'PF0001-RA0001';
     mockRequest.body = { action: 'new' };
-    demoController.post(mockRequest, mockResponse);
+    demoController.startDemo(mockRequest, mockResponse);
 
     expect(mockResponse.redirect).toBeCalledWith(
       UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: id }, UrlRoute.url(mockRequest))
@@ -72,7 +72,7 @@ describe('Demo Controller', () => {
       existingManager: dataManagerExisting,
     } as unknown as Session & Partial<SessionData>;
 
-    demoController.post(mockRequest, mockResponse);
+    demoController.startDemo(mockRequest, mockResponse);
     expect(mockResponse.redirect).toBeCalledWith('home/overview');
   });
 });
