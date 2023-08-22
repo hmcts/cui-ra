@@ -26,7 +26,7 @@ export class SessionStorage {
           secure: !app.locals.developmentMode,
         },
         rolling: true, // Renew the cookie for another 20 minutes on each request
-        store: this.getStore(),
+        store: new FileStore({ path: '/tmp' }), //this.getStore(),
       })
     );
   }
