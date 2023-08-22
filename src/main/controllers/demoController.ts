@@ -12,7 +12,7 @@ import { Request, Response } from 'express';
 @autobind
 export class DemoController {
   private new: DataManagerDataObject[] = JSON.parse(
-    fs.readFileSync(path.join(__dirname, '..', '..', 'test', 'unit', 'data', 'data-processor-results.json'), 'utf-8')
+    fs.readFileSync(path.join(__dirname, '..', 'demo', 'data', 'data-processor-results.json'), 'utf-8')
   );
 
   private existing: PayloadCollectionItem[] = JSON.parse(
