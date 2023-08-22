@@ -19,8 +19,9 @@ describe('Demo Controller', () => {
   beforeEach(() => {
     // Initialize the mock objects and dependencies
     mockRequest = {
-      body: { action: 'demo' },
+      body: {},
       params: {},
+      query: { action: 'demo' },
       session: { partyName: '', existingManager: {} } as unknown as Session & Partial<SessionData>,
       protocol: protocol,
       headers: {
@@ -49,7 +50,7 @@ describe('Demo Controller', () => {
   test('Should render intro page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     const id = 'PF0001-RA0001';
-    mockRequest.body = { action: 'new' };
+    mockRequest.query = { action: 'new' };
     demoController.startDemo(mockRequest, mockResponse);
 
     expect(mockResponse.redirect).toBeCalledWith(
@@ -65,7 +66,7 @@ describe('Demo Controller', () => {
     const dataManagerExisting: ExistingFlagsManager = new ExistingFlagsManager();
     dataManagerExisting.set(existingJson);
 
-    mockRequest.body = { action: 'existing' };
+    mockRequest.query = { action: 'existing' };
 
     mockRequest.session = {
       partyName: 'demo',

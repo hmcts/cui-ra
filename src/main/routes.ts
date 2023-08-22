@@ -19,7 +19,7 @@ export default function (app: Application): void {
   // Demo Controller
   //if (app.locals.ENV !== 'production') {
   app.get(Route.DEMO, initSession.init, app.locals.container.cradle.demoController.get);
-  app.post(Route.START_DEMO, initSession.init, app.locals.container.cradle.demoController.startDemo);
+  app.get(Route.START_DEMO, initSession.init, app.locals.container.cradle.demoController.startDemo);
   //}
 
   // Review Controller

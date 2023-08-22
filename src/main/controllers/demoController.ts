@@ -27,7 +27,7 @@ export class DemoController {
   }
 
   public async startDemo(req: Request, res: Response): Promise<void> {
-    const action = req.body.action;
+    const action = req.query.action;
 
     if (action === 'new') {
       // Redirect user to category page with enough payload data to render category flags
