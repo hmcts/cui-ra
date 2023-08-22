@@ -26,7 +26,7 @@ export class DemoController {
     res.render('demo');
   }
 
-  public async post(req: Request, res: Response): Promise<void> {
+  public async startDemo(req: Request, res: Response): Promise<void> {
     const action = req.body.action;
 
     if (action === 'new') {
