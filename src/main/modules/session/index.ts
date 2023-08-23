@@ -48,7 +48,7 @@ export class SessionStorage {
         host,
         port: port ?? 6380,
         password: key,
-        tls: true,
+        //tls: false,
       });
 
       client.on('error', this.logger.error);
