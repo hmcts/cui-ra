@@ -1,16 +1,15 @@
-//import { Logger } from '../../interfaces';
+import { Logger } from '../../interfaces';
 
 import config from 'config';
-//import RedisStore from 'connect-redis';
+import RedisStore from 'connect-redis';
 import { Application } from 'express';
 import session from 'express-session';
 import FileStoreFactory from 'session-file-store';
 
-//const Redis = require('ioredis');
-const FileStore = FileStoreFactory(session);
+const Redis = require('ioredis');
 
 export class SessionStorage {
-  constructor(/*private logger: Logger*/) {}
+  constructor(private logger: Logger) {}
 
   public enableFor(app: Application): void {
     if (!app.locals.developmentMode) {
@@ -30,21 +29,26 @@ export class SessionStorage {
           secure: !app.locals.developmentMode,
         },
         rolling: true, // Renew the cookie for another 20 minutes on each request
-        store: new FileStore({ path: '/tmp' }), //this.getStore(),
+        store: this.getStore(),
       })
     );
   }
-  /*
-  private getStore() {
-    const host = config.get('session.redis.host');
-    const port = config.get('session.redis.port');
-    const key = config.get('session.redis.key');
 
-    if (host && host !== '') {
+  private getStore() {
+    //const redisStore = RedisStore(session);
+    const fileStore = FileStoreFactory(session);
+
+    const host: string = config.get('session.redis.host');
+    const port: number = config.get('session.redis.port');
+    const key: string = config.get('session.redis.key');
+
+    if (host && key) {
+      //host && host !== ''
       const client = new Redis({
-        host: host as string,
-        port: port as number,
-        password: key as string,
+        host,
+        port: port ?? 6380,
+        password: key,
+        tls: true,
       });
 
       client.on('error', this.logger.error);
@@ -52,7 +56,6 @@ export class SessionStorage {
       return new RedisStore({ client });
     }
 
-    return new FileStore({ path: '/tmp' });
+    return new fileStore({ path: '/tmp' });
   }
-  */
 }
