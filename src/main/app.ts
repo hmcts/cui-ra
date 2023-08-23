@@ -39,7 +39,7 @@ app.use(cookieParser());
 new PropertiesVolume().enableFor(app);
 new Container().enableFor(app, logger);
 new AppInsights().enable();
-new SessionStorage(/*logger*/).enableFor(app);
+new SessionStorage(logger).enableFor(app);
 new Translation().enableFor(app);
 new Nunjucks(developmentMode).enableFor(app);
 // secure the application by adding various HTTP headers to its responses
