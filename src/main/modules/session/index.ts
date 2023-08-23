@@ -1,19 +1,21 @@
-import { RedisClientInterface } from './../../interfaces';
-import { ExistingFlagsManager, NewFlagsManager } from './../../managers';
+import { Logger } from '../../interfaces';
 
-import { plainToClass } from 'class-transformer';
 import config from 'config';
 import RedisStore from 'connect-redis';
 import { Application } from 'express';
 import session from 'express-session';
 import FileStoreFactory from 'session-file-store';
 
-const FileStore = FileStoreFactory(session);
+const Redis = require('ioredis');
 
 export class SessionStorage {
-  constructor(private redisClient: RedisClientInterface) {}
+  constructor(private logger: Logger) {}
 
   public enableFor(app: Application): void {
+    if (!app.locals.developmentMode) {
+      app.set('trust proxy', 1);
+    }
+
     app.use(
       session({
         name: 'cui-session',
@@ -30,36 +32,30 @@ export class SessionStorage {
         store: this.getStore(),
       })
     );
-    //populate response from session data
-    app.use((req, res, next) => {
-      res.locals.partyname = req.session.partyname;
-      res.locals.mastername = req.session.mastername;
-      res.locals.mastername_cy = req.session.mastername_cy;
-
-      //init to class from json
-      if (req.session.existingmanager && typeof req.session.existingmanager !== typeof ExistingFlagsManager) {
-        req.session.existingmanager = plainToClass(ExistingFlagsManager, req.session.existingmanager);
-      } else if (!req.session.existingmanager) {
-        req.session.existingmanager = new ExistingFlagsManager();
-      }
-
-      //init to class from json
-      if (req.session.newmanager && typeof req.session.newmanager !== typeof NewFlagsManager) {
-        req.session.newmanager = plainToClass(NewFlagsManager, req.session.newmanager);
-      } else if (!req.session.newmanager) {
-        req.session.newmanager = new NewFlagsManager();
-      }
-
-      next();
-    });
   }
 
   private getStore() {
-    const client = this.redisClient.getClient();
-    if ((config.get('session.redis.host') as string) !== '' && client) {
+    //const redisStore = RedisStore(session);
+    const fileStore = FileStoreFactory(session);
+
+    const host: string = config.get('session.redis.host');
+    const port: number = config.get('session.redis.port');
+    const key: string = config.get('session.redis.key');
+
+    if (host && key) {
+      //host && host !== ''
+      const client = new Redis({
+        host,
+        port: port ?? 6380,
+        password: key,
+        tls: true,
+      });
+
+      client.on('error', this.logger.error);
+
       return new RedisStore({ client });
     }
 
-    return new FileStore({ path: '/tmp' });
+    return new fileStore({ path: '/tmp' });
   }
 }

@@ -14,6 +14,7 @@ export class HomeController {
 
     res.render('overview', {
       existingFlags: req.session.existingmanager?.data,
+      name: req.session.partyname,
       status: Status,
     });
   }

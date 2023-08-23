@@ -9,7 +9,8 @@
   "for_name": "for {name}",
   "support_for_name": "Support for {name}",
   "header": {
-    "menu-text": "Menu"
+    "menu-text": "Menu",
+    "title": "Your support"
   },
   "footer": {
     "cookies": "Cookies",

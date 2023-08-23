@@ -1,0 +1,2785 @@
+[
+  {
+    "_flagComment": true,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": ["PF0001-RA0001", "PF0001-PF0015", "PF0001-PF1115", "PF0001-OT0001"],
+    "id": "PF0001",
+    "value": {
+      "name": "Party",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": ""
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "PF0001",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": null
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0002",
+      "PF0001-RA0001-RA0003",
+      "PF0001-RA0001-RA0004",
+      "PF0001-RA0001-RA0005",
+      "PF0001-RA0001-RA0006",
+      "PF0001-RA0001-RA0007",
+      "PF0001-RA0001-RA0008",
+      "PF0001-RA0001-OT0001"
+    ],
+    "id": "PF0001-RA0001",
+    "value": {
+      "name": "Reasonable adjustment",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0001",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0002-RA0010",
+      "PF0001-RA0001-RA0002-RA0011",
+      "PF0001-RA0001-RA0002-RA0012",
+      "PF0001-RA0001-RA0002-RA0013",
+      "PF0001-RA0001-RA0002-RA0014",
+      "PF0001-RA0001-RA0002-RA0015",
+      "PF0001-RA0001-RA0002-RA0016",
+      "PF0001-RA0001-RA0002-OT0001"
+    ],
+    "id": "PF0001-RA0001-RA0002",
+    "value": {
+      "name": "I need documents in an alternative format",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0002",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0010",
+    "value": {
+      "name": "Documents in a specified colour",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0010",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0011",
+    "value": {
+      "name": "Documents in easy read format",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0011",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0012",
+    "value": {
+      "name": "Braille documents",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0012",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0013",
+    "value": {
+      "name": "Documents in large print",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0013",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0014",
+    "value": {
+      "name": "Audio translation of documents",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0014",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0015",
+    "value": {
+      "name": "Documents read out to me",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0015",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0016",
+    "value": {
+      "name": "Information emailed to me",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0016",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-OT0001",
+    "value": {
+      "name": "Other",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": ["PF0001-RA0001-RA0003-RA0017", "PF0001-RA0001-RA0003-RA0018", "PF0001-RA0001-RA0003-OT0001"],
+    "id": "PF0001-RA0001-RA0003",
+    "value": {
+      "name": "I need help with forms",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0003",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0003-RA0017",
+    "value": {
+      "name": "Guidance on how to complete forms",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help with forms"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0017",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0003"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0003-RA0018",
+    "value": {
+      "name": "Support filling in forms",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help with forms"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0018",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0003"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0003-OT0001",
+    "value": {
+      "name": "Other",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help with forms"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0003"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0004-RA0019",
+      "PF0001-RA0001-RA0004-RA0020",
+      "PF0001-RA0001-RA0004-RA0021",
+      "PF0001-RA0001-RA0004-RA0022",
+      "PF0001-RA0001-RA0004-RA0023",
+      "PF0001-RA0001-RA0004-RA0024",
+      "PF0001-RA0001-RA0004-RA0025",
+      "PF0001-RA0001-RA0004-OT0001"
+    ],
+    "id": "PF0001-RA0001-RA0004",
+    "value": {
+      "name": "I need adjustments to get to, into and around our buildings",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0004",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-RA0019",
+    "value": {
+      "name": "Step free / wheelchair access",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0019",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-RA0020",
+    "value": {
+      "name": "Use of venue wheelchair",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0020",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-RA0021",
+    "value": {
+      "name": "Parking space close to the venue",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0021",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-RA0022",
+    "value": {
+      "name": "Accessible toilet",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0022",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-RA0023",
+    "value": {
+      "name": "Help using a lift",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0023",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-RA0024",
+    "value": {
+      "name": "A different type of chair",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0024",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-RA0025",
+    "value": {
+      "name": "Guiding in the building",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0025",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-OT0001",
+    "value": {
+      "name": "Other",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0005-RA0026",
+      "PF0001-RA0001-RA0005-RA0027",
+      "PF0001-RA0001-RA0005-RA0028",
+      "PF0001-RA0001-RA0005-RA0029",
+      "PF0001-RA0001-RA0005-OT0001"
+    ],
+    "id": "PF0001-RA0001-RA0005",
+    "value": {
+      "name": "I need to bring support with me to a hearing",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0005",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0005-RA0026",
+    "value": {
+      "name": "Support worker or carer with me",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to bring support with me to a hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0026",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0005"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0005-RA0027",
+    "value": {
+      "name": "Friend or family with me",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to bring support with me to a hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0027",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0005"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0005-RA0028",
+    "value": {
+      "name": "Assistance / guide dog",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to bring support with me to a hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0028",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0005"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0005-RA0029",
+    "value": {
+      "name": "Therapy animal",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to bring support with me to a hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0029",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0005"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0005-OT0001",
+    "value": {
+      "name": "Other",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to bring support with me to a hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0005"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0006-RA0030",
+      "PF0001-RA0001-RA0006-RA0031",
+      "PF0001-RA0001-RA0006-RA0032",
+      "PF0001-RA0001-RA0006-RA0033",
+      "PF0001-RA0001-RA0006-OT0001"
+    ],
+    "id": "PF0001-RA0001-RA0006",
+    "value": {
+      "name": "I need something to feel comfortable during my hearing",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0006",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0006-RA0030",
+    "value": {
+      "name": "Appropriate lighting",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need something to feel comfortable during my hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0030",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0006"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0006-RA0031",
+    "value": {
+      "name": "Regular breaks",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need something to feel comfortable during my hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0031",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0006"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0006-RA0032",
+    "value": {
+      "name": "Space to be able to get up and move around",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need something to feel comfortable during my hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0032",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0006"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0006-RA0033",
+    "value": {
+      "name": "Private waiting area",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need something to feel comfortable during my hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0033",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0006"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0006-OT0001",
+    "value": {
+      "name": "Other",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need something to feel comfortable during my hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0006"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0007-RA0034",
+      "PF0001-RA0001-RA0007-RA0035",
+      "PF0001-RA0001-RA0007-RA0036",
+      "PF0001-RA0001-RA0007-OT0001"
+    ],
+    "id": "PF0001-RA0001-RA0007",
+    "value": {
+      "name": "I need to request a certain type of hearing",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0007",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0007-RA0034",
+    "value": {
+      "name": "In person hearing",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to request a certain type of hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0034",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0007"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0007-RA0035",
+    "value": {
+      "name": "Video hearing",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to request a certain type of hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0035",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0007"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0007-RA0036",
+    "value": {
+      "name": "Phone hearing",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to request a certain type of hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0036",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0007"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0007-OT0001",
+    "value": {
+      "name": "Other",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to request a certain type of hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0007"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0008-RA0009",
+      "PF0001-RA0001-RA0008-RA0037",
+      "PF0001-RA0001-RA0008-RA0038",
+      "PF0001-RA0001-RA0008-RA0039",
+      "PF0001-RA0001-RA0008-RA0040",
+      "PF0001-RA0001-RA0008-RA0041",
+      "PF0001-RA0001-RA0008-RA0042",
+      "PF0001-RA0001-RA0008-RA0046",
+      "PF0001-RA0001-RA0008-RA0047",
+      "PF0001-RA0001-RA0008-OT0001"
+    ],
+    "id": "PF0001-RA0001-RA0008",
+    "value": {
+      "name": "I need help communicating and understanding",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0008",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0008-RA0009-RA0043",
+      "PF0001-RA0001-RA0008-RA0009-RA0044",
+      "PF0001-RA0001-RA0008-RA0009-RA0045",
+      "PF0001-RA0001-RA0008-RA0009-OT0001"
+    ],
+    "id": "PF0001-RA0001-RA0008-RA0009",
+    "value": {
+      "name": "Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0009",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0009-RA0043",
+    "value": {
+      "name": "Hearing loop (hearing enhancement system)",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        },
+        {
+          "name": "Hearing Enhancement System (Hearing"
+        },
+        {
+          "name": "Induction Loop, Infrared Receiver)"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0043",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008-RA0009"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0009-RA0044",
+    "value": {
+      "name": "Infrared receiver (hearing enhancement system)",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        },
+        {
+          "name": "Hearing Enhancement System (Hearing"
+        },
+        {
+          "name": "Induction Loop, Infrared Receiver)"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0044",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008-RA0009"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0009-RA0045",
+    "value": {
+      "name": "Induction loop (hearing enhancement system)",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        },
+        {
+          "name": "Hearing Enhancement System (Hearing"
+        },
+        {
+          "name": "Induction Loop, Infrared Receiver)"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0045",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008-RA0009"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0009-OT0001",
+    "value": {
+      "name": "Other",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        },
+        {
+          "name": "Hearing Enhancement System (Hearing"
+        },
+        {
+          "name": "Induction Loop, Infrared Receiver)"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008-RA0009"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0037",
+    "value": {
+      "name": "Extra time to think and explain myself",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0037",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0038",
+    "value": {
+      "name": "Intermediary",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0038",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0039",
+    "value": {
+      "name": "Speech to text reporter (palantypist)",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0039",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0040",
+    "value": {
+      "name": "Need to be close to who is speaking",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0040",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0041",
+    "value": {
+      "name": "Lip speaker",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0041",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_listOfValuesLength": 12,
+    "_listOfValues": [
+      {
+        "key": "ase",
+        "value": "American Sign Language (ASL)"
+      },
+      {
+        "key": "bfi",
+        "value": "British Sign Language (BSL)"
+      },
+      {
+        "key": "ils",
+        "value": "International Sign (IS)"
+      },
+      {
+        "key": "sign-dfr",
+        "value": "Deaf Relay"
+      },
+      {
+        "key": "sign-dma",
+        "value": "Deafblind manual alphabet"
+      },
+      {
+        "key": "sign-hos",
+        "value": "Hands on signing"
+      },
+      {
+        "key": "sign-lps",
+        "value": "Lipspeaker"
+      },
+      {
+        "key": "sign-mkn",
+        "value": "Makaton"
+      },
+      {
+        "key": "sign-ntr",
+        "value": "Notetaker"
+      },
+      {
+        "key": "sign-pst",
+        "value": "Palantypist / Speech to text"
+      },
+      {
+        "key": "sign-sse",
+        "value": "Speech Supported English (SSE)"
+      },
+      {
+        "key": "sign-vfs",
+        "value": "Visual frame signing"
+      }
+    ],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0042",
+    "value": {
+      "name": "Sign Language Interpreter",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0042",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0046",
+    "value": {
+      "name": "Visit to court or tribunal before the hearing",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0046",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0047",
+    "value": {
+      "name": "Explanation of the court or tribunal and who's in the room at the hearing",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0047",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-OT0001",
+    "value": {
+      "name": "Other",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-OT0001",
+    "value": {
+      "name": "Other",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_listOfValuesLength": 205,
+    "_listOfValues": [
+      {
+        "key": "abr",
+        "value": "Brong"
+      },
+      {
+        "key": "ach",
+        "value": "Acholi"
+      },
+      {
+        "key": "afr",
+        "value": "Afrikaans"
+      },
+      {
+        "key": "aii",
+        "value": "Assyrian"
+      },
+      {
+        "key": "aka",
+        "value": "Akan"
+      },
+      {
+        "key": "amh",
+        "value": "Amharic"
+      },
+      {
+        "key": "ara",
+        "value": "Arabic"
+      },
+      {
+        "key": "ara-ame",
+        "value": "Arabic Middle Eastern"
+      },
+      {
+        "key": "ara-ana",
+        "value": "Arabic North African"
+      },
+      {
+        "key": "ara-mag",
+        "value": "Maghreb"
+      },
+      {
+        "key": "arq",
+        "value": "Algerian"
+      },
+      {
+        "key": "aze",
+        "value": "Azerbajani (aka Nth Azari)"
+      },
+      {
+        "key": "bal",
+        "value": "Baluchi"
+      },
+      {
+        "key": "bam",
+        "value": "Bambara"
+      },
+      {
+        "key": "bas",
+        "value": "Bassa"
+      },
+      {
+        "key": "bel",
+        "value": "Belorussian"
+      },
+      {
+        "key": "bem",
+        "value": "Benba (Bemba)"
+      },
+      {
+        "key": "ben",
+        "value": "Bengali"
+      },
+      {
+        "key": "ben-bsy",
+        "value": "Bengali Sylheti"
+      },
+      {
+        "key": "ber",
+        "value": "Berber"
+      },
+      {
+        "key": "bfz",
+        "value": "Pahari"
+      },
+      {
+        "key": "bih",
+        "value": "Bihari"
+      },
+      {
+        "key": "bin",
+        "value": "Benin/Edo"
+      },
+      {
+        "key": "bjs",
+        "value": "Bajan (West Indian)"
+      },
+      {
+        "key": "bnt-kic",
+        "value": "Kichagga"
+      },
+      {
+        "key": "bod",
+        "value": "Tibetan"
+      },
+      {
+        "key": "btn",
+        "value": "Bhutanese"
+      },
+      {
+        "key": "bul",
+        "value": "Bulgarian"
+      },
+      {
+        "key": "byn",
+        "value": "Bilin"
+      },
+      {
+        "key": "ceb",
+        "value": "Cebuano"
+      },
+      {
+        "key": "ces",
+        "value": "Czech"
+      },
+      {
+        "key": "cgg",
+        "value": "Rukiga"
+      },
+      {
+        "key": "che",
+        "value": "Chechen"
+      },
+      {
+        "key": "cmn",
+        "value": "Mandarin"
+      },
+      {
+        "key": "cpe",
+        "value": "Creole (English)"
+      },
+      {
+        "key": "cpf",
+        "value": "Creole (French)"
+      },
+      {
+        "key": "cpp",
+        "value": "Creole (Portuguese)"
+      },
+      {
+        "key": "crp",
+        "value": "Creole (Spanish)"
+      },
+      {
+        "key": "ctg",
+        "value": "Chittagonain"
+      },
+      {
+        "key": "cym",
+        "value": "Welsh"
+      },
+      {
+        "key": "dan",
+        "value": "Danish"
+      },
+      {
+        "key": "deu",
+        "value": "German"
+      },
+      {
+        "key": "din",
+        "value": "Dinka"
+      },
+      {
+        "key": "div",
+        "value": "Maldivian"
+      },
+      {
+        "key": "don",
+        "value": "Toura"
+      },
+      {
+        "key": "dua",
+        "value": "Douala"
+      },
+      {
+        "key": "dyu",
+        "value": "Dioula"
+      },
+      {
+        "key": "efi",
+        "value": "Efik"
+      },
+      {
+        "key": "ell",
+        "value": "Greek"
+      },
+      {
+        "key": "est",
+        "value": "Estonian"
+      },
+      {
+        "key": "ewe",
+        "value": "Ewe"
+      },
+      {
+        "key": "ewo",
+        "value": "Ewondo"
+      },
+      {
+        "key": "fas",
+        "value": "Farsi"
+      },
+      {
+        "key": "fat",
+        "value": "Fanti"
+      },
+      {
+        "key": "fij",
+        "value": "Fijian"
+      },
+      {
+        "key": "fra",
+        "value": "French"
+      },
+      {
+        "key": "fra-faf",
+        "value": "French African"
+      },
+      {
+        "key": "fra-far",
+        "value": "French Arabic"
+      },
+      {
+        "key": "ful",
+        "value": "Fula"
+      },
+      {
+        "key": "gaa",
+        "value": "Ga"
+      },
+      {
+        "key": "gjk",
+        "value": "Kachi"
+      },
+      {
+        "key": "glg",
+        "value": "Galician"
+      },
+      {
+        "key": "guj",
+        "value": "Gujarati"
+      },
+      {
+        "key": "hac",
+        "value": "Gorani"
+      },
+      {
+        "key": "hak",
+        "value": "Hakka"
+      },
+      {
+        "key": "hau",
+        "value": "Hausa"
+      },
+      {
+        "key": "hbs",
+        "value": "Serbo-Croatian"
+      },
+      {
+        "key": "heb",
+        "value": "Hebrew"
+      },
+      {
+        "key": "her",
+        "value": "Herero"
+      },
+      {
+        "key": "hin",
+        "value": "Hindi"
+      },
+      {
+        "key": "hnd",
+        "value": "Hindko"
+      },
+      {
+        "key": "hno",
+        "value": "Northern Hindko"
+      },
+      {
+        "key": "hun",
+        "value": "Hungarian"
+      },
+      {
+        "key": "hye",
+        "value": "Armenian"
+      },
+      {
+        "key": "ibb",
+        "value": "Ibibio"
+      },
+      {
+        "key": "ibo",
+        "value": "Igbo (Also Known As Ibo)"
+      },
+      {
+        "key": "ilo",
+        "value": "Ilocano"
+      },
+      {
+        "key": "ind",
+        "value": "Indonesian"
+      },
+      {
+        "key": "ish",
+        "value": "Esan"
+      },
+      {
+        "key": "iso",
+        "value": "Isoko"
+      },
+      {
+        "key": "ita",
+        "value": "Italian"
+      },
+      {
+        "key": "jam",
+        "value": "Jamaican"
+      },
+      {
+        "key": "jav",
+        "value": "Javanese"
+      },
+      {
+        "key": "jpn",
+        "value": "Japanese"
+      },
+      {
+        "key": "kas",
+        "value": "Kashmiri"
+      },
+      {
+        "key": "kat",
+        "value": "Georgian"
+      },
+      {
+        "key": "kck",
+        "value": "Khalanga"
+      },
+      {
+        "key": "kfr",
+        "value": "Kutchi"
+      },
+      {
+        "key": "khm",
+        "value": "Khmer"
+      },
+      {
+        "key": "kik",
+        "value": "Kikuyu"
+      },
+      {
+        "key": "kin",
+        "value": "Kinyarwandan"
+      },
+      {
+        "key": "kir",
+        "value": "Kyrgyz"
+      },
+      {
+        "key": "knn",
+        "value": "Konkani"
+      },
+      {
+        "key": "kon",
+        "value": "Kikongo"
+      },
+      {
+        "key": "kor",
+        "value": "Korean"
+      },
+      {
+        "key": "kri",
+        "value": "Krio (Sierra Leone)"
+      },
+      {
+        "key": "krn",
+        "value": "Sarpo"
+      },
+      {
+        "key": "kru",
+        "value": "Kru"
+      },
+      {
+        "key": "krx",
+        "value": "Karon"
+      },
+      {
+        "key": "kur-fey",
+        "value": "Feyli"
+      },
+      {
+        "key": "kur-kbr",
+        "value": "Kurdish Bardini"
+      },
+      {
+        "key": "kur-kkr",
+        "value": "Kurdish kurmanji"
+      },
+      {
+        "key": "kur-ksr",
+        "value": "Kurdish Sorani"
+      },
+      {
+        "key": "laj",
+        "value": "Lango"
+      },
+      {
+        "key": "lav",
+        "value": "Latvian"
+      },
+      {
+        "key": "lin",
+        "value": "Lingala"
+      },
+      {
+        "key": "lit",
+        "value": "Lithuanian"
+      },
+      {
+        "key": "lub",
+        "value": "Luba (Tshiluba)"
+      },
+      {
+        "key": "lug",
+        "value": "Lugandan"
+      },
+      {
+        "key": "luo",
+        "value": "Luo"
+      },
+      {
+        "key": "luo-lah",
+        "value": "Luo Acholi"
+      },
+      {
+        "key": "luo-lky",
+        "value": "Luo Kenyan"
+      },
+      {
+        "key": "luo-llg",
+        "value": "Luo Lango"
+      },
+      {
+        "key": "mal",
+        "value": "Malayalam"
+      },
+      {
+        "key": "mar",
+        "value": "Marathi"
+      },
+      {
+        "key": "men",
+        "value": "Mende"
+      },
+      {
+        "key": "min",
+        "value": "Mina"
+      },
+      {
+        "key": "mkd",
+        "value": "Macedonian"
+      },
+      {
+        "key": "mku",
+        "value": "Malinke"
+      },
+      {
+        "key": "mkw",
+        "value": "Monokutuba"
+      },
+      {
+        "key": "mlt",
+        "value": "Maltese"
+      },
+      {
+        "key": "mnk",
+        "value": "Mandinka"
+      },
+      {
+        "key": "mon",
+        "value": "Mongolian"
+      },
+      {
+        "key": "msa",
+        "value": "Malay"
+      },
+      {
+        "key": "mya",
+        "value": "Burmese"
+      },
+      {
+        "key": "myx",
+        "value": "Masaaba"
+      },
+      {
+        "key": "nde",
+        "value": "Ndebele"
+      },
+      {
+        "key": "nep",
+        "value": "Nepali"
+      },
+      {
+        "key": "nld",
+        "value": "Dutch"
+      },
+      {
+        "key": "nld-nfl",
+        "value": "Flemish"
+      },
+      {
+        "key": "nld-nwf",
+        "value": "West Flemish"
+      },
+      {
+        "key": "nor",
+        "value": "Norwegian"
+      },
+      {
+        "key": "nya",
+        "value": "Chichewa"
+      },
+      {
+        "key": "nyn",
+        "value": "Nyankole"
+      },
+      {
+        "key": "nyo",
+        "value": "Runyoro"
+      },
+      {
+        "key": "nzi",
+        "value": "Nzima"
+      },
+      {
+        "key": "orm",
+        "value": "Oromo"
+      },
+      {
+        "key": "pag",
+        "value": "Pangasinan"
+      },
+      {
+        "key": "pam",
+        "value": "Pampangan"
+      },
+      {
+        "key": "pan",
+        "value": "Punjabi"
+      },
+      {
+        "key": "pan-pji",
+        "value": "Punjabi Indian"
+      },
+      {
+        "key": "pan-pjp",
+        "value": "Punjabi Pakistani"
+      },
+      {
+        "key": "pat",
+        "value": "Patois"
+      },
+      {
+        "key": "phr",
+        "value": "Pahari-Potwari"
+      },
+      {
+        "key": "pol",
+        "value": "Polish"
+      },
+      {
+        "key": "por",
+        "value": "Portuguese"
+      },
+      {
+        "key": "prs",
+        "value": "Dari"
+      },
+      {
+        "key": "pus",
+        "value": "Pushtu (Also Known As Pashto)"
+      },
+      {
+        "key": "rmm",
+        "value": "Roma"
+      },
+      {
+        "key": "rom",
+        "value": "Romany"
+      },
+      {
+        "key": "ron",
+        "value": "Romanian"
+      },
+      {
+        "key": "ron-fmo",
+        "value": "Moldovan"
+      },
+      {
+        "key": "run",
+        "value": "Kirundi"
+      },
+      {
+        "key": "rus",
+        "value": "Russian"
+      },
+      {
+        "key": "scl",
+        "value": "Shina"
+      },
+      {
+        "key": "sgw",
+        "value": "Gurage"
+      },
+      {
+        "key": "sin",
+        "value": "Sinhalese"
+      },
+      {
+        "key": "skr",
+        "value": "Saraiki (Seraiki)"
+      },
+      {
+        "key": "skt",
+        "value": "Sakata"
+      },
+      {
+        "key": "slk",
+        "value": "Slovak"
+      },
+      {
+        "key": "slv",
+        "value": "Slovenian"
+      },
+      {
+        "key": "sna",
+        "value": "Shona"
+      },
+      {
+        "key": "snd",
+        "value": "Sindhi"
+      },
+      {
+        "key": "snk",
+        "value": "Soninke"
+      },
+      {
+        "key": "som",
+        "value": "Somali"
+      },
+      {
+        "key": "spa",
+        "value": "Spanish"
+      },
+      {
+        "key": "spv",
+        "value": "Kosli, Sambalpuri"
+      },
+      {
+        "key": "sqi",
+        "value": "Albanian"
+      },
+      {
+        "key": "sus",
+        "value": "Susu"
+      },
+      {
+        "key": "swa",
+        "value": "Swahili"
+      },
+      {
+        "key": "swa-sbv",
+        "value": "Swahili Bravanese"
+      },
+      {
+        "key": "swa-skb",
+        "value": "Swahili Kibajuni"
+      },
+      {
+        "key": "swe",
+        "value": "Swedish"
+      },
+      {
+        "key": "swh",
+        "value": "Kiswahili"
+      },
+      {
+        "key": "syl",
+        "value": "Sylheti"
+      },
+      {
+        "key": "tai",
+        "value": "Taiwanese"
+      },
+      {
+        "key": "tam",
+        "value": "Tamil"
+      },
+      {
+        "key": "tel",
+        "value": "Telugu"
+      },
+      {
+        "key": "tem",
+        "value": "Temne"
+      },
+      {
+        "key": "teo",
+        "value": "Ateso"
+      },
+      {
+        "key": "tgl",
+        "value": "Tagalog"
+      },
+      {
+        "key": "tha",
+        "value": "Thai"
+      },
+      {
+        "key": "tig",
+        "value": "Tigre"
+      },
+      {
+        "key": "tir",
+        "value": "Tigrinya"
+      },
+      {
+        "key": "tsn",
+        "value": "Setswana"
+      },
+      {
+        "key": "ttj",
+        "value": "Rutoro"
+      },
+      {
+        "key": "tuk",
+        "value": "Turkmen"
+      },
+      {
+        "key": "tur",
+        "value": "Turkish"
+      },
+      {
+        "key": "twi",
+        "value": "Twi"
+      },
+      {
+        "key": "uig",
+        "value": "Uighur"
+      },
+      {
+        "key": "ukr",
+        "value": "Ukrainian"
+      },
+      {
+        "key": "urd",
+        "value": "Urdu"
+      },
+      {
+        "key": "urh",
+        "value": "Urohobo"
+      },
+      {
+        "key": "uzb",
+        "value": "Uzbek"
+      },
+      {
+        "key": "vie",
+        "value": "Vietnamese"
+      },
+      {
+        "key": "vsa",
+        "value": "Visayan"
+      },
+      {
+        "key": "wol",
+        "value": "Wolof"
+      },
+      {
+        "key": "xho",
+        "value": "Xhosa"
+      },
+      {
+        "key": "xog",
+        "value": "Lusoga"
+      },
+      {
+        "key": "yor",
+        "value": "Yoruba"
+      },
+      {
+        "key": "yue",
+        "value": "Cantonese"
+      },
+      {
+        "key": "zag",
+        "value": "Zaghawa"
+      },
+      {
+        "key": "zho-hok",
+        "value": "Hokkein"
+      },
+      {
+        "key": "zul",
+        "value": "Zulu"
+      },
+      {
+        "key": "zza",
+        "value": "Zaza"
+      }
+    ],
+    "_childIds": [],
+    "id": "PF0001-PF0015",
+    "value": {
+      "name": "Language Interpreter",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "PF0015",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_listOfValuesLength": 4,
+    "_listOfValues": [
+      {
+        "key": "abr",
+        "value": "Brong"
+      },
+      {
+        "key": "ach",
+        "value": "Acholi"
+      },
+      {
+        "key": "afr",
+        "value": "Afrikaans"
+      },
+      {
+        "key": "aii",
+        "value": "Assyrian"
+      }
+    ],
+    "_childIds": [],
+    "id": "PF0001-PF1115",
+    "value": {
+      "name": "Language Interpreter - radio",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "PF1115",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-OT0001",
+    "value": {
+      "name": "Other",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001"
+  }
+]

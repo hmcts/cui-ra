@@ -1,4 +1,5 @@
 import fs from 'fs';
+import path from 'path';
 
 import { Route } from './../constants';
 import { DataManagerDataObject, PayloadCollectionItem } from './../interfaces';
@@ -11,11 +12,11 @@ import { Request, Response } from 'express';
 @autobind
 export class DemoController {
   private new: DataManagerDataObject[] = JSON.parse(
-    fs.readFileSync(__dirname + '/../../test/unit/data/data-processor-results.json', 'utf-8')
+    fs.readFileSync(path.join(__dirname, '..', 'demo', 'data', 'data-processor-results.json'), 'utf-8')
   );
 
   private existing: PayloadCollectionItem[] = JSON.parse(
-    fs.readFileSync(__dirname + '/../demo/data/demo-payload.json', 'utf-8')
+    fs.readFileSync(path.join(__dirname, '..', 'demo', 'data', 'demo-payload.json'), 'utf-8')
   );
 
   public async get(req: Request, res: Response): Promise<void> {
@@ -25,8 +26,8 @@ export class DemoController {
     res.render('demo');
   }
 
-  public async post(req: Request, res: Response): Promise<void> {
-    const action = req.body.action;
+  public async startDemo(req: Request, res: Response): Promise<void> {
+    const action = req.query.action;
 
     if (action === 'new') {
       // Redirect user to category page with enough payload data to render category flags
@@ -40,9 +41,7 @@ export class DemoController {
       req.session.newmanager = NewFlag;
       req.session.existingmanager = new ExistingFlagsManager();
 
-      return res
-        .status(301)
-        .redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
+      return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
     } else if (action === 'existing') {
       // Redirect user to overview page with demo data
       const dataManagerExisting: ExistingFlagsManager = new ExistingFlagsManager();

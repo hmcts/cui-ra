@@ -14,4 +14,5 @@ export const Route = {
   SET_INACTIVE: '/review/set-inactive',
   SET_REQUESTED: '/review/set-requested',
   DEMO: '/demo',
+  START_DEMO: '/start-demo',
 } as const;
