@@ -29,12 +29,12 @@ export class SessionStorage {
           secure: !app.locals.developmentMode,
         },
         rolling: true, // Renew the cookie for another 20 minutes on each request
-        store: this.getStore(),
+        store: this.getStore(app),
       })
     );
   }
 
-  private getStore() {
+  private getStore(app: Application) {
     //const redisStore = RedisStore(session);
     const fileStore = FileStoreFactory(session);
 
@@ -43,13 +43,15 @@ export class SessionStorage {
     const key: string = config.get('session.redis.key');
 
     if (host && key) {
-      //host && host !== ''
       const client = new Redis({
         host,
         port: port ?? 6380,
         password: key,
-        //tls: false,
       });
+
+      if (!app.locals.developmentMode) {
+        client.tls = true;
+      }
 
       client.on('error', this.logger.error);
 
