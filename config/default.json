@@ -11,7 +11,8 @@
       "host": "",
       "port": "6380",
       "key": "password",
-      "urlStart": "rediss"
+      "urlStart": "rediss",
+      "tls": "true"
     }
   },
   "services": {
