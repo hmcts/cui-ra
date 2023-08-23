@@ -12,9 +12,8 @@ export class SessionStorage {
   constructor(private logger: Logger) {}
 
   public enableFor(app: Application): void {
-    if (!app.locals.developmentMode) {
-      app.set('trust proxy', 1);
-    }
+    // BJ - app.locals.developmentMode is undefined here - This is a problem
+    app.set('trust proxy', 1);
 
     app.use(
       session({
@@ -29,18 +28,19 @@ export class SessionStorage {
           secure: !app.locals.developmentMode,
         },
         rolling: true, // Renew the cookie for another 20 minutes on each request
-        store: this.getStore(app),
+        store: this.getStore(),
       })
     );
   }
 
-  private getStore(app: Application) {
+  private getStore() {
     //const redisStore = RedisStore(session);
     const fileStore = FileStoreFactory(session);
 
     const host: string = config.get('session.redis.host');
     const port: number = config.get('session.redis.port');
     const key: string = config.get('session.redis.key');
+    const tls: boolean = JSON.parse(config.get('session.redis.tls'));
 
     if (host && key) {
       const client = new Redis({
@@ -49,7 +49,7 @@ export class SessionStorage {
         password: key,
       });
 
-      if (!app.locals.developmentMode) {
+      if (tls === true) {
         client.tls = true;
       }
 
