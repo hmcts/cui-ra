@@ -13,7 +13,7 @@ export class SessionStorage {
 
   public enableFor(app: Application): void {
     // BJ - app.locals.developmentMode is undefined here - This is a problem
-    app.set('trust proxy', 1);
+    // app.set('trust proxy', 1);
 
     app.use(
       session({
@@ -51,6 +51,7 @@ export class SessionStorage {
 
       if (tls === true) {
         client.tls = true;
+        this.logger.info(`TLS Enabled on Redis Client`);
       }
 
       client.on('error', this.logger.error);
