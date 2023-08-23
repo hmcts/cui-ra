@@ -13,7 +13,9 @@ export class SessionStorage {
 
   public enableFor(app: Application): void {
     // BJ - app.locals.developmentMode is undefined here - This is a problem
-    // app.set('trust proxy', 1);
+    if (!app.locals.developmentMode) {
+      app.set('trust proxy', 1);
+    }
 
     app.use(
       session({
