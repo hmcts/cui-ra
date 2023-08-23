@@ -13,6 +13,10 @@ export class SessionStorage {
   constructor(/*private logger: Logger*/) {}
 
   public enableFor(app: Application): void {
+    if (!app.locals.developmentMode) {
+      app.set('trust proxy', 1);
+    }
+
     app.use(
       session({
         name: 'cui-session',
