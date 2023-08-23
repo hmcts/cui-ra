@@ -20,10 +20,11 @@ describe('RedisClient', () => {
   const host = 'localhost';
   const port = '6379';
   const key = 'redis-key';
+  const urlStart = 'redis';
 
   beforeEach(() => {
     //jest.clearAllMocks();
-    redisClient = new RedisClient(mockedLogger, host, port, key);
+    redisClient = new RedisClient(mockedLogger, host, port, key, urlStart);
     redisClient['client'] = mockedRedisNode;
   });
 
