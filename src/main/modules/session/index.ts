@@ -38,7 +38,7 @@ export class SessionStorage {
   private getStore() {
     //const redisStore = RedisStore(session);
     const fileStore = FileStoreFactory(session);
-    let client: any;
+
     const host: string = config.get('session.redis.host');
     const port: number = config.get('session.redis.port');
     const key: string = config.get('session.redis.key');
@@ -47,23 +47,25 @@ export class SessionStorage {
     if (host && key) {
       if (tlsOn === true) {
         this.logger.info('TLS Enabled on Redis Client');
-        client = new Redis({
+        const client = new Redis({
           host,
           port: port ?? 6380,
           password: key,
           tls: true,
         });
+
+        client.on('error', this.logger.error);
+        return new RedisStore({ client });
       } else {
-        client = new Redis({
+        const client = new Redis({
           host,
           port: port ?? 6380,
           password: key,
         });
+
+        client.on('error', this.logger.error);
+        return new RedisStore({ client });
       }
-
-      client.on('error', this.logger.error);
-
-      return new RedisStore({ client });
     }
 
     return new fileStore({ path: '/tmp' });
