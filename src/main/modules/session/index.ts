@@ -51,7 +51,7 @@ export class SessionStorage {
         password: key,
         //tls: true,
       });
-   
+
       if (tls === true) {
         client.tls = true;
         this.logger.info('TLS Enabled on Redis Client');
