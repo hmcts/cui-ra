@@ -39,28 +39,35 @@ export class FormController {
 
     const formModel = plainToClass(Form, req.body);
 
-    //process the form and produce the data used to validate and save
-    const formData: DataManagerDataObject[] = FormProcessor.process(
-      formModel,
-      flag,
-      req.session.newmanager?.getChildren(id)
-    );
+    //check if no support has been selected
+    if (!formModel.enabled.includes('none') && formModel.selected !== 'none') {
+      const formData: DataManagerDataObject[] = FormProcessor.process(
+        formModel,
+        flag,
+        req.session.newmanager?.getChildren(id)
+      );
 
-    const validationErrors: string[] = [];
+      const validationErrors: string[] = [];
 
-    //validate the new filtered data here
+      //validate the new filtered data here
 
-    //create a custom validor here
+      //create a custom validor here
 
-    //set errors if errors occure
+      //set errors if errors occure
 
-    //rerender the screen with errors
-    if (validationErrors.length > 0) {
-      return FormBuilder.build(res, flag, req.session.newmanager?.getChildren(id), validationErrors);
+      //rerender the screen with errors
+      if (validationErrors.length > 0) {
+        return FormBuilder.build(res, flag, req.session.newmanager?.getChildren(id), validationErrors);
+      }
+
+      //only save back once all validation has passed
+      req.session.newmanager?.save(formData);
+    } else {
+      //no support required disable flags
+      req.session.newmanager?.disable(id);
     }
 
-    //only save back once all validation has passed
-    req.session.newmanager?.save(formData);
+    //process the form and produce the data used to validate and save
 
     const next = req.session.newmanager?.getNext(id);
 
