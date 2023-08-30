@@ -6,9 +6,11 @@ const dataJson: DataManagerDataObject[] = JSON.parse(
   fs.readFileSync(__dirname + '/../../data/data-processor-results.json', 'utf-8')
 );
 const dataManager: NewFlagsManager = new NewFlagsManager();
+const RA_Parent = 'PF0001';
+const RA_Id = 'PF0001-RA0001';
 const itemId = 'PF0001-RA0001-RA0004';
 const nextId = 'PF0001-RA0001-RA0005';
-const previousId = 'PF0001-RA0001';
+const previousId = RA_Id;
 
 const testString = 'this is a test string';
 
@@ -78,5 +80,59 @@ describe('New Flags Manager', () => {
     const previous: DataManagerDataObject | null = dataManager.getPrevious(itemId);
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(previous?.id).toEqual(previousId);
+  });
+
+  test('Enable flag by ID', async () => {
+    //enable RAId flag. this should also enable its parent
+    dataManager.enable(itemId);
+
+    const item: DataManagerDataObject | null = dataManager.get(itemId);
+
+    const item_ra: DataManagerDataObject | null = dataManager.get(RA_Id);
+
+    const item_ra_parent: DataManagerDataObject | null = dataManager.get(RA_Parent);
+
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    expect(item?._enabled).toEqual(true);
+    expect(item_ra?._enabled).toEqual(true);
+    expect(item_ra_parent?._enabled).toEqual(true);
+  });
+
+  test('Disable flag by ID - should disable all children and parent', async () => {
+    //enable two children of RA
+    dataManager.enable(itemId);
+    dataManager.enable(nextId);
+
+    dataManager.disable(RA_Id);
+
+    const item_ra: DataManagerDataObject | null = dataManager.get(RA_Id);
+    const item_ra_parent: DataManagerDataObject | null = dataManager.get(RA_Parent);
+    const item: DataManagerDataObject | null = dataManager.get(itemId);
+    const item_next: DataManagerDataObject | null = dataManager.get(nextId);
+
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    expect(item_ra?._enabled).toEqual(false);
+    expect(item_ra_parent?._enabled).toEqual(false);
+    expect(item?._enabled).toEqual(false);
+    expect(item_next?._enabled).toEqual(false);
+  });
+
+  test('Disable flag by ID - should disable all children and should not disable parent', async () => {
+    //enable two children of RA
+    dataManager.enable(itemId);
+    dataManager.enable(nextId);
+
+    dataManager.disable(nextId);
+
+    const item_ra: DataManagerDataObject | null = dataManager.get(RA_Id);
+    const item_ra_parent: DataManagerDataObject | null = dataManager.get(RA_Parent);
+    const item: DataManagerDataObject | null = dataManager.get(itemId);
+    const item_next: DataManagerDataObject | null = dataManager.get(nextId);
+
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    expect(item_ra?._enabled).toEqual(true);
+    expect(item_ra_parent?._enabled).toEqual(true);
+    expect(item?._enabled).toEqual(true);
+    expect(item_next?._enabled).toEqual(false);
   });
 });

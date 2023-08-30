@@ -33,9 +33,16 @@ export class FormProcessor {
         item._errors = [];
         item._enabled = body.enabled.includes(item.id);
 
+        item.value.otherDescription = undefined;
+        item.value.otherDescription_cy = undefined;
+
         if (item._enabled && body.data && body.data[item.id]) {
           item.value.flagComment = body.data[item.id].flagComment;
           item.value.flagComment_cy = body.data[item.id].flagComment_cy;
+          if (item.value.flagCode === 'OT0001') {
+            item.value.otherDescription = parent.value.name;
+            item.value.otherDescription_cy = parent.value.name_cy;
+          }
         } else {
           Object.assign(item.value, {
             flagComment: '',
