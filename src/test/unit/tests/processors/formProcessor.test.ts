@@ -39,6 +39,36 @@ describe('FormProcessor', () => {
     }
   });
 
+  test('should process checkbox form data for other correctly', () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
+    )[0];
+    const children: DataManagerDataObject[] = dataProcessorResultJson.filter((item: DataManagerDataObject) =>
+      parent._childIds.includes(item.id)
+    );
+
+    const body = new Form();
+    const formdata = new FormData();
+    formdata.flagComment = comment;
+
+    body.enabled = ['PF0001-RA0001-OT0001'];
+    body.data = {
+      'PF0001-RA0001-OT0001': formdata,
+    };
+
+    const results: DataManagerDataObject[] = FormProcessor.process(body, parent, children);
+
+    const item: DataManagerDataObject | undefined = results.find(
+      (i: DataManagerDataObject) => i.id === 'PF0001-RA0001-OT0001'
+    );
+
+    if (item) {
+      expect(item._enabled).toBe(true);
+      expect(item.value.flagComment).toBe(comment);
+      expect(item.value.otherDescription).toBe(parent.value.name);
+    }
+  });
+
   test('should fail to process checkbox form data', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
       (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
