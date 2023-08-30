@@ -153,7 +153,7 @@ describe('FormController', () => {
 
     // Set up mock data and session
     const mockSession = {
-      newmanager: dataManager
+      newmanager: dataManager,
     };
 
     mockedRequest = mockRequest(null);
@@ -182,7 +182,7 @@ describe('FormController', () => {
 
     // Set up mock data and session
     const mockSession = {
-      newmanager: dataManager
+      newmanager: dataManager,
     };
 
     mockedRequest = mockRequest(null);
