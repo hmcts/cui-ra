@@ -53,6 +53,8 @@ export class FlagProcessor implements FlagProcessorInterface {
     if (flag.childFlags && flag.childFlags.length > 0) {
       dataItem._isCategoryPage = true;
       dataItem._isParent = true;
+      //we dont want flag comment on parents
+      dataItem._flagComment = false;
 
       //Populate child ids
       dataItem._childIds = flag.childFlags.map(child => {

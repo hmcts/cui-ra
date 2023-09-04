@@ -4032,6 +4032,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ajv-errors@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "ajv-errors@npm:3.0.0"
+  peerDependencies:
+    ajv: ^8.0.1
+  checksum: f3d1610a104fa776c2f90534acbe2113842a40d5ee446062da9e956ae6de6959afc997da1e3948c47316faa225255fc2d9d97aacd0803f47998fb38156d3d03c
+  languageName: node
+  linkType: hard
+
 "ajv-formats@npm:^2.1.1":
   version: 2.1.1
   resolution: "ajv-formats@npm:2.1.1"
@@ -5866,6 +5875,7 @@ __metadata:
     "@typescript-eslint/parser": ^6.0.0
     accessible-autocomplete: ^2.0.4
     ajv: ^8.12.0
+    ajv-errors: ^3.0.0
     ajv-formats: ^2.1.1
     applicationinsights: ^2.3.4
     autobind-decorator: ^2.4.0

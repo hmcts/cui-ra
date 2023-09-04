@@ -37,9 +37,9 @@
             </h2>
             <div class="govuk-error-summary__body">
               <ul class="govuk-list govuk-error-summary__list">
-                {% for error in validationErrors %}
+                {% for key, error in validationErrors %}
                 <li>
-                  <a href="#passport-issued-year">{{ error }}</a>
+                  <a href="#flagComment-{{key}}">{{ _t(error) }}</a>
                 </li>
                 {% endfor %}
               </ul>

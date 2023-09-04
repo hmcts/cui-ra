@@ -27,7 +27,7 @@
                 {% set count = '200' %}
                 {% set row = '5' %}
             {% else %}
-                {% set count = '80' %}
+                {% set count = '200' %}
                 {% set row = '1' %}
             {% endif %}
 
@@ -57,7 +57,7 @@
                             {% if item._errors|length %}
                                 <p id="more-detail-error" class="govuk-error-message">
                                     {% for error in item._errors %}
-                                        <span class="govuk-visually-hidden">Error:</span> {{error}}
+                                        <span class="govuk-visually-hidden">Error:</span> {{ _t(error) }}
                                     {% endfor %}
                                 </p>
                             {% endif %}
