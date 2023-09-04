@@ -5,6 +5,7 @@ import { ErrorMessages, Route } from './../constants';
 import { Form } from './../models';
 import { FormProcessor } from './../processors';
 import { UrlRoute } from './../utilities';
+import { FormValidator } from './../validators';
 
 import autobind from 'autobind-decorator';
 import { plainToClass } from 'class-transformer';
@@ -39,6 +40,12 @@ export class FormController {
 
     const formModel = plainToClass(Form, req.body);
 
+    //validate form body
+    const [bodyValid, bodyErrors] = await FormValidator.validateBody(flag, formModel);
+    if (!bodyValid) {
+      return FormBuilder.build(res, flag, req.session.newmanager?.getChildren(id), bodyErrors);
+    }
+
     //check if no support has been selected
     if (!formModel.enabled.includes('none') && formModel.selected !== 'none') {
       const formData: DataManagerDataObject[] = FormProcessor.process(
@@ -47,19 +54,14 @@ export class FormController {
         req.session.newmanager?.getChildren(id)
       );
 
-      const validationErrors: string[] = [];
-
       //validate the new filtered data here
-
-      //create a custom validor here
-
-      //set errors if errors occure
+      const [validationErrors, parent, children] = await FormValidator.validate(formData, flag);
 
       //rerender the screen with errors
-      if (validationErrors.length > 0) {
-        return FormBuilder.build(res, flag, req.session.newmanager?.getChildren(id), validationErrors);
+      const keys = Object.keys(validationErrors);
+      if (keys.length > 0) {
+        return FormBuilder.build(res, parent, children, validationErrors);
       }
-
       //only save back once all validation has passed
       req.session.newmanager?.save(formData);
     } else {
@@ -68,7 +70,6 @@ export class FormController {
     }
 
     //process the form and produce the data used to validate and save
-
     const next = req.session.newmanager?.getNext(id);
 
     if (!next) {

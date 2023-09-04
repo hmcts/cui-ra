@@ -47,7 +47,7 @@
       "characters_at_limit": "You have 0 characters remaining",
       "characters_over_limit": {
         "other": "You have %{count} characters too many",
-        "one": "You have %{count} character too many"
+        "one": "You have %{count} characters too many"
       }
     },
     "no_support": "I do not need any support at this time",

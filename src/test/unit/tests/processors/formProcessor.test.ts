@@ -2,7 +2,7 @@ import fs from 'fs';
 import { DataManagerDataObject } from './../../../../main/interfaces';
 import { FormProcessor } from './../../../../main/processors';
 import { Form, FormData } from './../../../../main/models';
-import { ErrorMessages } from './../../../../main/constants';
+import { ErrorMessages, Common } from './../../../../main/constants';
 
 const dataProcessorResultJson: DataManagerDataObject[] = JSON.parse(
   fs.readFileSync(__dirname + '/../../data/data-processor-results.json', 'utf-8')
@@ -120,7 +120,7 @@ describe('FormProcessor', () => {
 
     const body = new Form();
 
-    body.enabled = ['OT0001'];
+    body.enabled = [Common.OTHER_FLAG_CODE];
 
     const formdata = new FormData();
     formdata.subTypeValue = comment;
@@ -190,7 +190,7 @@ describe('FormProcessor', () => {
 
     const body = new Form();
 
-    body.selected = 'OT0001';
+    body.selected = Common.OTHER_FLAG_CODE;
 
     const formdata = new FormData();
     formdata.subTypeValue = comment;
