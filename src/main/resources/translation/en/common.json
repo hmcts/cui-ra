@@ -69,7 +69,7 @@
     "name_of_party": "Name of party",
     "support": {
       "previous": "Support you've already requested",
-      "new": "support you want to request",
+      "new": "Support you want to request",
       "not_needed": "Support you no longer need"
     },
     "actions": {
