@@ -1,4 +1,4 @@
-import { ErrorMessages } from './../constants';
+import { ErrorMessages, Common } from './../constants';
 import { DataManagerDataObject } from './../interfaces';
 import { Form } from './../models';
 //process the form data
@@ -39,7 +39,7 @@ export class FormProcessor {
         if (item._enabled && body.data && body.data[item.id]) {
           item.value.flagComment = body.data[item.id].flagComment;
           item.value.flagComment_cy = body.data[item.id].flagComment_cy;
-          if (item.value.flagCode === 'OT0001') {
+          if (item.value.flagCode === Common.OTHER_FLAG_CODE) {
             item.value.otherDescription = parent.value.name;
             item.value.otherDescription_cy = parent.value.name_cy;
           }
@@ -76,7 +76,7 @@ export class FormProcessor {
       throw new Error(ErrorMessages.UNEXPECTED_ERROR);
     }
 
-    if (body.selected === 'OT0001') {
+    if (body.selected === Common.OTHER_FLAG_CODE) {
       parent._other = true;
       if (body.data) {
         parent.value.subTypeValue = body.data[parent.id].subTypeValue;
@@ -98,7 +98,7 @@ export class FormProcessor {
 
   private static processTypeAheadType(body: Form, parent: DataManagerDataObject): DataManagerDataObject[] {
     //other selected
-    if (body.data && body.enabled.includes('OT0001')) {
+    if (body.data && body.enabled.includes(Common.OTHER_FLAG_CODE)) {
       parent.value.subTypeValue = body.data[parent.id].subTypeValue;
       parent.value.subTypeValue_cy = body.data[parent.id].subTypeValue;
       parent._other = true;

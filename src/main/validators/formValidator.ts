@@ -1,4 +1,4 @@
-import { ErrorMessages } from './../constants';
+import { ErrorMessages, Common } from './../constants';
 import { DataManagerDataObject } from './../interfaces';
 import { checkboxSchema, radioSchema, typeaheadSchema, formData } from './../schemas';
 
@@ -29,8 +29,8 @@ export class FormValidator {
     for (let i = 0; i < processedItems.length ; i++) {
         let item:DataManagerDataObject = processedItems[i];
         let key = `${item.value.flagCode}.error`;
-        if(item.value.flagCode === 'OT0001'){
-          key = `${parent.value.flagCode}.OT0001.error`;
+        if(item.value.flagCode === Common.OTHER_FLAG_CODE){
+          key = `${parent.value.flagCode}.${ Common.OTHER_FLAG_CODE }.error`;
         }
         const isValid = await validate(item);
         if(!isValid){
