@@ -41,8 +41,8 @@ export class FormController {
     const formModel = plainToClass(Form, req.body);
 
     //validate form body
-    const [bodyValid,bodyErrors] = await FormValidator.validateBody(flag,formModel);
-    if(!bodyValid){
+    const [bodyValid, bodyErrors] = await FormValidator.validateBody(flag, formModel);
+    if (!bodyValid) {
       return FormBuilder.build(res, flag, req.session.newmanager?.getChildren(id), bodyErrors);
     }
 

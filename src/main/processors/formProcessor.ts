@@ -1,4 +1,4 @@
-import { ErrorMessages, Common } from './../constants';
+import { Common, ErrorMessages } from './../constants';
 import { DataManagerDataObject } from './../interfaces';
 import { Form } from './../models';
 //process the form data

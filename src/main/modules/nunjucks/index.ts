@@ -1,6 +1,6 @@
 import * as path from 'path';
 
-import { Route, Common } from './../../constants';
+import { Common, Route } from './../../constants';
 import { UrlRoute } from './../../utilities';
 
 import * as express from 'express';

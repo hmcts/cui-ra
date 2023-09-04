@@ -9,7 +9,7 @@ export class FormBuilder {
     res: Response,
     parent: DataManagerDataObject,
     children: DataManagerDataObject[] | null = null,
-    validationErrors: {[key: string]: string} = {}
+    validationErrors: { [key: string]: string } = {}
   ): void | Response {
     let template = '';
     //check the types here
