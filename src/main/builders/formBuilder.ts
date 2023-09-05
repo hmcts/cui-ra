@@ -1,4 +1,4 @@
-import { ErrorMessages, Common } from './../constants';
+import { Common, ErrorMessages } from './../constants';
 import { DataManagerDataObject } from './../interfaces';
 
 import { Response } from 'express';
@@ -22,7 +22,7 @@ export class FormBuilder {
     } else {
       throw new Error(ErrorMessages.UNEXPECTED_ERROR);
     }
-    if(children){
+    if (children) {
       //sort
       children.sort((a, b) => {
         const nameA = a.value.name.toUpperCase(); // Convert to uppercase for case-insensitive sorting
@@ -35,14 +35,14 @@ export class FormBuilder {
           return 1;
         }
         if (flagCodeA !== Common.OTHER_FLAG_CODE && flagCodeB === Common.OTHER_FLAG_CODE) {
-            return -1;
+          return -1;
         }
-    
+
         if (nameA < nameB) {
-            return -1;
+          return -1;
         }
         if (nameA > nameB) {
-            return 1;
+          return 1;
         }
         return 0;
       });
