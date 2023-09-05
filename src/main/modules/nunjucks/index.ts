@@ -1,6 +1,6 @@
 import * as path from 'path';
 
-import { Route } from './../../constants';
+import { Common, Route } from './../../constants';
 import { UrlRoute } from './../../utilities';
 
 import * as express from 'express';
@@ -21,6 +21,7 @@ export class Nunjucks {
 
     app.use((req, res, next) => {
       res.locals.route = Route;
+      res.locals.common = Common;
       res.locals.pagePath = req.path;
       res.locals.fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
       res.locals._t = (key: string) => {

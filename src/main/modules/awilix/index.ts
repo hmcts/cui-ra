@@ -49,6 +49,7 @@ export class Container {
                 host: config.get('session.redis.host'),
                 port: config.get('session.redis.port'),
                 key: config.get('session.redis.key'),
+                urlStart: config.get('session.redis.urlStart'),
               })),
       flagProcessor: asClass(FlagProcessor),
       homeController: asClass(HomeController),

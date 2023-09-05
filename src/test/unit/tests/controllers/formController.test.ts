@@ -2,6 +2,7 @@ import fs from 'fs';
 import { FormController } from '../../../../main/controllers';
 import { mockRequest, mockResponse } from '../../mocks';
 import { DataManagerDataObject } from './../../../../main/interfaces';
+import { NewFlagsManager } from '../../../../main/managers';
 import { UrlRoute } from '../../../../main/utilities';
 import { Route } from '../../../../main/constants';
 
@@ -144,5 +145,90 @@ describe('FormController', () => {
     expect(mockedResponse.redirect).toHaveBeenCalledWith(
       UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: next.id }, UrlRoute.url(mockedRequest))
     );
+  });
+
+  test('should handle post request with checkbox no support selected', async () => {
+    const dataManager = new NewFlagsManager();
+    dataManager.set(dataProcessorResultJson);
+
+    // Set up mock data and session
+    const mockSession = {
+      newmanager: dataManager,
+    };
+
+    mockedRequest = mockRequest(null);
+    mockedResponse = mockResponse();
+
+    mockedRequest.params = { id: 'PF0001-RA0001' };
+    mockedRequest.session = mockSession;
+    mockedRequest.protocol = protocol;
+    mockedRequest.headers = {
+      host: host,
+    };
+
+    mockedRequest.body = {
+      enabled: ['none'],
+    }; // Mock request body
+
+    await formController.post(mockedRequest, mockedResponse);
+
+    // Assert expected behavior here
+    expect(mockedResponse.redirect).toHaveBeenCalledWith(Route.REVIEW);
+  });
+
+  test('should handle post request with radio no support selected', async () => {
+    const dataManager = new NewFlagsManager();
+    dataManager.set(dataProcessorResultJson);
+
+    // Set up mock data and session
+    const mockSession = {
+      newmanager: dataManager,
+    };
+
+    mockedRequest = mockRequest(null);
+    mockedResponse = mockResponse();
+
+    mockedRequest.params = { id: 'PF0001-RA0001' };
+    mockedRequest.session = mockSession;
+    mockedRequest.protocol = protocol;
+    mockedRequest.headers = {
+      host: host,
+    };
+
+    mockedRequest.body = {
+      selected: 'none',
+    }; // Mock request body
+
+    await formController.post(mockedRequest, mockedResponse);
+
+    // Assert expected behavior here
+    expect(mockedResponse.redirect).toHaveBeenCalledWith(Route.REVIEW);
+  });
+
+  test('Post with empty data should return the same form with errors', async () => {
+    const dataManager = new NewFlagsManager();
+    dataManager.set(dataProcessorResultJson);
+
+    // Set up mock data and session
+    const mockSession = {
+      newmanager: dataManager,
+    };
+
+    mockedRequest = mockRequest(null);
+    mockedResponse = mockResponse();
+
+    mockedRequest.params = { id: 'PF0001-RA0001' };
+    mockedRequest.session = mockSession;
+    mockedRequest.protocol = protocol;
+    mockedRequest.headers = {
+      host: host,
+    };
+
+    mockedRequest.body = {}; // Mock request body
+
+    await formController.post(mockedRequest, mockedResponse);
+
+    // Assert expected behavior here
+    expect(mockedResponse.render).toHaveBeenCalledWith('forms/checkbox-group', expect.any(Object));
   });
 });

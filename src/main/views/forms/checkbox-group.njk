@@ -27,7 +27,7 @@
                 {% set count = '200' %}
                 {% set row = '5' %}
             {% else %}
-                {% set count = '80' %}
+                {% set count = '200' %}
                 {% set row = '1' %}
             {% endif %}
 
@@ -57,7 +57,7 @@
                             {% if item._errors|length %}
                                 <p id="more-detail-error" class="govuk-error-message">
                                     {% for error in item._errors %}
-                                        <span class="govuk-visually-hidden">Error:</span> {{error}}
+                                        <span class="govuk-visually-hidden">Error:</span> {{ _t(error) }}
                                     {% endfor %}
                                 </p>
                             {% endif %}
@@ -74,7 +74,7 @@
       <div class="govuk-checkboxes__divider">{{ _t('or_divider') }}</div>
 
         <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="_enabled-0" name="enabled" type="checkbox" value="0"  {% if item._enabled %}checked{% endif %} data-behaviour="exclusive">
+            <input class="govuk-checkboxes__input" id="_enabled-0" name="enabled" type="checkbox" value="none"  {% if item._enabled %}checked{% endif %} data-behaviour="exclusive">
             <label class="govuk-label govuk-checkboxes__label">
                 {{ _t('form.no_support') }}
             </label>

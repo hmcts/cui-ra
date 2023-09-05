@@ -12,6 +12,7 @@ export class SessionStorage {
   constructor(private logger: Logger) {}
 
   public enableFor(app: Application): void {
+    // BJ - app.locals.developmentMode is undefined here - This is a problem
     if (!app.locals.developmentMode) {
       app.set('trust proxy', 1);
     }
@@ -41,19 +42,30 @@ export class SessionStorage {
     const host: string = config.get('session.redis.host');
     const port: number = config.get('session.redis.port');
     const key: string = config.get('session.redis.key');
+    const tlsOn: boolean = JSON.parse(config.get('session.redis.tls'));
 
     if (host && key) {
-      //host && host !== ''
-      const client = new Redis({
-        host,
-        port: port ?? 6380,
-        password: key,
-        tls: true,
-      });
+      if (tlsOn === true) {
+        this.logger.info('TLS Enabled on Redis Client');
+        const client = new Redis({
+          host,
+          port: port ?? 6380,
+          password: key,
+          tls: true,
+        });
 
-      client.on('error', this.logger.error);
+        client.on('error', this.logger.error);
+        return new RedisStore({ client });
+      } else {
+        const client = new Redis({
+          host,
+          port: port ?? 6380,
+          password: key,
+        });
 
-      return new RedisStore({ client });
+        client.on('error', this.logger.error);
+        return new RedisStore({ client });
+      }
     }
 
     return new fileStore({ path: '/tmp' });

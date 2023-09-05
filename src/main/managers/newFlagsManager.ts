@@ -35,4 +35,49 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
     }
     return null; // No matching item found
   }
+
+  public enable(id: string): void {
+    const item: DataManagerDataObject | null = this.get(id);
+    if (!item) {
+      return;
+    }
+    item._enabled = true;
+    if (item._parentId) {
+      this.enable(item._parentId);
+    }
+  }
+
+  //Disable a flag and its route, but aslong as the route does not have other
+  //enabled children flags
+  public disable(id: string, disableDependants = true): void {
+    const item: DataManagerDataObject | null = this.get(id);
+    if (!item) {
+      return;
+    }
+
+    //disable flag
+    item._enabled = false;
+
+    if (disableDependants) {
+      //Get children and disable them
+      const Children: DataManagerDataObject[] | null = this.getChildren(item.id);
+      if (Children) {
+        Children.forEach(node => {
+          this.disable(node.id);
+        });
+      }
+    }
+
+    if (!item._parentId) {
+      return;
+    }
+
+    //only disable a parent if this flag is its only Enabled Child
+    const ParentChildCount: number = this.getChildren(item._parentId).filter(
+      (node: DataManagerDataObject) => node._enabled === true
+    ).length;
+    if (ParentChildCount === 0) {
+      this.disable(item._parentId, false);
+    }
+  }
 }

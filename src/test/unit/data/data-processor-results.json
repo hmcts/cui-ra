@@ -1,6 +1,6 @@
 [
   {
-    "_flagComment": true,
+    "_flagComment": false,
     "_isCategoryPage": true,
     "_enabled": false,
     "_other": false,
@@ -25,7 +25,7 @@
     "_parentId": null
   },
   {
-    "_flagComment": true,
+    "_flagComment": false,
     "_isCategoryPage": true,
     "_enabled": false,
     "_other": false,
@@ -59,7 +59,7 @@
     "_parentId": "PF0001"
   },
   {
-    "_flagComment": true,
+    "_flagComment": false,
     "_isCategoryPage": true,
     "_enabled": false,
     "_other": false,
@@ -344,7 +344,7 @@
     "_parentId": "PF0001-RA0001-RA0002"
   },
   {
-    "_flagComment": true,
+    "_flagComment": false,
     "_isCategoryPage": true,
     "_enabled": false,
     "_other": false,
@@ -465,7 +465,7 @@
     "_parentId": "PF0001-RA0001-RA0003"
   },
   {
-    "_flagComment": true,
+    "_flagComment": false,
     "_isCategoryPage": true,
     "_enabled": false,
     "_other": false,
@@ -750,7 +750,7 @@
     "_parentId": "PF0001-RA0001-RA0004"
   },
   {
-    "_flagComment": true,
+    "_flagComment": false,
     "_isCategoryPage": true,
     "_enabled": false,
     "_other": false,
@@ -939,7 +939,7 @@
     "_parentId": "PF0001-RA0001-RA0005"
   },
   {
-    "_flagComment": true,
+    "_flagComment": false,
     "_isCategoryPage": true,
     "_enabled": false,
     "_other": false,
@@ -1128,7 +1128,7 @@
     "_parentId": "PF0001-RA0001-RA0006"
   },
   {
-    "_flagComment": true,
+    "_flagComment": false,
     "_isCategoryPage": true,
     "_enabled": false,
     "_other": false,
@@ -1285,7 +1285,7 @@
     "_parentId": "PF0001-RA0001-RA0007"
   },
   {
-    "_flagComment": true,
+    "_flagComment": false,
     "_isCategoryPage": true,
     "_enabled": false,
     "_other": false,
@@ -1324,7 +1324,7 @@
     "_parentId": "PF0001-RA0001"
   },
   {
-    "_flagComment": true,
+    "_flagComment": false,
     "_isCategoryPage": true,
     "_enabled": false,
     "_other": false,

@@ -47,7 +47,7 @@
       "characters_at_limit": "You have 0 characters remaining",
       "characters_over_limit": {
         "other": "You have %{count} characters too many",
-        "one": "You have %{count} character too many"
+        "one": "You have %{count} characters too many"
       }
     },
     "no_support": "I do not need any support at this time",
@@ -69,7 +69,7 @@
     "name_of_party": "Name of party",
     "support": {
       "previous": "Support you've already requested",
-      "new": "New support you want to request now",
+      "new": "Support you want to request",
       "not_needed": "Support you no longer need"
     },
     "actions": {

@@ -10,7 +10,9 @@
     "redis": {
       "host": "",
       "port": "6380",
-      "key": "password"
+      "key": "password",
+      "urlStart": "rediss",
+      "tls": "true"
     }
   },
   "services": {
