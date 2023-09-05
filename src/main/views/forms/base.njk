@@ -39,7 +39,7 @@
               <ul class="govuk-list govuk-error-summary__list">
                 {% for key, error in validationErrors %}
                 <li>
-                  <a href="#flagComment-{{key}}">{{ _t(error) }}</a>
+                  <a href="#flagComment-{{key}}">{% if _t(error) %}{{ _t(error) }}{% else %}error{% endif %}</a>
                 </li>
                 {% endfor %}
               </ul>

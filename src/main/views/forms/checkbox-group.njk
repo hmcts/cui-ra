@@ -57,7 +57,7 @@
                             {% if item._errors|length %}
                                 <p id="more-detail-error" class="govuk-error-message">
                                     {% for error in item._errors %}
-                                        <span class="govuk-visually-hidden">Error:</span> {{ _t(error) }}
+                                        <span class="govuk-visually-hidden">Error:</span> {% if _t(error) %}{{ _t(error) }}{% else %}error{% endif %}
                                     {% endfor %}
                                 </p>
                             {% endif %}
