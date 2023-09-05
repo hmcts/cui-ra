@@ -25,6 +25,7 @@ export class FormBuilder {
     if (children) {
       //sort
       children.sort((a, b) => {
+        //Add short if to check if welsh and use name_cy
         const nameA = a.value.name.toUpperCase(); // Convert to uppercase for case-insensitive sorting
         const flagCodeA = a.value.flagCode;
         const nameB = b.value.name.toUpperCase();
