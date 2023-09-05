@@ -1,6 +1,196 @@
 {
-  "flag_0001": "flag 0001 text from en flags.json v3 - WELSH",
-  "deeper": {
-    "flag_0002": "flag 0002 text from en flags.json v3 - WELSH"
-  }
+  "RA0001": {
+    "full_question": "A oes gennych chi anabledd corfforol, meddyliol neu addysgol neu gyflwr iechyd sy’n golygu bod angen cymorth arnoch yn ystod eich achos?",
+    "description": "Rydym yn gwybod bod angen cymorth ar rai pobl i gael mynediad at wybodaeth a defnyddio ein gwasanaethau. Rydym yn aml yn galw hyn yn addasiad rhesymol. Mae angen i'r barnwr neu GLlTEF gytuno ar rai addasiadau rhesymol. Gallwch drafod gyda'r llys os bydd eich anghenion yn newid.",
+    "hint": "Dewiswch bob un sy'n berthnasol i chi - gellir rhoi gofynion penodol nesaf",
+    "error": {
+      "empty": "Dewiswch a oes angen cefnogaeth arnoch"
+    }
+  },
+  "RA0002": {
+    "description": "Meddyliwch am bob cyfathrebiad â'r llys, yn ogystal â'r hyn y gallai fod ei angen arnoch mewn gwrandawiad. Ystyriwch wrandawiadau o bell ac wyneb yn wyneb mewn adeilad, rhag ofn nad yw'r math o wrandawiad sydd orau gennych yn bosibl.",
+    "hint": "Er enghraifft, braille neu wahanol liwiau a meintiau testun",
+    "error": {
+      "empty": "Dewiswch a oes angen dogfennau arnoch mewn fformat arall"
+    },
+    "OT0001": {
+      "control": "Disgrifiwch pa fformat neu fformatau sydd eu hangen arnoch",
+      "error": {
+        "empty": "Disgrifiwch pa fformat neu fformatau sydd eu hangen arnoch"
+      }
+    }
+  },
+  "RA0003": {
+    "error": {
+      "empty": "Dewiswch a oes angen cefnogaeth arnoch"
+    },
+    "OT0001": {
+      "control": "***  ***",
+      "error": {
+        "empty": "***  ***"
+      }
+    }
+  },
+  "RA0004": {
+    "hint": "Er enghraifft, cymorth gyda mynediad a symudedd os bydd gwrandawiad yn digwydd wyneb yn wyneb mewn adeilad",
+    "error": {
+      "empty": "Dewiswch a oes angen cymorth symudedd arnoch"
+    },
+    "OT0001": {
+      "control": "Disgrifiwch pa gefnogaeth sydd ei hangen arnoch i deithio i, neu i symud o amgylch adeiladau",
+      "error": {
+        "empty": "Disgrifiwch pa gefnogaeth sydd ei hangen arnoch i deithio i, neu i symud o amgylch adeiladau"
+      }
+    }
+  },
+  "RA0005": {
+    "description": "",
+    "hint": "Er enghraifft, rhywun rydych chi'n ei adnabod neu gi cymorth",
+    "error": {
+      "empty": "Dewiswch p'un a ydych angen dod â rhywbeth efo chi i wrandawiad llys"
+    },
+    "OT0001": {
+      "control": "Disgrifiwch pa gymorth sydd ei angen arnoch ar gyfer gwrandawiad",
+      "error": {
+        "empty": "Disgrifiwch pa gymorth sydd ei angen arnoch ar gyfer gwrandawiad"
+      }
+    }
+  },
+  "RA0006": {
+    "description": "Meddyliwch beth fyddai ei angen arnoch pe bai'r gwrandawiad yn cael ei gynnal mewn adeilad, dros y ffôn neu drwy fideo.",
+    "hint": "Er enghraifft, seibiannau neu le ychwanegol",
+    "error": {
+      "empty": "Dewiswch a oes arnoch angen  rhywbeth i deimlo’n gyfforddus yn ystod gwrandawiad llys"
+    },
+    "OT0001": {
+      "control": "Disgrifiwch pa gymorth sydd ei angen arnoch ar gyfer gwrandawiad",
+      "error": {
+        "empty": "Disgrifiwch pa gymorth sydd ei angen arnoch ar gyfer gwrandawiad"
+      }
+    }
+  },
+  "RA0007": {
+    "error": {
+      "empty": "Dewiswch a oes angen cefnogaeth arnoch"
+    },
+    "OT0001": {
+      "control": "***  ***",
+      "error": {
+        "empty": "***  ***"
+      }
+    }
+  },
+  "RA0008": {
+    "description": "Meddyliwch am bob cyfathrebiad â'r llys, yn ogystal â'r hyn y gallai fod ei angen arnoch mewn gwrandawiad. Ystyriwch wrandawiadau o bell ac wyneb yn wyneb mewn adeilad, rhag ofn nad yw'r math o wrandawiad sydd orau gennych yn bosibl.",
+    "hint": "Er enghraifft, clywed, siarad neu ddehongli",
+    "error": {
+      "empty": "Dewiswch a oes angen help arnoch i gyfathrebu a deall"
+    },
+    "OT0001": {
+      "control": "Disgrifiwch pa gymorth sydd ei angen arnoch wrth gyfathrebu a deall",
+      "error": {
+        "empty": "Disgrifiwch pa gymorth sydd ei angen arnoch wrth gyfathrebu a deall"
+      }
+    }
+  },
+  "RA0009": {
+    "description": "Meddyliwch am bob cyfathrebiad â'r llys, yn ogystal â'r hyn y gallai fod ei angen arnoch mewn gwrandawiad. Ystyriwch wrandawiadau o bell ac wyneb yn wyneb mewn adeilad, rhag ofn nad yw'r math o wrandawiad sydd orau gennych yn bosibl.",
+    "hint": "gallwch ddweud wrthym pa fath o gymorth clyw yn y cam nesaf",
+    "control": "Math o system gwella clyw",
+    "error": {
+      "empty": "Dewiswch pa fath o system gwella clyw sydd ei hangen arnoch"
+    },
+    "OT0001": {
+      "control": "Disgrifiwch pa fath o system gwella clyw sydd ei angen arnoch",
+      "error": {
+        "empty": "Disgrifiwch pa fath o system gwella clyw sydd ei angen arnoch"
+      }
+    }
+  },
+  "RA0010": {
+    "control": "Disgrifiwch pa liw neu liwiau sydd ei angen arnoch",
+    "error": {
+      "empty": "Disgrifiwch pa liw neu liwiau sydd ei angen arnoch"
+    }
+  },
+  "RA0011": {
+    "hint": "gwybodaeth wedi'i hysgrifennu mewn iaith syml gyda lluniau"
+  },
+  "RA0012": {},
+  "RA0013": {
+    "control": "Disgrifiwch maint y testun sydd ei angen arnoch",
+    "error": {
+      "empty": "Disgrifiwch pa fath o brint neu ffont sydd ei angen arnoch"
+    }
+  },
+  "RA0014": {},
+  "RA0015": {},
+  "RA0016": {},
+  "RA0017": {},
+  "RA0018": {},
+  "RA0019": {},
+  "RA0020": {},
+  "RA0021": {
+    "control": "Dywedwch wrthym pam fod arnoch angen lle parcio gerllaw",
+    "error": {
+      "empty": "Dywedwch wrthym pam fod arnoch angen lle parcio gerllaw"
+    }
+  },
+  "RA0022": {},
+  "RA0023": {},
+  "RA0024": {
+    "hint": "Er enghraifft, cadair â chymorth cefn",
+    "control": "Disgrifiwch pa fath o gadair sydd ei hangen arnoch",
+    "error": {
+      "empty": "Disgrifiwch pa fath o gadair sydd ei hangen arnoch"
+    }
+  },
+  "RA0025": {},
+  "RA0026": {
+    "control": "Dywedwch wrthym pwy fyddwch yn dod efo chi",
+    "error": {
+      "empty": "Dywedwch wrthym pwy fyddwch yn dod efo chi"
+    }
+  },
+  "RA0027": {
+    "control": "Dywedwch wrthym pwy fyddwch yn dod efo chi",
+    "error": {
+      "empty": "Dywedwch wrthym pwy fyddwch yn dod efo chi"
+    }
+  },
+  "RA0028": {},
+  "RA0029": {
+    "control": "Dywedwch wrthym pa fath o anifail therapi sydd ei angen arnoch",
+    "error": {
+      "empty": "Dywedwch wrthym pa fath o anifail therapi sydd ei angen arnoch"
+    }
+  },
+  "RA0030": {
+    "control": "Disgrifiwch pa fath o oleuadau sydd eu hangen arnoch",
+    "error": {
+      "empty": "Disgrifiwch pa fath o oleuadau sydd eu hangen arnoch"
+    }
+  },
+  "RA0031": {},
+  "RA0032": {},
+  "RA0033": {},
+  "RA0034": {},
+  "RA0035": {},
+  "RA0036": {},
+  "RA0037": {},
+  "RA0038": {
+    "hint": "rhywun i’ch helpu os oes gennych anghenion cyfathrebu drwy ddarparu cymorth proffesiynol i gymryd rhan mewn gwrandawiad"
+  },
+  "RA0039": {},
+  "RA0040": {},
+  "RA0041": {},
+  "RA0042": {
+    "hint": "gallwch ddweud wrthym pa fath o ddehonglydd yn y cam nesaf",
+    "control": "Pa gefnogaeth [dehonglydd iaith arwyddion] sydd ei angen arnoch?",
+    "error": {
+      "empty": "Dewiswch iaith neu nodwch yr iaith â llaw"
+    }
+  },
+  "RA0046": {},
+  "RA0047": {}
 }
