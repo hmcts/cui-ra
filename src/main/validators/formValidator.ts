@@ -28,6 +28,8 @@ export class FormValidator {
 
     for (let i = 0; i < processedItems.length; i++) {
       const item: DataManagerDataObject = processedItems[i];
+      //clear errors
+      item._errors = [];
       let key = `${item.value.flagCode}.error`;
       if (item.value.flagCode === Common.OTHER_FLAG_CODE) {
         key = `${parent.value.flagCode}.${Common.OTHER_FLAG_CODE}.error`;
