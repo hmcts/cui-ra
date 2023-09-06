@@ -23,7 +23,7 @@ describe('refdata service class', () => {
     (axios.get as jest.Mock).mockImplementation(() => Promise.resolve(response));
 
     expect(await service.getFlags(secret, accessToken, serviceId, flagResourceType.PARTY)).toEqual(
-      flagJson.flags[0].FlagDetails
+      flagJson
     );
   });
 

@@ -10,9 +10,9 @@ import { JSONSchema4, JSONSchema6, JSONSchema7 } from 'json-schema';
 
 export type SchemaType = JSONSchema4 | JSONSchema6 | JSONSchema7;
 
-export enum parentType{
+export enum parentType {
   parent = 'parent',
-  child = 'child'
+  child = 'child',
 }
 
 //validate form data

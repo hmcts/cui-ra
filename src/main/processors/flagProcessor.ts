@@ -1,7 +1,28 @@
 import { DataManagerDataObject, FlagProcessorInterface, PayloadFlagData, ReferenceDataFlagType } from '../interfaces';
 import { DataManagerDataType, DataManagerYesNo } from '../managers';
 
+import { RefDataResponse } from './../services';
+
 export class FlagProcessor implements FlagProcessorInterface {
+  public processAll(dateTime: string, response: RefDataResponse): DataManagerDataObject[] {
+    let flagsData: DataManagerDataObject[] = [];
+    //for each flag
+    for (let i = 0; i < response.flags.length; i++) {
+      const flagDetail = response.flags[i];
+      if (!flagDetail.FlagDetails) {
+        continue;
+      }
+      //for each flag detials
+      for (let ii = 0; ii < flagDetail.FlagDetails?.length; ii++) {
+        const flag = flagDetail.FlagDetails[ii];
+        //process
+        const processed: DataManagerDataObject[] = this.process(dateTime, flag);
+        flagsData = [...flagsData, ...processed];
+      }
+    }
+    return flagsData;
+  }
+
   public process(
     dateTime: string,
     flag: ReferenceDataFlagType,
@@ -10,7 +31,7 @@ export class FlagProcessor implements FlagProcessorInterface {
     const data: DataManagerDataObject[] = [];
 
     //Concatinate the id (flagcode) with the parent id to create unique ids
-    let id: string = flag.flagCode;
+    let id: string = flag.nativeFlagCode;
     if (parentId) {
       id = `${parentId}-${id}`;
     }
@@ -39,7 +60,7 @@ export class FlagProcessor implements FlagProcessorInterface {
             })
           : [],
       hearingRelevant: flag.hearingRelevant ? DataManagerYesNo.Yes : DataManagerYesNo.No,
-      flagCode: flag.flagCode,
+      flagCode: flag.nativeFlagCode,
       status: flag.defaultStatus,
       availableExternally: flag.externallyAvailable ? DataManagerYesNo.Yes : DataManagerYesNo.No,
     };
@@ -49,6 +70,7 @@ export class FlagProcessor implements FlagProcessorInterface {
     dataItem._listOfValues = flag.listOfValues;
     dataItem._listOfValuesLength = flag.listOfValuesLength;
     dataItem._parentId = parentId;
+    dataItem._flagComment = flag.flagComment;
 
     if (flag.childFlags && flag.childFlags.length > 0) {
       dataItem._isCategoryPage = true;
@@ -58,7 +80,7 @@ export class FlagProcessor implements FlagProcessorInterface {
 
       //Populate child ids
       dataItem._childIds = flag.childFlags.map(child => {
-        return `${id}-${child.flagCode}`;
+        return `${id}-${child.nativeFlagCode}`;
       });
     }
 

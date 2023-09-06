@@ -69,7 +69,7 @@ export class DataController {
       );
 
       //Process the refdata
-      const processedData: DataManagerDataObject[] = this.flagProcessor.process(
+      const processedData: DataManagerDataObject[] = this.flagProcessor.processAll(
         DataTimeUtilities.getDateTime(),
         refdata
       );

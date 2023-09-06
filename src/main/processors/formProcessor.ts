@@ -8,7 +8,7 @@ export class FormProcessor {
     parent: DataManagerDataObject,
     children: DataManagerDataObject[] | null = null
   ): DataManagerDataObject[] {
-    if (parent._listOfValuesLength) {
+    if (parent._listOfValuesLength > 0) {
       return this.processListValues(body, parent);
     }
 

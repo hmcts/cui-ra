@@ -32,7 +32,7 @@
             {% endif %}
 
             <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="_enabled-{{ item.id }}" name="enabled" type="checkbox" value="{{ item.id }}"  {% if item._isCategoryPage === false and item._flagComment %}data-aria-controls="conditional-{{ item.id }}"{% endif %} {% if item._enabled %}checked{% endif %}>
+                <input class="govuk-checkboxes__input" id="_enabled-{{ item.id }}" name="enabled" type="checkbox" value="{{ item.id }}"  {% if item._flagComment %}data-aria-controls="conditional-{{ item.id }}"{% endif %} {% if item._enabled %}checked{% endif %}>
                 <label class="govuk-label govuk-checkboxes__label" for="waste">
                     {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
                 </label>
@@ -41,7 +41,7 @@
                 </div>
             </div>
 
-            {% if item._isCategoryPage === false and item._flagComment %} 
+            {% if item._flagComment %}
                 <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-{{ item.id }}">
                     <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="{{count}}" 
                         data-i18n.characters-under-limit.other="{{ _t('form.char_count.characters_under_limit.other') }}"
