@@ -67,4 +67,28 @@ describe('Home Controller', () => {
     homeController.intro(mockRequest as Request, mockResponse as Response);
     expect(mockResponse.render).toBeCalledWith('intro');
   });
+
+  test('Should render cookies page', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    homeController.cookies(mockRequest as Request, mockResponse as Response);
+    expect(mockResponse.render).toBeCalledWith('cookies');
+  });
+
+  test('Should render privacy policy page', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    homeController.privacyPolicy(mockRequest as Request, mockResponse as Response);
+    expect(mockResponse.render).toBeCalledWith('privacy-policy');
+  });
+
+  test('Should render terms and conditions page', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    homeController.termsAndConditions(mockRequest as Request, mockResponse as Response);
+    expect(mockResponse.render).toBeCalledWith('terms-and-conditions');
+  });
+
+  test('Should render accessibility statement page', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    homeController.accessibilityStatement(mockRequest as Request, mockResponse as Response);
+    expect(mockResponse.render).toBeCalledWith('accessibility-statement');
+  });
 });
