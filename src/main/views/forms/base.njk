@@ -50,16 +50,16 @@
 
       <h1 class="govuk-heading-l">
           <span class="govuk-caption-l">{{ master_name }} {% if partyname %}{{ _r(_t('for_name'), { name:partyname }) }}{% endif %}</span>
-          {% if _t(parent.value.flagCode + ".full_question") %}
-            {{ _t(parent.value.flagCode  + ".full_question") }}
+          {% if _t(parent.value.flagCode + ".fullQuestion") %}
+            {{ _t(parent.value.flagCode  + ".fullQuestion") }}
           {% else %}
             {{ parent.value[nameValue] }}
           {% endif %}
       </h1>
 
-      {% if _t(parent.value.flagCode+ ".description") %}
+      {% if _t(parent.value.flagCode+ ".blurb") %}
         {{ govukInsetText({
-            text: _t(parent.value.flagCode + ".description")
+            text: _t(parent.value.flagCode + ".blurb")
         }) }}
       {% endif %}
 

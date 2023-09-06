@@ -1,14 +1,14 @@
 {
   "RA0001": {
-    "full_question": "A oes gennych chi anabledd corfforol, meddyliol neu addysgol neu gyflwr iechyd sy’n golygu bod angen cymorth arnoch yn ystod eich achos?",
-    "description": "Rydym yn gwybod bod angen cymorth ar rai pobl i gael mynediad at wybodaeth a defnyddio ein gwasanaethau. Rydym yn aml yn galw hyn yn addasiad rhesymol. Mae angen i'r barnwr neu GLlTEF gytuno ar rai addasiadau rhesymol. Gallwch drafod gyda'r llys os bydd eich anghenion yn newid.",
+    "fullQuestion": "A oes gennych chi anabledd corfforol, meddyliol neu addysgol neu gyflwr iechyd sy’n golygu bod angen cymorth arnoch yn ystod eich achos?",
+    "blurb": "Rydym yn gwybod bod angen cymorth ar rai pobl i gael mynediad at wybodaeth a defnyddio ein gwasanaethau. Rydym yn aml yn galw hyn yn addasiad rhesymol. Mae angen i'r barnwr neu GLlTEF gytuno ar rai addasiadau rhesymol. Gallwch drafod gyda'r llys os bydd eich anghenion yn newid.",
     "hint": "Dewiswch bob un sy'n berthnasol i chi - gellir rhoi gofynion penodol nesaf",
     "error": {
       "empty": "Dewiswch a oes angen cefnogaeth arnoch"
     }
   },
   "RA0002": {
-    "description": "Meddyliwch am bob cyfathrebiad â'r llys, yn ogystal â'r hyn y gallai fod ei angen arnoch mewn gwrandawiad. Ystyriwch wrandawiadau o bell ac wyneb yn wyneb mewn adeilad, rhag ofn nad yw'r math o wrandawiad sydd orau gennych yn bosibl.",
+    "blurb": "Meddyliwch am bob cyfathrebiad â'r llys, yn ogystal â'r hyn y gallai fod ei angen arnoch mewn gwrandawiad. Ystyriwch wrandawiadau o bell ac wyneb yn wyneb mewn adeilad, rhag ofn nad yw'r math o wrandawiad sydd orau gennych yn bosibl.",
     "hint": "Er enghraifft, braille neu wahanol liwiau a meintiau testun",
     "error": {
       "empty": "Dewiswch a oes angen dogfennau arnoch mewn fformat arall"
@@ -44,7 +44,7 @@
     }
   },
   "RA0005": {
-    "description": "",
+    "blurb": "",
     "hint": "Er enghraifft, rhywun rydych chi'n ei adnabod neu gi cymorth",
     "error": {
       "empty": "Dewiswch p'un a ydych angen dod â rhywbeth efo chi i wrandawiad llys"
@@ -57,7 +57,7 @@
     }
   },
   "RA0006": {
-    "description": "Meddyliwch beth fyddai ei angen arnoch pe bai'r gwrandawiad yn cael ei gynnal mewn adeilad, dros y ffôn neu drwy fideo.",
+    "blurb": "Meddyliwch beth fyddai ei angen arnoch pe bai'r gwrandawiad yn cael ei gynnal mewn adeilad, dros y ffôn neu drwy fideo.",
     "hint": "Er enghraifft, seibiannau neu le ychwanegol",
     "error": {
       "empty": "Dewiswch a oes arnoch angen  rhywbeth i deimlo’n gyfforddus yn ystod gwrandawiad llys"
@@ -81,7 +81,7 @@
     }
   },
   "RA0008": {
-    "description": "Meddyliwch am bob cyfathrebiad â'r llys, yn ogystal â'r hyn y gallai fod ei angen arnoch mewn gwrandawiad. Ystyriwch wrandawiadau o bell ac wyneb yn wyneb mewn adeilad, rhag ofn nad yw'r math o wrandawiad sydd orau gennych yn bosibl.",
+    "blurb": "Meddyliwch am bob cyfathrebiad â'r llys, yn ogystal â'r hyn y gallai fod ei angen arnoch mewn gwrandawiad. Ystyriwch wrandawiadau o bell ac wyneb yn wyneb mewn adeilad, rhag ofn nad yw'r math o wrandawiad sydd orau gennych yn bosibl.",
     "hint": "Er enghraifft, clywed, siarad neu ddehongli",
     "error": {
       "empty": "Dewiswch a oes angen help arnoch i gyfathrebu a deall"
@@ -94,7 +94,7 @@
     }
   },
   "RA0009": {
-    "description": "Meddyliwch am bob cyfathrebiad â'r llys, yn ogystal â'r hyn y gallai fod ei angen arnoch mewn gwrandawiad. Ystyriwch wrandawiadau o bell ac wyneb yn wyneb mewn adeilad, rhag ofn nad yw'r math o wrandawiad sydd orau gennych yn bosibl.",
+    "blurb": "Meddyliwch am bob cyfathrebiad â'r llys, yn ogystal â'r hyn y gallai fod ei angen arnoch mewn gwrandawiad. Ystyriwch wrandawiadau o bell ac wyneb yn wyneb mewn adeilad, rhag ofn nad yw'r math o wrandawiad sydd orau gennych yn bosibl.",
     "hint": "gallwch ddweud wrthym pa fath o gymorth clyw yn y cam nesaf",
     "control": "Math o system gwella clyw",
     "error": {
