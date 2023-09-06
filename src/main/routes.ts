@@ -16,6 +16,11 @@ export default function (app: Application): void {
   app.get(Route.OVERVIEW, app.locals.container.cradle.homeController.overview);
   app.get(Route.INTRO, app.locals.container.cradle.homeController.intro);
 
+  app.get(Route.COOKIES, app.locals.container.cradle.homeController.cookies);
+  app.get(Route.PRIVACY_POLICY, app.locals.container.cradle.homeController.privacyPolicy);
+  app.get(Route.TERMS_AND_CONDITIONS, app.locals.container.cradle.homeController.termsAndConditions);
+  app.get(Route.ACCESSIBILITY_STATEMENT, app.locals.container.cradle.homeController.accessibilityStatement);
+
   // Demo Controller
   //if (app.locals.ENV !== 'production') {
   app.get(Route.DEMO, initSession.init, app.locals.container.cradle.demoController.get);

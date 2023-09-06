@@ -22,4 +22,20 @@ export class HomeController {
   public async intro(req: Request, res: Response): Promise<void> {
     res.render('intro');
   }
+
+  public async cookies(req: Request, res: Response): Promise<void> {
+    res.render('cookies');
+  }
+
+  public async privacyPolicy(req: Request, res: Response): Promise<void> {
+    res.render('privacy-policy');
+  }
+
+  public async termsAndConditions(req: Request, res: Response): Promise<void> {
+    res.render('terms-and-conditions');
+  }
+
+  public async accessibilityStatement(req: Request, res: Response): Promise<void> {
+    res.render('accessibility-statement');
+  }
 }

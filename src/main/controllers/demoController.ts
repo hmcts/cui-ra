@@ -22,7 +22,8 @@ export class DemoController {
   public async get(req: Request, res: Response): Promise<void> {
     // Add code here to populate payloads/session for demo purposes.
     // Speak to Sonny about multiple versions to test blank payload and populated payload
-
+    req.session.hmctsserviceid = 'PFL';
+    
     res.render('demo');
   }
 

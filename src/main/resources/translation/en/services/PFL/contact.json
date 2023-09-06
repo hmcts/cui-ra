@@ -1,7 +1,7 @@
 {
   "PFL": {
     "contact": {
-      "content": "<h2 class='govuk-heading-m'>[Contacts for help]</h2><p class='govuk-body'>[Service configured contact details]</p>"
+      "content": "<h2 class='govuk-heading-m'>Service Details TBA</h2><p class='govuk-body'>Email: <a href='#'>service@justice.gov.uk</a></p><p class='govuk-body'>Telephone: 0xxx xxx xxxx</p>"
     }
   }
 }
