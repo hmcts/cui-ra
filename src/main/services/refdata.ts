@@ -49,9 +49,11 @@ export class RefData implements ReferenceData {
     flagType: flagResourceType,
     welsh = false
   ): Promise<RefDataResponse> {
-    const path = `/flag/${serviceId}`;
+    const path = '/refdata/commondata/caseflags';
 
     const queryParams: { [key: string]: string | number } = {};
+
+    Object.assign(queryParams, { 'service-id': serviceId });
 
     if (typeof flagType !== 'undefined') {
       Object.assign(queryParams, { 'flag-type': flagType });

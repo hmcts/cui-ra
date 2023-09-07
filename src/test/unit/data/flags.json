@@ -346,7 +346,7 @@
                     {
                       "name": "Documents in a specified colour",
                       "hearingRelevant": true,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0010",
@@ -385,7 +385,7 @@
                     {
                       "name": "Documents in large print",
                       "hearingRelevant": true,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0013",
@@ -551,7 +551,7 @@
                     {
                       "name": "Parking space close to the venue",
                       "hearingRelevant": true,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0021",
@@ -602,7 +602,7 @@
                     {
                       "name": "A different type of chair",
                       "hearingRelevant": true,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0024",
@@ -667,7 +667,7 @@
                     {
                       "name": "Support worker or carer with me",
                       "hearingRelevant": true,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0026",
@@ -680,7 +680,7 @@
                     {
                       "name": "Friend or family with me",
                       "hearingRelevant": true,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0027",
@@ -706,7 +706,7 @@
                     {
                       "name": "Therapy animal",
                       "hearingRelevant": true,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0029",
@@ -746,7 +746,7 @@
                     {
                       "name": "Appropriate lighting",
                       "hearingRelevant": true,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0030",

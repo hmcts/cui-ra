@@ -1,4 +1,4 @@
-import { ErrorMessages } from './../constants';
+import { ErrorMessages, HeaderParams } from './../constants';
 
 import autobind from 'autobind-decorator';
 import { NextFunction, Request, Response } from 'express';
@@ -7,7 +7,7 @@ import { NextFunction, Request, Response } from 'express';
 export class RequireIdam {
   public async check(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
     try {
-      const idamToken: string | string[] | undefined = req.headers['idam-token'];
+      const idamToken: string | string[] | undefined = req.headers[HeaderParams.IDAM_TOKEN];
       if (idamToken) {
         next();
       }

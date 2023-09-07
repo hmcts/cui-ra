@@ -791,7 +791,7 @@
     "_parentId": "PF0001-RA0001"
   },
   {
-    "_flagComment": false,
+    "_flagComment": true,
     "_isCategoryPage": false,
     "_enabled": false,
     "_other": false,
@@ -887,7 +887,7 @@
     "_parentId": "PF0001-RA0001-RA0002"
   },
   {
-    "_flagComment": false,
+    "_flagComment": true,
     "_isCategoryPage": false,
     "_enabled": false,
     "_other": false,
@@ -1274,7 +1274,7 @@
     "_parentId": "PF0001-RA0001-RA0004"
   },
   {
-    "_flagComment": false,
+    "_flagComment": true,
     "_isCategoryPage": false,
     "_enabled": false,
     "_other": false,
@@ -1370,7 +1370,7 @@
     "_parentId": "PF0001-RA0001-RA0004"
   },
   {
-    "_flagComment": false,
+    "_flagComment": true,
     "_isCategoryPage": false,
     "_enabled": false,
     "_other": false,
@@ -1501,7 +1501,7 @@
     "_parentId": "PF0001-RA0001"
   },
   {
-    "_flagComment": false,
+    "_flagComment": true,
     "_isCategoryPage": false,
     "_enabled": false,
     "_other": false,
@@ -1533,7 +1533,7 @@
     "_parentId": "PF0001-RA0001-RA0005"
   },
   {
-    "_flagComment": false,
+    "_flagComment": true,
     "_isCategoryPage": false,
     "_enabled": false,
     "_other": false,
@@ -1597,7 +1597,7 @@
     "_parentId": "PF0001-RA0001-RA0005"
   },
   {
-    "_flagComment": false,
+    "_flagComment": true,
     "_isCategoryPage": false,
     "_enabled": false,
     "_other": false,
@@ -1696,7 +1696,7 @@
     "_parentId": "PF0001-RA0001"
   },
   {
-    "_flagComment": false,
+    "_flagComment": true,
     "_isCategoryPage": false,
     "_enabled": false,
     "_other": false,
