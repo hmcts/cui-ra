@@ -145,7 +145,7 @@ describe('FormProcessor', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
       (item: DataManagerDataObject) => item.id === 'PF0001-PF0015'
     )[0];
-    
+
     const children: DataManagerDataObject[] = [];
 
     const body = new Form();

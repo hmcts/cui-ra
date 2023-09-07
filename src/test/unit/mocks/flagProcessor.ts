@@ -1,4 +1,9 @@
-import { FlagProcessorInterface, ReferenceDataFlagType, DataManagerDataObject, ReferenceDataResponse } from './../../../main/interfaces';
+import {
+  FlagProcessorInterface,
+  ReferenceDataFlagType,
+  DataManagerDataObject,
+  ReferenceDataResponse,
+} from './../../../main/interfaces';
 
 export const mockFlagProcessor = (): FlagProcessorInterface => {
   const mock: FlagProcessorInterface = {

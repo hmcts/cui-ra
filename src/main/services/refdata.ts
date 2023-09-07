@@ -1,4 +1,9 @@
-import { ReferenceData, ReferenceDataFlagType, ReferenceDataResponseDetail, ReferenceDataResponse } from './../interfaces';
+import {
+  ReferenceData,
+  ReferenceDataFlagType,
+  ReferenceDataResponse,
+  ReferenceDataResponseDetail,
+} from './../interfaces';
 
 import autobind from 'autobind-decorator';
 import { AxiosInstance, HttpStatusCode } from 'axios';
