@@ -1,4 +1,4 @@
-import { ErrorMessages , HeaderParams } from './../constants';
+import { ErrorMessages, HeaderParams } from './../constants';
 
 import autobind from 'autobind-decorator';
 import { NextFunction, Request, Response } from 'express';
