@@ -1,5 +1,5 @@
 import { ServiceAuth } from './../../main/interfaces';
-import { ErrorMessages } from './../constants';
+import { ErrorMessages , HeaderParams } from './../constants';
 
 import autobind from 'autobind-decorator';
 import { NextFunction, Request, Response } from 'express';
@@ -11,7 +11,7 @@ export class ServiceAuthentication {
   public async check(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
     let serviceToken: string | string[] | undefined;
     try {
-      serviceToken = req.headers['service-token'];
+      serviceToken = req.headers[HeaderParams.SERVICE_TOKEN];
     } catch {
       return res.status(401).json({ error: ErrorMessages.SERVICE_TOKEN_MISSING });
     }
