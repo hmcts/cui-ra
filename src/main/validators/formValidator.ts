@@ -10,6 +10,11 @@ import { JSONSchema4, JSONSchema6, JSONSchema7 } from 'json-schema';
 
 export type SchemaType = JSONSchema4 | JSONSchema6 | JSONSchema7;
 
+export enum parentType {
+  parent = 'parent',
+  child = 'child',
+}
+
 //validate form data
 export class FormValidator {
   public static async validate(
@@ -46,7 +51,7 @@ export class FormValidator {
       }
     }
 
-    if (type === 'parent') {
+    if (type === parentType.parent) {
       return [validationErrors, processedItems[0], null];
     } else {
       return [validationErrors, parent, processedItems];
@@ -56,13 +61,13 @@ export class FormValidator {
   private static getSchema(parent: DataManagerDataObject): SchemaType {
     if (parent._listOfValuesLength > 0 && parent._listOfValuesLength < 10) {
       //radio
-      return [radioSchema(), 'parent'];
+      return [radioSchema(), parentType.parent];
     } else if (parent._listOfValuesLength > 0 && parent._listOfValuesLength >= 10) {
       //type ahead
-      return [typeaheadSchema(), 'parent'];
+      return [typeaheadSchema(), parentType.parent];
     } else if (parent._isCategoryPage) {
       //checkbox
-      return [checkboxSchema(), 'child'];
+      return [checkboxSchema(), parentType.child];
     } else {
       throw new Error(ErrorMessages.UNEXPECTED_ERROR);
     }

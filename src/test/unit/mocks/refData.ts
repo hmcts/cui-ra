@@ -1,4 +1,4 @@
-import { ReferenceData, ReferenceDataFlagType, FlagResourceType } from './../../../main/interfaces';
+import { ReferenceData, FlagResourceType, ReferenceDataResponse } from './../../../main/interfaces';
 
 export const mockRefData = (): ReferenceData => {
   const mock: ReferenceData = {
@@ -8,8 +8,8 @@ export const mockRefData = (): ReferenceData => {
       serviceId: string,
       flagType: FlagResourceType,
       welsh: boolean
-    ): Promise<ReferenceDataFlagType> {
-      return {} as ReferenceDataFlagType;
+    ): Promise<ReferenceDataResponse> {
+      return {} as ReferenceDataResponse;
     },
   };
   return mock as ReferenceData;

@@ -6,6 +6,7 @@ export interface ReferenceDataFlagType {
   defaultStatus: string | undefined;
   externallyAvailable: boolean;
   flagCode: string;
+  nativeFlagCode: string;
   isParent: boolean;
   // Note: property is deliberately spelt "Path" and not "path" because the Reference Data Common API returns the former
   Path: string[];
@@ -25,5 +26,13 @@ export interface ReferenceData {
     serviceId: string,
     flagType: FlagResourceType,
     welsh: boolean
-  ): Promise<ReferenceDataFlagType>;
+  ): Promise<ReferenceDataResponse>;
+}
+
+export interface ReferenceDataResponseDetail {
+  FlagDetails?: ReferenceDataFlagType[];
+}
+
+export interface ReferenceDataResponse {
+  flags: ReferenceDataResponseDetail[];
 }

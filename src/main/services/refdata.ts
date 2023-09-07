@@ -1,4 +1,9 @@
-import { ReferenceData, ReferenceDataFlagType } from './../interfaces';
+import {
+  ReferenceData,
+  ReferenceDataFlagType,
+  ReferenceDataResponse,
+  ReferenceDataResponseDetail,
+} from './../interfaces';
 
 import autobind from 'autobind-decorator';
 import { AxiosInstance, HttpStatusCode } from 'axios';
@@ -8,11 +13,11 @@ export enum flagResourceType {
   CASE = 'CASE',
 }
 
-export class RefDataResponseDetail {
-  public FlagDetails?: RefDataFlagType;
+export class RefDataResponseDetail implements ReferenceDataResponseDetail {
+  public FlagDetails?: RefDataFlagType[];
 }
 
-export class RefDataResponse {
+export class RefDataResponse implements ReferenceDataResponse {
   public flags: RefDataResponseDetail[] = [];
 }
 
@@ -24,6 +29,7 @@ export class RefDataFlagType implements ReferenceDataFlagType {
   public defaultStatus: string | undefined;
   public externallyAvailable = false;
   public flagCode = '';
+  public nativeFlagCode = '';
   public isParent = false;
   // Note: property is deliberately spelt "Path" and not "path" because the Reference Data Common API returns the former
   public Path: string[] = [];
@@ -42,7 +48,7 @@ export class RefData implements ReferenceData {
     serviceId: string,
     flagType: flagResourceType,
     welsh = false
-  ): Promise<RefDataFlagType> {
+  ): Promise<RefDataResponse> {
     const path = `/flag/${serviceId}`;
 
     const queryParams: { [key: string]: string | number } = {};
@@ -83,6 +89,6 @@ export class RefData implements ReferenceData {
       throw new Error('No flag types could be retrieved');
     }
 
-    return response.data.flags[0].FlagDetails;
+    return response.data;
   }
 }

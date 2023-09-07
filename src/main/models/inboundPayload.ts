@@ -21,24 +21,24 @@ export class InboundPayloadStore {
 export class InboundPayload implements PayloadInbound {
   callbackUrl!: string;
   logoutUrl: string | undefined;
-  existingFlags!: InboundPayloadDetail;
+  existingFlags!: MainPayloadDetail;
   hmctsServiceId!: string;
   masterFlagCode!: string;
   correlationId!: string;
 }
 
-export class InboundPayloadDetail implements PayloadDetail {
+export class MainPayloadDetail implements PayloadDetail {
   partyName!: string;
   roleOnCase!: string;
-  details: InboundPayloadDetailCollection[] = [];
+  details: MainPayloadDetailCollection[] = [];
 }
 
-export class InboundPayloadDetailCollection implements PayloadCollectionItem {
+export class MainPayloadDetailCollection implements PayloadCollectionItem {
   id!: string;
-  value!: InboundPayloadFlagData;
+  value!: MainPayloadFlagData;
 }
 
-export class InboundPayloadFlagData implements PayloadFlagData {
+export class MainPayloadFlagData implements PayloadFlagData {
   name!: string;
   name_cy!: string;
   subTypeValue!: string | undefined;
@@ -51,14 +51,19 @@ export class InboundPayloadFlagData implements PayloadFlagData {
   flagUpdateComment!: string | undefined;
   dateTimeModified!: string;
   dateTimeCreated!: string;
-  path!: InboundPayloadFlagPath[];
+  path!: MainPayloadFlagPath[];
   hearingRelevant!: PayloadYesNo;
   flagCode!: string;
   status: string | undefined;
   availableExternally!: PayloadYesNo;
 }
 
-export class InboundPayloadFlagPath implements PayloadPath {
+export class MainPayloadFlagPath implements PayloadPath {
   id!: string;
   name!: string;
+}
+
+export class OutboundPayload {
+  flagsAsSupplied: MainPayloadDetail | undefined;
+  replacementFlags: MainPayloadDetail | undefined;
 }

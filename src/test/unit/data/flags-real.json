@@ -3,13 +3,328 @@
     {
       "FlagDetails": [
         {
+          "name": "Case",
+          "hearingRelevant": false,
+          "flagComment": false,
+          "defaultStatus": "Active",
+          "externallyAvailable": false,
+          "flagCode": "CATGRY",
+          "nativeFlagCode": "CF0001",
+          "childFlags": [
+            {
+              "name": "Complex Case",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0002",
+              "nativeFlagCode": "CF0002",
+              "childFlags": [],
+              "name_cy": "Achos Cymhleth",
+              "isParent": false,
+              "Path": ["Case"]
+            },
+            {
+              "name": "Potentially harmful evidence",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0003",
+              "nativeFlagCode": "CF0003",
+              "childFlags": [],
+              "name_cy": "Tystiolaeth a all fod yn niweidiol",
+              "isParent": false,
+              "Path": ["Case"]
+            },
+            {
+              "name": "Gender recognition",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0004",
+              "nativeFlagCode": "CF0004",
+              "childFlags": [],
+              "name_cy": "Cydnabod rhywedd",
+              "isParent": false,
+              "Path": ["Case"]
+            },
+            {
+              "name": "Domestic abuse allegation",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0005",
+              "nativeFlagCode": "CF0005",
+              "childFlags": [],
+              "name_cy": "Honiad o gam-drin domestig",
+              "isParent": false,
+              "Path": ["Case"]
+            },
+            {
+              "name": "Potential fraud",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0006",
+              "nativeFlagCode": "CF0006",
+              "childFlags": [],
+              "name_cy": "Posibilrwydd o dwyll",
+              "isParent": false,
+              "Path": ["Case"]
+            },
+            {
+              "name": "Urgent case",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0007",
+              "nativeFlagCode": "CF0007",
+              "childFlags": [],
+              "name_cy": "Achos brys",
+              "isParent": false,
+              "Path": ["Case"]
+            },
+            {
+              "name": "Power of arrest with Police",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0008",
+              "nativeFlagCode": "CF0008",
+              "childFlags": [],
+              "name_cy": "Pŵer i arestio gyda’r Heddlu",
+              "isParent": false,
+              "Path": ["Case"]
+            },
+            {
+              "name": "Warrant of arrest conclusion/withdrawn",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0009",
+              "nativeFlagCode": "CF0009",
+              "childFlags": [],
+              "name_cy": "Canlyniad gwarant arestio/gwarant arestio wedi’i thynnu’n ôl",
+              "isParent": false,
+              "Path": ["Case"]
+            },
+            {
+              "name": "Class appeal",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0010",
+              "nativeFlagCode": "CF0010",
+              "childFlags": [],
+              "name_cy": "Math o apêl",
+              "isParent": false,
+              "Path": ["Case"]
+            },
+            {
+              "name": "Presidential panel",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0011",
+              "nativeFlagCode": "CF0011",
+              "childFlags": [],
+              "name_cy": "Panel llywyddol",
+              "isParent": false,
+              "Path": ["Case"]
+            },
+            {
+              "name": "RRO (Restricted Reporting Order / Anonymisation)",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0012",
+              "nativeFlagCode": "CF0012",
+              "childFlags": [],
+              "name_cy": "RRO (Gorchymyn Cyfyngiadau Adrodd / Anhysbys)",
+              "isParent": false,
+              "Path": ["Case"]
+            },
+            {
+              "name": "Closed material",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0013",
+              "nativeFlagCode": "CF0013",
+              "childFlags": [],
+              "name_cy": "Deunydd caeedig",
+              "isParent": false,
+              "Path": ["Case"]
+            },
+            {
+              "name": "Welsh forms and communications",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0014",
+              "nativeFlagCode": "CF0014",
+              "childFlags": [],
+              "name_cy": "Ffurflenni a chyfathrebiadau Cymraeg",
+              "isParent": false,
+              "Path": ["Case"]
+            },
+            {
+              "name": "High Profile Case",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0015",
+              "nativeFlagCode": "CF0015",
+              "childFlags": [],
+              "name_cy": "Achos Proffil Uchel",
+              "isParent": false,
+              "Path": ["Case"]
+            },
+            {
+              "name": "Other",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Requested",
+              "externallyAvailable": true,
+              "flagCode": "OT0001",
+              "nativeFlagCode": "OT0001",
+              "childFlags": [],
+              "name_cy": "Arall",
+              "isParent": false,
+              "Path": ["Case"]
+            }
+          ],
+          "name_cy": "Achos",
+          "isParent": true,
+          "Path": [""]
+        },
+        {
           "name": "Party",
           "hearingRelevant": false,
           "flagComment": false,
           "defaultStatus": "Active",
           "externallyAvailable": false,
           "flagCode": "CATGRY",
+          "nativeFlagCode": "PF0001",
           "childFlags": [
+            {
+              "name": "Special measure",
+              "hearingRelevant": false,
+              "flagComment": false,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CATGRY",
+              "nativeFlagCode": "SM0001",
+              "childFlags": [
+                {
+                  "name": "Screening witness from accused",
+                  "hearingRelevant": true,
+                  "flagComment": true,
+                  "defaultStatus": "Active",
+                  "externallyAvailable": false,
+                  "flagCode": "SM0002",
+                  "nativeFlagCode": "SM0002",
+                  "childFlags": [],
+                  "name_cy": "Sgrinio tyst rhag y diffynnydd",
+                  "isParent": false,
+                  "Path": ["Party", "Special measure"]
+                },
+                {
+                  "name": "Evidence by live link",
+                  "hearingRelevant": true,
+                  "flagComment": true,
+                  "defaultStatus": "Active",
+                  "externallyAvailable": false,
+                  "flagCode": "SM0003",
+                  "nativeFlagCode": "SM0003",
+                  "childFlags": [],
+                  "name_cy": "Tystiolaeth drwy gyswllt byw",
+                  "isParent": false,
+                  "Path": ["Party", "Special measure"]
+                },
+                {
+                  "name": "Evidence given in private",
+                  "hearingRelevant": true,
+                  "flagComment": true,
+                  "defaultStatus": "Active",
+                  "externallyAvailable": false,
+                  "flagCode": "SM0004",
+                  "nativeFlagCode": "SM0004",
+                  "childFlags": [],
+                  "name_cy": "Rhoi tystiolaeth yn breifat",
+                  "isParent": false,
+                  "Path": ["Party", "Special measure"]
+                },
+                {
+                  "name": "Removal of wigs and gowns",
+                  "hearingRelevant": true,
+                  "flagComment": true,
+                  "defaultStatus": "Active",
+                  "externallyAvailable": false,
+                  "flagCode": "SM0005",
+                  "nativeFlagCode": "SM0005",
+                  "childFlags": [],
+                  "name_cy": "Diosg wigiau a gynau",
+                  "isParent": false,
+                  "Path": ["Party", "Special measure"]
+                },
+                {
+                  "name": "Video recorded evidence in chief",
+                  "hearingRelevant": true,
+                  "flagComment": true,
+                  "defaultStatus": "Active",
+                  "externallyAvailable": false,
+                  "flagCode": "SM0006",
+                  "nativeFlagCode": "SM0006",
+                  "childFlags": [],
+                  "name_cy": "Prif dystiolaeth wedi’i recordio ar fideo",
+                  "isParent": false,
+                  "Path": ["Party", "Special measure"]
+                },
+                {
+                  "name": "Video recorded cross-examination or re-examination",
+                  "hearingRelevant": true,
+                  "flagComment": true,
+                  "defaultStatus": "Active",
+                  "externallyAvailable": false,
+                  "flagCode": "SM0007",
+                  "nativeFlagCode": "SM0007",
+                  "childFlags": [],
+                  "name_cy": "Tystiolaeth croesholi neu ail-holi wedi’i recordio ar fideo",
+                  "isParent": false,
+                  "Path": ["Party", "Special measure"]
+                },
+                {
+                  "name": "Other",
+                  "hearingRelevant": true,
+                  "flagComment": true,
+                  "defaultStatus": "Requested",
+                  "externallyAvailable": true,
+                  "flagCode": "OT0001",
+                  "nativeFlagCode": "OT0001",
+                  "childFlags": [],
+                  "name_cy": "Arall",
+                  "isParent": false,
+                  "Path": ["Party", "Special measure"]
+                }
+              ],
+              "name_cy": "Mesur arbennig",
+              "isParent": true,
+              "Path": ["Party"]
+            },
             {
               "name": "Reasonable adjustment",
               "hearingRelevant": false,
@@ -17,6 +332,7 @@
               "defaultStatus": "Active",
               "externallyAvailable": false,
               "flagCode": "CATGRY",
+              "nativeFlagCode": "RA0001",
               "childFlags": [
                 {
                   "name": "I need documents in an alternative format",
@@ -25,6 +341,7 @@
                   "defaultStatus": "Active",
                   "externallyAvailable": false,
                   "flagCode": "CATGRY",
+                  "nativeFlagCode": "RA0002",
                   "childFlags": [
                     {
                       "name": "Documents in a specified colour",
@@ -33,7 +350,9 @@
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0010",
+                      "nativeFlagCode": "RA0010",
                       "childFlags": [],
+                      "name_cy": "Dogfennau mewn lliw penodol",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need documents in an alternative format"]
                     },
@@ -44,7 +363,9 @@
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0011",
+                      "nativeFlagCode": "RA0011",
                       "childFlags": [],
+                      "name_cy": "Dogfennau mewn fformat hawdd i’w darllen",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need documents in an alternative format"]
                     },
@@ -55,7 +376,9 @@
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0012",
+                      "nativeFlagCode": "RA0012",
                       "childFlags": [],
+                      "name_cy": "Dogfennau Braille",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need documents in an alternative format"]
                     },
@@ -66,7 +389,9 @@
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0013",
+                      "nativeFlagCode": "RA0013",
                       "childFlags": [],
+                      "name_cy": "Dogfennau mewn print bras",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need documents in an alternative format"]
                     },
@@ -77,7 +402,9 @@
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0014",
+                      "nativeFlagCode": "RA0014",
                       "childFlags": [],
+                      "name_cy": "Cyfieithiad sain o ddogfennau",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need documents in an alternative format"]
                     },
@@ -88,7 +415,9 @@
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0015",
+                      "nativeFlagCode": "RA0015",
                       "childFlags": [],
+                      "name_cy": "Dogfennau yn cael eu darllen yn uchel i mi",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need documents in an alternative format"]
                     },
@@ -99,7 +428,9 @@
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0016",
+                      "nativeFlagCode": "RA0016",
                       "childFlags": [],
+                      "name_cy": "Gwybodaeth yn cael ei hanfon ataf drwy e-bost",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need documents in an alternative format"]
                     },
@@ -110,11 +441,14 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "OT0001",
+                      "nativeFlagCode": "OT0001",
                       "childFlags": [],
+                      "name_cy": "Arall",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need documents in an alternative format"]
                     }
                   ],
+                  "name_cy": "Rwyf angen dogfennau mewn fformat amgen",
                   "isParent": true,
                   "Path": ["Party", "Reasonable adjustment"]
                 },
@@ -125,6 +459,7 @@
                   "defaultStatus": "Active",
                   "externallyAvailable": false,
                   "flagCode": "CATGRY",
+                  "nativeFlagCode": "RA0003",
                   "childFlags": [
                     {
                       "name": "Guidance on how to complete forms",
@@ -133,7 +468,9 @@
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0017",
+                      "nativeFlagCode": "RA0017",
                       "childFlags": [],
+                      "name_cy": "Arweiniad ar sut i lenwi ffurflenni",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need help with forms"]
                     },
@@ -144,7 +481,9 @@
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0018",
+                      "nativeFlagCode": "RA0018",
                       "childFlags": [],
+                      "name_cy": "Cymorth i lenwi ffurflenni",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need help with forms"]
                     },
@@ -155,11 +494,14 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "OT0001",
+                      "nativeFlagCode": "OT0001",
                       "childFlags": [],
+                      "name_cy": "Arall",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need help with forms"]
                     }
                   ],
+                  "name_cy": "Rwyf angen help gyda ffurflenni",
                   "isParent": true,
                   "Path": ["Party", "Reasonable adjustment"]
                 },
@@ -170,6 +512,7 @@
                   "defaultStatus": "Active",
                   "externallyAvailable": false,
                   "flagCode": "CATGRY",
+                  "nativeFlagCode": "RA0004",
                   "childFlags": [
                     {
                       "name": "Step free / wheelchair access",
@@ -178,7 +521,9 @@
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0019",
+                      "nativeFlagCode": "RA0019",
                       "childFlags": [],
+                      "name_cy": "Dim grisiau / mynediad ar gyfer cadair olwyn",
                       "isParent": false,
                       "Path": [
                         "Party",
@@ -193,7 +538,9 @@
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0020",
+                      "nativeFlagCode": "RA0020",
                       "childFlags": [],
+                      "name_cy": "Y gallu i ddefnyddio cadair olwyn a geir yn y lleoliad",
                       "isParent": false,
                       "Path": [
                         "Party",
@@ -208,7 +555,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0021",
+                      "nativeFlagCode": "RA0021",
                       "childFlags": [],
+                      "name_cy": "Lle parcio yn agos i'r lleoliad",
                       "isParent": false,
                       "Path": [
                         "Party",
@@ -223,7 +572,9 @@
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0022",
+                      "nativeFlagCode": "RA0022",
                       "childFlags": [],
+                      "name_cy": "Toiled hygyrch",
                       "isParent": false,
                       "Path": [
                         "Party",
@@ -238,7 +589,9 @@
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0023",
+                      "nativeFlagCode": "RA0023",
                       "childFlags": [],
+                      "name_cy": "Help i ddefnyddio lifft",
                       "isParent": false,
                       "Path": [
                         "Party",
@@ -253,7 +606,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0024",
+                      "nativeFlagCode": "RA0024",
                       "childFlags": [],
+                      "name_cy": "Math gwahanol o gadair",
                       "isParent": false,
                       "Path": [
                         "Party",
@@ -268,7 +623,9 @@
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0025",
+                      "nativeFlagCode": "RA0025",
                       "childFlags": [],
+                      "name_cy": "Cymorth i fynd o amgylch yr adeilad",
                       "isParent": false,
                       "Path": [
                         "Party",
@@ -283,7 +640,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "OT0001",
+                      "nativeFlagCode": "OT0001",
                       "childFlags": [],
+                      "name_cy": "Arall",
                       "isParent": false,
                       "Path": [
                         "Party",
@@ -292,6 +651,7 @@
                       ]
                     }
                   ],
+                  "name_cy": "Rwyf angen addasiadau i allu cyrraedd ein adeiladau, mynd i mewn iddynt a symud o’u cwmpas",
                   "isParent": true,
                   "Path": ["Party", "Reasonable adjustment"]
                 },
@@ -302,6 +662,7 @@
                   "defaultStatus": "Active",
                   "externallyAvailable": false,
                   "flagCode": "CATGRY",
+                  "nativeFlagCode": "RA0005",
                   "childFlags": [
                     {
                       "name": "Support worker or carer with me",
@@ -310,7 +671,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0026",
+                      "nativeFlagCode": "RA0026",
                       "childFlags": [],
+                      "name_cy": "Cefnogaeth gan weithiwr cymorth neu ofalwr",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need to bring support with me to a hearing"]
                     },
@@ -321,7 +684,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0027",
+                      "nativeFlagCode": "RA0027",
                       "childFlags": [],
+                      "name_cy": "Cefnogaeth gan ffrind neu aelod o’r teulu",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need to bring support with me to a hearing"]
                     },
@@ -332,7 +697,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0028",
+                      "nativeFlagCode": "RA0028",
                       "childFlags": [],
+                      "name_cy": "Ci cymorth / tywys",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need to bring support with me to a hearing"]
                     },
@@ -343,7 +710,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0029",
+                      "nativeFlagCode": "RA0029",
                       "childFlags": [],
+                      "name_cy": "Anifail therapi",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need to bring support with me to a hearing"]
                     },
@@ -354,11 +723,14 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "OT0001",
+                      "nativeFlagCode": "OT0001",
                       "childFlags": [],
+                      "name_cy": "Arall",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need to bring support with me to a hearing"]
                     }
                   ],
+                  "name_cy": "Rwyf angen dod â rhywun efo fi i fy nghefnogi mewn gwrandawiad",
                   "isParent": true,
                   "Path": ["Party", "Reasonable adjustment"]
                 },
@@ -369,6 +741,7 @@
                   "defaultStatus": "Active",
                   "externallyAvailable": false,
                   "flagCode": "CATGRY",
+                  "nativeFlagCode": "RA0006",
                   "childFlags": [
                     {
                       "name": "Appropriate lighting",
@@ -377,7 +750,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0030",
+                      "nativeFlagCode": "RA0030",
                       "childFlags": [],
+                      "name_cy": "Goleuadau priodol",
                       "isParent": false,
                       "Path": [
                         "Party",
@@ -392,7 +767,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0031",
+                      "nativeFlagCode": "RA0031",
                       "childFlags": [],
+                      "name_cy": "Seibiannau rheolaidd",
                       "isParent": false,
                       "Path": [
                         "Party",
@@ -407,7 +784,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0032",
+                      "nativeFlagCode": "RA0032",
                       "childFlags": [],
+                      "name_cy": "Lle i allu codi a symud o gwmpas",
                       "isParent": false,
                       "Path": [
                         "Party",
@@ -422,7 +801,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0033",
+                      "nativeFlagCode": "RA0033",
                       "childFlags": [],
+                      "name_cy": "Ystafell aros breifat",
                       "isParent": false,
                       "Path": [
                         "Party",
@@ -437,7 +818,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "OT0001",
+                      "nativeFlagCode": "OT0001",
                       "childFlags": [],
+                      "name_cy": "Arall",
                       "isParent": false,
                       "Path": [
                         "Party",
@@ -446,6 +829,7 @@
                       ]
                     }
                   ],
+                  "name_cy": "Rwyf angen rhywbeth i wneud i mi deimlo’n gyfforddus yn ystod fy ngwrandawiad",
                   "isParent": true,
                   "Path": ["Party", "Reasonable adjustment"]
                 },
@@ -456,6 +840,7 @@
                   "defaultStatus": "Active",
                   "externallyAvailable": false,
                   "flagCode": "CATGRY",
+                  "nativeFlagCode": "RA0007",
                   "childFlags": [
                     {
                       "name": "In person hearing",
@@ -464,7 +849,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0034",
+                      "nativeFlagCode": "RA0034",
                       "childFlags": [],
+                      "name_cy": "Gwrandawiad wyneb yn wyneb mewn ystafell",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need to request a certain type of hearing"]
                     },
@@ -475,7 +862,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0035",
+                      "nativeFlagCode": "RA0035",
                       "childFlags": [],
+                      "name_cy": "Gwrandawiad fideo",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need to request a certain type of hearing"]
                     },
@@ -486,7 +875,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0036",
+                      "nativeFlagCode": "RA0036",
                       "childFlags": [],
+                      "name_cy": "Gwrandawiad dros y ffôn",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need to request a certain type of hearing"]
                     },
@@ -497,11 +888,14 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "OT0001",
+                      "nativeFlagCode": "OT0001",
                       "childFlags": [],
+                      "name_cy": "Arall",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need to request a certain type of hearing"]
                     }
                   ],
+                  "name_cy": "Rwyf angen gofyn am fath penodol o wrandawiad",
                   "isParent": true,
                   "Path": ["Party", "Reasonable adjustment"]
                 },
@@ -512,6 +906,7 @@
                   "defaultStatus": "Active",
                   "externallyAvailable": false,
                   "flagCode": "CATGRY",
+                  "nativeFlagCode": "RA0008",
                   "childFlags": [
                     {
                       "name": "Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)",
@@ -520,6 +915,7 @@
                       "defaultStatus": "Active",
                       "externallyAvailable": false,
                       "flagCode": "CATGRY",
+                      "nativeFlagCode": "RA0009",
                       "childFlags": [
                         {
                           "name": "Hearing loop (hearing enhancement system)",
@@ -528,7 +924,9 @@
                           "defaultStatus": "Active",
                           "externallyAvailable": true,
                           "flagCode": "RA0043",
+                          "nativeFlagCode": "RA0043",
                           "childFlags": [],
+                          "name_cy": "Dolen glyw (system gwella clyw)",
                           "isParent": false,
                           "Path": [
                             "Party",
@@ -545,7 +943,9 @@
                           "defaultStatus": "Active",
                           "externallyAvailable": true,
                           "flagCode": "RA0044",
+                          "nativeFlagCode": "RA0044",
                           "childFlags": [],
+                          "name_cy": "Derbynnydd isgoch (system gwella clyw)",
                           "isParent": false,
                           "Path": [
                             "Party",
@@ -562,7 +962,9 @@
                           "defaultStatus": "Active",
                           "externallyAvailable": true,
                           "flagCode": "RA0045",
+                          "nativeFlagCode": "RA0045",
                           "childFlags": [],
+                          "name_cy": "Dolen sain (system gwella clyw)",
                           "isParent": false,
                           "Path": [
                             "Party",
@@ -579,7 +981,9 @@
                           "defaultStatus": "Requested",
                           "externallyAvailable": true,
                           "flagCode": "OT0001",
+                          "nativeFlagCode": "OT0001",
                           "childFlags": [],
+                          "name_cy": "Arall",
                           "isParent": false,
                           "Path": [
                             "Party",
@@ -590,6 +994,7 @@
                           ]
                         }
                       ],
+                      "name_cy": "System Gwella Clyw (Dolen Glyw/Sain, Derbynnydd Isgoch)",
                       "isParent": true,
                       "Path": ["Party", "Reasonable adjustment", "I need help communicating and understanding"]
                     },
@@ -600,7 +1005,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0037",
+                      "nativeFlagCode": "RA0037",
                       "childFlags": [],
+                      "name_cy": "Amser ychwanegol i feddwl ac egluro fy hun",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need help communicating and understanding"]
                     },
@@ -611,7 +1018,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0038",
+                      "nativeFlagCode": "RA0038",
                       "childFlags": [],
+                      "name_cy": "Cyfryngwr",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need help communicating and understanding"]
                     },
@@ -622,7 +1031,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0039",
+                      "nativeFlagCode": "RA0039",
                       "childFlags": [],
+                      "name_cy": "Cofnodwr iaith lafar i destun (palanteipydd)",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need help communicating and understanding"]
                     },
@@ -633,7 +1044,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0040",
+                      "nativeFlagCode": "RA0040",
                       "childFlags": [],
+                      "name_cy": "Angen bod yn agos at bwy bynnag sy'n siarad",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need help communicating and understanding"]
                     },
@@ -644,7 +1057,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0041",
+                      "nativeFlagCode": "RA0041",
                       "childFlags": [],
+                      "name_cy": "Siaradwr gwefusau",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need help communicating and understanding"]
                     },
@@ -655,57 +1070,71 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0042",
+                      "nativeFlagCode": "RA0042",
                       "listOfValuesLength": 12,
                       "listOfValues": [
                         {
                           "key": "ase",
-                          "value": "American Sign Language (ASL)"
+                          "value": "American Sign Language (ASL)",
+                          "value_cy": "Iaith Arwyddion America (ASL)"
                         },
                         {
                           "key": "bfi",
-                          "value": "British Sign Language (BSL)"
+                          "value": "British Sign Language (BSL)",
+                          "value_cy": "Iaith Arwyddion Prydain (BSL)"
                         },
                         {
                           "key": "ils",
-                          "value": "International Sign (IS)"
+                          "value": "International Sign (IS)",
+                          "value_cy": "Arwyddion Rhyngwladol (IS)"
                         },
                         {
                           "key": "sign-dfr",
-                          "value": "Deaf Relay"
+                          "value": "Deaf Relay",
+                          "value_cy": "Gwasanaeth Cyfnewid i Bobl Fyddar"
                         },
                         {
                           "key": "sign-dma",
-                          "value": "Deafblind manual alphabet"
+                          "value": "Deafblind manual alphabet",
+                          "value_cy": "Wyddor Pobl Ddall a Byddar"
                         },
                         {
                           "key": "sign-hos",
-                          "value": "Hands on signing"
+                          "value": "Hands on signing",
+                          "value_cy": "Arwyddo trwy gyffyrddiad"
                         },
                         {
                           "key": "sign-lps",
-                          "value": "Lipspeaker"
+                          "value": "Lipspeaker",
+                          "value_cy": "Gwefuslefarydd"
                         },
                         {
                           "key": "sign-mkn",
-                          "value": "Makaton"
+                          "value": "Makaton",
+                          "value_cy": "Makaton"
                         },
                         {
                           "key": "sign-ntr",
-                          "value": "Notetaker"
+                          "value": "Notetaker",
+                          "value_cy": "Ysgrifennwr Nodiadau"
                         },
                         {
                           "key": "sign-pst",
-                          "value": "Palantypist / Speech to text"
+                          "value": "Palantypist / Speech to text",
+                          "value_cy": "Palanteipydd / Llais-i-destun"
                         },
                         {
                           "key": "sign-sse",
-                          "value": "Speech Supported English (SSE)"
+                          "value": "Speech Supported English (SSE)",
+                          "value_cy": "Cefnogaeth Lleferydd Saesneg (SSE)"
                         },
                         {
                           "key": "sign-vfs",
-                          "value": "Visual frame signing"
+                          "value": "Visual frame signing",
+                          "value_cy": "Arwyddo Gweledol"
                         }
                       ],
+                      "name_cy": "Dehonglydd Iaith Arwyddion",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need help communicating and understanding"]
                     },
@@ -716,7 +1145,9 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0046",
+                      "nativeFlagCode": "RA0046",
                       "childFlags": [],
+                      "name_cy": "Ymweld â’r llys neu’r tribiwnlys cyn y gwrandawiad",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need help communicating and understanding"]
                     },
@@ -727,7 +1158,9 @@
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0047",
+                      "nativeFlagCode": "RA0047",
                       "childFlags": [],
+                      "name_cy": "Esboniad o osodiad y llys neu’r tribiwnlys a phwy fydd yn yr ystafell wrandawiadau",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need help communicating and understanding"]
                     },
@@ -738,11 +1171,14 @@
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "OT0001",
+                      "nativeFlagCode": "OT0001",
                       "childFlags": [],
+                      "name_cy": "Arall",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need help communicating and understanding"]
                     }
                   ],
+                  "name_cy": "Rwyf angen cymorth gyda chyfathrebu a deall pethau",
                   "isParent": true,
                   "Path": ["Party", "Reasonable adjustment"]
                 },
@@ -753,844 +1189,1275 @@
                   "defaultStatus": "Requested",
                   "externallyAvailable": true,
                   "flagCode": "OT0001",
+                  "nativeFlagCode": "OT0001",
                   "childFlags": [],
+                  "name_cy": "Arall",
                   "isParent": false,
                   "Path": ["Party", "Reasonable adjustment"]
                 }
               ],
+              "name_cy": "Addasiad rhesymol",
               "isParent": true,
+              "Path": ["Party"]
+            },
+            {
+              "name": "Vulnerable user",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0002",
+              "nativeFlagCode": "PF0002",
+              "childFlags": [],
+              "name_cy": "Defnyddiwr bregus",
+              "isParent": false,
+              "Path": ["Party"]
+            },
+            {
+              "name": "Confidential party/address",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0004",
+              "nativeFlagCode": "PF0004",
+              "childFlags": [],
+              "name_cy": "Parti/cyfeiriad cyfrinachol",
+              "isParent": false,
+              "Path": ["Party"]
+            },
+            {
+              "name": "Unacceptable/disruptive customer behaviour",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0007",
+              "nativeFlagCode": "PF0007",
+              "childFlags": [],
+              "name_cy": "Ymddygiad annerbyniol/aflonyddgar gan gwsmer",
+              "isParent": false,
+              "Path": ["Party"]
+            },
+            {
+              "name": "Vexatious litigant",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0008",
+              "nativeFlagCode": "PF0008",
+              "childFlags": [],
+              "name_cy": "Ymgyfreithiwr blinderus",
+              "isParent": false,
+              "Path": ["Party"]
+            },
+            {
+              "name": "Civil restraint order",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0009",
+              "nativeFlagCode": "PF0009",
+              "childFlags": [],
+              "name_cy": "Gorchymyn atal sifil",
+              "isParent": false,
+              "Path": ["Party"]
+            },
+            {
+              "name": "Banning order",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0011",
+              "nativeFlagCode": "PF0011",
+              "childFlags": [],
+              "name_cy": "Gorchymyn gwaharddiad",
+              "isParent": false,
+              "Path": ["Party"]
+            },
+            {
+              "name": "Foreign national offender",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0012",
+              "nativeFlagCode": "PF0012",
+              "childFlags": [],
+              "name_cy": "Troseddwr sy’n wladolyn tramor",
+              "isParent": false,
+              "Path": ["Party"]
+            },
+            {
+              "name": "Unaccompanied minor",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0013",
+              "nativeFlagCode": "PF0013",
+              "childFlags": [],
+              "name_cy": "Plentyn dan oed ar ei ben ei hun",
+              "isParent": false,
+              "Path": ["Party"]
+            },
+            {
+              "name": "Audio/Video Evidence",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0014",
+              "nativeFlagCode": "PF0014",
+              "childFlags": [],
+              "name_cy": "Tystiolaeth Sain/Fideo",
+              "isParent": false,
               "Path": ["Party"]
             },
             {
               "name": "Language Interpreter",
               "hearingRelevant": true,
-              "flagComment": false,
-              "defaultStatus": "Requested",
-              "externallyAvailable": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
               "flagCode": "PF0015",
+              "nativeFlagCode": "PF0015",
               "listOfValuesLength": 205,
               "listOfValues": [
                 {
                   "key": "abr",
-                  "value": "Brong"
+                  "value": "Brong",
+                  "value_cy": ""
                 },
                 {
                   "key": "ach",
-                  "value": "Acholi"
+                  "value": "Acholi",
+                  "value_cy": ""
                 },
                 {
                   "key": "afr",
-                  "value": "Afrikaans"
+                  "value": "Afrikaans",
+                  "value_cy": ""
                 },
                 {
                   "key": "aii",
-                  "value": "Assyrian"
+                  "value": "Assyrian",
+                  "value_cy": ""
                 },
                 {
                   "key": "aka",
-                  "value": "Akan"
+                  "value": "Akan",
+                  "value_cy": ""
                 },
                 {
                   "key": "amh",
-                  "value": "Amharic"
+                  "value": "Amharic",
+                  "value_cy": ""
                 },
                 {
                   "key": "ara",
-                  "value": "Arabic"
+                  "value": "Arabic",
+                  "value_cy": ""
                 },
                 {
                   "key": "ara-ame",
-                  "value": "Arabic Middle Eastern"
+                  "value": "Arabic Middle Eastern",
+                  "value_cy": ""
                 },
                 {
                   "key": "ara-ana",
-                  "value": "Arabic North African"
+                  "value": "Arabic North African",
+                  "value_cy": ""
                 },
                 {
                   "key": "ara-mag",
-                  "value": "Maghreb"
+                  "value": "Maghreb",
+                  "value_cy": ""
                 },
                 {
                   "key": "arq",
-                  "value": "Algerian"
+                  "value": "Algerian",
+                  "value_cy": ""
                 },
                 {
                   "key": "aze",
-                  "value": "Azerbajani (aka Nth Azari)"
+                  "value": "Azerbajani (aka Nth Azari)",
+                  "value_cy": ""
                 },
                 {
                   "key": "bal",
-                  "value": "Baluchi"
+                  "value": "Baluchi",
+                  "value_cy": ""
                 },
                 {
                   "key": "bam",
-                  "value": "Bambara"
+                  "value": "Bambara",
+                  "value_cy": ""
                 },
                 {
                   "key": "bas",
-                  "value": "Bassa"
+                  "value": "Bassa",
+                  "value_cy": ""
                 },
                 {
                   "key": "bel",
-                  "value": "Belorussian"
+                  "value": "Belorussian",
+                  "value_cy": ""
                 },
                 {
                   "key": "bem",
-                  "value": "Benba (Bemba)"
+                  "value": "Benba (Bemba)",
+                  "value_cy": ""
                 },
                 {
                   "key": "ben",
-                  "value": "Bengali"
+                  "value": "Bengali",
+                  "value_cy": ""
                 },
                 {
                   "key": "ben-bsy",
-                  "value": "Bengali Sylheti"
+                  "value": "Bengali Sylheti",
+                  "value_cy": ""
                 },
                 {
                   "key": "ber",
-                  "value": "Berber"
+                  "value": "Berber",
+                  "value_cy": ""
                 },
                 {
                   "key": "bfz",
-                  "value": "Pahari"
+                  "value": "Pahari",
+                  "value_cy": ""
                 },
                 {
                   "key": "bih",
-                  "value": "Bihari"
+                  "value": "Bihari",
+                  "value_cy": ""
                 },
                 {
                   "key": "bin",
-                  "value": "Benin/Edo"
+                  "value": "Benin/Edo",
+                  "value_cy": ""
                 },
                 {
                   "key": "bjs",
-                  "value": "Bajan (West Indian)"
+                  "value": "Bajan (West Indian)",
+                  "value_cy": ""
                 },
                 {
                   "key": "bnt-kic",
-                  "value": "Kichagga"
+                  "value": "Kichagga",
+                  "value_cy": ""
                 },
                 {
                   "key": "bod",
-                  "value": "Tibetan"
+                  "value": "Tibetan",
+                  "value_cy": ""
                 },
                 {
                   "key": "btn",
-                  "value": "Bhutanese"
+                  "value": "Bhutanese",
+                  "value_cy": ""
                 },
                 {
                   "key": "bul",
-                  "value": "Bulgarian"
+                  "value": "Bulgarian",
+                  "value_cy": ""
                 },
                 {
                   "key": "byn",
-                  "value": "Bilin"
+                  "value": "Bilin",
+                  "value_cy": ""
                 },
                 {
                   "key": "ceb",
-                  "value": "Cebuano"
+                  "value": "Cebuano",
+                  "value_cy": ""
                 },
                 {
                   "key": "ces",
-                  "value": "Czech"
+                  "value": "Czech",
+                  "value_cy": ""
                 },
                 {
                   "key": "cgg",
-                  "value": "Rukiga"
+                  "value": "Rukiga",
+                  "value_cy": ""
                 },
                 {
                   "key": "che",
-                  "value": "Chechen"
+                  "value": "Chechen",
+                  "value_cy": ""
                 },
                 {
                   "key": "cmn",
-                  "value": "Mandarin"
+                  "value": "Mandarin",
+                  "value_cy": ""
                 },
                 {
                   "key": "cpe",
-                  "value": "Creole (English)"
+                  "value": "Creole (English)",
+                  "value_cy": ""
                 },
                 {
                   "key": "cpf",
-                  "value": "Creole (French)"
+                  "value": "Creole (French)",
+                  "value_cy": ""
                 },
                 {
                   "key": "cpp",
-                  "value": "Creole (Portuguese)"
+                  "value": "Creole (Portuguese)",
+                  "value_cy": ""
                 },
                 {
                   "key": "crp",
-                  "value": "Creole (Spanish)"
+                  "value": "Creole (Spanish)",
+                  "value_cy": ""
                 },
                 {
                   "key": "ctg",
-                  "value": "Chittagonain"
+                  "value": "Chittagonain",
+                  "value_cy": ""
                 },
                 {
                   "key": "cym",
-                  "value": "Welsh"
+                  "value": "Welsh",
+                  "value_cy": ""
                 },
                 {
                   "key": "dan",
-                  "value": "Danish"
+                  "value": "Danish",
+                  "value_cy": ""
                 },
                 {
                   "key": "deu",
-                  "value": "German"
+                  "value": "German",
+                  "value_cy": ""
                 },
                 {
                   "key": "din",
-                  "value": "Dinka"
+                  "value": "Dinka",
+                  "value_cy": ""
                 },
                 {
                   "key": "div",
-                  "value": "Maldivian"
+                  "value": "Maldivian",
+                  "value_cy": ""
                 },
                 {
                   "key": "don",
-                  "value": "Toura"
+                  "value": "Toura",
+                  "value_cy": ""
                 },
                 {
                   "key": "dua",
-                  "value": "Douala"
+                  "value": "Douala",
+                  "value_cy": ""
                 },
                 {
                   "key": "dyu",
-                  "value": "Dioula"
+                  "value": "Dioula",
+                  "value_cy": ""
                 },
                 {
                   "key": "efi",
-                  "value": "Efik"
+                  "value": "Efik",
+                  "value_cy": ""
                 },
                 {
                   "key": "ell",
-                  "value": "Greek"
+                  "value": "Greek",
+                  "value_cy": ""
                 },
                 {
                   "key": "est",
-                  "value": "Estonian"
+                  "value": "Estonian",
+                  "value_cy": ""
                 },
                 {
                   "key": "ewe",
-                  "value": "Ewe"
+                  "value": "Ewe",
+                  "value_cy": ""
                 },
                 {
                   "key": "ewo",
-                  "value": "Ewondo"
+                  "value": "Ewondo",
+                  "value_cy": ""
                 },
                 {
                   "key": "fas",
-                  "value": "Farsi"
+                  "value": "Farsi",
+                  "value_cy": ""
                 },
                 {
                   "key": "fat",
-                  "value": "Fanti"
+                  "value": "Fanti",
+                  "value_cy": ""
                 },
                 {
                   "key": "fij",
-                  "value": "Fijian"
+                  "value": "Fijian",
+                  "value_cy": ""
                 },
                 {
                   "key": "fra",
-                  "value": "French"
+                  "value": "French",
+                  "value_cy": ""
                 },
                 {
                   "key": "fra-faf",
-                  "value": "French African"
+                  "value": "French African",
+                  "value_cy": ""
                 },
                 {
                   "key": "fra-far",
-                  "value": "French Arabic"
+                  "value": "French Arabic",
+                  "value_cy": ""
                 },
                 {
                   "key": "ful",
-                  "value": "Fula"
+                  "value": "Fula",
+                  "value_cy": ""
                 },
                 {
                   "key": "gaa",
-                  "value": "Ga"
+                  "value": "Ga",
+                  "value_cy": ""
                 },
                 {
                   "key": "gjk",
-                  "value": "Kachi"
+                  "value": "Kachi",
+                  "value_cy": ""
                 },
                 {
                   "key": "glg",
-                  "value": "Galician"
+                  "value": "Galician",
+                  "value_cy": ""
                 },
                 {
                   "key": "guj",
-                  "value": "Gujarati"
+                  "value": "Gujarati",
+                  "value_cy": ""
                 },
                 {
                   "key": "hac",
-                  "value": "Gorani"
+                  "value": "Gorani",
+                  "value_cy": ""
                 },
                 {
                   "key": "hak",
-                  "value": "Hakka"
+                  "value": "Hakka",
+                  "value_cy": ""
                 },
                 {
                   "key": "hau",
-                  "value": "Hausa"
+                  "value": "Hausa",
+                  "value_cy": ""
                 },
                 {
                   "key": "hbs",
-                  "value": "Serbo-Croatian"
+                  "value": "Serbo-Croatian",
+                  "value_cy": ""
                 },
                 {
                   "key": "heb",
-                  "value": "Hebrew"
+                  "value": "Hebrew",
+                  "value_cy": ""
                 },
                 {
                   "key": "her",
-                  "value": "Herero"
+                  "value": "Herero",
+                  "value_cy": ""
                 },
                 {
                   "key": "hin",
-                  "value": "Hindi"
+                  "value": "Hindi",
+                  "value_cy": ""
                 },
                 {
                   "key": "hnd",
-                  "value": "Hindko"
+                  "value": "Hindko",
+                  "value_cy": ""
                 },
                 {
                   "key": "hno",
-                  "value": "Northern Hindko"
+                  "value": "Northern Hindko",
+                  "value_cy": ""
                 },
                 {
                   "key": "hun",
-                  "value": "Hungarian"
+                  "value": "Hungarian",
+                  "value_cy": ""
                 },
                 {
                   "key": "hye",
-                  "value": "Armenian"
+                  "value": "Armenian",
+                  "value_cy": ""
                 },
                 {
                   "key": "ibb",
-                  "value": "Ibibio"
+                  "value": "Ibibio",
+                  "value_cy": ""
                 },
                 {
                   "key": "ibo",
-                  "value": "Igbo (Also Known As Ibo)"
+                  "value": "Igbo (Also Known As Ibo)",
+                  "value_cy": ""
                 },
                 {
                   "key": "ilo",
-                  "value": "Ilocano"
+                  "value": "Ilocano",
+                  "value_cy": ""
                 },
                 {
                   "key": "ind",
-                  "value": "Indonesian"
+                  "value": "Indonesian",
+                  "value_cy": ""
                 },
                 {
                   "key": "ish",
-                  "value": "Esan"
+                  "value": "Esan",
+                  "value_cy": ""
                 },
                 {
                   "key": "iso",
-                  "value": "Isoko"
+                  "value": "Isoko",
+                  "value_cy": ""
                 },
                 {
                   "key": "ita",
-                  "value": "Italian"
+                  "value": "Italian",
+                  "value_cy": ""
                 },
                 {
                   "key": "jam",
-                  "value": "Jamaican"
+                  "value": "Jamaican",
+                  "value_cy": ""
                 },
                 {
                   "key": "jav",
-                  "value": "Javanese"
+                  "value": "Javanese",
+                  "value_cy": ""
                 },
                 {
                   "key": "jpn",
-                  "value": "Japanese"
+                  "value": "Japanese",
+                  "value_cy": ""
                 },
                 {
                   "key": "kas",
-                  "value": "Kashmiri"
+                  "value": "Kashmiri",
+                  "value_cy": ""
                 },
                 {
                   "key": "kat",
-                  "value": "Georgian"
+                  "value": "Georgian",
+                  "value_cy": ""
                 },
                 {
                   "key": "kck",
-                  "value": "Khalanga"
+                  "value": "Khalanga",
+                  "value_cy": ""
                 },
                 {
                   "key": "kfr",
-                  "value": "Kutchi"
+                  "value": "Kutchi",
+                  "value_cy": ""
                 },
                 {
                   "key": "khm",
-                  "value": "Khmer"
+                  "value": "Khmer",
+                  "value_cy": ""
                 },
                 {
                   "key": "kik",
-                  "value": "Kikuyu"
+                  "value": "Kikuyu",
+                  "value_cy": ""
                 },
                 {
                   "key": "kin",
-                  "value": "Kinyarwandan"
+                  "value": "Kinyarwandan",
+                  "value_cy": ""
                 },
                 {
                   "key": "kir",
-                  "value": "Kyrgyz"
+                  "value": "Kyrgyz",
+                  "value_cy": ""
                 },
                 {
                   "key": "knn",
-                  "value": "Konkani"
+                  "value": "Konkani",
+                  "value_cy": ""
                 },
                 {
                   "key": "kon",
-                  "value": "Kikongo"
+                  "value": "Kikongo",
+                  "value_cy": ""
                 },
                 {
                   "key": "kor",
-                  "value": "Korean"
+                  "value": "Korean",
+                  "value_cy": ""
                 },
                 {
                   "key": "kri",
-                  "value": "Krio (Sierra Leone)"
+                  "value": "Krio (Sierra Leone)",
+                  "value_cy": ""
                 },
                 {
                   "key": "krn",
-                  "value": "Sarpo"
+                  "value": "Sarpo",
+                  "value_cy": ""
                 },
                 {
                   "key": "kru",
-                  "value": "Kru"
+                  "value": "Kru",
+                  "value_cy": ""
                 },
                 {
                   "key": "krx",
-                  "value": "Karon"
+                  "value": "Karon",
+                  "value_cy": ""
                 },
                 {
                   "key": "kur-fey",
-                  "value": "Feyli"
+                  "value": "Feyli",
+                  "value_cy": ""
                 },
                 {
                   "key": "kur-kbr",
-                  "value": "Kurdish Bardini"
+                  "value": "Kurdish Bardini",
+                  "value_cy": ""
                 },
                 {
                   "key": "kur-kkr",
-                  "value": "Kurdish kurmanji"
+                  "value": "Kurdish kurmanji",
+                  "value_cy": ""
                 },
                 {
                   "key": "kur-ksr",
-                  "value": "Kurdish Sorani"
+                  "value": "Kurdish Sorani",
+                  "value_cy": ""
                 },
                 {
                   "key": "laj",
-                  "value": "Lango"
+                  "value": "Lango",
+                  "value_cy": ""
                 },
                 {
                   "key": "lav",
-                  "value": "Latvian"
+                  "value": "Latvian",
+                  "value_cy": ""
                 },
                 {
                   "key": "lin",
-                  "value": "Lingala"
+                  "value": "Lingala",
+                  "value_cy": ""
                 },
                 {
                   "key": "lit",
-                  "value": "Lithuanian"
+                  "value": "Lithuanian",
+                  "value_cy": ""
                 },
                 {
                   "key": "lub",
-                  "value": "Luba (Tshiluba)"
+                  "value": "Luba (Tshiluba)",
+                  "value_cy": ""
                 },
                 {
                   "key": "lug",
-                  "value": "Lugandan"
+                  "value": "Lugandan",
+                  "value_cy": ""
                 },
                 {
                   "key": "luo",
-                  "value": "Luo"
+                  "value": "Luo",
+                  "value_cy": ""
                 },
                 {
                   "key": "luo-lah",
-                  "value": "Luo Acholi"
+                  "value": "Luo Acholi",
+                  "value_cy": ""
                 },
                 {
                   "key": "luo-lky",
-                  "value": "Luo Kenyan"
+                  "value": "Luo Kenyan",
+                  "value_cy": ""
                 },
                 {
                   "key": "luo-llg",
-                  "value": "Luo Lango"
+                  "value": "Luo Lango",
+                  "value_cy": ""
                 },
                 {
                   "key": "mal",
-                  "value": "Malayalam"
+                  "value": "Malayalam",
+                  "value_cy": ""
                 },
                 {
                   "key": "mar",
-                  "value": "Marathi"
+                  "value": "Marathi",
+                  "value_cy": ""
                 },
                 {
                   "key": "men",
-                  "value": "Mende"
+                  "value": "Mende",
+                  "value_cy": ""
                 },
                 {
                   "key": "min",
-                  "value": "Mina"
+                  "value": "Mina",
+                  "value_cy": ""
                 },
                 {
                   "key": "mkd",
-                  "value": "Macedonian"
+                  "value": "Macedonian",
+                  "value_cy": ""
                 },
                 {
                   "key": "mku",
-                  "value": "Malinke"
+                  "value": "Malinke",
+                  "value_cy": ""
                 },
                 {
                   "key": "mkw",
-                  "value": "Monokutuba"
+                  "value": "Monokutuba",
+                  "value_cy": ""
                 },
                 {
                   "key": "mlt",
-                  "value": "Maltese"
+                  "value": "Maltese",
+                  "value_cy": ""
                 },
                 {
                   "key": "mnk",
-                  "value": "Mandinka"
+                  "value": "Mandinka",
+                  "value_cy": ""
                 },
                 {
                   "key": "mon",
-                  "value": "Mongolian"
+                  "value": "Mongolian",
+                  "value_cy": ""
                 },
                 {
                   "key": "msa",
-                  "value": "Malay"
+                  "value": "Malay",
+                  "value_cy": ""
                 },
                 {
                   "key": "mya",
-                  "value": "Burmese"
+                  "value": "Burmese",
+                  "value_cy": ""
                 },
                 {
                   "key": "myx",
-                  "value": "Masaaba"
+                  "value": "Masaaba",
+                  "value_cy": ""
                 },
                 {
                   "key": "nde",
-                  "value": "Ndebele"
+                  "value": "Ndebele",
+                  "value_cy": ""
                 },
                 {
                   "key": "nep",
-                  "value": "Nepali"
+                  "value": "Nepali",
+                  "value_cy": ""
                 },
                 {
                   "key": "nld",
-                  "value": "Dutch"
+                  "value": "Dutch",
+                  "value_cy": ""
                 },
                 {
                   "key": "nld-nfl",
-                  "value": "Flemish"
+                  "value": "Flemish",
+                  "value_cy": ""
                 },
                 {
                   "key": "nld-nwf",
-                  "value": "West Flemish"
+                  "value": "West Flemish",
+                  "value_cy": ""
                 },
                 {
                   "key": "nor",
-                  "value": "Norwegian"
+                  "value": "Norwegian",
+                  "value_cy": ""
                 },
                 {
                   "key": "nya",
-                  "value": "Chichewa"
+                  "value": "Chichewa",
+                  "value_cy": ""
                 },
                 {
                   "key": "nyn",
-                  "value": "Nyankole"
+                  "value": "Nyankole",
+                  "value_cy": ""
                 },
                 {
                   "key": "nyo",
-                  "value": "Runyoro"
+                  "value": "Runyoro",
+                  "value_cy": ""
                 },
                 {
                   "key": "nzi",
-                  "value": "Nzima"
+                  "value": "Nzima",
+                  "value_cy": ""
                 },
                 {
                   "key": "orm",
-                  "value": "Oromo"
+                  "value": "Oromo",
+                  "value_cy": ""
                 },
                 {
                   "key": "pag",
-                  "value": "Pangasinan"
+                  "value": "Pangasinan",
+                  "value_cy": ""
                 },
                 {
                   "key": "pam",
-                  "value": "Pampangan"
+                  "value": "Pampangan",
+                  "value_cy": ""
                 },
                 {
                   "key": "pan",
-                  "value": "Punjabi"
+                  "value": "Punjabi",
+                  "value_cy": ""
                 },
                 {
                   "key": "pan-pji",
-                  "value": "Punjabi Indian"
+                  "value": "Punjabi Indian",
+                  "value_cy": ""
                 },
                 {
                   "key": "pan-pjp",
-                  "value": "Punjabi Pakistani"
+                  "value": "Punjabi Pakistani",
+                  "value_cy": ""
                 },
                 {
                   "key": "pat",
-                  "value": "Patois"
+                  "value": "Patois",
+                  "value_cy": ""
                 },
                 {
                   "key": "phr",
-                  "value": "Pahari-Potwari"
+                  "value": "Pahari-Potwari",
+                  "value_cy": ""
                 },
                 {
                   "key": "pol",
-                  "value": "Polish"
+                  "value": "Polish",
+                  "value_cy": ""
                 },
                 {
                   "key": "por",
-                  "value": "Portuguese"
+                  "value": "Portuguese",
+                  "value_cy": ""
                 },
                 {
                   "key": "prs",
-                  "value": "Dari"
+                  "value": "Dari",
+                  "value_cy": ""
                 },
                 {
                   "key": "pus",
-                  "value": "Pushtu (Also Known As Pashto)"
+                  "value": "Pushtu (Also Known As Pashto)",
+                  "value_cy": ""
                 },
                 {
                   "key": "rmm",
-                  "value": "Roma"
+                  "value": "Roma",
+                  "value_cy": ""
                 },
                 {
                   "key": "rom",
-                  "value": "Romany"
+                  "value": "Romany",
+                  "value_cy": ""
                 },
                 {
                   "key": "ron",
-                  "value": "Romanian"
+                  "value": "Romanian",
+                  "value_cy": ""
                 },
                 {
                   "key": "ron-fmo",
-                  "value": "Moldovan"
+                  "value": "Moldovan",
+                  "value_cy": ""
                 },
                 {
                   "key": "run",
-                  "value": "Kirundi"
+                  "value": "Kirundi",
+                  "value_cy": ""
                 },
                 {
                   "key": "rus",
-                  "value": "Russian"
+                  "value": "Russian",
+                  "value_cy": ""
                 },
                 {
                   "key": "scl",
-                  "value": "Shina"
+                  "value": "Shina",
+                  "value_cy": ""
                 },
                 {
                   "key": "sgw",
-                  "value": "Gurage"
+                  "value": "Gurage",
+                  "value_cy": ""
                 },
                 {
                   "key": "sin",
-                  "value": "Sinhalese"
+                  "value": "Sinhalese",
+                  "value_cy": ""
                 },
                 {
                   "key": "skr",
-                  "value": "Saraiki (Seraiki)"
+                  "value": "Saraiki (Seraiki)",
+                  "value_cy": ""
                 },
                 {
                   "key": "skt",
-                  "value": "Sakata"
+                  "value": "Sakata",
+                  "value_cy": ""
                 },
                 {
                   "key": "slk",
-                  "value": "Slovak"
+                  "value": "Slovak",
+                  "value_cy": ""
                 },
                 {
                   "key": "slv",
-                  "value": "Slovenian"
+                  "value": "Slovenian",
+                  "value_cy": ""
                 },
                 {
                   "key": "sna",
-                  "value": "Shona"
+                  "value": "Shona",
+                  "value_cy": ""
                 },
                 {
                   "key": "snd",
-                  "value": "Sindhi"
+                  "value": "Sindhi",
+                  "value_cy": ""
                 },
                 {
                   "key": "snk",
-                  "value": "Soninke"
+                  "value": "Soninke",
+                  "value_cy": ""
                 },
                 {
                   "key": "som",
-                  "value": "Somali"
+                  "value": "Somali",
+                  "value_cy": ""
                 },
                 {
                   "key": "spa",
-                  "value": "Spanish"
+                  "value": "Spanish",
+                  "value_cy": ""
                 },
                 {
                   "key": "spv",
-                  "value": "Kosli, Sambalpuri"
+                  "value": "Kosli, Sambalpuri",
+                  "value_cy": ""
                 },
                 {
                   "key": "sqi",
-                  "value": "Albanian"
+                  "value": "Albanian",
+                  "value_cy": ""
                 },
                 {
                   "key": "sus",
-                  "value": "Susu"
+                  "value": "Susu",
+                  "value_cy": ""
                 },
                 {
                   "key": "swa",
-                  "value": "Swahili"
+                  "value": "Swahili",
+                  "value_cy": ""
                 },
                 {
                   "key": "swa-sbv",
-                  "value": "Swahili Bravanese"
+                  "value": "Swahili Bravanese",
+                  "value_cy": ""
                 },
                 {
                   "key": "swa-skb",
-                  "value": "Swahili Kibajuni"
+                  "value": "Swahili Kibajuni",
+                  "value_cy": ""
                 },
                 {
                   "key": "swe",
-                  "value": "Swedish"
+                  "value": "Swedish",
+                  "value_cy": ""
                 },
                 {
                   "key": "swh",
-                  "value": "Kiswahili"
+                  "value": "Kiswahili",
+                  "value_cy": ""
                 },
                 {
                   "key": "syl",
-                  "value": "Sylheti"
+                  "value": "Sylheti",
+                  "value_cy": ""
                 },
                 {
                   "key": "tai",
-                  "value": "Taiwanese"
+                  "value": "Taiwanese",
+                  "value_cy": ""
                 },
                 {
                   "key": "tam",
-                  "value": "Tamil"
+                  "value": "Tamil",
+                  "value_cy": ""
                 },
                 {
                   "key": "tel",
-                  "value": "Telugu"
+                  "value": "Telugu",
+                  "value_cy": ""
                 },
                 {
                   "key": "tem",
-                  "value": "Temne"
+                  "value": "Temne",
+                  "value_cy": ""
                 },
                 {
                   "key": "teo",
-                  "value": "Ateso"
+                  "value": "Ateso",
+                  "value_cy": ""
                 },
                 {
                   "key": "tgl",
-                  "value": "Tagalog"
+                  "value": "Tagalog",
+                  "value_cy": ""
                 },
                 {
                   "key": "tha",
-                  "value": "Thai"
+                  "value": "Thai",
+                  "value_cy": ""
                 },
                 {
                   "key": "tig",
-                  "value": "Tigre"
+                  "value": "Tigre",
+                  "value_cy": ""
                 },
                 {
                   "key": "tir",
-                  "value": "Tigrinya"
+                  "value": "Tigrinya",
+                  "value_cy": ""
                 },
                 {
                   "key": "tsn",
-                  "value": "Setswana"
+                  "value": "Setswana",
+                  "value_cy": ""
                 },
                 {
                   "key": "ttj",
-                  "value": "Rutoro"
+                  "value": "Rutoro",
+                  "value_cy": ""
                 },
                 {
                   "key": "tuk",
-                  "value": "Turkmen"
+                  "value": "Turkmen",
+                  "value_cy": ""
                 },
                 {
                   "key": "tur",
-                  "value": "Turkish"
+                  "value": "Turkish",
+                  "value_cy": ""
                 },
                 {
                   "key": "twi",
-                  "value": "Twi"
+                  "value": "Twi",
+                  "value_cy": ""
                 },
                 {
                   "key": "uig",
-                  "value": "Uighur"
+                  "value": "Uighur",
+                  "value_cy": ""
                 },
                 {
                   "key": "ukr",
-                  "value": "Ukrainian"
+                  "value": "Ukrainian",
+                  "value_cy": ""
                 },
                 {
                   "key": "urd",
-                  "value": "Urdu"
+                  "value": "Urdu",
+                  "value_cy": ""
                 },
                 {
                   "key": "urh",
-                  "value": "Urohobo"
+                  "value": "Urohobo",
+                  "value_cy": ""
                 },
                 {
                   "key": "uzb",
-                  "value": "Uzbek"
+                  "value": "Uzbek",
+                  "value_cy": ""
                 },
                 {
                   "key": "vie",
-                  "value": "Vietnamese"
+                  "value": "Vietnamese",
+                  "value_cy": ""
                 },
                 {
                   "key": "vsa",
-                  "value": "Visayan"
+                  "value": "Visayan",
+                  "value_cy": ""
                 },
                 {
                   "key": "wol",
-                  "value": "Wolof"
+                  "value": "Wolof",
+                  "value_cy": ""
                 },
                 {
                   "key": "xho",
-                  "value": "Xhosa"
+                  "value": "Xhosa",
+                  "value_cy": ""
                 },
                 {
                   "key": "xog",
-                  "value": "Lusoga"
+                  "value": "Lusoga",
+                  "value_cy": ""
                 },
                 {
                   "key": "yor",
-                  "value": "Yoruba"
+                  "value": "Yoruba",
+                  "value_cy": ""
                 },
                 {
                   "key": "yue",
-                  "value": "Cantonese"
+                  "value": "Cantonese",
+                  "value_cy": ""
                 },
                 {
                   "key": "zag",
-                  "value": "Zaghawa"
+                  "value": "Zaghawa",
+                  "value_cy": ""
                 },
                 {
                   "key": "zho-hok",
-                  "value": "Hokkein"
+                  "value": "Hokkein",
+                  "value_cy": ""
                 },
                 {
                   "key": "zul",
-                  "value": "Zulu"
+                  "value": "Zulu",
+                  "value_cy": ""
                 },
                 {
                   "key": "zza",
-                  "value": "Zaza"
+                  "value": "Zaza",
+                  "value_cy": ""
                 }
               ],
+              "name_cy": "Cyfieithydd",
+              "isParent": false,
+              "Path": ["Party"]
+            },
+            {
+              "name": "Death of a Party",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0016",
+              "nativeFlagCode": "PF0016",
+              "childFlags": [],
+              "name_cy": "Marwolaeth parti",
+              "isParent": false,
+              "Path": ["Party"]
+            },
+            {
+              "name": "Litigation friend",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0017",
+              "nativeFlagCode": "PF0017",
+              "childFlags": [],
+              "name_cy": "Cyfaill cyfreitha",
+              "isParent": false,
+              "Path": ["Party"]
+            },
+            {
+              "name": "Lacking capacity",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0018",
+              "nativeFlagCode": "PF0018",
+              "childFlags": [],
+              "name_cy": "Heb y gallu meddyliol",
+              "isParent": false,
+              "Path": ["Party"]
+            },
+            {
+              "name": "Detained individual",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0019",
+              "nativeFlagCode": "PF0019",
+              "childFlags": [],
+              "name_cy": "Unigolyn wedi’i gadw dan glo",
+              "isParent": false,
+              "Path": ["Party"]
+            },
+            {
+              "name": "QLR (Qualified Legal Representative)",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0020",
+              "nativeFlagCode": "PF0020",
+              "childFlags": [],
+              "name_cy": "QLR (Cynrychiolydd Cyfreithiol Cymwysedig)",
+              "isParent": false,
+              "Path": ["Party"]
+            },
+            {
+              "name": "Potentially Violent Person",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0021",
+              "nativeFlagCode": "PF0021",
+              "childFlags": [],
+              "name_cy": "Unigolyn a Allai Fod yn Dreisgar",
+              "isParent": false,
+              "Path": ["Party"]
+            },
+            {
+              "name": "Party Abroad",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0022",
+              "nativeFlagCode": "PF0022",
+              "childFlags": [],
+              "name_cy": "Mae’r Parti Dramor",
+              "isParent": false,
+              "Path": ["Party"]
+            },
+            {
+              "name": "Barring Order",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "PF0023",
+              "nativeFlagCode": "PF0023",
+              "childFlags": [],
+              "name_cy": "Gorchymyn Gwahardd",
               "isParent": false,
               "Path": ["Party"]
             },
@@ -1601,11 +2468,14 @@
               "defaultStatus": "Requested",
               "externallyAvailable": true,
               "flagCode": "OT0001",
+              "nativeFlagCode": "OT0001",
               "childFlags": [],
+              "name_cy": "Arall",
               "isParent": false,
               "Path": ["Party"]
             }
           ],
+          "name_cy": "Parti",
           "isParent": true,
           "Path": [""]
         }
