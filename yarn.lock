@@ -3157,11 +3157,11 @@ __metadata:
   linkType: hard
 
 "@types/chai-as-promised@npm:^7.1.5":
-  version: 7.1.5
-  resolution: "@types/chai-as-promised@npm:7.1.5"
+  version: 7.1.6
+  resolution: "@types/chai-as-promised@npm:7.1.6"
   dependencies:
     "@types/chai": "*"
-  checksum: 7c1345c6e32513d52d8e562ec173c23161648d6b792046525f18803a9932d7b3ad3dca8f0181e3c529ec42b106099f174e34edeb184d61dc93e32c98b5132fd4
+  checksum: f765dd249ae9384540f8e6402bd3a9f5e87b97f9078ef58f4b5ec15f7c3673e1f10f0089f819eceb20e00b3df40b7aae1bd44d2b8f4edbbedfcb33ce296f6791
   languageName: node
   linkType: hard
 
@@ -3173,9 +3173,9 @@ __metadata:
   linkType: hard
 
 "@types/config@npm:^3.3.0":
-  version: 3.3.0
-  resolution: "@types/config@npm:3.3.0"
-  checksum: d9485041cfa05864d3b8095cf7b44fae910887f6782dc43ab1ba4ea78d9cdf4a8c9d697557318ede2b4b63a05b7f91e8571b8dbe048ad024e709d9e51e0487d8
+  version: 3.3.1
+  resolution: "@types/config@npm:3.3.1"
+  checksum: dc6604a6bb90179ea7fbe5a3de23301999dd5b115f9999f9e48db412b7c86224919bd9af8915e7ed8734bd5f729fcbcc0eb5adf37fe2422bccd98deae1063530
   languageName: node
   linkType: hard
 
@@ -3189,11 +3189,11 @@ __metadata:
   linkType: hard
 
 "@types/cookie-parser@npm:^1.4.3":
-  version: 1.4.3
-  resolution: "@types/cookie-parser@npm:1.4.3"
+  version: 1.4.4
+  resolution: "@types/cookie-parser@npm:1.4.4"
   dependencies:
     "@types/express": "*"
-  checksum: f390f3af1b1711190dee2c2ecd9af33af81fbde8d81ee820dadb6fe1e0d80c3faba40af37c6ed36fb88b04b64870f6a021f7e9edceecd17c42fe22abe0af5005
+  checksum: 5c81ac4b7d90a567e0c7a904ecbc09c82c43e30c6b5b507aee5147bc06bc8c6418e6719d63fcf68e6a83c71870485ab3fc579a30891b56a0be05d64753e3f74a
   languageName: node
   linkType: hard
 
@@ -3205,11 +3205,11 @@ __metadata:
   linkType: hard
 
 "@types/csurf@npm:^1.11.2":
-  version: 1.11.2
-  resolution: "@types/csurf@npm:1.11.2"
+  version: 1.11.3
+  resolution: "@types/csurf@npm:1.11.3"
   dependencies:
     "@types/express-serve-static-core": "*"
-  checksum: 1827f6760d43ae12390f0308289f2c40537bbcb19ec854d0c654e3129074edf6108ddab99a06986813b6cf31d4fc9fa34eaa3d418f647edf607d8af4c69d62e7
+  checksum: 5db4b4f4adabc592846d2efe7c1c95de541adf6b536a7d6f523f1583e480a381418d3841ae2f159d81a863cc1c047559c311a0853e915e301cc717c7d0ff08f7
   languageName: node
   linkType: hard
 
@@ -3410,9 +3410,9 @@ __metadata:
   linkType: hard
 
 "@types/lodash@npm:^4.14.185":
-  version: 4.14.197
-  resolution: "@types/lodash@npm:4.14.197"
-  checksum: 53d7567d1704de76cf33266c78062e0fd722d4b846e5b1417d0b6ef0ee41c0d9c451b92bc34f73d5f1fcc45c7d36511e92f6f47a9279b48157ba60a92ddaa078
+  version: 4.14.198
+  resolution: "@types/lodash@npm:4.14.198"
+  checksum: b290e4480707151bcec738bca40527915defe52a0d8e26c83685c674163a265e1a88cb2ee56b0fb587a89819d0cd5df86ada836aec3e9c2e4bf516e7d348d524
   languageName: node
   linkType: hard
 
@@ -3445,16 +3445,16 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 20.5.7
-  resolution: "@types/node@npm:20.5.7"
-  checksum: fc284c8e16ddc04569730d58e87eae349eb1c3dd9020cb79a1862d9d9add6f04e7367a236f3252db8db2572f90278e250f4cd43d27d264972b54394eaba1ed76
+  version: 20.5.9
+  resolution: "@types/node@npm:20.5.9"
+  checksum: 717490e94131722144878b4ca1a963ede1673bb8f2ef78c2f5b50b918df6dc9b35e7f8283e5c2a7a9f137730f7c08dc6228e53d4494a94c9ee16881e6ce6caed
   languageName: node
   linkType: hard
 
 "@types/node@npm:^18.7.18":
-  version: 18.17.12
-  resolution: "@types/node@npm:18.17.12"
-  checksum: 79f8bcca3067a3c529f30e172df8d14f25ab9e4cd6a05ed897a924ab1dec774e8ea172ef5c4a67ffec433d423a0c81778f17db22606d574bc83871b60aab298e
+  version: 18.17.14
+  resolution: "@types/node@npm:18.17.14"
+  checksum: f96ce1e588426a26cf82440193084f8bbab47bfb3c2e668cf174095f99ce808a20654b2137448c7e88cfd7b6c2b8521ffb6f714f521b3502ac595a0df0bff679
   languageName: node
   linkType: hard
 

@@ -15,4 +15,8 @@ export const Route = {
   SET_REQUESTED: '/review/set-requested',
   DEMO: '/demo',
   START_DEMO: '/start-demo',
+  COOKIES: '/home/cookies',
+  PRIVACY_POLICY: '/home/privacy-policy',
+  TERMS_AND_CONDITIONS: '/home/terms-and-conditions',
+  ACCESSIBILITY_STATEMENT: '/home/accessibility-statement',
 } as const;

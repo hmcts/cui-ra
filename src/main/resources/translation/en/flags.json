@@ -1,14 +1,14 @@
 {
   "RA0001": {
-    "full_question": "Do you have a physical, mental or learning disability or health condition that means you need support during your case?",
-    "description": "We know some people need support to access information and use our services. We often call this a reasonable adjustment. Some reasonable adjustments need to be agreed by the judge or HMCTS. You can discuss with the court if your needs change.",
+    "fullQuestion": "Do you have a physical, mental or learning disability or health condition that means you need support during your case?",
+    "blurb": "We know some people need support to access information and use our services. We often call this a reasonable adjustment. Some reasonable adjustments need to be agreed by the judge or HMCTS. You can discuss with the court if your needs change.",
     "hint": "Select all that apply to you - specific requirements can be given next",
     "error": {
       "empty": "Select whether you need support"
     }
   },
   "RA0002": {
-    "description": "Think about all communications with the court, as well as what you might need at a hearing. Consider remote and in-person hearings, in case your preferred hearing type is not possible.",
+    "blurb": "Think about all communications with the court, as well as what you might need at a hearing. Consider remote and in-person hearings, in case your preferred hearing type is not possible.",
     "hint": "For example, braille or different colours and text sizes",
     "error": {
       "empty": "Select whether you need documents in an alternate format"
@@ -44,7 +44,7 @@
     }
   },
   "RA0005": {
-    "description": "Think about what you would need if the hearing was in person, by phone or video.",
+    "blurb": "Think about what you would need if the hearing was in person, by phone or video.",
     "hint": "For example, someone you know or an assitance dog",
     "error": {
       "empty": "Select whether you need to bring something to a court hearing"
@@ -57,7 +57,7 @@
     }
   },
   "RA0006": {
-    "description": "Think about what you would need if the hearing was in person, by phone or video.",
+    "blurb": "Think about what you would need if the hearing was in person, by phone or video.",
     "hint": "For example, breaks or extra space",
     "error": {
       "empty": "Select whether you need something for comfort during a court hearing"
@@ -81,7 +81,7 @@
     }
   },
   "RA0008": {
-    "description": "Think about all communications with the court, as well as what you might need at a hearing. Consider remote and in-person hearings, in case your preferred hearing type is not possible.",
+    "blurb": "Think about all communications with the court, as well as what you might need at a hearing. Consider remote and in-person hearings, in case your preferred hearing type is not possible.",
     "hint": "For example, hearing, speaking or interpretation",
     "error": {
       "empty": "Select whether you need help communicating and understanding"
@@ -94,7 +94,7 @@
     }
   },
   "RA0009": {
-    "description": "Think about all communications with the court, as well as what you might need at a hearing. Consider remote and in-person hearings, in case your preferred hearing type is not possible.",
+    "blurb": "Think about all communications with the court, as well as what you might need at a hearing. Consider remote and in-person hearings, in case your preferred hearing type is not possible.",
     "hint": "you can tell us which type of hearing enhancement in the next step",
     "control": "Type of hearing enhancement system",
     "error": {
