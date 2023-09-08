@@ -1,19 +1,54 @@
-/* import { Common, ErrorMessages } from './../constants';
-import { DataManagerDataObject } from './../interfaces';
-import { OutboundPayload, MainPayloadDetail, MainPayloadDetailCollection, MainPayloadFlagData, MainPayloadFlagPath } from './../models';
-import { Request } from 'express'; */
+import { DataManagerDataObject, PayloadCollectionItem } from './../interfaces';
+import { MainPayloadDetail, MainPayloadDetailCollection, OutboundPayload } from './../models';
+
+import { Request } from 'express';
 
 export class PayloadBuilder {
-  // public static build(req: Request){
-  //     let outbound = new OutboundPayload();
-  //     let flagsAsSupplied = new MainPayloadDetail();
-  //     let replacementFlags = new MainPayloadDetail();
-  //     flagsAsSupplied.partyName = req.session.partyname;
-  //     replacementFlags.partyName = req.session.partyname;
-  //     flagsAsSupplied.roleOnCase = req.session.roleoncase;
-  //     replacementFlags.roleOnCase = req.session.roleoncase;
-  //     //populate Details
-  //     return {
-  //     }
-  // }
+  public static build(req: Request): OutboundPayload {
+    const outbound = new OutboundPayload();
+    const flagsAsSupplied = new MainPayloadDetail();
+    const replacementFlags = new MainPayloadDetail();
+    if (req.session.partyname) {
+      flagsAsSupplied.partyName = req.session.partyname;
+      replacementFlags.partyName = req.session.partyname;
+    }
+    if (req.session.roleoncase) {
+      flagsAsSupplied.roleOnCase = req.session.roleoncase;
+      replacementFlags.roleOnCase = req.session.roleoncase;
+    }
+    //populate Details
+    let edata: MainPayloadDetailCollection[] = [];
+    let ndata: MainPayloadDetailCollection[] = [];
+    //flagsAsSupplied only return if there have been changes
+    if (req.session.existingmanager?.modified === true) {
+      const exisitingData = req.session.existingmanager?.data;
+      if (exisitingData) {
+        edata = exisitingData.map((item: PayloadCollectionItem) => {
+          return {
+            id: item.id,
+            value: item.value,
+          } as MainPayloadDetailCollection;
+        });
+      }
+      //supplied flags have been modified
+      flagsAsSupplied.details = edata;
+    }
+    if (req.session.newmanager?.modified === true) {
+      const newData: DataManagerDataObject[] = req.session.newmanager?.data;
+      if (newData) {
+        ndata = newData
+          .filter((item: DataManagerDataObject) => item._enabled === true && item._isParent === false)
+          .map((item: DataManagerDataObject) => {
+            return {
+              value: item.value,
+            } as MainPayloadDetailCollection;
+          });
+      }
+    }
+    //has to be outside of if as it can contain updated if they exist
+    replacementFlags.details = [...edata, ...ndata];
+    outbound.flagsAsSupplied = flagsAsSupplied;
+    outbound.replacementFlags = replacementFlags;
+    return outbound;
+  }
 }
