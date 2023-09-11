@@ -23,6 +23,10 @@ export class DemoController {
     // Add code here to populate payloads/session for demo purposes.
     // Speak to Sonny about multiple versions to test blank payload and populated payload
     req.session.hmctsserviceid = 'PFL';
+    req.session.history = [];
+    req.session.masterflagcode = 'RA0001';
+    req.session.mastername = 'Reasonable Adjustments';
+    req.session.partyname = 'john doe';
 
     res.render('demo');
   }
@@ -34,11 +38,8 @@ export class DemoController {
       // Redirect user to category page with enough payload data to render category flags
       // (This will need to mimic the data we should get back from refdata - see unit test mock data)
       const NewFlag = new NewFlagsManager();
-      NewFlag.set(this.new);
-
-      req.session.masterflagcode = 'RA0001';
-      req.session.mastername = 'Reasonable Adjustments';
-      req.session.partyname = 'john doe';
+      NewFlag.set(this.new);  
+      
       req.session.newmanager = NewFlag;
       req.session.existingmanager = new ExistingFlagsManager();
 
@@ -51,9 +52,6 @@ export class DemoController {
       const NewFlag = new NewFlagsManager();
       NewFlag.set(this.new);
 
-      req.session.masterflagcode = 'RA0001';
-      req.session.mastername = 'Reasonable Adjustments';
-      req.session.partyname = 'john doe';
       req.session.existingmanager = dataManagerExisting;
       req.session.newmanager = NewFlag;
 
