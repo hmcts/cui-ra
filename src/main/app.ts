@@ -1,7 +1,7 @@
 import * as path from 'path';
 
 import { HTTPError } from './HttpError';
-import { Route } from './constants';
+
 import {
   AppInsights,
   Container,
@@ -51,16 +51,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use((req: Request, res: Response, next) => {
   res.setHeader('Cache-Control', 'no-cache, max-age=0, must-revalidate, no-store');
-
-  // Initialize navigation history array if it doesn't exist
-  req.session.history = req.session.history || [];
-
-  // Add the current path to history if it's not already there
-  if (!req.path.includes(Route.BACK) && req.session.history.at(-1) !== req.path) {
-    req.session.history.push(req.path);
-    console.log(req.session.history);
-  }
-
   next();
 });
 
