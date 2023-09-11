@@ -38,6 +38,24 @@ export default function (app: Application): void {
   //Secure api
   app.use(Route.API_ROOT, new ServiceAuthentication(app.locals.container.cradle.serviceAuth).check);
 
+  app.get(Route.BACK, (req, res) => {
+    console.log('GO BACK');
+    console.log(req.session.history);
+    // Navigate back in history if possible
+    if (req.session.history && req.session.history.length > 1) {
+      req.session.history.pop(); // Remove the current path
+      const previousPath = req.session.history.pop(); // Get the previous path
+      if (previousPath) {
+        res.redirect(previousPath); // Redirect back to the previous path
+        console.log(req.session.history);
+      } else {
+        res.send('No more history to navigate back');
+      }
+    } else {
+      res.send('No more history to navigate back');
+    }
+  });
+
   //Load all api routes
   app.post(
     Route.API_POST_PAYLOAD,
