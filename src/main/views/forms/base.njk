@@ -14,12 +14,11 @@
     {% set master_name = mastername_cy %}
 {% endif %}
 
-
 {% block beforeContent %}
     {{ super() }}
     {{ govukBackLink({
         text: _t('back'),
-        href: headers['referer']
+        href: route.BACK
     }) }}
 {% endblock %}
 
