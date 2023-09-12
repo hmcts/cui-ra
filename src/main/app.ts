@@ -1,7 +1,6 @@
 import * as path from 'path';
 
 import { HTTPError } from './HttpError';
-
 import {
   AppInsights,
   Container,

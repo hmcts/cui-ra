@@ -11,7 +11,6 @@ export class History {
       // Add the current path to history if it's not already there
       if (req.session.history.at(-1) !== req.path) {
         req.session.history.push(req.path);
-        console.log(req.session.history);
       }
     } finally {
       next();

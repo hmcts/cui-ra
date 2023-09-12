@@ -1,7 +1,7 @@
 import * as os from 'os';
 
 import { Route } from './constants';
-import { InitSession, History, RequireIdam, SchemaValidator, ServiceAuthentication } from './middlewares';
+import { History, InitSession, RequireIdam, SchemaValidator, ServiceAuthentication } from './middlewares';
 import { InboundPayloadSchema } from './schemas';
 
 import { infoRequestHandler } from '@hmcts/info-provider';
@@ -20,7 +20,11 @@ export default function (app: Application): void {
   app.get(Route.COOKIES, history.add, app.locals.container.cradle.homeController.cookies);
   app.get(Route.PRIVACY_POLICY, history.add, app.locals.container.cradle.homeController.privacyPolicy);
   app.get(Route.TERMS_AND_CONDITIONS, history.add, app.locals.container.cradle.homeController.termsAndConditions);
-  app.get(Route.ACCESSIBILITY_STATEMENT, history.add, app.locals.container.cradle.homeController.accessibilityStatement);
+  app.get(
+    Route.ACCESSIBILITY_STATEMENT,
+    history.add,
+    app.locals.container.cradle.homeController.accessibilityStatement
+  );
 
   // Demo Controller
   //if (app.locals.ENV !== 'production') {
@@ -44,14 +48,14 @@ export default function (app: Application): void {
   app.get(Route.BACK, (req, res) => {
     if (req.session.history && req.session.history.length > 1) {
       // Remove the current path
-      req.session.history.pop(); 
-      const previousPath = req.session.history.pop(); 
+      req.session.history.pop();
+      const previousPath = req.session.history.pop();
 
       if (previousPath) {
         res.redirect(previousPath);
       }
     }
-    
+
     res.send('No more history to navigate back');
   });
 
@@ -64,7 +68,12 @@ export default function (app: Application): void {
   app.get(Route.API_GET_PAYLOAD, app.locals.container.cradle.apiController.getPayload);
 
   // Form Controller
-  app.get(Route.JOURNEY_DISPLAY_FLAGS, initSession.init, history.add, app.locals.container.cradle.formController.display);
+  app.get(
+    Route.JOURNEY_DISPLAY_FLAGS,
+    initSession.init,
+    history.add,
+    app.locals.container.cradle.formController.display
+  );
   app.post(Route.JOURNEY_DISPLAY_FLAGS, initSession.init, app.locals.container.cradle.formController.post);
 
   app.get(

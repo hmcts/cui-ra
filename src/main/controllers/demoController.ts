@@ -38,8 +38,8 @@ export class DemoController {
       // Redirect user to category page with enough payload data to render category flags
       // (This will need to mimic the data we should get back from refdata - see unit test mock data)
       const NewFlag = new NewFlagsManager();
-      NewFlag.set(this.new);  
-      
+      NewFlag.set(this.new);
+
       req.session.newmanager = NewFlag;
       req.session.existingmanager = new ExistingFlagsManager();
 
