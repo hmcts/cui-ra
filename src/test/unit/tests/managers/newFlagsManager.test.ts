@@ -138,11 +138,10 @@ describe('New Flags Manager', () => {
 
   test('get first', async () => {
     dataManager.disable(RA_Parent);
-    dataManager.enable(RA_Id,false);
+    dataManager.enable(RA_Id, false);
 
-    const item: DataManagerDataObject|null = dataManager.getFirst();
+    const item: DataManagerDataObject | null = dataManager.getFirst();
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(item?.id).toEqual(RA_Id);
   });
-
 });
