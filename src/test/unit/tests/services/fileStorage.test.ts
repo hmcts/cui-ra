@@ -96,4 +96,11 @@ describe('FileStorageClient', () => {
 
     expect(deleted).toBe(false);
   });
+
+  test('should return a unique string', async () => {
+    // Delete data
+    const uuid = await fileStorageClient.generateUUID();
+
+    expect(typeof uuid).toBe('string');
+  });
 });

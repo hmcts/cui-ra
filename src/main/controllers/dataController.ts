@@ -64,7 +64,7 @@ export class DataController {
         serviceToken,
         payloadStore.idamToken,
         payloadStore.payload.hmctsServiceId,
-        flagResourceType.CASE,
+        flagResourceType.PARTY,
         true
       );
 
@@ -82,6 +82,9 @@ export class DataController {
         req.session.mastername = master[0].value.name;
         req.session.mastername_cy = master[0].value.name_cy;
       }
+
+      //remove data from redis
+      this.redisClient.delete(id);
 
       //Redirect to the correct location
       if (req.session.existingmanager.data.length === 0) {

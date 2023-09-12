@@ -39,6 +39,11 @@ export const mockRedisClient = (): RedisClientInterface => {
     getClient(): RedisClientType {
       return mockRedisNode();
     },
+    generateUUID(): Promise<string> {
+      return new Promise(resolve => {
+        resolve('random-string-uuid');
+      });
+    },
   };
 
   return mockRedis as RedisClientInterface;

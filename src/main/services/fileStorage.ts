@@ -1,3 +1,4 @@
+import { randomUUID } from 'crypto';
 import fs from 'fs';
 
 import { Logger, RedisClientInterface } from './../interfaces';
@@ -95,5 +96,13 @@ export class FileStorageClient implements RedisClientInterface {
 
   public getClient(): null {
     return null;
+  }
+
+  public async generateUUID(): Promise<string> {
+    let uuid: string = randomUUID();
+    if (await this.exists(uuid)) {
+      uuid = await this.generateUUID();
+    }
+    return uuid;
   }
 }
