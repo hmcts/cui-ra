@@ -1,4 +1,7 @@
 import { ReferenceData, FlagResourceType, ReferenceDataResponse } from './../../../main/interfaces';
+import fs from 'fs';
+
+const flagJson: ReferenceDataResponse = JSON.parse(fs.readFileSync(__dirname + '/../data/flags.json', 'utf-8'));
 
 export const mockRefData = (): ReferenceData => {
   const mock: ReferenceData = {
@@ -9,7 +12,7 @@ export const mockRefData = (): ReferenceData => {
       flagType: FlagResourceType,
       welsh: boolean
     ): Promise<ReferenceDataResponse> {
-      return {} as ReferenceDataResponse;
+      return flagJson;
     },
   };
   return mock as ReferenceData;

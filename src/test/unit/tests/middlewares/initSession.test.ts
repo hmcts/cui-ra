@@ -25,10 +25,12 @@ describe('InitSession', () => {
         mastername_cy: undefined,
         existingmanager: undefined,
         newmanager: undefined,
+        sessioninit: undefined,
       },
     } as Request;
     res = {
       locals: {},
+      redirect: jest.fn() as NextFunction,
     } as Response;
     next = jest.fn() as NextFunction;
   });
@@ -43,13 +45,14 @@ describe('InitSession', () => {
     } as Request;
     await initSession.init(req, res, next);
 
-    expect(next).toHaveBeenCalled();
+    expect(res.redirect).toHaveBeenCalled();
   });
 
   test('should initialize session properties and call next', async () => {
     req.session.partyname = 'party';
     req.session.mastername = 'master';
     req.session.mastername_cy = 'cyber';
+    req.session.sessioninit = true;
 
     const newManager = new NewFlagsManager();
     const exisitingManager = new ExistingFlagsManager();
@@ -70,6 +73,7 @@ describe('InitSession', () => {
     req.session.partyname = 'party';
     req.session.mastername = 'master';
     req.session.mastername_cy = 'cyber';
+    req.session.sessioninit = true;
 
     (plainToClass as jest.Mock).mockImplementation(() => {
       throw new Error('Mocked error');

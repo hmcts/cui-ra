@@ -11,6 +11,14 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
     return this.data.filter((child: DataManagerDataObject) => item._childIds.includes(child.id));
   }
 
+  public getFirst(): DataManagerDataObject | null {
+    const items: DataManagerDataObject[] = this.find('_enabled', true);
+    if (items) {
+      return items[0];
+    }
+    return null;
+  }
+
   public getNext(id: string): DataManagerDataObject | null {
     const currentIndex = this.data.findIndex(item => item.id === id);
     if (currentIndex !== -1) {
@@ -36,14 +44,14 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
     return null; // No matching item found
   }
 
-  public enable(id: string): void {
+  public enable(id: string, enableParent = true): void {
     const item: DataManagerDataObject | null = this.get(id);
     if (!item) {
       return;
     }
     item._enabled = true;
-    if (item._parentId) {
-      this.enable(item._parentId);
+    if (item._parentId && enableParent) {
+      this.enable(item._parentId, enableParent);
     }
   }
 
