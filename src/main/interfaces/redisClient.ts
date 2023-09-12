@@ -8,4 +8,5 @@ export interface RedisClientInterface {
   isConnected(): boolean;
   isReady(): boolean;
   getClient(): RedisClientType | null;
+  generateUUID(): Promise<string>;
 }

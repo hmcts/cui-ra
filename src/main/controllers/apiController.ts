@@ -1,5 +1,3 @@
-import { randomUUID } from 'crypto';
-
 import { ErrorMessages, HeaderParams, Route } from './../constants';
 import { Logger, RedisClientInterface } from './../interfaces';
 import { InboundPayload, InboundPayloadStore } from './../models';
@@ -12,14 +10,6 @@ import { Request, Response } from 'express';
 @autobind
 export class ApiController {
   constructor(private logger: Logger, private redisClient: RedisClientInterface) {}
-
-  private async generateUUID(): Promise<string> {
-    let uuid: string = randomUUID();
-    if (await this.redisClient.exists(uuid)) {
-      uuid = await this.generateUUID();
-    }
-    return uuid;
-  }
 
   public async postPayload(req: Request, res: Response): Promise<Response> {
     try {
@@ -40,7 +30,7 @@ export class ApiController {
       //save data
       const payloadStore = new InboundPayloadStore(idamToken, serviceToken, payload);
 
-      const uuid = await this.generateUUID();
+      const uuid = await this.redisClient.generateUUID();
 
       //Save data to redis store
       await this.redisClient.set(uuid, JSON.stringify(payloadStore));

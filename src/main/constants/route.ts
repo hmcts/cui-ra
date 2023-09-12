@@ -11,6 +11,7 @@ export const Route = {
   OVERVIEW: '/home/overview',
   INTRO: '/home/intro',
   REVIEW: '/review',
+  POST_REVIEW: '/review',
   SET_INACTIVE: '/review/set-inactive',
   SET_REQUESTED: '/review/set-requested',
   DEMO: '/demo',
