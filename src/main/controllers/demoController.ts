@@ -22,7 +22,6 @@ export class DemoController {
   public async get(req: Request, res: Response): Promise<void> {
     // Add code here to populate payloads/session for demo purposes.
     // Speak to Sonny about multiple versions to test blank payload and populated payload
-    req.session.hmctsserviceid = 'PFL';
 
     res.render('demo');
   }
@@ -43,6 +42,8 @@ export class DemoController {
       req.session.existingmanager = new ExistingFlagsManager();
       req.session.callbackUrl = 'https://localhost/callback/:id';
       req.session.logoutUrl = 'https://localhost/logout';
+      req.session.hmctsserviceid = 'PFL';
+      req.session.sessioninit = true;
 
       return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
     } else if (action === 'existing') {
@@ -60,6 +61,8 @@ export class DemoController {
       req.session.newmanager = NewFlag;
       req.session.callbackUrl = 'https://localhost/callback/:id';
       req.session.logoutUrl = 'https://localhost/logout';
+      req.session.hmctsserviceid = 'PFL';
+      req.session.sessioninit = true;
 
       res.redirect('home/overview');
     } else {

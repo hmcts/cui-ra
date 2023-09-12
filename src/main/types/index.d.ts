@@ -14,5 +14,6 @@ declare module 'express-session' {
     logoutUrl?: string;
     existingmanager: ExistingFlagsManager;
     newmanager: NewFlagsManager;
+    sessioninit: boolean;
   }
 }

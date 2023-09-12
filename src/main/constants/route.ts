@@ -4,8 +4,6 @@ export const Route = {
   API_ROOT: '/api/*',
   API_POST_PAYLOAD: '/api/payload',
   API_GET_PAYLOAD: '/api/payload:id',
-  JOURNEY_NEW_FLAGS: '/journey/flags/new',
-  JOURNEY_EXSITING_FLAGS: '/journey/flags/exisiting',
   JOURNEY_DISPLAY_FLAGS: '/journey/flags/display/:id',
   INFO: '/info',
   OVERVIEW: '/home/overview',

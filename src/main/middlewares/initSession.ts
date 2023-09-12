@@ -1,3 +1,4 @@
+import { Route } from './../constants';
 import { ExistingFlagsManager, NewFlagsManager } from './../managers';
 
 import autobind from 'autobind-decorator';
@@ -7,8 +8,8 @@ import { NextFunction, Request, Response } from 'express';
 @autobind
 export class InitSession {
   public async init(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
-    if (!req.session) {
-      next();
+    if (!req.session || req.session.sessioninit !== true) {
+      return res.redirect(Route.ROOT);
     }
     res.locals.partyname = req.session.partyname;
     res.locals.mastername = req.session.mastername;
