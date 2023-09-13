@@ -49,11 +49,11 @@ export class RefData implements ReferenceData {
     flagType: flagResourceType,
     welsh = false
   ): Promise<RefDataResponse> {
-    const path = '/refdata/commondata/caseflags';
+    const path = `/refdata/commondata/caseflags/service-id=${serviceId}`;
 
     const queryParams: { [key: string]: string | number } = {};
 
-    Object.assign(queryParams, { 'service-id': serviceId });
+    Object.assign(queryParams, { 'available-external-flag': 'Y' });
 
     if (typeof flagType !== 'undefined') {
       Object.assign(queryParams, { 'flag-type': flagType });
@@ -71,12 +71,15 @@ export class RefData implements ReferenceData {
         .join('&');
     }
 
+    const headers = {
+      accept: 'application/json',
+      'Content-Type': 'application/json',
+      ServiceAuthorization: `${serviceToken}`,
+      Authorization: `${accessToken}`,
+    };
+
     const response = await this.client.get(`${path}?${queryString}`, {
-      headers: {
-        'Content-Type': 'application/json',
-        ServiceAuthorization: `Bearer ${serviceToken}`,
-        Authorization: `Bearer ${accessToken}`,
-      },
+      headers,
     });
 
     if (
