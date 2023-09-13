@@ -15,6 +15,6 @@ declare module 'express-session' {
     existingmanager: ExistingFlagsManager;
     newmanager: NewFlagsManager;
     sessioninit: boolean;
-	history: string[];
+    history: string[];
   }
 }
