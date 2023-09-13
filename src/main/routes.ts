@@ -53,11 +53,11 @@ export default function (app: Application): void {
       const previousPath = req.session.history.pop();
 
       if (previousPath) {
-        res.redirect(previousPath);
+        return res.redirect(previousPath);
       }
     }
 
-    res.send('No more history to navigate back');
+    return res.send('No more history to navigate back');
   });
 
   //Load all api routes
