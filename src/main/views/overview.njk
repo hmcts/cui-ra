@@ -8,7 +8,7 @@
     {{ super() }}
     {{ govukBackLink({
         text: _t('back'),
-        href: headers['referer']
+        href: route.BACK
     }) }}
 {% endblock %}
 
@@ -16,7 +16,10 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">{{ _r(_t('support_for_name'), { name: name }) }}</h1>
-        <a href="/home/intro" class="govuk-link govuk-link--no-visited-state">{{ _t('overview.change_my_support_options') }}</a>
+
+        <p class="govuk-body">
+            <a href="/home/intro" class="govuk-link govuk-link--no-visited-state">{{ _t('overview.change_my_support_options') }}</a>
+        </p>
 
         <table class="govuk-table govuk-!-margin-top-8">
             <caption class="govuk-table__caption govuk-table__caption--m">{{ _t('overview.table_heading') }}</caption>

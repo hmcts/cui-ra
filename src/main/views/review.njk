@@ -8,7 +8,7 @@
     {{ super() }}
     {{ govukBackLink({
         text: _t('back'),
-        href: headers['referer']
+        href: route.BACK
     }) }}
 {% endblock %}
 

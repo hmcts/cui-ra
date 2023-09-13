@@ -15,7 +15,7 @@ import routes from './routes';
 
 import * as bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
-import express from 'express';
+import express, { Request, Response } from 'express';
 import favicon from 'serve-favicon';
 
 const { setupDev } = require('./development');
@@ -48,7 +48,7 @@ new HealthCheck().enableFor(app);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use((req, res, next) => {
+app.use((req: Request, res: Response, next) => {
   res.setHeader('Cache-Control', 'no-cache, max-age=0, must-revalidate, no-store');
   next();
 });
