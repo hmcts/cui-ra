@@ -45,7 +45,7 @@ describe('RedisClient', () => {
 
   test('should set key-value pair in Redis', async () => {
     await redisClient.set('testKey', 'testValue');
-    expect(mockedRedisNode.set).toHaveBeenCalledWith('testKey', 'testValue');
+    expect(mockedRedisNode.set).toHaveBeenCalledWith('testKey', 'testValue', { EX: 3600 });
   });
 
   test('should get value from Redis', async () => {

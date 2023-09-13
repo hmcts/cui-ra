@@ -67,13 +67,13 @@ describe('s2s service class', () => {
 
   test('Validate Service Token successfully', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    (axios.post as jest.Mock).mockImplementation(() => Promise.resolve(response));
+    (axios.get as jest.Mock).mockImplementation(() => Promise.resolve(response));
     expect(await service.validateToken(expectedToken)).toEqual(expectedToken);
   });
 
   test('Validate Service Token un-successfully', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    (axios.post as jest.Mock).mockImplementation(() => Promise.resolve(Object.assign({}, response, { status: 401 })));
+    (axios.get as jest.Mock).mockImplementation(() => Promise.resolve(Object.assign({}, response, { status: 401 })));
 
     const err = new Error('Invalid token');
 
@@ -86,7 +86,7 @@ describe('s2s service class', () => {
 
   test('Should throw and error when trying to Validate Service Token because the return is not a string', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    (axios.post as jest.Mock).mockImplementation(() =>
+    (axios.get as jest.Mock).mockImplementation(() =>
       Promise.resolve({
         status: 200,
         data: {},
@@ -104,7 +104,7 @@ describe('s2s service class', () => {
 
   test('Validate Service Token but throw an error', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    (axios.post as jest.Mock).mockRejectedValueOnce({ error: 'Internal Server Error' });
+    (axios.get as jest.Mock).mockRejectedValueOnce({ error: 'Internal Server Error' });
     try {
       await service.validateToken(expectedToken);
     } catch (error) {
