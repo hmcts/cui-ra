@@ -41,7 +41,7 @@ export default function (app: Application): void {
   app.post(Route.POST_REVIEW, initSession.init, app.locals.container.cradle.reviewController.submitReview);
 
   //DataController
-  app.get(Route.DATA_PROCESS, initSession.init, app.locals.container.cradle.dataController.process);
+  app.get(Route.DATA_PROCESS, app.locals.container.cradle.dataController.process);
 
   //Secure api
   app.use(Route.API_ROOT, new ServiceAuthentication(app.locals.container.cradle.serviceAuth).check);
