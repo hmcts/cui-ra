@@ -48,7 +48,7 @@ export class S2S implements ServiceAuth {
       Authorization: `Bearer ${token}`,
     };
     try {
-      const response = await this.client.post('/details', null, { headers });
+      const response = await this.client.get('/details', { headers });
       if (response.status !== 200) {
         throw new Error('Invalid token');
       }

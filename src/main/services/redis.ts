@@ -70,7 +70,7 @@ export class RedisClient implements RedisClientInterface {
   }
 
   public async set(key: string, value: string): Promise<void> {
-    await this.client.set(key, value);
+    await this.client.set(key, value, { EX: 3600 });
   }
 
   public async get(key: string): Promise<string | null> {
