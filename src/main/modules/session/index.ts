@@ -45,27 +45,22 @@ export class SessionStorage {
     const tlsOn: boolean = JSON.parse(config.get('session.redis.tls'));
 
     if (host && key) {
+      const redisConfig = {
+        host,
+        port: port ?? 6380,
+        password: key,
+      };
+
       if (tlsOn === true) {
         this.logger.info('TLS Enabled on Redis Client');
-        const client = new Redis({
-          host,
-          port: port ?? 6380,
-          password: key,
+        Object.assign(redisConfig, {
           tls: true,
         });
-
-        client.on('error', this.logger.error);
-        return new RedisStore({ client });
-      } else {
-        const client = new Redis({
-          host,
-          port: port ?? 6380,
-          password: key,
-        });
-
-        client.on('error', this.logger.error);
-        return new RedisStore({ client });
       }
+      const client = new Redis(redisConfig);
+      return new RedisStore({
+        client,
+      });
     }
 
     return new fileStore({ path: '/tmp' });
