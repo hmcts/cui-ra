@@ -74,8 +74,8 @@ export class RefData implements ReferenceData {
     const response = await this.client.get(`${path}?${queryString}`, {
       headers: {
         'Content-Type': 'application/json',
-        ServiceAuthorization: 'Bearer ' + serviceToken,
-        Authorization: 'Bearer ' + accessToken,
+        ServiceAuthorization: `Bearer ${serviceToken}`,
+        Authorization: `Bearer ${accessToken}`,
       },
     });
 

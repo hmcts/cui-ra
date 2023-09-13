@@ -42,6 +42,10 @@ export class DemoController {
 
       req.session.newmanager = NewFlag;
       req.session.existingmanager = new ExistingFlagsManager();
+      req.session.callbackUrl = 'https://localhost/callback/:id';
+      req.session.logoutUrl = 'https://localhost/logout';
+      req.session.hmctsserviceid = 'PFL';
+      req.session.sessioninit = true;
 
       return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
     } else if (action === 'existing') {
@@ -54,6 +58,10 @@ export class DemoController {
 
       req.session.existingmanager = dataManagerExisting;
       req.session.newmanager = NewFlag;
+      req.session.callbackUrl = 'https://localhost/callback/:id';
+      req.session.logoutUrl = 'https://localhost/logout';
+      req.session.hmctsserviceid = 'PFL';
+      req.session.sessioninit = true;
 
       res.redirect('home/overview');
     } else {

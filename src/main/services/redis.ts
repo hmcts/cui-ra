@@ -1,3 +1,5 @@
+import { randomUUID } from 'crypto';
+
 import { Logger, RedisClientInterface } from './../interfaces';
 
 import autobind from 'autobind-decorator';
@@ -81,5 +83,13 @@ export class RedisClient implements RedisClientInterface {
 
   public async delete(key: string): Promise<boolean> {
     return (await this.client.del(key)) >= 1;
+  }
+
+  public async generateUUID(): Promise<string> {
+    let uuid: string = randomUUID();
+    if (await this.exists(uuid)) {
+      uuid = await this.generateUUID();
+    }
+    return uuid;
   }
 }

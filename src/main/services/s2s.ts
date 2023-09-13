@@ -45,7 +45,7 @@ export class S2S implements ServiceAuth {
   public async validateToken(token: string): Promise<string> {
     const headers = {
       'Content-Type': 'application/json',
-      Authorization: token,
+      Authorization: `Bearer ${token}`,
     };
     try {
       const response = await this.client.post('/details', null, { headers });

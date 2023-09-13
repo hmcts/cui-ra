@@ -111,9 +111,11 @@
         </a>
 
         <div class="govuk-button-group">
-            <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
-                {{ _t('review.actions.submit') }}
-            </button>
+            <form method="POST">
+                <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+                    {{ _t('review.actions.submit') }}
+                </button>
+            </form>
 
             <a class="govuk-link govuk-link--no-visited-state" href="#">{{ _t('cancel') }}</a>
         </div>

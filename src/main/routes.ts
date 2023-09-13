@@ -28,8 +28,8 @@ export default function (app: Application): void {
 
   // Demo Controller
   //if (app.locals.ENV !== 'production') {
-  app.get(Route.DEMO, initSession.init, history.add, app.locals.container.cradle.demoController.get);
-  app.get(Route.START_DEMO, initSession.init, history.add, app.locals.container.cradle.demoController.startDemo);
+  app.get(Route.DEMO, history.add, app.locals.container.cradle.demoController.get);
+  app.get(Route.START_DEMO, history.add, app.locals.container.cradle.demoController.startDemo);
   //}
 
   // Review Controller
@@ -38,6 +38,7 @@ export default function (app: Application): void {
   app.get(Route.SET_INACTIVE, initSession.init, app.locals.container.cradle.reviewController.setInactive);
 
   app.get(Route.SET_REQUESTED, initSession.init, app.locals.container.cradle.reviewController.setRequested);
+  app.post(Route.POST_REVIEW, initSession.init, app.locals.container.cradle.reviewController.submitReview);
 
   //DataController
   app.get(Route.DATA_PROCESS, initSession.init, app.locals.container.cradle.dataController.process);

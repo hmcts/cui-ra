@@ -64,7 +64,7 @@ export class DataController {
         serviceToken,
         payloadStore.idamToken,
         payloadStore.payload.hmctsServiceId,
-        flagResourceType.CASE,
+        flagResourceType.PARTY,
         true
       );
 
@@ -81,15 +81,23 @@ export class DataController {
       if (master.length > 0) {
         req.session.mastername = master[0].value.name;
         req.session.mastername_cy = master[0].value.name_cy;
+        req.session.newmanager?.enable(master[0].id, false);
       }
+
+      req.session.sessioninit = true;
+
+      //remove data from redis
+      this.redisClient.delete(id);
 
       //Redirect to the correct location
       if (req.session.existingmanager.data.length === 0) {
         //No Payload found redirect to new flags setup
-        return res.status(301).redirect(UrlRoute.make(Route.JOURNEY_NEW_FLAGS, {}, UrlRoute.url(req)));
+        return res
+          .status(301)
+          .redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: master[0].id }, UrlRoute.url(req)));
       } else {
         //Exisitng flags found redirect to exisiting flags
-        return res.status(301).redirect(UrlRoute.make(Route.JOURNEY_EXSITING_FLAGS, {}, UrlRoute.url(req)));
+        return res.status(301).redirect(UrlRoute.make(Route.OVERVIEW, {}, UrlRoute.url(req)));
       }
     } catch (e) {
       this.logger.error(e.message);

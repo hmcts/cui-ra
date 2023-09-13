@@ -124,4 +124,12 @@ describe('RedisClient', () => {
     // Check if logger.info is called with the correct message
     expect(mockedLogger.info).toHaveBeenCalledWith(`Redis attempting to Re-Connected to ${redisClient['url']}`);
   });
+
+  test('should return a unique string', async () => {
+    mockedRedisNode.exists = jest.fn().mockResolvedValue(false);
+    // Delete data
+    const uuid = await redisClient.generateUUID();
+
+    expect(uuid).toEqual(expect.any(String));
+  });
 });

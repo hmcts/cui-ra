@@ -1,12 +1,17 @@
-import { DataManagerDataObject } from '../interfaces';
+import { DataManagerDataObject, RedisClientInterface } from '../interfaces';
 
-import { Route, Status } from './../constants';
+import { PayloadBuilder } from './../builders';
+import { ErrorMessages, Route, Status } from './../constants';
+import { OutboundPayload } from './../models';
+import { UrlRoute } from './../utilities';
 
 import autobind from 'autobind-decorator';
 import { Request, Response } from 'express';
 
 @autobind
 export class ReviewController {
+  constructor(private redisClient: RedisClientInterface) {}
+
   public async get(req: Request, res: Response): Promise<void> {
     res.render('review', {
       welsh: false,
@@ -37,5 +42,26 @@ export class ReviewController {
     }
 
     res.redirect(Route.REVIEW);
+  }
+
+  public async submitReview(req: Request, res: Response): Promise<void> {
+    if (!req.session || !req.session.callbackUrl) {
+      throw ErrorMessages.UNEXPECTED_ERROR;
+    }
+    const payload: OutboundPayload = PayloadBuilder.build(req);
+
+    //gen id
+    const uuid = await this.redisClient.generateUUID();
+
+    //Save data to redis store
+    await this.redisClient.set(uuid, JSON.stringify(payload));
+
+    //Create Url from callback to service to redirect the user
+    const url = UrlRoute.make(req.session.callbackUrl, { id: uuid });
+
+    req.session.destroy(function () {});
+
+    //redirect back to invoking service with unique id
+    res.redirect(302, url);
   }
 }
