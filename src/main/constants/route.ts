@@ -18,4 +18,5 @@ export const Route = {
   PRIVACY_POLICY: '/home/privacy-policy',
   TERMS_AND_CONDITIONS: '/home/terms-and-conditions',
   ACCESSIBILITY_STATEMENT: '/home/accessibility-statement',
+  BACK: '/back',
 } as const;

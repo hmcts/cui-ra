@@ -22,6 +22,11 @@ export class DemoController {
   public async get(req: Request, res: Response): Promise<void> {
     // Add code here to populate payloads/session for demo purposes.
     // Speak to Sonny about multiple versions to test blank payload and populated payload
+    req.session.hmctsserviceid = 'PFL';
+    req.session.history = [];
+    req.session.masterflagcode = 'RA0001';
+    req.session.mastername = 'Reasonable Adjustments';
+    req.session.partyname = 'john doe';
 
     res.render('demo');
   }
@@ -35,9 +40,6 @@ export class DemoController {
       const NewFlag = new NewFlagsManager();
       NewFlag.set(this.new);
 
-      req.session.masterflagcode = 'RA0001';
-      req.session.mastername = 'Reasonable Adjustments';
-      req.session.partyname = 'john doe';
       req.session.newmanager = NewFlag;
       req.session.existingmanager = new ExistingFlagsManager();
       req.session.callbackUrl = 'https://localhost/callback/:id';
@@ -54,9 +56,6 @@ export class DemoController {
       const NewFlag = new NewFlagsManager();
       NewFlag.set(this.new);
 
-      req.session.masterflagcode = 'RA0001';
-      req.session.mastername = 'Reasonable Adjustments';
-      req.session.partyname = 'john doe';
       req.session.existingmanager = dataManagerExisting;
       req.session.newmanager = NewFlag;
       req.session.callbackUrl = 'https://localhost/callback/:id';
