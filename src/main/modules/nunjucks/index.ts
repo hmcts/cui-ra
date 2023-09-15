@@ -37,9 +37,6 @@ export class Nunjucks {
           const fallback = res.__(key);
           result = res.__(`${serviceKey}:${fallback}`);
           if (result !== serviceKey && result !== key) {
-            console.log('serviceKey',serviceKey);
-            console.log('fallback',fallback);
-            console.log('result',result);
             return result;
           }
         }
