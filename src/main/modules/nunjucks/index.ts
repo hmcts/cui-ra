@@ -24,6 +24,11 @@ export class Nunjucks {
       res.locals.common = Common;
       res.locals.pagePath = req.path;
       res.locals.fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+      res.locals.welsh = false;
+      res.locals.welsh = req.session.welsh;
+      if (res.locals.welsh && res.locals.getLocale() !== 'cy') {
+        res.locals.setLocale(res, 'cy');
+      }
       res.locals._t = (key: string) => {
         const serviceId = req.session && req.session.hmctsserviceid ? req.session.hmctsserviceid : null;
         let result;
@@ -31,7 +36,10 @@ export class Nunjucks {
           const serviceKey = `${serviceId}.${key}`;
           const fallback = res.__(key);
           result = res.__(`${serviceKey}:${fallback}`);
-          if (result !== (serviceKey && key)) {
+          if (result !== serviceKey && result !== key) {
+            console.log('serviceKey',serviceKey);
+            console.log('fallback',fallback);
+            console.log('result',result);
             return result;
           }
         }

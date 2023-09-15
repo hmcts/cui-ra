@@ -129,6 +129,9 @@ export const InboundPayloadSchema: SchemaType = {
     correlationId: {
       type: 'string',
     },
+    language: {
+      type: 'string',
+    },
     existingFlags: existingFlagsSchema,
   },
   required: ['callbackURL', 'hmctsServiceId', 'masterFlagCode', 'correlationId', 'existingFlags'],

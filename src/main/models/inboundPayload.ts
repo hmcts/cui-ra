@@ -25,6 +25,7 @@ export class InboundPayload implements PayloadInbound {
   hmctsServiceId!: string;
   masterFlagCode!: string;
   correlationId!: string;
+  language!: string;
 }
 
 export class MainPayloadDetail implements PayloadDetail {
