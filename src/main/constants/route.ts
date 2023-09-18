@@ -19,4 +19,5 @@ export const Route = {
   TERMS_AND_CONDITIONS: '/home/terms-and-conditions',
   ACCESSIBILITY_STATEMENT: '/home/accessibility-statement',
   BACK: '/back',
+  CANCEL: '/cancel',
 } as const;
