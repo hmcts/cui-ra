@@ -35,6 +35,9 @@ export class DemoController {
   public async startDemo(req: Request, res: Response): Promise<void> {
     const action = req.query.action;
 
+    //const host = 'https://localhost:3100';
+    const host = 'https://cui-ra.aat.platform.hmcts.net'
+
     switch (action) {
       case 'new': {
         const NewFlag = new NewFlagsManager();
@@ -42,7 +45,7 @@ export class DemoController {
 
         req.session.newmanager = NewFlag;
         req.session.existingmanager = new ExistingFlagsManager();
-        req.session.callbackUrl = 'https://localhost/callback/:id';
+        req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
         req.session.logoutUrl = 'https://localhost/logout';
         req.session.hmctsserviceid = 'PFL';
         req.session.sessioninit = true;
@@ -56,7 +59,7 @@ export class DemoController {
 
         req.session.newmanager = NewFlag;
         req.session.existingmanager = new ExistingFlagsManager();
-        req.session.callbackUrl = 'https://localhost/callback/:id';
+        req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
         req.session.logoutUrl = 'https://localhost/logout';
         req.session.hmctsserviceid = 'PFL';
         req.session.sessioninit = true;
@@ -74,7 +77,7 @@ export class DemoController {
 
         req.session.existingmanager = dataManagerExisting;
         req.session.newmanager = NewFlag;
-        req.session.callbackUrl = 'https://localhost/callback/:id';
+        req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
         req.session.logoutUrl = 'https://localhost/logout';
         req.session.hmctsserviceid = 'PFL';
         req.session.sessioninit = true;
@@ -84,5 +87,13 @@ export class DemoController {
       }
     }
     return res.render('demo');
+  }
+
+  public async serviceDummy(req: Request, res: Response): Promise<Response> {
+    const id = req.params.id;
+
+    return res.send(
+      `This is a service dummy page. Copy the id: ${id} and use it in the get request to get the payload`
+    );
   }
 }
