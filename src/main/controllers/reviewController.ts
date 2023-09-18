@@ -13,6 +13,10 @@ export class ReviewController {
   constructor(private redisClient: RedisClientInterface) {}
 
   public async get(req: Request, res: Response): Promise<void> {
+    if (req.session.callbackUrl) {
+      const url = UrlRoute.make(req.session.callbackUrl, { id: '' });
+      res.set('Content-Security-Policy', `form-action 'self' ${url}`);
+    }
     res.render('review', {
       welsh: false,
       requested: req.session.existingmanager?.find('value.status', 'Requested'),
@@ -44,7 +48,7 @@ export class ReviewController {
     res.redirect(Route.REVIEW);
   }
 
-  public async submitReview(req: Request, res: Response): Promise<void> {
+  public async post(req: Request, res: Response): Promise<Response | void> {
     if (!req.session || !req.session.callbackUrl) {
       throw ErrorMessages.UNEXPECTED_ERROR;
     }
@@ -60,8 +64,9 @@ export class ReviewController {
     const url = UrlRoute.make(req.session.callbackUrl, { id: uuid });
 
     req.session.destroy(function () {});
+    res.set('Content-Security-Policy', `form-action 'self' ${url}`);
 
     //redirect back to invoking service with unique id
-    res.redirect(302, url);
+    return res.status(301).redirect(url);
   }
 }

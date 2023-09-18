@@ -25,7 +25,8 @@ export class DemoController {
     req.session.hmctsserviceid = 'PFL';
     req.session.history = [];
     req.session.masterflagcode = 'RA0001';
-    req.session.mastername = 'Reasonable Adjustments';
+    req.session.mastername = 'Reasonable adjustment';
+    req.session.mastername_cy = 'Addasiad rhesymol';
     req.session.partyname = 'john doe';
 
     res.render('demo');
@@ -34,38 +35,65 @@ export class DemoController {
   public async startDemo(req: Request, res: Response): Promise<void> {
     const action = req.query.action;
 
-    if (action === 'new') {
-      // Redirect user to category page with enough payload data to render category flags
-      // (This will need to mimic the data we should get back from refdata - see unit test mock data)
-      const NewFlag = new NewFlagsManager();
-      NewFlag.set(this.new);
+    //const host = 'https://localhost:3100';
+    const host = 'https://cui-ra.aat.platform.hmcts.net';
 
-      req.session.newmanager = NewFlag;
-      req.session.existingmanager = new ExistingFlagsManager();
-      req.session.callbackUrl = 'https://localhost/callback/:id';
-      req.session.logoutUrl = 'https://localhost/logout';
-      req.session.hmctsserviceid = 'PFL';
-      req.session.sessioninit = true;
+    switch (action) {
+      case 'new': {
+        const NewFlag = new NewFlagsManager();
+        NewFlag.set(this.new);
 
-      return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
-    } else if (action === 'existing') {
-      // Redirect user to overview page with demo data
-      const dataManagerExisting: ExistingFlagsManager = new ExistingFlagsManager();
-      dataManagerExisting.set(this.existing);
+        req.session.newmanager = NewFlag;
+        req.session.existingmanager = new ExistingFlagsManager();
+        req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
+        req.session.logoutUrl = 'https://localhost/logout';
+        req.session.hmctsserviceid = 'PFL';
+        req.session.sessioninit = true;
+        req.session.welsh = false;
 
-      const NewFlag = new NewFlagsManager();
-      NewFlag.set(this.new);
+        return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
+      }
+      case 'new_cy': {
+        const NewFlag = new NewFlagsManager();
+        NewFlag.set(this.new);
 
-      req.session.existingmanager = dataManagerExisting;
-      req.session.newmanager = NewFlag;
-      req.session.callbackUrl = 'https://localhost/callback/:id';
-      req.session.logoutUrl = 'https://localhost/logout';
-      req.session.hmctsserviceid = 'PFL';
-      req.session.sessioninit = true;
+        req.session.newmanager = NewFlag;
+        req.session.existingmanager = new ExistingFlagsManager();
+        req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
+        req.session.logoutUrl = 'https://localhost/logout';
+        req.session.hmctsserviceid = 'PFL';
+        req.session.sessioninit = true;
+        req.session.welsh = true;
+        //res.locals.setLocale(res, 'cy');
 
-      res.redirect('home/overview');
-    } else {
-      res.render('demo');
+        return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
+      }
+      case 'existing': {
+        const dataManagerExisting: ExistingFlagsManager = new ExistingFlagsManager();
+        dataManagerExisting.set(this.existing);
+
+        const NewFlag = new NewFlagsManager();
+        NewFlag.set(this.new);
+
+        req.session.existingmanager = dataManagerExisting;
+        req.session.newmanager = NewFlag;
+        req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
+        req.session.logoutUrl = 'https://localhost/logout';
+        req.session.hmctsserviceid = 'PFL';
+        req.session.sessioninit = true;
+        req.session.welsh = false;
+
+        return res.redirect('home/overview');
+      }
     }
+    return res.render('demo');
+  }
+
+  public async serviceDummy(req: Request, res: Response): Promise<Response> {
+    const id = req.params.id;
+
+    return res.send(
+      `This is a service dummy page. Copy the id: ${id} and use it in the get request to get the payload`
+    );
   }
 }

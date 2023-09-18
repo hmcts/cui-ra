@@ -30,21 +30,17 @@ export default function (app: Application): void {
   //if (app.locals.ENV !== 'production') {
   app.get(Route.DEMO, history.add, app.locals.container.cradle.demoController.get);
   app.get(Route.START_DEMO, history.add, app.locals.container.cradle.demoController.startDemo);
+  app.get(Route.DEMO_SERVICE_DUMMY, app.locals.container.cradle.demoController.serviceDummy);
   //}
 
   // Review Controller
   app.get(Route.REVIEW, initSession.init, history.add, app.locals.container.cradle.reviewController.get);
-
   app.get(Route.SET_INACTIVE, initSession.init, app.locals.container.cradle.reviewController.setInactive);
-
   app.get(Route.SET_REQUESTED, initSession.init, app.locals.container.cradle.reviewController.setRequested);
-  app.post(Route.POST_REVIEW, initSession.init, app.locals.container.cradle.reviewController.submitReview);
+  app.post(Route.REVIEW, initSession.init, app.locals.container.cradle.reviewController.post);
 
   //DataController
   app.get(Route.DATA_PROCESS, app.locals.container.cradle.dataController.process);
-
-  //Secure api
-  app.use(Route.API_ROOT, new ServiceAuthentication(app.locals.container.cradle.serviceAuth).check);
 
   app.get(Route.BACK, (req, res) => {
     if (req.session.history && req.session.history.length > 1) {
@@ -59,6 +55,9 @@ export default function (app: Application): void {
 
     return res.send('No more history to navigate back');
   });
+
+  //Secure api
+  app.use(Route.API_ROOT, new ServiceAuthentication(app.locals.container.cradle.serviceAuth).check);
 
   //Load all api routes
   app.post(

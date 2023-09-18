@@ -24,7 +24,7 @@ export class FormController {
       throw new Error(ErrorMessages.UNEXPECTED_ERROR);
     }
 
-    return FormBuilder.build(res, flag, req.session.newmanager?.getChildren(id));
+    return FormBuilder.build(req, res, flag, req.session.newmanager?.getChildren(id));
   }
 
   public async post(req: Request, res: Response): Promise<Response | void> {
@@ -43,7 +43,7 @@ export class FormController {
     //validate form body
     const [bodyValid, bodyErrors] = await FormValidator.validateBody(flag, formModel);
     if (!bodyValid) {
-      return FormBuilder.build(res, flag, req.session.newmanager?.getChildren(id), bodyErrors);
+      return FormBuilder.build(req, res, flag, req.session.newmanager?.getChildren(id), bodyErrors);
     }
 
     //check if no support has been selected
@@ -60,7 +60,7 @@ export class FormController {
       //rerender the screen with errors
       const keys = Object.keys(validationErrors);
       if (keys.length > 0) {
-        return FormBuilder.build(res, parent, children, validationErrors);
+        return FormBuilder.build(req, res, parent, children, validationErrors);
       }
       //only save back once all validation has passed
       req.session.newmanager?.save(formData);

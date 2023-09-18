@@ -1,7 +1,5 @@
 {% extends "template.njk" %}
 
-{% set welsh = false %}
-
 {% if welsh === false %}
     {% set nameValue = 'name' %}
     {% set master_name = mastername %}
@@ -23,6 +21,12 @@
     <form action="/start-demo" method="get">
         <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" value="new" name="action">
             Enter New Journey
+        </button>
+    </form>
+
+    <form action="/start-demo" method="get">
+        <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" value="new_cy" name="action">
+            Enter New Journey welsh
         </button>
     </form>
 
