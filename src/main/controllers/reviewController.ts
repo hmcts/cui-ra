@@ -13,7 +13,7 @@ export class ReviewController {
   constructor(private redisClient: RedisClientInterface) {}
 
   public async get(req: Request, res: Response): Promise<void> {
-    if(req.session.callbackUrl){
+    if (req.session.callbackUrl) {
       const url = UrlRoute.make(req.session.callbackUrl, { id: '' });
       res.set('Content-Security-Policy', `form-action 'self' ${url}`);
     }
@@ -48,8 +48,7 @@ export class ReviewController {
     res.redirect(Route.REVIEW);
   }
 
-  public async post(req: Request, res: Response): Promise<Response|void> {
-
+  public async post(req: Request, res: Response): Promise<Response | void> {
     if (!req.session || !req.session.callbackUrl) {
       throw ErrorMessages.UNEXPECTED_ERROR;
     }

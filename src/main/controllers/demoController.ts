@@ -36,7 +36,7 @@ export class DemoController {
     const action = req.query.action;
 
     //const host = 'https://localhost:3100';
-    const host = 'https://cui-ra.aat.platform.hmcts.net'
+    const host = 'https://cui-ra.aat.platform.hmcts.net';
 
     switch (action) {
       case 'new': {
