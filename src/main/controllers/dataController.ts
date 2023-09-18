@@ -9,6 +9,7 @@ import {
 } from './../interfaces';
 import { ExistingFlagsManager, NewFlagsManager } from './../managers';
 import { InboundPayloadStore } from './../models';
+import { languages } from './../modules/translation';
 import { flagResourceType } from './../services';
 import { DataTimeUtilities, UrlRoute } from './../utilities';
 
@@ -53,6 +54,8 @@ export class DataController {
       req.session.logoutUrl = payloadStore.payload.logoutUrl;
       req.session.masterflagcode = payloadStore.payload.masterFlagCode || 'RA0001';
       req.session.hmctsserviceid = payloadStore.payload.hmctsServiceId;
+      req.session.welsh = payloadStore.payload.language === languages.Cy;
+
       //Populate the existing manager
       req.session.existingmanager = new ExistingFlagsManager();
       req.session.existingmanager.set(payloadStore.payload.existingFlags.details);

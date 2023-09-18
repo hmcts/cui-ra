@@ -50,6 +50,7 @@ describe('Review Controller', () => {
       send: jest.fn(),
       redirect: jest.fn().mockReturnThis(),
       render: jest.fn().mockReturnThis(),
+      set: jest.fn(),
     };
     reviewController = new ReviewController(mockedRedis);
   });
@@ -115,8 +116,8 @@ describe('Review Controller', () => {
 
   test('Should submit review and redirect to callback', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    await reviewController.submitReview(mockRequest as Request, mockResponse as Response);
+    await reviewController.post(mockRequest as Request, mockResponse as Response);
 
-    expect(mockResponse.redirect).toBeCalledWith(302, 'https://localhost/callback/random-string-uuid');
+    expect(mockResponse.redirect).toBeCalledWith('https://localhost/callback/random-string-uuid');
   });
 });

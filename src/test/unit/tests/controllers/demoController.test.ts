@@ -58,6 +58,17 @@ describe('Demo Controller', () => {
     );
   });
 
+  test('Should render intro page', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    const id = 'PF0001-RA0001';
+    mockRequest.query = { action: 'new_cy' };
+    demoController.startDemo(mockRequest, mockResponse);
+
+    expect(mockResponse.redirect).toBeCalledWith(
+      UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: id }, UrlRoute.url(mockRequest))
+    );
+  });
+
   test('Should render overview page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     const existingJson: PayloadCollectionItem[] = JSON.parse(

@@ -16,5 +16,6 @@ declare module 'express-session' {
     newmanager: NewFlagsManager;
     sessioninit: boolean;
     history: string[];
+    welsh: boolean;
   }
 }
