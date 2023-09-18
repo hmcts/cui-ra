@@ -64,6 +64,7 @@ export class MainPayloadFlagPath implements PayloadPath {
 }
 
 export class OutboundPayload {
+  action!: string;
   flagsAsSupplied: MainPayloadDetail | undefined;
   replacementFlags: MainPayloadDetail | undefined;
 }
