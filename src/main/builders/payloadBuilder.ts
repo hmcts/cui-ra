@@ -1,10 +1,11 @@
+import { Actions } from './../constants';
 import { DataManagerDataObject, PayloadCollectionItem } from './../interfaces';
 import { MainPayloadDetail, MainPayloadDetailCollection, OutboundPayload } from './../models';
 
 import { Request } from 'express';
 
 export class PayloadBuilder {
-  public static build(req: Request): OutboundPayload {
+  public static build(req: Request, action: string = Actions.SUBMIT): OutboundPayload {
     const outbound = new OutboundPayload();
     const flagsAsSupplied = new MainPayloadDetail();
     const replacementFlags = new MainPayloadDetail();
@@ -49,6 +50,7 @@ export class PayloadBuilder {
     replacementFlags.details = [...edata, ...ndata];
     outbound.flagsAsSupplied = flagsAsSupplied;
     outbound.replacementFlags = replacementFlags;
+    outbound.action = action;
     return outbound;
   }
 }
