@@ -4,6 +4,7 @@ import { HomeController } from '../../../../main/controllers';
 import { Session, SessionData } from 'express-session';
 import { PayloadCollectionItem } from '../../../../main/interfaces';
 import { ExistingFlagsManager } from '../../../../main/managers';
+import { Route } from '../../../../main/constants';
 
 const host = 'www.test.com';
 const protocol = 'https';
@@ -19,7 +20,12 @@ describe('Home Controller', () => {
     mockRequest = {
       body: {},
       params: {},
-      session: { partyName: '', existingManager: {} } as unknown as Session & Partial<SessionData>,
+      session: { 
+        partyName: '',
+        logoutUrl: host,
+        existingManager: {},
+        destroy: jest.fn().mockImplementation(),
+      } as unknown as Session & Partial<SessionData>,
       protocol: protocol,
       headers: {
         host: host,
@@ -90,5 +96,29 @@ describe('Home Controller', () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     homeController.accessibilityStatement(mockRequest as Request, mockResponse as Response);
     expect(mockResponse.render).toBeCalledWith('accessibility-statement');
+  });
+
+  test('Should redirect to logoutUrl', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    homeController.signOut(mockRequest as Request, mockResponse as Response);
+    expect(mockResponse.redirect).toBeCalledWith(host);
+    //expect(mockRequest.session?.destroy).toHaveBeenCalled();
+  });
+
+  test('Should redirect to root', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    if (mockRequest.session)
+    {
+      mockRequest.session.logoutUrl = "";
+
+      homeController.signOut(mockRequest as Request, mockResponse as Response);
+      expect(mockResponse.redirect).toBeCalledWith(Route.ROOT);
+    }
+  });
+
+  test('Should clear session data on logout', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    homeController.signOut(mockRequest as Request, mockResponse as Response);
+    expect(mockRequest.session?.destroy).toHaveBeenCalled();
   });
 });
