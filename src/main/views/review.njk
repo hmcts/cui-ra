@@ -75,7 +75,7 @@
                             {% endif %}
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
-                            <a class='govuk-link govuk-link--no-visited-state' href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: page } ) }}">{{ _t("review.actions.change") }}</a>
+                            <a class='govuk-link govuk-link--no-visited-state' href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: page } ) }}?change=true">{{ _t("review.actions.change") }}</a>
                         </td>
                     </tr>
                 {% endfor %}
@@ -106,7 +106,7 @@
         </table>
         {% endif %}
 
-        <a href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' } ) }}" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        <a href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' } ) }}?change=true" class="govuk-button govuk-button--secondary" data-module="govuk-button">
             {{ _t("review.actions.new") }}
         </a>
         <form method="POST">
