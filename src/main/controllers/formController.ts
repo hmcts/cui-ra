@@ -29,7 +29,7 @@ export class FormController {
 
   public async post(req: Request, res: Response): Promise<Response | void> {
     const id = req.params.id;
-    const change = req.query.change;
+    const change = !!(req.query && typeof req.query.change !== 'undefined');
 
     //Get flag
     const flag = req.session.newmanager?.get(id);
