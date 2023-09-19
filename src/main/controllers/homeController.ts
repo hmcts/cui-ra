@@ -1,4 +1,4 @@
-import { Status } from '../constants';
+import { Status, ErrorMessages, Route } from '../constants';
 
 import autobind from 'autobind-decorator';
 import { Request, Response } from 'express';
@@ -37,5 +37,20 @@ export class HomeController {
 
   public async accessibilityStatement(req: Request, res: Response): Promise<void> {
     res.render('accessibility-statement');
+  }
+
+  public async signOut(req: Request, res: Response): Promise<void> {
+    if (!req.session) {
+      throw ErrorMessages.UNEXPECTED_ERROR;
+    }
+    
+    // Check if user logged in
+      // Clear session
+
+    if (!req.session.logoutUrl) {
+      return res.redirect(req.session.logoutUrl)
+    }
+
+    return res.redirect(Route.ROOT);
   }
 }

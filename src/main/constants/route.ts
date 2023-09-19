@@ -20,4 +20,5 @@ export const Route = {
   ACCESSIBILITY_STATEMENT: '/home/accessibility-statement',
   BACK: '/back',
   CANCEL: '/cancel',
+  SIGN_OUT: '/sign-out',
 } as const;
