@@ -20,7 +20,7 @@ describe('Home Controller', () => {
     mockRequest = {
       body: {},
       params: {},
-      session: { 
+      session: {
         partyName: '',
         logoutUrl: host,
         existingManager: {},
@@ -107,9 +107,8 @@ describe('Home Controller', () => {
 
   test('Should redirect to root', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    if (mockRequest.session)
-    {
-      mockRequest.session.logoutUrl = "";
+    if (mockRequest.session) {
+      mockRequest.session.logoutUrl = '';
 
       homeController.signOut(mockRequest as Request, mockResponse as Response);
       expect(mockResponse.redirect).toBeCalledWith(Route.ROOT);
