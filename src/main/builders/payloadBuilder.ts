@@ -17,37 +17,41 @@ export class PayloadBuilder {
       flagsAsSupplied.roleOnCase = req.session.roleoncase;
       replacementFlags.roleOnCase = req.session.roleoncase;
     }
-    //populate Details
-    let edata: MainPayloadDetailCollection[] = [];
-    let ndata: MainPayloadDetailCollection[] = [];
-    //flagsAsSupplied only return if there have been changes
-    if (req.session.existingmanager?.modified === true) {
-      const exisitingData = req.session.existingmanager?.data;
-      if (exisitingData) {
-        edata = exisitingData.map((item: PayloadCollectionItem) => {
-          return {
-            id: item.id,
-            value: item.value,
-          } as MainPayloadDetailCollection;
-        });
-      }
-      //supplied flags have been modified
-      flagsAsSupplied.details = edata;
-    }
-    if (req.session.newmanager?.modified === true) {
-      const newData: DataManagerDataObject[] = req.session.newmanager?.data;
-      if (newData) {
-        ndata = newData
-          .filter((item: DataManagerDataObject) => item._enabled === true && item._isParent === false)
-          .map((item: DataManagerDataObject) => {
+
+    if (action === Actions.SUBMIT) {
+      //populate Details
+      let edata: MainPayloadDetailCollection[] = [];
+      let ndata: MainPayloadDetailCollection[] = [];
+      //flagsAsSupplied only return if there have been changes
+      if (req.session.existingmanager?.modified === true) {
+        const exisitingData = req.session.existingmanager?.data;
+        if (exisitingData) {
+          edata = exisitingData.map((item: PayloadCollectionItem) => {
             return {
+              id: item.id,
               value: item.value,
             } as MainPayloadDetailCollection;
           });
+        }
+        //supplied flags have been modified
+        flagsAsSupplied.details = edata;
       }
+      if (req.session.newmanager?.modified === true) {
+        const newData: DataManagerDataObject[] = req.session.newmanager?.data;
+        if (newData) {
+          ndata = newData
+            .filter((item: DataManagerDataObject) => item._enabled === true && item._isParent === false)
+            .map((item: DataManagerDataObject) => {
+              return {
+                value: item.value,
+              } as MainPayloadDetailCollection;
+            });
+        }
+      }
+      //has to be outside of if as it can contain updated if they exist
+      replacementFlags.details = [...edata, ...ndata];
     }
-    //has to be outside of if as it can contain updated if they exist
-    replacementFlags.details = [...edata, ...ndata];
+
     outbound.flagsAsSupplied = flagsAsSupplied;
     outbound.replacementFlags = replacementFlags;
     outbound.action = action;
