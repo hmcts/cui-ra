@@ -147,6 +147,56 @@ describe('FormController', () => {
     );
   });
 
+  test('should handle post request with valid flag and data - changed = true', async () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
+    )[0];
+    const child: DataManagerDataObject[] = dataProcessorResultJson.filter((item: DataManagerDataObject) =>
+      parent._childIds.includes(item.id)
+    );
+    const next: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-RA0001-RA0004'
+    )[0];
+    // Set up mock data and session
+    const mockSession = {
+      newmanager: {
+        get: jest.fn().mockReturnValue(parent),
+        getChildren: jest.fn().mockReturnValue(child),
+        save: jest.fn(),
+        getNext: jest.fn().mockReturnValue(next),
+      },
+    };
+
+    mockedRequest = mockRequest(null);
+    mockedResponse = mockResponse();
+
+    mockedRequest.query = { change: true };
+    mockedRequest.params = { id: 'someId' };
+    mockedRequest.session = mockSession;
+    mockedRequest.protocol = protocol;
+    mockedRequest.headers = {
+      host: host,
+    };
+
+    const PostData = {
+      'PF0001-RA0001-RA0002': {
+        flagComment: 'one',
+      },
+    };
+
+    mockedRequest.body = {
+      data: PostData,
+      enabled: ['PF0001-RA0001-RA0004'],
+    }; // Mock request body
+
+    await formController.post(mockedRequest, mockedResponse);
+
+    // Assert expected behavior here
+    expect(mockedResponse.redirect).toHaveBeenCalledWith(
+      `${UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: next.id }, UrlRoute.url(mockedRequest))}?change=true`
+    );
+  });
+
   test('should handle post request with checkbox no support selected', async () => {
     const dataManager = new NewFlagsManager();
     dataManager.set(dataProcessorResultJson);
