@@ -107,6 +107,13 @@ describe('Review Controller', () => {
     expect(mockResponse.redirect).toBeCalledWith('/review');
   });
 
+  test('Should cancel and redirect to callback', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    await reviewController.cancel(mockRequest as Request, mockResponse as Response);
+
+    expect(mockResponse.redirect).toBeCalledWith(302, 'https://localhost/callback/random-string-uuid');
+  });
+
   test('Should submit review and redirect to callback', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     await reviewController.post(mockRequest as Request, mockResponse as Response);

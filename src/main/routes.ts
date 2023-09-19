@@ -37,6 +37,7 @@ export default function (app: Application): void {
   app.get(Route.REVIEW, initSession.init, history.add, app.locals.container.cradle.reviewController.get);
   app.get(Route.SET_INACTIVE, initSession.init, app.locals.container.cradle.reviewController.setInactive);
   app.get(Route.SET_REQUESTED, initSession.init, app.locals.container.cradle.reviewController.setRequested);
+  app.get(Route.CANCEL, initSession.init, app.locals.container.cradle.reviewController.cancel);
   app.post(Route.REVIEW, initSession.init, app.locals.container.cradle.reviewController.post);
 
   //DataController

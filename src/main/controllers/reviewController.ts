@@ -1,7 +1,7 @@
 import { DataManagerDataObject, RedisClientInterface } from '../interfaces';
 
 import { PayloadBuilder } from './../builders';
-import { ErrorMessages, Route, Status } from './../constants';
+import { Actions, ErrorMessages, Route, Status } from './../constants';
 import { OutboundPayload } from './../models';
 import { UrlRoute } from './../utilities';
 
@@ -48,10 +48,33 @@ export class ReviewController {
     res.redirect(Route.REVIEW);
   }
 
+  public async cancel(req: Request, res: Response): Promise<void> {
+    if (!req.session || !req.session.callbackUrl) {
+      throw ErrorMessages.UNEXPECTED_ERROR;
+    }
+
+    const payload: OutboundPayload = PayloadBuilder.build(req, Actions.CANCEL);
+
+    //gen id
+    const uuid = await this.redisClient.generateUUID();
+
+    //Save data to redis store
+    await this.redisClient.set(uuid, JSON.stringify(payload));
+
+    //Create Url from callback to service to redirect the user
+    const url = UrlRoute.make(req.session.callbackUrl, { id: uuid });
+
+    req.session.destroy(function () {});
+
+    //redirect back to invoking service with unique id
+    res.redirect(302, url);
+  }
+
   public async post(req: Request, res: Response): Promise<Response | void> {
     if (!req.session || !req.session.callbackUrl) {
       throw ErrorMessages.UNEXPECTED_ERROR;
     }
+
     const payload: OutboundPayload = PayloadBuilder.build(req);
 
     //gen id

@@ -4,7 +4,7 @@ import { ExistingFlagsManager, NewFlagsManager } from '../../../../main/managers
 import { DataManagerDataObject, PayloadCollectionItem } from './../../../../main/interfaces';
 import { PayloadBuilder } from './../../../../main/builders';
 import { OutboundPayload } from './../../../../main/models';
-import { Status } from './../../../../main/constants';
+import { Actions, Status } from './../../../../main/constants';
 
 const dataProcessorResultJson: DataManagerDataObject[] = JSON.parse(
   fs.readFileSync(__dirname + '/../../data/data-processor-results.json', 'utf-8')
@@ -46,6 +46,7 @@ describe('PayloadBuilder', () => {
 
     expect(results.flagsAsSupplied?.details).toHaveLength(0);
     expect(results.replacementFlags?.details).toHaveLength(0);
+    expect(results.action).toBe(Actions.SUBMIT);
   });
 
   test('should generate payload both new and existing should not be empty', async () => {
@@ -55,6 +56,7 @@ describe('PayloadBuilder', () => {
 
     expect(results.flagsAsSupplied?.details).not.toHaveLength(0);
     expect(results.replacementFlags?.details).not.toHaveLength(0);
+    expect(results.action).toBe(Actions.SUBMIT);
   });
 
   test('should generate payload replacementFlags should not be empty', async () => {
@@ -70,6 +72,7 @@ describe('PayloadBuilder', () => {
 
     expect(results.flagsAsSupplied?.details).toHaveLength(0);
     expect(results.replacementFlags?.details).not.toHaveLength(0);
+    expect(results.action).toBe(Actions.SUBMIT);
   });
 
   test('should generate payload and check', async () => {
@@ -85,5 +88,16 @@ describe('PayloadBuilder', () => {
 
     expect(results.flagsAsSupplied?.details).not.toHaveLength(0);
     expect(results.replacementFlags?.details).not.toHaveLength(0);
+    expect(results.action).toBe(Actions.SUBMIT);
+  });
+
+  test('should not generate payload, both new and existing should be empty', async () => {
+    mockedRequest.session.existingmanager?.setStatus('RA0001-RA0004-RA0009-OT0001', Status.INACTIVE);
+
+    const results: OutboundPayload = PayloadBuilder.build(mockedRequest, Actions.CANCEL);
+
+    expect(results.flagsAsSupplied?.details).toHaveLength(0);
+    expect(results.replacementFlags?.details).toHaveLength(0);
+    expect(results.action).toBe(Actions.CANCEL);
   });
 });

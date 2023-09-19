@@ -63,10 +63,15 @@
       {% block form %}
       {% endblock %}
 
-      {{ govukButton({
-        text: _t('form.submit_button'),
-        type: "submit"
-      }) }}
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: _t('form.submit_button'),
+          type: "submit",
+          preventDoubleClick: true
+        }) }}
+
+        <a href="{{ route.CANCEL }}" class="govuk-link govuk-link--no-visited-state">{{ _t('cancel') }}</a>
+      </div>
     </form>
 
   </div>

@@ -109,16 +109,15 @@
         <a href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' } ) }}" class="govuk-button govuk-button--secondary" data-module="govuk-button">
             {{ _t("review.actions.new") }}
         </a>
-
-        <div class="govuk-button-group">
-            <form method="POST">
+        <form method="POST">
+            <div class="govuk-button-group">       
                 <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
                     {{ _t('review.actions.submit') }}
                 </button>
-            </form>
-
-            <a class="govuk-link govuk-link--no-visited-state" href="#">{{ _t('cancel') }}</a>
-        </div>
+        
+                <a class="govuk-link govuk-link--no-visited-state" href="{{ route.CANCEL }}">{{ _t('cancel') }}</a>
+            </div>
+         </form>
     </div>
   </div>
 {% endblock %}
