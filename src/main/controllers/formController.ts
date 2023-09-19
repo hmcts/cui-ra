@@ -29,6 +29,7 @@ export class FormController {
 
   public async post(req: Request, res: Response): Promise<Response | void> {
     const id = req.params.id;
+    const change = !!(req.query && typeof req.query.change !== 'undefined');
 
     //Get flag
     const flag = req.session.newmanager?.get(id);
@@ -72,11 +73,18 @@ export class FormController {
     //process the form and produce the data used to validate and save
     const next = req.session.newmanager?.getNext(id);
 
+    let query = '';
+    if (change) {
+      query = '?change=true';
+    }
+
+    //check where to redirect the user. next page for new journey or back to the review page
+
     if (!next) {
       //go to summary page as there are no more steps
       return res.redirect(Route.REVIEW);
     }
 
-    return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: next.id }, UrlRoute.url(req)));
+    return res.redirect(`${UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: next.id }, UrlRoute.url(req))}${query}`);
   }
 }
