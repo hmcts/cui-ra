@@ -15,6 +15,7 @@ import { Request, Response } from 'express';
 export class FormController {
   public async display(req: Request, res: Response): Promise<void | Response> {
     const id = req.params.id;
+    const change = !!(req.query && typeof req.query.change !== 'undefined');
 
     //Get flag
     const flag = req.session.newmanager?.get(id);
@@ -22,6 +23,10 @@ export class FormController {
     if (!flag) {
       //throw error
       throw new Error(ErrorMessages.UNEXPECTED_ERROR);
+    }
+
+    if (change) {
+      res.locals.change = true;
     }
 
     return FormBuilder.build(req, res, flag, req.session.newmanager?.getChildren(id));
@@ -75,6 +80,7 @@ export class FormController {
 
     let query = '';
     if (change) {
+      res.locals.change = 'true';
       query = '?change=true';
     }
 
