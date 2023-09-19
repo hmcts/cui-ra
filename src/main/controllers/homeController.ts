@@ -1,4 +1,4 @@
-import { Status, ErrorMessages, Route } from '../constants';
+import { Route, Status } from '../constants';
 
 import autobind from 'autobind-decorator';
 import { Request, Response } from 'express';
@@ -40,15 +40,12 @@ export class HomeController {
   }
 
   public async signOut(req: Request, res: Response): Promise<void> {
-    if (!req.session) {
-      throw ErrorMessages.UNEXPECTED_ERROR;
-    }
-    
-    // Check if user logged in
-      // Clear session
+    const logoutUrl = req.session.logoutUrl;
 
-    if (!req.session.logoutUrl) {
-      return res.redirect(req.session.logoutUrl)
+    req.session.destroy(function () {});
+
+    if (logoutUrl) {
+      return res.redirect(logoutUrl);
     }
 
     return res.redirect(Route.ROOT);
