@@ -54,7 +54,7 @@ export default function (app: Application): void {
       }
     }
 
-    return res.send('No more history to navigate back');
+    return res.redirect(Route.CANCEL);
   });
 
   //Secure api
