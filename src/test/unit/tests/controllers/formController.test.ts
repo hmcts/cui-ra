@@ -42,6 +42,7 @@ describe('FormController', () => {
     mockedResponse = mockResponse();
 
     mockedRequest.params = { id: 'someId' };
+    mockedRequest.query = { change: 'true' };
     mockedRequest.session = mockSession;
 
     await formController.display(mockedRequest, mockedResponse);

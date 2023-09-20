@@ -14,8 +14,9 @@ const history = new History();
 export default function (app: Application): void {
   // Home Controller
   app.get(Route.ROOT, history.add, app.locals.container.cradle.homeController.get);
-  app.get(Route.OVERVIEW, history.add, app.locals.container.cradle.homeController.overview);
-  app.get(Route.INTRO, history.add, app.locals.container.cradle.homeController.intro);
+  app.get(Route.OVERVIEW, initSession.init, history.add, app.locals.container.cradle.homeController.overview);
+  app.get(Route.INTRO, initSession.init, history.add, app.locals.container.cradle.homeController.intro);
+  app.get(Route.SIGN_OUT, app.locals.container.cradle.homeController.signOut);
 
   app.get(Route.COOKIES, history.add, app.locals.container.cradle.homeController.cookies);
   app.get(Route.PRIVACY_POLICY, history.add, app.locals.container.cradle.homeController.privacyPolicy);
@@ -54,7 +55,7 @@ export default function (app: Application): void {
       }
     }
 
-    return res.send('No more history to navigate back');
+    return res.redirect(Route.CANCEL);
   });
 
   //Secure api

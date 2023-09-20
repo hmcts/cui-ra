@@ -49,8 +49,14 @@ export class ReviewController {
   }
 
   public async cancel(req: Request, res: Response): Promise<void> {
+    const change = !!(req.query && typeof req.query.change !== 'undefined');
+
     if (!req.session || !req.session.callbackUrl) {
       throw ErrorMessages.UNEXPECTED_ERROR;
+    }
+
+    if (change) {
+      return res.redirect(Route.REVIEW);
     }
 
     const payload: OutboundPayload = PayloadBuilder.build(req, Actions.CANCEL);

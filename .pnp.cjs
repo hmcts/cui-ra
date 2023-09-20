@@ -39,7 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hmcts/nodejs-healthcheck", "npm:1.8.3"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
             ["@hmcts/properties-volume", "npm:1.0.0"],\
-            ["@types/body-parser", "npm:1.19.2"],\
+            ["@types/body-parser", "npm:1.19.3"],\
             ["@types/chai-as-promised", "npm:7.1.6"],\
             ["@types/config", "npm:3.3.1"],\
             ["@types/cookie-parser", "npm:1.4.4"],\
@@ -50,7 +50,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/glob", "npm:8.1.0"],\
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/i18n", "npm:0.13.6"],\
-            ["@types/jest", "npm:29.5.4"],\
+            ["@types/jest", "npm:29.5.5"],\
             ["@types/lodash", "npm:4.14.198"],\
             ["@types/node", "npm:18.17.16"],\
             ["@types/nunjucks", "npm:3.2.3"],\
@@ -4922,10 +4922,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/body-parser", [\
-        ["npm:1.19.2", {\
-          "packageLocation": "./.yarn/cache/@types-body-parser-npm-1.19.2-f845b7b538-e17840c7d7.zip/node_modules/@types/body-parser/",\
+        ["npm:1.19.3", {\
+          "packageLocation": "./.yarn/cache/@types-body-parser-npm-1.19.3-2449988991-932fa71437.zip/node_modules/@types/body-parser/",\
           "packageDependencies": [\
-            ["@types/body-parser", "npm:1.19.2"],\
+            ["@types/body-parser", "npm:1.19.3"],\
             ["@types/connect", "npm:3.4.35"],\
             ["@types/node", "npm:20.6.1"]\
           ],\
@@ -5054,7 +5054,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-express-npm-4.17.13-0e12fe9c24-12a2a0e6c4.zip/node_modules/@types/express/",\
           "packageDependencies": [\
             ["@types/express", "npm:4.17.13"],\
-            ["@types/body-parser", "npm:1.19.2"],\
+            ["@types/body-parser", "npm:1.19.3"],\
             ["@types/express-serve-static-core", "npm:4.17.30"],\
             ["@types/qs", "npm:6.9.7"],\
             ["@types/serve-static", "npm:1.15.0"]\
@@ -5065,7 +5065,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-express-npm-4.17.17-46fe8173db-0196dacc27.zip/node_modules/@types/express/",\
           "packageDependencies": [\
             ["@types/express", "npm:4.17.17"],\
-            ["@types/body-parser", "npm:1.19.2"],\
+            ["@types/body-parser", "npm:1.19.3"],\
             ["@types/express-serve-static-core", "npm:4.17.33"],\
             ["@types/qs", "npm:6.9.7"],\
             ["@types/serve-static", "npm:1.15.0"]\
@@ -5184,10 +5184,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/jest", [\
-        ["npm:29.5.4", {\
-          "packageLocation": "./.yarn/cache/@types-jest-npm-29.5.4-d0885ca455-38ed5942f4.zip/node_modules/@types/jest/",\
+        ["npm:29.5.5", {\
+          "packageLocation": "./.yarn/cache/@types-jest-npm-29.5.5-cc0df7a171-56e55cde99.zip/node_modules/@types/jest/",\
           "packageDependencies": [\
-            ["@types/jest", "npm:29.5.4"],\
+            ["@types/jest", "npm:29.5.5"],\
             ["expect", "npm:29.0.3"],\
             ["pretty-format", "npm:29.0.3"]\
           ],\
@@ -8444,7 +8444,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hmcts/nodejs-healthcheck", "npm:1.8.3"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
             ["@hmcts/properties-volume", "npm:1.0.0"],\
-            ["@types/body-parser", "npm:1.19.2"],\
+            ["@types/body-parser", "npm:1.19.3"],\
             ["@types/chai-as-promised", "npm:7.1.6"],\
             ["@types/config", "npm:3.3.1"],\
             ["@types/cookie-parser", "npm:1.4.4"],\
@@ -8455,7 +8455,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/glob", "npm:8.1.0"],\
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/i18n", "npm:0.13.6"],\
-            ["@types/jest", "npm:29.5.4"],\
+            ["@types/jest", "npm:29.5.5"],\
             ["@types/lodash", "npm:4.14.198"],\
             ["@types/node", "npm:18.17.16"],\
             ["@types/nunjucks", "npm:3.2.3"],\
@@ -9574,7 +9574,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["eslint-plugin-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:27.2.3"],\
             ["@types/eslint", null],\
-            ["@types/jest", "npm:29.5.4"],\
+            ["@types/jest", "npm:29.5.5"],\
             ["@types/typescript-eslint__eslint-plugin", null],\
             ["@typescript-eslint/eslint-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.7.0"],\
             ["@typescript-eslint/utils", "virtual:9759cf721c2cb705c42b2d8612cb1afbe5b1c3db15254752e446b2ebf7472419d4f66f2b0a44069c87ebc5e1c92622123d2f4a1f0efad70e3dba833b0c4c5b8e#npm:5.36.2"],\
@@ -12201,7 +12201,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-html-reporter", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.10.2"],\
             ["@jest/test-result", "npm:29.0.3"],\
             ["@jest/types", "npm:29.0.3"],\
-            ["@types/jest", "npm:29.5.4"],\
+            ["@types/jest", "npm:29.5.5"],\
             ["@types/typescript", null],\
             ["dateformat", "npm:3.0.2"],\
             ["jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.7.0"],\
@@ -17157,7 +17157,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/babel-jest", null],\
             ["@types/babel__core", null],\
             ["@types/esbuild", null],\
-            ["@types/jest", "npm:29.5.4"],\
+            ["@types/jest", "npm:29.5.5"],\
             ["@types/jest__types", null],\
             ["@types/typescript", null],\
             ["babel-jest", null],\
