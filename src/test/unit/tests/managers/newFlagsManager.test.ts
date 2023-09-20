@@ -144,4 +144,76 @@ describe('New Flags Manager', () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(item?.id).toEqual(RA_Id);
   });
+
+  test('hasUnaswered - category expect true', async () => {
+    //enable two children of RA
+    dataManager.enable(RA_Id);
+    dataManager.enable(itemId);
+    const result = dataManager.hasUnaswered();
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    expect(result).toEqual(true);
+  });
+
+  test('hasUnaswered - category expect false', async () => {
+    //enable two children of RA
+    dataManager.enable(RA_Id);
+    dataManager.enable(itemId);
+    dataManager.enable('PF0001-RA0001-RA0004-RA0019');
+    const result = dataManager.hasUnaswered();
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    expect(result).toEqual(false);
+  });
+
+  test('hasUnaswered - flagComment expect true', async () => {
+    //enable two children of RA
+    dataManager.enable(RA_Id);
+    dataManager.enable(itemId);
+    dataManager.enable('PF0001-RA0001-RA0004-RA0019');
+    dataManager.enable('PF0001-RA0001-RA0004-RA0021');
+    const result = dataManager.hasUnaswered();
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    expect(result).toEqual(true);
+  });
+
+  test('hasUnaswered - flagComment expect false', async () => {
+    //enable two children of RA
+    dataManager.enable(RA_Id);
+    dataManager.enable(itemId);
+    dataManager.enable('PF0001-RA0001-RA0004-RA0019');
+    dataManager.enable('PF0001-RA0001-RA0004-RA0021');
+
+    const item: DataManagerDataObject | null = dataManager.get('PF0001-RA0001-RA0004-RA0021');
+    if (item) {
+      item.value.flagComment = 'test';
+      dataManager.save([item]);
+    }
+
+    const result = dataManager.hasUnaswered();
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    expect(result).toEqual(false);
+  });
+
+  test('hasUnaswered - listofitems expect true', async () => {
+    //enable two children of RA
+    dataManager.enable('PF0001-PF0015');
+
+    const result = dataManager.hasUnaswered();
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    expect(result).toEqual(true);
+  });
+
+  test('hasUnaswered - listofitems expect false', async () => {
+    //enable two children of RA
+    dataManager.enable('PF0001-PF0015');
+
+    const item: DataManagerDataObject | null = dataManager.get('PF0001-PF0015');
+    if (item) {
+      item.value.subTypeValue = 'test';
+      dataManager.save([item]);
+    }
+
+    const result = dataManager.hasUnaswered();
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    expect(result).toEqual(false);
+  });
 });
