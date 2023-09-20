@@ -124,4 +124,15 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
       this.disable(item._parentId, false);
     }
   }
+
+  public save(data: Partial<DataManagerDataObject>[]): void {
+    //Map new partial data back to full collection
+    super.save(data);
+
+    data.forEach((load: Partial<DataManagerDataObject>) => {
+      if (load._enabled !== true && load.id) {
+        this.disable(load.id);
+      }
+    });
+  }
 }

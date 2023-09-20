@@ -35,6 +35,7 @@ export class FormController {
   public async post(req: Request, res: Response): Promise<Response | void> {
     const id = req.params.id;
     const change = !!(req.query && typeof req.query.change !== 'undefined');
+    const newQuery = !!(req.query && typeof req.query.new !== 'undefined');
 
     //Get flag
     const flag = req.session.newmanager?.get(id);
@@ -82,8 +83,8 @@ export class FormController {
     if (change) {
       res.locals.change = 'true';
       query = '?change=true';
-      const hasUnaswered = req.session.newmanager?.hasUnaswered(id);
-      if (!hasUnaswered) {
+      const hasUnaswered = req.session.newmanager?.hasUnaswered();
+      if (!hasUnaswered && !newQuery) {
         return res.redirect(Route.REVIEW);
       }
     }
