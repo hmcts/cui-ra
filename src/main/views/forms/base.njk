@@ -70,7 +70,11 @@
           preventDoubleClick: true
         }) }}
 
-        <a href="{{ route.CANCEL }}" class="govuk-link govuk-link--no-visited-state">{{ _t('cancel') }}</a>
+        {% if (change) %} 
+        {% set queryParam = "?change=true" %}
+        {% endif %}
+
+        <a href="{{ route.CANCEL }}{{ queryParam }}" class="govuk-link govuk-link--no-visited-state">{{ _t('cancel') }}</a>
       </div>
     </form>
 

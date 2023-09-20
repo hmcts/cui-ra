@@ -4,7 +4,7 @@ import { ReviewController } from '../../../../main/controllers';
 import { Session, SessionData } from 'express-session';
 import { PayloadCollectionItem } from '../../../../main/interfaces';
 import { ExistingFlagsManager, NewFlagsManager } from '../../../../main/managers';
-import { Status } from '../../../../main/constants';
+import { Status, Route } from '../../../../main/constants';
 import { mockRedisClient } from './../../mocks';
 
 const host = 'www.test.com';
@@ -112,6 +112,14 @@ describe('Review Controller', () => {
     await reviewController.cancel(mockRequest as Request, mockResponse as Response);
 
     expect(mockResponse.redirect).toBeCalledWith(302, 'https://localhost/callback/random-string-uuid');
+  });
+
+  test('Should cancel and redirect to callback', async () => {
+    mockRequest.query = { change: 'true' };
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    await reviewController.cancel(mockRequest as Request, mockResponse as Response);
+
+    expect(mockResponse.redirect).toBeCalledWith(Route.REVIEW);
   });
 
   test('Should submit review and redirect to callback', async () => {
