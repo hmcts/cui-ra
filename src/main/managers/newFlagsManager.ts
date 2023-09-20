@@ -44,6 +44,42 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
     return null; // No matching item found
   }
 
+  //shallow check to be used by continue button.
+  public hasUnaswered(): boolean {
+    //get all enabled
+    const enabled = this.data.filter((item: DataManagerDataObject) => item._enabled === true);
+    for (let i = 0; i < enabled.length; i++) {
+      const flag: DataManagerDataObject = enabled[i];
+      if (flag?._isParent) {
+        //check children
+        const children: DataManagerDataObject[] = this.getChildren(flag.id);
+        if (children.length === 0) {
+          //return false;
+          continue;
+        }
+        const answered: DataManagerDataObject[] = children.filter(
+          (item: DataManagerDataObject) => item._enabled === true
+        );
+        if (answered.length === 0) {
+          return true;
+        }
+      } else {
+        if (flag._listOfValuesLength > 0) {
+          if (!flag.value.subTypeValue && !flag.value.subTypeValue_cy) {
+            return true;
+          }
+        } else {
+          if (flag?._flagComment) {
+            if (!flag?.value.flagComment && !flag?.value.flagComment_cy) {
+              return true;
+            }
+          }
+        }
+      }
+    }
+    return false;
+  }
+
   public enable(id: string, enableParent = true): void {
     const item: DataManagerDataObject | null = this.get(id);
     if (!item) {

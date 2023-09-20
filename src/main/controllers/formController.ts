@@ -76,6 +76,10 @@ export class FormController {
     let query = '';
     if (change) {
       query = '?change=true';
+      const hasUnaswered = req.session.newmanager?.hasUnaswered(id);
+      if (!hasUnaswered) {
+        return res.redirect(Route.REVIEW);
+      }
     }
 
     //check where to redirect the user. next page for new journey or back to the review page
