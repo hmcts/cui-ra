@@ -1,5 +1,6 @@
 import { DataManagerDataObject, FlagProcessorInterface, PayloadFlagData, ReferenceDataFlagType } from '../interfaces';
 import { DataManagerDataType, DataManagerYesNo } from '../managers';
+
 import { Common } from './../constants';
 import { RefDataResponse } from './../services';
 
@@ -79,7 +80,7 @@ export class FlagProcessor implements FlagProcessorInterface {
       //we dont want flag comment on parents
       dataItem._flagComment = false;
       //sort childrent
-      flag.childFlags.sort((a,b) => {
+      flag.childFlags.sort((a, b) => {
         //Add short if to check if welsh and use name_cy
         const nameA = welsh ? a.name_cy.toUpperCase() : a.name.toUpperCase(); // Convert to uppercase for case-insensitive sorting
         const flagCodeA = a.nativeFlagCode;
@@ -90,13 +91,13 @@ export class FlagProcessor implements FlagProcessorInterface {
           return 1;
         }
         if (flagCodeA !== Common.OTHER_FLAG_CODE && flagCodeB === Common.OTHER_FLAG_CODE) {
-            return -1;
+          return -1;
         }
         if (nameA < nameB) {
-            return -1;
+          return -1;
         }
         if (nameA > nameB) {
-            return 1;
+          return 1;
         }
         return 0;
       });

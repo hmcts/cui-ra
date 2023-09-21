@@ -10,7 +10,12 @@ export const mockFlagProcessor = (): FlagProcessorInterface => {
     processAll(dateTime: string, response: ReferenceDataResponse, welsh: boolean = false): DataManagerDataObject[] {
       return [] as DataManagerDataObject[];
     },
-    process(dateTime: string, flag: ReferenceDataFlagType, parentId: string | null = null, welsh: boolean = false): DataManagerDataObject[] {
+    process(
+      dateTime: string,
+      flag: ReferenceDataFlagType,
+      parentId: string | null = null,
+      welsh: boolean = false
+    ): DataManagerDataObject[] {
       return [] as DataManagerDataObject[];
     },
   };
