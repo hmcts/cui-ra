@@ -17,6 +17,9 @@ export class PayloadBuilder {
       flagsAsSupplied.roleOnCase = req.session.roleoncase;
       replacementFlags.roleOnCase = req.session.roleoncase;
     }
+    if (req.session.correlationId) {
+      outbound.correlationId = req.session.correlationId;
+    }
 
     if (action === Actions.SUBMIT) {
       //populate Details

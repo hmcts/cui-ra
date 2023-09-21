@@ -55,6 +55,7 @@ export class DataController {
       req.session.masterflagcode = payloadStore.payload.masterFlagCode || 'RA0001';
       req.session.hmctsserviceid = payloadStore.payload.hmctsServiceId;
       req.session.welsh = payloadStore.payload.language === languages.Cy;
+      req.session.correlationId = payloadStore.payload.correlationId;
 
       //Populate the existing manager
       req.session.existingmanager = new ExistingFlagsManager();

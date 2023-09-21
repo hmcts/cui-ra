@@ -17,5 +17,6 @@ declare module 'express-session' {
     sessioninit: boolean;
     history: string[];
     welsh: boolean;
+    correlationId?: string;
   }
 }
