@@ -13,7 +13,7 @@ const flagProcessor = new FlagProcessor();
 describe('Flag Processor', () => {
   test('Should return a collection of DataManagerDateObject', async () => {
     const dateTime = '12-07-2023 13:28:21';
-    const data: DataManagerDataObject[] = flagProcessor.processAll(dateTime, flagJson);
+    const data: DataManagerDataObject[] = flagProcessor.processAll(dateTime, flagJson, false);
 
     //console.log(JSON.stringify(data));
     // eslint-disable-line @typescript-eslint/no-empty-function

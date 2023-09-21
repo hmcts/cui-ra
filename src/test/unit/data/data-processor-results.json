@@ -7,20 +7,20 @@
     "_isParent": true,
     "_errors": [],
     "_childIds": [
-      "CF0001-CF0002",
-      "CF0001-CF0003",
-      "CF0001-CF0004",
-      "CF0001-CF0005",
-      "CF0001-CF0006",
-      "CF0001-CF0007",
-      "CF0001-CF0008",
-      "CF0001-CF0009",
       "CF0001-CF0010",
+      "CF0001-CF0013",
+      "CF0001-CF0002",
+      "CF0001-CF0005",
+      "CF0001-CF0004",
+      "CF0001-CF0015",
+      "CF0001-CF0006",
+      "CF0001-CF0003",
+      "CF0001-CF0008",
       "CF0001-CF0011",
       "CF0001-CF0012",
-      "CF0001-CF0013",
+      "CF0001-CF0007",
+      "CF0001-CF0009",
       "CF0001-CF0014",
-      "CF0001-CF0015",
       "CF0001-OT0001"
     ],
     "id": "CF0001",
@@ -49,6 +49,58 @@
     "_isParent": false,
     "_errors": [],
     "_childIds": [],
+    "id": "CF0001-CF0010",
+    "value": {
+      "name": "Class appeal",
+      "name_cy": "Math o apêl",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Case"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "CF0010",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "CF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "CF0001-CF0013",
+    "value": {
+      "name": "Closed material",
+      "name_cy": "Deunydd caeedig",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Case"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "CF0013",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "CF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
     "id": "CF0001-CF0002",
     "value": {
       "name": "Complex Case",
@@ -62,58 +114,6 @@
       ],
       "hearingRelevant": "Yes",
       "flagCode": "CF0002",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "CF0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "CF0001-CF0003",
-    "value": {
-      "name": "Potentially harmful evidence",
-      "name_cy": "Tystiolaeth a all fod yn niweidiol",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Case"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "CF0003",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "CF0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "CF0001-CF0004",
-    "value": {
-      "name": "Gender recognition",
-      "name_cy": "Cydnabod rhywedd",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Case"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "CF0004",
       "status": "Active",
       "availableExternally": "No"
     },
@@ -153,6 +153,58 @@
     "_isParent": false,
     "_errors": [],
     "_childIds": [],
+    "id": "CF0001-CF0004",
+    "value": {
+      "name": "Gender recognition",
+      "name_cy": "Cydnabod rhywedd",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Case"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "CF0004",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "CF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "CF0001-CF0015",
+    "value": {
+      "name": "High Profile Case",
+      "name_cy": "Achos Proffil Uchel",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Case"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "CF0015",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "CF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
     "id": "CF0001-CF0006",
     "value": {
       "name": "Potential fraud",
@@ -179,10 +231,10 @@
     "_isParent": false,
     "_errors": [],
     "_childIds": [],
-    "id": "CF0001-CF0007",
+    "id": "CF0001-CF0003",
     "value": {
-      "name": "Urgent case",
-      "name_cy": "Achos brys",
+      "name": "Potentially harmful evidence",
+      "name_cy": "Tystiolaeth a all fod yn niweidiol",
       "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
@@ -191,7 +243,7 @@
         }
       ],
       "hearingRelevant": "Yes",
-      "flagCode": "CF0007",
+      "flagCode": "CF0003",
       "status": "Active",
       "availableExternally": "No"
     },
@@ -218,58 +270,6 @@
       ],
       "hearingRelevant": "Yes",
       "flagCode": "CF0008",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "CF0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "CF0001-CF0009",
-    "value": {
-      "name": "Warrant of arrest conclusion/withdrawn",
-      "name_cy": "Canlyniad gwarant arestio/gwarant arestio wedi’i thynnu’n ôl",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Case"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "CF0009",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "CF0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "CF0001-CF0010",
-    "value": {
-      "name": "Class appeal",
-      "name_cy": "Math o apêl",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Case"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "CF0010",
       "status": "Active",
       "availableExternally": "No"
     },
@@ -335,10 +335,10 @@
     "_isParent": false,
     "_errors": [],
     "_childIds": [],
-    "id": "CF0001-CF0013",
+    "id": "CF0001-CF0007",
     "value": {
-      "name": "Closed material",
-      "name_cy": "Deunydd caeedig",
+      "name": "Urgent case",
+      "name_cy": "Achos brys",
       "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
@@ -347,7 +347,33 @@
         }
       ],
       "hearingRelevant": "Yes",
-      "flagCode": "CF0013",
+      "flagCode": "CF0007",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "CF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "CF0001-CF0009",
+    "value": {
+      "name": "Warrant of arrest conclusion/withdrawn",
+      "name_cy": "Canlyniad gwarant arestio/gwarant arestio wedi’i thynnu’n ôl",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Case"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "CF0009",
       "status": "Active",
       "availableExternally": "No"
     },
@@ -387,32 +413,6 @@
     "_isParent": false,
     "_errors": [],
     "_childIds": [],
-    "id": "CF0001-CF0015",
-    "value": {
-      "name": "High Profile Case",
-      "name_cy": "Achos Proffil Uchel",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Case"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "CF0015",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "CF0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
     "id": "CF0001-OT0001",
     "value": {
       "name": "Other",
@@ -439,27 +439,27 @@
     "_isParent": true,
     "_errors": [],
     "_childIds": [
-      "PF0001-SM0001",
-      "PF0001-RA0001",
-      "PF0001-PF0002",
-      "PF0001-PF0004",
-      "PF0001-PF0007",
-      "PF0001-PF0008",
-      "PF0001-PF0009",
-      "PF0001-PF0011",
-      "PF0001-PF0012",
-      "PF0001-PF0013",
       "PF0001-PF0014",
+      "PF0001-PF0011",
+      "PF0001-PF0023",
+      "PF0001-PF0009",
+      "PF0001-PF0004",
+      "PF0001-PF0016",
+      "PF0001-PF0019",
+      "PF0001-PF0012",
+      "PF0001-PF0018",
       "PF0001-PF0015",
       "PF0001-PF1115",
-      "PF0001-PF0016",
       "PF0001-PF0017",
-      "PF0001-PF0018",
-      "PF0001-PF0019",
-      "PF0001-PF0020",
-      "PF0001-PF0021",
       "PF0001-PF0022",
-      "PF0001-PF0023",
+      "PF0001-PF0021",
+      "PF0001-PF0020",
+      "PF0001-RA0001",
+      "PF0001-SM0001",
+      "PF0001-PF0007",
+      "PF0001-PF0013",
+      "PF0001-PF0008",
+      "PF0001-PF0002",
       "PF0001-OT0001"
     ],
     "id": "PF0001",
@@ -481,40 +481,6 @@
     "_parentId": null
   },
   {
-    "_flagComment": false,
-    "_isCategoryPage": true,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": true,
-    "_errors": [],
-    "_childIds": [
-      "PF0001-SM0001-SM0002",
-      "PF0001-SM0001-SM0003",
-      "PF0001-SM0001-SM0004",
-      "PF0001-SM0001-SM0005",
-      "PF0001-SM0001-SM0006",
-      "PF0001-SM0001-SM0007",
-      "PF0001-SM0001-OT0001"
-    ],
-    "id": "PF0001-SM0001",
-    "value": {
-      "name": "Special measure",
-      "name_cy": "Mesur arbennig",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "SM0001",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001"
-  },
-  {
     "_flagComment": true,
     "_isCategoryPage": false,
     "_enabled": false,
@@ -522,2122 +488,10 @@
     "_isParent": false,
     "_errors": [],
     "_childIds": [],
-    "id": "PF0001-SM0001-SM0002",
+    "id": "PF0001-PF0014",
     "value": {
-      "name": "Screening witness from accused",
-      "name_cy": "Sgrinio tyst rhag y diffynnydd",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Special measure"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "SM0002",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001-SM0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-SM0001-SM0003",
-    "value": {
-      "name": "Evidence by live link",
-      "name_cy": "Tystiolaeth drwy gyswllt byw",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Special measure"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "SM0003",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001-SM0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-SM0001-SM0004",
-    "value": {
-      "name": "Evidence given in private",
-      "name_cy": "Rhoi tystiolaeth yn breifat",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Special measure"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "SM0004",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001-SM0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-SM0001-SM0005",
-    "value": {
-      "name": "Removal of wigs and gowns",
-      "name_cy": "Diosg wigiau a gynau",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Special measure"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "SM0005",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001-SM0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-SM0001-SM0006",
-    "value": {
-      "name": "Video recorded evidence in chief",
-      "name_cy": "Prif dystiolaeth wedi’i recordio ar fideo",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Special measure"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "SM0006",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001-SM0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-SM0001-SM0007",
-    "value": {
-      "name": "Video recorded cross-examination or re-examination",
-      "name_cy": "Tystiolaeth croesholi neu ail-holi wedi’i recordio ar fideo",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Special measure"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "SM0007",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001-SM0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-SM0001-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Special measure"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-SM0001"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": true,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": true,
-    "_errors": [],
-    "_childIds": [
-      "PF0001-RA0001-RA0002",
-      "PF0001-RA0001-RA0003",
-      "PF0001-RA0001-RA0004",
-      "PF0001-RA0001-RA0005",
-      "PF0001-RA0001-RA0006",
-      "PF0001-RA0001-RA0007",
-      "PF0001-RA0001-RA0008",
-      "PF0001-RA0001-OT0001"
-    ],
-    "id": "PF0001-RA0001",
-    "value": {
-      "name": "Reasonable adjustment",
-      "name_cy": "Addasiad rhesymol",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0001",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": true,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": true,
-    "_errors": [],
-    "_childIds": [
-      "PF0001-RA0001-RA0002-RA0010",
-      "PF0001-RA0001-RA0002-RA0011",
-      "PF0001-RA0001-RA0002-RA0012",
-      "PF0001-RA0001-RA0002-RA0013",
-      "PF0001-RA0001-RA0002-RA0014",
-      "PF0001-RA0001-RA0002-RA0015",
-      "PF0001-RA0001-RA0002-RA0016",
-      "PF0001-RA0001-RA0002-OT0001"
-    ],
-    "id": "PF0001-RA0001-RA0002",
-    "value": {
-      "name": "I need documents in an alternative format",
-      "name_cy": "Rwyf angen dogfennau mewn fformat amgen",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0002",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001-RA0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0002-RA0010",
-    "value": {
-      "name": "Documents in a specified colour",
-      "name_cy": "Dogfennau mewn lliw penodol",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need documents in an alternative format"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0010",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0002"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0002-RA0011",
-    "value": {
-      "name": "Documents in easy read format",
-      "name_cy": "Dogfennau mewn fformat hawdd i’w darllen",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need documents in an alternative format"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0011",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0002"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0002-RA0012",
-    "value": {
-      "name": "Braille documents",
-      "name_cy": "Dogfennau Braille",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need documents in an alternative format"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0012",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0002"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0002-RA0013",
-    "value": {
-      "name": "Documents in large print",
-      "name_cy": "Dogfennau mewn print bras",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need documents in an alternative format"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0013",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0002"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0002-RA0014",
-    "value": {
-      "name": "Audio translation of documents",
-      "name_cy": "Cyfieithiad sain o ddogfennau",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need documents in an alternative format"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0014",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0002"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0002-RA0015",
-    "value": {
-      "name": "Documents read out to me",
-      "name_cy": "Dogfennau yn cael eu darllen yn uchel i mi",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need documents in an alternative format"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0015",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0002"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0002-RA0016",
-    "value": {
-      "name": "Information emailed to me",
-      "name_cy": "Gwybodaeth yn cael ei hanfon ataf drwy e-bost",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need documents in an alternative format"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0016",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0002"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0002-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need documents in an alternative format"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0002"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": true,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": true,
-    "_errors": [],
-    "_childIds": ["PF0001-RA0001-RA0003-RA0017", "PF0001-RA0001-RA0003-RA0018", "PF0001-RA0001-RA0003-OT0001"],
-    "id": "PF0001-RA0001-RA0003",
-    "value": {
-      "name": "I need help with forms",
-      "name_cy": "Rwyf angen help gyda ffurflenni",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0003",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001-RA0001"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0003-RA0017",
-    "value": {
-      "name": "Guidance on how to complete forms",
-      "name_cy": "Arweiniad ar sut i lenwi ffurflenni",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help with forms"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0017",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0003"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0003-RA0018",
-    "value": {
-      "name": "Support filling in forms",
-      "name_cy": "Cymorth i lenwi ffurflenni",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help with forms"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0018",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0003"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0003-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help with forms"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0003"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": true,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": true,
-    "_errors": [],
-    "_childIds": [
-      "PF0001-RA0001-RA0004-RA0019",
-      "PF0001-RA0001-RA0004-RA0020",
-      "PF0001-RA0001-RA0004-RA0021",
-      "PF0001-RA0001-RA0004-RA0022",
-      "PF0001-RA0001-RA0004-RA0023",
-      "PF0001-RA0001-RA0004-RA0024",
-      "PF0001-RA0001-RA0004-RA0025",
-      "PF0001-RA0001-RA0004-OT0001"
-    ],
-    "id": "PF0001-RA0001-RA0004",
-    "value": {
-      "name": "I need adjustments to get to, into and around our buildings",
-      "name_cy": "Rwyf angen addasiadau i allu cyrraedd ein adeiladau, mynd i mewn iddynt a symud o’u cwmpas",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0004",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001-RA0001"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0004-RA0019",
-    "value": {
-      "name": "Step free / wheelchair access",
-      "name_cy": "Dim grisiau / mynediad ar gyfer cadair olwyn",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need adjustments to get to, into and around our buildings"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0019",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0004"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0004-RA0020",
-    "value": {
-      "name": "Use of venue wheelchair",
-      "name_cy": "Y gallu i ddefnyddio cadair olwyn a geir yn y lleoliad",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need adjustments to get to, into and around our buildings"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0020",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0004"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0004-RA0021",
-    "value": {
-      "name": "Parking space close to the venue",
-      "name_cy": "Lle parcio yn agos i'r lleoliad",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need adjustments to get to, into and around our buildings"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0021",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0004"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0004-RA0022",
-    "value": {
-      "name": "Accessible toilet",
-      "name_cy": "Toiled hygyrch",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need adjustments to get to, into and around our buildings"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0022",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0004"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0004-RA0023",
-    "value": {
-      "name": "Help using a lift",
-      "name_cy": "Help i ddefnyddio lifft",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need adjustments to get to, into and around our buildings"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0023",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0004"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0004-RA0024",
-    "value": {
-      "name": "A different type of chair",
-      "name_cy": "Math gwahanol o gadair",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need adjustments to get to, into and around our buildings"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0024",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0004"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0004-RA0025",
-    "value": {
-      "name": "Guiding in the building",
-      "name_cy": "Cymorth i fynd o amgylch yr adeilad",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need adjustments to get to, into and around our buildings"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0025",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0004"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0004-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need adjustments to get to, into and around our buildings"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0004"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": true,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": true,
-    "_errors": [],
-    "_childIds": [
-      "PF0001-RA0001-RA0005-RA0026",
-      "PF0001-RA0001-RA0005-RA0027",
-      "PF0001-RA0001-RA0005-RA0028",
-      "PF0001-RA0001-RA0005-RA0029",
-      "PF0001-RA0001-RA0005-OT0001"
-    ],
-    "id": "PF0001-RA0001-RA0005",
-    "value": {
-      "name": "I need to bring support with me to a hearing",
-      "name_cy": "Rwyf angen dod â rhywun efo fi i fy nghefnogi mewn gwrandawiad",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0005",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001-RA0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0005-RA0026",
-    "value": {
-      "name": "Support worker or carer with me",
-      "name_cy": "Cefnogaeth gan weithiwr cymorth neu ofalwr",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need to bring support with me to a hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0026",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0005"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0005-RA0027",
-    "value": {
-      "name": "Friend or family with me",
-      "name_cy": "Cefnogaeth gan ffrind neu aelod o’r teulu",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need to bring support with me to a hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0027",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0005"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0005-RA0028",
-    "value": {
-      "name": "Assistance / guide dog",
-      "name_cy": "Ci cymorth / tywys",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need to bring support with me to a hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0028",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0005"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0005-RA0029",
-    "value": {
-      "name": "Therapy animal",
-      "name_cy": "Anifail therapi",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need to bring support with me to a hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0029",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0005"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0005-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need to bring support with me to a hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0005"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": true,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": true,
-    "_errors": [],
-    "_childIds": [
-      "PF0001-RA0001-RA0006-RA0030",
-      "PF0001-RA0001-RA0006-RA0031",
-      "PF0001-RA0001-RA0006-RA0032",
-      "PF0001-RA0001-RA0006-RA0033",
-      "PF0001-RA0001-RA0006-OT0001"
-    ],
-    "id": "PF0001-RA0001-RA0006",
-    "value": {
-      "name": "I need something to feel comfortable during my hearing",
-      "name_cy": "Rwyf angen rhywbeth i wneud i mi deimlo’n gyfforddus yn ystod fy ngwrandawiad",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0006",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001-RA0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0006-RA0030",
-    "value": {
-      "name": "Appropriate lighting",
-      "name_cy": "Goleuadau priodol",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need something to feel comfortable during my hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0030",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0006"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0006-RA0031",
-    "value": {
-      "name": "Regular breaks",
-      "name_cy": "Seibiannau rheolaidd",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need something to feel comfortable during my hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0031",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0006"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0006-RA0032",
-    "value": {
-      "name": "Space to be able to get up and move around",
-      "name_cy": "Lle i allu codi a symud o gwmpas",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need something to feel comfortable during my hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0032",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0006"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0006-RA0033",
-    "value": {
-      "name": "Private waiting area",
-      "name_cy": "Ystafell aros breifat",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need something to feel comfortable during my hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0033",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0006"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0006-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need something to feel comfortable during my hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0006"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": true,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": true,
-    "_errors": [],
-    "_childIds": [
-      "PF0001-RA0001-RA0007-RA0034",
-      "PF0001-RA0001-RA0007-RA0035",
-      "PF0001-RA0001-RA0007-RA0036",
-      "PF0001-RA0001-RA0007-OT0001"
-    ],
-    "id": "PF0001-RA0001-RA0007",
-    "value": {
-      "name": "I need to request a certain type of hearing",
-      "name_cy": "Rwyf angen gofyn am fath penodol o wrandawiad",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0007",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001-RA0001"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0007-RA0034",
-    "value": {
-      "name": "In person hearing",
-      "name_cy": "Gwrandawiad wyneb yn wyneb mewn ystafell",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need to request a certain type of hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0034",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0007"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0007-RA0035",
-    "value": {
-      "name": "Video hearing",
-      "name_cy": "Gwrandawiad fideo",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need to request a certain type of hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0035",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0007"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0007-RA0036",
-    "value": {
-      "name": "Phone hearing",
-      "name_cy": "Gwrandawiad dros y ffôn",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need to request a certain type of hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0036",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0007"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0007-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need to request a certain type of hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0007"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": true,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": true,
-    "_errors": [],
-    "_childIds": [
-      "PF0001-RA0001-RA0008-RA0009",
-      "PF0001-RA0001-RA0008-RA0037",
-      "PF0001-RA0001-RA0008-RA0038",
-      "PF0001-RA0001-RA0008-RA0039",
-      "PF0001-RA0001-RA0008-RA0040",
-      "PF0001-RA0001-RA0008-RA0041",
-      "PF0001-RA0001-RA0008-RA0042",
-      "PF0001-RA0001-RA0008-RA0046",
-      "PF0001-RA0001-RA0008-RA0047",
-      "PF0001-RA0001-RA0008-OT0001"
-    ],
-    "id": "PF0001-RA0001-RA0008",
-    "value": {
-      "name": "I need help communicating and understanding",
-      "name_cy": "Rwyf angen cymorth gyda chyfathrebu a deall pethau",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0008",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001-RA0001"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": true,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": true,
-    "_errors": [],
-    "_childIds": [
-      "PF0001-RA0001-RA0008-RA0009-RA0043",
-      "PF0001-RA0001-RA0008-RA0009-RA0044",
-      "PF0001-RA0001-RA0008-RA0009-RA0045",
-      "PF0001-RA0001-RA0008-RA0009-OT0001"
-    ],
-    "id": "PF0001-RA0001-RA0008-RA0009",
-    "value": {
-      "name": "Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)",
-      "name_cy": "System Gwella Clyw (Dolen Glyw/Sain, Derbynnydd Isgoch)",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help communicating and understanding"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0009",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001-RA0001-RA0008"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0008-RA0009-RA0043",
-    "value": {
-      "name": "Hearing loop (hearing enhancement system)",
-      "name_cy": "Dolen glyw (system gwella clyw)",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help communicating and understanding"
-        },
-        {
-          "name": "Hearing Enhancement System (Hearing"
-        },
-        {
-          "name": "Induction Loop, Infrared Receiver)"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0043",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0008-RA0009"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0008-RA0009-RA0044",
-    "value": {
-      "name": "Infrared receiver (hearing enhancement system)",
-      "name_cy": "Derbynnydd isgoch (system gwella clyw)",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help communicating and understanding"
-        },
-        {
-          "name": "Hearing Enhancement System (Hearing"
-        },
-        {
-          "name": "Induction Loop, Infrared Receiver)"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0044",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0008-RA0009"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0008-RA0009-RA0045",
-    "value": {
-      "name": "Induction loop (hearing enhancement system)",
-      "name_cy": "Dolen sain (system gwella clyw)",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help communicating and understanding"
-        },
-        {
-          "name": "Hearing Enhancement System (Hearing"
-        },
-        {
-          "name": "Induction Loop, Infrared Receiver)"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0045",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0008-RA0009"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0008-RA0009-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help communicating and understanding"
-        },
-        {
-          "name": "Hearing Enhancement System (Hearing"
-        },
-        {
-          "name": "Induction Loop, Infrared Receiver)"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0008-RA0009"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0008-RA0037",
-    "value": {
-      "name": "Extra time to think and explain myself",
-      "name_cy": "Amser ychwanegol i feddwl ac egluro fy hun",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help communicating and understanding"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0037",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0008"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0008-RA0038",
-    "value": {
-      "name": "Intermediary",
-      "name_cy": "Cyfryngwr",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help communicating and understanding"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0038",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0008"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0008-RA0039",
-    "value": {
-      "name": "Speech to text reporter (palantypist)",
-      "name_cy": "Cofnodwr iaith lafar i destun (palanteipydd)",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help communicating and understanding"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0039",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0008"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0008-RA0040",
-    "value": {
-      "name": "Need to be close to who is speaking",
-      "name_cy": "Angen bod yn agos at bwy bynnag sy'n siarad",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help communicating and understanding"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0040",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0008"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0008-RA0041",
-    "value": {
-      "name": "Lip speaker",
-      "name_cy": "Siaradwr gwefusau",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help communicating and understanding"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0041",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0008"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": true,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_listOfValuesLength": 12,
-    "_listOfValues": [
-      {
-        "key": "ase",
-        "value": "American Sign Language (ASL)",
-        "value_cy": "Iaith Arwyddion America (ASL)"
-      },
-      {
-        "key": "bfi",
-        "value": "British Sign Language (BSL)",
-        "value_cy": "Iaith Arwyddion Prydain (BSL)"
-      },
-      {
-        "key": "ils",
-        "value": "International Sign (IS)",
-        "value_cy": "Arwyddion Rhyngwladol (IS)"
-      },
-      {
-        "key": "sign-dfr",
-        "value": "Deaf Relay",
-        "value_cy": "Gwasanaeth Cyfnewid i Bobl Fyddar"
-      },
-      {
-        "key": "sign-dma",
-        "value": "Deafblind manual alphabet",
-        "value_cy": "Wyddor Pobl Ddall a Byddar"
-      },
-      {
-        "key": "sign-hos",
-        "value": "Hands on signing",
-        "value_cy": "Arwyddo trwy gyffyrddiad"
-      },
-      {
-        "key": "sign-lps",
-        "value": "Lipspeaker",
-        "value_cy": "Gwefuslefarydd"
-      },
-      {
-        "key": "sign-mkn",
-        "value": "Makaton",
-        "value_cy": "Makaton"
-      },
-      {
-        "key": "sign-ntr",
-        "value": "Notetaker",
-        "value_cy": "Ysgrifennwr Nodiadau"
-      },
-      {
-        "key": "sign-pst",
-        "value": "Palantypist / Speech to text",
-        "value_cy": "Palanteipydd / Llais-i-destun"
-      },
-      {
-        "key": "sign-sse",
-        "value": "Speech Supported English (SSE)",
-        "value_cy": "Cefnogaeth Lleferydd Saesneg (SSE)"
-      },
-      {
-        "key": "sign-vfs",
-        "value": "Visual frame signing",
-        "value_cy": "Arwyddo Gweledol"
-      }
-    ],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0008-RA0042",
-    "value": {
-      "name": "Sign Language Interpreter",
-      "name_cy": "Dehonglydd Iaith Arwyddion",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help communicating and understanding"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0042",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0008"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0008-RA0046",
-    "value": {
-      "name": "Visit to court or tribunal before the hearing",
-      "name_cy": "Ymweld â’r llys neu’r tribiwnlys cyn y gwrandawiad",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help communicating and understanding"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0046",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0008"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0008-RA0047",
-    "value": {
-      "name": "Explanation of the court or tribunal and who's in the room at the hearing",
-      "name_cy": "Esboniad o osodiad y llys neu’r tribiwnlys a phwy fydd yn yr ystafell wrandawiadau",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help communicating and understanding"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "RA0047",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0008"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0008-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help communicating and understanding"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0008"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-PF0002",
-    "value": {
-      "name": "Vulnerable user",
-      "name_cy": "Defnyddiwr bregus",
+      "name": "Audio/Video Evidence",
+      "name_cy": "Tystiolaeth Sain/Fideo",
       "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
@@ -2646,111 +500,7 @@
         }
       ],
       "hearingRelevant": "Yes",
-      "flagCode": "PF0002",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-PF0004",
-    "value": {
-      "name": "Confidential party/address",
-      "name_cy": "Parti/cyfeiriad cyfrinachol",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "PF0004",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-PF0007",
-    "value": {
-      "name": "Unacceptable/disruptive customer behaviour",
-      "name_cy": "Ymddygiad annerbyniol/aflonyddgar gan gwsmer",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "PF0007",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-PF0008",
-    "value": {
-      "name": "Vexatious litigant",
-      "name_cy": "Ymgyfreithiwr blinderus",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "PF0008",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-PF0009",
-    "value": {
-      "name": "Civil restraint order",
-      "name_cy": "Gorchymyn atal sifil",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "PF0009",
+      "flagCode": "PF0014",
       "status": "Active",
       "availableExternally": "No"
     },
@@ -2790,6 +540,136 @@
     "_isParent": false,
     "_errors": [],
     "_childIds": [],
+    "id": "PF0001-PF0023",
+    "value": {
+      "name": "Barring Order",
+      "name_cy": "Gorchymyn Gwahardd",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "PF0023",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-PF0009",
+    "value": {
+      "name": "Civil restraint order",
+      "name_cy": "Gorchymyn atal sifil",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "PF0009",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-PF0004",
+    "value": {
+      "name": "Confidential party/address",
+      "name_cy": "Parti/cyfeiriad cyfrinachol",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "PF0004",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-PF0016",
+    "value": {
+      "name": "Death of a Party",
+      "name_cy": "Marwolaeth parti",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "PF0016",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-PF0019",
+    "value": {
+      "name": "Detained individual",
+      "name_cy": "Unigolyn wedi’i gadw dan glo",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "PF0019",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
     "id": "PF0001-PF0012",
     "value": {
       "name": "Foreign national offender",
@@ -2816,10 +696,10 @@
     "_isParent": false,
     "_errors": [],
     "_childIds": [],
-    "id": "PF0001-PF0013",
+    "id": "PF0001-PF0018",
     "value": {
-      "name": "Unaccompanied minor",
-      "name_cy": "Plentyn dan oed ar ei ben ei hun",
+      "name": "Lacking capacity",
+      "name_cy": "Heb y gallu meddyliol",
       "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
@@ -2828,33 +708,7 @@
         }
       ],
       "hearingRelevant": "Yes",
-      "flagCode": "PF0013",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-PF0014",
-    "value": {
-      "name": "Audio/Video Evidence",
-      "name_cy": "Tystiolaeth Sain/Fideo",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "PF0014",
+      "flagCode": "PF0018",
       "status": "Active",
       "availableExternally": "No"
     },
@@ -3971,32 +1825,6 @@
     "_isParent": false,
     "_errors": [],
     "_childIds": [],
-    "id": "PF0001-PF0016",
-    "value": {
-      "name": "Death of a Party",
-      "name_cy": "Marwolaeth parti",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "PF0016",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
     "id": "PF0001-PF0017",
     "value": {
       "name": "Litigation friend",
@@ -4010,110 +1838,6 @@
       ],
       "hearingRelevant": "Yes",
       "flagCode": "PF0017",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-PF0018",
-    "value": {
-      "name": "Lacking capacity",
-      "name_cy": "Heb y gallu meddyliol",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "PF0018",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-PF0019",
-    "value": {
-      "name": "Detained individual",
-      "name_cy": "Unigolyn wedi’i gadw dan glo",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "PF0019",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-PF0020",
-    "value": {
-      "name": "QLR (Qualified Legal Representative)",
-      "name_cy": "QLR (Cynrychiolydd Cyfreithiol Cymwysedig)",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "PF0020",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-PF0021",
-    "value": {
-      "name": "Potentially Violent Person",
-      "name_cy": "Unigolyn a Allai Fod yn Dreisgar",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "PF0021",
       "status": "Active",
       "availableExternally": "No"
     },
@@ -4153,10 +1877,10 @@
     "_isParent": false,
     "_errors": [],
     "_childIds": [],
-    "id": "PF0001-PF0023",
+    "id": "PF0001-PF0021",
     "value": {
-      "name": "Barring Order",
-      "name_cy": "Gorchymyn Gwahardd",
+      "name": "Potentially Violent Person",
+      "name_cy": "Unigolyn a Allai Fod yn Dreisgar",
       "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
@@ -4165,7 +1889,2287 @@
         }
       ],
       "hearingRelevant": "Yes",
-      "flagCode": "PF0023",
+      "flagCode": "PF0021",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-PF0020",
+    "value": {
+      "name": "QLR (Qualified Legal Representative)",
+      "name_cy": "QLR (Cynrychiolydd Cyfreithiol Cymwysedig)",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "PF0020",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0004",
+      "PF0001-RA0001-RA0002",
+      "PF0001-RA0001-RA0008",
+      "PF0001-RA0001-RA0003",
+      "PF0001-RA0001-RA0006",
+      "PF0001-RA0001-RA0005",
+      "PF0001-RA0001-RA0007",
+      "PF0001-RA0001-OT0001"
+    ],
+    "id": "PF0001-RA0001",
+    "value": {
+      "name": "Reasonable adjustment",
+      "name_cy": "Addasiad rhesymol",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0001",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0004-RA0024",
+      "PF0001-RA0001-RA0004-RA0022",
+      "PF0001-RA0001-RA0004-RA0025",
+      "PF0001-RA0001-RA0004-RA0023",
+      "PF0001-RA0001-RA0004-RA0021",
+      "PF0001-RA0001-RA0004-RA0019",
+      "PF0001-RA0001-RA0004-RA0020",
+      "PF0001-RA0001-RA0004-OT0001"
+    ],
+    "id": "PF0001-RA0001-RA0004",
+    "value": {
+      "name": "I need adjustments to get to, into and around our buildings",
+      "name_cy": "Rwyf angen addasiadau i allu cyrraedd ein adeiladau, mynd i mewn iddynt a symud o’u cwmpas",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0004",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-RA0024",
+    "value": {
+      "name": "A different type of chair",
+      "name_cy": "Math gwahanol o gadair",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0024",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-RA0022",
+    "value": {
+      "name": "Accessible toilet",
+      "name_cy": "Toiled hygyrch",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0022",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-RA0025",
+    "value": {
+      "name": "Guiding in the building",
+      "name_cy": "Cymorth i fynd o amgylch yr adeilad",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0025",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-RA0023",
+    "value": {
+      "name": "Help using a lift",
+      "name_cy": "Help i ddefnyddio lifft",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0023",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-RA0021",
+    "value": {
+      "name": "Parking space close to the venue",
+      "name_cy": "Lle parcio yn agos i'r lleoliad",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0021",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-RA0019",
+    "value": {
+      "name": "Step free / wheelchair access",
+      "name_cy": "Dim grisiau / mynediad ar gyfer cadair olwyn",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0019",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-RA0020",
+    "value": {
+      "name": "Use of venue wheelchair",
+      "name_cy": "Y gallu i ddefnyddio cadair olwyn a geir yn y lleoliad",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0020",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0002-RA0014",
+      "PF0001-RA0001-RA0002-RA0012",
+      "PF0001-RA0001-RA0002-RA0010",
+      "PF0001-RA0001-RA0002-RA0011",
+      "PF0001-RA0001-RA0002-RA0013",
+      "PF0001-RA0001-RA0002-RA0015",
+      "PF0001-RA0001-RA0002-RA0016",
+      "PF0001-RA0001-RA0002-OT0001"
+    ],
+    "id": "PF0001-RA0001-RA0002",
+    "value": {
+      "name": "I need documents in an alternative format",
+      "name_cy": "Rwyf angen dogfennau mewn fformat amgen",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0002",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0014",
+    "value": {
+      "name": "Audio translation of documents",
+      "name_cy": "Cyfieithiad sain o ddogfennau",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0014",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0012",
+    "value": {
+      "name": "Braille documents",
+      "name_cy": "Dogfennau Braille",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0012",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0010",
+    "value": {
+      "name": "Documents in a specified colour",
+      "name_cy": "Dogfennau mewn lliw penodol",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0010",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0011",
+    "value": {
+      "name": "Documents in easy read format",
+      "name_cy": "Dogfennau mewn fformat hawdd i’w darllen",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0011",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0013",
+    "value": {
+      "name": "Documents in large print",
+      "name_cy": "Dogfennau mewn print bras",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0013",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0015",
+    "value": {
+      "name": "Documents read out to me",
+      "name_cy": "Dogfennau yn cael eu darllen yn uchel i mi",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0015",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0016",
+    "value": {
+      "name": "Information emailed to me",
+      "name_cy": "Gwybodaeth yn cael ei hanfon ataf drwy e-bost",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0016",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0008-RA0047",
+      "PF0001-RA0001-RA0008-RA0037",
+      "PF0001-RA0001-RA0008-RA0009",
+      "PF0001-RA0001-RA0008-RA0038",
+      "PF0001-RA0001-RA0008-RA0041",
+      "PF0001-RA0001-RA0008-RA0040",
+      "PF0001-RA0001-RA0008-RA0042",
+      "PF0001-RA0001-RA0008-RA0039",
+      "PF0001-RA0001-RA0008-RA0046",
+      "PF0001-RA0001-RA0008-OT0001"
+    ],
+    "id": "PF0001-RA0001-RA0008",
+    "value": {
+      "name": "I need help communicating and understanding",
+      "name_cy": "Rwyf angen cymorth gyda chyfathrebu a deall pethau",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0008",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0047",
+    "value": {
+      "name": "Explanation of the court or tribunal and who's in the room at the hearing",
+      "name_cy": "Esboniad o osodiad y llys neu’r tribiwnlys a phwy fydd yn yr ystafell wrandawiadau",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0047",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0037",
+    "value": {
+      "name": "Extra time to think and explain myself",
+      "name_cy": "Amser ychwanegol i feddwl ac egluro fy hun",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0037",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0008-RA0009-RA0043",
+      "PF0001-RA0001-RA0008-RA0009-RA0045",
+      "PF0001-RA0001-RA0008-RA0009-RA0044",
+      "PF0001-RA0001-RA0008-RA0009-OT0001"
+    ],
+    "id": "PF0001-RA0001-RA0008-RA0009",
+    "value": {
+      "name": "Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)",
+      "name_cy": "System Gwella Clyw (Dolen Glyw/Sain, Derbynnydd Isgoch)",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0009",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0009-RA0043",
+    "value": {
+      "name": "Hearing loop (hearing enhancement system)",
+      "name_cy": "Dolen glyw (system gwella clyw)",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        },
+        {
+          "name": "Hearing Enhancement System (Hearing"
+        },
+        {
+          "name": "Induction Loop, Infrared Receiver)"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0043",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008-RA0009"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0009-RA0045",
+    "value": {
+      "name": "Induction loop (hearing enhancement system)",
+      "name_cy": "Dolen sain (system gwella clyw)",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        },
+        {
+          "name": "Hearing Enhancement System (Hearing"
+        },
+        {
+          "name": "Induction Loop, Infrared Receiver)"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0045",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008-RA0009"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0009-RA0044",
+    "value": {
+      "name": "Infrared receiver (hearing enhancement system)",
+      "name_cy": "Derbynnydd isgoch (system gwella clyw)",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        },
+        {
+          "name": "Hearing Enhancement System (Hearing"
+        },
+        {
+          "name": "Induction Loop, Infrared Receiver)"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0044",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008-RA0009"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0009-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        },
+        {
+          "name": "Hearing Enhancement System (Hearing"
+        },
+        {
+          "name": "Induction Loop, Infrared Receiver)"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008-RA0009"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0038",
+    "value": {
+      "name": "Intermediary",
+      "name_cy": "Cyfryngwr",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0038",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0041",
+    "value": {
+      "name": "Lip speaker",
+      "name_cy": "Siaradwr gwefusau",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0041",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0040",
+    "value": {
+      "name": "Need to be close to who is speaking",
+      "name_cy": "Angen bod yn agos at bwy bynnag sy'n siarad",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0040",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_listOfValuesLength": 12,
+    "_listOfValues": [
+      {
+        "key": "ase",
+        "value": "American Sign Language (ASL)",
+        "value_cy": "Iaith Arwyddion America (ASL)"
+      },
+      {
+        "key": "bfi",
+        "value": "British Sign Language (BSL)",
+        "value_cy": "Iaith Arwyddion Prydain (BSL)"
+      },
+      {
+        "key": "ils",
+        "value": "International Sign (IS)",
+        "value_cy": "Arwyddion Rhyngwladol (IS)"
+      },
+      {
+        "key": "sign-dfr",
+        "value": "Deaf Relay",
+        "value_cy": "Gwasanaeth Cyfnewid i Bobl Fyddar"
+      },
+      {
+        "key": "sign-dma",
+        "value": "Deafblind manual alphabet",
+        "value_cy": "Wyddor Pobl Ddall a Byddar"
+      },
+      {
+        "key": "sign-hos",
+        "value": "Hands on signing",
+        "value_cy": "Arwyddo trwy gyffyrddiad"
+      },
+      {
+        "key": "sign-lps",
+        "value": "Lipspeaker",
+        "value_cy": "Gwefuslefarydd"
+      },
+      {
+        "key": "sign-mkn",
+        "value": "Makaton",
+        "value_cy": "Makaton"
+      },
+      {
+        "key": "sign-ntr",
+        "value": "Notetaker",
+        "value_cy": "Ysgrifennwr Nodiadau"
+      },
+      {
+        "key": "sign-pst",
+        "value": "Palantypist / Speech to text",
+        "value_cy": "Palanteipydd / Llais-i-destun"
+      },
+      {
+        "key": "sign-sse",
+        "value": "Speech Supported English (SSE)",
+        "value_cy": "Cefnogaeth Lleferydd Saesneg (SSE)"
+      },
+      {
+        "key": "sign-vfs",
+        "value": "Visual frame signing",
+        "value_cy": "Arwyddo Gweledol"
+      }
+    ],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0042",
+    "value": {
+      "name": "Sign Language Interpreter",
+      "name_cy": "Dehonglydd Iaith Arwyddion",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0042",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0039",
+    "value": {
+      "name": "Speech to text reporter (palantypist)",
+      "name_cy": "Cofnodwr iaith lafar i destun (palanteipydd)",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0039",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-RA0046",
+    "value": {
+      "name": "Visit to court or tribunal before the hearing",
+      "name_cy": "Ymweld â’r llys neu’r tribiwnlys cyn y gwrandawiad",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0046",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0008-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help communicating and understanding"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0008"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0003-RA0017",
+      "PF0001-RA0001-RA0003-RA0018",
+      "PF0001-RA0001-RA0003-OT0001"
+    ],
+    "id": "PF0001-RA0001-RA0003",
+    "value": {
+      "name": "I need help with forms",
+      "name_cy": "Rwyf angen help gyda ffurflenni",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0003",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0003-RA0017",
+    "value": {
+      "name": "Guidance on how to complete forms",
+      "name_cy": "Arweiniad ar sut i lenwi ffurflenni",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help with forms"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0017",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0003"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0003-RA0018",
+    "value": {
+      "name": "Support filling in forms",
+      "name_cy": "Cymorth i lenwi ffurflenni",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help with forms"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0018",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0003"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0003-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need help with forms"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0003"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0006-RA0030",
+      "PF0001-RA0001-RA0006-RA0033",
+      "PF0001-RA0001-RA0006-RA0031",
+      "PF0001-RA0001-RA0006-RA0032",
+      "PF0001-RA0001-RA0006-OT0001"
+    ],
+    "id": "PF0001-RA0001-RA0006",
+    "value": {
+      "name": "I need something to feel comfortable during my hearing",
+      "name_cy": "Rwyf angen rhywbeth i wneud i mi deimlo’n gyfforddus yn ystod fy ngwrandawiad",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0006",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0006-RA0030",
+    "value": {
+      "name": "Appropriate lighting",
+      "name_cy": "Goleuadau priodol",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need something to feel comfortable during my hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0030",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0006"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0006-RA0033",
+    "value": {
+      "name": "Private waiting area",
+      "name_cy": "Ystafell aros breifat",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need something to feel comfortable during my hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0033",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0006"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0006-RA0031",
+    "value": {
+      "name": "Regular breaks",
+      "name_cy": "Seibiannau rheolaidd",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need something to feel comfortable during my hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0031",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0006"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0006-RA0032",
+    "value": {
+      "name": "Space to be able to get up and move around",
+      "name_cy": "Lle i allu codi a symud o gwmpas",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need something to feel comfortable during my hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0032",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0006"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0006-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need something to feel comfortable during my hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0006"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0005-RA0028",
+      "PF0001-RA0001-RA0005-RA0027",
+      "PF0001-RA0001-RA0005-RA0026",
+      "PF0001-RA0001-RA0005-RA0029",
+      "PF0001-RA0001-RA0005-OT0001"
+    ],
+    "id": "PF0001-RA0001-RA0005",
+    "value": {
+      "name": "I need to bring support with me to a hearing",
+      "name_cy": "Rwyf angen dod â rhywun efo fi i fy nghefnogi mewn gwrandawiad",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0005",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0005-RA0028",
+    "value": {
+      "name": "Assistance / guide dog",
+      "name_cy": "Ci cymorth / tywys",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to bring support with me to a hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0028",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0005"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0005-RA0027",
+    "value": {
+      "name": "Friend or family with me",
+      "name_cy": "Cefnogaeth gan ffrind neu aelod o’r teulu",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to bring support with me to a hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0027",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0005"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0005-RA0026",
+    "value": {
+      "name": "Support worker or carer with me",
+      "name_cy": "Cefnogaeth gan weithiwr cymorth neu ofalwr",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to bring support with me to a hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0026",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0005"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0005-RA0029",
+    "value": {
+      "name": "Therapy animal",
+      "name_cy": "Anifail therapi",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to bring support with me to a hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0029",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0005"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0005-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to bring support with me to a hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0005"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0007-RA0034",
+      "PF0001-RA0001-RA0007-RA0036",
+      "PF0001-RA0001-RA0007-RA0035",
+      "PF0001-RA0001-RA0007-OT0001"
+    ],
+    "id": "PF0001-RA0001-RA0007",
+    "value": {
+      "name": "I need to request a certain type of hearing",
+      "name_cy": "Rwyf angen gofyn am fath penodol o wrandawiad",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0007",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0007-RA0034",
+    "value": {
+      "name": "In person hearing",
+      "name_cy": "Gwrandawiad wyneb yn wyneb mewn ystafell",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to request a certain type of hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0034",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0007"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0007-RA0036",
+    "value": {
+      "name": "Phone hearing",
+      "name_cy": "Gwrandawiad dros y ffôn",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to request a certain type of hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0036",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0007"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0007-RA0035",
+    "value": {
+      "name": "Video hearing",
+      "name_cy": "Gwrandawiad fideo",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to request a certain type of hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0035",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0007"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0007-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need to request a certain type of hearing"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0007"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-SM0001-SM0003",
+      "PF0001-SM0001-SM0004",
+      "PF0001-SM0001-SM0005",
+      "PF0001-SM0001-SM0002",
+      "PF0001-SM0001-SM0007",
+      "PF0001-SM0001-SM0006",
+      "PF0001-SM0001-OT0001"
+    ],
+    "id": "PF0001-SM0001",
+    "value": {
+      "name": "Special measure",
+      "name_cy": "Mesur arbennig",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "SM0001",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-SM0001-SM0003",
+    "value": {
+      "name": "Evidence by live link",
+      "name_cy": "Tystiolaeth drwy gyswllt byw",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Special measure"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "SM0003",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-SM0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-SM0001-SM0004",
+    "value": {
+      "name": "Evidence given in private",
+      "name_cy": "Rhoi tystiolaeth yn breifat",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Special measure"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "SM0004",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-SM0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-SM0001-SM0005",
+    "value": {
+      "name": "Removal of wigs and gowns",
+      "name_cy": "Diosg wigiau a gynau",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Special measure"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "SM0005",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-SM0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-SM0001-SM0002",
+    "value": {
+      "name": "Screening witness from accused",
+      "name_cy": "Sgrinio tyst rhag y diffynnydd",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Special measure"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "SM0002",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-SM0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-SM0001-SM0007",
+    "value": {
+      "name": "Video recorded cross-examination or re-examination",
+      "name_cy": "Tystiolaeth croesholi neu ail-holi wedi’i recordio ar fideo",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Special measure"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "SM0007",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-SM0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-SM0001-SM0006",
+    "value": {
+      "name": "Video recorded evidence in chief",
+      "name_cy": "Prif dystiolaeth wedi’i recordio ar fideo",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Special measure"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "SM0006",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-SM0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-SM0001-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Special measure"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-SM0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-PF0007",
+    "value": {
+      "name": "Unacceptable/disruptive customer behaviour",
+      "name_cy": "Ymddygiad annerbyniol/aflonyddgar gan gwsmer",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "PF0007",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-PF0013",
+    "value": {
+      "name": "Unaccompanied minor",
+      "name_cy": "Plentyn dan oed ar ei ben ei hun",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "PF0013",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-PF0008",
+    "value": {
+      "name": "Vexatious litigant",
+      "name_cy": "Ymgyfreithiwr blinderus",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "PF0008",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-PF0002",
+    "value": {
+      "name": "Vulnerable user",
+      "name_cy": "Defnyddiwr bregus",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "PF0002",
       "status": "Active",
       "availableExternally": "No"
     },

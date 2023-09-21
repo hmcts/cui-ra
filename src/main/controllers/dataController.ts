@@ -74,7 +74,8 @@ export class DataController {
       //Process the refdata
       const processedData: DataManagerDataObject[] = this.flagProcessor.processAll(
         DataTimeUtilities.getDateTime(),
-        refdata
+        refdata,
+        req.session.welsh
       );
 
       req.session.newmanager = new NewFlagsManager();
