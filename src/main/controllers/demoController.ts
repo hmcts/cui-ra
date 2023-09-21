@@ -15,6 +15,10 @@ export class DemoController {
     fs.readFileSync(path.join(__dirname, '..', 'demo', 'data', 'data-processor-results.json'), 'utf-8')
   );
 
+  private new_welsh: DataManagerDataObject[] = JSON.parse(
+    fs.readFileSync(path.join(__dirname, '..', 'demo', 'data', 'data-processor-results-welsh.json'), 'utf-8')
+  );
+
   private existing: PayloadCollectionItem[] = JSON.parse(
     fs.readFileSync(path.join(__dirname, '..', 'demo', 'data', 'demo-payload.json'), 'utf-8')
   );
@@ -55,7 +59,7 @@ export class DemoController {
       }
       case 'new_cy': {
         const NewFlag = new NewFlagsManager();
-        NewFlag.set(this.new);
+        NewFlag.set(this.new_welsh);
 
         req.session.newmanager = NewFlag;
         req.session.existingmanager = new ExistingFlagsManager();
@@ -64,7 +68,6 @@ export class DemoController {
         req.session.hmctsserviceid = 'PFL';
         req.session.sessioninit = true;
         req.session.welsh = true;
-        //res.locals.setLocale(res, 'cy');
 
         return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
       }
