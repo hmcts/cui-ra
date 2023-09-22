@@ -15,18 +15,18 @@
 {% block mainContent %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">{{ _r(_t('support_for_name'), { name: name }) }}</h1>
+        <h1 class="govuk-heading-xl">{{ _r(_t('supportForName'), { name: name }) }}</h1>
 
         <p class="govuk-body">
-            <a href="/home/intro" class="govuk-link govuk-link--no-visited-state">{{ _t('overview.change_my_support_options') }}</a>
+            <a href="/home/intro" class="govuk-link govuk-link--no-visited-state">{{ _t('overview.changeMySupportOptions') }}</a>
         </p>
 
         <table class="govuk-table govuk-!-margin-top-8">
-            <caption class="govuk-table__caption govuk-table__caption--m">{{ _t('overview.table_heading') }}</caption>
+            <caption class="govuk-table__caption govuk-table__caption--m">{{ _t('overview.tableHeading') }}</caption>
             <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">{{ _t('overview.column_1_heading') }}</th>
-                <th scope="col" class="govuk-table__header">{{ _t('overview.column_2_heading') }}</th>
+                <th scope="col" class="govuk-table__header">{{ _t('overview.column1Heading') }}</th>
+                <th scope="col" class="govuk-table__header">{{ _t('overview.column2Heading') }}</th>
                 </tr>
             </thead>
             <tbody class="govuk-table__body">
@@ -56,7 +56,7 @@
                     {% elseif item.value.status == status.NOT_APPROVED %}
                         <td class="govuk-table__cell">
                             <strong class="govuk-tag govuk-tag--orange">
-                                {{ _t('overview.status.not_approved') }}
+                                {{ _t('overview.status.notApproved') }}
                             </strong>
                         </td>
                     {% endif %}

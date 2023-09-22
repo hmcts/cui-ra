@@ -38,7 +38,7 @@
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="_enabled-other" name="enabled" type="checkbox" value="OT0001"  data-aria-controls="conditional-other" {% if parent._other === true %}checked{% endif %}>
           <label class="govuk-label govuk-checkboxes__label" for="other">
-              {{_t('form.typeahead.not_listed')}}
+              {{_t('form.typeahead.notListed')}}
           </label>
           <div id="{{inputName}}-{{ parent.id }}-hint" class="govuk-hint govuk-checkboxes__hint">
               {{ _t('OT0001.hint') }}
@@ -47,11 +47,11 @@
 
         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-other">
               <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="{{count}}" 
-                  data-i18n.characters-under-limit.other="{{ _t('form.char_count.characters_under_limit.other') }}"
-                  data-i18n.characters-under-limit.one="{{ _t('form.char_count.characters_under_limit.one') }}"
-                  data-i18n.characters-at-limit="{{ _t('form.char_count.characters_at_limit') }}"
-                  data-i18n.characters-over-limit.other="{{ _t('form.char_count.characters_over_limit.other') }}"
-                  data-i18n.characters-over-limit.one="{{ _t('form.char_count.characters_over_limit.one') }}"
+                  data-i18n.characters-under-limit.other="{{ _t('form.charCount.charactersUnderLimit.other') }}"
+                  data-i18n.characters-under-limit.one="{{ _t('form.charCount.charactersUnderLimit.one') }}"
+                  data-i18n.characters-at-limit="{{ _t('form.charCount.charactersAtLimit') }}"
+                  data-i18n.characters-over-limit.other="{{ _t('form.charCount.charactersOverLimit.other') }}"
+                  data-i18n.characters-over-limit.one="{{ _t('form.charCount.charactersOverLimit.one') }}"
               >
                   <div class="govuk-form-group">
                       <label id="other-control" class="govuk-label" for="other">
@@ -67,17 +67,17 @@
                       <textarea id="other" rows="{{row}}" aria-describedby="other-info other-hint" class="govuk-textarea govuk-js-character-count {% if parent._errors|length %}govuk-input--error{% endif %}" name="data[{{ parent.id }}][{{inputName}}]" type="text" spellcheck="false">{% if parent.value.subTypeKey === null or  parent.value.subTypeKey === undefined %}{{ parent.value[inputName] }}{% endif %}</textarea>
                   </div>
                   <div id="other-info" class="govuk-hint govuk-character-count__message">
-                      {{ _r(_t('form.char_count.hint'), count) }}
+                      {{ _r(_t('form.charCount.hint'), count) }}
                   </div>
               </div>
           </div>
 
-       <div class="govuk-checkboxes__divider">{{ _t('or_divider') }}</div>
+       <div class="govuk-checkboxes__divider">{{ _t('orDivider') }}</div>
 
         <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="_enabled-0" name="enabled" type="checkbox" value="none"  data-behaviour="exclusive">
             <label class="govuk-label govuk-checkboxes__label">
-                {{ _t('form.no_support') }}
+                {{ _t('form.noSupport') }}
             </label>
         </div>
 

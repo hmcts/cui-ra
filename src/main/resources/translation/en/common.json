@@ -1,76 +1,76 @@
 {
   "phase": "Beta",
   "feedback": "This is a new service – your <a href=\"{smartSurveyFeedbackUrl}?pageurl={currentPageUrl}\" class=\"govuk-link\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"Feedback: This link will open in a new tab. You'll need to return to this tab to continue with your application.\">feedback</a> will help us to improve it.",
-  "start_now": "Start now",
+  "startNow": "Start now",
   "continue": "Continue",
   "cancel": "Cancel",
   "back": "Back",
-  "or_divider": "or",
-  "for_name": "for {name}",
-  "support_for_name": "Support for {name}",
+  "orDivider": "or",
+  "forName": "for {name}",
+  "supportForName": "Support for {name}",
   "header": {
-    "menu-text": "Menu",
+    "menuText": "Menu",
     "title": "Your support"
   },
   "footer": {
     "cookies": "Cookies",
-    "privacy_policy": "Privacy Policy",
-    "terms_and_conditions": "Terms and Conditions",
-    "help_using_gov_uk": "Help using GOV.UK",
-    "contact_us": "Contact us",
-    "accessibility_statement": "Accessibility statement"
+    "privacyPolicy": "Privacy Policy",
+    "termsAndConditions": "Terms and Conditions",
+    "helpUsingGovUk": "Help using GOV.UK",
+    "contactUs": "Contact us",
+    "accessibilityStatement": "Accessibility statement"
   },
   "overview": {
-    "change_my_support_options": "Change my support options",
-    "table_heading": "Reasonable adjustments",
-    "column_1_heading": "Adjustment type",
-    "column_2_heading": "Status",
+    "changeMySupportOptions": "Change my support options",
+    "tableHeading": "Reasonable adjustments",
+    "column1Heading": "Adjustment type",
+    "column2Heading": "Status",
     "status": {
       "requested": "Requested",
       "active": "Approved",
       "inactive": "No longer needed",
-      "not_approved": "Not Approved"
+      "notApproved": "Not Approved"
     }
   },
   "intro": {
     "heading": "I want to tell you that my support needs have changed",
-    "paragraph_1": "Use this form to tell us if your support needs have changed. You might not need something any more, or you can request something new.",
+    "paragraph1": "Use this form to tell us if your support needs have changed. You might not need something any more, or you can request something new.",
     "blurb": "You will be able to review your application before you submit it."
   },
   "form": {
-    "char_count": {
+    "charCount": {
       "hint": "You can enter up to {count} characters",
-      "characters_under_limit": {
+      "charactersUnderLimit": {
         "other": "You have %{count} characters remaining",
         "one": "You have %{count} character remaining"
       },
-      "characters_at_limit": "You have 0 characters remaining",
-      "characters_over_limit": {
+      "charactersAtLimit": "You have 0 characters remaining",
+      "charactersOverLimit": {
         "other": "You have %{count} characters too many",
         "one": "You have %{count} character too many"
       }
     },
-    "no_support": "I do not need any support at this time",
+    "noSupport": "I do not need any support at this time",
     "problem": "There is a problem",
-    "submit_button": "Save and continue",
+    "submitButton": "Save and continue",
     "typeahead": {
       "hint": "Start typing to choose the support, or select 'The support is not listed",
-      "not_listed": "The support is not listed",
+      "notListed": "The support is not listed",
       "control": "Enter the type of support you need to request"
     },
     "radio": {
       "hint": "Select all that apply.",
-      "not_listed": "The support is not listed",
+      "notListed": "The support is not listed",
       "control": "Enter the type of support you need to request"
     }
   },
   "review": {
     "heading": "Review the support you've requested",
-    "name_of_party": "Name of party",
+    "nameOfParty": "Name of party",
     "support": {
       "previous": "Support you've already requested",
       "new": "New support you want to request now",
-      "not_needed": "Support you no longer need"
+      "notNeeded": "Support you no longer need"
     },
     "actions": {
       "remove": "I no longer need this",
