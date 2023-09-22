@@ -4,7 +4,7 @@ import { ReviewController } from '../../../../main/controllers';
 import { Session, SessionData } from 'express-session';
 import { PayloadCollectionItem } from '../../../../main/interfaces';
 import { ExistingFlagsManager, NewFlagsManager } from '../../../../main/managers';
-import { Status, Route } from '../../../../main/constants';
+import { ErrorMessages, Status, Route } from '../../../../main/constants';
 import { mockRedisClient } from './../../mocks';
 
 const host = 'www.test.com';
@@ -67,6 +67,15 @@ describe('Review Controller', () => {
     expect(mockResponse.render).toBeCalledWith('review', expect.any(Object));
   });
 
+  test('Should fail rendering review page', async () => {
+    mockResponse.render = jest.fn().mockImplementation(() => {
+      throw new Error('User not found');
+    });
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
+    expect(mockNext).toBeCalledWith(new Error('User not found'));
+  });
+
   test('Should set inactive and render review page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     const id = 'RA0001-RA0002';
@@ -85,7 +94,24 @@ describe('Review Controller', () => {
       expect(mockRequest.session?.existingmanager.get(id)?.value.status).toBe(Status.INACTIVE);
     }
 
-    expect(mockResponse.redirect).toBeCalledWith('/review');
+    expect(mockResponse.redirect).toBeCalledWith(Route.REVIEW);
+  });
+
+  test('Should fail to set inactive and render review page', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    const id = 'RA0001-RA0002';
+
+    mockRequest.query = {
+      id: id,
+    };
+
+    mockResponse.redirect = jest.fn().mockImplementation(() => {
+      throw new Error('User not found');
+    });
+
+    await reviewController.setInactive(mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(mockNext).toBeCalledWith(new Error('User not found'));
   });
 
   test('Should set requested and render review page', async () => {
@@ -109,11 +135,36 @@ describe('Review Controller', () => {
     expect(mockResponse.redirect).toBeCalledWith('/review');
   });
 
+  test('Should fail to set requested and render review page', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    const id = 'RA0001-RA0002';
+
+    mockRequest.query = {
+      id: id,
+    };
+
+    mockResponse.redirect = jest.fn().mockImplementation(() => {
+      throw new Error('User not found');
+    });
+
+    await reviewController.setRequested(mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(mockNext).toBeCalledWith(new Error('User not found'));
+  });
+
   test('Should cancel and redirect to callback', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     await reviewController.cancel(mockRequest as Request, mockResponse as Response, mockNext);
 
     expect(mockResponse.redirect).toBeCalledWith(302, 'https://localhost/callback/random-string-uuid');
+  });
+
+  test('Should fail cancel and redirect to callback', async () => {
+    mockRequest.session = undefined;
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    await reviewController.cancel(mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR));
   });
 
   test('Should cancel and redirect to callback', async () => {

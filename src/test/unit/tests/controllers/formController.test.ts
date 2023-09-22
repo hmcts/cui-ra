@@ -5,7 +5,8 @@ import { mockRequest, mockResponse } from '../../mocks';
 import { DataManagerDataObject } from './../../../../main/interfaces';
 import { NewFlagsManager } from '../../../../main/managers';
 import { UrlRoute } from '../../../../main/utilities';
-import { Route } from '../../../../main/constants';
+import { ErrorMessages, Route } from '../../../../main/constants';
+import { HTTPError } from './../../../../main/HttpError';
 
 const dataProcessorResultJson: DataManagerDataObject[] = JSON.parse(
   fs.readFileSync(__dirname + '/../../data/data-processor-results.json', 'utf-8')
@@ -53,6 +54,36 @@ describe('FormController', () => {
 
     // Assert expected behavior here
     expect(mockedResponse.render).toHaveBeenCalledWith('forms/checkbox-group', expect.any(Object));
+  });
+
+  test('should fail to display the form', async () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
+    )[0];
+
+    const mockSession = {
+      newmanager: {
+        get: jest.fn().mockReturnValue(null),
+        hasUnaswered: jest.fn().mockReturnValue(false),
+        getChildren: jest
+          .fn()
+          .mockReturnValue(
+            dataProcessorResultJson.filter((item: DataManagerDataObject) => parent._childIds.includes(item.id))
+          ),
+      },
+    };
+
+    mockedRequest = mockRequest(null);
+    mockedResponse = mockResponse();
+
+    mockedRequest.params = { id: 'someId' };
+    mockedRequest.query = { change: 'true' };
+    mockedRequest.session = mockSession;
+
+    await formController.display(mockedRequest, mockedResponse, mockNext);
+
+    // Assert expected behavior here
+    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 404));
   });
 
   test('should display the form with forms/type-ahead with valid flag', async () => {
@@ -338,5 +369,30 @@ describe('FormController', () => {
 
     // Assert expected behavior here
     expect(mockedResponse.render).toHaveBeenCalledWith('forms/checkbox-group', expect.any(Object));
+  });
+
+  test('should fail to Post', async () => {
+    const mockSession = {
+      newmanager: {
+        get: jest.fn().mockReturnValue(null),
+      },
+    };
+
+    mockedRequest = mockRequest(null);
+    mockedResponse = mockResponse();
+
+    mockedRequest.params = { id: 'PF0001-RA0001' };
+    mockedRequest.session = mockSession;
+    mockedRequest.protocol = protocol;
+    mockedRequest.headers = {
+      host: host,
+    };
+
+    mockedRequest.body = {}; // Mock request body
+
+    await formController.post(mockedRequest, mockedResponse, mockNext);
+
+    // Assert expected behavior here
+    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 404));
   });
 });

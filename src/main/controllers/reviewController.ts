@@ -65,7 +65,7 @@ export class ReviewController {
       const change = !!(req.query && typeof req.query.change !== 'undefined');
 
       if (!req.session || !req.session.callbackUrl) {
-        throw ErrorMessages.UNEXPECTED_ERROR;
+        throw new Error(ErrorMessages.UNEXPECTED_ERROR);
       }
 
       if (change) {
