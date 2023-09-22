@@ -1,9 +1,10 @@
-import { Request, Response } from 'express';
+import { Request, Response, NextFunction } from 'express';
 import { DataController } from '../../../../main/controllers';
 import { ErrorMessages, Route } from '../../../../main/constants';
 import { UrlRoute } from './../../../../main/utilities';
 import { mockLogger, mockRedisClient, mockServiceAuth, mockRefData, mockFlagProcessor } from '../../mocks';
 import { Session, SessionData } from 'express-session';
+import { HTTPError } from './../../../../main/HttpError';
 import fs from 'fs';
 
 const dataProcessorResultJson = JSON.parse(
@@ -22,6 +23,7 @@ describe('DataController', () => {
   let dataController: DataController;
   let mockRequest: Partial<Request>;
   let mockResponse: Partial<Response>;
+  let mockNext: NextFunction;
 
   beforeEach(() => {
     // Initialize the mock objects and dependencies
@@ -45,6 +47,7 @@ describe('DataController', () => {
       mockedFlagProcessor,
       mockedServiceAuth
     );
+    mockNext = jest.fn();
   });
 
   afterEach(() => {
@@ -55,10 +58,9 @@ describe('DataController', () => {
     // Mock the exists method in the redisClient to return false
     mockedRedis.exists = jest.fn().mockResolvedValue(false);
 
-    await dataController.process(mockRequest as Request, mockResponse as Response);
+    await dataController.process(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockResponse.status).toHaveBeenCalledWith(404);
-    expect(mockResponse.send).toHaveBeenCalledWith(ErrorMessages.DATA_NOT_FOUND);
+    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.DATA_NOT_FOUND, 404));
   });
 
   test('should handle 404 when data is empty in the redis store', async () => {
@@ -67,10 +69,11 @@ describe('DataController', () => {
     mockedRedis.exists = jest.fn().mockResolvedValue(true);
     mockedRedis.get = jest.fn().mockResolvedValue(null);
 
-    await dataController.process(mockRequest as Request, mockResponse as Response);
+    await dataController.process(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockResponse.status).toHaveBeenCalledWith(404);
-    expect(mockResponse.send).toHaveBeenCalledWith(ErrorMessages.DATA_NOT_FOUND);
+    //expect(mockResponse.status).toHaveBeenCalledWith(404);
+    //expect(mockResponse.send).toHaveBeenCalledWith(ErrorMessages.DATA_NOT_FOUND);
+    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.DATA_NOT_FOUND, 404));
   });
 
   test('should process data and redirect to new flags setup when no existing flags are found', async () => {
@@ -94,7 +97,7 @@ describe('DataController', () => {
     // Mock the process method in flagProcessor to return some processed data
     mockedFlagProcessor.process = jest.fn().mockReturnValue(dataProcessorResultJson);
 
-    await dataController.process(mockRequest as Request, mockResponse as Response);
+    await dataController.process(mockRequest as Request, mockResponse as Response, mockNext);
 
     expect(mockResponse.status).toHaveBeenCalledWith(301);
     // expect(mockResponse.redirect).toHaveBeenCalledWith(
@@ -141,7 +144,7 @@ describe('DataController', () => {
     // Mock the process method in flagProcessor to return some processed data
     mockedFlagProcessor.process = jest.fn().mockReturnValue([]);
 
-    await dataController.process(mockRequest as Request, mockResponse as Response);
+    await dataController.process(mockRequest as Request, mockResponse as Response, mockNext);
 
     expect(mockResponse.status).toHaveBeenCalledWith(301);
     expect(mockResponse.redirect).toHaveBeenCalledWith(
@@ -164,9 +167,10 @@ describe('DataController', () => {
     // Mock the exists method in the redisClient to throw an error
     mockedRedis.exists = jest.fn().mockRejectedValue(new Error('Mock Redis Error'));
 
-    await dataController.process(mockRequest as Request, mockResponse as Response);
+    await dataController.process(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockResponse.status).toHaveBeenCalledWith(500);
-    expect(mockResponse.send).toHaveBeenCalledWith(ErrorMessages.UNEXPECTED_ERROR);
+    //expect(mockResponse.status).toHaveBeenCalledWith(500);
+    //expect(mockResponse.send).toHaveBeenCalledWith(ErrorMessages.UNEXPECTED_ERROR);
+    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 500));
   });
 });

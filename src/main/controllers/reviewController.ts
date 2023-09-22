@@ -6,96 +6,116 @@ import { OutboundPayload } from './../models';
 import { UrlRoute } from './../utilities';
 
 import autobind from 'autobind-decorator';
-import { Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 
 @autobind
 export class ReviewController {
   constructor(private redisClient: RedisClientInterface) {}
 
-  public async get(req: Request, res: Response): Promise<void> {
-    if (req.session.callbackUrl) {
-      const url = UrlRoute.make(req.session.callbackUrl, { id: '' });
+  public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      if (req.session.callbackUrl) {
+        const url = UrlRoute.make(req.session.callbackUrl, { id: '' });
+        res.set('Content-Security-Policy', `form-action 'self' ${url}`);
+      }
+      res.render('review', {
+        welsh: false,
+        requested: req.session.existingmanager?.find('value.status', 'Requested'),
+        new: req.session.newmanager
+          ?.find('_enabled', true)
+          ?.filter((item: DataManagerDataObject) => item._isParent === false),
+        notRequired: req.session.existingmanager?.find('value.status', 'Inactive') || [],
+        route: Route,
+      });
+    } catch (e) {
+      next(e);
+    }
+  }
+
+  public async setRequested(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      const id: string = req.query.id as string;
+
+      if (req.session.existingmanager?.get(id)?.value.status === Status.INACTIVE) {
+        req.session.existingmanager?.setStatus(id, Status.REQUESTED);
+      }
+
+      res.redirect(Route.REVIEW);
+    } catch (e) {
+      next(e);
+    }
+  }
+
+  public async setInactive(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      const id: string = req.query.id as string;
+
+      if (req.session.existingmanager?.get(id)?.value.status === Status.REQUESTED) {
+        req.session.existingmanager?.setStatus(id, Status.INACTIVE);
+      }
+
+      res.redirect(Route.REVIEW);
+    } catch (e) {
+      next(e);
+    }
+  }
+
+  public async cancel(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      const change = !!(req.query && typeof req.query.change !== 'undefined');
+
+      if (!req.session || !req.session.callbackUrl) {
+        throw new Error(ErrorMessages.UNEXPECTED_ERROR);
+      }
+
+      if (change) {
+        return res.redirect(Route.REVIEW);
+      }
+
+      const payload: OutboundPayload = PayloadBuilder.build(req, Actions.CANCEL);
+
+      //gen id
+      const uuid = await this.redisClient.generateUUID();
+
+      //Save data to redis store
+      await this.redisClient.set(uuid, JSON.stringify(payload));
+
+      //Create Url from callback to service to redirect the user
+      const url = UrlRoute.make(req.session.callbackUrl, { id: uuid });
+
+      req.session.destroy(function () {});
+
+      //redirect back to invoking service with unique id
+      res.redirect(302, url);
+    } catch (e) {
+      next(e);
+    }
+  }
+
+  public async post(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
+    try {
+      if (!req.session || !req.session.callbackUrl) {
+        throw ErrorMessages.UNEXPECTED_ERROR;
+      }
+
+      const payload: OutboundPayload = PayloadBuilder.build(req);
+
+      //gen id
+      const uuid = await this.redisClient.generateUUID();
+
+      //Save data to redis store
+      await this.redisClient.set(uuid, JSON.stringify(payload));
+
+      //Create Url from callback to service to redirect the user
+      const url = UrlRoute.make(req.session.callbackUrl, { id: uuid });
+
+      req.session.destroy(function () {});
       res.set('Content-Security-Policy', `form-action 'self' ${url}`);
+
+      //redirect back to invoking service with unique id
+      return res.status(301).redirect(url);
+    } catch (e) {
+      next(e);
     }
-    res.render('review', {
-      welsh: false,
-      requested: req.session.existingmanager?.find('value.status', 'Requested'),
-      new: req.session.newmanager
-        ?.find('_enabled', true)
-        ?.filter((item: DataManagerDataObject) => item._isParent === false),
-      notRequired: req.session.existingmanager?.find('value.status', 'Inactive') || [],
-      route: Route,
-    });
-  }
-
-  public async setRequested(req: Request, res: Response): Promise<void> {
-    const id: string = req.query.id as string;
-
-    if (req.session.existingmanager?.get(id)?.value.status === Status.INACTIVE) {
-      req.session.existingmanager?.setStatus(id, Status.REQUESTED);
-    }
-
-    res.redirect(Route.REVIEW);
-  }
-
-  public async setInactive(req: Request, res: Response): Promise<void> {
-    const id: string = req.query.id as string;
-
-    if (req.session.existingmanager?.get(id)?.value.status === Status.REQUESTED) {
-      req.session.existingmanager?.setStatus(id, Status.INACTIVE);
-    }
-
-    res.redirect(Route.REVIEW);
-  }
-
-  public async cancel(req: Request, res: Response): Promise<void> {
-    const change = !!(req.query && typeof req.query.change !== 'undefined');
-
-    if (!req.session || !req.session.callbackUrl) {
-      throw ErrorMessages.UNEXPECTED_ERROR;
-    }
-
-    if (change) {
-      return res.redirect(Route.REVIEW);
-    }
-
-    const payload: OutboundPayload = PayloadBuilder.build(req, Actions.CANCEL);
-
-    //gen id
-    const uuid = await this.redisClient.generateUUID();
-
-    //Save data to redis store
-    await this.redisClient.set(uuid, JSON.stringify(payload));
-
-    //Create Url from callback to service to redirect the user
-    const url = UrlRoute.make(req.session.callbackUrl, { id: uuid });
-
-    req.session.destroy(function () {});
-
-    //redirect back to invoking service with unique id
-    res.redirect(302, url);
-  }
-
-  public async post(req: Request, res: Response): Promise<Response | void> {
-    if (!req.session || !req.session.callbackUrl) {
-      throw ErrorMessages.UNEXPECTED_ERROR;
-    }
-
-    const payload: OutboundPayload = PayloadBuilder.build(req);
-
-    //gen id
-    const uuid = await this.redisClient.generateUUID();
-
-    //Save data to redis store
-    await this.redisClient.set(uuid, JSON.stringify(payload));
-
-    //Create Url from callback to service to redirect the user
-    const url = UrlRoute.make(req.session.callbackUrl, { id: uuid });
-
-    req.session.destroy(function () {});
-    res.set('Content-Security-Policy', `form-action 'self' ${url}`);
-
-    //redirect back to invoking service with unique id
-    return res.status(301).redirect(url);
   }
 }

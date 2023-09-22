@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { Request, Response } from 'express';
+import { Request, Response, NextFunction } from 'express';
 import { DemoController } from '../../../../main/controllers';
 import { Session, SessionData } from 'express-session';
 import { PayloadCollectionItem } from '../../../../main/interfaces';
@@ -15,6 +15,7 @@ describe('Demo Controller', () => {
   let demoController: DemoController;
   let mockRequest: Request;
   let mockResponse: Response;
+  let mockNext: NextFunction;
 
   beforeEach(() => {
     // Initialize the mock objects and dependencies
@@ -34,6 +35,7 @@ describe('Demo Controller', () => {
       redirect: jest.fn().mockReturnThis(),
       render: jest.fn().mockReturnThis(),
     } as unknown as Response;
+    mockNext = jest.fn();
     demoController = new DemoController();
   });
 
@@ -43,7 +45,7 @@ describe('Demo Controller', () => {
 
   test('Should render demo page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    await demoController.get(mockRequest, mockResponse);
+    await demoController.get(mockRequest, mockResponse, mockNext);
     expect(mockResponse.render).toBeCalledWith('demo');
   });
 
@@ -51,7 +53,7 @@ describe('Demo Controller', () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     const id = 'PF0001-RA0001';
     mockRequest.query = { action: 'new' };
-    demoController.startDemo(mockRequest, mockResponse);
+    demoController.startDemo(mockRequest, mockResponse, mockNext);
 
     expect(mockResponse.redirect).toBeCalledWith(
       UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: id }, UrlRoute.url(mockRequest))
@@ -62,7 +64,7 @@ describe('Demo Controller', () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     const id = 'PF0001-RA0001';
     mockRequest.query = { action: 'new_cy' };
-    demoController.startDemo(mockRequest, mockResponse);
+    demoController.startDemo(mockRequest, mockResponse, mockNext);
 
     expect(mockResponse.redirect).toBeCalledWith(
       UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: id }, UrlRoute.url(mockRequest))
@@ -84,7 +86,7 @@ describe('Demo Controller', () => {
       existingManager: dataManagerExisting,
     } as unknown as Session & Partial<SessionData>;
 
-    demoController.startDemo(mockRequest, mockResponse);
+    demoController.startDemo(mockRequest, mockResponse, mockNext);
     expect(mockResponse.redirect).toBeCalledWith('home/overview');
   });
 });
