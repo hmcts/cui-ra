@@ -1,53 +1,84 @@
 import { Route, Status } from '../constants';
 
 import autobind from 'autobind-decorator';
-import { Request, Response } from 'express';
+import { Request, Response, NextFunction } from 'express';
 
 @autobind
 export class HomeController {
-  public async get(req: Request, res: Response): Promise<void> {
-    res.render('home');
-  }
-
-  public async overview(req: Request, res: Response): Promise<void> {
-    // Add checks here to ensure the required data is on the session???
-
-    res.render('overview', {
-      existingFlags: req.session.existingmanager?.data,
-      name: req.session.partyname,
-      status: Status,
-    });
-  }
-
-  public async intro(req: Request, res: Response): Promise<void> {
-    res.render('intro');
-  }
-
-  public async cookies(req: Request, res: Response): Promise<void> {
-    res.render('cookies');
-  }
-
-  public async privacyPolicy(req: Request, res: Response): Promise<void> {
-    res.render('privacy-policy');
-  }
-
-  public async termsAndConditions(req: Request, res: Response): Promise<void> {
-    res.render('terms-and-conditions');
-  }
-
-  public async accessibilityStatement(req: Request, res: Response): Promise<void> {
-    res.render('accessibility-statement');
-  }
-
-  public async signOut(req: Request, res: Response): Promise<void> {
-    const logoutUrl = req.session.logoutUrl;
-
-    req.session.destroy(function () {});
-
-    if (logoutUrl) {
-      return res.redirect(logoutUrl);
+  public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try{
+      res.render('home');
+    }catch(e){
+      return next(e);
     }
+  }
 
-    return res.redirect(Route.ROOT);
+  public async overview(req: Request, res: Response, next: NextFunction): Promise<void> {
+    // Add checks here to ensure the required data is on the session???
+    try{
+      res.render('overview', {
+        existingFlags: req.session.existingmanager?.data,
+        name: req.session.partyname,
+        status: Status,
+      });
+    }catch(e){
+      return next(e);
+    }
+  }
+
+  public async intro(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try{
+      res.render('intro');
+    }catch(e){
+      return next(e);
+    }
+  }
+
+  public async cookies(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try{
+      res.render('cookies');
+    }catch(e){
+      return next(e);
+    }
+  }
+
+  public async privacyPolicy(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try{
+      res.render('privacy-policy');
+    }catch(e){
+      return next(e);
+    }
+  }
+
+  public async termsAndConditions(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try{
+      res.render('terms-and-conditions');
+    }catch(e){
+      return next(e);
+    }
+  }
+
+  public async accessibilityStatement(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try{
+      res.render('accessibility-statement');
+    }catch(e){
+      return next(e);
+    }
+  }
+
+  public async signOut(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try{
+      const logoutUrl = req.session.logoutUrl;
+
+      req.session.destroy(function () {});
+
+      if (logoutUrl) {
+        return res.redirect(logoutUrl);
+      }
+
+      return res.redirect(Route.ROOT);
+    }catch(e){
+      return next(e);
+    }
   }
 }

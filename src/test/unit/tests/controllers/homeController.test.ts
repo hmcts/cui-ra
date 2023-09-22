@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { Request, Response } from 'express';
+import { Request, Response, NextFunction } from 'express';
 import { HomeController } from '../../../../main/controllers';
 import { Session, SessionData } from 'express-session';
 import { PayloadCollectionItem } from '../../../../main/interfaces';
@@ -14,6 +14,7 @@ describe('Home Controller', () => {
   let homeController: HomeController;
   let mockRequest: Partial<Request>;
   let mockResponse: Partial<Response>;
+  let mockNext: NextFunction;
 
   beforeEach(() => {
     // Initialize the mock objects and dependencies
@@ -37,6 +38,7 @@ describe('Home Controller', () => {
       redirect: jest.fn().mockReturnThis(),
       render: jest.fn().mockReturnThis(),
     };
+    mockNext = jest.fn();
     homeController = new HomeController();
   });
 
@@ -46,7 +48,7 @@ describe('Home Controller', () => {
 
   test('Should render home page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    homeController.get(mockRequest as Request, mockResponse as Response);
+    homeController.get(mockRequest as Request, mockResponse as Response, mockNext);
     expect(mockResponse.render).toBeCalledWith('home');
   });
 
@@ -64,43 +66,43 @@ describe('Home Controller', () => {
       existingManager: dataManagerExisting,
     } as unknown as Session & Partial<SessionData>;
 
-    homeController.overview(mockRequest as Request, mockResponse as Response);
+    homeController.overview(mockRequest as Request, mockResponse as Response, mockNext);
     expect(mockResponse.render).toBeCalledWith('overview', expect.any(Object));
   });
 
   test('Should render intro page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    homeController.intro(mockRequest as Request, mockResponse as Response);
+    homeController.intro(mockRequest as Request, mockResponse as Response, mockNext);
     expect(mockResponse.render).toBeCalledWith('intro');
   });
 
   test('Should render cookies page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    homeController.cookies(mockRequest as Request, mockResponse as Response);
+    homeController.cookies(mockRequest as Request, mockResponse as Response, mockNext);
     expect(mockResponse.render).toBeCalledWith('cookies');
   });
 
   test('Should render privacy policy page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    homeController.privacyPolicy(mockRequest as Request, mockResponse as Response);
+    homeController.privacyPolicy(mockRequest as Request, mockResponse as Response, mockNext);
     expect(mockResponse.render).toBeCalledWith('privacy-policy');
   });
 
   test('Should render terms and conditions page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    homeController.termsAndConditions(mockRequest as Request, mockResponse as Response);
+    homeController.termsAndConditions(mockRequest as Request, mockResponse as Response, mockNext);
     expect(mockResponse.render).toBeCalledWith('terms-and-conditions');
   });
 
   test('Should render accessibility statement page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    homeController.accessibilityStatement(mockRequest as Request, mockResponse as Response);
+    homeController.accessibilityStatement(mockRequest as Request, mockResponse as Response, mockNext);
     expect(mockResponse.render).toBeCalledWith('accessibility-statement');
   });
 
   test('Should redirect to logoutUrl', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    homeController.signOut(mockRequest as Request, mockResponse as Response);
+    homeController.signOut(mockRequest as Request, mockResponse as Response, mockNext);
     expect(mockResponse.redirect).toBeCalledWith(host);
     //expect(mockRequest.session?.destroy).toHaveBeenCalled();
   });
@@ -110,14 +112,14 @@ describe('Home Controller', () => {
     if (mockRequest.session) {
       mockRequest.session.logoutUrl = '';
 
-      homeController.signOut(mockRequest as Request, mockResponse as Response);
+      homeController.signOut(mockRequest as Request, mockResponse as Response, mockNext);
       expect(mockResponse.redirect).toBeCalledWith(Route.ROOT);
     }
   });
 
   test('Should clear session data on logout', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    homeController.signOut(mockRequest as Request, mockResponse as Response);
+    homeController.signOut(mockRequest as Request, mockResponse as Response, mockNext);
     expect(mockRequest.session?.destroy).toHaveBeenCalled();
   });
 });

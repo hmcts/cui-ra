@@ -12,10 +12,11 @@ import { InboundPayloadStore } from './../models';
 import { languages } from './../modules/translation';
 import { flagResourceType } from './../services';
 import { DataTimeUtilities, UrlRoute } from './../utilities';
+import { HTTPError } from './../HttpError';
 
 import autobind from 'autobind-decorator';
 import { plainToClass } from 'class-transformer';
-import { Request, Response } from 'express';
+import { Request, Response, NextFunction } from 'express';
 
 @autobind
 export class DataController {
@@ -27,19 +28,19 @@ export class DataController {
     private serviceAuth: ServiceAuth
   ) {}
 
-  public async process(req: Request, res: Response): Promise<Response | void> {
-    const id: string = req.params.id.toString();
+  public async process(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
     try {
+      const id: string = req.params.id.toString();
       //Check the key exists
       if (!(await this.redisClient.exists(id))) {
-        return res.status(404).send(ErrorMessages.DATA_NOT_FOUND);
+        throw new HTTPError(ErrorMessages.DATA_NOT_FOUND,404);
       }
 
       //Get data from redis store
       const data: string | null = await this.redisClient.get(id);
 
       if (!data) {
-        return res.status(404).send(ErrorMessages.DATA_NOT_FOUND);
+        throw new HTTPError(ErrorMessages.DATA_NOT_FOUND,404);
       }
 
       const payloadStore: InboundPayloadStore = plainToClass(
@@ -106,7 +107,10 @@ export class DataController {
       }
     } catch (e) {
       this.logger.error(e.message);
-      return res.status(500).send(ErrorMessages.UNEXPECTED_ERROR);
+      if (!(e instanceof HTTPError)){
+        next(new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 500));
+      }
+      next(e)
     }
   }
 }

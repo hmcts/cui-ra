@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { NextFunction } from 'express';
 import { FormController } from '../../../../main/controllers';
 import { mockRequest, mockResponse } from '../../mocks';
 import { DataManagerDataObject } from './../../../../main/interfaces';
@@ -17,8 +18,10 @@ describe('FormController', () => {
   let formController: FormController;
   let mockedRequest = mockRequest(null);
   let mockedResponse = mockResponse();
+  let mockNext: NextFunction;
 
   beforeEach(() => {
+    mockNext = jest.fn();
     formController = new FormController();
   });
 
@@ -46,7 +49,7 @@ describe('FormController', () => {
     mockedRequest.query = { change: 'true' };
     mockedRequest.session = mockSession;
 
-    await formController.display(mockedRequest, mockedResponse);
+    await formController.display(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.render).toHaveBeenCalledWith('forms/checkbox-group', expect.any(Object));
@@ -71,7 +74,7 @@ describe('FormController', () => {
     mockedRequest.params = { id: 'someId' };
     mockedRequest.session = mockSession;
 
-    await formController.display(mockedRequest, mockedResponse);
+    await formController.display(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.render).toHaveBeenCalledWith('forms/type-ahead', expect.any(Object));
@@ -96,7 +99,7 @@ describe('FormController', () => {
     mockedRequest.params = { id: 'someId' };
     mockedRequest.session = mockSession;
 
-    await formController.display(mockedRequest, mockedResponse);
+    await formController.display(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.render).toHaveBeenCalledWith('forms/radio-group', expect.any(Object));
@@ -144,7 +147,7 @@ describe('FormController', () => {
       enabled: ['PF0001-RA0001-RA0004'],
     }; // Mock request body
 
-    await formController.post(mockedRequest, mockedResponse);
+    await formController.post(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.redirect).toHaveBeenCalledWith(
@@ -195,7 +198,7 @@ describe('FormController', () => {
       enabled: ['PF0001-RA0001-RA0004'],
     }; // Mock request body
 
-    await formController.post(mockedRequest, mockedResponse);
+    await formController.post(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.redirect).toHaveBeenCalledWith(
@@ -246,7 +249,7 @@ describe('FormController', () => {
       enabled: ['PF0001-RA0001-RA0004'],
     }; // Mock request body
 
-    await formController.post(mockedRequest, mockedResponse);
+    await formController.post(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.redirect).toHaveBeenCalledWith(Route.REVIEW);
@@ -275,7 +278,7 @@ describe('FormController', () => {
       enabled: ['none'],
     }; // Mock request body
 
-    await formController.post(mockedRequest, mockedResponse);
+    await formController.post(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.redirect).toHaveBeenCalledWith(Route.REVIEW);
@@ -304,7 +307,7 @@ describe('FormController', () => {
       selected: 'none',
     }; // Mock request body
 
-    await formController.post(mockedRequest, mockedResponse);
+    await formController.post(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.redirect).toHaveBeenCalledWith(Route.REVIEW);
@@ -331,7 +334,7 @@ describe('FormController', () => {
 
     mockedRequest.body = {}; // Mock request body
 
-    await formController.post(mockedRequest, mockedResponse);
+    await formController.post(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.render).toHaveBeenCalledWith('forms/checkbox-group', expect.any(Object));
