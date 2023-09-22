@@ -46,7 +46,7 @@
       {% endif %}
 
       <h1 class="govuk-heading-l">
-          <span class="govuk-caption-l">{{ master_name }} {% if partyname %}{{ _r(_t('for_name'), { name:partyname }) }}{% endif %}</span>
+          <span class="govuk-caption-l">{{ master_name }} {% if partyname %}{{ _r(_t('forName'), { name:partyname }) }}{% endif %}</span>
           {% if _t(parent.value.flagCode + ".fullQuestion") %}
             {{ _t(parent.value.flagCode  + ".fullQuestion") }}
           {% else %}
@@ -65,7 +65,7 @@
 
       <div class="govuk-button-group">
         {{ govukButton({
-          text: _t('form.submit_button'),
+          text: _t('form.submitButton'),
           type: "submit",
           preventDoubleClick: true
         }) }}
