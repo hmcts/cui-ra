@@ -23,7 +23,7 @@
             <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">
-                        <span class='govuk-!-font-weight-bold'>{{ _t('review.name_of_party') }}</span>
+                        <span class='govuk-!-font-weight-bold'>{{ _t('review.nameOfParty') }}</span>
                     </th>
                     <td class="govuk-table__cell">
                         {{ partyname }}
@@ -85,7 +85,7 @@
 
         {# No longer required #}
         {% if notRequired|length > 0 %}
-        <h3 class="govuk-heading-s">{{ _t('review.support.not_needed') }}</h3>
+        <h3 class="govuk-heading-s">{{ _t('review.support.notNeeded') }}</h3>
         <table class="govuk-table">
             <tbody class="govuk-table__body">
                 {% for item in notRequired %}
