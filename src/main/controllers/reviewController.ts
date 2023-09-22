@@ -6,14 +6,14 @@ import { OutboundPayload } from './../models';
 import { UrlRoute } from './../utilities';
 
 import autobind from 'autobind-decorator';
-import { Request, Response, NextFunction } from 'express';
+import { NextFunction, Request, Response } from 'express';
 
 @autobind
 export class ReviewController {
   constructor(private redisClient: RedisClientInterface) {}
 
   public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
-    try{
+    try {
       if (req.session.callbackUrl) {
         const url = UrlRoute.make(req.session.callbackUrl, { id: '' });
         res.set('Content-Security-Policy', `form-action 'self' ${url}`);
@@ -27,13 +27,13 @@ export class ReviewController {
         notRequired: req.session.existingmanager?.find('value.status', 'Inactive') || [],
         route: Route,
       });
-    }catch(e){
+    } catch (e) {
       next(e);
     }
   }
 
   public async setRequested(req: Request, res: Response, next: NextFunction): Promise<void> {
-    try{
+    try {
       const id: string = req.query.id as string;
 
       if (req.session.existingmanager?.get(id)?.value.status === Status.INACTIVE) {
@@ -41,13 +41,13 @@ export class ReviewController {
       }
 
       res.redirect(Route.REVIEW);
-    }catch(e){
+    } catch (e) {
       next(e);
     }
   }
 
   public async setInactive(req: Request, res: Response, next: NextFunction): Promise<void> {
-    try{
+    try {
       const id: string = req.query.id as string;
 
       if (req.session.existingmanager?.get(id)?.value.status === Status.REQUESTED) {
@@ -55,13 +55,13 @@ export class ReviewController {
       }
 
       res.redirect(Route.REVIEW);
-    }catch(e){
+    } catch (e) {
       next(e);
     }
   }
 
   public async cancel(req: Request, res: Response, next: NextFunction): Promise<void> {
-    try{
+    try {
       const change = !!(req.query && typeof req.query.change !== 'undefined');
 
       if (!req.session || !req.session.callbackUrl) {
@@ -87,13 +87,13 @@ export class ReviewController {
 
       //redirect back to invoking service with unique id
       res.redirect(302, url);
-    }catch(e){
+    } catch (e) {
       next(e);
     }
   }
 
   public async post(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
-    try{
+    try {
       if (!req.session || !req.session.callbackUrl) {
         throw ErrorMessages.UNEXPECTED_ERROR;
       }
@@ -114,7 +114,7 @@ export class ReviewController {
 
       //redirect back to invoking service with unique id
       return res.status(301).redirect(url);
-    }catch(e){
+    } catch (e) {
       next(e);
     }
   }

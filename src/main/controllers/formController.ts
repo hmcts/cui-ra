@@ -1,21 +1,21 @@
 import { DataManagerDataObject } from '../interfaces';
 
+import { HTTPError } from './../HttpError';
 import { FormBuilder } from './../builders';
 import { ErrorMessages, Route } from './../constants';
 import { Form } from './../models';
 import { FormProcessor } from './../processors';
 import { UrlRoute } from './../utilities';
 import { FormValidator } from './../validators';
-import { HTTPError } from './../HttpError';
 
 import autobind from 'autobind-decorator';
 import { plainToClass } from 'class-transformer';
-import { Request, Response, NextFunction } from 'express';
+import { NextFunction, Request, Response } from 'express';
 
 @autobind
 export class FormController {
   public async display(req: Request, res: Response, next: NextFunction): Promise<void | Response> {
-    try{
+    try {
       const id = req.params.id;
       const change = !!(req.query && typeof req.query.change !== 'undefined');
 
@@ -24,7 +24,7 @@ export class FormController {
 
       if (!flag) {
         //throw error
-        throw new HTTPError(ErrorMessages.UNEXPECTED_ERROR,404);
+        throw new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 404);
       }
 
       if (change) {
@@ -32,13 +32,13 @@ export class FormController {
       }
 
       return FormBuilder.build(req, res, flag, req.session.newmanager?.getChildren(id));
-    }catch(e){
+    } catch (e) {
       return next(e);
     }
   }
 
   public async post(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
-    try{
+    try {
       const id = req.params.id;
       const change = !!(req.query && typeof req.query.change !== 'undefined');
       const newQuery = !!(req.query && typeof req.query.new !== 'undefined');
@@ -48,7 +48,7 @@ export class FormController {
 
       if (!flag) {
         //throw error because we cant find the id
-        throw new HTTPError(ErrorMessages.UNEXPECTED_ERROR,404);
+        throw new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 404);
       }
 
       const formModel = plainToClass(Form, req.body);
@@ -102,8 +102,10 @@ export class FormController {
         return res.redirect(Route.REVIEW);
       }
 
-      return res.redirect(`${UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: nextPage.id }, UrlRoute.url(req))}${query}`);
-    }catch(e){
+      return res.redirect(
+        `${UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: nextPage.id }, UrlRoute.url(req))}${query}`
+      );
+    } catch (e) {
       return next(e);
     }
   }

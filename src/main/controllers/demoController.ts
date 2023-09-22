@@ -7,7 +7,7 @@ import { ExistingFlagsManager, NewFlagsManager } from './../managers';
 import { UrlRoute } from './../utilities';
 
 import autobind from 'autobind-decorator';
-import { Request, Response, NextFunction } from 'express';
+import { NextFunction, Request, Response } from 'express';
 
 @autobind
 export class DemoController {
@@ -23,10 +23,10 @@ export class DemoController {
     fs.readFileSync(path.join(__dirname, '..', 'demo', 'data', 'demo-payload.json'), 'utf-8')
   );
 
-  public async get(req: Request, res: Response, next:NextFunction): Promise<void> {
+  public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
     // Add code here to populate payloads/session for demo purposes.
     // Speak to Sonny about multiple versions to test blank payload and populated payload
-    try{
+    try {
       req.session.hmctsserviceid = 'PFL';
       req.session.history = [];
       req.session.masterflagcode = 'RA0001';
@@ -35,13 +35,13 @@ export class DemoController {
       req.session.partyname = 'john doe';
 
       res.render('demo');
-    }catch(e){
+    } catch (e) {
       next(e);
     }
   }
 
-  public async startDemo(req: Request, res: Response, next:NextFunction): Promise<void> {
-    try{
+  public async startDemo(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
       const action = req.query.action;
 
       //const host = 'https://localhost:3100';
@@ -95,19 +95,19 @@ export class DemoController {
         }
       }
       return res.render('demo');
-    }catch(e){
+    } catch (e) {
       next(e);
     }
   }
 
-  public async serviceDummy(req: Request, res: Response, next:NextFunction): Promise<Response|void> {
-    try{
+  public async serviceDummy(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
+    try {
       const id = req.params.id;
 
       return res.send(
         `This is a service dummy page. Copy the id: ${id} and use it in the get request to get the payload`
       );
-    }catch(e){
+    } catch (e) {
       return next(e);
     }
   }

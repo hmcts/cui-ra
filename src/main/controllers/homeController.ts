@@ -1,73 +1,73 @@
 import { Route, Status } from '../constants';
 
 import autobind from 'autobind-decorator';
-import { Request, Response, NextFunction } from 'express';
+import { NextFunction, Request, Response } from 'express';
 
 @autobind
 export class HomeController {
   public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
-    try{
+    try {
       res.render('home');
-    }catch(e){
+    } catch (e) {
       return next(e);
     }
   }
 
   public async overview(req: Request, res: Response, next: NextFunction): Promise<void> {
     // Add checks here to ensure the required data is on the session???
-    try{
+    try {
       res.render('overview', {
         existingFlags: req.session.existingmanager?.data,
         name: req.session.partyname,
         status: Status,
       });
-    }catch(e){
+    } catch (e) {
       return next(e);
     }
   }
 
   public async intro(req: Request, res: Response, next: NextFunction): Promise<void> {
-    try{
+    try {
       res.render('intro');
-    }catch(e){
+    } catch (e) {
       return next(e);
     }
   }
 
   public async cookies(req: Request, res: Response, next: NextFunction): Promise<void> {
-    try{
+    try {
       res.render('cookies');
-    }catch(e){
+    } catch (e) {
       return next(e);
     }
   }
 
   public async privacyPolicy(req: Request, res: Response, next: NextFunction): Promise<void> {
-    try{
+    try {
       res.render('privacy-policy');
-    }catch(e){
+    } catch (e) {
       return next(e);
     }
   }
 
   public async termsAndConditions(req: Request, res: Response, next: NextFunction): Promise<void> {
-    try{
+    try {
       res.render('terms-and-conditions');
-    }catch(e){
+    } catch (e) {
       return next(e);
     }
   }
 
   public async accessibilityStatement(req: Request, res: Response, next: NextFunction): Promise<void> {
-    try{
+    try {
       res.render('accessibility-statement');
-    }catch(e){
+    } catch (e) {
       return next(e);
     }
   }
 
   public async signOut(req: Request, res: Response, next: NextFunction): Promise<void> {
-    try{
+    try {
       const logoutUrl = req.session.logoutUrl;
 
       req.session.destroy(function () {});
@@ -77,7 +77,7 @@ export class HomeController {
       }
 
       return res.redirect(Route.ROOT);
-    }catch(e){
+    } catch (e) {
       return next(e);
     }
   }

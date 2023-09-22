@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { Request, Response, NextFunction} from 'express';
+import { Request, Response, NextFunction } from 'express';
 import { DemoController } from '../../../../main/controllers';
 import { Session, SessionData } from 'express-session';
 import { PayloadCollectionItem } from '../../../../main/interfaces';

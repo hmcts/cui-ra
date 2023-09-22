@@ -60,7 +60,7 @@ describe('DataController', () => {
 
     await dataController.process(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.DATA_NOT_FOUND,404));
+    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.DATA_NOT_FOUND, 404));
   });
 
   test('should handle 404 when data is empty in the redis store', async () => {
@@ -73,7 +73,7 @@ describe('DataController', () => {
 
     //expect(mockResponse.status).toHaveBeenCalledWith(404);
     //expect(mockResponse.send).toHaveBeenCalledWith(ErrorMessages.DATA_NOT_FOUND);
-    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.DATA_NOT_FOUND,404));
+    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.DATA_NOT_FOUND, 404));
   });
 
   test('should process data and redirect to new flags setup when no existing flags are found', async () => {
@@ -171,6 +171,6 @@ describe('DataController', () => {
 
     //expect(mockResponse.status).toHaveBeenCalledWith(500);
     //expect(mockResponse.send).toHaveBeenCalledWith(ErrorMessages.UNEXPECTED_ERROR);
-    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.UNEXPECTED_ERROR,500));
+    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 500));
   });
 });
