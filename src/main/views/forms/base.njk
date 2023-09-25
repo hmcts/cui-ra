@@ -4,6 +4,8 @@
 {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
+{% from "./../macros/csrf.njk" import csrfProtection %}
+
 {% if welsh === false %}
     {% set nameValue = 'name' %}
     {% set master_name = mastername %}
@@ -62,6 +64,8 @@
 
       {% block form %}
       {% endblock %}
+
+      {{ csrfProtection(csrfToken) }}
 
       <div class="govuk-button-group">
         {{ govukButton({

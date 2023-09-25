@@ -4,6 +4,8 @@
 {% from "govuk/components/table/macro.njk" import govukTable %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
+{% from "./macros/csrf.njk" import csrfProtection %}
+
 {% block beforeContent %}
     {{ super() }}
     {{ govukBackLink({
@@ -110,6 +112,7 @@
             {{ _t("review.actions.new") }}
         </a>
         <form method="POST">
+            {{ csrfProtection(csrfToken) }}
             <div class="govuk-button-group">       
                 <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
                     {{ _t('review.actions.submit') }}
