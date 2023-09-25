@@ -1,4 +1,7 @@
 {
+  "demo": {
+    "enabled": true
+  },
   "session": {
     "secret": "local",
     "maxAge": 1260000,
