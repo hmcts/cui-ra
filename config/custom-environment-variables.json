@@ -1,4 +1,7 @@
 {
+  "demo": {
+    "enabled": "DEMO_ENABLED"
+  },
   "serviceName": "cui_ra",
   "session": {
     "redis": {

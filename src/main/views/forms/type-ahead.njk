@@ -36,7 +36,7 @@
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 
         <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="_enabled-other" name="enabled" type="checkbox" value="OT0001"  data-aria-controls="conditional-other" {% if parent._other === true %}checked{% endif %}>
+          <input class="govuk-checkboxes__input clear-autocomplete" id="_enabled-other" name="enabled" type="checkbox" value="OT0001"  data-aria-controls="conditional-other" {% if parent._other === true %}checked{% endif %}>
           <label class="govuk-label govuk-checkboxes__label" for="other">
               {{_t('form.typeahead.notListed')}}
           </label>
@@ -75,7 +75,7 @@
        <div class="govuk-checkboxes__divider">{{ _t('orDivider') }}</div>
 
         <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="_enabled-0" name="enabled" type="checkbox" value="none"  data-behaviour="exclusive">
+            <input class="govuk-checkboxes__input clear-autocomplete" id="_enabled-0" name="enabled" type="checkbox" value="none"  data-behaviour="exclusive">
             <label class="govuk-label govuk-checkboxes__label">
                 {{ _t('form.noSupport') }}
             </label>
