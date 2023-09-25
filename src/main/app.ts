@@ -3,6 +3,7 @@ import * as path from 'path';
 import { HTTPError } from './HttpError';
 import {
   AppInsights,
+  CSRFToken,
   Container,
   HealthCheck,
   Helmet,
@@ -45,6 +46,7 @@ new Nunjucks(developmentMode).enableFor(app);
 // secure the application by adding various HTTP headers to its responses
 new Helmet(developmentMode).enableFor(app);
 new HealthCheck().enableFor(app);
+new CSRFToken().enableFor(app);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
