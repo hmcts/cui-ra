@@ -46,7 +46,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/csurf", "npm:1.11.3"],\
             ["@types/es6-promisify", "npm:6.0.2"],\
             ["@types/express", "npm:4.17.18"],\
-            ["@types/express-session", "npm:1.17.7"],\
+            ["@types/express-session", "npm:1.17.8"],\
             ["@types/glob", "npm:8.1.0"],\
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/i18n", "npm:0.13.6"],\
@@ -5085,10 +5085,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/express-session", [\
-        ["npm:1.17.7", {\
-          "packageLocation": "./.yarn/cache/@types-express-session-npm-1.17.7-4e543506f5-4764eafaf4.zip/node_modules/@types/express-session/",\
+        ["npm:1.17.8", {\
+          "packageLocation": "./.yarn/cache/@types-express-session-npm-1.17.8-f9e77c8f3e-e1af8797b3.zip/node_modules/@types/express-session/",\
           "packageDependencies": [\
-            ["@types/express-session", "npm:1.17.7"],\
+            ["@types/express-session", "npm:1.17.8"],\
             ["@types/express", "npm:4.17.18"]\
           ],\
           "linkType": "HARD"\
@@ -5351,7 +5351,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@types/session-file-store", "npm:1.2.2"],\
             ["@types/express", "npm:4.17.18"],\
-            ["@types/express-session", "npm:1.17.7"]\
+            ["@types/express-session", "npm:1.17.8"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8054,7 +8054,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/connect-redis-virtual-ea014bdaa8/0/cache/connect-redis-npm-7.1.0-7fd9a8c503-fb493fae89.zip/node_modules/connect-redis/",\
           "packageDependencies": [\
             ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.0"],\
-            ["@types/express-session", "npm:1.17.7"],\
+            ["@types/express-session", "npm:1.17.8"],\
             ["express-session", "npm:1.17.3"]\
           ],\
           "packagePeers": [\
@@ -8440,7 +8440,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/csurf", "npm:1.11.3"],\
             ["@types/es6-promisify", "npm:6.0.2"],\
             ["@types/express", "npm:4.17.18"],\
-            ["@types/express-session", "npm:1.17.7"],\
+            ["@types/express-session", "npm:1.17.8"],\
             ["@types/glob", "npm:8.1.0"],\
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/i18n", "npm:0.13.6"],\
