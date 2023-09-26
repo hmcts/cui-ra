@@ -5,6 +5,7 @@ import { History, InitSession, RequireIdam, SchemaValidator, ServiceAuthenticati
 import { InboundPayloadSchema } from './schemas';
 
 import { infoRequestHandler } from '@hmcts/info-provider';
+import config from 'config';
 import { Application } from 'express';
 
 const validator = new SchemaValidator();
@@ -28,11 +29,11 @@ export default function (app: Application): void {
   );
 
   // Demo Controller
-  //if (app.locals.ENV !== 'production') {
-  app.get(Route.DEMO, history.add, app.locals.container.cradle.demoController.get);
-  app.get(Route.START_DEMO, history.add, app.locals.container.cradle.demoController.startDemo);
-  app.get(Route.DEMO_SERVICE_DUMMY, app.locals.container.cradle.demoController.serviceDummy);
-  //}
+  if (JSON.parse(config.get('demo.enabled'))) {
+    app.get(Route.DEMO, history.add, app.locals.container.cradle.demoController.get);
+    app.get(Route.START_DEMO, history.add, app.locals.container.cradle.demoController.startDemo);
+    app.get(Route.DEMO_SERVICE_DUMMY, app.locals.container.cradle.demoController.serviceDummy);
+  }
 
   // Review Controller
   app.get(Route.REVIEW, initSession.init, history.add, app.locals.container.cradle.reviewController.get);

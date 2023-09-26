@@ -3,6 +3,9 @@
   "appInsights": {
     "instrumentationKey": false
   },
+  "demo": {
+    "enabled": false
+  },
   "serviceName": "cui_ra",
   "session": {
     "secret": "local",
