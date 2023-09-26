@@ -13,7 +13,7 @@
   <div class="govuk-form-group {% if validationErrors and (validationErrors | length > 0) %}govuk-form-group--error{% endif %}">
     <fieldset class="govuk-fieldset" aria-describedby="main-hint">
       <div id="main-hint" class="govuk-hint">
-        Select all that apply to you.
+        {{ _t('form.hint') }}
       </div>
 
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -21,9 +21,11 @@
       {% for item in children %}
       
             {% if item.value.flagCode === 'OT0001' %}
+                {% set identifier = parent.value.flagCode + '.' + item.value.flagCode %}
                 {% set count = '200' %}
                 {% set row = '5' %}
             {% else %}
+                {% set identifier = item.value.flagCode %}
                 {% set count = '200' %}
                 {% set row = '1' %}
             {% endif %}
@@ -34,7 +36,7 @@
                     {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
                 </label>
                 <div id="{{inputName}}-{{ item.id }}-hint" class="govuk-hint govuk-checkboxes__hint">
-                    {{ _t(item.value.flagCode + '.hint') }}
+                    {{ _t(identifier + '.hint') }}
                 </div>
             </div>
 
@@ -49,7 +51,7 @@
                     >
                         <div class="govuk-form-group">
                             <label id="{{inputName}}-{{ item.id }}-control" class="govuk-label" for="{{inputName}}-{{ item.id }}">
-                                {{ _t(item.value.flagCode + '.control') }}
+                                {{ _t(identifier + '.control') }}
                             </label>
                             {% if item._errors|length %}
                                 <p id="more-detail-error" class="govuk-error-message">
