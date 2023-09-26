@@ -131,9 +131,9 @@
   "RA0019": {},
   "RA0020": {},
   "RA0021": {
-    "control": "Describe what print size you need",
+    "control": "Tell us why you need a nearby parking space",
     "error": {
-      "empty": "Describe what type of print or font you need to request"
+      "empty": "Tell us why you need a nearby parking space"
     }
   },
   "RA0022": {},
