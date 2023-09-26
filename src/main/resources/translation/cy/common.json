@@ -38,6 +38,7 @@
     "blurb": "Byddwch yn gallu adolygu eich cais cyn i chi ei gyflwyno."
   },
   "form": {
+    "hint": "Select all that apply to you",
     "charCount": {
       "hint": "You can enter up to {count} characters",
       "charactersUnderLimit": {
@@ -52,7 +53,7 @@
     },
     "noSupport": "Na, nid wyf angen unrhyw gymorth ar hyn o bryd",
     "problem": "There is a problem",
-    "submitButton": "Save and continue",
+    "submitButton": "Parhau",
     "typeahead": {
       "hint": "Dechreuwch deipio i ddewis y gefnogaeth, neu dewiswch ‘Nid yw’r gefnogaeth wedi’i rhestru",
       "notListed": "Nid yw'r gefnogaeth wedi'i chynnwys",
