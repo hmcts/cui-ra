@@ -26,6 +26,7 @@ export class Nunjucks {
       res.locals.fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
       res.locals.welsh = false;
       res.locals.welsh = req.session.welsh;
+      res.locals.hasSession = req.session.sessioninit;
       if (res.locals.welsh && res.locals.getLocale() !== 'cy') {
         res.locals.setLocale(res, 'cy');
       }

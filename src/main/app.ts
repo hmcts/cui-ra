@@ -24,10 +24,11 @@ const { setupDev } = require('./development');
 const { Logger } = require('@hmcts/nodejs-logging');
 
 const env = process.env.NODE_ENV || 'development';
-const developmentMode = env === 'development';
+const developmentMode = env === 'development' || env === 'test';
 
 export const app = express();
 app.locals.ENV = env;
+app.locals.developmentMode = developmentMode;
 app.locals.appRoot = path.resolve(path.join(__dirname, '..', '..'));
 
 const logger = Logger.getLogger('app');
@@ -58,7 +59,7 @@ app.use((req: Request, res: Response, next) => {
 //Set up routes
 routes(app);
 
-setupDev(app, developmentMode);
+setupDev(app, env === 'development');
 // returning "not found" page for requests with paths not resolved by the router
 app.use((req, res) => {
   res.status(404);
@@ -71,7 +72,7 @@ app.use((err: HTTPError, req: express.Request, res: express.Response) => {
 
   // set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = env === 'development' ? err : {};
+  res.locals.error = developmentMode ? err : {};
   res.status(err.status || 500);
   res.render('/error/500');
 });

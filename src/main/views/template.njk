@@ -7,16 +7,23 @@
 {% endblock %}
 
 {% block header %}
-  {{ govukHeader({
-    serviceName: _t('header.title'),
-    navigation: [
+  {% if hasSession %}
+  {% set menuNavigation = [
       {
         href: route.SIGN_OUT,
         text: _t('header.signOut'),
-        active: true
+        active: true,
+        id: 'logout'
       }
-    ],
-    navigationClasses: "single-item-navigation",
+    ]
+  %}
+  {% else %}
+  {% set menuNavigation = [] %}
+  {% endif %}
+  {{ govukHeader({
+    serviceName: _t('header.title'),
+    navigation: menuNavigation,
+    navigationClasses: "single-item-navigation logged-in",
     menuButtonText: _t('header.menuText')
   }) }}
 {% endblock %}

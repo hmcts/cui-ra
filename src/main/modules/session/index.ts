@@ -4,7 +4,7 @@ import config from 'config';
 import RedisStore from 'connect-redis';
 import { Application } from 'express';
 import session from 'express-session';
-import FileStoreFactory from 'session-file-store';
+//import FileStoreFactory from 'session-file-store';
 
 const Redis = require('ioredis');
 
@@ -12,7 +12,6 @@ export class SessionStorage {
   constructor(private logger: Logger) {}
 
   public enableFor(app: Application): void {
-    // BJ - app.locals.developmentMode is undefined here - This is a problem
     if (!app.locals.developmentMode) {
       app.set('trust proxy', 1);
     }
@@ -24,7 +23,7 @@ export class SessionStorage {
         saveUninitialized: false,
         secret: config.get('session.secret'),
         cookie: {
-          httpOnly: true,
+          httpOnly: !app.locals.developmentMode,
           maxAge: config.get('session.maxAge'),
           sameSite: 'lax', // required for the oauth2 redirect
           secure: !app.locals.developmentMode,
@@ -37,7 +36,7 @@ export class SessionStorage {
 
   private getStore() {
     //const redisStore = RedisStore(session);
-    const fileStore = FileStoreFactory(session);
+    //const fileStore = FileStoreFactory(session);
 
     const host: string = config.get('session.redis.host');
     const port: number = config.get('session.redis.port');
@@ -63,6 +62,9 @@ export class SessionStorage {
       });
     }
 
-    return new fileStore({ path: '/tmp' });
+    return undefined;
+    //return new fileStore({
+    //  path: '/tmp',
+    //});
   }
 }
