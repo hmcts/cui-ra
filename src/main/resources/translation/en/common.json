@@ -38,6 +38,7 @@
     "blurb": "You will be able to review your application before you submit it."
   },
   "form": {
+    "hint": "Select all that apply to you",
     "charCount": {
       "hint": "You can enter up to {count} characters",
       "charactersUnderLimit": {
@@ -52,7 +53,7 @@
     },
     "noSupport": "I do not need any support at this time",
     "problem": "There is a problem",
-    "submitButton": "Save and continue",
+    "submitButton": "Continue",
     "typeahead": {
       "hint": "Start typing to choose the support, or select 'The support is not listed",
       "notListed": "The support is not listed",
