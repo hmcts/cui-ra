@@ -10,7 +10,7 @@ const pa11y = require('pa11y');
 
 const port = 53236;
 const host = `http://localhost:${port}`;
-const server = app.listen(port); 
+const server = app.listen(port);
 
 supertest.agent(server);
 
@@ -55,8 +55,8 @@ async function ensurePageCallWillSucceed(url: string, cookies: any[] = []): Prom
   if (cookies.length > 0) {
     const axiosCookies = convertPuppeteerCookiesToAxiosCookies(cookies);
     headers = {
-      Cookie: axiosCookies
-    }
+      Cookie: axiosCookies,
+    };
   }
 
   try {
@@ -65,7 +65,7 @@ async function ensurePageCallWillSucceed(url: string, cookies: any[] = []): Prom
     if (response.status >= 300 && response.status < 400) {
       throw new Error(`Call to ${url} resulted in a redirect to ${response.headers.location}`);
     }
-    
+
     if (response.status >= 500) {
       throw new Error(`Call to ${url} resulted in internal server error`);
     }
@@ -79,7 +79,7 @@ function runPally(url: string, options: {} = {}): Promise<Pa11yResult> {
   fs.mkdirSync(screenshotDir, { recursive: true });
   let opt = {
     hideElements: '.govuk-footer__licence-logo, .govuk-header__logotype-crown',
-    screenCapture: `${screenshotDir}/${url.replace(host, '').replace('/', 'slash')}.png`
+    screenCapture: `${screenshotDir}/${url.replace(host, '').replace('/', 'slash')}.png`,
   };
   Object.assign(opt, options);
   return pa11y(url, opt);
@@ -107,8 +107,8 @@ function testAccessibility(url: string, cookies: any[] = []): void {
         Object.assign(opt, {
           headers: {
             cookie: pa11yCookies,
-          }
-        })
+          },
+        });
       }
       await ensurePageCallWillSucceed(url, cookies);
       const result = await runPally(url, opt);
@@ -118,7 +118,7 @@ function testAccessibility(url: string, cookies: any[] = []): void {
   });
 }
 
-async function setupSession(url:string): Promise<any[]> {
+async function setupSession(url: string): Promise<any[]> {
   const browser = await puppeteer.launch({
     headless: 'new',
   });
@@ -140,7 +140,7 @@ async function setupSession(url:string): Promise<any[]> {
 }
 
 describe('Accessibility', () => {
-  let cookies:any[] = [];
+  let cookies: any[] = [];
 
   beforeAll(async () => {
     cookies = await setupSession(UrlRoute.make(Route.DEMO, {}, host));
