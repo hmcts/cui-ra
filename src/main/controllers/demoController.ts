@@ -55,7 +55,7 @@ export class DemoController {
           req.session.newmanager = NewFlag;
           req.session.existingmanager = new ExistingFlagsManager();
           req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
-          req.session.logoutUrl = 'https://localhost/logout';
+          req.session.logoutUrl = Route.ROOT;
           req.session.hmctsserviceid = 'PFL';
           req.session.sessioninit = true;
           req.session.welsh = false;
@@ -69,7 +69,7 @@ export class DemoController {
           req.session.newmanager = NewFlag;
           req.session.existingmanager = new ExistingFlagsManager();
           req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
-          req.session.logoutUrl = 'https://localhost/logout';
+          req.session.logoutUrl = Route.ROOT;
           req.session.hmctsserviceid = 'PFL';
           req.session.sessioninit = true;
           req.session.welsh = true;
@@ -86,7 +86,7 @@ export class DemoController {
           req.session.existingmanager = dataManagerExisting;
           req.session.newmanager = NewFlag;
           req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
-          req.session.logoutUrl = 'https://localhost/logout';
+          req.session.logoutUrl = Route.ROOT;
           req.session.hmctsserviceid = 'PFL';
           req.session.sessioninit = true;
           req.session.welsh = false;

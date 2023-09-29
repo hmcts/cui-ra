@@ -1,9 +1,9 @@
-import { DataManagerDataObject, RedisClientInterface } from '../interfaces';
+import { DataManagerDataObject, PayloadCollectionItem, RedisClientInterface } from '../interfaces';
 
 import { PayloadBuilder } from './../builders';
 import { Actions, ErrorMessages, Route, Status } from './../constants';
 import { OutboundPayload } from './../models';
-import { UrlRoute } from './../utilities';
+import { CustomSort, UrlRoute } from './../utilities';
 
 import autobind from 'autobind-decorator';
 import { NextFunction, Request, Response } from 'express';
@@ -18,13 +18,29 @@ export class ReviewController {
         const url = UrlRoute.make(req.session.callbackUrl, { id: '' });
         res.set('Content-Security-Policy', `form-action 'self' ${url}`);
       }
+
+      let requestedFlags = req.session.existingmanager?.find('value.status', 'Requested');
+      if (requestedFlags) {
+        requestedFlags = CustomSort.alphabeticalAsc<PayloadCollectionItem>(requestedFlags, req);
+      }
+
+      let newFlags = req.session.newmanager
+        ?.find('_enabled', true)
+        ?.filter((item: DataManagerDataObject) => item._isParent === false);
+      if (newFlags) {
+        newFlags = CustomSort.alphabeticalAsc<DataManagerDataObject>(newFlags, req);
+      }
+
+      let notRequiredFlags = req.session.existingmanager?.find('value.status', 'Inactive');
+      if (notRequiredFlags) {
+        notRequiredFlags = CustomSort.alphabeticalAsc<PayloadCollectionItem>(notRequiredFlags, req);
+      }
+
       res.render('review', {
         welsh: false,
-        requested: req.session.existingmanager?.find('value.status', 'Requested'),
-        new: req.session.newmanager
-          ?.find('_enabled', true)
-          ?.filter((item: DataManagerDataObject) => item._isParent === false),
-        notRequired: req.session.existingmanager?.find('value.status', 'Inactive') || [],
+        requested: requestedFlags,
+        new: newFlags,
+        notRequired: notRequiredFlags,
         route: Route,
       });
     } catch (e) {

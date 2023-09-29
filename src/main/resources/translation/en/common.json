@@ -55,6 +55,7 @@
     "problem": "There is a problem",
     "submitButton": "Continue",
     "typeahead": {
+      "heading": "Which {flagName} do you need to request?",
       "hint": "Start typing to choose the support, or select 'The support is not listed",
       "notListed": "The support is not listed",
       "control": "Enter the type of support you need to request"
