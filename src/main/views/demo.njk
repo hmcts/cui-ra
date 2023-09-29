@@ -22,14 +22,14 @@
     <p class="govuk-body govuk-!-font-weight-bold">New User - Go into start of flags</p>
     <form action="/start-demo" method="get">
         {{ csrfProtection(csrfToken) }}
-        <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" value="new" name="action">
+        <button id="demonew" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" value="new" name="action">
             Enter New Journey
         </button>
     </form>
 
     <form action="/start-demo" method="get">
         {{ csrfProtection(csrfToken) }}
-        <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" value="new_cy" name="action">
+        <button id="demonewcy" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" value="new_cy" name="action">
             Enter New Journey welsh
         </button>
     </form>
@@ -37,7 +37,7 @@
     <p class="govuk-body govuk-!-font-weight-bold">Existing User - Go to overview</p>
     <form action="/start-demo" method="get">
         {{ csrfProtection(csrfToken) }}
-        <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" value="existing" name="action">
+        <button id="demoexisting" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" value="existing" name="action">
             Enter Existing Journey
         </button>
     </form>
