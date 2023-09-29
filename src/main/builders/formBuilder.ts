@@ -1,5 +1,6 @@
-import { Common, ErrorMessages } from './../constants';
+import { ErrorMessages } from './../constants';
 import { DataManagerDataObject } from './../interfaces';
+import { CustomSort } from './../utilities';
 
 import { Request, Response } from 'express';
 
@@ -23,32 +24,11 @@ export class FormBuilder {
     } else {
       throw new Error(ErrorMessages.UNEXPECTED_ERROR);
     }
+
     if (children) {
-      //sort
-      children.sort((a, b) => {
-        //Add short if to check if welsh and use name_cy
-        const nameA = req.session.welsh ? a.value.name_cy.toUpperCase() : a.value.name.toUpperCase(); // Convert to uppercase for case-insensitive sorting
-        const flagCodeA = a.value.flagCode;
-        const nameB = req.session.welsh ? b.value.name_cy.toUpperCase() : b.value.name.toUpperCase();
-        const flagCodeB = b.value.flagCode;
-
-        // If either object has the name "other", it should be sorted last
-        if (flagCodeA === Common.OTHER_FLAG_CODE && flagCodeB !== Common.OTHER_FLAG_CODE) {
-          return 1;
-        }
-        if (flagCodeA !== Common.OTHER_FLAG_CODE && flagCodeB === Common.OTHER_FLAG_CODE) {
-          return -1;
-        }
-
-        if (nameA < nameB) {
-          return -1;
-        }
-        if (nameA > nameB) {
-          return 1;
-        }
-        return 0;
-      });
+      children = CustomSort.alphabeticalAsc<DataManagerDataObject>(children, req);
     }
+
     return res.render(template, {
       parent,
       children,
