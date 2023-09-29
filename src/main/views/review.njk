@@ -75,6 +75,14 @@
                             {% else %}
                                 {% if welsh === false %}{{ item.value.otherDescription }}{% else %}{{ item.value.otherDescription_cy }}{% endif %}
                             {% endif %}
+                            <br/>
+                            <span class="govuk-hint">
+                                {% if item._listOfValuesLength %}
+                                    {% if welsh === false %}{{ item.value.subTypeValue }}{% else %}{{ item.value.subTypeValue_cy }}{% endif %}        
+                                {% else %}
+                                    {% if welsh === false %}{{ item.value.flagComment }}{% else %}{{ item.value.flagComment_cy }}{% endif %} 
+                                {% endif %}
+                            </span>
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
                             <a class='govuk-link govuk-link--no-visited-state' href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: page } ) }}?change=true">{{ _t("review.actions.change") }}</a>

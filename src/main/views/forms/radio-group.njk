@@ -18,12 +18,6 @@
 
   <div class="govuk-form-group {% if validationErrors and (validationErrors | length > 0) %}govuk-form-group--error{% endif %}">
     <fieldset class="govuk-fieldset" aria-describedby="radio-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-fieldset__heading">
-          {{ currentFlag.name }}
-        </h1>
-      </legend>
-
       <div class="govuk-radios" data-module="govuk-radios">
 
         {% for item in parent._listOfValues %}
