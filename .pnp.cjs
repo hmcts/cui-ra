@@ -51,9 +51,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/i18n", "npm:0.13.6"],\
             ["@types/jest", "npm:29.5.5"],\
-            ["@types/lodash", "npm:4.14.198"],\
+            ["@types/lodash", "npm:4.14.199"],\
             ["@types/node", "npm:18.17.18"],\
-            ["@types/nunjucks", "npm:3.2.3"],\
+            ["@types/nunjucks", "npm:3.2.4"],\
             ["@types/require-directory", "npm:2.1.2"],\
             ["@types/serve-favicon", "npm:2.5.4"],\
             ["@types/session-file-store", "npm:1.2.2"],\
@@ -5209,10 +5209,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/lodash", [\
-        ["npm:4.14.198", {\
-          "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.198-92ef32a77d-b290e44807.zip/node_modules/@types/lodash/",\
+        ["npm:4.14.199", {\
+          "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.199-39fe418e7a-e68d1fcbbf.zip/node_modules/@types/lodash/",\
           "packageDependencies": [\
-            ["@types/lodash", "npm:4.14.198"]\
+            ["@types/lodash", "npm:4.14.199"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5279,10 +5279,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/nunjucks", [\
-        ["npm:3.2.3", {\
-          "packageLocation": "./.yarn/cache/@types-nunjucks-npm-3.2.3-84984528cc-f4263a39f0.zip/node_modules/@types/nunjucks/",\
+        ["npm:3.2.4", {\
+          "packageLocation": "./.yarn/cache/@types-nunjucks-npm-3.2.4-749d29b627-d154c6cc98.zip/node_modules/@types/nunjucks/",\
           "packageDependencies": [\
-            ["@types/nunjucks", "npm:3.2.3"]\
+            ["@types/nunjucks", "npm:3.2.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8445,9 +8445,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/i18n", "npm:0.13.6"],\
             ["@types/jest", "npm:29.5.5"],\
-            ["@types/lodash", "npm:4.14.198"],\
+            ["@types/lodash", "npm:4.14.199"],\
             ["@types/node", "npm:18.17.18"],\
-            ["@types/nunjucks", "npm:3.2.3"],\
+            ["@types/nunjucks", "npm:3.2.4"],\
             ["@types/require-directory", "npm:2.1.2"],\
             ["@types/serve-favicon", "npm:2.5.4"],\
             ["@types/session-file-store", "npm:1.2.2"],\
@@ -9879,7 +9879,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["express-nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.1.1"],\
             ["@types/express", "npm:4.17.18"],\
-            ["@types/nunjucks", "npm:3.2.3"],\
+            ["@types/nunjucks", "npm:3.2.4"],\
             ["express", "npm:4.18.2"],\
             ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
             ["nunjucks-async-loader", "virtual:5a3226ebfdc5ef140572213dbd4e734ff8d1893c10677dafd7a1ce030e2a6be7416e390621139192dcf805122802b03e22c3b373c8ea73c8b7fdc96ebed4ffc9#npm:2.1.2"]\
@@ -14045,7 +14045,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/nunjucks-async-loader-virtual-62c9a8ab54/0/cache/nunjucks-async-loader-npm-2.1.2-9f5a24a6b6-6a68153352.zip/node_modules/nunjucks-async-loader/",\
           "packageDependencies": [\
             ["nunjucks-async-loader", "virtual:5a3226ebfdc5ef140572213dbd4e734ff8d1893c10677dafd7a1ce030e2a6be7416e390621139192dcf805122802b03e22c3b373c8ea73c8b7fdc96ebed4ffc9#npm:2.1.2"],\
-            ["@types/nunjucks", "npm:3.2.3"],\
+            ["@types/nunjucks", "npm:3.2.4"],\
             ["chokidar", "npm:3.3.1"],\
             ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"]\
           ],\
