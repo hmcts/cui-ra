@@ -6198,7 +6198,7 @@ __metadata:
     pa11y: ^6.2.3
     playwright: ^1.34.3
     prettier: ^2.7.1
-    puppeteer: ^21.3.5
+    puppeteer: ^21.3.6
     redis: ^4.6.7
     reflect-metadata: ^0.1.13
     request: ^2.88.2
@@ -11925,9 +11925,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer-core@npm:21.3.5":
-  version: 21.3.5
-  resolution: "puppeteer-core@npm:21.3.5"
+"puppeteer-core@npm:21.3.6":
+  version: 21.3.6
+  resolution: "puppeteer-core@npm:21.3.6"
   dependencies:
     "@puppeteer/browsers": 1.7.1
     chromium-bidi: 0.4.28
@@ -11935,18 +11935,18 @@ __metadata:
     debug: 4.3.4
     devtools-protocol: 0.0.1179426
     ws: 8.14.2
-  checksum: c2e904e59c9d58ada08016ff893c6b574ab36848db8e0f214b6c02fef446cfa142d346384cb2bb49c39df45622caf6ef813e7cc10f613024e595aa4406fb77bc
+  checksum: 18f85781d0fc575fc6b5261a242414492e99ba497f914afaef9e3afd62a7ad135dbb63602cca5eae102a91ec8e84838a2bf0d6217bf68ba9b01d2c8b4152faf8
   languageName: node
   linkType: hard
 
-"puppeteer@npm:^21.3.5":
-  version: 21.3.5
-  resolution: "puppeteer@npm:21.3.5"
+"puppeteer@npm:^21.3.6":
+  version: 21.3.6
+  resolution: "puppeteer@npm:21.3.6"
   dependencies:
     "@puppeteer/browsers": 1.7.1
     cosmiconfig: 8.3.6
-    puppeteer-core: 21.3.5
-  checksum: 0bb3f0f2dead30f4a18b94066d73e27a0ec418ba3e1b73fc882ba4b747405c91ee2592eef0137b984f26bca5e52007543ecd01d1ac843dd68b8d78489a296f69
+    puppeteer-core: 21.3.6
+  checksum: 781dd1061e402dd14fb0d2a522987dc81624437b3cf25eae7dfde26e94a23e992e201d97c9021e002ecd3aae43e1f6a248ec70566c2520a25cd4fabe9e171506
   languageName: node
   linkType: hard
 
