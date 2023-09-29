@@ -49,11 +49,13 @@
 
       <h1 class="govuk-heading-l">
           <span class="govuk-caption-l">{{ master_name }} {% if partyname %}{{ _r(_t('forName'), { name:partyname }) }}{% endif %}</span>
+          {% block formHeading %}
           {% if _t(parent.value.flagCode + ".fullQuestion") %}
             {{ _t(parent.value.flagCode  + ".fullQuestion") }}
           {% else %}
             {{ parent.value[nameValue] }}
           {% endif %}
+          {% endblock %}
       </h1>
 
       {% if _t(parent.value.flagCode+ ".blurb") %}

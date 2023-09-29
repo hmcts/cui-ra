@@ -11,21 +11,20 @@
 {% if welsh === false %}
     {% set inputName = 'subTypeValue' %}
     {% set radioValue = 'value' %}
+    {% set nameValue = 'name' %}
 {% else %}
     {% set inputName = 'subTypeValue_cy' %}
     {% set radioValue = 'value_cy' %}
+    {% set nameValue = 'name_cy' %}
 {% endif %}
 
-{% block form %}
+{% block formHeading %}
+  {{ _r(_t('form.typeahead.heading'), { flagName:parent.value[nameValue] }) }}
+{% endblock %}
 
+{% block form %}
   <div class="govuk-form-group {% if validationErrors and (validationErrors | length > 0) %}govuk-form-group--error{% endif %}">
     <fieldset class="govuk-fieldset" aria-describedby="radio-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-fieldset__heading">
-          {{ currentFlag.name }}
-        </h1>
-      </legend>
-
         {{ accessibleAutocomplete({
                 name: "selected",
                 hint: _t('form.typeahead.hint'),
