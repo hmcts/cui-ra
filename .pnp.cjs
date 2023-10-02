@@ -56,7 +56,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/nunjucks", "npm:3.2.4"],\
             ["@types/require-directory", "npm:2.1.3"],\
             ["@types/serve-favicon", "npm:2.5.5"],\
-            ["@types/session-file-store", "npm:1.2.2"],\
+            ["@types/session-file-store", "npm:1.2.3"],\
             ["@types/supertest", "npm:2.0.12"],\
             ["@typescript-eslint/eslint-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.7.0"],\
             ["@typescript-eslint/parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.7.0"],\
@@ -5372,10 +5372,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/session-file-store", [\
-        ["npm:1.2.2", {\
-          "packageLocation": "./.yarn/cache/@types-session-file-store-npm-1.2.2-36c5c0c111-363c7add3f.zip/node_modules/@types/session-file-store/",\
+        ["npm:1.2.3", {\
+          "packageLocation": "./.yarn/cache/@types-session-file-store-npm-1.2.3-858afc0612-b7d57206da.zip/node_modules/@types/session-file-store/",\
           "packageDependencies": [\
-            ["@types/session-file-store", "npm:1.2.2"],\
+            ["@types/session-file-store", "npm:1.2.3"],\
             ["@types/express", "npm:4.17.18"],\
             ["@types/express-session", "npm:1.17.8"]\
           ],\
@@ -8580,7 +8580,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/nunjucks", "npm:3.2.4"],\
             ["@types/require-directory", "npm:2.1.3"],\
             ["@types/serve-favicon", "npm:2.5.5"],\
-            ["@types/session-file-store", "npm:1.2.2"],\
+            ["@types/session-file-store", "npm:1.2.3"],\
             ["@types/supertest", "npm:2.0.12"],\
             ["@typescript-eslint/eslint-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.7.0"],\
             ["@typescript-eslint/parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.7.0"],\
