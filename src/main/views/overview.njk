@@ -34,6 +34,10 @@
                     <tr class="govuk-table__row">
                     <td scope="row" class="govuk-table__cell">
                         {{ item.value.name }}
+                        {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
+                            <br/>
+                            {{ item.value.path.slice(-1).pop().name }}
+                        {% endif %}
                     </td>
                     {% if item.value.status == status.REQUESTED %}
                         <td class="govuk-table__cell">

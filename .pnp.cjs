@@ -55,9 +55,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:18.17.18"],\
             ["@types/nunjucks", "npm:3.2.4"],\
             ["@types/require-directory", "npm:2.1.3"],\
-            ["@types/serve-favicon", "npm:2.5.4"],\
-            ["@types/session-file-store", "npm:1.2.2"],\
-            ["@types/supertest", "npm:2.0.12"],\
+            ["@types/serve-favicon", "npm:2.5.5"],\
+            ["@types/session-file-store", "npm:1.2.3"],\
+            ["@types/supertest", "npm:2.0.14"],\
             ["@typescript-eslint/eslint-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.7.0"],\
             ["@typescript-eslint/parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.7.0"],\
             ["accessible-autocomplete", "npm:2.0.4"],\
@@ -5351,10 +5351,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/serve-favicon", [\
-        ["npm:2.5.4", {\
-          "packageLocation": "./.yarn/cache/@types-serve-favicon-npm-2.5.4-5e7a52df3a-601173dfd5.zip/node_modules/@types/serve-favicon/",\
+        ["npm:2.5.5", {\
+          "packageLocation": "./.yarn/cache/@types-serve-favicon-npm-2.5.5-bfdc7a18f6-7e0b85c1a7.zip/node_modules/@types/serve-favicon/",\
           "packageDependencies": [\
-            ["@types/serve-favicon", "npm:2.5.4"],\
+            ["@types/serve-favicon", "npm:2.5.5"],\
             ["@types/express", "npm:4.17.18"]\
           ],\
           "linkType": "HARD"\
@@ -5372,10 +5372,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/session-file-store", [\
-        ["npm:1.2.2", {\
-          "packageLocation": "./.yarn/cache/@types-session-file-store-npm-1.2.2-36c5c0c111-363c7add3f.zip/node_modules/@types/session-file-store/",\
+        ["npm:1.2.3", {\
+          "packageLocation": "./.yarn/cache/@types-session-file-store-npm-1.2.3-858afc0612-b7d57206da.zip/node_modules/@types/session-file-store/",\
           "packageDependencies": [\
-            ["@types/session-file-store", "npm:1.2.2"],\
+            ["@types/session-file-store", "npm:1.2.3"],\
             ["@types/express", "npm:4.17.18"],\
             ["@types/express-session", "npm:1.17.8"]\
           ],\
@@ -5412,10 +5412,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/supertest", [\
-        ["npm:2.0.12", {\
-          "packageLocation": "./.yarn/cache/@types-supertest-npm-2.0.12-deccb2551b-f0e2b44f86.zip/node_modules/@types/supertest/",\
+        ["npm:2.0.14", {\
+          "packageLocation": "./.yarn/cache/@types-supertest-npm-2.0.14-c53201eddd-9f6850a22b.zip/node_modules/@types/supertest/",\
           "packageDependencies": [\
-            ["@types/supertest", "npm:2.0.12"],\
+            ["@types/supertest", "npm:2.0.14"],\
             ["@types/superagent", "npm:4.1.15"]\
           ],\
           "linkType": "HARD"\
@@ -8579,9 +8579,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:18.17.18"],\
             ["@types/nunjucks", "npm:3.2.4"],\
             ["@types/require-directory", "npm:2.1.3"],\
-            ["@types/serve-favicon", "npm:2.5.4"],\
-            ["@types/session-file-store", "npm:1.2.2"],\
-            ["@types/supertest", "npm:2.0.12"],\
+            ["@types/serve-favicon", "npm:2.5.5"],\
+            ["@types/session-file-store", "npm:1.2.3"],\
+            ["@types/supertest", "npm:2.0.14"],\
             ["@typescript-eslint/eslint-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.7.0"],\
             ["@typescript-eslint/parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.7.0"],\
             ["accessible-autocomplete", "npm:2.0.4"],\

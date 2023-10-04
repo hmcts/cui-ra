@@ -196,7 +196,7 @@
     }
   },
   {
-    "id": "RA0001-RA0005-RA0011",
+    "id": "RA0001-RA0005-OT0001",
     "value": {
       "name": "Other",
       "name_cy": "Translated welsh value CY",
@@ -216,7 +216,7 @@
         }
       ],
       "hearingRelevant": "Yes",
-      "flagCode": "RA0011",
+      "flagCode": "OT0001",
       "status": "Requested",
       "availableExternally": "Yes"
     }

@@ -42,10 +42,10 @@
                 {% for item in requested %}
                     <tr class="govuk-table__row">
                         <td scope="row" class="govuk-table__cell">
-                            {% if item.value.flagCode !== 'OT0001' %}
-                                {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %} 
-                            {% else %}
-                                {% if welsh === false %}{{ item.value.otherDescription }}{% else %}{{ item.value.otherDescription_cy }}{% endif %}
+                            {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %} 
+                            {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
+                                <br/>
+                                {{ item.value.path.slice(-1).pop().name }}
                             {% endif %}
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
@@ -69,10 +69,10 @@
                         {% set page = item._parentId %}
                     {% endif %}
                     <tr class="govuk-table__row">
-                        <td scope="row" class="govuk-table__cell">
-                            {% if item.value.flagCode !== 'OT0001' %}
-                                {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %} 
-                            {% else %}
+                        <td scope="row" class="govuk-table__cell">                     
+                            {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %} 
+                            {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
+                                <br/>
                                 {% if welsh === false %}{{ item.value.otherDescription }}{% else %}{{ item.value.otherDescription_cy }}{% endif %}
                             {% endif %}
                             <br/>
@@ -101,10 +101,10 @@
                 {% for item in notRequired %}
                     <tr class="govuk-table__row">
                         <td scope="row" class="govuk-table__cell">
-                            {% if item.value.flagCode !== 'OT0001' %}
-                                {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %} 
-                            {% else %}
-                                {% if welsh === false %}{{ item.value.otherDescription }}{% else %}{{ item.value.otherDescription_cy }}{% endif %}
+                            {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %} 
+                            {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
+                                <br/>
+                                {{ item.value.path.slice(-1).pop().name }}
                             {% endif %}
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
