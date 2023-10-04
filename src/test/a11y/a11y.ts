@@ -81,7 +81,7 @@ function runPally(url: string, options: {} = {}): Promise<Pa11yResult> {
   let opt = {
     hideElements: '.govuk-footer__licence-logo, .govuk-header__logotype-crown',
     screenCapture: `${screenshotDir}/${filename}.png`,
-    wait: 500
+    wait: 500,
   };
   Object.assign(opt, options);
   return pa11y(url, opt);
@@ -114,7 +114,7 @@ async function testAccessibilityNoWrap(url: string, cookies: any[] = []): Promis
     }));
     Object.assign(opt, {
       headers: {
-        cookie:  cookiesToPa11yString(pa11yCookies)
+        cookie: cookiesToPa11yString(pa11yCookies),
       },
     });
   }
@@ -153,7 +153,7 @@ function cookiesToPa11yString(cookies) {
   }
 
   // Map each cookie to a string value pair
-  const cookieStrings = cookies.map((cookie) => {
+  const cookieStrings = cookies.map(cookie => {
     if (!cookie.name || !cookie.value) {
       throw new Error('Cookies must have "name" and "value" properties.');
     }
@@ -189,40 +189,42 @@ describe('Accessibility', () => {
   describe(`Page ${UrlRoute.make(Route.INTRO, {}, host)}`, () => {
     test('should have no accessibility errors', async () => {
       await testAccessibilityNoWrap(UrlRoute.make(Route.INTRO, {}, host), cookies);
-    })
+    });
   });
 
   describe(`Page ${UrlRoute.make(Route.INTRO, {}, host)}`, () => {
     test('should have no accessibility errors', async () => {
       await testAccessibilityNoWrap(UrlRoute.make(Route.OVERVIEW, {}, host), cookies);
-    })
+    });
   });
 
   describe(`Page ${UrlRoute.make(Route.REVIEW, {}, host)}`, () => {
     test('should have no accessibility errors', async () => {
       await testAccessibilityNoWrap(UrlRoute.make(Route.REVIEW, {}, host), cookies);
-    })
+    });
   });
 
   //Main Category pages
   describe(`Page ${UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, host)}`, () => {
     test('should have no accessibility errors', async () => {
       await testAccessibilityNoWrap(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, host), cookies);
-    })
+    });
   });
 
   //Set Radio pages
   describe(`Page ${UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001-RA0008-RA0042' }, host)}`, () => {
     test('should have no accessibility errors', async () => {
-      await testAccessibilityNoWrap(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001-RA0008-RA0042' }, host), cookies);
-    })
+      await testAccessibilityNoWrap(
+        UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001-RA0008-RA0042' }, host),
+        cookies
+      );
+    });
   });
 
   //Set Typeahead pages
   describe(`Page ${UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-PF0015' }, host)}`, () => {
     test('should have no accessibility errors', async () => {
       await testAccessibilityNoWrap(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-PF0015' }, host), cookies);
-    })
+    });
   });
-
 });
