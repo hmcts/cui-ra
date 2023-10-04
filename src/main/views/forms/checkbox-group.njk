@@ -10,12 +10,9 @@
 {% endif %}
 
 {% block form %}
-  <div class="govuk-form-group {% if validationErrors and (validationErrors | length > 0) %}govuk-form-group--error{% endif %}">
-    <fieldset class="govuk-fieldset" aria-describedby="main-hint">
-      <div id="main-hint" class="govuk-hint">
+    <div id="main-hint" class="govuk-hint"> 
         {{ _t('form.hint') }}
-      </div>
-
+    </div>
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 
       {% for item in children %}
@@ -31,8 +28,8 @@
             {% endif %}
 
             <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="_enabled-{{ item.id }}" name="enabled" type="checkbox" value="{{ item.id }}"  {% if item._flagComment %}data-aria-controls="conditional-{{ item.id }}"{% endif %} {% if item._enabled %}checked{% endif %}>
-                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                <input aria-labelledby="checkbox-label-{{item.id }}" class="govuk-checkboxes__input" id="_enabled-{{ item.id }}" name="enabled" type="checkbox" value="{{ item.id }}"  {% if item._flagComment %}data-aria-controls="conditional-{{ item.id }}"{% endif %} {% if item._enabled %}checked{% endif %}>
+                <label id="checkbox-label-{{item.id }}" class="govuk-label govuk-checkboxes__label" for="waste">
                     {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
                 </label>
                 <div id="{{inputName}}-{{ item.id }}-hint" class="govuk-hint govuk-checkboxes__hint">
@@ -73,14 +70,12 @@
       <div class="govuk-checkboxes__divider">{{ _t('orDivider') }}</div>
 
         <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="_enabled-0" name="enabled" type="checkbox" value="none"  {% if item._enabled %}checked{% endif %} data-behaviour="exclusive">
-            <label class="govuk-label govuk-checkboxes__label">
+            <input aria-labelledby="checkbox-label-0" class="govuk-checkboxes__input" id="_enabled-0" name="enabled" type="checkbox" value="none"  {% if item._enabled %}checked{% endif %} data-behaviour="exclusive">
+            <label id="checkbox-label-0" class="govuk-label govuk-checkboxes__label">
                 {{ _t('form.noSupport') }}
             </label>
         </div>
 
       </div>
-    </fieldset>
-  </div>
 
 {% endblock %}

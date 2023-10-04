@@ -7,10 +7,19 @@ initAll();
 const elementExists = document.getElementById('custom-accessible-autocomplete');
 if (elementExists) {
   accessibleAutocomplete.enhanceSelectElement({
+    id: 'custom-accessible-autocomplete',
+    name: 'typeahead',
+    menuAttributes: {
+      "aria-labelledby": "custom-accessible-autocomplete"
+    },
     defaultValue: '',
     selectElement: document.querySelector('#custom-accessible-autocomplete'),
     confirmOnBlur: false,
   });
+  const typeahead = document.querySelector('input[name=typeahead]');
+  setTimeout(() => {
+    typeahead?.setAttribute("aria-labelledby", "custom-accessible-autocomplete");
+  }, 10);
   const clearCheckboxes = Array.from(document.querySelectorAll('.clear-autocomplete'));
   clearCheckboxes.forEach(item => {
     item.addEventListener('change', event => {
