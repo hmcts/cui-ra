@@ -77,9 +77,11 @@ async function ensurePageCallWillSucceed(url: string, cookies: any[] = []): Prom
 function runPally(url: string, options: {} = {}): Promise<Pa11yResult> {
   const screenshotDir = `${__dirname}/../../../functional-output/pa11y`;
   fs.mkdirSync(screenshotDir, { recursive: true });
+  let filename = url.replace(/https?:\/\//gi, '').replace(/[^a-zA-Z0-9.-]/g, '_');
   let opt = {
     hideElements: '.govuk-footer__licence-logo, .govuk-header__logotype-crown',
-    screenCapture: `${screenshotDir}/${url.replace(host, '').replace('/', 'slash')}.png`,
+    screenCapture: `${screenshotDir}/${filename}.png`,
+    wait: 500,
   };
   Object.assign(opt, options);
   return pa11y(url, opt);
@@ -97,25 +99,29 @@ function expectNoErrors(messages: PallyIssue[]): void {
 function testAccessibility(url: string, cookies: any[] = []): void {
   describe(`Page ${url}`, () => {
     test('should have no accessibility errors', async () => {
-      let opt = {};
-      if (cookies.length > 0) {
-        const pa11yCookies = cookies.map(cookie => ({
-          name: cookie.name,
-          value: cookie.value,
-          domain: cookie.domain,
-        }));
-        Object.assign(opt, {
-          headers: {
-            cookie: pa11yCookies,
-          },
-        });
-      }
-      await ensurePageCallWillSucceed(url, cookies);
-      const result = await runPally(url, opt);
-      expect(result.issues).toEqual(expect.any(Array));
-      expectNoErrors(result.issues);
+      await testAccessibilityNoWrap(url, cookies);
     });
   });
+}
+
+async function testAccessibilityNoWrap(url: string, cookies: any[] = []): Promise<void> {
+  let opt = {};
+  if (cookies.length > 0) {
+    const pa11yCookies = cookies.map(cookie => ({
+      name: cookie.name,
+      value: cookie.value,
+      domain: cookie.domain,
+    }));
+    Object.assign(opt, {
+      headers: {
+        cookie: cookiesToPa11yString(pa11yCookies),
+      },
+    });
+  }
+  await ensurePageCallWillSucceed(url, cookies);
+  const result = await runPally(url, opt);
+  expect(result.issues).toEqual(expect.any(Array));
+  expectNoErrors(result.issues);
 }
 
 async function setupSession(url: string): Promise<any[]> {
@@ -134,9 +140,28 @@ async function setupSession(url: string): Promise<any[]> {
 
   const cookies = await page.cookies(url);
 
+  await page.close();
+
   await browser.close();
 
   return cookies;
+}
+
+function cookiesToPa11yString(cookies) {
+  if (!Array.isArray(cookies)) {
+    throw new Error('Input cookies must be an array.');
+  }
+
+  // Map each cookie to a string value pair
+  const cookieStrings = cookies.map(cookie => {
+    if (!cookie.name || !cookie.value) {
+      throw new Error('Cookies must have "name" and "value" properties.');
+    }
+    return `${cookie.name}=${cookie.value}`;
+  });
+
+  // Join the cookie strings with semicolons
+  return cookieStrings.join('; ');
 }
 
 describe('Accessibility', () => {
@@ -158,15 +183,48 @@ describe('Accessibility', () => {
   testAccessibility(UrlRoute.make(Route.ACCESSIBILITY_STATEMENT, {}, host));
   testAccessibility(UrlRoute.make(Route.DEMO, {}, host));
 
-  //all of the below require a session to exist. this is passed in as cookies
-  testAccessibility(UrlRoute.make(Route.INTRO, {}, host), cookies);
-  testAccessibility(UrlRoute.make(Route.OVERVIEW, {}, host), cookies);
-  testAccessibility(UrlRoute.make(Route.REVIEW, {}, host), cookies);
+  //all of the below require a session to exist. this is passed in as cookies. jest beforeall will run before all tests however that is not the case
+  //when it comes to dynamicly created test like above with testAccessibility that have the describe and test inside the function
+
+  describe(`Page ${UrlRoute.make(Route.INTRO, {}, host)}`, () => {
+    test('should have no accessibility errors', async () => {
+      await testAccessibilityNoWrap(UrlRoute.make(Route.INTRO, {}, host), cookies);
+    });
+  });
+
+  describe(`Page ${UrlRoute.make(Route.INTRO, {}, host)}`, () => {
+    test('should have no accessibility errors', async () => {
+      await testAccessibilityNoWrap(UrlRoute.make(Route.OVERVIEW, {}, host), cookies);
+    });
+  });
+
+  describe(`Page ${UrlRoute.make(Route.REVIEW, {}, host)}`, () => {
+    test('should have no accessibility errors', async () => {
+      await testAccessibilityNoWrap(UrlRoute.make(Route.REVIEW, {}, host), cookies);
+    });
+  });
 
   //Main Category pages
-  testAccessibility(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, host), cookies);
+  describe(`Page ${UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, host)}`, () => {
+    test('should have no accessibility errors', async () => {
+      await testAccessibilityNoWrap(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, host), cookies);
+    });
+  });
+
   //Set Radio pages
-  testAccessibility(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001-RA0008-RA0042' }, host), cookies);
+  describe(`Page ${UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001-RA0008-RA0042' }, host)}`, () => {
+    test('should have no accessibility errors', async () => {
+      await testAccessibilityNoWrap(
+        UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001-RA0008-RA0042' }, host),
+        cookies
+      );
+    });
+  });
+
   //Set Typeahead pages
-  testAccessibility(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-PF0015' }, host), cookies);
+  describe(`Page ${UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-PF0015' }, host)}`, () => {
+    test('should have no accessibility errors', async () => {
+      await testAccessibilityNoWrap(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-PF0015' }, host), cookies);
+    });
+  });
 });

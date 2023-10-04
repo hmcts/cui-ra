@@ -23,20 +23,19 @@
 {% endblock %}
 
 {% block form %}
-  <div class="govuk-form-group {% if validationErrors and (validationErrors | length > 0) %}govuk-form-group--error{% endif %}">
-    <fieldset class="govuk-fieldset" aria-describedby="radio-hint">
         {{ accessibleAutocomplete({
                 name: "selected",
                 hint: _t('form.typeahead.hint'),
                 opts: parent._listOfValues,
-                value: parent.value.subTypeKey
+                value: parent.value.subTypeKey,
+                label: _t('form.typeahead.hint')
         }) }}
 
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 
         <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input clear-autocomplete" id="_enabled-other" name="enabled" type="checkbox" value="OT0001"  data-aria-controls="conditional-other" {% if parent._other === true %}checked{% endif %}>
-          <label class="govuk-label govuk-checkboxes__label" for="other">
+          <input aria-labelledby="{{inputName}}-label" class="govuk-checkboxes__input clear-autocomplete" id="_enabled-other" name="enabled" type="checkbox" value="OT0001"  data-aria-controls="conditional-other" {% if parent._other === true %}checked{% endif %}>
+          <label id="{{inputName}}-label" class="govuk-label govuk-checkboxes__label" for="other">
               {{_t('form.typeahead.notListed')}}
           </label>
           <div id="{{inputName}}-{{ parent.id }}-hint" class="govuk-hint govuk-checkboxes__hint">
@@ -63,7 +62,7 @@
                             {% endfor %}
                         </p>
                       {% endif %}
-                      <textarea id="other" rows="{{row}}" aria-describedby="other-info other-hint" class="govuk-textarea govuk-js-character-count {% if parent._errors|length %}govuk-input--error{% endif %}" name="data[{{ parent.id }}][{{inputName}}]" type="text" spellcheck="false">{% if parent.value.subTypeKey === null or  parent.value.subTypeKey === undefined %}{{ parent.value[inputName] }}{% endif %}</textarea>
+                      <textarea id="other" rows="{{row}}" aria-label="{{ _t('form.typeahead.control') }}" aria-labelledby="other-control" aria-describedby="other-info other-hint" class="govuk-textarea govuk-js-character-count {% if parent._errors|length %}govuk-input--error{% endif %}" name="data[{{ parent.id }}][{{inputName}}]" type="text" spellcheck="false">{% if parent.value.subTypeKey === null or  parent.value.subTypeKey === undefined %}{{ parent.value[inputName] }}{% endif %}</textarea>
                   </div>
                   <div id="other-info" class="govuk-hint govuk-character-count__message">
                       {{ _r(_t('form.charCount.hint'), count) }}
@@ -74,14 +73,12 @@
        <div class="govuk-checkboxes__divider">{{ _t('orDivider') }}</div>
 
         <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input clear-autocomplete" id="_enabled-0" name="enabled" type="checkbox" value="none"  data-behaviour="exclusive">
-            <label class="govuk-label govuk-checkboxes__label">
+            <input aria-labelledby="checkbox-label-0" class="govuk-checkboxes__input clear-autocomplete" id="_enabled-0" name="enabled" type="checkbox" value="none"  data-behaviour="exclusive">
+            <label id="checkbox-label-0" class="govuk-label govuk-checkboxes__label">
                 {{ _t('form.noSupport') }}
             </label>
         </div>
 
       </div>
-    </fieldset>
-  </div>
 
 {% endblock %}

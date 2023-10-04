@@ -16,8 +16,6 @@
 
 {% set count = '80' %}
 
-  <div class="govuk-form-group {% if validationErrors and (validationErrors | length > 0) %}govuk-form-group--error{% endif %}">
-    <fieldset class="govuk-fieldset" aria-describedby="radio-hint">
       <div class="govuk-radios" data-module="govuk-radios">
 
         {% for item in parent._listOfValues %}
@@ -45,7 +43,7 @@
                 data-i18n.characters-over-limit.one="{{ _t('form.charCount.charactersOverLimit.one') }}"
             >
                 <div class="govuk-form-group">
-                    <label id="other-control" class="govuk-label" for="other">
+                    <label id="other-control" class="govuk-label" for="other-text-area">
                         {{ _t('form.radio.control') }}
                     </label>
                     {% if parent._errors|length %}
@@ -55,7 +53,7 @@
                           {% endfor %}
                       </p>
                     {% endif %}
-                    <textarea id="other" rows="5" aria-describedby="other-info other-hint" class="govuk-textarea govuk-js-character-count 
+                    <textarea id="other-text-area" rows="5" aria-describedby="other-info other-hint" class="govuk-textarea govuk-js-character-count 
                     {% if parent._errors|length %}govuk-input--error{% endif %}" name="data[{{ parent.id }}][{{inputName}}]" type="text" spellcheck="false">{% if parent.value.subTypeKey === null or  parent.value.subTypeKey === undefined %}{{ parent.value[inputName] }}{% endif %}</textarea>
                 </div>
                 <div id="other-info" class="govuk-hint govuk-character-count__message">
@@ -74,7 +72,5 @@
         </div>
 
       </div>
-    </fieldset>
-  </div>
 
 {% endblock %}

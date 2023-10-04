@@ -26,7 +26,7 @@
                 {{params.hint}}
             </div>
         {% endif %}
-        <select class="govuk-select" id="custom-accessible-autocomplete" name="{{name}}">
+        <select class="govuk-select" id="custom-accessible-autocomplete" name="{{name}}" aria-labelledby='header-question' aria-describedby='subject-hint'>
              <option value="0"></option>
             {% for item in params.opts %}
                 <option value="{{item.key}}" {% if item.key === params.value %}selected{% endif %}>{{item[radioValue]}}</option>
@@ -34,5 +34,8 @@
         </select>
     </div>
 
-    <div id="my-autocomplete-container"></div>
+    <label class="d-none" for="custom-accessible-autocomplete">
+        {{params.text}}
+    </label>
+    <div id="my-autocomplete-container" aria-label="{{params.label}}"></div>
 {% endif %}
