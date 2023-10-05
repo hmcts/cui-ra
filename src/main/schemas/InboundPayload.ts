@@ -114,10 +114,10 @@ export const InboundPayloadSchema: SchemaType = {
   $schema: 'http://json-schema.org/draft-07/schema#',
   type: 'object',
   properties: {
-    callbackURL: {
+    callbackUrl: {
       type: 'string',
     },
-    logoutURL: {
+    logoutUrl: {
       type: ['string', 'null'],
     },
     hmctsServiceId: {
