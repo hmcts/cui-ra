@@ -83,7 +83,7 @@ export class DataController {
       req.session.newmanager = new NewFlagsManager();
       req.session.newmanager.set(processedData);
 
-      const master: DataManagerDataObject[] = req.session.newmanager.find('flagCode', req.session.masterflagcode);
+      const master: DataManagerDataObject[] = req.session.newmanager.find('value.flagCode', req.session.masterflagcode);
       if (master.length > 0) {
         req.session.mastername = master[0].value.name;
         req.session.mastername_cy = master[0].value.name_cy;
@@ -96,7 +96,7 @@ export class DataController {
       this.redisClient.delete(id);
 
       //Redirect to the correct location
-      if (req.session.existingmanager.data.length === 0) {
+      if (!req.session.existingmanager.data) {
         //No Payload found redirect to new flags setup
         return res
           .status(301)
