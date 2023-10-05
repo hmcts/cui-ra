@@ -134,6 +134,6 @@ export const InboundPayloadSchema: SchemaType = {
     },
     existingFlags: existingFlagsSchema,
   },
-  required: ['callbackURL', 'hmctsServiceId', 'masterFlagCode', 'correlationId', 'existingFlags'],
+  required: ['callbackUrl', 'hmctsServiceId', 'masterFlagCode', 'correlationId', 'existingFlags'],
   additionalProperties: false,
 };
