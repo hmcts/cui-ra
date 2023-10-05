@@ -3,6 +3,7 @@
     "fullQuestion": "Do you have a physical, mental or learning disability or health condition that means you need support during your case?",
     "blurb": "We know some people need support to access information and use our services. We often call this a reasonable adjustment. Some reasonable adjustments need to be agreed by the judge or HMCTS. You can discuss with the court if your needs change.",
     "hint": "Select all that apply to you - specific requirements can be given next",
+    "command": "Select all that apply to you - specific requirements can be given next",
     "error": {
       "empty": "Select whether you need support"
     }

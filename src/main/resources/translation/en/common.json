@@ -38,7 +38,7 @@
     "blurb": "You will be able to review your application before you submit it."
   },
   "form": {
-    "hint": "Select all that apply to you",
+    "command": "Select all that apply to you",
     "charCount": {
       "hint": "You can enter up to {count} characters",
       "charactersUnderLimit": {
