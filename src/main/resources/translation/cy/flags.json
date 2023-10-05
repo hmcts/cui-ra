@@ -3,6 +3,7 @@
     "fullQuestion": "A oes gennych chi anabledd corfforol, meddyliol neu addysgol neu gyflwr iechyd sy’n golygu bod angen cymorth arnoch yn ystod eich achos?",
     "blurb": "Rydym yn gwybod bod angen cymorth ar rai pobl i gael mynediad at wybodaeth a defnyddio ein gwasanaethau. Rydym yn aml yn galw hyn yn addasiad rhesymol. Mae angen i'r barnwr neu GLlTEF gytuno ar rai addasiadau rhesymol. Gallwch drafod gyda'r llys os bydd eich anghenion yn newid.",
     "hint": "Dewiswch bob un sy'n berthnasol i chi - gellir rhoi gofynion penodol nesaf",
+    "command": "Dewiswch bob un sy'n berthnasol i chi - gellir rhoi gofynion penodol nesaf",
     "error": {
       "empty": "Dewiswch a oes angen cefnogaeth arnoch"
     }

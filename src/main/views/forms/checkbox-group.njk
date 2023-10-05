@@ -10,8 +10,13 @@
 {% endif %}
 
 {% block form %}
+    {% set hintKey = parent.value.flagCode + '.command' %}
     <div id="main-hint" class="govuk-hint"> 
-        {{ _t('form.hint') }}
+        {% if _t(hintKey) %}
+            {{ _t(hintKey) }}
+        {% else %}
+            {{ _t('form.command') }}
+        {% endif %}
     </div>
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 

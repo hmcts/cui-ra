@@ -38,7 +38,7 @@
     "blurb": "Byddwch yn gallu adolygu eich cais cyn i chi ei gyflwyno."
   },
   "form": {
-    "hint": "Dewiswch bob un sy’n berthnasol i chi",
+    "command": "Dewiswch bob un sy’n berthnasol i chi",
     "charCount": {
       "hint": "Gallwch ddefnyddio hyd at {count} o nodau",
       "charactersUnderLimit": {
