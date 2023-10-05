@@ -62,7 +62,7 @@
                                     {% endfor %}
                                 </p>
                             {% endif %}
-                            <textarea id="{{inputName}}-{{ item.id }}" rows="{{row}}" aria-describedby="{{inputName}}-{{ item.id }}-info {{inputName}}-{{ item.id }}-hint" class="govuk-textarea govuk-js-character-count {% if item._errors|length %}govuk-input--error{% endif %}" name="data[{{ item.id }}][{{inputName}}]" type="text" spellcheck="false">{{ item.value[inputName] }}</textarea>
+                            <textarea id="{{inputName}}-{{ item.id }}" rows="{{row}}" aria-labelledby="checkbox-label-{{item.id }} {{inputName}}-{{ item.id }}-control" aria-describedby="{{inputName}}-{{ item.id }}-info {{inputName}}-{{ item.id }}-hint" class="govuk-textarea govuk-js-character-count {% if item._errors|length %}govuk-input--error{% endif %}" name="data[{{ item.id }}][{{inputName}}]" type="text" spellcheck="false">{{ item.value[inputName] }}</textarea>
                         </div>
                         <div id="{{inputName}}-{{ item.id }}-info" class="govuk-hint govuk-character-count__message">
                             {{ _r(_t('form.charCount.hint'), count) }}
