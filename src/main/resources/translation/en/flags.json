@@ -22,6 +22,7 @@
     }
   },
   "RA0003": {
+    "hint": "For example, help with filling them in or guidance on how to complete them",
     "error": {
       "empty": "Select whether you need support"
     },
@@ -71,6 +72,7 @@
     }
   },
   "RA0007": {
+    "hint": "If your case goes to a hearing, it could be held in person, by video or by phone",
     "error": {
       "empty": "Select whether you need support"
     },

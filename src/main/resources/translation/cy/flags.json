@@ -22,6 +22,7 @@
     }
   },
   "RA0003": {
+    "hint": "Er enghraifft, help i'w llenwi neu arweiniad ar sut i'w llenwi",
     "error": {
       "empty": "Dewiswch a oes angen cefnogaeth arnoch"
     },
@@ -71,6 +72,7 @@
     }
   },
   "RA0007": {
+    "hint": "Os bydd eich achos yn mynd i wrandawiad, gellir ei gynnal yn bersonol, drwy fideo neu dros y ffôn",
     "error": {
       "empty": "Dewiswch a oes angen cefnogaeth arnoch"
     },
