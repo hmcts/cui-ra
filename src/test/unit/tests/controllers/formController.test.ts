@@ -367,6 +367,8 @@ describe('FormController', () => {
 
     await formController.post(mockedRequest, mockedResponse, mockNext);
 
+    //console.log(mockedResponse.);
+
     // Assert expected behavior here
     expect(mockedResponse.render).toHaveBeenCalledWith('forms/checkbox-group', expect.any(Object));
   });
