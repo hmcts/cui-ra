@@ -3440,9 +3440,9 @@ __metadata:
   linkType: hard
 
 "@types/i18n@npm:^0.13.6":
-  version: 0.13.6
-  resolution: "@types/i18n@npm:0.13.6"
-  checksum: 73490f7248e1e6330962d5a9a9621c4a92685188d840f0799d33292350dbd88733f189b2a0f82805bb2ac9ab1c02beec5575e80fec71aa3abac43e46752fad8d
+  version: 0.13.7
+  resolution: "@types/i18n@npm:0.13.7"
+  checksum: 98d8afce721496c6b87ec8d552cce74f11c13f66070519325fb31131ef1a0950bacc2a1f8651e789d9fc680fd3251686cce4e503b5379a96176a5c741ad670c8
   languageName: node
   linkType: hard
 

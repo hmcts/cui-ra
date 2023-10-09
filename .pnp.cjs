@@ -49,7 +49,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express-session", "npm:1.17.8"],\
             ["@types/glob", "npm:8.1.0"],\
             ["@types/helmet", "npm:4.0.0"],\
-            ["@types/i18n", "npm:0.13.6"],\
+            ["@types/i18n", "npm:0.13.7"],\
             ["@types/jest", "npm:29.5.5"],\
             ["@types/lodash", "npm:4.14.199"],\
             ["@types/node", "npm:18.17.18"],\
@@ -5161,10 +5161,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/i18n", [\
-        ["npm:0.13.6", {\
-          "packageLocation": "./.yarn/cache/@types-i18n-npm-0.13.6-ccb530126b-73490f7248.zip/node_modules/@types/i18n/",\
+        ["npm:0.13.7", {\
+          "packageLocation": "./.yarn/cache/@types-i18n-npm-0.13.7-7b2acd44e7-98d8afce72.zip/node_modules/@types/i18n/",\
           "packageDependencies": [\
-            ["@types/i18n", "npm:0.13.6"]\
+            ["@types/i18n", "npm:0.13.7"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8581,7 +8581,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express-session", "npm:1.17.8"],\
             ["@types/glob", "npm:8.1.0"],\
             ["@types/helmet", "npm:4.0.0"],\
-            ["@types/i18n", "npm:0.13.6"],\
+            ["@types/i18n", "npm:0.13.7"],\
             ["@types/jest", "npm:29.5.5"],\
             ["@types/lodash", "npm:4.14.199"],\
             ["@types/node", "npm:18.17.18"],\
