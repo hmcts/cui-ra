@@ -56,7 +56,20 @@ export class FormController {
       //validate form body
       const [bodyValid, bodyErrors] = await FormValidator.validateBody(flag, formModel);
       if (!bodyValid) {
-        return FormBuilder.build(req, res, flag, req.session.newmanager?.getChildren(id), bodyErrors);
+        const tempManager = req.session.newmanager;
+
+        /* eslint no-empty: ["error", { "allowEmptyCatch": true }] */
+        try {
+          //temp merge data for error
+          const formData: DataManagerDataObject[] = FormProcessor.process(
+            formModel,
+            flag,
+            req.session.newmanager?.getChildren(id)
+          );
+          tempManager?.save(formData);
+        } catch (e) {}
+
+        return FormBuilder.build(req, res, flag, tempManager?.getChildren(id), bodyErrors);
       }
 
       //check if no support has been selected

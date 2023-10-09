@@ -180,6 +180,12 @@ export function radioSchema(): SchemaType {
               },
             },
             required: ['subTypeValue'],
+            errorMessage: {
+              required: {
+                subTypeValue: errorTypes.empty,
+                subTypeValue_cy: errorTypes.empty,
+              },
+            },
           },
         },
       },
@@ -188,6 +194,12 @@ export function radioSchema(): SchemaType {
           value: {
             type: 'object',
             required: ['subTypeValue_cy'],
+          },
+        },
+        errorMessage: {
+          required: {
+            subTypeValue: errorTypes.empty,
+            subTypeValue_cy: errorTypes.empty,
           },
         },
       },
