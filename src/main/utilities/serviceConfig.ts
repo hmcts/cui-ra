@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { ServiceConfigInterface, ServiceConfigFlagInterface } from './../interfaces';
+
+import { ServiceConfigFlagInterface, ServiceConfigInterface } from './../interfaces';
 
 export class ServiceConfig {
   private basedir = `${__dirname}/../resources/configs`;
@@ -9,9 +10,9 @@ export class ServiceConfig {
 
   private servicedir = path.join(this.basedir, 'services');
 
-  private config: ServiceConfigInterface; 
+  private config: ServiceConfigInterface;
 
-  constructor(id:string|null = null){
+  constructor(id: string | null = null) {
     this.config = this.get(id);
   }
 
@@ -19,7 +20,7 @@ export class ServiceConfig {
     return this.config;
   }
 
-  public getConfigValue(key: string): string|boolean|number|object|null {
+  public getConfigValue(key: string): string | boolean | number | object | null {
     // Split the key by dots to access nested properties.
     const keys = key.split('.');
     let currentValue = this.config;
@@ -38,27 +39,26 @@ export class ServiceConfig {
     return this.config.flags || [];
   }
 
-
-  private getServiceDir(id:string):string{
+  private getServiceDir(id: string): string {
     return path.join(this.servicedir, `${id}.json`);
   }
 
-  private load(dir:string): ServiceConfigInterface{
+  private load(dir: string): ServiceConfigInterface {
     if (!fs.existsSync(dir)) {
-      return JSON.parse("{}");
+      return JSON.parse('{}');
     }
     return JSON.parse(fs.readFileSync(dir, 'utf-8'));
   }
 
-  private get(id:string|null = null): ServiceConfigInterface {
+  private get(id: string | null = null): ServiceConfigInterface {
     const defaultConfig = this.load(this.default);
-    if(!id){
+    if (!id) {
       return defaultConfig;
     }
     //load and merge
     const serviceConfig = this.load(this.getServiceDir(id));
 
-    return this.mergeObjects(defaultConfig,serviceConfig);
+    return this.mergeObjects(defaultConfig, serviceConfig);
   }
 
   private mergeObjects(target, ...sources) {

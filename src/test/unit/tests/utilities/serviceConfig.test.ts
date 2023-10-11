@@ -29,7 +29,7 @@ describe('ServiceConfig', () => {
       key: {
         nestedKey: 'nestedValue',
       },
-      flags: []
+      flags: [],
     };
     serviceConfig['config'] = config; // Access the private 'config' property for testing
 
@@ -52,5 +52,4 @@ describe('ServiceConfig', () => {
 
     expect(merged).toEqual({ a: 1, b: 3, c: 4 });
   });
-
 });

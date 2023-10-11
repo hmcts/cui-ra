@@ -242,7 +242,7 @@ describe('New Flags Manager', () => {
   test('find items ids from flagcode dot notations', async () => {
     dataManager.set(dataJson);
     //enable two children of RA
-    const ids:string[] = dataManager.findIdsByFlagCodeDotNotation('RA0001.RA0004');
+    const ids: string[] = dataManager.findIdsByFlagCodeDotNotation('RA0001.RA0004');
 
     expect(ids[0]).toEqual('PF0001-RA0001-RA0004');
   });

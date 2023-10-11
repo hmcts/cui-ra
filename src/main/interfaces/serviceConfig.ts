@@ -1,5 +1,5 @@
-export interface ServiceConfigFlagInterface{
-  flagCode: string,
+export interface ServiceConfigFlagInterface {
+  flagCode: string;
   remove?: boolean;
 }
 

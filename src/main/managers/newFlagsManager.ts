@@ -171,7 +171,12 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
     });
   }
 
-  private searchItem(item: DataManagerDataObject, dotNotation: string, matchingIds: string[], dataCollection: DataManagerDataObject[]) {
+  private searchItem(
+    item: DataManagerDataObject,
+    dotNotation: string,
+    matchingIds: string[],
+    dataCollection: DataManagerDataObject[]
+  ) {
     const dotNotations = dotNotation.split('.');
     const currentDot = dotNotations.shift();
     if (currentDot === item.value.flagCode) {
@@ -179,7 +184,7 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
         matchingIds.push(item.id);
       } else {
         const children = this.getChildren(item.id);
-        if(children){
+        if (children) {
           for (const child of children) {
             this.searchItem(child, dotNotations.join('.'), matchingIds, dataCollection);
           }
@@ -187,7 +192,7 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
       }
     }
   }
-  
+
   public findIdsByFlagCodeDotNotation(dotNotation: string): string[] {
     const matchingIds: string[] = [];
     for (const item of this.data) {
@@ -195,14 +200,13 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
     }
     return matchingIds;
   }
-  
 
-  public deleteFlagCodeByDotKey(flagCodes: string):void {
+  public deleteFlagCodeByDotKey(flagCodes: string): void {
     const ids = this.findIdsByFlagCodeDotNotation(flagCodes);
     this.deleteList(ids);
   }
 
-  public deleteFlagCodeByDotKeyList(flagCodes: string[]):void {
+  public deleteFlagCodeByDotKeyList(flagCodes: string[]): void {
     flagCodes.forEach((code: string) => {
       this.deleteFlagCodeByDotKey(code);
     });
