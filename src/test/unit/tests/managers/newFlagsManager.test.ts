@@ -216,4 +216,57 @@ describe('New Flags Manager', () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(result).toEqual(false);
   });
+
+  test('delete item by id', async () => {
+    //enable two children of RA
+    dataManager.delete('PF0001-PF0015');
+
+    const item: DataManagerDataObject | null = dataManager.get('PF0001-PF0015');
+
+    expect(item).toEqual(null);
+  });
+
+  test('delete item by a collection of ids', async () => {
+    dataManager.set(dataJson);
+    //enable two children of RA
+    dataManager.deleteList(['PF0001-PF0015']);
+    dataManager.deleteList(['PF0001-RA0001-RA0004-RA0019']);
+
+    const itemOne: DataManagerDataObject | null = dataManager.get('PF0001-PF0015');
+    const itemTwo: DataManagerDataObject | null = dataManager.get('PF0001-RA0001-RA0004-RA0019');
+
+    expect(itemOne).toEqual(null);
+    expect(itemTwo).toEqual(null);
+  });
+
+  test('find items ids from flagcode dot notations', async () => {
+    dataManager.set(dataJson);
+    //enable two children of RA
+    const ids:string[] = dataManager.findIdsByFlagCodeDotNotation('RA0001.RA0004');
+
+    expect(ids[0]).toEqual('PF0001-RA0001-RA0004');
+  });
+
+  test('delete item from flagcode dot notations', async () => {
+    dataManager.set(dataJson);
+    //enable two children of RA
+    dataManager.deleteFlagCodeByDotKey('RA0001.RA0004');
+
+    const item: DataManagerDataObject | null = dataManager.get('PF0001-RA0001-RA0004');
+
+    expect(item).toEqual(null);
+  });
+
+  test('delete item from flagcode dot notations', async () => {
+    dataManager.set(dataJson);
+    //enable two children of RA
+    dataManager.deleteFlagCodeByDotKey('PF0001.PF0015');
+    dataManager.deleteFlagCodeByDotKey('RA0001.RA0004');
+
+    const itemOne: DataManagerDataObject | null = dataManager.get('PF0001-PF0015');
+    const itemTwo: DataManagerDataObject | null = dataManager.get('PF0001-RA0001-RA0004-RA0019');
+
+    expect(itemOne).toEqual(null);
+    expect(itemTwo).toEqual(null);
+  });
 });

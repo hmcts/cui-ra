@@ -7,12 +7,13 @@ import {
   RedisClientInterface,
   ReferenceData,
   ServiceAuth,
+  ServiceConfigFlagInterface
 } from './../interfaces';
 import { ExistingFlagsManager, NewFlagsManager } from './../managers';
 import { InboundPayloadStore } from './../models';
 import { languages } from './../modules/translation';
 import { flagResourceType } from './../services';
-import { DataTimeUtilities, UrlRoute } from './../utilities';
+import { DataTimeUtilities, UrlRoute, ServiceConfig } from './../utilities';
 
 import autobind from 'autobind-decorator';
 import { plainToClass } from 'class-transformer';
@@ -82,6 +83,13 @@ export class DataController {
 
       req.session.newmanager = new NewFlagsManager();
       req.session.newmanager.set(processedData);
+
+      const config = new ServiceConfig(req.session.hmctsserviceid);
+      //remove flags before processing
+      const flagsToRemove: string[] = config.getFlags().filter((item: ServiceConfigFlagInterface) => item.remove === true).map((item) => item.flagCode);
+      //newFlagsManager remove items based on flagcodes
+      req.session.newmanager.deleteFlagCodeByDotKeyList(flagsToRemove);
+
 
       const master: DataManagerDataObject[] = req.session.newmanager.find('value.flagCode', req.session.masterflagcode);
       if (master.length > 0) {

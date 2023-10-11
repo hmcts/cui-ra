@@ -135,4 +135,76 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
       }
     });
   }
+
+  //Remove flags from data. This should only be used remove flags that a service does not need.
+  public delete(id: string): DataManagerDataObject | null {
+    const index = this.data.findIndex(node => node.id === id);
+    if (index === -1) {
+      return null;
+    }
+
+    //Get and delete node
+    const deletedNode: DataManagerDataObject = this.data.splice(index, 1)[0];
+
+    //Get children and delete them
+    const ChildCount: DataManagerDataObject[] | null = this.getChildren(deletedNode.id);
+    if (ChildCount) {
+      ChildCount.forEach(node => {
+        this.delete(node.id);
+      });
+    }
+
+    if (deletedNode._parentId) {
+      //Delete parent node but only if this flag is its only child
+      const ParentChildCount: number = this.getChildren(deletedNode._parentId).length;
+      if (ParentChildCount === 1) {
+        this.delete(deletedNode._parentId);
+      }
+    }
+    return deletedNode;
+  }
+
+  //Remove flags from data using a list of flag ids
+  public deleteList(ids: string[]): void {
+    ids.forEach((id: string) => {
+      this.delete(id);
+    });
+  }
+
+  private searchItem(item: DataManagerDataObject, dotNotation: string, matchingIds: string[], dataCollection: DataManagerDataObject[]) {
+    const dotNotations = dotNotation.split('.');
+    const currentDot = dotNotations.shift();
+    if (currentDot === item.value.flagCode) {
+      if (dotNotations.length === 0) {
+        matchingIds.push(item.id);
+      } else {
+        const children = this.getChildren(item.id);
+        if(children){
+          for (const child of children) {
+            this.searchItem(child, dotNotations.join('.'), matchingIds, dataCollection);
+          }
+        }
+      }
+    }
+  }
+  
+  public findIdsByFlagCodeDotNotation(dotNotation: string): string[] {
+    const matchingIds: string[] = [];
+    for (const item of this.data) {
+      this.searchItem(item, dotNotation, matchingIds, this.data);
+    }
+    return matchingIds;
+  }
+  
+
+  public deleteFlagCodeByDotKey(flagCodes: string):void {
+    const ids = this.findIdsByFlagCodeDotNotation(flagCodes);
+    this.deleteList(ids);
+  }
+
+  public deleteFlagCodeByDotKeyList(flagCodes: string[]):void {
+    flagCodes.forEach((code: string) => {
+      this.deleteFlagCodeByDotKey(code);
+    });
+  }
 }
