@@ -5,3 +5,4 @@ export * from './payload';
 export * from './dataManager';
 export * from './redisClient';
 export * from './flagProcessor';
+export * from './serviceConfig';
