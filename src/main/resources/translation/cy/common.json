@@ -14,11 +14,17 @@
   },
   "footer": {
     "cookies": "Cwcis",
+    "cookiesUrl": "/home/cookies",
     "privacyPolicy": "Polisi Preifatrwydd",
+    "privacyPolicyUrl": "/home/privacy-policy",
     "termsAndConditions": "Telerau ac amodau",
+    "termsAndConditionsUrl": "/home/terms-and-conditions",
     "helpUsingGovUk": "Help i ddefnyddio GOV.UK",
+    "helpUsingGovUkUrl": "https://www.gov.uk/help",
     "contactUs": "Cysylltu â ni",
-    "accessibilityStatement": "Datganiad Hygyrchedd"
+    "contactUsUrl": "https://www.gov.uk/contact",
+    "accessibilityStatement": "Datganiad Hygyrchedd",
+    "accessibilityStatementUrl": "/home/accessibility-statement"
   },
   "overview": {
     "changeMySupportOptions": "Newid fy opsiynau cymorth",

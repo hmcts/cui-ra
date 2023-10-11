@@ -14,11 +14,17 @@
   },
   "footer": {
     "cookies": "Cookies",
+    "cookiesUrl": "/home/cookies",
     "privacyPolicy": "Privacy Policy",
+    "privacyPolicyUrl": "/home/privacy-policy",
     "termsAndConditions": "Terms and Conditions",
+    "termsAndConditionsUrl": "/home/terms-and-conditions",
     "helpUsingGovUk": "Help using GOV.UK",
+    "helpUsingGovUkUrl": "https://www.gov.uk/help",
     "contactUs": "Contact us",
-    "accessibilityStatement": "Accessibility statement"
+    "contactUsUrl": "https://www.gov.uk/contact",
+    "accessibilityStatement": "Accessibility statement",
+    "accessibilityStatementUrl": "/home/accessibility-statement"
   },
   "overview": {
     "changeMySupportOptions": "Change my support options",
