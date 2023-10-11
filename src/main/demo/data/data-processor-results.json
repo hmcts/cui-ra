@@ -1935,8 +1935,7 @@
       "PF0001-RA0001-RA0003",
       "PF0001-RA0001-RA0006",
       "PF0001-RA0001-RA0005",
-      "PF0001-RA0001-RA0007",
-      "PF0001-RA0001-OT0001"
+      "PF0001-RA0001-RA0007"
     ],
     "id": "PF0001-RA0001",
     "value": {
@@ -3800,35 +3799,6 @@
       "availableExternally": "Yes"
     },
     "_parentId": "PF0001-RA0001-RA0007"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001"
   },
   {
     "_flagComment": false,
