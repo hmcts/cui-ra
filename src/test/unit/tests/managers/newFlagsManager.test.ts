@@ -264,7 +264,7 @@ describe('New Flags Manager', () => {
     dataManager.deleteFlagCodeByDotKey('RA0001.RA0004');
 
     const itemOne: DataManagerDataObject | null = dataManager.get('PF0001-PF0015');
-    const itemTwo: DataManagerDataObject | null = dataManager.get('PF0001-RA0001-RA0004-RA0019');
+    const itemTwo: DataManagerDataObject | null = dataManager.get('PF0001-RA0001-RA0004');
 
     expect(itemOne).toEqual(null);
     expect(itemTwo).toEqual(null);

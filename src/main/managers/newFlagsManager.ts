@@ -155,6 +155,13 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
     }
 
     if (deletedNode._parentId) {
+      const parentIndex = this.data.findIndex(node => node.id === deletedNode._parentId);
+      if (parentIndex !== -1) {
+        const childIndex = this.data[parentIndex]?._childIds.findIndex(node => node === id);
+        if (childIndex !== -1) {
+          this.data[parentIndex]._childIds.splice(childIndex ?? 0, 1);
+        }
+      }
       //Delete parent node but only if this flag is its only child
       const ParentChildCount: number = this.getChildren(deletedNode._parentId).length;
       if (ParentChildCount === 1) {
