@@ -4,26 +4,26 @@ provider "azurerm" {
 
 locals {
   app_full_name = "${var.product}-${var.component}"
-  aseName = "core-compute-${var.env}"
-  vaultName = "${var.product}-${var.env}"
+  aseName       = "core-compute-${var.env}"
+  vaultName     = "${var.product}-${var.env}"
 }
 
 resource "azurerm_resource_group" "rg" {
   name     = "${var.product}-shared-${var.env}"
   location = var.location
-  tags = var.common_tags
+  tags     = var.common_tags
 }
 
 module "key-vault" {
-  source              = "git@github.com:hmcts/cnp-module-key-vault?ref=master"
-  product             = var.product
-  env                 = var.env
-  tenant_id           = var.tenant_id
-  object_id           = var.jenkins_AAD_objectId
-  resource_group_name = azurerm_resource_group.rg.name
-  product_group_name  = "dcd_ccd"
-  common_tags         = var.common_tags
-  create_managed_identity    = true
+  source                  = "git@github.com:hmcts/cnp-module-key-vault?ref=master"
+  product                 = var.product
+  env                     = var.env
+  tenant_id               = var.tenant_id
+  object_id               = var.jenkins_AAD_objectId
+  resource_group_name     = azurerm_resource_group.rg.name
+  product_group_name      = "dcd_ccd"
+  common_tags             = var.common_tags
+  create_managed_identity = true
 }
 
 resource "azurerm_key_vault_secret" "AZURE_APPINSGHTS_KEY" {
@@ -47,7 +47,7 @@ resource "azurerm_application_insights" "appinsights" {
 //}
 
 data "azurerm_key_vault" "key_vault" {
-  name                = "${var.product}-${var.env}" # update these values if required
+  name                = "${var.product}-${var.env}"    # update these values if required
   resource_group_name = azurerm_resource_group.rg.name # update these values if required
 }
 
@@ -68,16 +68,20 @@ resource "azurerm_key_vault_secret" "s2s" {
 }
 
 module "redis6-cache" {
-  source   = "git@github.com:hmcts/cnp-module-redis?ref=master"
-  product  = var.product
-  name     = "${var.product}-${var.component}-${var.env}"
-  location = var.location
-  env      = var.env
-  private_endpoint_enabled = true
-  redis_version = "6"
-  business_area = "cft"
+  source                        = "git@github.com:hmcts/cnp-module-redis?ref=master"
+  product                       = var.product
+  name                          = "${var.product}-${var.component}-${var.env}"
+  location                      = var.location
+  env                           = var.env
+  private_endpoint_enabled      = true
+  redis_version                 = "6"
+  business_area                 = "cft"
   public_network_access_enabled = false
-  common_tags  = var.common_tags
+  common_tags                   = var.common_tags
+  sku_name                      = var.sku_name
+  family                        = var.family
+  capacity                      = var.capacity
+
 }
 
 ////////////////////////////////
