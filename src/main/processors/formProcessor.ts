@@ -24,7 +24,7 @@ export class FormProcessor {
     parent: DataManagerDataObject,
     children: DataManagerDataObject[] | null
   ): DataManagerDataObject[] {
-    if (!body.enabled || !body.data) {
+    if (!body.enabled && !body.data) {
       throw new Error(ErrorMessages.UNEXPECTED_ERROR);
     }
 
