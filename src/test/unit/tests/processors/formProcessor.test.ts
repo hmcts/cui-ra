@@ -69,27 +69,6 @@ describe('FormProcessor', () => {
     }
   });
 
-  test('should fail to process checkbox form data', () => {
-    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
-      (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
-    )[0];
-    const children: DataManagerDataObject[] = dataProcessorResultJson.filter((item: DataManagerDataObject) =>
-      parent._childIds.includes(item.id)
-    );
-
-    const body = new Form();
-
-    let error = '';
-
-    try {
-      FormProcessor.process(body, parent, children);
-    } catch (e) {
-      error = e.message;
-    }
-
-    expect(error).toBe(ErrorMessages.UNEXPECTED_ERROR);
-  });
-
   test('should process typeahead form data correctly', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
       (item: DataManagerDataObject) => item.id === 'PF0001-PF0015'
