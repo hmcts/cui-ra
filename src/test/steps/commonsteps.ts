@@ -1,21 +1,26 @@
 const { I } = inject();
 
-Given('I am on the Home page', ()=>{
+Given('I am on the Home page', () => {
   I.amOnPage(`${process.env.CUIRA_URL}`);
-})
+});
 
-When(/^I click on the button 'Enter New Journey'$/, async function() {
+When(/^I click on the button 'Enter New Journey'$/, async function () {
   I.wait(5);
   await I.waitForText('Enter New Journey');
   await I.click('#main-content > form:nth-child(5) > button');
 });
 
-Then(/^I navigate to 'Do you have a physical, mental or learning disability or health condition that means you need support during your case\?' page$/, async function() {
-  I.wait(5);
-  await I.waitForText('Do you have a physical, mental or learning disability or health condition that means you need support during your case');
-});
+Then(
+  /^I navigate to 'Do you have a physical, mental or learning disability or health condition that means you need support during your case\?' page$/,
+  async function () {
+    I.wait(5);
+    await I.waitForText(
+      'Do you have a physical, mental or learning disability or health condition that means you need support during your case'
+    );
+  }
+);
 
-When(/^I select all the checkboxes and click continue$/, async function() {
+When(/^I select all the checkboxes and click continue$/, async function () {
   await I.click('#_enabled-PF0001-RA0001-RA0004');
   await I.click('#_enabled-PF0001-RA0001-RA0002');
   await I.click('#_enabled-PF0001-RA0001-RA0008');
@@ -25,11 +30,11 @@ When(/^I select all the checkboxes and click continue$/, async function() {
   await I.click('#_enabled-PF0001-RA0001-RA0007');
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
-Then(/^I am navigated to 'I need adjustments to get to, into and around our buildings'$/, async function() {
+Then(/^I am navigated to 'I need adjustments to get to, into and around our buildings'$/, async function () {
   I.wait(2);
   await I.waitForText('I need adjustments to get to, into and around our buildings');
 });
-When(/^I select all the options and click Continue$/, async function() {
+When(/^I select all the options and click Continue$/, async function () {
   I.wait(2);
   await I.click('#_enabled-PF0001-RA0001-RA0004-RA0024');
   await I.fillField('#flagComment-PF0001-RA0001-RA0004-RA0024', 'A chair with back support');
@@ -45,11 +50,11 @@ When(/^I select all the options and click Continue$/, async function() {
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
 
-Then(/^I am navigated to 'I need documents in an alternative format' page$/, async function() {
+Then(/^I am navigated to 'I need documents in an alternative format' page$/, async function () {
   I.wait(2);
   await I.waitForText('I need documents in an alternative format');
 });
-When(/^I select all the options and continue to next page$/, async function() {
+When(/^I select all the options and continue to next page$/, async function () {
   await I.click('#_enabled-PF0001-RA0001-RA0002-RA0014');
   await I.click('#_enabled-PF0001-RA0001-RA0002-RA0012');
   await I.click('#_enabled-PF0001-RA0001-RA0002-RA0010');
@@ -63,11 +68,11 @@ When(/^I select all the options and continue to next page$/, async function() {
   await I.fillField('#flagComment-PF0001-RA0001-RA0002-OT0001', 'Other Details');
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
-Then(/^I am navigated to 'I need help communicating and understanding' page$/, async function() {
+Then(/^I am navigated to 'I need help communicating and understanding' page$/, async function () {
   I.wait(2);
   await I.waitForText('I need help communicating and understanding');
 });
-When(/^I select all the options and click continue to next page$/, async function() {
+When(/^I select all the options and click continue to next page$/, async function () {
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0047');
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0037');
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0009');
@@ -79,11 +84,14 @@ When(/^I select all the options and click continue to next page$/, async functio
   await I.fillField('#flagComment-PF0001-RA0001-RA0008-OT0001', 'Other Details');
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
-Then(/^I am navigated to 'Hearing Enhancement System \(Hearing\/Induction Loop, Infrared Receiver\)' page$/, async function() {
-  I.wait(2);
-  await I.waitForText('Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)');
-});
-When(/^I select all four options and click continue$/, async function() {
+Then(
+  /^I am navigated to 'Hearing Enhancement System \(Hearing\/Induction Loop, Infrared Receiver\)' page$/,
+  async function () {
+    I.wait(2);
+    await I.waitForText('Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)');
+  }
+);
+When(/^I select all four options and click continue$/, async function () {
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0009-RA0043');
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0009-RA0045');
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0009-RA0044');
@@ -91,33 +99,33 @@ When(/^I select all four options and click continue$/, async function() {
   await I.fillField('#flagComment-PF0001-RA0001-RA0008-RA0009-OT0001', 'Other Details');
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
-Then(/^I am navigated to 'Which Sign Language Interpreter do you need to request\?' page$/, async function() {
+Then(/^I am navigated to 'Which Sign Language Interpreter do you need to request\?' page$/, async function () {
   I.wait(2);
   await I.waitForText('Which Sign Language Interpreter do you need to request?');
 });
-When(/^I type in the dynamic dropdown and select an option and click continue$/, async function() {
+When(/^I type in the dynamic dropdown and select an option and click continue$/, async function () {
   I.wait(2);
   await I.click('#custom-accessible-autocomplete');
   await I.fillField('#custom-accessible-autocomplete', 'British Sign Language (BSL)');
   await I.click('#custom-accessible-autocomplete__listbox');
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
-Then(/^I am navigated to 'I need help with forms' page$/, async function() {
+Then(/^I am navigated to 'I need help with forms' page$/, async function () {
   I.wait(2);
   await I.waitForText('I need help with forms');
 });
-When(/^I select all the three options and click continue$/, async function() {
+When(/^I select all the three options and click continue$/, async function () {
   await I.click('#_enabled-PF0001-RA0001-RA0003-RA0017');
   await I.click('#_enabled-PF0001-RA0001-RA0003-RA0018');
   await I.click('#_enabled-PF0001-RA0001-RA0003-OT0001');
   await I.fillField('#flagComment-PF0001-RA0001-RA0003-OT0001', 'Other Details');
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
-Then(/^I am navigated to 'I need something to feel comfortable during my hearing' page$/, async function() {
+Then(/^I am navigated to 'I need something to feel comfortable during my hearing' page$/, async function () {
   I.wait(2);
   await I.waitForText('I need something to feel comfortable during my hearing');
 });
-When(/^I select all the five options and click continue$/, async function() {
+When(/^I select all the five options and click continue$/, async function () {
   await I.click('#_enabled-PF0001-RA0001-RA0006-RA0030');
   await I.fillField('#flagComment-PF0001-RA0001-RA0006-RA0030', 'Describe what type of lighting you need');
   await I.click('#_enabled-PF0001-RA0001-RA0006-RA0033');
@@ -127,11 +135,11 @@ When(/^I select all the five options and click continue$/, async function() {
   await I.fillField('#flagComment-PF0001-RA0001-RA0006-OT0001', 'Other Details');
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
-Then(/^I am navigated to 'I need to bring support with me to a hearing' page$/, async function() {
+Then(/^I am navigated to 'I need to bring support with me to a hearing' page$/, async function () {
   I.wait(2);
   await I.waitForText('I need to bring support with me to a hearing');
 });
-When(/^I select all the given options and click continue$/, async function() {
+When(/^I select all the given options and click continue$/, async function () {
   await I.click('#_enabled-PF0001-RA0001-RA0005-RA0028');
   await I.click('#_enabled-PF0001-RA0001-RA0005-RA0027');
   await I.fillField('#flagComment-PF0001-RA0001-RA0005-RA0027', 'Mother');
@@ -143,11 +151,11 @@ When(/^I select all the given options and click continue$/, async function() {
   await I.fillField('#flagComment-PF0001-RA0001-RA0005-OT0001', 'Other Details');
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
-Then(/^I am navigated to 'I need to request a certain type of hearing' page$/, async function() {
+Then(/^I am navigated to 'I need to request a certain type of hearing' page$/, async function () {
   I.wait(2);
   await I.waitForText('I need to request a certain type of hearing');
 });
-When(/^I select all the four options and click continue$/, async function() {
+When(/^I select all the four options and click continue$/, async function () {
   await I.click('#_enabled-PF0001-RA0001-RA0007-RA0034');
   await I.click('#_enabled-PF0001-RA0001-RA0007-RA0036');
   await I.click('#_enabled-PF0001-RA0001-RA0007-RA0035');
@@ -156,47 +164,47 @@ When(/^I select all the four options and click continue$/, async function() {
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
 
-Then(/^I am navigated to 'Review the support you've requested' page$/, async function() {
+Then(/^I am navigated to 'Review the support you've requested' page$/, async function () {
   I.wait(2);
-  await I.waitForText('Review the support you\'ve requested');
+  await I.waitForText("Review the support you've requested");
 });
 
-When(/^I review and click Submit$/, async function() {
+When(/^I review and click Submit$/, async function () {
   await I.click('#main-content > div > div > form > div > button');
 });
 
-Then(/^I must see a successful message$/, async function() {
+Then(/^I must see a successful message$/, async function () {
   await I.waitForText('This is a service dummy page');
 });
 
-When(/^I click on the button 'Enter Existing Journey'$/, async function() {
+When(/^I click on the button 'Enter Existing Journey'$/, async function () {
   I.wait(2);
   await I.click('#demoexisting');
 });
 
-Then(/^I am navigated to 'Support for' page$/, async function() {
+Then(/^I am navigated to 'Support for' page$/, async function () {
   I.wait(2);
   await I.waitForText('Support for');
-})
+});
 
-When(/^I click on 'Change my support options'$/, async function() {
+When(/^I click on 'Change my support options'$/, async function () {
   await I.click('#main-content > div > div > p > a');
 });
 
-Then(/^I am navigated to 'I want to tell you that my support needs have changed' page$/, async function() {
+Then(/^I am navigated to 'I want to tell you that my support needs have changed' page$/, async function () {
   I.wait(1);
   await I.waitForText('I want to tell you that my support needs have changed');
 });
 
-When(/^I click on 'Start now' button$/, async function() {
+When(/^I click on 'Start now' button$/, async function () {
   await I.click('#main-content > div > div > div.govuk-button-group > a.govuk-button.govuk-button--start');
 });
 
-Then(/^I am navigated to 'Review the support you've requested'$/, async function() {
+Then(/^I am navigated to 'Review the support you've requested'$/, async function () {
   I.wait(1);
-  await I.waitForText('Review the support you\'ve requested');
+  await I.waitForText("Review the support you've requested");
 });
 
-When(/^I click on 'Add a new support request' button$/, async function() {
+When(/^I click on 'Add a new support request' button$/, async function () {
   await I.click('#main-content > div > div > a');
 });
