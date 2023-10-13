@@ -18,3 +18,5 @@ jobs:
           node-version: 18
       - run: corepack enable && yarn --version
       - run: yarn cichecks
+      - run: yarn install ; yarn test:fullfunctional
+
