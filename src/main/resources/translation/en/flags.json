@@ -26,9 +26,9 @@
       "empty": "Select whether you need support"
     },
     "OT0001": {
-      "control": "***  ***",
+      "control": "Describe what support you need to help with forms",
       "error": {
-        "empty": "***  ***"
+        "empty": "Describe what support you need to help with forms"
       }
     }
   },
@@ -75,9 +75,9 @@
       "empty": "Select whether you need support"
     },
     "OT0001": {
-      "control": "***  ***",
+      "control": "Describe what support you need to request for a hearing",
       "error": {
-        "empty": "***  ***"
+        "empty": "Describe what support you need to request for a hearing"
       }
     }
   },
