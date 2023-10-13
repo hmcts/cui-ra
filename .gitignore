@@ -44,3 +44,4 @@ version
 !.yarn/cache
 
 secrets/*
+.yarn/

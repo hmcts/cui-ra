@@ -4,14 +4,14 @@ process.on('unhandledRejection', reason => {
 });
 
 export const config = {
-  TEST_URL: process.env.TEST_URL || 'http://localhost:3100',
-  TestHeadlessBrowser: process.env.TEST_HEADLESS ? process.env.TEST_HEADLESS === 'true' : true,
+  TEST_URL: process.env.TEST_URL || 'https://cui-ra.aat.platform.hmcts.net/demo',
+  TestHeadlessBrowser: true,
   TestSlowMo: 250,
   WaitForTimeout: 10000,
 
   Gherkin: {
     features: './features/**/*.feature',
-    steps: ['../steps/common.ts'],
+    steps: ['../steps/common.ts','../steps/commonsteps.ts'],
   },
   helpers: {},
 };
