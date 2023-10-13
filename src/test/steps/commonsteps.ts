@@ -1,5 +1,3 @@
-import { config as testConfig } from '../config';
-
 const { I } = inject();
 
 Given('I am on the Home page', ()=>{
@@ -74,10 +72,8 @@ When(/^I select all the options and click continue to next page$/, async functio
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0037');
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0009');
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0038');
-  await I.click('#_enabled-PF0001-RA0001-RA0008-RA0041');
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0040');
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0042');
-  await I.click('#_enabled-PF0001-RA0001-RA0008-RA0039');
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0046');
   await I.click('#_enabled-PF0001-RA0001-RA0008-OT0001');
   await I.fillField('#flagComment-PF0001-RA0001-RA0008-OT0001', 'Other Details');
