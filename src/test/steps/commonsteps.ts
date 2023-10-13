@@ -1,7 +1,9 @@
 const { I } = inject();
 
+const cuiraUrl = 'https://cui-ra.aat.platform.hmcts.net/demo';
+
 Given('I am on the Home page', () => {
-  I.amOnPage(`${process.env.CUIRA_URL}`);
+  I.amOnPage(cuiraUrl);
 });
 
 When(/^I click on the button 'Enter New Journey'$/, async function () {
