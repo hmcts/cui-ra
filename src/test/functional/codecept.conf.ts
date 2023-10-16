@@ -5,6 +5,8 @@ const { setHeadlessWhen } = require('@codeceptjs/configure');
 setHeadlessWhen(testConfig.TestHeadlessBrowser);
 
 export const config: CodeceptJS.MainConfig = {
+  // headless mode
+  show: process.env.SHOW_BROWSER_WINDOW || false,
   name: 'functional',
   gherkin: testConfig.Gherkin,
   output: '../../../functional-output/functional/reports',
