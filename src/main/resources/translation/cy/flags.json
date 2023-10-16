@@ -26,9 +26,9 @@
       "empty": "Dewiswch a oes angen cefnogaeth arnoch"
     },
     "OT0001": {
-      "control": "***  ***",
+      "control": "Disgrifiwch pa gymorth sydd ei angen arnoch i helpu gyda ffurflenni",
       "error": {
-        "empty": "***  ***"
+        "empty": "Disgrifiwch pa gymorth sydd ei angen arnoch i helpu gyda ffurflenni"
       }
     }
   },
