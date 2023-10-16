@@ -5415,15 +5415,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromium-bidi@npm:0.4.28":
-  version: 0.4.28
-  resolution: "chromium-bidi@npm:0.4.28"
+"chromium-bidi@npm:0.4.31":
+  version: 0.4.31
+  resolution: "chromium-bidi@npm:0.4.31"
   dependencies:
     mitt: 3.0.1
     urlpattern-polyfill: 9.0.0
   peerDependencies:
     devtools-protocol: "*"
-  checksum: d8ac0aefcf11ebd744e0b97ecded9dac5c03ab55f46267570cdf1b780ad1e05e8cf6987b65178bda99a1ef1ea1bc59721bda85008283ca5f145912b9e1bf578d
+  checksum: 9761b602ccc7737af6abb16ea6485871ca70ee3ec37714ccb99265f28611fb2b109e40e5a6551535d0d571667b7faa54eceeab8142cc6b1253872bce7e1dcc96
   languageName: node
   linkType: hard
 
@@ -5674,14 +5674,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colorette@npm:^2.0.10, colorette@npm:^2.0.14":
+"colorette@npm:^2.0.10":
   version: 2.0.19
   resolution: "colorette@npm:2.0.19"
   checksum: 888cf5493f781e5fcf54ce4d49e9d7d698f96ea2b2ef67906834bb319a392c667f9ec69f4a10e268d2946d13a9503d2d19b3abaaaf174e3451bfe91fb9d82427
   languageName: node
   linkType: hard
 
-"colorette@npm:^2.0.20":
+"colorette@npm:^2.0.14, colorette@npm:^2.0.20":
   version: 2.0.20
   resolution: "colorette@npm:2.0.20"
   checksum: 0c016fea2b91b733eb9f4bcdb580018f52c0bc0979443dad930e5037a968237ac53d9beb98e218d2e9235834f8eebce7f8e080422d6194e957454255bde71d3d
@@ -6207,7 +6207,7 @@ __metadata:
     pa11y: ^6.2.3
     playwright: ^1.34.3
     prettier: ^2.7.1
-    puppeteer: ^21.3.6
+    puppeteer: ^21.3.8
     redis: ^4.6.7
     reflect-metadata: ^0.1.13
     request: ^2.88.2
@@ -6773,7 +6773,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"envinfo@npm:^7.7.3, envinfo@npm:^7.8.1, envinfo@npm:~7.8.1":
+"envinfo@npm:^7.7.3":
+  version: 7.10.0
+  resolution: "envinfo@npm:7.10.0"
+  bin:
+    envinfo: dist/cli.js
+  checksum: 05e81a5768c42cbd5c580dc3f274db3401facadd53e9bd52e2aa49dfbb5d8b26f6181c25a6652d79618a6994185bd2b1c137673101690b147f758e4e71d42f7d
+  languageName: node
+  linkType: hard
+
+"envinfo@npm:^7.8.1, envinfo@npm:~7.8.1":
   version: 7.8.1
   resolution: "envinfo@npm:7.8.1"
   bin:
@@ -11941,28 +11950,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer-core@npm:21.3.7":
-  version: 21.3.7
-  resolution: "puppeteer-core@npm:21.3.7"
+"puppeteer-core@npm:21.3.8":
+  version: 21.3.8
+  resolution: "puppeteer-core@npm:21.3.8"
   dependencies:
     "@puppeteer/browsers": 1.7.1
-    chromium-bidi: 0.4.28
+    chromium-bidi: 0.4.31
     cross-fetch: 4.0.0
     debug: 4.3.4
     devtools-protocol: 0.0.1179426
     ws: 8.14.2
-  checksum: 0ff4d49dcd4ac59fcacfa4798702d579ae072e2f07743b41650273071a39e6dcfe218fe6e36375cc0d5791c32a2f89598952c89349e3b21f66932e456f27f06e
+  checksum: 3a416ba43f96d51917590b8fae89188cca422a768e1a305e4013a26994d808e0a68989aaaf622fef700ce54ee67ef3831e74acde7660fcfad013a1490b385e56
   languageName: node
   linkType: hard
 
-"puppeteer@npm:^21.3.6":
-  version: 21.3.7
-  resolution: "puppeteer@npm:21.3.7"
+"puppeteer@npm:^21.3.8":
+  version: 21.3.8
+  resolution: "puppeteer@npm:21.3.8"
   dependencies:
     "@puppeteer/browsers": 1.7.1
     cosmiconfig: 8.3.6
-    puppeteer-core: 21.3.7
-  checksum: 58e05d03f95e88a90cb1b1be7e119d31feeaf1533fefc2b0efe0130eb386ee4f8869a04aade508778fc1acdba2a5a8bcd09de55c8c357336f25b3595bfff838d
+    puppeteer-core: 21.3.8
+  checksum: 15b8d4ce7988e330acd30de92be8444247e27c27cb34c5f72549220acd807c3d84788c881357b479a26fd882cb0f20994a722c0dfbbe3dc883977e004e6acfec
   languageName: node
   linkType: hard
 
@@ -14493,12 +14502,12 @@ __metadata:
   linkType: hard
 
 "webpack-merge@npm:^5.7.3":
-  version: 5.8.0
-  resolution: "webpack-merge@npm:5.8.0"
+  version: 5.9.0
+  resolution: "webpack-merge@npm:5.9.0"
   dependencies:
     clone-deep: ^4.0.1
     wildcard: ^2.0.0
-  checksum: 88786ab91013f1bd2a683834ff381be81c245a4b0f63304a5103e90f6653f44dab496a0768287f8531761f8ad957d1f9f3ccb2cb55df0de1bd9ee343e079da26
+  checksum: 64fe2c23aacc5f19684452a0e84ec02c46b990423aee6fcc5c18d7d471155bd14e9a6adb02bd3656eb3e0ac2532c8e97d69412ad14c97eeafe32fa6d10050872
   languageName: node
   linkType: hard
 
@@ -14622,9 +14631,9 @@ __metadata:
   linkType: hard
 
 "wildcard@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "wildcard@npm:2.0.0"
-  checksum: 1f4fe4c03dfc492777c60f795bbba597ac78794f1b650d68f398fbee9adb765367c516ebd4220889b6a81e9626e7228bbe0d66237abb311573c2ee1f4902a5ad
+  version: 2.0.1
+  resolution: "wildcard@npm:2.0.1"
+  checksum: e0c60a12a219e4b12065d1199802d81c27b841ed6ad6d9d28240980c73ceec6f856771d575af367cbec2982d9ae7838759168b551776577f155044f5a5ba843c
   languageName: node
   linkType: hard
 
