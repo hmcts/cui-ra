@@ -98,14 +98,28 @@ export class FormController {
       //process the form and produce the data used to validate and save
       const nextPage = req.session.newmanager?.getNext(id);
 
-      let query = '';
+      const queryParams: { [key: string]: string | number } = {};
+
       if (change) {
         res.locals.change = 'true';
-        query = '?change=true';
+        Object.assign(queryParams, { change: true });
         const hasUnaswered = req.session.newmanager?.hasUnaswered();
         if (!hasUnaswered && !newQuery) {
           return res.redirect(Route.REVIEW);
         }
+      }
+
+      if (newQuery) {
+        Object.assign(queryParams, { new: true });
+      }
+
+      let queryString = '';
+      if (Object.keys(queryParams).length !== 0) {
+        queryString =
+          '?' +
+          Object.keys(queryParams)
+            .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(queryParams[key])}`)
+            .join('&');
       }
 
       //check where to redirect the user. next page for new journey or back to the review page
@@ -116,7 +130,7 @@ export class FormController {
       }
 
       return res.redirect(
-        `${UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: nextPage.id }, UrlRoute.url(req))}${query}`
+        `${UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: nextPage.id }, UrlRoute.url(req))}${queryString}`
       );
     } catch (e) {
       return next(e);
