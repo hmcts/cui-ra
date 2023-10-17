@@ -33,8 +33,8 @@ export class FormProcessor {
         item.value.otherDescription_cy = undefined;
 
         if (item._enabled && body.data && body.data[item.id]) {
-          item.value.flagComment = body.data[item.id].flagComment;
-          item.value.flagComment_cy = body.data[item.id].flagComment_cy;
+          item.value.flagComment = this.stripSpecialCharacters(body.data[item.id].flagComment);
+          item.value.flagComment_cy = this.stripSpecialCharacters(body.data[item.id].flagComment_cy);
           if (item.value.flagCode === Common.OTHER_FLAG_CODE) {
             item.value.otherDescription = parent.value.name;
             item.value.otherDescription_cy = parent.value.name_cy;
@@ -75,8 +75,8 @@ export class FormProcessor {
     if (body.selected === Common.OTHER_FLAG_CODE) {
       parent._other = true;
       if (body.data) {
-        parent.value.subTypeValue = body.data[parent.id].subTypeValue;
-        parent.value.subTypeValue_cy = body.data[parent.id].subTypeValue_cy;
+        parent.value.subTypeValue = this.stripSpecialCharacters(body.data[parent.id].subTypeValue);
+        parent.value.subTypeValue_cy = this.stripSpecialCharacters(body.data[parent.id].subTypeValue_cy);
       }
       return [parent];
     }
@@ -95,8 +95,8 @@ export class FormProcessor {
   private static processTypeAheadType(body: Form, parent: DataManagerDataObject): DataManagerDataObject[] {
     //other selected
     if (body.data && body.enabled.includes(Common.OTHER_FLAG_CODE)) {
-      parent.value.subTypeValue = body.data[parent.id].subTypeValue;
-      parent.value.subTypeValue_cy = body.data[parent.id].subTypeValue;
+      parent.value.subTypeValue = this.stripSpecialCharacters(body.data[parent.id].subTypeValue);
+      parent.value.subTypeValue_cy = this.stripSpecialCharacters(body.data[parent.id].subTypeValue);
       parent._other = true;
       return [parent];
     }
@@ -114,5 +114,18 @@ export class FormProcessor {
     }
 
     return [parent];
+  }
+
+  private static stripSpecialCharacters(input: string | undefined): string | undefined {
+    if (!input) {
+      return input;
+    }
+    // Define a regular expression pattern to match special characters
+    const specialCharactersRegex = /[^a-zA-Z0-9\s]/g;
+
+    // Use the replace method to remove special characters
+    const sanitizedString = input.replace(specialCharactersRegex, '');
+
+    return sanitizedString;
   }
 }
