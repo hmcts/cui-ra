@@ -93,11 +93,11 @@ export class DataController {
       //newFlagsManager remove items based on flagcodes
       req.session.newmanager.deleteFlagCodeByDotKeyList(flagsToRemove);
 
-      const master: DataManagerDataObject[] = req.session.newmanager.find('value.flagCode', req.session.masterflagcode);
-      if (master.length > 0) {
-        req.session.mastername = master[0].value.name;
-        req.session.mastername_cy = master[0].value.name_cy;
-        req.session.newmanager?.enable(master[0].id, false);
+      const master: DataManagerDataObject | null = req.session.newmanager.setMaster(req.session.masterflagcode);
+
+      if (master) {
+        req.session.mastername = master.value.name;
+        req.session.mastername_cy = master.value.name_cy;
       }
 
       req.session.sessioninit = true;
@@ -106,11 +106,11 @@ export class DataController {
       this.redisClient.delete(id);
 
       //Redirect to the correct location
-      if (!req.session.existingmanager.data) {
+      if (req.session.existingmanager.data.length === 0) {
         //No Payload found redirect to new flags setup
         return res
           .status(301)
-          .redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: master[0].id }, UrlRoute.url(req)));
+          .redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: master?.id ?? '' }, UrlRoute.url(req)));
       } else {
         //Exisitng flags found redirect to exisiting flags
         return res.status(301).redirect(UrlRoute.make(Route.OVERVIEW, {}, UrlRoute.url(req)));

@@ -36,12 +36,18 @@ export class ReviewController {
         notRequiredFlags = CustomSort.alphabeticalAsc<PayloadCollectionItem>(notRequiredFlags, req);
       }
 
+      let masterId;
+      const ids = req.session.newmanager?.findIdsByFlagCodeDotNotation(req.session.masterflagcode) ?? [];
+      if (ids.length > 0) {
+        masterId = ids[0];
+      }
+
       res.render('review', {
-        welsh: false,
+        masterId: masterId ?? '',
+        welsh: req.session.welsh,
         requested: requestedFlags,
         new: newFlags,
         notRequired: notRequiredFlags,
-        route: Route,
       });
     } catch (e) {
       next(e);

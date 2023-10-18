@@ -269,4 +269,15 @@ describe('New Flags Manager', () => {
     expect(itemOne).toEqual(null);
     expect(itemTwo).toEqual(null);
   });
+
+  test('set master flag', async () => {
+    dataManager.set(dataJson);
+    //enable two children of RA
+    dataManager.setMaster('RA0001');
+
+    const item: DataManagerDataObject | null = dataManager.get('PF0001-RA0001');
+
+    expect(item?._isMaster).toEqual(true);
+    expect(item?._enabled).toEqual(true);
+  });
 });
