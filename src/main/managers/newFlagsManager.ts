@@ -86,7 +86,7 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
       return;
     }
     item._enabled = true;
-    if (item._parentId && enableParent) {
+    if (item._parentId && enableParent && !item._isMaster) {
       this.enable(item._parentId, enableParent);
     }
   }
@@ -96,6 +96,11 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
   public disable(id: string, disableDependants = true): void {
     const item: DataManagerDataObject | null = this.get(id);
     if (!item) {
+      return;
+    }
+
+    //prevent master from being disabled
+    if (item._isMaster) {
       return;
     }
 
@@ -132,6 +137,8 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
     data.forEach((load: Partial<DataManagerDataObject>) => {
       if (load._enabled !== true && load.id) {
         this.disable(load.id);
+      } else if (load._enabled === true && load.id) {
+        this.enable(load.id);
       }
     });
   }
@@ -200,7 +207,10 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
     }
   }
 
-  public findIdsByFlagCodeDotNotation(dotNotation: string): string[] {
+  public findIdsByFlagCodeDotNotation(dotNotation: string | undefined): string[] {
+    if (!dotNotation) {
+      return [];
+    }
     const matchingIds: string[] = [];
     for (const item of this.data) {
       this.searchItem(item, dotNotation, matchingIds, this.data);
@@ -217,5 +227,16 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
     flagCodes.forEach((code: string) => {
       this.deleteFlagCodeByDotKey(code);
     });
+  }
+
+  public setMaster(flagCode: string): DataManagerDataObject | null {
+    const items: DataManagerDataObject[] = this.find('value.flagCode', flagCode);
+    if (items) {
+      const currentIndex = this.data.findIndex(item => item.id === items[0].id);
+      this.data[currentIndex]._isMaster = true;
+      this.data[currentIndex]._enabled = true;
+      return this.data[currentIndex];
+    }
+    return null;
   }
 }

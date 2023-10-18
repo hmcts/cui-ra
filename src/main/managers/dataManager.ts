@@ -14,6 +14,7 @@ export class DataManagerDataType implements DataManagerDataObject {
   public _enabled = false;
   public _other = false;
   public _isParent = false;
+  public _isMaster = false;
 
   public _parentId: string | null;
   public _errors: string[] = [];

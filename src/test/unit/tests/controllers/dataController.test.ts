@@ -85,7 +85,6 @@ describe('DataController', () => {
         idamToken: 'mockIdamToken',
         payload: {
           existingFlags: { details: [] },
-          newmanager: {},
           hmctsServiceId: 'mockHmctsServiceId',
           masterFlagCode: 'RA0001',
           callbackUrl: 'mockCallbackUrl',
@@ -95,39 +94,70 @@ describe('DataController', () => {
     );
 
     // Mock the process method in flagProcessor to return some processed data
-    mockedFlagProcessor.process = jest.fn().mockReturnValue(dataProcessorResultJson);
+    mockedFlagProcessor.processAll = jest.fn().mockReturnValue(dataProcessorResultJson);
 
     await dataController.process(mockRequest as Request, mockResponse as Response, mockNext);
 
     expect(mockResponse.status).toHaveBeenCalledWith(301);
-    // expect(mockResponse.redirect).toHaveBeenCalledWith(
-    //   expect.stringContaining(
-    //     UrlRoute.make(
-    //       Route.JOURNEY_DISPLAY_FLAGS,
-    //       { id: 'PF0001-RA0001' },
-    //       UrlRoute.url({
-    //         protocol: protocol,
-    //         headers: {
-    //           host: host,
-    //         },
-    //       } as Request)
-    //     )
-    //   )
-    // );
+    expect(mockResponse.redirect).toHaveBeenCalledWith(
+      expect.stringContaining(
+        UrlRoute.make(
+          Route.JOURNEY_DISPLAY_FLAGS,
+          { id: 'PF0001-RA0001' },
+          UrlRoute.url({
+            protocol: protocol,
+            headers: {
+              host: host,
+            },
+          } as Request)
+        )
+      )
+    );
   });
 
   test('should process data and redirect to existing flags when existing flags are found', async () => {
     // Mock the exists method in the redisClient to return true
     // Mock the get method in the redisClient to return a valid payload with existing flags
     mockedRedis.exists = jest.fn().mockResolvedValue(true);
+    mockedRedis.delete = jest.fn().mockResolvedValue(true);
     mockedRedis.get = jest.fn().mockResolvedValue(
       JSON.stringify({
         idamToken: 'mockIdamToken',
         payload: {
           existingFlags: {
+            partyName: 'john doe',
+            roleOnCase: '',
             details: [
               {
                 /* mock existing flag data */
+                id: 'test01',
+                value: {
+                  name: 'Infrared receiver (hearing enhancement system)',
+                  name_cy: 'Derbynnydd isgoch (system gwella clyw)',
+                  dateTimeModified: '12-07-2023 13:28:21',
+                  dateTimeCreated: '12-07-2023 13:28:21',
+                  path: [
+                    {
+                      name: 'Party',
+                    },
+                    {
+                      name: 'Reasonable adjustment',
+                    },
+                    {
+                      name: 'I need help communicating and understanding',
+                    },
+                    {
+                      name: 'Hearing Enhancement System (Hearing',
+                    },
+                    {
+                      name: 'Induction Loop, Infrared Receiver)',
+                    },
+                  ],
+                  hearingRelevant: 'Yes',
+                  flagCode: 'RA0044',
+                  status: 'Active',
+                  availableExternally: 'Yes',
+                },
               },
             ],
           },
@@ -142,7 +172,7 @@ describe('DataController', () => {
     mockedRefData.getFlags = jest.fn().mockResolvedValue({});
 
     // Mock the process method in flagProcessor to return some processed data
-    mockedFlagProcessor.process = jest.fn().mockReturnValue([]);
+    mockedFlagProcessor.processAll = jest.fn().mockReturnValue(dataProcessorResultJson);
 
     await dataController.process(mockRequest as Request, mockResponse as Response, mockNext);
 
