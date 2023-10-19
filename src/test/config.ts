@@ -4,7 +4,6 @@ process.on('unhandledRejection', reason => {
 });
 
 const url = process.env.TEST_URL ? `${process.env.TEST_URL}/demo` : 'https://cui-ra.aat.platform.hmcts.net/demo';
-console.log(url);
 
 export const config = {
   TEST_URL: url,
