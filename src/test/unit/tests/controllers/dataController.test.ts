@@ -129,27 +129,29 @@ describe('DataController', () => {
             roleOnCase: '',
             details: [
               {
-                /* mock existing flag data */
                 id: 'test01',
                 value: {
                   name: 'Infrared receiver (hearing enhancement system)',
                   name_cy: 'Derbynnydd isgoch (system gwella clyw)',
-                  dateTimeModified: '12-07-2023 13:28:21',
-                  dateTimeCreated: '12-07-2023 13:28:21',
                   path: [
                     {
+                      id: 'party',
                       name: 'Party',
                     },
                     {
+                      id: 'Reasonable adjustment',
                       name: 'Reasonable adjustment',
                     },
                     {
+                      id: 'I need help communicating and understanding',
                       name: 'I need help communicating and understanding',
                     },
                     {
+                      id: 'Hearing Enhancement System (Hearing',
                       name: 'Hearing Enhancement System (Hearing',
                     },
                     {
+                      id: 'Induction Loop, Infrared Receiver)',
                       name: 'Induction Loop, Infrared Receiver)',
                     },
                   ],
@@ -162,6 +164,7 @@ describe('DataController', () => {
             ],
           },
           hmctsServiceId: 'mockHmctsServiceId',
+          masterFlagCode: 'RA0001',
           callbackUrl: 'mockCallbackUrl',
           logoutUrl: 'mockLogoutUrl',
         },
