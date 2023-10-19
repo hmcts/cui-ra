@@ -206,4 +206,29 @@ describe('DataController', () => {
     //expect(mockResponse.send).toHaveBeenCalledWith(ErrorMessages.UNEXPECTED_ERROR);
     expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 500));
   });
+
+  test('should throw error as the master code cannot be found', async () => {
+    // Mock the exists method in the redisClient to return true
+    // Mock the get method in the redisClient to return a valid payload
+    mockedRedis.exists = jest.fn().mockResolvedValue(true);
+    mockedRedis.get = jest.fn().mockResolvedValue(
+      JSON.stringify({
+        idamToken: 'mockIdamToken',
+        payload: {
+          existingFlags: { details: [] },
+          hmctsServiceId: 'mockHmctsServiceId',
+          masterFlagCode: 'RA9999',
+          callbackUrl: 'mockCallbackUrl',
+          logoutUrl: 'mockLogoutUrl',
+        },
+      })
+    );
+
+    // Mock the process method in flagProcessor to return some processed data
+    mockedFlagProcessor.processAll = jest.fn().mockReturnValue(dataProcessorResultJson);
+
+    await dataController.process(mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(mockNext).toHaveBeenCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR));
+  });
 });
