@@ -10,7 +10,8 @@
   "supportForName": "Cefnogaeth ar gyfer {name}",
   "header": {
     "menuText": "Dewislen",
-    "title": "Eich cymorth"
+    "title": "Eich cymorth",
+    "url": "https://www.gov.uk/cymraeg"
   },
   "footer": {
     "cookies": "Cwcis",
