@@ -54,7 +54,11 @@ export class DataController {
       req.session.roleoncase = payloadStore.payload.existingFlags.roleOnCase;
       req.session.callbackUrl = payloadStore.payload.callbackUrl;
       req.session.logoutUrl = payloadStore.payload.logoutUrl;
-      req.session.masterflagcode = payloadStore.payload.masterFlagCode.toUpperCase();
+      if(payloadStore.payload.masterFlagCode){
+        req.session.masterflagcode = payloadStore.payload.masterFlagCode.toUpperCase();
+      }else{
+        req.session.masterflagcode = 'RA0001';
+      }
       req.session.hmctsserviceid = payloadStore.payload.hmctsServiceId;
       req.session.welsh = payloadStore.payload.language === languages.Cy;
       req.session.correlationId = payloadStore.payload.correlationId;
@@ -95,7 +99,7 @@ export class DataController {
 
       const master: DataManagerDataObject | null = req.session.newmanager.setMaster(req.session.masterflagcode);
       if (!master) {
-        throw new Error(ErrorMessages.MASTER_NOT_FOUND);
+        throw new HTTPError(ErrorMessages.MASTER_NOT_FOUND, 500);
       }
       req.session.mastername = master.value.name;
       req.session.mastername_cy = master.value.name_cy;

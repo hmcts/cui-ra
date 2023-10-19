@@ -231,7 +231,7 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
 
   public setMaster(flagCode: string): DataManagerDataObject | null {
     const items: DataManagerDataObject[] = this.find('value.flagCode', flagCode);
-    if (items) {
+    if (items.length !== 0) {
       const currentIndex = this.data.findIndex(item => item.id === items[0].id);
       this.data[currentIndex]._isMaster = true;
       this.data[currentIndex]._enabled = true;

@@ -229,6 +229,6 @@ describe('DataController', () => {
 
     await dataController.process(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockNext).toHaveBeenCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR));
+    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.MASTER_NOT_FOUND, 500));
   });
 });
