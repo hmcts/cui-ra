@@ -7,4 +7,5 @@ export const ErrorMessages = {
   IDAM_TOKEN_MISSING: 'idam token is missing',
   UNEXPECTED_ERROR: 'the server encountered an unexpected condition that prevented it from fulfilling the request',
   UNAUTHORISED: 'Unauthorised',
+  MASTER_NOT_FOUND: 'Master flag cannot be found',
 } as const;

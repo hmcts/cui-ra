@@ -129,27 +129,29 @@ describe('DataController', () => {
             roleOnCase: '',
             details: [
               {
-                /* mock existing flag data */
                 id: 'test01',
                 value: {
                   name: 'Infrared receiver (hearing enhancement system)',
                   name_cy: 'Derbynnydd isgoch (system gwella clyw)',
-                  dateTimeModified: '12-07-2023 13:28:21',
-                  dateTimeCreated: '12-07-2023 13:28:21',
                   path: [
                     {
+                      id: 'party',
                       name: 'Party',
                     },
                     {
+                      id: 'Reasonable adjustment',
                       name: 'Reasonable adjustment',
                     },
                     {
+                      id: 'I need help communicating and understanding',
                       name: 'I need help communicating and understanding',
                     },
                     {
+                      id: 'Hearing Enhancement System (Hearing',
                       name: 'Hearing Enhancement System (Hearing',
                     },
                     {
+                      id: 'Induction Loop, Infrared Receiver)',
                       name: 'Induction Loop, Infrared Receiver)',
                     },
                   ],
@@ -162,6 +164,7 @@ describe('DataController', () => {
             ],
           },
           hmctsServiceId: 'mockHmctsServiceId',
+          masterFlagCode: 'RA0001',
           callbackUrl: 'mockCallbackUrl',
           logoutUrl: 'mockLogoutUrl',
         },
@@ -202,5 +205,30 @@ describe('DataController', () => {
     //expect(mockResponse.status).toHaveBeenCalledWith(500);
     //expect(mockResponse.send).toHaveBeenCalledWith(ErrorMessages.UNEXPECTED_ERROR);
     expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 500));
+  });
+
+  test('should throw error as the master code cannot be found', async () => {
+    // Mock the exists method in the redisClient to return true
+    // Mock the get method in the redisClient to return a valid payload
+    mockedRedis.exists = jest.fn().mockResolvedValue(true);
+    mockedRedis.get = jest.fn().mockResolvedValue(
+      JSON.stringify({
+        idamToken: 'mockIdamToken',
+        payload: {
+          existingFlags: { details: [] },
+          hmctsServiceId: 'mockHmctsServiceId',
+          masterFlagCode: 'RA9999',
+          callbackUrl: 'mockCallbackUrl',
+          logoutUrl: 'mockLogoutUrl',
+        },
+      })
+    );
+
+    // Mock the process method in flagProcessor to return some processed data
+    mockedFlagProcessor.processAll = jest.fn().mockReturnValue(dataProcessorResultJson);
+
+    await dataController.process(mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.MASTER_NOT_FOUND, 500));
   });
 });

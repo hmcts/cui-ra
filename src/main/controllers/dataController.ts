@@ -54,7 +54,11 @@ export class DataController {
       req.session.roleoncase = payloadStore.payload.existingFlags.roleOnCase;
       req.session.callbackUrl = payloadStore.payload.callbackUrl;
       req.session.logoutUrl = payloadStore.payload.logoutUrl;
-      req.session.masterflagcode = payloadStore.payload.masterFlagCode || 'RA0001';
+      if (payloadStore.payload.masterFlagCode) {
+        req.session.masterflagcode = payloadStore.payload.masterFlagCode.toUpperCase();
+      } else {
+        req.session.masterflagcode = 'RA0001';
+      }
       req.session.hmctsserviceid = payloadStore.payload.hmctsServiceId;
       req.session.welsh = payloadStore.payload.language === languages.Cy;
       req.session.correlationId = payloadStore.payload.correlationId;
@@ -94,11 +98,11 @@ export class DataController {
       req.session.newmanager.deleteFlagCodeByDotKeyList(flagsToRemove);
 
       const master: DataManagerDataObject | null = req.session.newmanager.setMaster(req.session.masterflagcode);
-
-      if (master) {
-        req.session.mastername = master.value.name;
-        req.session.mastername_cy = master.value.name_cy;
+      if (!master) {
+        throw new HTTPError(ErrorMessages.MASTER_NOT_FOUND, 500);
       }
+      req.session.mastername = master.value.name;
+      req.session.mastername_cy = master.value.name_cy;
 
       req.session.sessioninit = true;
 
@@ -110,7 +114,7 @@ export class DataController {
         //No Payload found redirect to new flags setup
         return res
           .status(301)
-          .redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: master?.id ?? '' }, UrlRoute.url(req)));
+          .redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: master.id }, UrlRoute.url(req)));
       } else {
         //Exisitng flags found redirect to exisiting flags
         return res.status(301).redirect(UrlRoute.make(Route.OVERVIEW, {}, UrlRoute.url(req)));

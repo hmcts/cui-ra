@@ -122,7 +122,7 @@
         <form method="POST">
             {{ csrfProtection(csrfToken) }}
             <div class="govuk-button-group">       
-                <button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+                <button id="submit-review" type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
                     {{ _t('review.actions.submit') }}
                 </button>
         

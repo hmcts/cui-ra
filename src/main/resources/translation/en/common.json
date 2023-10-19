@@ -10,7 +10,8 @@
   "supportForName": "Support for {name}",
   "header": {
     "menuText": "Menu",
-    "title": "Your support"
+    "title": "Your support",
+    "url": "https://www.gov.uk"
   },
   "footer": {
     "cookies": "Cookies",

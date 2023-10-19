@@ -3,14 +3,17 @@ process.on('unhandledRejection', reason => {
   throw reason;
 });
 
+const url = process.env.TEST_URL ? `${process.env.TEST_URL}/demo` : 'https://cui-ra.aat.platform.hmcts.net/demo';
+
 export const config = {
-  TEST_URL: process.env.TEST_URL || 'https://cui-ra.aat.platform.hmcts.net/demo',
+  TEST_URL: url,
   TestHeadlessBrowser: true,
   TestSlowMo: 250,
   WaitForTimeout: 10000,
 
   Gherkin: {
-    features: './features/**/*.feature',
+    features: './features/hello-world.feature',
+    //features: './features/**/*.feature',
     steps: ['../steps/common.ts', '../steps/commonsteps.ts'],
   },
   helpers: {},
