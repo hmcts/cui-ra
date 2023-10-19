@@ -3,8 +3,11 @@ process.on('unhandledRejection', reason => {
   throw reason;
 });
 
+const url = process.env.TEST_URL ? `${process.env.TEST_URL}/demo` : 'https://cui-ra.aat.platform.hmcts.net/demo';
+console.log(url);
+
 export const config = {
-  TEST_URL: process.env.TEST_URL || 'https://cui-ra.aat.platform.hmcts.net/demo',
+  TEST_URL: url,
   TestHeadlessBrowser: true,
   TestSlowMo: 250,
   WaitForTimeout: 10000,

@@ -56,7 +56,7 @@ export class ServiceConfig {
       return defaultConfig;
     }
     //load and merge
-    const serviceConfig = this.load(this.getServiceDir(id));
+    const serviceConfig = this.load(this.getServiceDir(id.toLowerCase()));
 
     return this.mergeObjects(defaultConfig, serviceConfig);
   }

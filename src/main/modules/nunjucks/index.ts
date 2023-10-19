@@ -31,7 +31,7 @@ export class Nunjucks {
         res.locals.setLocale(res, 'cy');
       }
       res.locals._t = (key: string) => {
-        const serviceId = req.session && req.session.hmctsserviceid ? req.session.hmctsserviceid : null;
+        const serviceId = req.session && req.session.hmctsserviceid ? req.session.hmctsserviceid.toUpperCase() : null;
         let result;
         if (serviceId) {
           const serviceKey = `${serviceId}.${key}`;

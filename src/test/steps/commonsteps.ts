@@ -1,9 +1,9 @@
+import { config as testConfig } from '../config';
+
 const { I } = inject();
 
-const cuiraUrl = 'https://cui-ra.aat.platform.hmcts.net/demo';
-
 Given('I am on the Home page', () => {
-  I.amOnPage(cuiraUrl);
+  I.amOnPage(testConfig.TEST_URL);
 });
 
 When(/^I click on the button 'Enter New Journey'$/, async function () {
@@ -172,7 +172,7 @@ Then(/^I am navigated to 'Review the support you've requested' page$/, async fun
 });
 
 When(/^I review and click Submit$/, async function () {
-  await I.click('#main-content > div > div > form > div > button');
+  await I.click('#submit-review');
 });
 
 Then(/^I must see a successful message$/, async function () {
