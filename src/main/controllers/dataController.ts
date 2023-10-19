@@ -54,9 +54,9 @@ export class DataController {
       req.session.roleoncase = payloadStore.payload.existingFlags.roleOnCase;
       req.session.callbackUrl = payloadStore.payload.callbackUrl;
       req.session.logoutUrl = payloadStore.payload.logoutUrl;
-      if(payloadStore.payload.masterFlagCode){
+      if (payloadStore.payload.masterFlagCode) {
         req.session.masterflagcode = payloadStore.payload.masterFlagCode.toUpperCase();
-      }else{
+      } else {
         req.session.masterflagcode = 'RA0001';
       }
       req.session.hmctsserviceid = payloadStore.payload.hmctsServiceId;
