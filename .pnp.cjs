@@ -28,7 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@azure/identity", "npm:3.3.1"],\
+            ["@azure/identity", "npm:3.3.2"],\
             ["@azure/keyvault-secrets", "npm:4.7.0"],\
             ["@babel/core", "npm:7.22.20"],\
             ["@babel/eslint-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.22.15"],\
@@ -318,10 +318,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@azure/identity", [\
-        ["npm:3.3.1", {\
-          "packageLocation": "./.yarn/cache/@azure-identity-npm-3.3.1-32eb32ef73-ba58ce8d61.zip/node_modules/@azure/identity/",\
+        ["npm:3.3.2", {\
+          "packageLocation": "./.yarn/cache/@azure-identity-npm-3.3.2-7460891143-53a650dc6f.zip/node_modules/@azure/identity/",\
           "packageDependencies": [\
-            ["@azure/identity", "npm:3.3.1"],\
+            ["@azure/identity", "npm:3.3.2"],\
             ["@azure/abort-controller", "npm:1.1.0"],\
             ["@azure/core-auth", "npm:1.5.0"],\
             ["@azure/core-client", "npm:1.7.3"],\
@@ -3790,7 +3790,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@hmcts-properties-volume-npm-1.0.0-3e35ec67de-e1d9f9c9d3.zip/node_modules/@hmcts/properties-volume/",\
           "packageDependencies": [\
             ["@hmcts/properties-volume", "npm:1.0.0"],\
-            ["@azure/identity", "npm:3.3.1"],\
+            ["@azure/identity", "npm:3.3.2"],\
             ["@azure/keyvault-secrets", "npm:4.7.0"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
             ["js-yaml", "npm:4.1.0"],\
@@ -8560,7 +8560,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["cui-ra", "workspace:."],\
-            ["@azure/identity", "npm:3.3.1"],\
+            ["@azure/identity", "npm:3.3.2"],\
             ["@azure/keyvault-secrets", "npm:4.7.0"],\
             ["@babel/core", "npm:7.22.20"],\
             ["@babel/eslint-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.22.15"],\
