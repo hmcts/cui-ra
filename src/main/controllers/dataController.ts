@@ -65,7 +65,9 @@ export class DataController {
 
       //Populate the existing manager
       req.session.existingmanager = new ExistingFlagsManager();
-      req.session.existingmanager.set(payloadStore.payload.existingFlags.details);
+      if (payloadStore.payload.existingFlags.details) {
+        req.session.existingmanager.set(payloadStore.payload.existingFlags.details);
+      }
 
       const serviceToken = await this.serviceAuth.getToken();
 
