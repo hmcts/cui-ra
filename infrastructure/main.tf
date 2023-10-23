@@ -14,11 +14,6 @@ resource "azurerm_resource_group" "rg" {
   tags     = var.common_tags
 }
 
-data "azurerm_user_assigned_identity" "cmc-identity" {
- name                = "${var.product}-${var.env}-mi"
- resource_group_name = "managed-identities-${var.env}-rg"
-}
-
 module "key-vault" {
   source                  = "git@github.com:hmcts/cnp-module-key-vault?ref=master"
   product                 = var.product
@@ -29,7 +24,6 @@ module "key-vault" {
   product_group_name      = "dcd_ccd"
   common_tags             = var.common_tags
   create_managed_identity = true
-  managed_identity_object_ids = [data.azurerm_user_assigned_identity.cmc-identity.principal_id]
 }
 
 resource "azurerm_key_vault_secret" "AZURE_APPINSGHTS_KEY" {
