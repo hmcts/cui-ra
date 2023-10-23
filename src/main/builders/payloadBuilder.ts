@@ -1,5 +1,5 @@
 import { Actions } from './../constants';
-import { DataManagerDataObject, PayloadCollectionItem } from './../interfaces';
+import { DataManagerDataObject, PayloadDataObject } from './../interfaces';
 import { MainPayloadDetail, MainPayloadDetailCollection, OutboundPayload } from './../models';
 
 import { Request } from 'express';
@@ -29,7 +29,7 @@ export class PayloadBuilder {
       if (req.session.existingmanager?.modified === true) {
         const exisitingData = req.session.existingmanager?.data;
         if (exisitingData) {
-          edata = exisitingData.map((item: PayloadCollectionItem) => {
+          edata = exisitingData.map((item: PayloadDataObject) => {
             return {
               id: item.id,
               value: item.value,

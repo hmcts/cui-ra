@@ -1,4 +1,4 @@
-import { DataManagerDataObject, PayloadCollectionItem, RedisClientInterface } from '../interfaces';
+import { DataManagerDataObject, PayloadDataObject, RedisClientInterface } from '../interfaces';
 
 import { PayloadBuilder } from './../builders';
 import { Actions, ErrorMessages, Route, Status } from './../constants';
@@ -21,7 +21,7 @@ export class ReviewController {
 
       let requestedFlags = req.session.existingmanager?.find('value.status', 'Requested');
       if (requestedFlags) {
-        requestedFlags = CustomSort.alphabeticalAsc<PayloadCollectionItem>(requestedFlags, req);
+        requestedFlags = CustomSort.alphabeticalAsc<PayloadDataObject>(requestedFlags, req);
       }
 
       let newFlags = req.session.newmanager
@@ -33,7 +33,7 @@ export class ReviewController {
 
       let notRequiredFlags = req.session.existingmanager?.find('value.status', 'Inactive');
       if (notRequiredFlags) {
-        notRequiredFlags = CustomSort.alphabeticalAsc<PayloadCollectionItem>(notRequiredFlags, req);
+        notRequiredFlags = CustomSort.alphabeticalAsc<PayloadDataObject>(notRequiredFlags, req);
       }
 
       let masterId;

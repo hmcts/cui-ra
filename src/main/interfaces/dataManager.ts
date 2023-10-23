@@ -14,6 +14,10 @@ export interface DataManagerDataObject extends PayloadCollectionItem {
   _childIds: string[];
 }
 
+export interface PayloadDataObject extends PayloadCollectionItem {
+  _editable: boolean;
+}
+
 export interface DataManager<T> {
   data: T[];
   modified: boolean;
