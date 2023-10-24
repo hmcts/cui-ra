@@ -5,6 +5,7 @@
 def type = "nodejs"
 def product = "cui"
 def component = "ra"
+def branchesToSync = ['demo', 'ithc', 'perftest']
 
 def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
@@ -13,5 +14,5 @@ withPipeline(type, product, component) {
     yarnBuilder.yarn('rebuild puppeteer')
     yarnBuilder.yarn('build')
   }
-
+  syncBranchesWithMaster(branchesToSync)
 }
