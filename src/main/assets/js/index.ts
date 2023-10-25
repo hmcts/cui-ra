@@ -33,3 +33,30 @@ if (elementExists) {
     });
   });
 }
+
+const textareas = document.getElementsByTagName('textarea');
+
+function adjustTextarea(textarea) {
+  const textHeight =
+    parseFloat(getComputedStyle(textarea).lineHeight) || parseFloat(getComputedStyle(textarea).fontSize);
+  const minRows = parseInt(textarea.getAttribute('rows')) || 1;
+  const minHeight = minRows * textHeight;
+
+  if (textarea.value === '' || textarea.scrollHeight <= minHeight) {
+    textarea.style.height = minHeight + 'px';
+  } else {
+    textarea.style.height = Math.max(textarea.scrollHeight, minRows * textHeight) + 'px';
+  }
+}
+
+if (textareas) {
+  for (let i = 0; i < textareas.length; i++) {
+    const textarea = textareas[i];
+    // Adjust the textarea on initialization
+    adjustTextarea(textarea);
+    textarea.addEventListener('input', function () {
+      // Adjust the textarea whenever the input event occurs
+      adjustTextarea(this);
+    });
+  }
+}
