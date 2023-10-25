@@ -5,6 +5,7 @@ import { DataManagerDataObject, PayloadCollectionItem } from './../../../../main
 import { PayloadBuilder } from './../../../../main/builders';
 import { OutboundPayload } from './../../../../main/models';
 import { Actions, Status } from './../../../../main/constants';
+import { ExistingFlagProcessor } from './../../../../main/processors';
 
 const dataProcessorResultJson: DataManagerDataObject[] = JSON.parse(
   fs.readFileSync(__dirname + '/../../data/data-processor-results.json', 'utf-8')
@@ -23,13 +24,15 @@ describe('PayloadBuilder', () => {
   let existingManager: ExistingFlagsManager;
   let newManager: NewFlagsManager;
   let mockedRequest = mockRequest(null);
+  const eprocessor = new ExistingFlagProcessor();
+  const processed = eprocessor.process(payloadJson);
 
   beforeEach(() => {
     newManager = new NewFlagsManager();
     newManager.set(dataProcessorResultJson);
 
     existingManager = new ExistingFlagsManager();
-    existingManager.set(payloadJson);
+    existingManager.set(processed);
 
     const mockSession = {
       partyname: 'john doe',
@@ -76,7 +79,9 @@ describe('PayloadBuilder', () => {
   });
 
   test('should generate payload and check', async () => {
+    //console.log('pre',mockedRequest.session.existingmanager?.get('RA0001-RA0004-RA0009-OT0001'));
     mockedRequest.session.existingmanager?.setStatus('RA0001-RA0004-RA0009-OT0001', Status.INACTIVE);
+    //console.log('aft',mockedRequest.session.existingmanager?.get('RA0001-RA0004-RA0009-OT0001'));
 
     const item: DataManagerDataObject | null = mockedRequest.session.newmanager.get('PF0001-RA0001-RA0002-RA0014');
     if (item) {

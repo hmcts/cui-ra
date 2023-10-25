@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { ExistingFlagsManager } from '../../../../main/managers';
 import { PayloadCollectionItem } from '../../../../main/interfaces';
+import { ExistingFlagProcessor } from './../../../../main/processors';
 
 const dataJson: PayloadCollectionItem[] = JSON.parse(
   fs.readFileSync(__dirname + '/../../data/flags-payload.json', 'utf-8')
@@ -16,7 +17,8 @@ const status = 'inactive';
 /* eslint-disable jest/expect-expect */
 describe('Exisiting Flags Manager', () => {
   test('Set Data', async () => {
-    dataManager.set(dataJson);
+    const eprocessor = new ExistingFlagProcessor();
+    dataManager.set(eprocessor.process(dataJson));
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(dataManager.data.length).toEqual(dataJson.length);
   });

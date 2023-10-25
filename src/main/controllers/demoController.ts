@@ -4,6 +4,7 @@ import path from 'path';
 import { Route } from './../constants';
 import { DataManagerDataObject, PayloadCollectionItem } from './../interfaces';
 import { ExistingFlagsManager, NewFlagsManager } from './../managers';
+import { ExistingFlagProcessor } from './../processors';
 import { UrlRoute } from './../utilities';
 
 import autobind from 'autobind-decorator';
@@ -78,7 +79,8 @@ export class DemoController {
         }
         case 'existing': {
           const dataManagerExisting: ExistingFlagsManager = new ExistingFlagsManager();
-          dataManagerExisting.set(this.existing);
+          const eprocessor = new ExistingFlagProcessor();
+          dataManagerExisting.set(eprocessor.process(this.existing));
 
           const NewFlag = new NewFlagsManager();
           NewFlag.set(this.new);

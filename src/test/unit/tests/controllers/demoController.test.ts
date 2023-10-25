@@ -6,6 +6,7 @@ import { PayloadCollectionItem } from '../../../../main/interfaces';
 import { ExistingFlagsManager } from '../../../../main/managers';
 import { UrlRoute } from './../../../../main/utilities';
 import { Route } from './../../../../main/constants';
+import { ExistingFlagProcessor } from './../../../../main/processors';
 
 const host = 'www.test.com';
 const protocol = 'https';
@@ -77,7 +78,9 @@ describe('Demo Controller', () => {
       fs.readFileSync(__dirname + '/../../../../main/demo/data/demo-payload.json', 'utf-8')
     );
     const dataManagerExisting: ExistingFlagsManager = new ExistingFlagsManager();
-    dataManagerExisting.set(existingJson);
+
+    const eprocessor = new ExistingFlagProcessor();
+    dataManagerExisting.set(eprocessor.process(existingJson));
 
     mockRequest.query = { action: 'existing' };
 

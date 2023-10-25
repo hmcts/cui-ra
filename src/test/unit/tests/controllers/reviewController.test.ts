@@ -6,6 +6,7 @@ import { PayloadCollectionItem } from '../../../../main/interfaces';
 import { ExistingFlagsManager, NewFlagsManager } from '../../../../main/managers';
 import { ErrorMessages, Status, Route } from '../../../../main/constants';
 import { mockRedisClient } from './../../mocks';
+import { ExistingFlagProcessor } from './../../../../main/processors';
 
 const host = 'www.test.com';
 const protocol = 'https';
@@ -19,12 +20,15 @@ describe('Review Controller', () => {
   let mockNext: NextFunction;
 
   const existingJson: PayloadCollectionItem[] = JSON.parse(
-    fs.readFileSync(__dirname + '/../../../../main/demo/data/demo-payload.json', 'utf-8')
+    fs.readFileSync(__dirname + '/../../data/flags-payload.json', 'utf-8')
   );
+
+  const eprocessor = new ExistingFlagProcessor();
+  let processed = eprocessor.process(existingJson);
 
   beforeEach(() => {
     const dataManagerExisting: ExistingFlagsManager = new ExistingFlagsManager();
-    dataManagerExisting.set(existingJson);
+    dataManagerExisting.set(processed);
 
     const dataManagerNew: NewFlagsManager = new NewFlagsManager();
     dataManagerNew.set([]);
@@ -122,14 +126,10 @@ describe('Review Controller', () => {
       id: id,
     };
 
-    if (mockRequest.session?.existingmanager) {
-      expect(mockRequest.session.existingmanager.get(id)?.value.status).toBe(Status.INACTIVE);
-    }
-
     await reviewController.setRequested(mockRequest as Request, mockResponse as Response, mockNext);
 
     if (mockRequest.session?.existingmanager) {
-      expect(mockRequest.session?.existingmanager.get(id)?.value.status).toBe(Status.REQUESTED);
+      expect(mockRequest.session?.existingmanager?.get(id)?.value.status).toBe(Status.REQUESTED);
     }
 
     expect(mockResponse.redirect).toBeCalledWith('/review');

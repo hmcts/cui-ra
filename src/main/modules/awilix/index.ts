@@ -7,7 +7,7 @@ import {
   ReviewController,
 } from './../../controllers';
 import { Logger } from './../../interfaces';
-import { FlagProcessor } from './../../processors';
+import { ExistingFlagProcessor, FlagProcessor } from './../../processors';
 import { FileStorageClient, RedisClient, RefData, S2S } from './../../services';
 
 import { InjectionMode, asClass, asValue, createContainer } from 'awilix';
@@ -52,6 +52,7 @@ export class Container {
                 urlStart: config.get('session.redis.urlStart'),
               })),
       flagProcessor: asClass(FlagProcessor),
+      existingFlagProcessor: asClass(ExistingFlagProcessor),
       homeController: asClass(HomeController),
       apiController: asClass(ApiController),
       formController: asClass(FormController),
