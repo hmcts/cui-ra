@@ -148,15 +148,15 @@
   },
   "RA0025": {},
   "RA0026": {
-    "control": "Dywedwch wrthym pwy fyddwch yn dod efo chi",
+    "control": "Dywedwch wrthym pwy yw’r gweithiwr cymorth neu’r gofalwr fyddwch yn dod efo chi",
     "error": {
-      "empty": "Dywedwch wrthym pwy fyddwch yn dod efo chi"
+      "empty": "Dywedwch wrthym pwy yw’r gweithiwr cymorth neu’r gofalwr fyddwch yn dod efo chi"
     }
   },
   "RA0027": {
-    "control": "Dywedwch wrthym pwy fyddwch yn dod efo chi",
+    "control": "Dywedwch wrthym pwy yw’r ffrind neu aelod o'r teulu fyddwch yn dod efo chi",
     "error": {
-      "empty": "Dywedwch wrthym pwy fyddwch yn dod efo chi"
+      "empty": "Dywedwch wrthym pwy yw’r ffrind neu aelod o'r teulu fyddwch yn dod efo chi "
     }
   },
   "RA0028": {},

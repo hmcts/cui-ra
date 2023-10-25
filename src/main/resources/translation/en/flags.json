@@ -148,15 +148,15 @@
   },
   "RA0025": {},
   "RA0026": {
-    "control": "Tell us who you will bring",
+    "control": "Tell us which support worker or carer you will bring",
     "error": {
-      "empty": "Tell us who you will bring"
+      "empty": "Tell us which support worker or carer you will bring"
     }
   },
   "RA0027": {
-    "control": "Tell us who you will bring",
+    "control": "Tell us which friend or family member you will bring",
     "error": {
-      "empty": "Tell us who you will bring"
+      "empty": "Tell us which friend or family member you will bring"
     }
   },
   "RA0028": {},
