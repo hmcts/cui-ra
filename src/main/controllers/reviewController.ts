@@ -1,5 +1,6 @@
-import { DataManagerDataObject, PayloadCollectionItem, RedisClientInterface } from '../interfaces';
+import { DataManagerDataObject, PayloadDataObject, RedisClientInterface } from '../interfaces';
 
+import { HTTPError } from './../HttpError';
 import { PayloadBuilder } from './../builders';
 import { Actions, ErrorMessages, Route, Status } from './../constants';
 import { OutboundPayload } from './../models';
@@ -21,7 +22,8 @@ export class ReviewController {
 
       let requestedFlags = req.session.existingmanager?.find('value.status', 'Requested');
       if (requestedFlags) {
-        requestedFlags = CustomSort.alphabeticalAsc<PayloadCollectionItem>(requestedFlags, req);
+        requestedFlags = requestedFlags.filter(item => item._editable === true);
+        requestedFlags = CustomSort.alphabeticalAsc<PayloadDataObject>(requestedFlags, req);
       }
 
       let newFlags = req.session.newmanager
@@ -33,7 +35,8 @@ export class ReviewController {
 
       let notRequiredFlags = req.session.existingmanager?.find('value.status', 'Inactive');
       if (notRequiredFlags) {
-        notRequiredFlags = CustomSort.alphabeticalAsc<PayloadCollectionItem>(notRequiredFlags, req);
+        notRequiredFlags = notRequiredFlags.filter(item => item._editable === true);
+        notRequiredFlags = CustomSort.alphabeticalAsc<PayloadDataObject>(notRequiredFlags, req);
       }
 
       let masterId;
@@ -58,7 +61,13 @@ export class ReviewController {
     try {
       const id: string = req.query.id as string;
 
-      if (req.session.existingmanager?.get(id)?.value.status === Status.INACTIVE) {
+      const item = req.session.existingmanager?.get(id);
+
+      if (!item?._editable) {
+        throw new HTTPError(ErrorMessages.FLAG_CANNOT_BE_EDITED, 403);
+      }
+
+      if (item?.value.status === Status.INACTIVE) {
         req.session.existingmanager?.setStatus(id, Status.REQUESTED);
       }
 
@@ -72,7 +81,17 @@ export class ReviewController {
     try {
       const id: string = req.query.id as string;
 
-      if (req.session.existingmanager?.get(id)?.value.status === Status.REQUESTED) {
+      const item = req.session.existingmanager?.get(id);
+
+      if (!item) {
+        throw new HTTPError(ErrorMessages.DATA_NOT_FOUND, 404);
+      }
+
+      if (!item._editable) {
+        throw new HTTPError(ErrorMessages.FLAG_CANNOT_BE_EDITED, 403);
+      }
+
+      if (item.value.status === Status.REQUESTED) {
         req.session.existingmanager?.setStatus(id, Status.INACTIVE);
       }
 

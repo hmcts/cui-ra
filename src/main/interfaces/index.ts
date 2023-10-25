@@ -6,3 +6,4 @@ export * from './dataManager';
 export * from './redisClient';
 export * from './flagProcessor';
 export * from './serviceConfig';
+export * from './existingFlagProcessor';

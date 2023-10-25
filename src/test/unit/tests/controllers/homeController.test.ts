@@ -5,6 +5,7 @@ import { Session, SessionData } from 'express-session';
 import { PayloadCollectionItem } from '../../../../main/interfaces';
 import { ExistingFlagsManager } from '../../../../main/managers';
 import { Route } from '../../../../main/constants';
+import { ExistingFlagProcessor } from './../../../../main/processors';
 
 const host = 'www.test.com';
 const protocol = 'https';
@@ -15,6 +16,7 @@ describe('Home Controller', () => {
   let mockRequest: Partial<Request>;
   let mockResponse: Partial<Response>;
   let mockNext: NextFunction;
+  const eprocessor = new ExistingFlagProcessor();
 
   beforeEach(() => {
     // Initialize the mock objects and dependencies
@@ -68,7 +70,7 @@ describe('Home Controller', () => {
       fs.readFileSync(__dirname + '/../../../../main/demo/data/demo-payload.json', 'utf-8')
     );
     const dataManagerExisting: ExistingFlagsManager = new ExistingFlagsManager();
-    dataManagerExisting.set(existingJson);
+    dataManagerExisting.set(eprocessor.process(existingJson));
 
     // Need to set stuff on an actual session here and not the request??
     mockRequest.session = {
@@ -86,7 +88,7 @@ describe('Home Controller', () => {
       fs.readFileSync(__dirname + '/../../../../main/demo/data/demo-payload.json', 'utf-8')
     );
     const dataManagerExisting: ExistingFlagsManager = new ExistingFlagsManager();
-    dataManagerExisting.set(existingJson);
+    dataManagerExisting.set(eprocessor.process(existingJson));
 
     // Need to set stuff on an actual session here and not the request??
     mockRequest.session = {

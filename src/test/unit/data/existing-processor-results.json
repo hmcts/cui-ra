@@ -1,0 +1,519 @@
+[
+  {
+    "id": "RA0001",
+    "value": {
+      "name": "Reasonable adjustment",
+      "name_cy": "Addasiad Rhesymol",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0002",
+    "value": {
+      "name": "Alternative formats",
+      "name_cy": "Translated welsh value CY",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0002",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0003",
+    "value": {
+      "name": "Form support",
+      "name_cy": "Translated welsh value CY",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0003",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0004",
+    "value": {
+      "name": "Hearing provision",
+      "name_cy": "Translated welsh value CY",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0004",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0004-RA0009",
+    "value": {
+      "name": "Hearing enhancement",
+      "name_cy": "Translated welsh value CY",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        },
+        {
+          "id": "RA0001-RA0004",
+          "name": "Hearing provision"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0009",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0004-RA0009-RA0013",
+    "value": {
+      "name": "Hearing loop",
+      "name_cy": "Translated welsh value CY",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        },
+        {
+          "id": "RA0001-RA0004",
+          "name": "Hearing provision"
+        },
+        {
+          "id": "RA0001-RA0004-RA0009",
+          "name": "Hearing enhancement"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0013",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0004-RA0009-RA0014",
+    "value": {
+      "name": "Induction loop",
+      "name_cy": "Translated welsh value CY",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        },
+        {
+          "id": "RA0001-RA0004",
+          "name": "Hearing provision"
+        },
+        {
+          "id": "RA0001-RA0004-RA0009",
+          "name": "Hearing enhancement"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0014",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0004-RA0009-RA0015",
+    "value": {
+      "name": "Infrared system",
+      "name_cy": "Translated welsh value CY",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        },
+        {
+          "id": "RA0001-RA0004",
+          "name": "Hearing provision"
+        },
+        {
+          "id": "RA0001-RA0004-RA0009",
+          "name": "Hearing enhancement"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0015",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0004-RA0009-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        },
+        {
+          "id": "RA0001-RA0004",
+          "name": "Hearing provision"
+        },
+        {
+          "id": "RA0001-RA0004-RA0009",
+          "name": "Hearing enhancement"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0004-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        },
+        {
+          "id": "RA0001-RA0004",
+          "name": "Hearing provision"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Inactive",
+      "availableExternally": "Yes"
+    },
+    "_editable": false
+  },
+  {
+    "id": "RA0001-RA0005",
+    "value": {
+      "name": "Language support",
+      "name_cy": "Translated welsh value CY",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0005",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0005-RA0010",
+    "value": {
+      "name": "Sign language interpreter",
+      "name_cy": "Translated welsh value CY",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        },
+        {
+          "id": "RA0001-RA0005",
+          "name": "Language support"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0010",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0005-RA0011",
+    "value": {
+      "name": "Other",
+      "name_cy": "Translated welsh value CY",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        },
+        {
+          "id": "RA0001-RA0005",
+          "name": "Language support"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0011",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0005-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        },
+        {
+          "id": "RA0001-RA0005",
+          "name": "Language support"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0006",
+    "value": {
+      "name": "Additional support",
+      "name_cy": "Translated welsh value CY",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0006",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0007",
+    "value": {
+      "name": "Third party support",
+      "name_cy": "Translated welsh value CY",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0007",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0008",
+    "value": {
+      "name": "Mobility support",
+      "name_cy": "Translated welsh value CY",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0008",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0008-RA0012",
+    "value": {
+      "name": "Wheelchair access",
+      "name_cy": "Translated welsh value CY",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        },
+        {
+          "id": "RA0001-RA0008",
+          "name": "Mobility support"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0012",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-RA0008-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        },
+        {
+          "id": "RA0001-RA0008",
+          "name": "Mobility support"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_editable": true
+  },
+  {
+    "id": "RA0001-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "id": "RA0001",
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes",
+      "otherDescription": "Default input for 'Other' flag"
+    },
+    "_editable": true
+  }
+]

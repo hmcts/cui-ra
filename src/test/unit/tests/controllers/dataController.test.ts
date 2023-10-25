@@ -5,6 +5,7 @@ import { UrlRoute } from './../../../../main/utilities';
 import { mockLogger, mockRedisClient, mockServiceAuth, mockRefData, mockFlagProcessor } from '../../mocks';
 import { Session, SessionData } from 'express-session';
 import { HTTPError } from './../../../../main/HttpError';
+import { ExistingFlagProcessor } from './../../../../main/processors';
 import fs from 'fs';
 
 const dataProcessorResultJson = JSON.parse(
@@ -16,6 +17,7 @@ let mockedRedis = mockRedisClient();
 let mockedServiceAuth = mockServiceAuth();
 let mockedRefData = mockRefData();
 let mockedFlagProcessor = mockFlagProcessor();
+let existingFlagProcessor = new ExistingFlagProcessor();
 const host = 'www.test.com';
 const protocol = 'https';
 
@@ -45,6 +47,7 @@ describe('DataController', () => {
       mockedRedis,
       mockedRefData,
       mockedFlagProcessor,
+      existingFlagProcessor,
       mockedServiceAuth
     );
     mockNext = jest.fn();

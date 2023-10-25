@@ -6,3 +6,4 @@ export * from './serviceAuth';
 export * from './redis';
 export * from './refData';
 export * from './flagProcessor';
+export * from './existingFlagProcessor';
