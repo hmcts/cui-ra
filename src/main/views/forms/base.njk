@@ -38,7 +38,7 @@
               <ul class="govuk-list govuk-error-summary__list">
                 {% for key, error in validationErrors %}
                 <li>
-                  <a id="error-id-{{key}}" href="#flagComment-{{key}}" aria-labelledby="checkbox-label-{{key}} error-id-{{key}}">{% if _t(error) %}{{ _t(error) }}{% else %}error{% endif %}</a>
+                  <a id="error-id-{{key}}" href="#flagComment-{{key}}">{% if _t(error) %}{{ _t(error) }}{% else %}error{% endif %}</a>
                 </li>
                 {% endfor %}
               </ul>

@@ -9,7 +9,7 @@
   "serviceName": "cui_ra",
   "session": {
     "secret": "local",
-    "maxAge": 1260000,
+    "maxAge": 1800000,
     "redis": {
       "host": "",
       "port": "6380",
