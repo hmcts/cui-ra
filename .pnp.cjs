@@ -40,9 +40,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
             ["@hmcts/properties-volume", "npm:1.0.0"],\
             ["@types/body-parser", "npm:1.19.4"],\
-            ["@types/chai-as-promised", "npm:7.1.6"],\
-            ["@types/config", "npm:3.3.1"],\
-            ["@types/cookie-parser", "npm:1.4.4"],\
+            ["@types/chai-as-promised", "npm:7.1.7"],\
+            ["@types/config", "npm:3.3.2"],\
+            ["@types/cookie-parser", "npm:1.4.5"],\
             ["@types/csurf", "npm:1.11.3"],\
             ["@types/es6-promisify", "npm:6.0.2"],\
             ["@types/express", "npm:4.17.19"],\
@@ -4968,20 +4968,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/chai-as-promised", [\
-        ["npm:7.1.6", {\
-          "packageLocation": "./.yarn/cache/@types-chai-as-promised-npm-7.1.6-69e594bab6-f765dd249a.zip/node_modules/@types/chai-as-promised/",\
+        ["npm:7.1.7", {\
+          "packageLocation": "./.yarn/cache/@types-chai-as-promised-npm-7.1.7-847093f322-59199afbd9.zip/node_modules/@types/chai-as-promised/",\
           "packageDependencies": [\
-            ["@types/chai-as-promised", "npm:7.1.6"],\
+            ["@types/chai-as-promised", "npm:7.1.7"],\
             ["@types/chai", "npm:4.3.3"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@types/config", [\
-        ["npm:3.3.1", {\
-          "packageLocation": "./.yarn/cache/@types-config-npm-3.3.1-2b50dd112c-dc6604a6bb.zip/node_modules/@types/config/",\
+        ["npm:3.3.2", {\
+          "packageLocation": "./.yarn/cache/@types-config-npm-3.3.2-6160b52a81-5e4096f389.zip/node_modules/@types/config/",\
           "packageDependencies": [\
-            ["@types/config", "npm:3.3.1"]\
+            ["@types/config", "npm:3.3.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4997,10 +4997,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/cookie-parser", [\
-        ["npm:1.4.4", {\
-          "packageLocation": "./.yarn/cache/@types-cookie-parser-npm-1.4.4-17217c3bbc-5c81ac4b7d.zip/node_modules/@types/cookie-parser/",\
+        ["npm:1.4.5", {\
+          "packageLocation": "./.yarn/cache/@types-cookie-parser-npm-1.4.5-f2ceab7219-4585572170.zip/node_modules/@types/cookie-parser/",\
           "packageDependencies": [\
-            ["@types/cookie-parser", "npm:1.4.4"],\
+            ["@types/cookie-parser", "npm:1.4.5"],\
             ["@types/express", "npm:4.17.19"]\
           ],\
           "linkType": "HARD"\
@@ -8572,9 +8572,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
             ["@hmcts/properties-volume", "npm:1.0.0"],\
             ["@types/body-parser", "npm:1.19.4"],\
-            ["@types/chai-as-promised", "npm:7.1.6"],\
-            ["@types/config", "npm:3.3.1"],\
-            ["@types/cookie-parser", "npm:1.4.4"],\
+            ["@types/chai-as-promised", "npm:7.1.7"],\
+            ["@types/config", "npm:3.3.2"],\
+            ["@types/cookie-parser", "npm:1.4.5"],\
             ["@types/csurf", "npm:1.11.3"],\
             ["@types/es6-promisify", "npm:6.0.2"],\
             ["@types/express", "npm:4.17.19"],\
