@@ -19,7 +19,7 @@
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">{{ _t('review.heading') }}</h1>
 
-        <h2 class="govuk-heading-m">Reasonable adjustments<h2>
+        <h2 class="govuk-heading-m">{{ _t('overview.tableHeading') }}<h2>
 
         <table class="govuk-table">
             <tbody class="govuk-table__body">
@@ -42,14 +42,14 @@
                 {% for item in requested %}
                     <tr class="govuk-table__row">
                         <td scope="row" class="govuk-table__cell">
-                            {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %} 
+                            <span id="remove-name-{{ item.id }}">{% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}</span>
                             {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
                                 <br/>
                                 {{ item.value.path.slice(-1).pop().name }}
                             {% endif %}
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
-                            <a class='govuk-link govuk-link--no-visited-state' href="{{ route.SET_INACTIVE }}?id={{ item.id }}">{{ _t('review.actions.remove') }}</a>
+                            <a aria-labelledby="remove-{{ item.id }} remove-name-{{ item.id }}" id="remove-{{ item.id }}" class='govuk-link govuk-link--no-visited-state' href="{{ route.SET_INACTIVE }}?id={{ item.id }}">{{ _t('review.actions.remove') }}</a>
                         </td>
                     </tr>
                 {% endfor %}
@@ -70,7 +70,7 @@
                     {% endif %}
                     <tr class="govuk-table__row">
                         <td scope="row" class="govuk-table__cell">                     
-                            {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %} 
+                            <span id="change-name-{{ item.id }}">{% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}</span>
                             {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
                                 <br/>
                                 {% if welsh === false %}{{ item.value.otherDescription }}{% else %}{{ item.value.otherDescription_cy }}{% endif %}
@@ -85,7 +85,7 @@
                             </span>
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
-                            <a class='govuk-link govuk-link--no-visited-state' href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: page } ) }}?change=true">{{ _t("review.actions.change") }}</a>
+                            <a aria-labelledby="change-{{ item.id }} change-name-{{ item.id }}" id="change-{{ item.id }}" class='govuk-link govuk-link--no-visited-state' href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: page } ) }}?change=true">{{ _t("review.actions.change") }}</a>
                         </td>
                     </tr>
                 {% endfor %}
@@ -101,14 +101,14 @@
                 {% for item in notRequired %}
                     <tr class="govuk-table__row">
                         <td scope="row" class="govuk-table__cell">
-                            {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %} 
+                            <span id="add-name-{{ item.id }}">{% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}</span>
                             {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
                                 <br/>
                                 {{ item.value.path.slice(-1).pop().name }}
                             {% endif %}
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
-                            <a class='govuk-link govuk-link--no-visited-state' href="{{ route.SET_REQUESTED }}?id={{ item.id }}">{{ _t("review.actions.add") }}</a>
+                            <a aria-labelledby="add-{{ item.id }} add-name-{{ item.id }}" id="add-{{ item.id }}" class='govuk-link govuk-link--no-visited-state' href="{{ route.SET_REQUESTED }}?id={{ item.id }}">{{ _t("review.actions.add") }}</a>
                         </td>
                     </tr>
                 {% endfor %}

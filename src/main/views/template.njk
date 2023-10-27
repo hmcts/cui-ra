@@ -30,7 +30,7 @@
 {% endblock %}
 
 {% set feedbackHtml %}
-This is a new service – your <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/your_support/?pageurl={{ fullUrl }}" target="_blank">feedback</a> will help us to improve it.
+This is a new service – your <a aria-label="This will open a new feedback window" class="govuk-link" href="https://www.smartsurvey.co.uk/s/your_support/?pageurl={{ fullUrl }}" target="_blank">feedback</a> will help us to improve it.
 {% endset -%}
 {% block beforeContent %}
   {{ govukPhaseBanner({
