@@ -1,6 +1,12 @@
 {% from "./govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-
+{% if(welsh) %}
+  {% set htmlLang = 'cy' %}
+{% endif %}
 {% extends "govuk/template.njk" %}
+
+{% block pageTitle %}
+  {% block preTitle %}{% endblock %}{{ _t('title') }}
+{% endblock %}
 
 {% block head %}
   {% include "webpack/css.njk" %}
