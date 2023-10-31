@@ -42,7 +42,11 @@
               <ul class="govuk-list govuk-error-summary__list">
                 {% for key, error in validationErrors %}
                 <li>
-                  <a id="error-id-{{key}}" href="#flagComment-{{key}}">{% if _t(error) %}{{ _t(error) }}{% else %}error{% endif %}</a>
+                  {% if key === parent.id %}
+                    <span class="error-message" id="error-id-{{key}}">{% if _t(error) %}{{ _t(error) }}{% else %}error{% endif %}</span>
+                  {% else %}
+                    <a id="error-id-{{key}}" href="#flagComment-{{key}}">{% if _t(error) %}{{ _t(error) }}{% else %}error{% endif %}</a>
+                  {% endif %}
                 </li>
                 {% endfor %}
               </ul>
