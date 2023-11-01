@@ -1,7 +1,278 @@
 {% extends "template.njk" %}
 
 {% block mainContent %}
+ {% if welsh !== true %}
   <h1 class="govuk-heading-xl">Cookies</h1>
 
-  <p class='govuk-body'>This is the cookies page</p>
+  <p class="govuk-body">A cookie is a small piece of data that’s stored on your computer, tablet, or phone when you visit a website. Most websites need cookies to work properly.</p>
+
+  <h2 class="govuk-heading-m">How cookies are used in this service</h2>
+  <p class="govuk-body">This service uses them to:</p>
+                
+  <ul class="govuk-list govuk-list--bullet">
+
+    <li>temporarily store the answers you give</li>
+        
+  </ul>
+
+  <p class="govuk-body">Find out more about <a href="https://www.aboutcookies.org" class="govuk-link" target="_blank" rel="external noopener noreferrer" aria-label="how to manage cookies">how to manage cookies</a>.</p>
+
+  <h2 class="govuk-heading-m">How cookies are used in this service</h2>
+
+  <p class="govuk-body">To store the answers you’ve given during your visit (known as a ‘session’)</p>
+  <p class="govuk-body">Session cookies are stored on your computer as you travel through a website, and let the website know what you’ve seen and done so far. These are temporary cookies and are automatically deleted a short while after you leave the website.</p>
+            
+  <table class="govuk-table">
+  
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+      
+        <th scope="col" class="govuk-table__header">Name</th>
+      
+        <th scope="col" class="govuk-table__header">Purpose</th>
+      
+        <th scope="col" class="govuk-table__header">Expires</th>
+      
+      </tr>
+    </thead>
+  
+    <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row">
+
+            <td class="govuk-table__cell">Cui-session</td>
+   
+            <td class="govuk-table__cell">Carries details of your current session</td>
+
+            <td class="govuk-table__cell">30 minutes</td>
+
+          </tr>
+
+    </tbody>
+  </table>
+              
+<h2 class="govuk-heading-m">To measure application performance</h2>
+<p class="govuk-body">We use Dynatrace Software Intelligence Platform to provide an Application Performance Monitoring Service to collect information about how you use HMCTS services. We do this to monitor HM Courts and Tribunals (HMCTS) services in order to resolve issues within our services as well as collect data on how our services can be improved. HMCTS stores information about:</p>
+                
+    <ul class="govuk-list govuk-list--bullet">
+        
+        <li>site performance</li>
+    
+        <li>website usage</li>
+    
+        <li>user behaviour</li>
+    
+    </ul>
+
+<p class="govuk-body">Information is presented within the Application Performance Monitoring service for the purposes detailed above. We do not use or share the information for any other purpose. We do not allow Dynatrace to use or share the information for any other purposes.</p>
+
+<table class="govuk-table">
+  
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+    
+      <th scope="col" class="govuk-table__header">Name</th>
+    
+      <th scope="col" class="govuk-table__header">Purpose</th>
+    
+      <th scope="col" class="govuk-table__header">Expires</th>
+    
+    </tr>
+  </thead>
+  
+  <tbody class="govuk-table__body">
+    
+        <tr class="govuk-table__row">
+
+          <td class="govuk-table__cell">dtCookie</td>
+
+          <td class="govuk-table__cell">Tracks a visit across multiple requests</td>
+
+          <td class="govuk-table__cell">Session ends</td>
+
+        </tr>
+
+        <tr class="govuk-table__row">
+
+          <td class="govuk-table__cell">dtPC</td>
+
+          <td class="govuk-table__cell">Required to identify proper endpoints for beacon transmission; includes session ID for correlation</td>
+
+          <td class="govuk-table__cell">Session ends</td>
+
+        </tr>
+
+        <tr class="govuk-table__row">
+
+          <td class="govuk-table__cell">dtSa</td>
+
+          <td class="govuk-table__cell">Intermediate store for page-spanning actions</td>
+
+          <td class="govuk-table__cell">Session ends</td>
+
+        </tr>
+
+        <tr class="govuk-table__row">
+
+          <td class="govuk-table__cell">rxVisitor</td>
+
+          <td class="govuk-table__cell">Visitor ID to correlate sessions</td>
+
+          <td class="govuk-table__cell">7 days</td>
+
+        </tr>
+
+        <tr class="govuk-table__row">
+
+          <td class="govuk-table__cell">rxvt</td>
+
+          <td class="govuk-table__cell">Session timeout</td>
+
+          <td class="govuk-table__cell">Session ends</td>
+
+        </tr>
+
+  </tbody>
+</table>
+
+<h2 class="govuk-heading-m">Cookie settings</h2>
+<p class="govuk-body">We use a single type of cookie. Strictly necessary cookies</p>
+<p class="govuk-body">They always need to be on.</p>
+{% else %}
+  <h1 class="govuk-heading-xl">Cwcis</h1>
+
+  <p class="govuk-body">Darn bach o ddata sy'n cael ei storio ar eich cyfrifiadur, eich tabled neu eich ffôn symudol pan fyddwch yn ymweld â gwefan yw cwci. Mae angen cwcis ar y rhan fwyaf o wefannau i weithio'n iawn.</p>
+
+  <h2 class="govuk-body">Mae’r gwasanaeth hwn yn eu defnyddio i:</h2>
+                
+  <ul class="govuk-list govuk-list--bullet">
+
+    <li>storio’r atebion a roddwch dros dro</li>
+        
+  </ul>
+
+  <p class="govuk-body">Darganfyddwch fwy am  <a href="https://www.aboutcookies.org" class="govuk-link" target="_blank" rel="external noopener noreferrer" aria-label="sut i reoli cwcis">sut i reoli cwcis</a>.</p>
+
+  <h2 class="govuk-heading-m">Sut ydym yn defnyddio cwcis yn y gwasanaeth hwn</h2>
+
+  <p class="govuk-body">Storio’r atebion a roesoch yn ystod eich ymweliad (gelwir hyn yn ‘sesiwn’)</p>
+  <p class="govuk-body">Caiff cwcis sesiwn eu storio ar eich dyfais wrth ichi fynd drwy wefan, ac maent yn gadael i'r wefan wybod beth rydych wedi'i weld a'i wneud hyd yn hyn. Cwcis dros dro yw'r rhain ac fe'u dilëir yn awtomatig ychydig ar ôl ichi adael y wefan.</p>
+            
+  <table class="govuk-table">
+  
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+      
+        <th scope="col" class="govuk-table__header">Enw</th>
+      
+        <th scope="col" class="govuk-table__header">Pwrpas</th>
+      
+        <th scope="col" class="govuk-table__header">Dyddiad dod i ben</th>
+      
+      </tr>
+    </thead>
+  
+    <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row">
+
+            <td class="govuk-table__cell">Cui-session</td>
+   
+            <td class="govuk-table__cell">Gwybodaeth am eich sesiwn gyfredol</td>
+
+            <td class="govuk-table__cell">30 munud</td>
+
+          </tr>
+
+    </tbody>
+  </table>
+              
+<h2 class="govuk-heading-m">I fesur perfformiad y rhaglen</h2>
+<p class="govuk-body">Rydym yn defnyddio Platfform Deallusrwydd Meddalwedd Dynatrace i ddarparu Gwasanaeth Monitro Perfformiad Gwasanaeth i gasglu gwybodaeth am sut yr ydych yn defnyddio gwasanaethau GLlTEF. Rydym yn gwneud hyn i fonitro gwasanaethau GLlTEF er mwyn datrys materion o fewn ein gwasanaethau yn ogystal â chasglu data ar sut y gellir gwella ein gwasanaethau. Mae GLlTEF yn cadw gwybodaeth am:</p>
+                
+    <ul class="govuk-list govuk-list--bullet">
+        
+        <li>Perfformiad y wefan</li>
+    
+        <li>Defnydd o'r wefan</li>
+    
+        <li>Ymddygiad defnyddwyr</li>
+    
+    </ul>
+
+<p class="govuk-body">Cyflwynir yr wybodaeth angenrheidiol yn y Gwasanaeth Monitro Perfformiad Gwasanaeth at y dibenion a nodwyd uchod. Nid ydym yn defnyddio nac yn rhannu'r wybodaeth at unrhyw ddiben arall. Nid ydym yn caniatáu i Dynatrace ddefnyddio na rhannu'r wybodaeth at unrhyw ddibenion eraill.</p>
+
+<table class="govuk-table">
+  
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+    
+      <th scope="col" class="govuk-table__header">Enw</th>
+    
+      <th scope="col" class="govuk-table__header">Pwrpas</th>
+    
+      <th scope="col" class="govuk-table__header">Dyddiad dod i ben</th>
+    
+    </tr>
+  </thead>
+  
+  <tbody class="govuk-table__body">
+    
+        <tr class="govuk-table__row">
+
+          <td class="govuk-table__cell">dtCookie</td>
+
+          <td class="govuk-table__cell">Olrhain ymweliad ar draws ceisiadau amryfal</td>
+
+          <td class="govuk-table__cell">Diwedd y sesiwn</td>
+
+        </tr>
+
+        <tr class="govuk-table__row">
+
+          <td class="govuk-table__cell">dtPC</td>
+
+          <td class="govuk-table__cell">Er mwyn canfod pwyntiau terfyn priodol ar gyfer trosglwyddo tywysydd: mae’n cynnwys rhif adnabod y sesiwn at ddibenion cydberthyniad</td>
+
+          <td class="govuk-table__cell">Diwedd y sesiwn</td>
+
+        </tr>
+
+        <tr class="govuk-table__row">
+
+          <td class="govuk-table__cell">dtSa</td>
+
+          <td class="govuk-table__cell">Storfa gyfryngol ar gyfer gweithrediadau rhychwantu tudalennau</td>
+
+          <td class="govuk-table__cell">Diwedd y sesiwn</td>
+
+        </tr>
+
+        <tr class="govuk-table__row">
+
+          <td class="govuk-table__cell">rxVisitor</td>
+
+          <td class="govuk-table__cell">Rhif adnabod ymwelydd er mwyn cydberthnasu sesiynau</td>
+
+          <td class="govuk-table__cell">7 diwrnod</td>
+
+        </tr>
+
+        <tr class="govuk-table__row">
+
+          <td class="govuk-table__cell">rxvt</td>
+
+          <td class="govuk-table__cell">Terfyn amser y sesiwn</td>
+
+          <td class="govuk-table__cell">Diwedd y sesiwn</td>
+
+        </tr>
+
+  </tbody>
+</table>
+<p class="govuk-body">Mae’r dudalen hon yn cynnwys disgrifiad byr o bob math o gwci rydym yn eu defnyddio.</p>
+<h2 class="govuk-heading-m">Gosodiadau cwcis</h2>
+<p class="govuk-body">Rydym yn defnyddio un math o gwci. Cwcis gwbl angenrheidiol</p>
+<p class="govuk-body">Mae angen iddynt fod ymlaen drwy’r amser.</p>
+{% endif %}
 {% endblock %}
