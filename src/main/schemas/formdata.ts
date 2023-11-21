@@ -73,7 +73,7 @@ export function checkboxSchema(): SchemaType {
               maxLength: 200,
               errorMessage: {
                 minLength: errorTypes.empty,
-                maxLength: errorTypes.long,
+                maxLength: errorTypes.empty,
               },
             },
             flagComment_cy: {
@@ -82,7 +82,7 @@ export function checkboxSchema(): SchemaType {
               maxLength: 200,
               errorMessage: {
                 minLength: errorTypes.empty,
-                maxLength: errorTypes.long,
+                maxLength: errorTypes.empty,
               },
             },
           },
@@ -147,7 +147,7 @@ export function radioSchema(): SchemaType {
               maxLength: 80,
               errorMessage: {
                 minLength: errorTypes.empty,
-                maxLength: errorTypes.long,
+                maxLength: errorTypes.empty,
               },
             },
             subTypeValue_cy: {
@@ -156,7 +156,7 @@ export function radioSchema(): SchemaType {
               maxLength: 80,
               errorMessage: {
                 minLength: errorTypes.empty,
-                maxLength: errorTypes.long,
+                maxLength: errorTypes.empty,
               },
             },
           },
@@ -175,7 +175,7 @@ export function radioSchema(): SchemaType {
                 maxLength: 80,
                 errorMessage: {
                   minLength: errorTypes.empty,
-                  maxLength: errorTypes.long,
+                  maxLength: errorTypes.empty,
                 },
               },
             },
