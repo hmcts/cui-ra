@@ -3,7 +3,7 @@ import { SchemaType } from './../middlewares';
 
 export enum errorTypes {
   empty = 'empty',
-  long = 'long',
+  long = 'empty',
 }
 
 export function formData(): SchemaType {
