@@ -26,16 +26,16 @@ export class PayloadBuilder {
       let edata: MainPayloadDetailCollection[] = [];
       let ndata: MainPayloadDetailCollection[] = [];
       //flagsAsSupplied only return if there have been changes
+      const exisitingData = req.session.existingmanager?.data;
+      if (exisitingData) {
+        edata = exisitingData.map((item: PayloadDataObject) => {
+          return {
+            id: item.id,
+            value: item.value,
+          } as MainPayloadDetailCollection;
+        });
+      }
       if (req.session.existingmanager?.modified === true) {
-        const exisitingData = req.session.existingmanager?.data;
-        if (exisitingData) {
-          edata = exisitingData.map((item: PayloadDataObject) => {
-            return {
-              id: item.id,
-              value: item.value,
-            } as MainPayloadDetailCollection;
-          });
-        }
         //supplied flags have been modified
         flagsAsSupplied.details = edata;
       }
@@ -50,9 +50,11 @@ export class PayloadBuilder {
               } as MainPayloadDetailCollection;
             });
         }
+        replacementFlags.details = [...ndata];
       }
-      //has to be outside of if as it can contain updated if they exist
-      replacementFlags.details = [...edata, ...ndata];
+      if (req.session.existingmanager?.modified === true) {
+        replacementFlags.details = [...edata, ...replacementFlags.details];
+      }
     }
 
     outbound.flagsAsSupplied = flagsAsSupplied;
