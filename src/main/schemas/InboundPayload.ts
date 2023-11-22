@@ -79,7 +79,6 @@ export const detailsSchema: SchemaType = {
         required: [
           'name',
           'name_cy',
-          'dateTimeModified',
           'dateTimeCreated',
           'path',
           'flagCode',

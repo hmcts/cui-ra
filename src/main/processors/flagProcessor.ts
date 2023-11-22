@@ -50,7 +50,7 @@ export class FlagProcessor implements FlagProcessorInterface {
       flagComment: undefined,
       flagComment_cy: undefined,
       flagUpdateComment: undefined,
-      dateTimeModified: dateTime,
+      dateTimeModified: undefined,
       dateTimeCreated: dateTime,
       path:
         flag.Path && flag.Path.length > 0

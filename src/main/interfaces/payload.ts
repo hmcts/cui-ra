@@ -47,7 +47,7 @@ export interface PayloadFlagData {
   flagComment: string | undefined;
   flagComment_cy: string | undefined;
   flagUpdateComment: string | undefined;
-  dateTimeModified: string;
+  dateTimeModified: string | undefined;
   dateTimeCreated: string;
   path: PayloadPath[];
   hearingRelevant: PayloadYesNo;
