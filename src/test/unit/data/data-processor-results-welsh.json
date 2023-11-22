@@ -28,7 +28,6 @@
     "value": {
       "name": "Case",
       "name_cy": "Achos",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -55,7 +54,6 @@
     "value": {
       "name": "Urgent case",
       "name_cy": "Achos brys",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -82,7 +80,6 @@
     "value": {
       "name": "Complex Case",
       "name_cy": "Achos Cymhleth",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -109,7 +106,6 @@
     "value": {
       "name": "High Profile Case",
       "name_cy": "Achos Proffil Uchel",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -136,7 +132,6 @@
     "value": {
       "name": "Warrant of arrest conclusion/withdrawn",
       "name_cy": "Canlyniad gwarant arestio/gwarant arestio wedi’i thynnu’n ôl",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -163,7 +158,6 @@
     "value": {
       "name": "Gender recognition",
       "name_cy": "Cydnabod rhywedd",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -190,7 +184,6 @@
     "value": {
       "name": "Closed material",
       "name_cy": "Deunydd caeedig",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -217,7 +210,6 @@
     "value": {
       "name": "Welsh forms and communications",
       "name_cy": "Ffurflenni a chyfathrebiadau Cymraeg",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -244,7 +236,6 @@
     "value": {
       "name": "Domestic abuse allegation",
       "name_cy": "Honiad o gam-drin domestig",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -271,7 +262,6 @@
     "value": {
       "name": "Class appeal",
       "name_cy": "Math o apêl",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -298,7 +288,6 @@
     "value": {
       "name": "Presidential panel",
       "name_cy": "Panel llywyddol",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -325,7 +314,6 @@
     "value": {
       "name": "Potential fraud",
       "name_cy": "Posibilrwydd o dwyll",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -352,7 +340,6 @@
     "value": {
       "name": "Power of arrest with Police",
       "name_cy": "Pŵer i arestio gyda’r Heddlu",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -379,7 +366,6 @@
     "value": {
       "name": "RRO (Restricted Reporting Order / Anonymisation)",
       "name_cy": "RRO (Gorchymyn Cyfyngiadau Adrodd / Anhysbys)",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -406,7 +392,6 @@
     "value": {
       "name": "Potentially harmful evidence",
       "name_cy": "Tystiolaeth a all fod yn niweidiol",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -433,7 +418,6 @@
     "value": {
       "name": "Other",
       "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -483,7 +467,6 @@
     "value": {
       "name": "Party",
       "name_cy": "Parti",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -519,7 +502,6 @@
     "value": {
       "name": "Reasonable adjustment",
       "name_cy": "Addasiad rhesymol",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -555,7 +537,6 @@
     "value": {
       "name": "I need adjustments to get to, into and around our buildings",
       "name_cy": "Rwyf angen addasiadau i allu cyrraedd ein adeiladau, mynd i mewn iddynt a symud o’u cwmpas",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -585,7 +566,6 @@
     "value": {
       "name": "A different type of chair",
       "name_cy": "Math gwahanol o gadair",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -618,7 +598,6 @@
     "value": {
       "name": "Accessible toilet",
       "name_cy": "Toiled hygyrch",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -651,7 +630,6 @@
     "value": {
       "name": "Guiding in the building",
       "name_cy": "Cymorth i fynd o amgylch yr adeilad",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -684,7 +662,6 @@
     "value": {
       "name": "Help using a lift",
       "name_cy": "Help i ddefnyddio lifft",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -717,7 +694,6 @@
     "value": {
       "name": "Parking space close to the venue",
       "name_cy": "Lle parcio yn agos i'r lleoliad",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -750,7 +726,6 @@
     "value": {
       "name": "Step free / wheelchair access",
       "name_cy": "Dim grisiau / mynediad ar gyfer cadair olwyn",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -783,7 +758,6 @@
     "value": {
       "name": "Use of venue wheelchair",
       "name_cy": "Y gallu i ddefnyddio cadair olwyn a geir yn y lleoliad",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -816,7 +790,6 @@
     "value": {
       "name": "Other",
       "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -858,7 +831,6 @@
     "value": {
       "name": "I need documents in an alternative format",
       "name_cy": "Rwyf angen dogfennau mewn fformat amgen",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -888,7 +860,6 @@
     "value": {
       "name": "Audio translation of documents",
       "name_cy": "Cyfieithiad sain o ddogfennau",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -921,7 +892,6 @@
     "value": {
       "name": "Braille documents",
       "name_cy": "Dogfennau Braille",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -954,7 +924,6 @@
     "value": {
       "name": "Documents in a specified colour",
       "name_cy": "Dogfennau mewn lliw penodol",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -987,7 +956,6 @@
     "value": {
       "name": "Documents in easy read format",
       "name_cy": "Dogfennau mewn fformat hawdd i’w darllen",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1020,7 +988,6 @@
     "value": {
       "name": "Documents in large print",
       "name_cy": "Dogfennau mewn print bras",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1053,7 +1020,6 @@
     "value": {
       "name": "Documents read out to me",
       "name_cy": "Dogfennau yn cael eu darllen yn uchel i mi",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1086,7 +1052,6 @@
     "value": {
       "name": "Information emailed to me",
       "name_cy": "Gwybodaeth yn cael ei hanfon ataf drwy e-bost",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1119,7 +1084,6 @@
     "value": {
       "name": "Other",
       "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1163,7 +1127,6 @@
     "value": {
       "name": "I need help communicating and understanding",
       "name_cy": "Rwyf angen cymorth gyda chyfathrebu a deall pethau",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1193,7 +1156,6 @@
     "value": {
       "name": "Explanation of the court or tribunal and who's in the room at the hearing",
       "name_cy": "Esboniad o osodiad y llys neu’r tribiwnlys a phwy fydd yn yr ystafell wrandawiadau",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1226,7 +1188,6 @@
     "value": {
       "name": "Extra time to think and explain myself",
       "name_cy": "Amser ychwanegol i feddwl ac egluro fy hun",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1264,7 +1225,6 @@
     "value": {
       "name": "Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)",
       "name_cy": "System Gwella Clyw (Dolen Glyw/Sain, Derbynnydd Isgoch)",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1297,7 +1257,6 @@
     "value": {
       "name": "Hearing loop (hearing enhancement system)",
       "name_cy": "Dolen glyw (system gwella clyw)",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1336,7 +1295,6 @@
     "value": {
       "name": "Induction loop (hearing enhancement system)",
       "name_cy": "Dolen sain (system gwella clyw)",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1375,7 +1333,6 @@
     "value": {
       "name": "Infrared receiver (hearing enhancement system)",
       "name_cy": "Derbynnydd isgoch (system gwella clyw)",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1414,7 +1371,6 @@
     "value": {
       "name": "Other",
       "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1453,7 +1409,6 @@
     "value": {
       "name": "Intermediary",
       "name_cy": "Cyfryngwr",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1486,7 +1441,6 @@
     "value": {
       "name": "Lip speaker",
       "name_cy": "Siaradwr gwefusau",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1519,7 +1473,6 @@
     "value": {
       "name": "Need to be close to who is speaking",
       "name_cy": "Angen bod yn agos at bwy bynnag sy'n siarad",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1615,7 +1568,6 @@
     "value": {
       "name": "Sign Language Interpreter",
       "name_cy": "Dehonglydd Iaith Arwyddion",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1648,7 +1600,6 @@
     "value": {
       "name": "Speech to text reporter (palantypist)",
       "name_cy": "Cofnodwr iaith lafar i destun (palanteipydd)",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1681,7 +1632,6 @@
     "value": {
       "name": "Visit to court or tribunal before the hearing",
       "name_cy": "Ymweld â’r llys neu’r tribiwnlys cyn y gwrandawiad",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1714,7 +1664,6 @@
     "value": {
       "name": "Other",
       "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1747,7 +1696,6 @@
     "value": {
       "name": "I need help with forms",
       "name_cy": "Rwyf angen help gyda ffurflenni",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1777,7 +1725,6 @@
     "value": {
       "name": "Guidance on how to complete forms",
       "name_cy": "Arweiniad ar sut i lenwi ffurflenni",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1810,7 +1757,6 @@
     "value": {
       "name": "Support filling in forms",
       "name_cy": "Cymorth i lenwi ffurflenni",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1843,7 +1789,6 @@
     "value": {
       "name": "Other",
       "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1882,7 +1827,6 @@
     "value": {
       "name": "I need something to feel comfortable during my hearing",
       "name_cy": "Rwyf angen rhywbeth i wneud i mi deimlo’n gyfforddus yn ystod fy ngwrandawiad",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1912,7 +1856,6 @@
     "value": {
       "name": "Appropriate lighting",
       "name_cy": "Goleuadau priodol",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1945,7 +1888,6 @@
     "value": {
       "name": "Private waiting area",
       "name_cy": "Ystafell aros breifat",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -1978,7 +1920,6 @@
     "value": {
       "name": "Regular breaks",
       "name_cy": "Seibiannau rheolaidd",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -2011,7 +1952,6 @@
     "value": {
       "name": "Space to be able to get up and move around",
       "name_cy": "Lle i allu codi a symud o gwmpas",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -2044,7 +1984,6 @@
     "value": {
       "name": "Other",
       "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -2083,7 +2022,6 @@
     "value": {
       "name": "I need to bring support with me to a hearing",
       "name_cy": "Rwyf angen dod â rhywun efo fi i fy nghefnogi mewn gwrandawiad",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -2113,7 +2051,6 @@
     "value": {
       "name": "Assistance / guide dog",
       "name_cy": "Ci cymorth / tywys",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -2146,7 +2083,6 @@
     "value": {
       "name": "Friend or family with me",
       "name_cy": "Cefnogaeth gan ffrind neu aelod o’r teulu",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -2179,7 +2115,6 @@
     "value": {
       "name": "Support worker or carer with me",
       "name_cy": "Cefnogaeth gan weithiwr cymorth neu ofalwr",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -2212,7 +2147,6 @@
     "value": {
       "name": "Therapy animal",
       "name_cy": "Anifail therapi",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -2245,7 +2179,6 @@
     "value": {
       "name": "Other",
       "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -2283,7 +2216,6 @@
     "value": {
       "name": "I need to request a certain type of hearing",
       "name_cy": "Rwyf angen gofyn am fath penodol o wrandawiad",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -2313,7 +2245,6 @@
     "value": {
       "name": "In person hearing",
       "name_cy": "Gwrandawiad wyneb yn wyneb mewn ystafell",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -2346,7 +2277,6 @@
     "value": {
       "name": "Phone hearing",
       "name_cy": "Gwrandawiad dros y ffôn",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -2379,7 +2309,6 @@
     "value": {
       "name": "Video hearing",
       "name_cy": "Gwrandawiad fideo",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -2412,7 +2341,6 @@
     "value": {
       "name": "Other",
       "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -2445,7 +2373,6 @@
     "value": {
       "name": "Other",
       "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -2475,7 +2402,6 @@
     "value": {
       "name": "Litigation friend",
       "name_cy": "Cyfaill cyfreitha",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -3530,7 +3456,6 @@
     "value": {
       "name": "Language Interpreter",
       "name_cy": "Cyfieithydd",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -3580,7 +3505,6 @@
     "value": {
       "name": "Language Interpreter",
       "name_cy": "Cyfieithydd",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -3607,7 +3531,6 @@
     "value": {
       "name": "Vulnerable user",
       "name_cy": "Defnyddiwr bregus",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -3634,7 +3557,6 @@
     "value": {
       "name": "Civil restraint order",
       "name_cy": "Gorchymyn atal sifil",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -3661,7 +3583,6 @@
     "value": {
       "name": "Barring Order",
       "name_cy": "Gorchymyn Gwahardd",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -3688,7 +3609,6 @@
     "value": {
       "name": "Banning order",
       "name_cy": "Gorchymyn gwaharddiad",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -3715,7 +3635,6 @@
     "value": {
       "name": "Lacking capacity",
       "name_cy": "Heb y gallu meddyliol",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -3742,7 +3661,6 @@
     "value": {
       "name": "Party Abroad",
       "name_cy": "Mae’r Parti Dramor",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -3769,7 +3687,6 @@
     "value": {
       "name": "Death of a Party",
       "name_cy": "Marwolaeth parti",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -3804,7 +3721,6 @@
     "value": {
       "name": "Special measure",
       "name_cy": "Mesur arbennig",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -3831,7 +3747,6 @@
     "value": {
       "name": "Evidence by live link",
       "name_cy": "Tystiolaeth drwy gyswllt byw",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -3861,7 +3776,6 @@
     "value": {
       "name": "Evidence given in private",
       "name_cy": "Rhoi tystiolaeth yn breifat",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -3891,7 +3805,6 @@
     "value": {
       "name": "Removal of wigs and gowns",
       "name_cy": "Diosg wigiau a gynau",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -3921,7 +3834,6 @@
     "value": {
       "name": "Screening witness from accused",
       "name_cy": "Sgrinio tyst rhag y diffynnydd",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -3951,7 +3863,6 @@
     "value": {
       "name": "Video recorded cross-examination or re-examination",
       "name_cy": "Tystiolaeth croesholi neu ail-holi wedi’i recordio ar fideo",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -3981,7 +3892,6 @@
     "value": {
       "name": "Video recorded evidence in chief",
       "name_cy": "Prif dystiolaeth wedi’i recordio ar fideo",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -4011,7 +3921,6 @@
     "value": {
       "name": "Other",
       "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -4041,7 +3950,6 @@
     "value": {
       "name": "Confidential party/address",
       "name_cy": "Parti/cyfeiriad cyfrinachol",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -4068,7 +3976,6 @@
     "value": {
       "name": "Unaccompanied minor",
       "name_cy": "Plentyn dan oed ar ei ben ei hun",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -4095,7 +4002,6 @@
     "value": {
       "name": "QLR (Qualified Legal Representative)",
       "name_cy": "QLR (Cynrychiolydd Cyfreithiol Cymwysedig)",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -4122,7 +4028,6 @@
     "value": {
       "name": "Foreign national offender",
       "name_cy": "Troseddwr sy’n wladolyn tramor",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -4149,7 +4054,6 @@
     "value": {
       "name": "Audio/Video Evidence",
       "name_cy": "Tystiolaeth Sain/Fideo",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -4176,7 +4080,6 @@
     "value": {
       "name": "Potentially Violent Person",
       "name_cy": "Unigolyn a Allai Fod yn Dreisgar",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -4203,7 +4106,6 @@
     "value": {
       "name": "Detained individual",
       "name_cy": "Unigolyn wedi’i gadw dan glo",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -4230,7 +4132,6 @@
     "value": {
       "name": "Unacceptable/disruptive customer behaviour",
       "name_cy": "Ymddygiad annerbyniol/aflonyddgar gan gwsmer",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -4257,7 +4158,6 @@
     "value": {
       "name": "Vexatious litigant",
       "name_cy": "Ymgyfreithiwr blinderus",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
@@ -4284,7 +4184,6 @@
     "value": {
       "name": "Other",
       "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
         {
