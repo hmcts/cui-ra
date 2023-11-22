@@ -25,11 +25,12 @@ export class Nunjucks {
       res.locals.common = Common;
       res.locals.pagePath = req.path;
       res.locals.fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
-      res.locals.welsh = false;
-      res.locals.welsh = req.session.welsh;
+      res.locals.welsh = req.session.welsh ?? false;
       res.locals.hasSession = req.session.sessioninit;
-      if (res.locals.welsh && res.locals.getLocale() !== 'cy') {
+      if (req.session.welsh) {
         res.locals.setLocale(res, 'cy');
+      } else {
+        res.locals.setLocale(res, 'en');
       }
       res.locals._t = (key: string) => {
         const serviceId = req.session && req.session.hmctsserviceid ? req.session.hmctsserviceid.toUpperCase() : null;
