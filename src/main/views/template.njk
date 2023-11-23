@@ -36,7 +36,7 @@
 {% endblock %}
 
 {% set feedbackHtml %}
-This is a new service – your <a aria-label="This will open a new feedback window" class="govuk-link" href="https://www.smartsurvey.co.uk/s/your_support/?pageurl={{ fullUrl }}" target="_blank">feedback</a> will help us to improve it.
+  {{ _r(_t('feedback'),{url: fullUrl}) | safe }}
 {% endset -%}
 {% block beforeContent %}
   {{ govukPhaseBanner({

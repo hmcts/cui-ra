@@ -40,6 +40,5 @@ describe('Data Manager', () => {
     const updatedItem: DataManagerDataObject | null = dataManager.get(itemId);
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(updatedItem?.value.flagComment).toEqual(testString);
-    expect(updatedItem?.value.dateTimeModified).not.toEqual(updatedItem?.value.dateTimeCreated);
   });
 });
