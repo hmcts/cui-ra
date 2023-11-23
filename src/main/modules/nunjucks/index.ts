@@ -27,29 +27,23 @@ export class Nunjucks {
       res.locals.fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
       res.locals.welsh = req.session.welsh ?? false;
       res.locals.hasSession = req.session.sessioninit;
-      if (req.session.welsh) {
-        res.locals.setLocale(res, 'cy');
-      } else {
-        res.locals.setLocale(res, 'en');
-      }
       res.locals._t = (key: string) => {
+        const lang = req.session.welsh ? 'cy' : 'en';
         const serviceId = req.session && req.session.hmctsserviceid ? req.session.hmctsserviceid.toUpperCase() : null;
         let result;
         if (serviceId) {
           const serviceKey = `${serviceId}.${key}`;
-          const fallback = res.__(key);
-          result = res.__(`${serviceKey}:${fallback}`);
-          if (result !== serviceKey && result !== key) {
+          result = res.__({ phrase: `${serviceKey}`, locale: lang });
+          if (result !== serviceKey) {
             return result;
           }
         }
-        result = res.__(key);
+        result = res.__({ phrase: `${key}`, locale: lang });
         if (result !== key) {
           return result;
         }
         return null;
       };
-
       res.locals._r = (text: string | undefined, values: { [key: string]: string } = {}) => {
         if (!values || !text) {
           return text;
