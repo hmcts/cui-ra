@@ -45,8 +45,6 @@ export class DataManager<T> implements DataManagerInterface<T> {
       if (!dataItem) {
         return;
       }
-      //UPDATE MODIFIED INFORMATION
-      dataItem['value']['dateTimeModified'] = this.getDateTime();
       Object.assign(dataItem, load);
     });
     this.modified = true;

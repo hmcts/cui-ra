@@ -7,6 +7,7 @@ export class ExistingFlagsManager extends DataManager<PayloadDataObject> {
     const item: PayloadDataObject | null = this.get(id);
     if (item && item._editable === true) {
       item.value.status = status;
+      item.value.dateTimeModified = this.getDateTime();
       this.save([item]);
     }
   }
