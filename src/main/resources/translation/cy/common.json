@@ -12,7 +12,8 @@
   "header": {
     "menuText": "Dewislen",
     "title": "Eich cymorth",
-    "url": "https://www.gov.uk/cymraeg"
+    "url": "https://www.gov.uk/cymraeg",
+    "signOut": "Arwyddo allan"
   },
   "footer": {
     "cookies": "Cwcis",

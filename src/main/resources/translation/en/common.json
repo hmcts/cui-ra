@@ -12,7 +12,8 @@
   "header": {
     "menuText": "Menu",
     "title": "Your support",
-    "url": "https://www.gov.uk"
+    "url": "https://www.gov.uk",
+    "signOut": "Sign out"
   },
   "footer": {
     "cookies": "Cookies",
