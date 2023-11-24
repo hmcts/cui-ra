@@ -6205,7 +6205,7 @@ __metadata:
     nunjucks: ^3.2.4
     otplib: ^12.0.1
     pa11y: ^6.2.3
-    playwright: ^1.34.3
+    playwright: ^1.37.1
     prettier: ^2.7.1
     puppeteer: ^21.3.8
     redis: ^4.6.7
@@ -11630,7 +11630,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright@npm:^1.34.3":
+"playwright@npm:^1.37.1":
   version: 1.40.0
   resolution: "playwright@npm:1.40.0"
   dependencies:
