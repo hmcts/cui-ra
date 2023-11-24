@@ -9,7 +9,7 @@ let featuresToInclude = url.includes('aat') ? './features/**/*.feature' : '';
 
 export const config = {
   TEST_URL: url,
-  TestHeadlessBrowser: false,
+  TestHeadlessBrowser: true,
   TestSlowMo: 250,
   WaitForTimeout: 10000,
 
