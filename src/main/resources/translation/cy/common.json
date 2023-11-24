@@ -64,7 +64,7 @@
     "problem": "Mae yna broblem",
     "submitButton": "Parhau",
     "typeahead": {
-      "heading": "What {flagName} do you need to request?",
+      "heading": "Pa {flagName} ydych chi angen gwneud cais amdano?",
       "hint": "Dechreuwch deipio i ddewis y gefnogaeth, neu dewiswch ‘Nid yw’r gefnogaeth wedi’i rhestru",
       "notListed": "Nid yw'r gefnogaeth wedi'i chynnwys",
       "control": "Rhowch y math o gefnogaeth y mae arnoch ei hangen"
