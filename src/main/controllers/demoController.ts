@@ -24,6 +24,14 @@ export class DemoController {
     fs.readFileSync(path.join(__dirname, '..', 'demo', 'data', 'demo-payload.json'), 'utf-8')
   );
 
+  private BAA2: DataManagerDataObject[] = JSON.parse(
+    fs.readFileSync(path.join(__dirname, '..', 'demo', 'data', 'BAA2-processor-results.json'), 'utf-8')
+  );
+
+  private BAA5: DataManagerDataObject[] = JSON.parse(
+    fs.readFileSync(path.join(__dirname, '..', 'demo', 'data', 'BAA5-processor-results.json'), 'utf-8')
+  );
+
   public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
     // Add code here to populate payloads/session for demo purposes.
     // Speak to Sonny about multiple versions to test blank payload and populated payload
@@ -74,6 +82,34 @@ export class DemoController {
           req.session.hmctsserviceid = 'PFL';
           req.session.sessioninit = true;
           req.session.welsh = true;
+
+          return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
+        }
+        case 'BAA2': {
+          const NewFlag = new NewFlagsManager();
+          NewFlag.set(this.BAA2);
+
+          req.session.newmanager = NewFlag;
+          req.session.existingmanager = new ExistingFlagsManager();
+          req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
+          req.session.logoutUrl = Route.ROOT;
+          req.session.hmctsserviceid = 'BAA2';
+          req.session.sessioninit = true;
+          req.session.welsh = false;
+
+          return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
+        }
+        case 'BAA5': {
+          const NewFlag = new NewFlagsManager();
+          NewFlag.set(this.BAA5);
+
+          req.session.newmanager = NewFlag;
+          req.session.existingmanager = new ExistingFlagsManager();
+          req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
+          req.session.logoutUrl = Route.ROOT;
+          req.session.hmctsserviceid = 'BAA5';
+          req.session.sessioninit = true;
+          req.session.welsh = false;
 
           return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
         }

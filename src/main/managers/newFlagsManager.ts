@@ -109,8 +109,8 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
 
     if (disableDependants) {
       //Get children and disable them
-      const Children: DataManagerDataObject[] | null = this.getChildren(item.id);
-      if (Children) {
+      const Children: DataManagerDataObject[] = this.getChildren(item.id);
+      if (Children.length > 0) {
         Children.forEach(node => {
           this.disable(node.id);
         });
@@ -154,8 +154,8 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
     const deletedNode: DataManagerDataObject = this.data.splice(index, 1)[0];
 
     //Get children and delete them
-    const ChildCount: DataManagerDataObject[] | null = this.getChildren(deletedNode.id);
-    if (ChildCount) {
+    const ChildCount: DataManagerDataObject[] = this.getChildren(deletedNode.id);
+    if (ChildCount.length > 0) {
       ChildCount.forEach(node => {
         this.delete(node.id);
       });
@@ -171,7 +171,7 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
       }
       //Delete parent node but only if this flag is its only child
       const ParentChildCount: number = this.getChildren(deletedNode._parentId).length;
-      if (ParentChildCount === 1) {
+      if (ParentChildCount === 0) {
         this.delete(deletedNode._parentId);
       }
     }
@@ -198,7 +198,7 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
         matchingIds.push(item.id);
       } else {
         const children = this.getChildren(item.id);
-        if (children) {
+        if (children.length > 0) {
           for (const child of children) {
             this.searchItem(child, dotNotations.join('.'), matchingIds, dataCollection);
           }

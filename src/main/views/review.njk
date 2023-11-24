@@ -82,7 +82,7 @@
                             {% endif %}
                             </span>
                             <br/>
-                            <span class="govuk-hint">
+                            <span id="change-value-{{ item.id }}" class="govuk-hint">
                                 {% if item._listOfValuesLength %}
                                     {% if welsh === false %}{{ item.value.subTypeValue }}{% else %}{{ item.value.subTypeValue_cy }}{% endif %}        
                                 {% else %}
@@ -91,7 +91,7 @@
                             </span>
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
-                            <a aria-labelledby="change-{{ item.id }} change-name-{{ item.id }}" id="change-{{ item.id }}" class='govuk-link govuk-link--no-visited-state' href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: page } ) }}?change=true">{{ _t("review.actions.change") }}</a>
+                            <a aria-labelledby="change-{{ item.id }} change-name-{{ item.id }} change-value-{{ item.id }}" id="change-{{ item.id }}" class='govuk-link govuk-link--no-visited-state' href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: page } ) }}?change=true">{{ _t("review.actions.change") }}</a>
                         </td>
                     </tr>
                 {% endfor %}
