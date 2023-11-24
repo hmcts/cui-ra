@@ -96,7 +96,7 @@ export class FormProcessor {
     //other selected
     if (body.data && body.enabled.includes(Common.OTHER_FLAG_CODE)) {
       parent.value.subTypeValue = this.stripSpecialCharacters(body.data[parent.id].subTypeValue);
-      parent.value.subTypeValue_cy = this.stripSpecialCharacters(body.data[parent.id].subTypeValue);
+      parent.value.subTypeValue_cy = this.stripSpecialCharacters(body.data[parent.id].subTypeValue_cy);
       parent._other = true;
       return [parent];
     }
