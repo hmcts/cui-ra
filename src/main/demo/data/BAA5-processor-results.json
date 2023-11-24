@@ -1,0 +1,374 @@
+[
+  {
+    "_flagComment": false,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_isMaster": false,
+    "_errors": [],
+    "_childIds": ["PF0001-RA0001", "PF0001-OT0001"],
+    "id": "PF0001",
+    "value": {
+      "name": "Party",
+      "name_cy": "Parti",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": ""
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "PF0001",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": null
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_isMaster": false,
+    "_errors": [],
+    "_childIds": ["PF0001-RA0001-RA0002"],
+    "id": "PF0001-RA0001",
+    "value": {
+      "name": "Reasonable adjustment",
+      "name_cy": "Addasiad rhesymol",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0001",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": true,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": true,
+    "_isMaster": false,
+    "_errors": [],
+    "_childIds": [
+      "PF0001-RA0001-RA0002-RA0014",
+      "PF0001-RA0001-RA0002-RA0012",
+      "PF0001-RA0001-RA0002-RA0010",
+      "PF0001-RA0001-RA0002-RA0011",
+      "PF0001-RA0001-RA0002-RA0013",
+      "PF0001-RA0001-RA0002-RA0015",
+      "PF0001-RA0001-RA0002-RA0016",
+      "PF0001-RA0001-RA0002-OT0001"
+    ],
+    "id": "PF0001-RA0001-RA0002",
+    "value": {
+      "name": "I need documents in an alternative format",
+      "name_cy": "Rwyf angen dogfennau mewn fformat amgen",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0002",
+      "status": "Active",
+      "availableExternally": "No"
+    },
+    "_parentId": "PF0001-RA0001"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_isMaster": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0014",
+    "value": {
+      "name": "Audio translation of documents",
+      "name_cy": "Cyfieithiad sain o ddogfennau",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0014",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_isMaster": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0012",
+    "value": {
+      "name": "Braille documents",
+      "name_cy": "Dogfennau Braille",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0012",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_isMaster": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0010",
+    "value": {
+      "name": "Documents in a specified colour",
+      "name_cy": "Dogfennau mewn lliw penodol",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0010",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_isMaster": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0011",
+    "value": {
+      "name": "Documents in easy read format",
+      "name_cy": "Dogfennau mewn fformat hawdd i’w darllen",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0011",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_isMaster": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0013",
+    "value": {
+      "name": "Documents in large print",
+      "name_cy": "Dogfennau mewn print bras",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0013",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_isMaster": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0015",
+    "value": {
+      "name": "Documents read out to me",
+      "name_cy": "Dogfennau yn cael eu darllen yn uchel i mi",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0015",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_isMaster": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-RA0016",
+    "value": {
+      "name": "Information emailed to me",
+      "name_cy": "Gwybodaeth yn cael ei hanfon ataf drwy e-bost",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "No",
+      "flagCode": "RA0016",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_isMaster": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0002-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need documents in an alternative format"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0002"
+  },
+  {
+    "_flagComment": true,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_isMaster": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-OT0001",
+    "value": {
+      "name": "Other",
+      "name_cy": "Arall",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "OT0001",
+      "status": "Requested",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001"
+  }
+]
