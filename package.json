@@ -125,7 +125,7 @@
     "nock": "^13.2.9",
     "nodemon": "^2.0.19",
     "pa11y": "^6.2.3",
-    "playwright": "^1.37.1",
+    "playwright": "1.37.1",
     "prettier": "^2.7.1",
     "puppeteer": "^21.3.8",
     "request": "^2.88.2",
