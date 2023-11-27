@@ -38,7 +38,6 @@ The application requires a redis cache. This can be created via the following co
 docker run --name redis -p 6379:6379 -d redis redis-server --requirepass "password"
 ```
 
-
 Run:
 
 ```bash
