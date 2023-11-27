@@ -26,6 +26,19 @@ Bundle:
 yarn webpack
 ```
 
+Mount Secrets using pvmount:{env} (demo,aat,perftest,ithc). This command will download azure secrets into a secret folder that will be consumed by properties-volume lib:
+
+```bash
+yarn pvmount:aat
+```
+
+The application requires a redis cache. This can be created via the following command. (change the password to be the value of redis password stored in the secret folder. or keep it as password and delete the redis password file from the secret folder)
+
+```bash
+docker run --name redis -p 6379:6379 -d redis redis-server --requirepass "password"
+```
+
+
 Run:
 
 ```bash
