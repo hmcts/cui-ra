@@ -4,7 +4,6 @@ import config from 'config';
 import RedisStore from 'connect-redis';
 import { Application } from 'express';
 import session from 'express-session';
-//import FileStoreFactory from 'session-file-store';
 
 const Redis = require('ioredis');
 
@@ -48,6 +47,10 @@ export class SessionStorage {
         host,
         port: port ?? 6380,
         password: key,
+        retryStrategy: times => {
+          // Use a custom retry strategy if needed
+          return Math.min(times * 50, 2000);
+        },
       };
 
       if (tlsOn === true) {
@@ -57,14 +60,15 @@ export class SessionStorage {
         });
       }
       const client = new Redis(redisConfig);
-      return new RedisStore({
+      client.on('error', function (err) {
+        this.logger.error(err);
+      });
+      const store = new RedisStore({
         client,
       });
+      return store;
     }
 
     return undefined;
-    //return new fileStore({
-    //  path: '/tmp',
-    //});
   }
 }

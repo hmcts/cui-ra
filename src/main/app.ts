@@ -41,12 +41,12 @@ app.use(cookieParser());
 new PropertiesVolume().enableFor(app);
 new Container().enableFor(app, logger);
 new AppInsights().enable();
+new HealthCheck().enableFor(app);
 new SessionStorage(logger).enableFor(app);
 new Translation().enableFor(app);
 new Nunjucks(developmentMode).enableFor(app);
 // secure the application by adding various HTTP headers to its responses
 new Helmet(developmentMode).enableFor(app);
-new HealthCheck().enableFor(app);
 new CSRFToken().enableFor(app);
 
 app.use(express.static(path.join(__dirname, 'public')));
