@@ -55,6 +55,12 @@ describe('PayloadBuilder', () => {
   test('should generate payload both new and existing should not be empty', async () => {
     mockedRequest.session.existingmanager?.setStatus('RA0001-RA0004-RA0009-OT0001', Status.INACTIVE);
 
+    const item: DataManagerDataObject | null = mockedRequest.session.newmanager.get('PF0001-RA0001-RA0002-RA0014');
+    if (item) {
+      item._enabled = true;
+      mockedRequest.session.newmanager.save([item]);
+    }
+
     const results: OutboundPayload = PayloadBuilder.build(mockedRequest);
 
     expect(results.flagsAsSupplied?.details).not.toHaveLength(0);
@@ -79,9 +85,7 @@ describe('PayloadBuilder', () => {
   });
 
   test('should generate payload and check', async () => {
-    //console.log('pre',mockedRequest.session.existingmanager?.get('RA0001-RA0004-RA0009-OT0001'));
     mockedRequest.session.existingmanager?.setStatus('RA0001-RA0004-RA0009-OT0001', Status.INACTIVE);
-    //console.log('aft',mockedRequest.session.existingmanager?.get('RA0001-RA0004-RA0009-OT0001'));
 
     const item: DataManagerDataObject | null = mockedRequest.session.newmanager.get('PF0001-RA0001-RA0002-RA0014');
     if (item) {
