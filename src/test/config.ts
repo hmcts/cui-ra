@@ -5,8 +5,10 @@ process.on('unhandledRejection', reason => {
 
 const url = process.env.TEST_URL ? `${process.env.TEST_URL}/demo` : 'https://cui-ra.aat.platform.hmcts.net/demo';
 
-let featuresToInclude =
-  url.includes('cui-ra.aat') | url.includes('cui-ra.demo') | url.includes('cui-ra.pr') ? './features/**/*.feature' : '';
+let featuresToInclude: string =
+  url.includes('cui-ra.aat') || url.includes('cui-ra.demo') || url.includes('cui-ra.pr')
+    ? './features/**/*.feature'
+    : '';
 
 export const config = {
   TEST_URL: url,
