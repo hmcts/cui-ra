@@ -26,7 +26,6 @@ When(/^I select all the checkboxes and click continue$/, async function () {
   await I.click('#_enabled-PF0001-RA0001-RA0004');
   await I.click('#_enabled-PF0001-RA0001-RA0002');
   await I.click('#_enabled-PF0001-RA0001-RA0008');
-  await I.click('#_enabled-PF0001-RA0001-RA0003');
   await I.click('#_enabled-PF0001-RA0001-RA0006');
   await I.click('#_enabled-PF0001-RA0001-RA0005');
   await I.click('#_enabled-PF0001-RA0001-RA0007');
@@ -47,8 +46,6 @@ When(/^I select all the options and click Continue$/, async function () {
   await I.fillField('#flagComment-PF0001-RA0001-RA0004-RA0021', 'Parking Space');
   await I.click('#_enabled-PF0001-RA0001-RA0004-RA0019');
   await I.click('#_enabled-PF0001-RA0001-RA0004-RA0020');
-  await I.click('#_enabled-PF0001-RA0001-RA0004-OT0001');
-  await I.fillField('#flagComment-PF0001-RA0001-RA0004-OT0001', 'Other Details');
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
 
@@ -66,8 +63,6 @@ When(/^I select all the options and continue to next page$/, async function () {
   await I.fillField('#flagComment-PF0001-RA0001-RA0002-RA0013', '8.5 x 11');
   await I.click('#_enabled-PF0001-RA0001-RA0002-RA0015');
   await I.click('#_enabled-PF0001-RA0001-RA0002-RA0016');
-  await I.click('#_enabled-PF0001-RA0001-RA0002-OT0001');
-  await I.fillField('#flagComment-PF0001-RA0001-RA0002-OT0001', 'Other Details');
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
 Then(/^I am navigated to 'I need help communicating and understanding' page$/, async function () {
@@ -82,8 +77,6 @@ When(/^I select all the options and click continue to next page$/, async functio
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0040');
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0042');
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0046');
-  await I.click('#_enabled-PF0001-RA0001-RA0008-OT0001');
-  await I.fillField('#flagComment-PF0001-RA0001-RA0008-OT0001', 'Other Details');
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
 Then(
@@ -97,8 +90,6 @@ When(/^I select all four options and click continue$/, async function () {
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0009-RA0043');
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0009-RA0045');
   await I.click('#_enabled-PF0001-RA0001-RA0008-RA0009-RA0044');
-  await I.click('#_enabled-PF0001-RA0001-RA0008-RA0009-OT0001');
-  await I.fillField('#flagComment-PF0001-RA0001-RA0008-RA0009-OT0001', 'Other Details');
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
 Then(/^I am navigated to 'Which Sign Language Interpreter do you need to request\?' page$/, async function () {
@@ -119,8 +110,6 @@ Then(/^I am navigated to 'I need help with forms' page$/, async function () {
 When(/^I select all the three options and click continue$/, async function () {
   await I.click('#_enabled-PF0001-RA0001-RA0003-RA0017');
   await I.click('#_enabled-PF0001-RA0001-RA0003-RA0018');
-  await I.click('#_enabled-PF0001-RA0001-RA0003-OT0001');
-  await I.fillField('#flagComment-PF0001-RA0001-RA0003-OT0001', 'Other Details');
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
 Then(/^I am navigated to 'I need something to feel comfortable during my hearing' page$/, async function () {
@@ -133,8 +122,6 @@ When(/^I select all the five options and click continue$/, async function () {
   await I.click('#_enabled-PF0001-RA0001-RA0006-RA0033');
   await I.click('#_enabled-PF0001-RA0001-RA0006-RA0031');
   await I.click('#_enabled-PF0001-RA0001-RA0006-RA0032');
-  await I.click('#_enabled-PF0001-RA0001-RA0006-OT0001');
-  await I.fillField('#flagComment-PF0001-RA0001-RA0006-OT0001', 'Other Details');
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
 Then(/^I am navigated to 'I need to bring support with me to a hearing' page$/, async function () {
@@ -149,8 +136,6 @@ When(/^I select all the given options and click continue$/, async function () {
   await I.fillField('#flagComment-PF0001-RA0001-RA0005-RA0026', 'Carer');
   await I.click('#_enabled-PF0001-RA0001-RA0005-RA0029');
   await I.fillField('#flagComment-PF0001-RA0001-RA0005-RA0029', 'Dog');
-  await I.click('#_enabled-PF0001-RA0001-RA0005-OT0001');
-  await I.fillField('#flagComment-PF0001-RA0001-RA0005-OT0001', 'Other Details');
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
 Then(/^I am navigated to 'I need to request a certain type of hearing' page$/, async function () {
@@ -161,8 +146,6 @@ When(/^I select all the four options and click continue$/, async function () {
   await I.click('#_enabled-PF0001-RA0001-RA0007-RA0034');
   await I.click('#_enabled-PF0001-RA0001-RA0007-RA0036');
   await I.click('#_enabled-PF0001-RA0001-RA0007-RA0035');
-  await I.click('#_enabled-PF0001-RA0001-RA0007-OT0001');
-  await I.fillField('#flagComment-PF0001-RA0001-RA0007-OT0001', 'Other Details');
   await I.click('#main-content > div > div > form > div.govuk-button-group > button');
 });
 

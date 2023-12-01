@@ -16,8 +16,6 @@ Feature: New Journey
     When I select all four options and click continue
     Then I am navigated to 'Which Sign Language Interpreter do you need to request?' page
     When I type in the dynamic dropdown and select an option and click continue
-    Then I am navigated to 'I need help with forms' page
-    When I select all the three options and click continue
     Then I am navigated to 'I need something to feel comfortable during my hearing' page
     When I select all the five options and click continue
     Then I am navigated to 'I need to bring support with me to a hearing' page
@@ -49,8 +47,6 @@ Feature: New Journey
     When I select all four options and click continue
     Then I am navigated to 'Which Sign Language Interpreter do you need to request?' page
     When I type in the dynamic dropdown and select an option and click continue
-    Then I am navigated to 'I need help with forms' page
-    When I select all the three options and click continue
     Then I am navigated to 'I need something to feel comfortable during my hearing' page
     When I select all the five options and click continue
     Then I am navigated to 'I need to bring support with me to a hearing' page
