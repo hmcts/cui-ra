@@ -5,6 +5,9 @@ process.on('unhandledRejection', reason => {
 
 const url = process.env.TEST_URL ? `${process.env.TEST_URL}/demo` : 'https://cui-ra.aat.platform.hmcts.net/demo';
 
+let featuresToInclude =
+  url.includes('cui-ra.aat') | url.includes('cui-ra.demo') | url.includes('cui-ra.pr') ? './features/**/*.feature' : '';
+
 export const config = {
   TEST_URL: url,
   TestHeadlessBrowser: true,
@@ -12,8 +15,7 @@ export const config = {
   WaitForTimeout: 10000,
 
   Gherkin: {
-    features: './features/hello-world.feature',
-    //features: './features/**/*.feature',
+    features: featuresToInclude,
     steps: ['../steps/common.ts', '../steps/commonsteps.ts'],
   },
   helpers: {},
