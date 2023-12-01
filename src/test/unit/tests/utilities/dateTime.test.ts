@@ -9,7 +9,7 @@ describe('DataTimeUtilities', () => {
       // Mock the Date object to return the fixed date for this test
       jest.spyOn(global, 'Date').mockImplementation(() => fixedDate);
 
-      const expectedDateTime = '2023-07-24T12:34:56.000';
+      const expectedDateTime = '2023-07-24T12:34:56.000Z';
 
       // Call the getDateTime method
       const result = DataTimeUtilities.getDateTime();

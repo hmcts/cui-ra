@@ -1,6 +1,6 @@
 export class DataTimeUtilities {
   public static getDateTime(): string {
     const now: Date = new Date();
-    return now.toISOString().replace('Z', '');
+    return now.toISOString();
   }
 }
