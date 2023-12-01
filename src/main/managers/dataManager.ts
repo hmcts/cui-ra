@@ -78,6 +78,6 @@ export class DataManager<T> implements DataManagerInterface<T> {
 
   public getDateTime(): string {
     const now: Date = new Date();
-    return now.toISOString().replace('Z', '');
+    return now.toISOString();
   }
 }
