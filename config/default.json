@@ -4,7 +4,7 @@
     "instrumentationKey": false
   },
   "demo": {
-    "enabled": false
+    "enabled": true
   },
   "serviceName": "cui_ra",
   "session": {
