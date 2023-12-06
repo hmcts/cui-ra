@@ -1996,13 +1996,13 @@
     "_isMaster": false,
     "_errors": [],
     "_childIds": [
-      "PF0001-RA0001-RA0004-RA0024",
       "PF0001-RA0001-RA0004-RA0022",
       "PF0001-RA0001-RA0004-RA0025",
       "PF0001-RA0001-RA0004-RA0023",
       "PF0001-RA0001-RA0004-RA0021",
       "PF0001-RA0001-RA0004-RA0019",
-      "PF0001-RA0001-RA0004-RA0020"
+      "PF0001-RA0001-RA0004-RA0020",
+      "PF0001-RA0001-RA0004-OT0001"
     ],
     "id": "PF0001-RA0001-RA0004",
     "value": {
@@ -2034,10 +2034,10 @@
     "_isMaster": false,
     "_errors": [],
     "_childIds": [],
-    "id": "PF0001-RA0001-RA0004-RA0024",
+    "id": "PF0001-RA0001-RA0004-OT0001",
     "value": {
-      "name": "A different type of chair",
-      "name_cy": "Math gwahanol o gadair",
+      "name": "Other",
+      "name_cy": "Arall",
       "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
@@ -2052,7 +2052,7 @@
         }
       ],
       "hearingRelevant": "Yes",
-      "flagCode": "RA0024",
+      "flagCode": "OT0001",
       "status": "Requested",
       "availableExternally": "Yes"
     },
