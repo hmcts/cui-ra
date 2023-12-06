@@ -37,8 +37,6 @@ Then(/^I am navigated to 'I need adjustments to get to, into and around our buil
 });
 When(/^I select all the options and click Continue$/, async function () {
   I.wait(2);
-  await I.click('#_enabled-PF0001-RA0001-RA0004-RA0024');
-  await I.fillField('#flagComment-PF0001-RA0001-RA0004-RA0024', 'A chair with back support');
   await I.click('#_enabled-PF0001-RA0001-RA0004-RA0022');
   await I.click('#_enabled-PF0001-RA0001-RA0004-RA0025');
   await I.click('#_enabled-PF0001-RA0001-RA0004-RA0023');
