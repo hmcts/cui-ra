@@ -3,12 +3,35 @@ version: '2'
 services:
   # TODO: change this name to match the name of your app
   cui-ra:
+    container_name: cui-ra-app
     build:
       context: .
       args:
         - http_proxy
         - https_proxy
         - no_proxy
+    depends_on:
+      - redis
+    environment:
+      - NODE_ENV=development
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_TLS=false
+      - REDIS_PROTOCOL=redis
+      - DEMO_ENABLED=true
     ports:
       # TODO: change this mapping to map the port your application listens on
       - '3100:3100'
+    volumes:
+      - ./secrets:/mnt/secrets:ro
+  redis:
+    image: "redis:latest"
+    container_name: "cui-redis-container"
+    command: sh -c 'if [ -f /password-file ]; then cat /password-file; else echo "password"; fi | redis-server --requirepass $(cat)'
+    ports:
+      - "6379:6379"
+    expose:
+      - 6379:6379
+    volumes:
+      - ./secrets/cui/redis-access-key:/password-file:ro
+  
