@@ -34,9 +34,6 @@ export class SessionStorage {
   }
 
   private getStore() {
-    //const redisStore = RedisStore(session);
-    //const fileStore = FileStoreFactory(session);
-
     const host: string = config.get('session.redis.host');
     const port: number = config.get('session.redis.port');
     const key: string = config.get('session.redis.key');
