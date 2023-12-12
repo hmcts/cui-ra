@@ -32,7 +32,7 @@ Mount Secrets using pvmount:{env} (demo,aat,perftest,ithc). This command will do
 yarn pvmount:aat
 ```
 
-The application requires a redis cache. This can be created via the following command. (change the password to be the value of redis password stored in the secret folder. or keep it as password and delete the redis password file from the secret folder)
+The application requires a redis cache. This can be created via the following command. (change the password to be the value of redis password stored in the secret folder. or keep it as password and delete the redis password file from the secret folder). alternativly running docker-compose will also create a redis cache ready to be used.
 
 ```bash
 docker run --name redis -p 6379:6379 -d redis redis-server --requirepass "password"
@@ -41,30 +41,36 @@ docker run --name redis -p 6379:6379 -d redis redis-server --requirepass "passwo
 Run:
 
 ```bash
-yarn start
+yarn start:dev
 ```
 
 The applications's home page will be available at https://localhost:3100
 
-### Running with Docker
+### Running with Docker-compose
 
-Create docker image:
-
-```bash
-docker-compose build
-```
-
-Run the application by executing the following command:
+Mount Secrets using pvmount:{env} (demo,aat,perftest,ithc). This command will download azure secrets into a secret folder that will be consumed by properties-volume lib. This folder will be mounted as a volume in the application docker container
 
 ```bash
-docker-compose up
+yarn pvmount:aat
 ```
 
-This will start the frontend container exposing the application's port
-(set to `3100` in this template app).
+due to cookie contraints we need to run the application via a nginx proxy on https. the compose file will do this for you. However we need to generate the ssl files that will be mounted. Run the following command
 
-In order to test if the application is up, you can visit https://localhost:3100 in your browser.
-You should get a very basic home page (no styles, etc.).
+```bash
+./bin/generate-ssl-options.sh
+```
+
+Create & run docker image:
+
+```bash
+docker-compose up --build -d
+```
+
+This will start the frontend container a redis cache and a nginx proxy. 
+
+NOTE: the frontend application can only be accessed via the nginx proxy because of express-session and cookie contraints
+
+In order to test if the application is up, you can visit https://localhost/demo in your browser. MAKE SURE TO USE HTTPS://
 
 ## Developing
 
