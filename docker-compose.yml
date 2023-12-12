@@ -13,18 +13,26 @@ services:
     depends_on:
       - redis
     environment:
-      - NODE_ENV=development
       - REDIS_HOST=redis
       - REDIS_PORT=6379
       - REDIS_TLS=false
       - REDIS_PROTOCOL=redis
       - DEMO_ENABLED=true
       - SESSION_SECURE=true
-    ports:
-      # TODO: change this mapping to map the port your application listens on
-      - '3100:3100'
+    expose:
+      - 3100
     volumes:
       - ./secrets:/mnt/secrets:ro
+  nginx:
+    container_name: cui-nginx
+    image: nginx:latest
+    ports:
+      - '443:443'
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./src/main/resources/localhost-ssl/:/certs/:ro
+    depends_on:
+      - cui-ra
   redis:
     image: 'redis:latest'
     container_name: 'cui-redis-container'
