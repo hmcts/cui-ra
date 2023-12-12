@@ -22,10 +22,10 @@ export class SessionStorage {
         saveUninitialized: false,
         secret: config.get('session.secret'),
         cookie: {
-          httpOnly: !app.locals.developmentMode,
+          httpOnly: true,
           maxAge: config.get('session.maxAge'),
           sameSite: 'lax', // required for the oauth2 redirect
-          secure: !app.locals.developmentMode,
+          secure: config.get('session.secure'),
         },
         rolling: true, // Renew the cookie for another 20 minutes on each request
         store: this.getStore(),
@@ -60,9 +60,7 @@ export class SessionStorage {
         });
       }
       const client = new Redis(redisConfig);
-      client.on('error', function (err) {
-        this.logger.error(err);
-      });
+      client.on('error', this.logger.error);
       const store = new RedisStore({
         client,
       });

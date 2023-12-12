@@ -19,19 +19,19 @@ services:
       - REDIS_TLS=false
       - REDIS_PROTOCOL=redis
       - DEMO_ENABLED=true
+      - SESSION_SECURE=false
     ports:
       # TODO: change this mapping to map the port your application listens on
       - '3100:3100'
     volumes:
       - ./secrets:/mnt/secrets:ro
   redis:
-    image: "redis:latest"
-    container_name: "cui-redis-container"
-    command: sh -c 'if [ -f /password-file ]; then cat /password-file; else echo "password"; fi | redis-server --requirepass $(cat)'
+    image: 'redis:latest'
+    container_name: 'cui-redis-container'
+    command: sh -c 'if [ -f /mnt/secrets/cui/redis-access-key ]; then cat /mnt/secrets/cui/redis-access-key; else echo "password"; fi | redis-server --requirepass $(cat)'
     ports:
-      - "6379:6379"
+      - '6379:6379'
     expose:
       - 6379:6379
     volumes:
-      - ./secrets/cui/redis-access-key:/password-file:ro
-  
+      - ./secrets:/mnt/secrets:ro
