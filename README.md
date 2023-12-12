@@ -66,7 +66,7 @@ Create & run docker image:
 docker-compose up --build -d
 ```
 
-This will start the frontend container a redis cache and a nginx proxy. 
+This will start the frontend container a redis cache and a nginx proxy.
 
 NOTE: the frontend application can only be accessed via the nginx proxy because of express-session and cookie contraints
 
