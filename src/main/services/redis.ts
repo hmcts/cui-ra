@@ -71,6 +71,7 @@ export class RedisClient implements RedisClientInterface {
 
   public async set(key: string, value: string): Promise<void> {
     await this.client.set(key, value, { EX: 3600 });
+    this.logger.info(`Redis set key ${key}`);
   }
 
   public async get(key: string): Promise<string | null> {

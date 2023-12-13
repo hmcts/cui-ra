@@ -52,8 +52,6 @@ export class DemoController {
   public async startDemo(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
       const action = req.query.action;
-
-      //const host = 'https://localhost:3100';
       const host = 'https://cui-ra.aat.platform.hmcts.net';
 
       switch (action) {

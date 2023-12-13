@@ -4,8 +4,12 @@
   },
   "serviceName": "cui_ra",
   "session": {
+    "secure": "SESSION_SECURE",
     "redis": {
-      "host": "REDIS_HOST"
+      "host": "REDIS_HOST",
+      "port": "REDIS_PORT",
+      "tls": "REDIS_TLS",
+      "urlStart": "REDIS_PROTOCOL"
     }
   },
   "services": {
