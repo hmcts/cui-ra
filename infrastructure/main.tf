@@ -32,13 +32,13 @@ resource "azurerm_key_vault_secret" "AZURE_APPINSGHTS_KEY" {
   key_vault_id = module.key-vault.key_vault_id
 }
 
-resource "azurerm_application_insights" "appinsights" {
-  name                = "${var.product}-${var.env}"
-  location            = var.location
-  resource_group_name = azurerm_resource_group.rg.name
-  application_type    = "web"
-  tags                = var.common_tags
-}
+# resource "azurerm_application_insights" "appinsights" {
+#   name                = "${var.product}-${var.env}"
+#   location            = var.location
+#   resource_group_name = azurerm_resource_group.rg.name
+#   application_type    = "web"
+#   tags                = var.common_tags
+# }
 
 //data "azurerm_subnet" "core_infra_redis_subnet" {
 //  name                 = "core-infra-subnet-1-${var.env}"
