@@ -8,9 +8,22 @@ Resasonable Adjustments Microsite for Citizen UI Flags
 
 Running the application requires the following tools to be installed in your environment:
 
-- [Node.js](https://nodejs.org/) v12.0.0 or later
-- [yarn](https://yarnpkg.com/)
+- [Node.js](https://nodejs.org/) version can be found in [.nvmrc](https://github.com/hmcts/cui-ra/blob/master/.nvmrc) (as of writting v18.17.1)
+- [NVM](https://github.com/nvm-sh/nvm#installing-and-updating) node version manager (optional but allows swapping node version with a single command)
+- [yarn](https://yarnpkg.com/) v1.22.19 and up
 - [Docker](https://www.docker.com)
+- [Docker Compose](https://www.docker.com) packaged with docker. min v2.17.3 and up.
+- [Azure CLI](https://learn.microsoft.com/en-gb/cli/azure/install-azure-cli)
+
+
+Make sure the node version installed is the same version found in the [.nvmrc](https://github.com/hmcts/cui-ra/blob/master/.nvmrc) file. 
+
+If using [NVM](https://github.com/nvm-sh/nvm#installing-and-updating) the following command can be run in the project root directory to make sure the enviroment has the same nodejs version stated in the [.nvmrc](https://github.com/hmcts/cui-ra/blob/master/.nvmrc) file. This command can be skipped if your version of node already matches the required version found in the [.nvmrc](https://github.com/hmcts/cui-ra/blob/master/.nvmrc) file.
+
+```bash
+nvm use
+```
+
 
 ### Running the application
 
@@ -26,13 +39,13 @@ Bundle:
 yarn webpack
 ```
 
-Mount Secrets using pvmount:{env} (demo,aat,perftest,ithc). This command will download azure secrets into a secret folder that will be consumed by properties-volume lib:
+Mount Secrets using pvmount:{env} (demo,aat,perftest,ithc). This command will download azure secrets into a secret folder that will be consumed by the properties-volume lib (This tool require [Azure CLI](https://learn.microsoft.com/en-gb/cli/azure/install-azure-cli) to be authenticated before running. Using the 'az login' command):
 
 ```bash
 yarn pvmount:aat
 ```
 
-The application requires a redis cache. This can be created via the following command. (change the password to be the value of redis password stored in the secret folder. or keep it as password and delete the redis password file from the secret folder). alternativly running docker-compose will also create a redis cache ready to be used.
+The application requires a redis cache. This can be created via the following command. (change the password to be the value of redis password stored in the secret folder. or keep it as password and delete the redis password file from the secret folder). alternativly running docker-compose will also create a redis cache ready to be used and will auto detect the password. see [Running with Docker-compose](#running-with-docker-compose) for details.
 
 ```bash
 docker run --name redis -p 6379:6379 -d redis redis-server --requirepass "password"
