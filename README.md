@@ -1,6 +1,8 @@
 # cui-ra
 
-Resasonable Adjustments Microsite for Citizen UI Flags
+Reasonable Adjustments Microsite for Citizen UI Flags is an application designed to be invoked through an API POST request. Following the invocation, the service redirects the user to the CUI application, enabling them to add and modify a set of reasonable adjustments. Upon completing the Citizen UI journey, the user is redirected back to the invoking service through the callback URL provided in the initial POST, along with a unique ID. The invoking service can subsequently utilize this unique ID to initiate a simple API GET request and retrieve the relevant data.
+
+![flow diagram](https://tools.hmcts.net/confluence/rest/gliffy/1.0/embeddedDiagrams/1af0db44-738c-4f98-bb17-2c98a59c36ce.png)
 
 ## Getting Started
 
