@@ -17,15 +17,13 @@ Running the application requires the following tools to be installed in your env
 - [Docker Compose](https://www.docker.com) packaged with docker. min v2.17.3 and up.
 - [Azure CLI](https://learn.microsoft.com/en-gb/cli/azure/install-azure-cli)
 
-
-Make sure the node version installed is the same version found in the [.nvmrc](https://github.com/hmcts/cui-ra/blob/master/.nvmrc) file. 
+Make sure the node version installed is the same version found in the [.nvmrc](https://github.com/hmcts/cui-ra/blob/master/.nvmrc) file.
 
 If using [NVM](https://github.com/nvm-sh/nvm#installing-and-updating) the following command can be run in the project root directory to make sure the enviroment has the same nodejs version stated in the [.nvmrc](https://github.com/hmcts/cui-ra/blob/master/.nvmrc) file. This command can be skipped if your version of node already matches the required version found in the [.nvmrc](https://github.com/hmcts/cui-ra/blob/master/.nvmrc) file.
 
 ```bash
 nvm use
 ```
-
 
 ### Running the application
 
@@ -97,7 +95,7 @@ alongside [stylelint](https://stylelint.io/)
 Running the linting with auto fix:
 
 ```bash
-yarn lint --fix
+yarn lint:fix
 ```
 
 ### Running the tests
