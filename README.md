@@ -90,7 +90,7 @@ In order to test if the application is up, you can visit https://localhost/demo 
 ### Code style
 
 We use [ESLint](https://github.com/typescript-eslint/typescript-eslint)
-alongside [sass-lint](https://github.com/sasstools/sass-lint)
+alongside [stylelint](https://stylelint.io/)
 
 Running the linting with auto fix:
 
