@@ -47,7 +47,7 @@ Mount Secrets using pvmount:{env} (demo,aat,perftest,ithc). This command will do
 yarn pvmount:aat
 ```
 
-The application requires a redis cache. This can be created via the following command. (change the password to be the value of redis password stored in the secret folder. or keep it as password and delete the redis password file from the secret folder). alternativly running docker-compose will also create a redis cache ready to be used and will auto detect the password. see [Running with Docker-compose](#running-with-docker-compose) for details.
+The application requires a redis cache. This can be created via the following command. (change the password to be the value of redis password stored in the secret folder. or keep it as password and delete the redis password file from the secret folder). alternativly running docker-compose will also create a redis cache ready to be used and will auto detect the password (Recommended). see [Running with Docker-compose](#running-with-docker-compose) for details.
 
 ```bash
 docker run --name redis -p 6379:6379 -d redis redis-server --requirepass "password"
