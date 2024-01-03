@@ -57,7 +57,7 @@ Run:
 yarn start:dev
 ```
 
-The applications's home page will be available at https://localhost:3100
+The applications's home page will be available at https://localhost:3100 This will show a default page head over to https://localhost:3100/demo this page is not available in production
 
 ### Running with Docker-compose
 
