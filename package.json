@@ -100,7 +100,7 @@
     "@types/express-session": "^1.17.7",
     "@types/jest": "^29.4.0",
     "@types/session-file-store": "^1.2.2",
-    "@types/supertest": "^2.0.12",
+    "@types/supertest": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "axios-debug-log": "^1.0.0",

@@ -57,7 +57,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/require-directory", "npm:2.1.6"],\
             ["@types/serve-favicon", "npm:2.5.7"],\
             ["@types/session-file-store", "npm:1.2.5"],\
-            ["@types/supertest", "npm:2.0.16"],\
+            ["@types/supertest", "npm:6.0.2"],\
             ["@typescript-eslint/eslint-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.7.5"],\
             ["@typescript-eslint/parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.7.5"],\
             ["accessible-autocomplete", "npm:2.0.4"],\
@@ -5043,10 +5043,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/cookiejar", [\
-        ["npm:2.1.2", {\
-          "packageLocation": "./.yarn/cache/@types-cookiejar-npm-2.1.2-2588120a7c-f6e1903454.zip/node_modules/@types/cookiejar/",\
+        ["npm:2.1.5", {\
+          "packageLocation": "./.yarn/cache/@types-cookiejar-npm-2.1.5-f36531e52d-04d5990e87.zip/node_modules/@types/cookiejar/",\
           "packageDependencies": [\
-            ["@types/cookiejar", "npm:2.1.2"]\
+            ["@types/cookiejar", "npm:2.1.5"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5279,6 +5279,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/methods", [\
+        ["npm:1.1.4", {\
+          "packageLocation": "./.yarn/cache/@types-methods-npm-1.1.4-8565dc8af4-ad2a717848.zip/node_modules/@types/methods/",\
+          "packageDependencies": [\
+            ["@types/methods", "npm:1.1.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/mime", [\
         ["npm:3.0.1", {\
           "packageLocation": "./.yarn/cache/@types-mime-npm-3.0.1-dec03536dc-4040fac73f.zip/node_modules/@types/mime/",\
@@ -5439,22 +5448,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/superagent", [\
-        ["npm:4.1.15", {\
-          "packageLocation": "./.yarn/cache/@types-superagent-npm-4.1.15-621c984fca-347cd74ef0.zip/node_modules/@types/superagent/",\
+        ["npm:8.1.2", {\
+          "packageLocation": "./.yarn/cache/@types-superagent-npm-8.1.2-2d11359c2f-45b4b2db94.zip/node_modules/@types/superagent/",\
           "packageDependencies": [\
-            ["@types/superagent", "npm:4.1.15"],\
-            ["@types/cookiejar", "npm:2.1.2"],\
+            ["@types/superagent", "npm:8.1.2"],\
+            ["@types/cookiejar", "npm:2.1.5"],\
+            ["@types/methods", "npm:1.1.4"],\
             ["@types/node", "npm:20.11.5"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@types/supertest", [\
-        ["npm:2.0.16", {\
-          "packageLocation": "./.yarn/cache/@types-supertest-npm-2.0.16-2ccc258659-2fc998ea69.zip/node_modules/@types/supertest/",\
+        ["npm:6.0.2", {\
+          "packageLocation": "./.yarn/cache/@types-supertest-npm-6.0.2-1f239669e4-1eafa47266.zip/node_modules/@types/supertest/",\
           "packageDependencies": [\
-            ["@types/supertest", "npm:2.0.16"],\
-            ["@types/superagent", "npm:4.1.15"]\
+            ["@types/supertest", "npm:6.0.2"],\
+            ["@types/methods", "npm:1.1.4"],\
+            ["@types/superagent", "npm:8.1.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8984,7 +8995,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/require-directory", "npm:2.1.6"],\
             ["@types/serve-favicon", "npm:2.5.7"],\
             ["@types/session-file-store", "npm:1.2.5"],\
-            ["@types/supertest", "npm:2.0.16"],\
+            ["@types/supertest", "npm:6.0.2"],\
             ["@typescript-eslint/eslint-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.7.5"],\
             ["@typescript-eslint/parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.7.5"],\
             ["accessible-autocomplete", "npm:2.0.4"],\
