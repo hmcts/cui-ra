@@ -111,7 +111,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["otplib", "npm:12.0.1"],\
             ["pa11y", "npm:6.2.3"],\
             ["playwright", "npm:1.37.1"],\
-            ["prettier", "npm:2.8.8"],\
+            ["prettier", "npm:3.2.4"],\
             ["puppeteer", "npm:21.4.0"],\
             ["redis", "npm:4.6.12"],\
             ["reflect-metadata", "npm:0.1.13"],\
@@ -8634,7 +8634,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["otplib", "npm:12.0.1"],\
             ["pa11y", "npm:6.2.3"],\
             ["playwright", "npm:1.37.1"],\
-            ["prettier", "npm:2.8.8"],\
+            ["prettier", "npm:3.2.4"],\
             ["puppeteer", "npm:21.4.0"],\
             ["redis", "npm:4.6.12"],\
             ["reflect-metadata", "npm:0.1.13"],\
@@ -15198,10 +15198,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prettier", [\
-        ["npm:2.8.8", {\
-          "packageLocation": "./.yarn/cache/prettier-npm-2.8.8-430828a36c-b49e409431.zip/node_modules/prettier/",\
+        ["npm:3.2.4", {\
+          "packageLocation": "./.yarn/unplugged/prettier-npm-3.2.4-3ca24592c3/node_modules/prettier/",\
           "packageDependencies": [\
-            ["prettier", "npm:2.8.8"]\
+            ["prettier", "npm:3.2.4"]\
           ],\
           "linkType": "HARD"\
         }]\
