@@ -3,7 +3,7 @@ process.on('unhandledRejection', reason => {
   throw reason;
 });
 
-const url = process.env.TEST_URL ? `${process.env.TEST_URL}/demo` : 'https://cui-ra.aat.platform.hmcts.net/demo';
+const url = process.env.TEST_URL ? `${process.env.TEST_URL}/demo` : 'http://localhost:3100/demo';
 
 let featuresToInclude = url.includes('aat') ? './features/**/*.feature' : '';
 

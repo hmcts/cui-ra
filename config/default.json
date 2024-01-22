@@ -4,12 +4,13 @@
     "instrumentationKey": false
   },
   "demo": {
-    "enabled": false
+    "enabled": true
   },
   "serviceName": "cui_ra",
   "session": {
     "secret": "local",
     "maxAge": 1800000,
+    "secure": true,
     "redis": {
       "host": "",
       "port": "6380",

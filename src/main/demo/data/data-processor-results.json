@@ -1965,7 +1965,6 @@
       "PF0001-RA0001-RA0004",
       "PF0001-RA0001-RA0002",
       "PF0001-RA0001-RA0008",
-      "PF0001-RA0001-RA0003",
       "PF0001-RA0001-RA0006",
       "PF0001-RA0001-RA0005",
       "PF0001-RA0001-RA0007"
@@ -1997,13 +1996,13 @@
     "_isMaster": false,
     "_errors": [],
     "_childIds": [
-      "PF0001-RA0001-RA0004-RA0024",
       "PF0001-RA0001-RA0004-RA0022",
       "PF0001-RA0001-RA0004-RA0025",
       "PF0001-RA0001-RA0004-RA0023",
       "PF0001-RA0001-RA0004-RA0021",
       "PF0001-RA0001-RA0004-RA0019",
-      "PF0001-RA0001-RA0004-RA0020"
+      "PF0001-RA0001-RA0004-RA0020",
+      "PF0001-RA0001-RA0004-OT0001"
     ],
     "id": "PF0001-RA0001-RA0004",
     "value": {
@@ -2035,10 +2034,10 @@
     "_isMaster": false,
     "_errors": [],
     "_childIds": [],
-    "id": "PF0001-RA0001-RA0004-RA0024",
+    "id": "PF0001-RA0001-RA0004-OT0001",
     "value": {
-      "name": "A different type of chair",
-      "name_cy": "Math gwahanol o gadair",
+      "name": "Other",
+      "name_cy": "Arall",
       "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
@@ -2053,7 +2052,7 @@
         }
       ],
       "hearingRelevant": "Yes",
-      "flagCode": "RA0024",
+      "flagCode": "OT0001",
       "status": "Requested",
       "availableExternally": "Yes"
     },
@@ -3154,135 +3153,6 @@
       "availableExternally": "Yes"
     },
     "_parentId": "PF0001-RA0001-RA0008"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": true,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": true,
-    "_isMaster": false,
-    "_errors": [],
-    "_childIds": ["PF0001-RA0001-RA0003-RA0017", "PF0001-RA0001-RA0003-RA0018", "PF0001-RA0001-RA0003-OT0001"],
-    "id": "PF0001-RA0001-RA0003",
-    "value": {
-      "name": "I need help with forms",
-      "name_cy": "Rwyf angen help gyda ffurflenni",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0003",
-      "status": "Active",
-      "availableExternally": "No"
-    },
-    "_parentId": "PF0001-RA0001"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_isMaster": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0003-RA0017",
-    "value": {
-      "name": "Guidance on how to complete forms",
-      "name_cy": "Arweiniad ar sut i lenwi ffurflenni",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help with forms"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0017",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0003"
-  },
-  {
-    "_flagComment": false,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_isMaster": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0003-RA0018",
-    "value": {
-      "name": "Support filling in forms",
-      "name_cy": "Cymorth i lenwi ffurflenni",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help with forms"
-        }
-      ],
-      "hearingRelevant": "No",
-      "flagCode": "RA0018",
-      "status": "Active",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0003"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_isMaster": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0003-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need help with forms"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0003"
   },
   {
     "_flagComment": false,

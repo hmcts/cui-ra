@@ -4,7 +4,6 @@ import config from 'config';
 import RedisStore from 'connect-redis';
 import { Application } from 'express';
 import session from 'express-session';
-//import FileStoreFactory from 'session-file-store';
 
 const Redis = require('ioredis');
 
@@ -15,7 +14,6 @@ export class SessionStorage {
     if (!app.locals.developmentMode) {
       app.set('trust proxy', 1);
     }
-
     app.use(
       session({
         name: 'cui-session',
@@ -23,10 +21,10 @@ export class SessionStorage {
         saveUninitialized: false,
         secret: config.get('session.secret'),
         cookie: {
-          httpOnly: !app.locals.developmentMode,
+          httpOnly: true,
           maxAge: config.get('session.maxAge'),
           sameSite: 'lax', // required for the oauth2 redirect
-          secure: !app.locals.developmentMode,
+          secure: config.get('session.secure'),
         },
         rolling: true, // Renew the cookie for another 20 minutes on each request
         store: this.getStore(),
@@ -35,9 +33,6 @@ export class SessionStorage {
   }
 
   private getStore() {
-    //const redisStore = RedisStore(session);
-    //const fileStore = FileStoreFactory(session);
-
     const host: string = config.get('session.redis.host');
     const port: number = config.get('session.redis.port');
     const key: string = config.get('session.redis.key');
@@ -48,6 +43,10 @@ export class SessionStorage {
         host,
         port: port ?? 6380,
         password: key,
+        retryStrategy: times => {
+          // Use a custom retry strategy if needed
+          return Math.min(times * 50, 2000);
+        },
       };
 
       if (tlsOn === true) {
@@ -57,14 +56,13 @@ export class SessionStorage {
         });
       }
       const client = new Redis(redisConfig);
-      return new RedisStore({
+      client.on('error', this.logger.error);
+      const store = new RedisStore({
         client,
       });
+      return store;
     }
 
     return undefined;
-    //return new fileStore({
-    //  path: '/tmp',
-    //});
   }
 }

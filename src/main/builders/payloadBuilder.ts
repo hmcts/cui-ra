@@ -50,10 +50,7 @@ export class PayloadBuilder {
               } as MainPayloadDetailCollection;
             });
         }
-        replacementFlags.details = [...ndata];
-      }
-      if (req.session.existingmanager?.modified === true) {
-        replacementFlags.details = [...edata, ...replacementFlags.details];
+        replacementFlags.details = [...edata, ...ndata];
       }
     }
 
