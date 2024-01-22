@@ -123,7 +123,7 @@
     "lint-staged": "^14.0.0",
     "mini-css-extract-plugin": "^2.6.1",
     "nock": "^13.2.9",
-    "nodemon": "^2.0.19",
+    "nodemon": "^3.0.0",
     "pa11y": "^6.2.3",
     "playwright": "1.37.1",
     "prettier": "^2.7.1",
