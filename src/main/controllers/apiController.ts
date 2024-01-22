@@ -9,7 +9,10 @@ import { Request, Response } from 'express';
 
 @autobind
 export class ApiController {
-  constructor(private logger: Logger, private redisClient: RedisClientInterface) {}
+  constructor(
+    private logger: Logger,
+    private redisClient: RedisClientInterface
+  ) {}
 
   public async postPayload(req: Request, res: Response): Promise<Response> {
     try {
