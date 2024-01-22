@@ -135,7 +135,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"],\
             ["webpack", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.89.0"],\
             ["webpack-cli", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.1.4"],\
-            ["webpack-dev-middleware", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.1.1"],\
+            ["webpack-dev-middleware", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.0.0"],\
             ["webpack-node-externals", "npm:3.0.0"]\
           ],\
           "linkType": "SOFT"\
@@ -6613,6 +6613,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["arg", "npm:4.1.3"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:5.0.2", {\
+          "packageLocation": "./.yarn/cache/arg-npm-5.0.2-2f5805a547-6c69ada1a9.zip/node_modules/arg/",\
+          "packageDependencies": [\
+            ["arg", "npm:5.0.2"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["argparse", [\
@@ -9073,7 +9080,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"],\
             ["webpack", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.89.0"],\
             ["webpack-cli", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.1.4"],\
-            ["webpack-dev-middleware", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.1.1"],\
+            ["webpack-dev-middleware", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.0.0"],\
             ["webpack-node-externals", "npm:3.0.0"]\
           ],\
           "linkType": "SOFT"\
@@ -11194,15 +11201,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["fs-monkey", [\
-        ["npm:1.0.3", {\
-          "packageLocation": "./.yarn/cache/fs-monkey-npm-1.0.3-c1ea1ab781-cf50804833.zip/node_modules/fs-monkey/",\
-          "packageDependencies": [\
-            ["fs-monkey", "npm:1.0.3"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["fs.realpath", [\
         ["npm:1.0.0", {\
           "packageLocation": "./.yarn/cache/fs.realpath-npm-1.0.0-c8f05d8126-99ddea01a7.zip/node_modules/fs.realpath/",\
@@ -12051,6 +12049,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/husky-npm-8.0.3-b0b59c5127-837bc7e441.zip/node_modules/husky/",\
           "packageDependencies": [\
             ["husky", "npm:8.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["hyperdyperid", [\
+        ["npm:1.2.0", {\
+          "packageLocation": "./.yarn/cache/hyperdyperid-npm-1.2.0-47be2553af-210029d1c8.zip/node_modules/hyperdyperid/",\
+          "packageDependencies": [\
+            ["hyperdyperid", "npm:1.2.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -13585,6 +13592,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["json-joy", [\
+        ["npm:9.9.1", {\
+          "packageLocation": "./.yarn/cache/json-joy-npm-9.9.1-ed3b23f938-d165398682.zip/node_modules/json-joy/",\
+          "packageDependencies": [\
+            ["json-joy", "npm:9.9.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:7c447175b396f9bdacf0855ca6876814cc369f9fcbcd412ed35f9853991732bbec07981e29be143e6d167a903eb8f55b27e61c99f513b70a7e6aab53811ec632#npm:9.9.1", {\
+          "packageLocation": "./.yarn/__virtual__/json-joy-virtual-0967d29cf7/0/cache/json-joy-npm-9.9.1-ed3b23f938-d165398682.zip/node_modules/json-joy/",\
+          "packageDependencies": [\
+            ["json-joy", "virtual:7c447175b396f9bdacf0855ca6876814cc369f9fcbcd412ed35f9853991732bbec07981e29be143e6d167a903eb8f55b27e61c99f513b70a7e6aab53811ec632#npm:9.9.1"],\
+            ["@types/quill-delta", null],\
+            ["@types/rxjs", null],\
+            ["@types/tslib", null],\
+            ["arg", "npm:5.0.2"],\
+            ["hyperdyperid", "npm:1.2.0"],\
+            ["quill-delta", null],\
+            ["rxjs", null],\
+            ["tslib", null]\
+          ],\
+          "packagePeers": [\
+            "@types/quill-delta",\
+            "@types/rxjs",\
+            "@types/tslib",\
+            "quill-delta",\
+            "rxjs",\
+            "tslib"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["json-parse-even-better-errors", [\
         ["npm:2.3.1", {\
           "packageLocation": "./.yarn/cache/json-parse-even-better-errors-npm-2.3.1-144d62256e-798ed4cf33.zip/node_modules/json-parse-even-better-errors/",\
@@ -14312,11 +14351,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["memfs", [\
-        ["npm:3.4.12", {\
-          "packageLocation": "./.yarn/cache/memfs-npm-3.4.12-22a464cc9b-dab8dec1ae.zip/node_modules/memfs/",\
+        ["npm:4.6.0", {\
+          "packageLocation": "./.yarn/cache/memfs-npm-4.6.0-a09f68d72d-b32a35bee9.zip/node_modules/memfs/",\
           "packageDependencies": [\
-            ["memfs", "npm:3.4.12"],\
-            ["fs-monkey", "npm:1.0.3"]\
+            ["memfs", "npm:4.6.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:43684ea59bedef2fc5ba21df78170c6fdcbf7d98e7cf4a2b095d8b0b9823535eff2a510f6c13a5c6687f99037fc900cb375f8790dbe52cc9b9e2eca7be281539#npm:4.6.0", {\
+          "packageLocation": "./.yarn/__virtual__/memfs-virtual-7c447175b3/0/cache/memfs-npm-4.6.0-a09f68d72d-b32a35bee9.zip/node_modules/memfs/",\
+          "packageDependencies": [\
+            ["memfs", "virtual:43684ea59bedef2fc5ba21df78170c6fdcbf7d98e7cf4a2b095d8b0b9823535eff2a510f6c13a5c6687f99037fc900cb375f8790dbe52cc9b9e2eca7be281539#npm:4.6.0"],\
+            ["@types/tslib", null],\
+            ["json-joy", "virtual:7c447175b396f9bdacf0855ca6876814cc369f9fcbcd412ed35f9853991732bbec07981e29be143e6d167a903eb8f55b27e61c99f513b70a7e6aab53811ec632#npm:9.9.1"],\
+            ["thingies", "virtual:7c447175b396f9bdacf0855ca6876814cc369f9fcbcd412ed35f9853991732bbec07981e29be143e6d167a903eb8f55b27e61c99f513b70a7e6aab53811ec632#npm:1.16.0"],\
+            ["tslib", null]\
+          ],\
+          "packagePeers": [\
+            "@types/tslib",\
+            "tslib"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -18471,6 +18524,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["thingies", [\
+        ["npm:1.16.0", {\
+          "packageLocation": "./.yarn/cache/thingies-npm-1.16.0-0c28da5a92-9afbe70a97.zip/node_modules/thingies/",\
+          "packageDependencies": [\
+            ["thingies", "npm:1.16.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:7c447175b396f9bdacf0855ca6876814cc369f9fcbcd412ed35f9853991732bbec07981e29be143e6d167a903eb8f55b27e61c99f513b70a7e6aab53811ec632#npm:1.16.0", {\
+          "packageLocation": "./.yarn/__virtual__/thingies-virtual-07e419e0cf/0/cache/thingies-npm-1.16.0-0c28da5a92-9afbe70a97.zip/node_modules/thingies/",\
+          "packageDependencies": [\
+            ["thingies", "virtual:7c447175b396f9bdacf0855ca6876814cc369f9fcbcd412ed35f9853991732bbec07981e29be143e6d167a903eb8f55b27e61c99f513b70a7e6aab53811ec632#npm:1.16.0"],\
+            ["@types/tslib", null],\
+            ["tslib", null]\
+          ],\
+          "packagePeers": [\
+            "@types/tslib",\
+            "tslib"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["thirty-two", [\
         ["npm:1.0.2", {\
           "packageLocation": "./.yarn/cache/thirty-two-npm-1.0.2-9d9270aa34-f6700b31d1.zip/node_modules/thirty-two/",\
@@ -19556,20 +19631,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["webpack-dev-middleware", [\
-        ["npm:6.1.1", {\
-          "packageLocation": "./.yarn/cache/webpack-dev-middleware-npm-6.1.1-abfeb0602d-3bced6ef64.zip/node_modules/webpack-dev-middleware/",\
+        ["npm:7.0.0", {\
+          "packageLocation": "./.yarn/cache/webpack-dev-middleware-npm-7.0.0-4705687d98-90f6c87c80.zip/node_modules/webpack-dev-middleware/",\
           "packageDependencies": [\
-            ["webpack-dev-middleware", "npm:6.1.1"]\
+            ["webpack-dev-middleware", "npm:7.0.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.1.1", {\
-          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-2e4d14c7c7/0/cache/webpack-dev-middleware-npm-6.1.1-abfeb0602d-3bced6ef64.zip/node_modules/webpack-dev-middleware/",\
+        ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-43684ea59b/0/cache/webpack-dev-middleware-npm-7.0.0-4705687d98-90f6c87c80.zip/node_modules/webpack-dev-middleware/",\
           "packageDependencies": [\
-            ["webpack-dev-middleware", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.1.1"],\
+            ["webpack-dev-middleware", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.0.0"],\
             ["@types/webpack", null],\
             ["colorette", "npm:2.0.19"],\
-            ["memfs", "npm:3.4.12"],\
+            ["memfs", "virtual:43684ea59bedef2fc5ba21df78170c6fdcbf7d98e7cf4a2b095d8b0b9823535eff2a510f6c13a5c6687f99037fc900cb375f8790dbe52cc9b9e2eca7be281539#npm:4.6.0"],\
             ["mime-types", "npm:2.1.35"],\
             ["range-parser", "npm:1.2.1"],\
             ["schema-utils", "npm:4.0.0"],\
