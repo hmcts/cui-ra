@@ -78,7 +78,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["class-validator", "npm:0.14.0"],\
             ["codeceptjs", "npm:3.5.11"],\
             ["config", "npm:3.3.10"],\
-            ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.0"],\
+            ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.1"],\
             ["cookie-parser", "npm:1.4.6"],\
             ["copy-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.1.0"],\
             ["css-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.8.1"],\
@@ -8553,17 +8553,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["connect-redis", [\
-        ["npm:7.1.0", {\
-          "packageLocation": "./.yarn/cache/connect-redis-npm-7.1.0-7fd9a8c503-fb493fae89.zip/node_modules/connect-redis/",\
+        ["npm:7.1.1", {\
+          "packageLocation": "./.yarn/cache/connect-redis-npm-7.1.1-e1ca4e05df-ac91ee818d.zip/node_modules/connect-redis/",\
           "packageDependencies": [\
-            ["connect-redis", "npm:7.1.0"]\
+            ["connect-redis", "npm:7.1.1"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.0", {\
-          "packageLocation": "./.yarn/__virtual__/connect-redis-virtual-ea014bdaa8/0/cache/connect-redis-npm-7.1.0-7fd9a8c503-fb493fae89.zip/node_modules/connect-redis/",\
+        ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.1", {\
+          "packageLocation": "./.yarn/__virtual__/connect-redis-virtual-c5668b0796/0/cache/connect-redis-npm-7.1.1-e1ca4e05df-ac91ee818d.zip/node_modules/connect-redis/",\
           "packageDependencies": [\
-            ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.0"],\
+            ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.1"],\
             ["@types/express-session", "npm:1.17.10"],\
             ["express-session", "npm:1.17.3"]\
           ],\
@@ -9023,7 +9023,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["class-validator", "npm:0.14.0"],\
             ["codeceptjs", "npm:3.5.11"],\
             ["config", "npm:3.3.10"],\
-            ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.0"],\
+            ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.1"],\
             ["cookie-parser", "npm:1.4.6"],\
             ["copy-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.1.0"],\
             ["css-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.8.1"],\
