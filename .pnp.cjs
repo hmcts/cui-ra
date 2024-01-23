@@ -28,7 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@azure/identity", "npm:3.4.1"],\
+            ["@azure/identity", "npm:4.0.1"],\
             ["@azure/keyvault-secrets", "npm:4.7.0"],\
             ["@babel/core", "npm:7.23.7"],\
             ["@babel/eslint-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.23.3"],\
@@ -315,28 +315,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tslib", "npm:2.4.0"]\
           ],\
           "linkType": "HARD"\
-        }],\
-        ["npm:1.6.1", {\
-          "packageLocation": "./.yarn/cache/@azure-core-util-npm-1.6.1-320643eba9-1f8cd13099.zip/node_modules/@azure/core-util/",\
-          "packageDependencies": [\
-            ["@azure/core-util", "npm:1.6.1"],\
-            ["@azure/abort-controller", "npm:1.1.0"],\
-            ["tslib", "npm:2.4.0"]\
-          ],\
-          "linkType": "HARD"\
         }]\
       ]],\
       ["@azure/identity", [\
-        ["npm:3.4.1", {\
-          "packageLocation": "./.yarn/cache/@azure-identity-npm-3.4.1-20c13ac65b-dedb09a507.zip/node_modules/@azure/identity/",\
+        ["npm:4.0.0", {\
+          "packageLocation": "./.yarn/cache/@azure-identity-npm-4.0.0-6b4661eeb2-534a62afe4.zip/node_modules/@azure/identity/",\
           "packageDependencies": [\
-            ["@azure/identity", "npm:3.4.1"],\
+            ["@azure/identity", "npm:4.0.0"],\
             ["@azure/abort-controller", "npm:1.1.0"],\
             ["@azure/core-auth", "npm:1.5.0"],\
             ["@azure/core-client", "npm:1.7.3"],\
             ["@azure/core-rest-pipeline", "npm:1.11.0"],\
             ["@azure/core-tracing", "npm:1.0.1"],\
-            ["@azure/core-util", "npm:1.6.1"],\
+            ["@azure/core-util", "npm:1.2.0"],\
             ["@azure/logger", "npm:1.0.3"],\
             ["@azure/msal-browser", "npm:3.6.0"],\
             ["@azure/msal-node", "npm:2.6.0"],\
@@ -348,16 +339,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:4.0.0", {\
-          "packageLocation": "./.yarn/cache/@azure-identity-npm-4.0.0-6b4661eeb2-534a62afe4.zip/node_modules/@azure/identity/",\
+        ["npm:4.0.1", {\
+          "packageLocation": "./.yarn/cache/@azure-identity-npm-4.0.1-b3969663ba-2c975ca70b.zip/node_modules/@azure/identity/",\
           "packageDependencies": [\
-            ["@azure/identity", "npm:4.0.0"],\
+            ["@azure/identity", "npm:4.0.1"],\
             ["@azure/abort-controller", "npm:1.1.0"],\
             ["@azure/core-auth", "npm:1.5.0"],\
             ["@azure/core-client", "npm:1.7.3"],\
             ["@azure/core-rest-pipeline", "npm:1.11.0"],\
             ["@azure/core-tracing", "npm:1.0.1"],\
-            ["@azure/core-util", "npm:1.2.0"],\
+            ["@azure/core-util", "npm:1.3.2"],\
             ["@azure/logger", "npm:1.0.3"],\
             ["@azure/msal-browser", "npm:3.6.0"],\
             ["@azure/msal-node", "npm:2.6.0"],\
@@ -9160,7 +9151,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["cui-ra", "workspace:."],\
-            ["@azure/identity", "npm:3.4.1"],\
+            ["@azure/identity", "npm:4.0.1"],\
             ["@azure/keyvault-secrets", "npm:4.7.0"],\
             ["@babel/core", "npm:7.23.7"],\
             ["@babel/eslint-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.23.3"],\
