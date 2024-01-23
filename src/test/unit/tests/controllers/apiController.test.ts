@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { ApiController } from '../../../../main/controllers';
-import { ErrorMessages, HeaderParams } from './../../../../main/constants';
-import { mockLogger, mockRedisClient } from './../../mocks';
+import { ErrorMessages, HeaderParams } from '../../../../main/constants';
+import { mockLogger, mockRedisClient } from '../../mocks';
 
 let mockedLogger = mockLogger();
 let mockedRedis = mockRedisClient();
