@@ -75,7 +75,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chai-as-promised", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.1"],\
             ["chokidar", "npm:3.5.3"],\
             ["class-transformer", "npm:0.5.1"],\
-            ["class-validator", "npm:0.14.0"],\
+            ["class-validator", "npm:0.14.1"],\
             ["codeceptjs", "npm:3.5.11"],\
             ["config", "npm:3.3.10"],\
             ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.0"],\
@@ -5480,10 +5480,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/validator", [\
-        ["npm:13.7.17", {\
-          "packageLocation": "./.yarn/cache/@types-validator-npm-13.7.17-200baed5c4-a827e480c0.zip/node_modules/@types/validator/",\
+        ["npm:13.11.8", {\
+          "packageLocation": "./.yarn/cache/@types-validator-npm-13.11.8-584a0a800c-9e8e8a0e95.zip/node_modules/@types/validator/",\
           "packageDependencies": [\
-            ["@types/validator", "npm:13.7.17"]\
+            ["@types/validator", "npm:13.11.8"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8113,13 +8113,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["class-validator", [\
-        ["npm:0.14.0", {\
-          "packageLocation": "./.yarn/cache/class-validator-npm-0.14.0-b600d5fe72-f62e4a0ad2.zip/node_modules/class-validator/",\
+        ["npm:0.14.1", {\
+          "packageLocation": "./.yarn/cache/class-validator-npm-0.14.1-f0ce3b1130-bea808145c.zip/node_modules/class-validator/",\
           "packageDependencies": [\
-            ["class-validator", "npm:0.14.0"],\
-            ["@types/validator", "npm:13.7.17"],\
-            ["libphonenumber-js", "npm:1.10.37"],\
-            ["validator", "npm:13.9.0"]\
+            ["class-validator", "npm:0.14.1"],\
+            ["@types/validator", "npm:13.11.8"],\
+            ["libphonenumber-js", "npm:1.10.54"],\
+            ["validator", "npm:13.11.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9020,7 +9020,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chai-as-promised", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.1"],\
             ["chokidar", "npm:3.5.3"],\
             ["class-transformer", "npm:0.5.1"],\
-            ["class-validator", "npm:0.14.0"],\
+            ["class-validator", "npm:0.14.1"],\
             ["codeceptjs", "npm:3.5.11"],\
             ["config", "npm:3.3.10"],\
             ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.0"],\
@@ -13884,10 +13884,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["libphonenumber-js", [\
-        ["npm:1.10.37", {\
-          "packageLocation": "./.yarn/cache/libphonenumber-js-npm-1.10.37-79b0943385-c28f762322.zip/node_modules/libphonenumber-js/",\
+        ["npm:1.10.54", {\
+          "packageLocation": "./.yarn/cache/libphonenumber-js-npm-1.10.54-d50eeed0bd-248483404b.zip/node_modules/libphonenumber-js/",\
           "packageDependencies": [\
-            ["libphonenumber-js", "npm:1.10.37"]\
+            ["libphonenumber-js", "npm:1.10.54"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -19468,10 +19468,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["validator", [\
-        ["npm:13.9.0", {\
-          "packageLocation": "./.yarn/cache/validator-npm-13.9.0-54b07e9e81-e2c936f041.zip/node_modules/validator/",\
+        ["npm:13.11.0", {\
+          "packageLocation": "./.yarn/cache/validator-npm-13.11.0-f0143e2784-d1e0c27022.zip/node_modules/validator/",\
           "packageDependencies": [\
-            ["validator", "npm:13.9.0"]\
+            ["validator", "npm:13.11.0"]\
           ],\
           "linkType": "HARD"\
         }]\
