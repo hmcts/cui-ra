@@ -1,11 +1,11 @@
 import fs from 'fs';
 import { mockRequest } from '../../mocks';
 import { ExistingFlagsManager, NewFlagsManager } from '../../../../main/managers';
-import { DataManagerDataObject, PayloadCollectionItem } from './../../../../main/interfaces';
-import { PayloadBuilder } from './../../../../main/builders';
-import { OutboundPayload } from './../../../../main/models';
-import { Actions, Status } from './../../../../main/constants';
-import { ExistingFlagProcessor } from './../../../../main/processors';
+import { DataManagerDataObject, PayloadCollectionItem } from '../../../../main/interfaces';
+import { PayloadBuilder } from '../../../../main/builders';
+import { OutboundPayload } from '../../../../main/models';
+import { Actions, Status } from '../../../../main/constants';
+import { ExistingFlagProcessor } from '../../../../main/processors';
 
 const dataProcessorResultJson: DataManagerDataObject[] = JSON.parse(
   fs.readFileSync(__dirname + '/../../data/data-processor-results.json', 'utf-8')
