@@ -89,7 +89,7 @@
     "typescript": "^5.0.0"
   },
   "devDependencies": {
-    "@azure/identity": "^3.2.2",
+    "@azure/identity": "^4.0.0",
     "@azure/keyvault-secrets": "^4.7.0",
     "@babel/core": "^7.23.7",
     "@babel/eslint-parser": "^7.18.9",
