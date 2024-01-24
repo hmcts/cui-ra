@@ -7036,24 +7036,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["axios", [\
-        ["npm:0.26.1", {\
-          "packageLocation": "./.yarn/cache/axios-npm-0.26.1-a6641ce4e3-d9eb58ff4b.zip/node_modules/axios/",\
-          "packageDependencies": [\
-            ["axios", "npm:0.26.1"],\
-            ["follow-redirects", "virtual:87404a12d617a0f284f46fa368966665b2913bbd41d7ad24d282540aefa3360d8754e9717ae9b8aa4b57d1893372657e94658e9e39b9d068bbcf6ea38c2ceb2f#npm:1.15.5"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:1.6.3", {\
-          "packageLocation": "./.yarn/cache/axios-npm-1.6.3-9277f36de0-07ef3bb83f.zip/node_modules/axios/",\
-          "packageDependencies": [\
-            ["axios", "npm:1.6.3"],\
-            ["follow-redirects", "virtual:87404a12d617a0f284f46fa368966665b2913bbd41d7ad24d282540aefa3360d8754e9717ae9b8aa4b57d1893372657e94658e9e39b9d068bbcf6ea38c2ceb2f#npm:1.15.5"],\
-            ["form-data", "npm:4.0.0"],\
-            ["proxy-from-env", "npm:1.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:1.6.5", {\
           "packageLocation": "./.yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/",\
           "packageDependencies": [\
@@ -8371,7 +8353,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@xmldom/xmldom", "npm:0.8.10"],\
             ["acorn", "npm:8.11.2"],\
             ["arrify", "npm:2.0.1"],\
-            ["axios", "npm:1.6.3"],\
+            ["axios", "npm:1.6.5"],\
             ["chai", "npm:4.3.8"],\
             ["chai-deep-match", "virtual:41fcc96b5abd36d032c96d8de105d82c4327f128cb338b5ac1a1f195d2c66f81233c3ed1d67bba0484db23fce5fccfa79442810aefd3097838cf3a50d54623bb#npm:1.2.1"],\
             ["chai-exclude", "virtual:41fcc96b5abd36d032c96d8de105d82c4327f128cb338b5ac1a1f195d2c66f81233c3ed1d67bba0484db23fce5fccfa79442810aefd3097838cf3a50d54623bb#npm:2.1.0"],\
@@ -15264,7 +15246,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/openai-npm-3.2.1-8bb9cccf51-ef3942e9b5.zip/node_modules/openai/",\
           "packageDependencies": [\
             ["openai", "npm:3.2.1"],\
-            ["axios", "npm:0.26.1"],\
+            ["axios", "npm:1.6.5"],\
             ["form-data", "npm:4.0.0"]\
           ],\
           "linkType": "HARD"\

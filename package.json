@@ -146,6 +146,7 @@
   },
   "packageManager": "yarn@3.6.4",
   "resolutions": {
+    "axios": "^1.6.5",
     "semver": "^7.5.4"
   }
 }
