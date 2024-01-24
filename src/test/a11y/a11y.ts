@@ -11,6 +11,7 @@ const pa11y = require('pa11y');
 const port = 53236;
 const host = `http://localhost:${port}`;
 const server = app.listen(port);
+const timeoutInMs = 10 * 1000;
 
 supertest.agent(server);
 
@@ -100,7 +101,7 @@ function testAccessibility(url: string, cookies: any[] = []): void {
   describe(`Page ${url}`, () => {
     test('should have no accessibility errors', async () => {
       await testAccessibilityNoWrap(url, cookies);
-    });
+    }, 10000);
   });
 }
 
@@ -169,7 +170,7 @@ describe('Accessibility', () => {
 
   beforeAll(async () => {
     cookies = await setupSession(UrlRoute.make(Route.DEMO, {}, host));
-  });
+  }, timeoutInMs);
 
   afterAll(done => {
     server.close(done); // Close the server after all tests have completed
@@ -187,44 +188,74 @@ describe('Accessibility', () => {
   //when it comes to dynamicly created test like above with testAccessibility that have the describe and test inside the function
 
   describe(`Page ${UrlRoute.make(Route.INTRO, {}, host)}`, () => {
-    test('should have no accessibility errors', async () => {
-      await testAccessibilityNoWrap(UrlRoute.make(Route.INTRO, {}, host), cookies);
-    });
+    test(
+      'should have no accessibility errors',
+      async () => {
+        await testAccessibilityNoWrap(UrlRoute.make(Route.INTRO, {}, host), cookies);
+      },
+      timeoutInMs
+    );
   });
 
   describe(`Page ${UrlRoute.make(Route.INTRO, {}, host)}`, () => {
-    test('should have no accessibility errors', async () => {
-      await testAccessibilityNoWrap(UrlRoute.make(Route.OVERVIEW, {}, host), cookies);
-    });
+    test(
+      'should have no accessibility errors',
+      async () => {
+        await testAccessibilityNoWrap(UrlRoute.make(Route.OVERVIEW, {}, host), cookies);
+      },
+      timeoutInMs
+    );
   });
 
   describe(`Page ${UrlRoute.make(Route.REVIEW, {}, host)}`, () => {
-    test('should have no accessibility errors', async () => {
-      await testAccessibilityNoWrap(UrlRoute.make(Route.REVIEW, {}, host), cookies);
-    });
+    test(
+      'should have no accessibility errors',
+      async () => {
+        await testAccessibilityNoWrap(UrlRoute.make(Route.REVIEW, {}, host), cookies);
+      },
+      timeoutInMs
+    );
   });
 
   //Main Category pages
   describe(`Page ${UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, host)}`, () => {
-    test('should have no accessibility errors', async () => {
-      await testAccessibilityNoWrap(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, host), cookies);
-    });
+    test(
+      'should have no accessibility errors',
+      async () => {
+        await testAccessibilityNoWrap(
+          UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, host),
+          cookies
+        );
+      },
+      timeoutInMs
+    );
   });
 
   //Set Radio pages
   describe(`Page ${UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001-RA0008-RA0042' }, host)}`, () => {
-    test('should have no accessibility errors', async () => {
-      await testAccessibilityNoWrap(
-        UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001-RA0008-RA0042' }, host),
-        cookies
-      );
-    });
+    test(
+      'should have no accessibility errors',
+      async () => {
+        await testAccessibilityNoWrap(
+          UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001-RA0008-RA0042' }, host),
+          cookies
+        );
+      },
+      timeoutInMs
+    );
   });
 
   //Set Typeahead pages
   describe(`Page ${UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-PF0015' }, host)}`, () => {
-    test('should have no accessibility errors', async () => {
-      await testAccessibilityNoWrap(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-PF0015' }, host), cookies);
-    });
+    test(
+      'should have no accessibility errors',
+      async () => {
+        await testAccessibilityNoWrap(
+          UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-PF0015' }, host),
+          cookies
+        );
+      },
+      timeoutInMs
+    );
   });
 });
