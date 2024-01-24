@@ -4766,13 +4766,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"awilix@npm:^8.0.1":
-  version: 8.0.1
-  resolution: "awilix@npm:8.0.1"
+"awilix@npm:^10.0.0":
+  version: 10.0.1
+  resolution: "awilix@npm:10.0.1"
   dependencies:
     camel-case: ^4.1.2
-    fast-glob: ^3.2.12
-  checksum: 0cc2a236d219cf2b7ee4c20086d619739b53ff0555eccbedae5424c862f341fccfd1c113201c5ca9dafdf2392fd8054dc9d4f6b4a69704fa40b1bc682454a1c1
+    fast-glob: ^3.3.2
+  checksum: 8fcf536a3d08bcf329f994dc83a7ee5c1e39b8e3e3cd0771360d741fe5fe93c137b98cd11955f36e7ff4d384d9d4943eec1986f84520d4f725816a8db5d8feec
   languageName: node
   linkType: hard
 
@@ -6512,7 +6512,7 @@ __metadata:
     ajv-formats: ^2.1.1
     applicationinsights: ^2.3.4
     autobind-decorator: ^2.4.0
-    awilix: ^8.0.1
+    awilix: ^10.0.0
     axios: ^1.0.0
     axios-debug-log: ^1.0.0
     babel-loader: ^9.0.0
@@ -7985,7 +7985,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.7, fast-glob@npm:^3.2.9":
+"fast-glob@npm:^3.2.7, fast-glob@npm:^3.2.9":
   version: 3.2.12
   resolution: "fast-glob@npm:3.2.12"
   dependencies:
