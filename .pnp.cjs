@@ -95,7 +95,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["govuk-frontend", "npm:5.0.0"],\
             ["helmet", "npm:7.1.0"],\
             ["html-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.6.0"],\
-            ["husky", "npm:8.0.3"],\
+            ["husky", "npm:9.0.1"],\
             ["i18n", "npm:0.15.1"],\
             ["ioredis", "npm:5.3.2"],\
             ["jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.7.0"],\
@@ -9076,7 +9076,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["govuk-frontend", "npm:5.0.0"],\
             ["helmet", "npm:7.1.0"],\
             ["html-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.6.0"],\
-            ["husky", "npm:8.0.3"],\
+            ["husky", "npm:9.0.1"],\
             ["i18n", "npm:0.15.1"],\
             ["ioredis", "npm:5.3.2"],\
             ["jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.7.0"],\
@@ -11995,10 +11995,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["husky", [\
-        ["npm:8.0.3", {\
-          "packageLocation": "./.yarn/cache/husky-npm-8.0.3-b0b59c5127-837bc7e441.zip/node_modules/husky/",\
+        ["npm:9.0.1", {\
+          "packageLocation": "./.yarn/cache/husky-npm-9.0.1-69513b18c0-8f28488e59.zip/node_modules/husky/",\
           "packageDependencies": [\
-            ["husky", "npm:8.0.3"]\
+            ["husky", "npm:9.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
