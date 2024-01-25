@@ -86,7 +86,7 @@
     "stylelint-config-standard-scss": "^13.0.0",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.1.0",
-    "typescript": "^5.0.0"
+    "typescript": "~5.2.0"
   },
   "devDependencies": {
     "@azure/identity": "^4.0.0",
@@ -125,7 +125,7 @@
     "nock": "^13.5.0",
     "nodemon": "^3.0.0",
     "pa11y": "^7.0.0",
-    "playwright": "1.41.1",
+    "playwright": "1.37.1",
     "prettier": "^3.0.0",
     "puppeteer": "^21.3.8",
     "sass": "^1.70.0",
