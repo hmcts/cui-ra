@@ -5,7 +5,7 @@ import { Session, SessionData } from 'express-session';
 import { PayloadCollectionItem } from '../../../../main/interfaces';
 import { ExistingFlagsManager, NewFlagsManager } from '../../../../main/managers';
 import { ErrorMessages, Status, Route } from '../../../../main/constants';
-import { mockRedisClient } from './../../mocks';
+import { mockLogger, mockRedisClient } from './../../mocks';
 import { ExistingFlagProcessor } from './../../../../main/processors';
 
 const host = 'www.test.com';
@@ -16,6 +16,7 @@ describe('Review Controller', () => {
   let reviewController: ReviewController;
   let mockRequest: Partial<Request>;
   let mockResponse: Partial<Response>;
+  let mockedLogger = mockLogger();
   let mockedRedis = mockRedisClient();
   let mockNext: NextFunction;
 
@@ -58,7 +59,7 @@ describe('Review Controller', () => {
       set: jest.fn(),
     };
     mockNext = jest.fn();
-    reviewController = new ReviewController(mockedRedis);
+    reviewController = new ReviewController(mockedLogger, mockedRedis);
   });
 
   afterEach(() => {

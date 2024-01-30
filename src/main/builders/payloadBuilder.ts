@@ -43,7 +43,7 @@ export class PayloadBuilder {
         const newData: DataManagerDataObject[] = req.session.newmanager?.data;
         if (newData) {
           ndata = newData
-            .filter((item: DataManagerDataObject) => item._enabled === true && item._isParent === false)
+            .filter((item: DataManagerDataObject) => item._enabled && !item._isParent)
             .map((item: DataManagerDataObject) => {
               return {
                 value: item.value,

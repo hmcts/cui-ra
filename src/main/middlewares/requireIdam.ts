@@ -1,4 +1,4 @@
-import { ErrorMessages, HeaderParams } from './../constants';
+import { ErrorMessages, HeaderParams } from '../constants';
 
 import autobind from 'autobind-decorator';
 import { NextFunction, Request, Response } from 'express';
@@ -10,6 +10,8 @@ export class RequireIdam {
       const idamToken: string | string[] | undefined = req.headers[HeaderParams.IDAM_TOKEN];
       if (idamToken) {
         next();
+      } else {
+        return res.status(401).json({ error: ErrorMessages.IDAM_TOKEN_MISSING });
       }
     } catch {
       return res.status(401).json({ error: ErrorMessages.IDAM_TOKEN_MISSING });

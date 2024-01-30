@@ -1,17 +1,19 @@
-import { DataManagerDataObject, PayloadDataObject, RedisClientInterface } from '../interfaces';
-
-import { HTTPError } from './../HttpError';
-import { PayloadBuilder } from './../builders';
-import { Actions, ErrorMessages, Route, Status } from './../constants';
-import { OutboundPayload } from './../models';
-import { CustomSort, UrlRoute } from './../utilities';
+import { HTTPError } from '../HttpError';
+import { PayloadBuilder } from '../builders';
+import { Actions, ErrorMessages, Route, Status } from '../constants';
+import { DataManagerDataObject, Logger, PayloadDataObject, RedisClientInterface } from '../interfaces';
+import { OutboundPayload } from '../models';
+import { CustomSort, UrlRoute } from '../utilities';
 
 import autobind from 'autobind-decorator';
 import { NextFunction, Request, Response } from 'express';
 
 @autobind
 export class ReviewController {
-  constructor(private redisClient: RedisClientInterface) {}
+  constructor(
+    private logger: Logger,
+    private redisClient: RedisClientInterface
+  ) {}
 
   public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
@@ -53,6 +55,7 @@ export class ReviewController {
         notRequired: notRequiredFlags,
       });
     } catch (e) {
+      this.logger.error(e.message);
       next(e);
     }
   }
@@ -73,6 +76,7 @@ export class ReviewController {
 
       res.redirect(Route.REVIEW);
     } catch (e) {
+      this.logger.error(e.message);
       next(e);
     }
   }
@@ -97,6 +101,7 @@ export class ReviewController {
 
       res.redirect(Route.REVIEW);
     } catch (e) {
+      this.logger.error(e.message);
       next(e);
     }
   }
@@ -129,6 +134,7 @@ export class ReviewController {
       //redirect back to invoking service with unique id
       res.redirect(302, url);
     } catch (e) {
+      this.logger.error(e.message);
       next(e);
     }
   }
@@ -138,7 +144,6 @@ export class ReviewController {
       if (!req.session || !req.session.callbackUrl) {
         throw ErrorMessages.UNEXPECTED_ERROR;
       }
-
       const payload: OutboundPayload = PayloadBuilder.build(req);
 
       //gen id
@@ -156,6 +161,7 @@ export class ReviewController {
       //redirect back to invoking service with unique id
       return res.status(301).redirect(url);
     } catch (e) {
+      this.logger.error(e.message);
       next(e);
     }
   }
