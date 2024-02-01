@@ -3593,11 +3593,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:^20.0.0, @types/node@npm:^20.1.0":
-  version: 20.11.13
-  resolution: "@types/node@npm:20.11.13"
+  version: 20.11.15
+  resolution: "@types/node@npm:20.11.15"
   dependencies:
     undici-types: ~5.26.4
-  checksum: 76fbe4dbcce9ecb602c1e0528124bb113e9ece58d417e96710b7ba96dd67cd0bb050272218dc796be36c0d8c29d7c55da44311be429daa4253c3a00f1b3840ff
+  checksum: 80fe17561636e6e72a0264c26232ea4c46b5ee700888a703f06ae6c9115a2dadb16ccd09b79aa2c66a07cb547a201b2609ab939b9bde42bdad56eeefd161bc12
   languageName: node
   linkType: hard
 
@@ -14538,8 +14538,8 @@ __metadata:
   linkType: hard
 
 "stylelint@npm:^16.0.0":
-  version: 16.2.0
-  resolution: "stylelint@npm:16.2.0"
+  version: 16.2.1
+  resolution: "stylelint@npm:16.2.1"
   dependencies:
     "@csstools/css-parser-algorithms": ^2.5.0
     "@csstools/css-tokenizer": ^2.2.3
@@ -14581,7 +14581,7 @@ __metadata:
     write-file-atomic: ^5.0.1
   bin:
     stylelint: bin/stylelint.mjs
-  checksum: dbc9ef12d3e1027ba1daf2f0d413e16127d32ea128b47d2c273be1476b329926f4698dc390eea56beb25fc8ebd9e2a7664a868df706d4e12e94ad6a4d1697d77
+  checksum: 0b84d7218b43bc89978cac40edb5dc0a0f8f7c7a60e3f932fe91392bcf79da165b5694a386247fefb51569eb26535071bf5c7f3cbba0bd094e2590c1b2494717
   languageName: node
   linkType: hard
 
