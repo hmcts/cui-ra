@@ -32,6 +32,9 @@ export class DataController {
   ) {}
 
   public async process(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
+    if (req.session.history) {
+      req.session.history.length = 0;
+    }
     try {
       const id: string = req.params.id.toString();
       //Check the key exists
