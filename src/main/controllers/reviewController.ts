@@ -22,22 +22,21 @@ export class ReviewController {
         res.set('Content-Security-Policy', `form-action 'self' ${url}`);
       }
 
-      let requestedFlags = req.session.existingmanager?.find('value.status', 'Requested');
-      if (requestedFlags) {
-        requestedFlags = requestedFlags.filter(item => item._editable === true);
-        requestedFlags = CustomSort.alphabeticalAsc<PayloadDataObject>(requestedFlags, req);
-      }
+      const requestedFlags = req.session.existingmanager?.find('value.status', 'Requested') ?? [];
+      const activeFlags = req.session.existingmanager?.find('value.status', 'Active') ?? [];
+      let editableFlags = requestedFlags.concat(activeFlags).filter(item => item._editable);
+      editableFlags = CustomSort.alphabeticalAsc<PayloadDataObject>(editableFlags, req);
 
       let newFlags = req.session.newmanager
         ?.find('_enabled', true)
-        ?.filter((item: DataManagerDataObject) => item._isParent === false);
+        ?.filter((item: DataManagerDataObject) => !item._isParent);
       if (newFlags) {
         newFlags = CustomSort.alphabeticalAsc<DataManagerDataObject>(newFlags, req);
       }
 
       let notRequiredFlags = req.session.existingmanager?.find('value.status', 'Inactive');
       if (notRequiredFlags) {
-        notRequiredFlags = notRequiredFlags.filter(item => item._editable === true);
+        notRequiredFlags = notRequiredFlags.filter(item => item._editable);
         notRequiredFlags = CustomSort.alphabeticalAsc<PayloadDataObject>(notRequiredFlags, req);
       }
 
@@ -50,7 +49,7 @@ export class ReviewController {
       res.render('review', {
         masterId: masterId ?? '',
         welsh: req.session.welsh,
-        requested: requestedFlags,
+        requested: editableFlags,
         new: newFlags,
         notRequired: notRequiredFlags,
       });
@@ -95,7 +94,7 @@ export class ReviewController {
         throw new HTTPError(ErrorMessages.FLAG_CANNOT_BE_EDITED, 403);
       }
 
-      if (item.value.status === Status.REQUESTED) {
+      if (item.value.status === Status.REQUESTED || item.value.status === Status.ACTIVE) {
         req.session.existingmanager?.setStatus(id, Status.INACTIVE);
       }
 

@@ -72,6 +72,32 @@ describe('Review Controller', () => {
     expect(mockResponse.render).toBeCalledWith('review', expect.any(Object));
   });
 
+  test('Should render review page with empty editable flags', async () => {
+    // Initialize the mock objects and dependencies
+    mockRequest = {
+      body: {},
+      query: {},
+      params: {},
+      session: {
+        partyName: 'demo name',
+        callbackUrl: 'https://localhost/callback/:id',
+        destroy: () => {},
+      } as unknown as Session & Partial<SessionData>,
+      protocol: protocol,
+      headers: {
+        host: host,
+      },
+    };
+
+    reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
+    expect(mockResponse.render).toBeCalledWith(
+      'review',
+      expect.objectContaining({
+        requested: [],
+      })
+    );
+  });
+
   test('Should fail rendering review page', async () => {
     mockResponse.render = jest.fn().mockImplementation(() => {
       throw new Error('User not found');
@@ -81,7 +107,28 @@ describe('Review Controller', () => {
     expect(mockNext).toBeCalledWith(new Error('User not found'));
   });
 
-  test('Should set inactive and render review page', async () => {
+  test('Should set requested to inactive and render review page', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    const id = 'RA0001-RA0003';
+
+    mockRequest.query = {
+      id: id,
+    };
+
+    if (mockRequest.session?.existingmanager) {
+      expect(mockRequest.session.existingmanager.get(id)?.value.status).toBe(Status.REQUESTED);
+    }
+
+    await reviewController.setInactive(mockRequest as Request, mockResponse as Response, mockNext);
+
+    if (mockRequest.session?.existingmanager) {
+      expect(mockRequest.session?.existingmanager.get(id)?.value.status).toBe(Status.INACTIVE);
+    }
+
+    expect(mockResponse.redirect).toBeCalledWith(Route.REVIEW);
+  });
+
+  test('Should set active to inactive and render review page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     const id = 'RA0001-RA0002';
 
@@ -90,7 +137,7 @@ describe('Review Controller', () => {
     };
 
     if (mockRequest.session?.existingmanager) {
-      expect(mockRequest.session.existingmanager.get(id)?.value.status).toBe(Status.REQUESTED);
+      expect(mockRequest.session.existingmanager.get(id)?.value.status).toBe(Status.ACTIVE);
     }
 
     await reviewController.setInactive(mockRequest as Request, mockResponse as Response, mockNext);
