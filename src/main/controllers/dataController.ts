@@ -54,6 +54,9 @@ export class DataController {
         JSON.parse(data) as InboundPayloadStore
       );
 
+      const serviceId = payloadStore.payload.hmctsServiceId;
+      this.logger.info(`Invoked by HMCTS service with id: ${serviceId}`);
+
       // Store the exisitng flags manages in session data
       req.session.partyname = payloadStore.payload.existingFlags.partyName;
       req.session.roleoncase = payloadStore.payload.existingFlags.roleOnCase;
@@ -64,7 +67,7 @@ export class DataController {
       } else {
         req.session.masterflagcode = 'RA0001';
       }
-      req.session.hmctsserviceid = payloadStore.payload.hmctsServiceId;
+      req.session.hmctsserviceid = serviceId;
       req.session.welsh = payloadStore.payload.language === languages.Cy;
       req.session.correlationId = payloadStore.payload.correlationId;
 

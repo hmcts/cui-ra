@@ -36,7 +36,7 @@ export class DemoController {
     // Add code here to populate payloads/session for demo purposes.
     // Speak to Sonny about multiple versions to test blank payload and populated payload
     try {
-      req.session.hmctsserviceid = 'PFL';
+      req.session.hmctsserviceid = 'ABA5';
       req.session.history = [];
       req.session.masterflagcode = 'RA0001';
       req.session.mastername = 'Reasonable adjustment';
@@ -63,7 +63,7 @@ export class DemoController {
           req.session.existingmanager = new ExistingFlagsManager();
           req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
           req.session.logoutUrl = Route.ROOT;
-          req.session.hmctsserviceid = 'PFL';
+          req.session.hmctsserviceid = 'ABA5';
           req.session.sessioninit = true;
           req.session.welsh = false;
 
@@ -77,7 +77,7 @@ export class DemoController {
           req.session.existingmanager = new ExistingFlagsManager();
           req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
           req.session.logoutUrl = Route.ROOT;
-          req.session.hmctsserviceid = 'PFL';
+          req.session.hmctsserviceid = 'ABA5';
           req.session.sessioninit = true;
           req.session.welsh = true;
 
@@ -123,7 +123,7 @@ export class DemoController {
           req.session.newmanager = NewFlag;
           req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
           req.session.logoutUrl = Route.ROOT;
-          req.session.hmctsserviceid = 'PFL';
+          req.session.hmctsserviceid = 'ABA5';
           req.session.sessioninit = true;
           req.session.welsh = false;
 
