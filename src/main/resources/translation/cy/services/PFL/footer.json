@@ -1,0 +1,21 @@
+{
+  "PFL": {
+    "footer": {
+      "privacyPolicyUrl": "https://privatelaw.platform.hmcts.net/privacy-policy?lng=cy",
+      "privacyPolicyUrl-prod": "https://privatelaw.platform.hmcts.net/privacy-policy?lng=cy",
+      "privacyPolicyUrl-preview": "https://prl-citizen-frontend-pr-1145.preview.platform.hmcts.net/privacy-policy?lng=cy",
+      "privacyPolicyUrl-aat": "https://privatelaw.demo.platform.hmcts.net/privacy-policy?lng=cy",
+      "privacyPolicyUrl-demo": "https://privatelaw.demo.platform.hmcts.net/privacy-policy?lng=cy",
+      "privacyPolicyUrl-ithc": "https://privatelaw.ithc.platform.hmcts.net/privacy-policy?lng=cy",
+      "privacyPolicyUrl-perftest": "https://privatelaw.perftest.platform.hmcts.net/privacy-policy?lng=cy",
+
+      "termsAndConditionsUrl": "https://privatelaw.platform.hmcts.net/terms-and-conditions?lng=cy",
+      "termsAndConditionsUrl-prod": "https://privatelaw.platform.hmcts.net/terms-and-conditions?lng=cy",
+      "termsAndConditionsUrl-preview": "https://prl-citizen-frontend-pr-1145.preview.platform.hmcts.net/terms-and-conditions?lng=cy",
+      "termsAndConditionsUrl-aat": "https://privatelaw.aat.platform.hmcts.net/terms-and-conditions?lng=cy",
+      "termsAndConditionsUrl-demo": "https://privatelaw.demo.platform.hmcts.net/terms-and-conditions?lng=cy",
+      "termsAndConditionsUrl-ithc": "https://privatelaw.ithc.platform.hmcts.net/terms-and-conditions?lng=cy",
+      "termsAndConditionsUrl-perftest": "https://privatelaw.perftest.platform.hmcts.net/terms-and-conditions?lng=cy"
+    }
+  }
+}

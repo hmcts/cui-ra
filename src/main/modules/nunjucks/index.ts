@@ -32,7 +32,13 @@ export class Nunjucks {
         const serviceId = req.session && req.session.hmctsserviceid ? req.session.hmctsserviceid.toUpperCase() : null;
         let result;
         if (serviceId) {
-          const serviceKey = `${serviceId}.${key}`;
+          const envInstance = app.locals.ENV_INSTANCE;
+          let serviceKey = `${serviceId}.${key}-${envInstance}`;
+          result = res.__({ phrase: `${serviceKey}`, locale: lang });
+          if (result !== serviceKey) {
+            return result;
+          }
+          serviceKey = `${serviceId}.${key}`;
           result = res.__({ phrase: `${serviceKey}`, locale: lang });
           if (result !== serviceKey) {
             return result;

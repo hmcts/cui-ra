@@ -24,10 +24,12 @@ const { setupDev } = require('./development');
 const { Logger } = require('@hmcts/nodejs-logging');
 
 const env = process.env.NODE_ENV || 'development';
+const instance = process.env.ENV_INSTANCE;
 const developmentMode = env === 'development' || env === 'test';
 
 export const app = express();
 app.locals.ENV = env;
+app.locals.ENV_INSTANCE = instance;
 app.locals.developmentMode = developmentMode;
 app.locals.appRoot = path.resolve(path.join(__dirname, '..', '..'));
 
