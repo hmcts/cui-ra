@@ -4,6 +4,8 @@
 {% endif %}
 {% extends "govuk/template.njk" %}
 
+{% set bodyClasses = "govuk-frontend-supported" %}
+
 {% block pageTitle %}
   {% block preTitle %}{% endblock %}{{ _t('title') }}
 {% endblock %}
