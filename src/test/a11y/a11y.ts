@@ -127,7 +127,7 @@ async function testAccessibilityNoWrap(url: string, cookies: any[] = []): Promis
 
 async function setupSession(url: string): Promise<any[]> {
   const browser = await puppeteer.launch({
-    headless: 'new',
+    headless: true,
   });
   const page = await browser.newPage();
 
