@@ -9,6 +9,7 @@
   "orDivider": "or",
   "forName": "for {name}",
   "supportForName": "Support for {name}",
+  "error": "Error",
   "header": {
     "menuText": "Menu",
     "title": "Your support",

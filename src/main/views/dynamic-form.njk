@@ -29,7 +29,6 @@
 {% block mainContent %}
   <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-            {% if true %}
             {{ govukErrorSummary({
             titleText: "There is a problem",
             errorList: [
@@ -43,7 +42,6 @@
                 }
             ]
             }) }}
-            {% endif %}
 
             <h1 class="govuk-heading-l">
                 <span class="govuk-caption-l">Reasonable adjustments {{ _r(_t('forName'), { name:'Ben' }) }}</span>
