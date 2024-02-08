@@ -22,8 +22,11 @@
     }) }}
 {% endblock %}
 
-{% block preTitle %}
-  {{ parent.value[nameValue] }} - 
+{% block preTitle -%}
+  {% if validationErrors and (validationErrors | length > 0) -%}
+    {{ _t('error') }}:
+  {% endif -%}
+    {{ parent.value[nameValue] }} -
 {% endblock %}
 
 {% block mainContent %}
@@ -55,7 +58,6 @@
         </div>
       {% endif %}
 
-      
 
       <div class="govuk-form-group {% if validationErrors and (validationErrors | length > 0) %}govuk-form-group--error{% endif %}">
         <fieldset class="govuk-fieldset" aria-describedby="header-question" aria-labelledby="main-hint">
@@ -76,14 +78,14 @@
                   text: _t(parent.value.flagCode + ".blurb")
               }) }}
             {% endif %}
-              
+
           </legend>
           {% block form %}
           {% endblock %}
         </fieldset>
       </div>
 
-      
+
 
       {{ csrfProtection(csrfToken) }}
 

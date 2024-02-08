@@ -9,6 +9,7 @@
   "orDivider": "neu",
   "forName": "ar gyfer {name}",
   "supportForName": "Cefnogaeth ar gyfer {name}",
+  "error": "Gwall",
   "header": {
     "menuText": "Dewislen",
     "title": "Eich cymorth",
