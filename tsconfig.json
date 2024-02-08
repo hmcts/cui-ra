@@ -17,9 +17,9 @@
     "baseUrl": "src/main",
     "paths": {
       "router/*": ["router/*"],
-      "routes/*": ["routes/*"],
+      "routes/*": ["routes/*"]
     },
-    "types": ["node", "jest", "express", "i18n", "./src/main/types"],
+    "types": ["node", "jest", "express", "i18n", "./src/main/types"]
   },
-  "exclude": ["**/*.test.ts", "**/codecept.conf.ts", "**/__mocks__/*", "**/mocks/*"],
+  "exclude": ["**/*.test.ts", "**/codecept.conf.ts", "**/__mocks__/*", "**/mocks/*"]
 }
