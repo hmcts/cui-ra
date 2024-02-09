@@ -48,7 +48,7 @@ export default function (app: Application): void {
   app.get(Route.BACK, (req, res) => {
     if (req.session.history && req.session.history.length > 1) {
       // Remove the current path
-      req.session.history.pop();
+
       const previousPath = req.session.history.pop();
 
       if (previousPath) {
