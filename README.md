@@ -10,7 +10,7 @@ Reasonable Adjustments Microsite for Citizen UI Flags is an application designed
 
 Running the application requires the following tools to be installed in your environment:
 
-- [Node.js](https://nodejs.org/) version can be found in [.nvmrc](https://github.com/hmcts/cui-ra/blob/master/.nvmrc) (as of writting v18.17.1)
+- [Node.js](https://nodejs.org/)   version can be found in [.nvmrc](https://github.com/hmcts/cui-ra/blob/master/.nvmrc) (as of writting v18.17.1)
 - [NVM](https://github.com/nvm-sh/nvm#installing-and-updating) node version manager (optional but allows swapping node version with a single command)
 - [yarn](https://yarnpkg.com/) v3.6.4 and up
 - [Docker](https://www.docker.com)
