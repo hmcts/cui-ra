@@ -29,7 +29,7 @@ export class RedisClient implements RedisClientInterface {
     this.client.on('disconnect', this.onDisconnect);
     this.client.on('reconnecting', this.onReconnect);
     this.client.on('error', (err: Error) => this.onError(err.message));
-    //Init connect to redis
+    // Connect to redis
     this.client.connect();
   }
 
