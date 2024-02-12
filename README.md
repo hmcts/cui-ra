@@ -25,7 +25,7 @@ If using [NVM](https://github.com/nvm-sh/nvm#installing-and-updating) the follow
 nvm use
 ```
 
-### Running the application
+### Running the application locally
 
 Install dependencies by executing the following command:
 
