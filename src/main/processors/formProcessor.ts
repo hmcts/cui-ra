@@ -37,8 +37,8 @@ export class FormProcessor {
           item.value.flagComment = body.data[item.id].flagComment;
           item.value.flagComment_cy = body.data[item.id].flagComment_cy;
           if (item.value.flagCode === Common.OTHER_FLAG_CODE) {
-            item.value.otherDescription = parent.value.name;
-            item.value.otherDescription_cy = parent.value.name_cy;
+            item.value.otherDescription = escape(parent.value.name);
+            item.value.otherDescription_cy = escape(parent.value.name_cy);
           }
         } else {
           Object.assign(item.value, {
