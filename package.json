@@ -126,7 +126,7 @@
     "pa11y": "^7.0.0",
     "playwright": "1.37.1",
     "prettier": "^3.0.0",
-    "puppeteer": "^22.0.0",
+    "puppeteer": "^22.1.0",
     "sass": "^1.70.0",
     "sass-loader": "^14.0.0",
     "sinon": "^17.0.0",
