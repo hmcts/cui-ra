@@ -1,6 +1,6 @@
 import autobind from 'autobind-decorator';
-import { NextFunction, Request, RequestHandler, Response } from 'express';
-import {flow, unescape} from 'lodash';
+import { NextFunction, Request, Response } from 'express';
+import { flow, unescape } from 'lodash';
 import emoji from 'node-emoji';
 import sanitizer from 'sanitizer';
 import traverse from 'traverse';
