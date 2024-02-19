@@ -6,21 +6,19 @@ import sanitizer from 'sanitizer';
 import traverse from 'traverse';
 
 @autobind
-export class SanitizeRequestBody { 
+export class SanitizeRequestBody {
+  public async sanitize(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
+    try {
+      const santizeValue = flow([strip, sanitizer.sanitize, unescape]);
 
-    public async sanitize (req: Request, res: Response, next: NextFunction): Promise<Response | void> {
-        try {
-            const santizeValue = flow([strip, sanitizer.sanitize, unescape]);
-
-            traverse(req.body).forEach(function sanitizeValue(value) {
-                if (this.isLeaf && typeof (value) === 'string') {
-                    const sanitizedValue = santizeValue(value);
-                    this.update(sanitizedValue);
-                }
-            });
+      traverse(req.body).forEach(function sanitizeValue(value) {
+        if (this.isLeaf && typeof value === 'string') {
+          const sanitizedValue = santizeValue(value);
+          this.update(sanitizedValue);
         }
-        finally { 
-            next();
-        }
-    };
-} 
+      });
+    } finally {
+      next();
+    }
+  }
+}

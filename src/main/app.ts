@@ -1,7 +1,7 @@
 import * as path from 'path';
 
 import { HTTPError } from './HttpError';
-import { SanitizeRequestBody } from './middlewares'; 
+import { SanitizeRequestBody } from './middlewares';
 import {
   AppInsights,
   CSRFToken,
