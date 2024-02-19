@@ -54,12 +54,6 @@ export default function (app: Application): void {
       if (previousPath) {
         return res.redirect(previousPath);
       }
-
-      // Use the 'referrer' header as a fallback if no previous path is available
-      const referrer = req.get('referrer');
-      if (referrer) {
-        return res.redirect(referrer);
-      }
     }
 
     return res.redirect(Route.CANCEL);
