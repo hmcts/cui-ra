@@ -1,6 +1,7 @@
 import * as path from 'path';
 
 import { HTTPError } from './HttpError';
+import { SanitizeRequestBody } from './middlewares'; 
 import {
   AppInsights,
   CSRFToken,
@@ -57,6 +58,8 @@ app.use((req: Request, res: Response, next) => {
   res.setHeader('Cache-Control', 'no-cache, max-age=0, must-revalidate, no-store');
   next();
 });
+
+app.post('*', new SanitizeRequestBody().sanitize);
 
 //Set up routes
 routes(app);
