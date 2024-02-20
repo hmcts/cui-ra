@@ -1,5 +1,5 @@
 import autobind from 'autobind-decorator';
-import { NextFunction, Request, Response } from 'express';
+import { NextFunction, Request, RequestHandler, Response } from 'express';
 import { flow, unescape } from 'lodash';
 import { strip } from 'node-emoji';
 import sanitizer from 'sanitizer';
@@ -7,7 +7,7 @@ import traverse from 'traverse';
 
 @autobind
 export class SanitizeRequestBody {
-  public async sanitize(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
+  public async sanitize(req: Request, res: Response, next: NextFunction): RequestHandler {
     try {
       const santizeValue = flow([strip, sanitizer.sanitize, unescape]);
 

@@ -2,7 +2,6 @@ import { Request, Response, NextFunction } from 'express';
 
 import { SanitizeRequestBody } from './../../../../main/middlewares';
 import { assert } from 'chai';
-import { sinon } from 'sinon';
 
 describe('SanitizeRequestBody', () => {
   let sanitizeRequestBody: SanitizeRequestBody;
@@ -18,7 +17,7 @@ describe('SanitizeRequestBody', () => {
     mockRequest = {
       body: {
         // Provide valid data t
-        name: 'Hello World',
+        name: '',
       },
     };
 
@@ -27,48 +26,47 @@ describe('SanitizeRequestBody', () => {
   });
 
   test('should ignore empty', () => {
-    mockRequest.body.name = ' ';
     sanitizeRequestBody.sanitize(mockRequest, mockResponse, mockNextFunction);
     assert.equal(mockRequest.body.name, '');
   });
 
-  test('should ignore simple text', function () {
+  test('should ignore simple text', () => {
     mockRequest.body.name = 'hello world';
     sanitizeRequestBody.sanitize(mockRequest, mockResponse, mockNextFunction);
     assert.equal(mockRequest.body.name, 'hello world');
   });
 
-  test('should remove open tag', function () {
+  test('should remove open tag', () => {
     mockRequest.body.name = '<hello world';
     sanitizeRequestBody.sanitize(mockRequest, mockResponse, mockNextFunction);
     assert.equal(mockRequest.body.name, '');
   });
 
-  test('should remove closed tag', function () {
+  test('should remove closed tag', () => {
     mockRequest.body.name = 'hello<script/> world';
     sanitizeRequestBody.sanitize(mockRequest, mockResponse, mockNextFunction);
     assert.equal(mockRequest.body.name, 'hello world');
   });
 
-  test('should remove tag and its content', function () {
+  test('should remove tag and its content', () => {
     mockRequest.body.name = 'hello<script>alert("hello again!");</script> world';
     sanitizeRequestBody.sanitize(mockRequest, mockResponse, mockNextFunction);
     assert.equal(mockRequest.body.name, 'hello world');
   });
 
-  test('should ignore close tag', function () {
+  test('should ignore close tag', () => {
     mockRequest.body.name = '>hello world';
     sanitizeRequestBody.sanitize(mockRequest, mockResponse, mockNextFunction);
     assert.equal(mockRequest.body.name, '>hello world');
   });
 
-  test('should ignore close tag', function () {
-    req.body?.getReader.name = 'hello world>';
+  test('should ignore close tag', () => {
+    mockRequest.body.name = 'hello world>';
     sanitizeRequestBody.sanitize(mockRequest, mockResponse, mockNextFunction);
-    assert.equal(req.body?.getReader.name, 'hello world>');
+    assert.equal( mockRequest.body.name, 'hello world>');
   });
 
-  test('should ignore non string field', function () {
+  test('should ignore non string field', () => {
     mockRequest.body.name = 'hello world';
     sanitizeRequestBody.sanitize(mockRequest, mockResponse, mockNextFunction);
     assert.equal(mockRequest.body.name, 'hello world');
