@@ -1,5 +1,4 @@
 {% extends "./base.njk" %}
-{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 {% from "govuk/components/input/macro.njk" import govukInput %}
 {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
 
@@ -34,7 +33,7 @@
 
             <div class="govuk-checkboxes__item">
                 <input aria-labelledby="checkbox-label-{{item.id }}" class="govuk-checkboxes__input" id="_enabled-{{ item.id }}" name="enabled" type="checkbox" value="{{ item.id }}"  {% if item._flagComment %}data-aria-controls="conditional-{{ item.id }}"{% endif %} {% if item._enabled %}checked{% endif %}>
-                <label id="checkbox-label-{{item.id }}" class="govuk-label govuk-checkboxes__label" for="waste">
+                <label id="checkbox-label-{{item.id }}" class="govuk-label govuk-checkboxes__label" for="_enabled-{{ item.id }}">
                     {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
                 </label>
                 <div id="{{inputName}}-{{ item.id }}-hint" class="govuk-hint govuk-checkboxes__hint">
@@ -76,7 +75,7 @@
 
         <div class="govuk-checkboxes__item">
             <input aria-labelledby="checkbox-label-0" class="govuk-checkboxes__input" id="_enabled-0" name="enabled" type="checkbox" value="none"  {% if item._enabled %}checked{% endif %} data-behaviour="exclusive">
-            <label id="checkbox-label-0" class="govuk-label govuk-checkboxes__label">
+            <label id="checkbox-label-0" class="govuk-label govuk-checkboxes__label" for="_enabled-0">
                 {{ _t('form.noSupport') }}
             </label>
         </div>
