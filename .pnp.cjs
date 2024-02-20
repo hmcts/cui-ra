@@ -113,7 +113,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pa11y", "npm:7.0.0"],\
             ["playwright", "npm:1.37.1"],\
             ["prettier", "npm:3.2.5"],\
-            ["puppeteer", "npm:22.0.0"],\
+            ["puppeteer", "npm:22.1.0"],\
             ["redis", "npm:4.6.13"],\
             ["reflect-metadata", "npm:0.2.1"],\
             ["require-directory", "npm:2.1.1"],\
@@ -9212,15 +9212,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["otplib", "npm:12.0.1"],\
             ["pa11y", "npm:7.0.0"],\
             ["playwright", "npm:1.37.1"],\
-<<<<<<< HEAD
-            ["prettier", "npm:3.2.4"],\
-            ["puppeteer", "npm:22.1.0"],\
-            ["redis", "npm:4.6.12"],\
-=======
             ["prettier", "npm:3.2.5"],\
-            ["puppeteer", "npm:22.0.0"],\
+            ["puppeteer", "npm:22.1.0"],\
             ["redis", "npm:4.6.13"],\
->>>>>>> d356e4f02cc230bfa2530e560b5a1b6d3717c63d
             ["reflect-metadata", "npm:0.2.1"],\
             ["require-directory", "npm:2.1.1"],\
             ["sanitizer", "npm:0.1.3"],\

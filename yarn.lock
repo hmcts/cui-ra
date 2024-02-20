@@ -13153,7 +13153,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer@npm:^22.1.0":
+"puppeteer@npm:^22.0.0":
   version: 22.1.0
   resolution: "puppeteer@npm:22.1.0"
   dependencies:

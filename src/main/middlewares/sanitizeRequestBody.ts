@@ -7,7 +7,7 @@ import traverse from 'traverse';
 
 @autobind
 export class SanitizeRequestBody {
-  public sanitize(req: Request, res: Response, next: NextFunction): RequestHandler {
+  public async sanitize(req: Request, res: Response, next: NextFunction): Promise<RequestHandler | void> {
     try {
       const santizeValue = flow([strip, sanitizer.sanitize, unescape]);
 
