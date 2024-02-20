@@ -10,7 +10,7 @@ describe('SanitizeRequestBody', () => {
   let mockNextFunction: NextFunction;
 
   beforeEach(() => {
-    // Create the SchemaValidator instance
+    // Create the SanitizeRequestBody instance
     sanitizeRequestBody = new SanitizeRequestBody();
 
     // Mock the Request, Response, and NextFunction objects
@@ -66,15 +66,4 @@ describe('SanitizeRequestBody', () => {
     assert.equal(mockRequest.body.name, 'hello world>');
   });
 
-  test('should ignore non string field', async () => {
-    mockRequest.body.name = 'hello world';
-    sanitizeRequestBody.sanitize(mockRequest, mockResponse, mockNextFunction);
-    assert.equal(mockRequest.body.name, 'hello world');
-  });
-
-  test('should ignore close tag', async () => {
-    mockRequest.body.name = 'hello world>';
-    sanitizeRequestBody.sanitize(mockRequest, mockResponse, mockNextFunction);
-    assert.equal(mockRequest.body.name, 'hello world>');
-  });
 });
