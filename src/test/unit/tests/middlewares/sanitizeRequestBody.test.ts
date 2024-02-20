@@ -5,7 +5,7 @@ import { assert } from 'chai';
 
 describe('SanitizeRequestBody', () => {
   let sanitizeRequestBody: SanitizeRequestBody;
-  let mockRequest: Request;
+  let mockRequest: Partial<Request>;
   let mockResponse: Response;
   let mockNextFunction: NextFunction;
 
