@@ -63,7 +63,7 @@ describe('SanitizeRequestBody', () => {
   test('should ignore close tag', () => {
     mockRequest.body.name = 'hello world>';
     sanitizeRequestBody.sanitize(mockRequest, mockResponse, mockNextFunction);
-    assert.equal( mockRequest.body.name, 'hello world>');
+    assert.equal(mockRequest.body.name, 'hello world>');
   });
 
   test('should ignore non string field', () => {
