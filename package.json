@@ -94,7 +94,7 @@
     "@babel/eslint-parser": "^7.18.9",
     "@babel/preset-env": "^7.23.8",
     "@codeceptjs/allure-legacy": "^1.0.2",
-    "@codeceptjs/configure": "^0.10.0",
+    "@codeceptjs/configure": "^1.0.0",
     "@eslint/js": "^8.56.0",
     "@types/chai-as-promised": "^7.1.5",
     "@types/express-session": "^1.17.7",
