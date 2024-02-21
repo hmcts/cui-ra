@@ -34,7 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/eslint-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.23.10"],\
             ["@babel/preset-env", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.23.9"],\
             ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
-            ["@codeceptjs/configure", "virtual:a612e735ecbb84e41cc5bc9f8b10fb409fdd6fe2bc55c6eea1bd23a8b077756f92595db99c754e4d2886ceb6c6f2910e04a45b543aa438634d0f386edddda712#npm:0.10.0"],\
+            ["@codeceptjs/configure", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.0"],\
             ["@eslint/js", "npm:8.56.0"],\
             ["@hmcts/info-provider", "npm:1.1.0"],\
             ["@hmcts/nodejs-healthcheck", "npm:1.8.3"],\
@@ -3365,6 +3365,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@codeceptjs/configure", "npm:0.10.0"]\
           ],\
           "linkType": "SOFT"\
+        }],\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/@codeceptjs-configure-npm-1.0.0-f2dce04bad-00720f42f4.zip/node_modules/@codeceptjs/configure/",\
+          "packageDependencies": [\
+            ["@codeceptjs/configure", "npm:1.0.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/@codeceptjs-configure-virtual-9179038736/0/cache/@codeceptjs-configure-npm-1.0.0-f2dce04bad-00720f42f4.zip/node_modules/@codeceptjs/configure/",\
+          "packageDependencies": [\
+            ["@codeceptjs/configure", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.0"],\
+            ["@types/codeceptjs", null],\
+            ["codeceptjs", "npm:3.5.12"],\
+            ["lodash.merge", "npm:4.6.2"],\
+            ["lodash.mergewith", "npm:4.6.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/codeceptjs",\
+            "codeceptjs"\
+          ],\
+          "linkType": "HARD"\
         }],\
         ["virtual:a612e735ecbb84e41cc5bc9f8b10fb409fdd6fe2bc55c6eea1bd23a8b077756f92595db99c754e4d2886ceb6c6f2910e04a45b543aa438634d0f386edddda712#npm:0.10.0", {\
           "packageLocation": "./.yarn/__virtual__/@codeceptjs-configure-virtual-86e5766cef/0/cache/@codeceptjs-configure-npm-0.10.0-ba73c0a5e7-e4556a9c1f.zip/node_modules/@codeceptjs/configure/",\
@@ -9081,7 +9103,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/eslint-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.23.10"],\
             ["@babel/preset-env", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.23.9"],\
             ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
-            ["@codeceptjs/configure", "virtual:a612e735ecbb84e41cc5bc9f8b10fb409fdd6fe2bc55c6eea1bd23a8b077756f92595db99c754e4d2886ceb6c6f2910e04a45b543aa438634d0f386edddda712#npm:0.10.0"],\
+            ["@codeceptjs/configure", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.0"],\
             ["@eslint/js", "npm:8.56.0"],\
             ["@hmcts/info-provider", "npm:1.1.0"],\
             ["@hmcts/nodejs-healthcheck", "npm:1.8.3"],\
