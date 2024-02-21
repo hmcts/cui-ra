@@ -12,6 +12,7 @@ const logger = Logger.getLogger('server');
 
 // TODO: set the right port for your application
 const port: number = parseInt(process.env.PORT || '3100', 10);
+const env = app.locals.ENV_INSTANCE;
 
 if (app.locals.ENV === 'development') {
   const sslDirectory = path.join(__dirname, 'resources', 'localhost-ssl');
@@ -21,10 +22,10 @@ if (app.locals.ENV === 'development') {
   };
   const server = https.createServer(sslOptions, app);
   server.listen(port, () => {
-    logger.info(`Application started: https://localhost:${port}`);
+    logger.info(`Application started: https://localhost:${port}, env: ${env}`);
   });
 } else {
   app.listen(port, () => {
-    logger.info(`Application started: http://localhost:${port}`);
+    logger.info(`Application started: http://localhost:${port}, env: ${env}`);
   });
 }
