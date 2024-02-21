@@ -65,5 +65,4 @@ describe('SanitizeRequestBody', () => {
     sanitizeRequestBody.sanitize(mockRequest, mockResponse, mockNextFunction);
     assert.equal(mockRequest.body.name, 'hello world>');
   });
-
 });
