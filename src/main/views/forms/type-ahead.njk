@@ -33,7 +33,7 @@
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 
         <div class="govuk-checkboxes__item">
-          <input aria-labelledby="{{inputName}}-label" class="govuk-checkboxes__input clear-autocomplete" id="_enabled-other" name="enabled" type="checkbox" value="OT0001"  data-aria-controls="conditional-other" {% if parent._other === true %}checked{% endif %}>
+          <input aria-labelledby="{{inputName}}-label" aria-describedby="{{inputName}}-{{ parent.id }}-hint" class="govuk-checkboxes__input clear-autocomplete" id="_enabled-other" name="enabled" type="checkbox" value="OT0001"  data-aria-controls="conditional-other" {% if parent._other === true %}checked{% endif %}>
           <label id="{{inputName}}-label" class="govuk-label govuk-checkboxes__label" for="other">
               {{_t('form.typeahead.notListed')}}
           </label>
