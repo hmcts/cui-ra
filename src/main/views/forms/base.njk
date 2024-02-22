@@ -61,7 +61,7 @@
 
       <div class="govuk-form-group {% if validationErrors and (validationErrors | length > 0) %}govuk-form-group--error{% endif %}">
         <fieldset class="govuk-fieldset" aria-describedby="header-question" aria-labelledby="main-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-!-margin-bottom-0">
             <h1 id="header-question" class="govuk-heading-l">
                 <span class="govuk-caption-l">{{ master_name }} {% if partyname %}{{ _r(_t('forName'), { name:partyname }) }}{% endif %}</span>
                 {% block formHeading %}
@@ -72,20 +72,17 @@
                 {% endif %}
                 {% endblock %}
             </h1>
-
-            {% if _t(parent.value.flagCode+ ".blurb") %}
-              {{ govukInsetText({
-                  text: _t(parent.value.flagCode + ".blurb")
-              }) }}
-            {% endif %}
-
           </legend>
+          {% if _t(parent.value.flagCode+ ".blurb") %}
+            {{ govukInsetText({
+              classes: "govuk-!-margin-top-0",
+              text: _t(parent.value.flagCode + ".blurb")
+            }) }}
+          {% endif %}
           {% block form %}
           {% endblock %}
         </fieldset>
       </div>
-
-
 
       {{ csrfProtection(csrfToken) }}
 
@@ -96,7 +93,7 @@
           preventDoubleClick: true
         }) }}
 
-        {% if (change) %} 
+        {% if (change) %}
         {% set queryParam = "?change=true" %}
         {% endif %}
 

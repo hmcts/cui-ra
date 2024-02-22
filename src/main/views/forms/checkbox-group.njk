@@ -32,7 +32,7 @@
             {% endif %}
 
             <div class="govuk-checkboxes__item">
-                <input aria-labelledby="checkbox-label-{{item.id }}" class="govuk-checkboxes__input" id="_enabled-{{ item.id }}" name="enabled" type="checkbox" value="{{ item.id }}"  {% if item._flagComment %}data-aria-controls="conditional-{{ item.id }}"{% endif %} {% if item._enabled %}checked{% endif %}>
+                <input aria-labelledby="checkbox-label-{{item.id }}" aria-describedby="{{inputName}}-{{ item.id }}-hint" class="govuk-checkboxes__input" id="_enabled-{{ item.id }}" name="enabled" type="checkbox" value="{{ item.id }}"  {% if item._flagComment %}data-aria-controls="conditional-{{ item.id }}"{% endif %} {% if item._enabled %}checked{% endif %}>
                 <label id="checkbox-label-{{item.id }}" class="govuk-label govuk-checkboxes__label" for="_enabled-{{ item.id }}">
                     {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
                 </label>
