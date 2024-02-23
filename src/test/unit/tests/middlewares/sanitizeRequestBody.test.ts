@@ -218,7 +218,7 @@ describe('sanitizeRequestBody', () => {
     req = {
       body: {
         test: '',
-        number: 123
+        number: 123,
       },
     } as Request;
     sanitizeRequest(req, res, next);
