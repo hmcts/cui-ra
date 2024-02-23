@@ -10,26 +10,14 @@ function sanitizeRequest(req: Request, res: Response, next: NextFunction): void 
   next();
 }
 
-const htmlEntities = {
-  nbsp: ' ',
-  lt: '<',
-  gt: '>',
-  quot: '"',
-  amp: '&',
-  apos: "'",
-};
-
 function unescapeHTML(str) {
-  return str.replace(/&([^;]+);/g, function (entity, entityCode) {
-    //var match;
-
-    if (entityCode in htmlEntities) {
-      return htmlEntities[entityCode];
-      /*eslint no-cond-assign: 0*/
-    } else {
-      return entity;
-    }
-  });
+  return str
+    .replaceAll('&lt;', '<')
+    .replaceAll('&gt;', '>')
+    .replaceAll('&amp;', '&')
+    .replaceAll('&quot;', '""')
+    .replaceAll('&apos;', "'")
+    .replace('&nbsp;', ' ');
 }
 
 export { sanitizeRequest };
