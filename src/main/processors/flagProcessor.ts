@@ -13,7 +13,7 @@ export class FlagProcessor implements FlagProcessorInterface {
       if (!flagDetail.FlagDetails) {
         continue;
       }
-      //for each flag detials
+      //for each flag details
       for (let ii = 0; ii < flagDetail.FlagDetails?.length; ii++) {
         const flag = flagDetail.FlagDetails[ii];
         //process
