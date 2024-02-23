@@ -1,7 +1,7 @@
 import * as path from 'path';
 
 import { HTTPError } from './HttpError';
-import { SanitizeRequestBody } from './middlewares';
+import { sanitizeRequest } from './middlewares/sanitizeRequestBody';
 import {
   AppInsights,
   CSRFToken,
@@ -59,7 +59,7 @@ app.use((req: Request, res: Response, next) => {
   next();
 });
 
-app.post('*', new SanitizeRequestBody().sanitize);
+app.post('*', sanitizeRequest);
 
 //Set up routes
 routes(app);

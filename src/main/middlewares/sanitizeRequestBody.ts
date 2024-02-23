@@ -1,24 +1,35 @@
-import autobind from 'autobind-decorator';
-import { NextFunction, Request, RequestHandler, Response } from 'express';
-import { flow, unescape } from 'lodash';
-import { strip } from 'node-emoji';
-import sanitizer from 'sanitizer';
-import traverse from 'traverse';
+import { NextFunction, Request, Response } from 'express';
+import striptags from 'striptags';
 
-@autobind
-export class SanitizeRequestBody {
-  public sanitize(req: Partial<Request>, res: Response, next: NextFunction): RequestHandler | void {
-    try {
-      const santizeValue = flow([strip, sanitizer.sanitize, unescape]);
+function sanitizeRequest(req: Request, res: Response, next: NextFunction): void {
+  Object.keys(req.body).forEach(formParameter => {
+    const value = unescapeHTML(req.body[formParameter]);
+    req.body[formParameter] = typeof value === 'string' ? striptags(value) : value;
+  });
 
-      traverse(req.body).forEach(function sanitizeValue(value) {
-        if (this.isLeaf && typeof value === 'string') {
-          const sanitizedValue = santizeValue(value);
-          this.update(sanitizedValue);
-        }
-      });
-    } finally {
-      next();
-    }
-  }
+  next();
 }
+
+const htmlEntities = {
+  nbsp: ' ',
+  lt: '<',
+  gt: '>',
+  quot: '"',
+  amp: '&',
+  apos: "'",
+};
+
+function unescapeHTML(str) {
+  return str.replace(/&([^;]+);/g, function (entity, entityCode) {
+    //var match;
+
+    if (entityCode in htmlEntities) {
+      return htmlEntities[entityCode];
+      /*eslint no-cond-assign: 0*/
+    } else {
+      return entity;
+    }
+  });
+}
+
+export { sanitizeRequest };

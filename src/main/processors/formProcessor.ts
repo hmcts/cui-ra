@@ -2,8 +2,6 @@ import { Common, ErrorMessages } from './../constants';
 import { DataManagerDataObject } from './../interfaces';
 import { Form } from './../models';
 
-import { escape } from 'lodash';
-
 //process the form data
 export class FormProcessor {
   public static process(
@@ -39,8 +37,8 @@ export class FormProcessor {
           item.value.flagComment = body.data[item.id].flagComment;
           item.value.flagComment_cy = body.data[item.id].flagComment_cy;
           if (item.value.flagCode === Common.OTHER_FLAG_CODE) {
-            item.value.otherDescription = escape(parent.value.name);
-            item.value.otherDescription_cy = escape(parent.value.name_cy);
+            item.value.otherDescription = parent.value.name;
+            item.value.otherDescription_cy = parent.value.name_cy;
           }
         } else {
           Object.assign(item.value, {
@@ -78,8 +76,8 @@ export class FormProcessor {
     if (body.selected === Common.OTHER_FLAG_CODE) {
       parent._other = true;
       if (body.data) {
-        parent.value.subTypeValue = escape(body.data[parent.id].subTypeValue);
-        parent.value.subTypeValue_cy = escape(body.data[parent.id].subTypeValue_cy);
+        parent.value.subTypeValue = body.data[parent.id].subTypeValue;
+        parent.value.subTypeValue_cy = body.data[parent.id].subTypeValue_cy;
       }
       return [parent];
     }
@@ -98,8 +96,8 @@ export class FormProcessor {
   private static processTypeAheadType(body: Form, parent: DataManagerDataObject): DataManagerDataObject[] {
     //other selected
     if (body.data && body.enabled.includes(Common.OTHER_FLAG_CODE)) {
-      parent.value.subTypeValue = escape(body.data[parent.id].subTypeValue);
-      parent.value.subTypeValue_cy = escape(body.data[parent.id].subTypeValue_cy);
+      parent.value.subTypeValue = body.data[parent.id].subTypeValue;
+      parent.value.subTypeValue_cy = body.data[parent.id].subTypeValue_cy;
       parent._other = true;
       return [parent];
     }
