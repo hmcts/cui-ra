@@ -3,8 +3,8 @@ import striptags from 'striptags';
 
 function sanitizeRequest(req: Request, res: Response, next: NextFunction): void {
   Object.keys(req.body).forEach(formParameter => {
-    const value = unescapeHTML(req.body[formParameter]);
-    req.body[formParameter] = typeof value === 'string' ? striptags(value) : value;
+    const value = req.body[formParameter];
+    req.body[formParameter] = typeof value === 'string' ? striptags(unescapeHTML(value)) : value;
   });
 
   next();

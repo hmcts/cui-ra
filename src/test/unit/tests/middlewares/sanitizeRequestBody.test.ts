@@ -213,4 +213,16 @@ describe('sanitizeRequestBody', () => {
 
     assert.equal(req.body.test, 'alert("Test")Test2');
   });
+
+  test('non string value', () => {
+    req = {
+      body: {
+        test: '',
+        number: 123
+      },
+    } as Request;
+    sanitizeRequest(req, res, next);
+
+    assert.equal(req.body.number, 123);
+  });
 });
