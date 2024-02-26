@@ -15,59 +15,48 @@
 {% block mainContent %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">{{ _r(_t('supportForName'), { name: name }) }}</h1>
+      <h1 class="govuk-heading-xl">{{ _r(_t('supportForName'), { name: name }) }}</h1>
 
-        <p class="govuk-body">
-            <a href="/home/intro" class="govuk-link govuk-link--no-visited-state">{{ _t('overview.changeMySupportOptions') }}</a>
-        </p>
+      <p class="govuk-body">
+        <a href="/home/intro" class="govuk-link govuk-link--no-visited-state">{{ _t('overview.changeMySupportOptions') }}</a>
+      </p>
 
-        <table class="govuk-table govuk-!-margin-top-8">
-            <caption class="govuk-table__caption govuk-table__caption--m">{{ _t('overview.tableHeading') }}</caption>
-            <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">{{ _t('overview.column1Heading') }}</th>
-                <th scope="col" class="govuk-table__header">{{ _t('overview.column2Heading') }}</th>
-                </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-                {% for item in existingFlags %}
-                    <tr class="govuk-table__row">
-                    <td scope="row" class="govuk-table__cell">
-                        {{ item.value.name }}
-                        {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
-                            <br/>
-                            {{ item.value.path.slice(-1).pop().name }}
-                        {% endif %}
-                    </td>
-                    {% if item.value.status == status.REQUESTED %}
-                        <td class="govuk-table__cell">
-                            <strong class="govuk-tag govuk-tag--yellow">
-                                {{ _t('overview.status.requested') }}
-                            </strong>
-                        </td>
-                    {% elseif item.value.status == status.ACTIVE %}
-                        <td class="govuk-table__cell">
-                            <strong class="govuk-tag govuk-tag--turquoise">
-                                {{ _t('overview.status.active') }}
-                            </strong>
-                        </td>
-                    {% elseif item.value.status == status.INACTIVE %}
-                        <td class="govuk-table__cell">
-                            <strong class="govuk-tag govuk-tag--grey">
-                                {{ _t('overview.status.inactive') }}
-                            </strong>
-                        </td>
-                    {% elseif item.value.status == status.NOT_APPROVED %}
-                        <td class="govuk-table__cell">
-                            <strong class="govuk-tag govuk-tag--orange">
-                                {{ _t('overview.status.notApproved') }}
-                            </strong>
-                        </td>
-                    {% endif %}
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+      <figure class="cuira-overview govuk-table govuk-!-margin-top-8">
+        <figcaption class="govuk-heading-m">{{ _t('overview.tableHeading') }}</figcaption>
+        <div class="cuira-overview-summary govuk-body">
+          <div class="govuk-table__header">{{ _t('overview.column1Heading') }}</div>
+          <div class="govuk-table__header">{{ _t('overview.column2Heading') }}</div>
+          {% for item in existingFlags %}
+          <div class="cuira-overview-row">
+            {{ item.value.name }}
+            {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
+            <br/>
+            {{ item.value.path.slice(-1).pop().name }}
+            {% endif %}
+          </div>
+          <div class="cuira-overview-row">
+          {% if item.value.status == status.REQUESTED %}
+            <strong class="govuk-tag govuk-tag--yellow">
+              {{ _t('overview.status.requested') }}
+            </strong>
+          {% elseif item.value.status == status.ACTIVE %}
+            <strong class="govuk-tag govuk-tag--turquoise">
+              {{ _t('overview.status.active') }}
+            </strong>
+          {% elseif item.value.status == status.INACTIVE %}
+            <strong class="govuk-tag govuk-tag--grey">
+              {{ _t('overview.status.inactive') }}
+            </strong>
+          {% elseif item.value.status == status.NOT_APPROVED %}
+            <strong class="govuk-tag govuk-tag--orange">
+              {{ _t('overview.status.notApproved') }}
+            </strong>
+          {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </figure>
+
     </div>
   </div>
 {% endblock %}

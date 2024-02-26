@@ -1,0 +1,13 @@
+.cuira-overview {
+  margin: 0;
+}
+
+.cuira-overview-summary {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+}
+
+.cuira-overview-row {
+  border-bottom: 1px solid #b1b4b6;
+  padding: 10px 0 10px 0;
+}
