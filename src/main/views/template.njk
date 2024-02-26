@@ -4,7 +4,7 @@
 {% endif %}
 {% extends "govuk/template.njk" %}
 
-{% set bodyClasses = "govuk-frontend-supported" %}
+
 
 {% block pageTitle %}
   {%- block preTitle %}{% endblock %}{{ _t('title') -}}
@@ -33,7 +33,8 @@
     navigation: menuNavigation,
     navigationClasses: "single-item-navigation logged-in",
     menuButtonText: _t('header.menuText'),
-    homepageUrl: _t('header.url')
+    homepageUrl: _t('header.url'),
+    useTudorCrown: true
   }) }}
 {% endblock %}
 
