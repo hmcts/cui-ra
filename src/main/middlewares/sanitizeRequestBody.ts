@@ -14,10 +14,10 @@ function unescapeHTML(str) {
   return str
     .replaceAll('&lt;', '<')
     .replaceAll('&gt;', '>')
-    .replaceAll('&amp;', '&')
     .replaceAll('&quot;', '""')
     .replaceAll('&apos;', "'")
-    .replace('&nbsp;', ' ');
+    .replace('&nbsp;', ' ')
+    .replaceAll('&amp;', '&');
 }
 
 export { sanitizeRequest };
