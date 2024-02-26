@@ -6812,6 +6812,7 @@ __metadata:
     stylelint-config-standard: ^36.0.0
     stylelint-config-standard-scss: ^13.0.0
     supertest: ^6.3.4
+    traverse: ^0.6.6
     ts-jest: ^29.0.1
     ts-loader: ^9.5.1
     ts-node: ^10.9.1
@@ -15268,6 +15269,13 @@ __metadata:
   version: 0.3.9
   resolution: "traverse@npm:0.3.9"
   checksum: 982982e4e249e9bbf063732a41fe5595939892758524bbef5d547c67cdf371b13af72b5434c6a61d88d4bb4351d6dabc6e22d832e0d16bc1bc684ef97a1cc59e
+  languageName: node
+  linkType: hard
+
+"traverse@npm:^0.6.6":
+  version: 0.6.8
+  resolution: "traverse@npm:0.6.8"
+  checksum: ef22abfc73fe2052403093b6747febbfeb52dcf827db1ca0542a78932c918706b9b12c373ef27e1c3e07e3e92eb1c646b4fe97b936fe775d59cbce7da417e13b
   languageName: node
   linkType: hard
 

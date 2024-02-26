@@ -1,10 +1,13 @@
 import { NextFunction, Request, Response } from 'express';
 import striptags from 'striptags';
+import traverse from 'traverse';
 
 function sanitizeRequest(req: Request, res: Response, next: NextFunction): void {
-  Object.keys(req.body).forEach(formParameter => {
-    const value = req.body[formParameter];
-    req.body[formParameter] = typeof value === 'string' ? striptags(unescapeHTML(value)) : value;
+  traverse(req.body).forEach(function sanitizeValue(value) {
+    if (this.isLeaf && typeof value === 'string') {
+      const sanitizedValue = striptags(unescapeHTML(value));
+      this.update(sanitizedValue);
+    }
   });
 
   next();
