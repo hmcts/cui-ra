@@ -9,8 +9,12 @@ def component = "ra"
 def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
 withPipeline(type, product, component) {
-  before('functional') {
-    yarnBuilder.yarn('playwright install')
+  before('smoketest:preview') {
+    sh 'yarn playwright install'
+  }
+
+  before('smoketest:aat') {
+    sh 'yarn playwright install'
   }
 
   afterAlways('build') {
