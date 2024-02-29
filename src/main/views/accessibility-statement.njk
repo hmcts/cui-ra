@@ -1,7 +1,24 @@
 {% extends "template.njk" %}
 
-{% block mainContent %}
-  <h1 class="govuk-heading-xl">Accessibility Statement</h1>
+{% block pageTitle %}
+  {{ _t('accessibility.title') }}
+{% endblock %}
 
-  <p class='govuk-body'>This is the accessibility policy page</p>
+
+{% block mainContent %}
+  <h1 class="govuk-heading-xl">{{ _t('accessibility.title') }}</h1>
+
+  {{ _t('accessibility.section1')|safe }}
+
+  {{ _t('accessibility.section2')|safe }}
+
+  {{ _t('accessibility.section3')|safe }}
+
+  {{ _t('accessibility.section4')|safe }}
+
+  {{ _t('accessibility.section5')|safe }}
+
+  {{ _t('accessibility.section6')|safe }}
+
+  {{ _t('accessibility.section7')|safe }}
 {% endblock %}
