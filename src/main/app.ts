@@ -17,7 +17,7 @@ import routes from './routes';
 
 import * as bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
-import express, { Request, Response } from 'express';
+import express, { NextFunction, Request, Response } from 'express';
 import favicon from 'serve-favicon';
 
 const { setupDev } = require('./development');
@@ -54,8 +54,9 @@ new CSRFToken().enableFor(app);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use((req: Request, res: Response, next) => {
+app.use((req: Request, res: Response, next: NextFunction) => {
   res.setHeader('Cache-Control', 'no-cache, max-age=0, must-revalidate, no-store');
+  res.setHeader('Permissions-Policy', 'geolocation=(), microphone=(), camera=()');
   next();
 });
 
