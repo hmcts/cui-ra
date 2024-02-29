@@ -26,12 +26,11 @@ module "key-vault" {
   create_managed_identity = true
 }
 
-resource "azurerm_key_vault_secret" "AZURE_APPINSGHTS_KEY" {
-  name         = "AppInsightsInstrumentationKey"
-  value        = module.application_insights.instrumentation_key
+resource "azurerm_key_vault_secret" "app-insights-connection-string" {
+  name         = "app-insights-connection-string"
+  value        = module.application_insights.connection_string
   key_vault_id = module.key-vault.key_vault_id
 }
-
 
 module "application_insights" {
   source = "git@github.com:hmcts/terraform-module-application-insights?ref=main"

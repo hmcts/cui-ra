@@ -12,7 +12,7 @@ export class PropertiesVolume {
     } else {
       propertiesVolume.addTo(config);
     }
-    this.setSecret('secrets.cui.AppInsightsInstrumentationKey', 'appInsights.instrumentationKey');
+    this.setSecret('secrets.cui.app-insights-connection-string', 'appInsights.connectionString');
     this.setSecret('secrets.cui.s2s-secret', 'services.s2s.secret');
     this.setSecret('secrets.cui.redis-access-key', 'session.redis.key');
     this.setSecret('secrets.cui.redis-access-key', 'session.secret');
