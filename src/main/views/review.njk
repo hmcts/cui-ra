@@ -1,9 +1,6 @@
 {% extends "template.njk" %}
 
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-{% from "govuk/components/table/macro.njk" import govukTable %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
 {% from "./macros/csrf.njk" import csrfProtection %}
 
 {% block preTitle %}
@@ -23,104 +20,99 @@
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">{{ _t('review.heading') }}</h1>
 
-        <h2 class="govuk-heading-m">{{ _t('overview.tableHeading') }}<h2>
+        <h2 class="govuk-heading-m">{{ _t('overview.tableHeading') }}</h2>
 
-        <table class="govuk-table">
-            <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">
-                        <span class='govuk-!-font-weight-bold'>{{ _t('review.nameOfParty') }}</span>
-                    </th>
-                    <td class="govuk-table__cell">
-                        {{ partyname }}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              <span class='govuk-!-font-weight-bold'>{{ _t('review.nameOfParty') }}</span>
+            </dt>
+             <dd class="govuk-summary-list__actions">
+              {{ partyname }}
+            </dd>
+          </div>
+        </dl>
 
         {# Active or already requested #}
         {% if requested|length > 0 %}
         <h3 class="govuk-heading-s">{{ _t('review.support.previous') }}</h3>
-        <table class="govuk-table">
-            <tbody class="govuk-table__body">
-                {% for item in requested %}
-                    <tr class="govuk-table__row">
-                        <td scope="row" class="govuk-table__cell">
-                            <span id="remove-name-{{ item.id }}">{% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
-                            {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
-                                <br/>
-                                {{ item.value.path.slice(-1).pop().name }}
-                            {% endif %}
-                            </span>
-                        </td>
-                        <td class="govuk-table__cell govuk-table__cell--numeric">
-                            <a aria-labelledby="remove-{{ item.id }} remove-name-{{ item.id }}" id="remove-{{ item.id }}" class='govuk-link govuk-link--no-visited-state' href="{{ route.SET_INACTIVE }}?id={{ item.id }}">{{ _t('review.actions.remove') }}</a>
-                        </td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+
+        <ul class="govuk-task-list">
+        {% for item in requested %}
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <span id="remove-name-{{ item.id }}">{% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
+              {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
+                <br/>
+                {{ item.value.path.slice(-1).pop().name }}
+              {% endif %}
+              </span>
+            </div>
+            <div class="govuk-task-list__status">
+              <a aria-labelledby="remove-{{ item.id }} remove-name-{{ item.id }}" id="remove-{{ item.id }}" class='govuk-link govuk-link--no-visited-state' href="{{ route.SET_INACTIVE }}?id={{ item.id }}">{{ _t('review.actions.remove') }}</a>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
         {% endif %}
 
-        {# Newely requested #}
+        {# Newly requested #}
         {% if new|length > 0 %}
         <h3 class="govuk-heading-s">{{ _t('review.support.new') }}</h3>
-        <table class="govuk-table">
-            <tbody class="govuk-table__body">
-                {% for item in new %}
-                    {% if item._isCategoryPage %}
-                        {% set page = item.id %}
-                    {% else %}
-                        {% set page = item._parentId %}
-                    {% endif %}
-                    <tr class="govuk-table__row">
-                        <td scope="row" class="govuk-table__cell">                     
-                            <span id="change-name-{{ item.id }}">{% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
-                            {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
-                                <br/>
-                                {% if welsh === false %}{{ item.value.otherDescription }}{% else %}{{ item.value.otherDescription_cy }}{% endif %}
-                            {% endif %}
-                            </span>
-                            <br/>
-                            <span id="change-value-{{ item.id }}" class="govuk-hint">
-                                {% if item._listOfValuesLength %}
-                                    {% if welsh === false %}{{ item.value.subTypeValue }}{% else %}{{ item.value.subTypeValue_cy }}{% endif %}        
-                                {% else %}
-                                    {% if welsh === false %}{{ item.value.flagComment }}{% else %}{{ item.value.flagComment_cy }}{% endif %} 
-                                {% endif %}
-                            </span>
-                        </td>
-                        <td class="govuk-table__cell govuk-table__cell--numeric">
-                            <a aria-labelledby="change-{{ item.id }} change-name-{{ item.id }} change-value-{{ item.id }}" id="change-{{ item.id }}" class='govuk-link govuk-link--no-visited-state' href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: page } ) }}?change=true">{{ _t("review.actions.change") }}</a>
-                        </td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+
+        <ul class="govuk-task-list">
+        {% for item in new %}
+          {% if item._isCategoryPage %}
+            {% set page = item.id %}
+          {% else %}
+            {% set page = item._parentId %}
+          {% endif %}
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <span id="change-name-{{ item.id }}">{% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
+              {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
+                <br/>
+                 {% if welsh === false %}{{ item.value.otherDescription }}{% else %}{{ item.value.otherDescription_cy }}{% endif %}
+              {% endif %}
+              </span>
+              <br/>
+              <span id="change-value-{{ item.id }}" class="govuk-hint">
+              {% if item._listOfValuesLength %}
+                {% if welsh === false %}{{ item.value.subTypeValue }}{% else %}{{ item.value.subTypeValue_cy }}{% endif %}
+              {% else %}
+                {% if welsh === false %}{{ item.value.flagComment }}{% else %}{{ item.value.flagComment_cy }}{% endif %}
+              {% endif %}
+              </span>
+            </div>
+            <div class="govuk-task-list__status">
+              <a aria-labelledby="change-{{ item.id }} change-name-{{ item.id }} change-value-{{ item.id }}" id="change-{{ item.id }}" class='govuk-link govuk-link--no-visited-state' href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: page } ) }}?change=true">{{ _t("review.actions.change") }}</a>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
         {% endif %}
 
         {# No longer required #}
         {% if notRequired|length > 0 %}
         <h3 class="govuk-heading-s">{{ _t('review.support.notNeeded') }}</h3>
-        <table class="govuk-table">
-            <tbody class="govuk-table__body">
-                {% for item in notRequired %}
-                    <tr class="govuk-table__row">
-                        <td scope="row" class="govuk-table__cell">
-                            <span id="add-name-{{ item.id }}">{% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
-                            {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
-                                <br/>
-                                {{ item.value.path.slice(-1).pop().name }}
-                            {% endif %}
-                            </span>
-                        </td>
-                        <td class="govuk-table__cell govuk-table__cell--numeric">
-                            <a aria-labelledby="add-{{ item.id }} add-name-{{ item.id }}" id="add-{{ item.id }}" class='govuk-link govuk-link--no-visited-state' href="{{ route.SET_REQUESTED }}?id={{ item.id }}">{{ _t("review.actions.add") }}</a>
-                        </td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+
+        <ul class="govuk-task-list">
+        {% for item in notRequired %}
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <span id="add-name-{{ item.id }}">{% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
+              {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
+                <br/>
+              {{ item.value.path.slice(-1).pop().name }}
+              {% endif %}
+              </span>
+            </div>
+            <div class="govuk-task-list__status">
+              <a aria-labelledby="add-{{ item.id }} add-name-{{ item.id }}" id="add-{{ item.id }}" class='govuk-link govuk-link--no-visited-state' href="{{ route.SET_REQUESTED }}?id={{ item.id }}">{{ _t("review.actions.add") }}</a>
+            </div>
+          </li>
+        {% endfor %}
+        </ul>
         {% endif %}
 
         <a href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: masterId } ) }}?change=true&new=true" class="govuk-button govuk-button--secondary" data-module="govuk-button">
@@ -128,11 +120,11 @@
         </a>
         <form method="POST">
             {{ csrfProtection(csrfToken) }}
-            <div class="govuk-button-group">       
+            <div class="govuk-button-group">
                 <button id="submit-review" type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
                     {{ _t('review.actions.submit') }}
                 </button>
-        
+
                 <a class="govuk-link govuk-link--no-visited-state" href="{{ route.CANCEL }}">{{ _t('cancel') }}</a>
             </div>
          </form>
