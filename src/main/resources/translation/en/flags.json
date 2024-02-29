@@ -5,7 +5,7 @@
     "hint": "Select all that apply to you - specific requirements can be given next",
     "command": "Select all that apply to you - specific requirements can be given next",
     "error": {
-      "empty": "Select whether you need support"
+      "empty": "Select whether you need a reasonable adjustment"
     }
   },
   "RA0002": {
@@ -35,7 +35,7 @@
   "RA0004": {
     "hint": "For example, access and mobility support if a hearing takes place in person",
     "error": {
-      "empty": "Select whether you need mobility support"
+      "empty": "Select whether you need adjustments to get to, into and around our buildings"
     },
     "OT0001": {
       "control": "Describe what support you need travelling to, or around buildings",
@@ -48,7 +48,7 @@
     "blurb": "Think about what you would need if the hearing was in person, by phone or video.",
     "hint": "For example, someone you know or an assitance dog",
     "error": {
-      "empty": "Select whether you need to bring something to a court hearing"
+      "empty": "Select whether you need to bring support with you to a hearing"
     },
     "OT0001": {
       "control": "Describe what support you need to request for a hearing",
@@ -61,7 +61,7 @@
     "blurb": "Think about what you would need if the hearing was in person, by phone or video.",
     "hint": "For example, breaks or extra space",
     "error": {
-      "empty": "Select whether you need something for comfort during a court hearing"
+      "empty": "Select what you need to feel comfortable during a hearing"
     },
     "OT0001": {
       "control": "Describe what support you need to request for a hearing",
@@ -72,7 +72,7 @@
   },
   "RA0007": {
     "error": {
-      "empty": "Select whether you need support"
+      "empty": "Select whether you need to request a certain type of hearing"
     },
     "OT0001": {
       "control": "Describe what support you need to request for a hearing",
@@ -99,7 +99,7 @@
     "hint": "you can tell us which type of hearing enhancement in the next step",
     "control": "Type of hearing enhancement system",
     "error": {
-      "empty": "Select which type of hearing enhancement you need to request"
+      "empty": "Select what type of hearing enhancement system you need"
     },
     "OT0001": {
       "control": "Describe what type of hearing enhancement you need",
@@ -189,7 +189,7 @@
     "hint": "you can tell us which type of interpreter in the next step",
     "control": "Which sign language interpreter support do you need to request?",
     "error": {
-      "empty": "Select a language or enter the language manually"
+      "empty": "Select which Sign Language Interpreter you need"
     }
   },
   "RA0046": {},

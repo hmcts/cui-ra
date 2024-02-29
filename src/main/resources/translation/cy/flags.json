@@ -5,7 +5,7 @@
     "hint": "Dewiswch bob un sy'n berthnasol i chi - gellir rhoi gofynion penodol nesaf",
     "command": "Dewiswch bob un sy'n berthnasol i chi - gellir rhoi gofynion penodol nesaf",
     "error": {
-      "empty": "Dewiswch a oes angen cefnogaeth arnoch"
+      "empty": "Dewiswch a oes angen addasiad rhesymol arnoch"
     }
   },
   "RA0002": {
@@ -35,7 +35,7 @@
   "RA0004": {
     "hint": "Er enghraifft, cymorth gyda mynediad a symudedd os bydd gwrandawiad yn digwydd wyneb yn wyneb mewn adeilad",
     "error": {
-      "empty": "Dewiswch a oes angen cymorth symudedd arnoch"
+      "empty": "Dewiswch a oes angen addasiadau arnoch i gyrraedd, mynd i mewn i, ac i fynd o amgylch ein hadeiladau"
     },
     "OT0001": {
       "control": "Disgrifiwch pa gefnogaeth sydd ei hangen arnoch i deithio i, neu i symud o amgylch adeiladau",
@@ -48,7 +48,7 @@
     "blurb": "",
     "hint": "Er enghraifft, rhywun rydych chi'n ei adnabod neu gi cymorth",
     "error": {
-      "empty": "Dewiswch p'un a ydych angen dod â rhywbeth efo chi i wrandawiad llys"
+      "empty": "Dewiswch a oes arnoch angen dod â chefnogaeth gyda chi i wrandawiad"
     },
     "OT0001": {
       "control": "Disgrifiwch pa gymorth sydd ei angen arnoch ar gyfer gwrandawiad",
@@ -61,7 +61,7 @@
     "blurb": "Meddyliwch beth fyddai ei angen arnoch pe bai'r gwrandawiad yn cael ei gynnal mewn adeilad, dros y ffôn neu drwy fideo.",
     "hint": "Er enghraifft, seibiannau neu le ychwanegol",
     "error": {
-      "empty": "Dewiswch a oes arnoch angen  rhywbeth i deimlo’n gyfforddus yn ystod gwrandawiad llys"
+      "empty": "Dewiswch beth sydd ei angen arnoch i deimlo'n gyfforddus yn ystod gwrandawiad"
     },
     "OT0001": {
       "control": "Disgrifiwch pa gymorth sydd ei angen arnoch ar gyfer gwrandawiad",
@@ -72,7 +72,7 @@
   },
   "RA0007": {
     "error": {
-      "empty": "Dewiswch a oes angen cefnogaeth arnoch"
+      "empty": "Dewiswch a oes arnoch angen math penodol o wrandawiad"
     },
     "OT0001": {
       "control": "Disgrifiwch pa gymorth sydd ei angen arnoch ar gyfer gwrandawiad",
@@ -85,7 +85,7 @@
     "blurb": "Meddyliwch am bob cyfathrebiad â'r llys, yn ogystal â'r hyn y gallai fod ei angen arnoch mewn gwrandawiad. Ystyriwch wrandawiadau o bell ac wyneb yn wyneb mewn adeilad, rhag ofn nad yw'r math o wrandawiad sydd orau gennych yn bosibl.",
     "hint": "Er enghraifft, clywed, siarad neu ddehongli",
     "error": {
-      "empty": "Dewiswch a oes angen help arnoch i gyfathrebu a deall"
+      "empty": "Dewiswch pa help sydd ei angen arnoch i gyfathrebu a deall"
     },
     "OT0001": {
       "control": "Disgrifiwch pa gymorth sydd ei angen arnoch wrth gyfathrebu a deall",
@@ -99,7 +99,7 @@
     "hint": "gallwch ddweud wrthym pa fath o gymorth clyw yn y cam nesaf",
     "control": "Math o system gwella clyw",
     "error": {
-      "empty": "Dewiswch pa fath o system gwella clyw sydd ei hangen arnoch"
+      "empty": "Dewiswch pa fath o system gwella clyw sydd ei angen arnoch"
     },
     "OT0001": {
       "control": "Disgrifiwch pa fath o system gwella clyw sydd ei angen arnoch",
@@ -189,7 +189,7 @@
     "hint": "gallwch ddweud wrthym pa fath o ddehonglydd yn y cam nesaf",
     "control": "Pa gefnogaeth [dehonglydd iaith arwyddion] sydd ei angen arnoch?",
     "error": {
-      "empty": "Dewiswch iaith neu nodwch yr iaith â llaw"
+      "empty": "Dewiswch pa Ddehonglydd Iaith Arwyddion sydd ei angen arnoch"
     }
   },
   "RA0046": {},
