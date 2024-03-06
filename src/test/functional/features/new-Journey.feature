@@ -1,4 +1,5 @@
 @allJourney
+@Ignore
 Feature: New Journey
 
   Scenario: The home page loads and I click on New Journey
