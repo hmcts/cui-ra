@@ -112,7 +112,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pa11y", "npm:7.0.0"],\
             ["playwright", "npm:1.42.1"],\
             ["prettier", "npm:3.2.5"],\
-            ["puppeteer", "npm:22.3.0"],\
+            ["puppeteer", "npm:22.4.0"],\
             ["redis", "npm:4.6.13"],\
             ["reflect-metadata", "npm:0.2.1"],\
             ["require-directory", "npm:2.1.1"],\
@@ -8224,10 +8224,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["npm:0.5.10", {\
-          "packageLocation": "./.yarn/cache/chromium-bidi-npm-0.5.10-d7ffbd36ae-fa7056e235.zip/node_modules/chromium-bidi/",\
+        ["npm:0.5.12", {\
+          "packageLocation": "./.yarn/cache/chromium-bidi-npm-0.5.12-8768166bd4-c14aedc972.zip/node_modules/chromium-bidi/",\
           "packageDependencies": [\
-            ["chromium-bidi", "npm:0.5.10"]\
+            ["chromium-bidi", "npm:0.5.12"]\
           ],\
           "linkType": "SOFT"\
         }],\
@@ -8259,10 +8259,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:e5430ddde62e0c345fbcd321b6375603a31953f2f0584dc2bc72c0e2acc006827f87a4779a6d88794af9baad9d319dd79362e423f236dae2bc3f46c2ecf2e0ce#npm:0.5.10", {\
-          "packageLocation": "./.yarn/__virtual__/chromium-bidi-virtual-88822b7a28/0/cache/chromium-bidi-npm-0.5.10-d7ffbd36ae-fa7056e235.zip/node_modules/chromium-bidi/",\
+        ["virtual:fe0f3941b79f10bb70f11a8925ab349a998b44760809b215ad05bfcfcd6e93ed97bb9c64344c5bac16ae3e2ea340522c139aaf59e8845db12bea61114ca28f50#npm:0.5.12", {\
+          "packageLocation": "./.yarn/__virtual__/chromium-bidi-virtual-31d8971f5c/0/cache/chromium-bidi-npm-0.5.12-8768166bd4-c14aedc972.zip/node_modules/chromium-bidi/",\
           "packageDependencies": [\
-            ["chromium-bidi", "virtual:e5430ddde62e0c345fbcd321b6375603a31953f2f0584dc2bc72c0e2acc006827f87a4779a6d88794af9baad9d319dd79362e423f236dae2bc3f46c2ecf2e0ce#npm:0.5.10"],\
+            ["chromium-bidi", "virtual:fe0f3941b79f10bb70f11a8925ab349a998b44760809b215ad05bfcfcd6e93ed97bb9c64344c5bac16ae3e2ea340522c139aaf59e8845db12bea61114ca28f50#npm:0.5.12"],\
             ["@types/devtools-protocol", null],\
             ["devtools-protocol", "npm:0.0.1249869"],\
             ["mitt", "npm:3.0.1"],\
@@ -8962,10 +8962,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:88b93fd2fc8c25abddaa57e3e9ab49c2873b8b950c69352b0e7f21074cc70a3dfee44b3be6544844f339e0ddcfc9d302cb347a19322b8c91db13af7e8468112e#npm:9.0.0", {\
-          "packageLocation": "./.yarn/__virtual__/cosmiconfig-virtual-3aa0d876ee/0/cache/cosmiconfig-npm-9.0.0-47d78cf275-a30c424b53.zip/node_modules/cosmiconfig/",\
+        ["virtual:42c2737f387bdc73c5556058c6c9ec6cdd9661518e4193d1243a00686019b1f9fae251846aa6f3c661665ca7e369a1339105e11fcc4b64720fc7316e7092345a#npm:9.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/cosmiconfig-virtual-49562ab3f0/0/cache/cosmiconfig-npm-9.0.0-47d78cf275-a30c424b53.zip/node_modules/cosmiconfig/",\
           "packageDependencies": [\
-            ["cosmiconfig", "virtual:88b93fd2fc8c25abddaa57e3e9ab49c2873b8b950c69352b0e7f21074cc70a3dfee44b3be6544844f339e0ddcfc9d302cb347a19322b8c91db13af7e8468112e#npm:9.0.0"],\
+            ["cosmiconfig", "virtual:42c2737f387bdc73c5556058c6c9ec6cdd9661518e4193d1243a00686019b1f9fae251846aa6f3c661665ca7e369a1339105e11fcc4b64720fc7316e7092345a#npm:9.0.0"],\
             ["@types/typescript", null],\
             ["env-paths", "npm:2.2.1"],\
             ["import-fresh", "npm:3.3.0"],\
@@ -9272,7 +9272,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pa11y", "npm:7.0.0"],\
             ["playwright", "npm:1.42.1"],\
             ["prettier", "npm:3.2.5"],\
-            ["puppeteer", "npm:22.3.0"],\
+            ["puppeteer", "npm:22.4.0"],\
             ["redis", "npm:4.6.13"],\
             ["reflect-metadata", "npm:0.2.1"],\
             ["require-directory", "npm:2.1.1"],\
@@ -16675,13 +16675,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:22.3.0", {\
-          "packageLocation": "./.yarn/unplugged/puppeteer-npm-22.3.0-88b93fd2fc/node_modules/puppeteer/",\
+        ["npm:22.4.0", {\
+          "packageLocation": "./.yarn/unplugged/puppeteer-npm-22.4.0-42c2737f38/node_modules/puppeteer/",\
           "packageDependencies": [\
-            ["puppeteer", "npm:22.3.0"],\
+            ["puppeteer", "npm:22.4.0"],\
             ["@puppeteer/browsers", "npm:2.1.0"],\
-            ["cosmiconfig", "virtual:88b93fd2fc8c25abddaa57e3e9ab49c2873b8b950c69352b0e7f21074cc70a3dfee44b3be6544844f339e0ddcfc9d302cb347a19322b8c91db13af7e8468112e#npm:9.0.0"],\
-            ["puppeteer-core", "npm:22.3.0"]\
+            ["cosmiconfig", "virtual:42c2737f387bdc73c5556058c6c9ec6cdd9661518e4193d1243a00686019b1f9fae251846aa6f3c661665ca7e369a1339105e11fcc4b64720fc7316e7092345a#npm:9.0.0"],\
+            ["puppeteer-core", "npm:22.4.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -16701,16 +16701,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["npm:22.3.0", {\
-          "packageLocation": "./.yarn/cache/puppeteer-core-npm-22.3.0-e5430ddde6-f7a0652ad8.zip/node_modules/puppeteer-core/",\
+        ["npm:22.4.0", {\
+          "packageLocation": "./.yarn/cache/puppeteer-core-npm-22.4.0-fe0f3941b7-816cb6e72e.zip/node_modules/puppeteer-core/",\
           "packageDependencies": [\
-            ["puppeteer-core", "npm:22.3.0"],\
+            ["puppeteer-core", "npm:22.4.0"],\
             ["@puppeteer/browsers", "npm:2.1.0"],\
-            ["chromium-bidi", "virtual:e5430ddde62e0c345fbcd321b6375603a31953f2f0584dc2bc72c0e2acc006827f87a4779a6d88794af9baad9d319dd79362e423f236dae2bc3f46c2ecf2e0ce#npm:0.5.10"],\
+            ["chromium-bidi", "virtual:fe0f3941b79f10bb70f11a8925ab349a998b44760809b215ad05bfcfcd6e93ed97bb9c64344c5bac16ae3e2ea340522c139aaf59e8845db12bea61114ca28f50#npm:0.5.12"],\
             ["cross-fetch", "npm:4.0.0"],\
             ["debug", "virtual:428f325a939c2653ad822eb3d75efb02ac311523dd0d4f9645afc39ea00bd86eceac35a9d59c9b6977d76b670a4ef0ae057ea572338a44729aa592711a8c05a3#npm:4.3.4"],\
             ["devtools-protocol", "npm:0.0.1249869"],\
-            ["ws", "virtual:e5430ddde62e0c345fbcd321b6375603a31953f2f0584dc2bc72c0e2acc006827f87a4779a6d88794af9baad9d319dd79362e423f236dae2bc3f46c2ecf2e0ce#npm:8.16.0"]\
+            ["ws", "virtual:fe0f3941b79f10bb70f11a8925ab349a998b44760809b215ad05bfcfcd6e93ed97bb9c64344c5bac16ae3e2ea340522c139aaf59e8845db12bea61114ca28f50#npm:8.16.0"]\
           ],\
           "linkType": "HARD"\
         }],\
@@ -18319,7 +18319,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@csstools/selector-specificity", "virtual:cc7212b44bbac8e3a62d293ffe0ba4f0544359b56657dde6818c61a0b16be50106248c8c3465b4a86f74b2137c612605f9ac460d7ea4ee442c6322eafab894a6#npm:3.0.1"],\
             ["balanced-match", "npm:2.0.0"],\
             ["colord", "npm:2.9.3"],\
-            ["cosmiconfig", "virtual:88b93fd2fc8c25abddaa57e3e9ab49c2873b8b950c69352b0e7f21074cc70a3dfee44b3be6544844f339e0ddcfc9d302cb347a19322b8c91db13af7e8468112e#npm:9.0.0"],\
+            ["cosmiconfig", "virtual:42c2737f387bdc73c5556058c6c9ec6cdd9661518e4193d1243a00686019b1f9fae251846aa6f3c661665ca7e369a1339105e11fcc4b64720fc7316e7092345a#npm:9.0.0"],\
             ["css-functions-list", "npm:3.2.1"],\
             ["css-tree", "npm:2.3.1"],\
             ["debug", "virtual:428f325a939c2653ad822eb3d75efb02ac311523dd0d4f9645afc39ea00bd86eceac35a9d59c9b6977d76b670a4ef0ae057ea572338a44729aa592711a8c05a3#npm:4.3.4"],\
@@ -20198,10 +20198,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:e5430ddde62e0c345fbcd321b6375603a31953f2f0584dc2bc72c0e2acc006827f87a4779a6d88794af9baad9d319dd79362e423f236dae2bc3f46c2ecf2e0ce#npm:8.16.0", {\
-          "packageLocation": "./.yarn/__virtual__/ws-virtual-50f71bfa20/0/cache/ws-npm-8.16.0-46943f6199-feb3eecd2b.zip/node_modules/ws/",\
+        ["virtual:fe0f3941b79f10bb70f11a8925ab349a998b44760809b215ad05bfcfcd6e93ed97bb9c64344c5bac16ae3e2ea340522c139aaf59e8845db12bea61114ca28f50#npm:8.16.0", {\
+          "packageLocation": "./.yarn/__virtual__/ws-virtual-d872f0b754/0/cache/ws-npm-8.16.0-46943f6199-feb3eecd2b.zip/node_modules/ws/",\
           "packageDependencies": [\
-            ["ws", "virtual:e5430ddde62e0c345fbcd321b6375603a31953f2f0584dc2bc72c0e2acc006827f87a4779a6d88794af9baad9d319dd79362e423f236dae2bc3f46c2ecf2e0ce#npm:8.16.0"],\
+            ["ws", "virtual:fe0f3941b79f10bb70f11a8925ab349a998b44760809b215ad05bfcfcd6e93ed97bb9c64344c5bac16ae3e2ea340522c139aaf59e8845db12bea61114ca28f50#npm:8.16.0"],\
             ["@types/bufferutil", null],\
             ["@types/utf-8-validate", null],\
             ["bufferutil", null],\
