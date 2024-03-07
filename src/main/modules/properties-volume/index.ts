@@ -16,6 +16,7 @@ export class PropertiesVolume {
     this.setSecret('secrets.cui.s2s-secret', 'services.s2s.secret');
     this.setSecret('secrets.cui.redis-access-key', 'session.redis.key');
     this.setSecret('secrets.cui.redis-access-key', 'session.secret');
+    this.setSecret('secrets.cui.redis-host1', 'session.redis.host');
   }
 
   private setSecret(fromPath: string, toPath: string): void {
