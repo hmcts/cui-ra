@@ -126,14 +126,11 @@ export class DataController {
           .status(301)
           .redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: master.id }, UrlRoute.url(req)));
       } else {
-        //Exisitng flags found redirect to exisiting flags
+        //Existing flags found redirect to existing flags
         return res.status(301).redirect(UrlRoute.make(Route.OVERVIEW, {}, UrlRoute.url(req)));
       }
     } catch (e) {
       this.logger.error(e.message);
-      if (!(e instanceof HTTPError)) {
-        next(new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 500));
-      }
       next(e);
     }
   }
