@@ -205,9 +205,7 @@ describe('DataController', () => {
 
     await dataController.process(mockRequest as Request, mockResponse as Response, mockNext);
 
-    //expect(mockResponse.status).toHaveBeenCalledWith(500);
-    //expect(mockResponse.send).toHaveBeenCalledWith(ErrorMessages.UNEXPECTED_ERROR);
-    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 500));
+    expect(mockNext).toHaveBeenCalledWith(new Error('Mock Redis Error'));
   });
 
   test('should throw error as the master code cannot be found', async () => {

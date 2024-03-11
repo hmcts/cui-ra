@@ -141,7 +141,7 @@ export class ReviewController {
   public async post(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
     try {
       if (!req.session || !req.session.callbackUrl) {
-        throw ErrorMessages.UNEXPECTED_ERROR;
+        throw new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 500);
       }
       const payload: OutboundPayload = PayloadBuilder.build(req);
 

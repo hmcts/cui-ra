@@ -115,12 +115,14 @@ export const InboundPayloadSchema: SchemaType = {
   properties: {
     callbackUrl: {
       type: 'string',
+      minLength: 1,
     },
     logoutUrl: {
       type: ['string', 'null'],
     },
     hmctsServiceId: {
       type: 'string',
+      minLength: 1,
     },
     masterFlagCode: {
       type: 'string',
