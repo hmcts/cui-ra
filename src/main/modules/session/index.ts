@@ -62,7 +62,7 @@ export class SessionStorage {
       client.on('ready', () => {
         setInterval(() => {
           client.ping();
-        }, 60000); // 60s
+        }, 30000); // 30s
       });
 
       client.on('error', this.logger.error);
