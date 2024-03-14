@@ -57,9 +57,8 @@ export class SessionStorage {
       }
       const client = new Redis(redisConfig);
       client.on('connect', function () {
-          client.stream.setKeepAlive(true, 120000)
-        }
-      );
+        client.stream.setKeepAlive(true, 120000);
+      });
 
       client.on('error', this.logger.error);
       const store = new RedisStore({
