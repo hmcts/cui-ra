@@ -46,7 +46,7 @@
   },
   "RA0005": {
     "blurb": "Think about what you would need if the hearing was in person, by phone or video.",
-    "hint": "For example, someone you know or an assitance dog",
+    "hint": "For example, someone you know or an assistance dog",
     "error": {
       "empty": "Select whether you need to bring support with you to a hearing"
     },

@@ -97,25 +97,6 @@ describe('New Flags Manager', () => {
     expect(item_ra_parent?._enabled).toEqual(true);
   });
 
-  test('Disable flag by ID - should disable all children and parent', async () => {
-    //enable two children of RA
-    dataManager.enable(itemId);
-    dataManager.enable(nextId);
-
-    dataManager.disable(RA_Id);
-
-    const item_ra: DataManagerDataObject | null = dataManager.get(RA_Id);
-    const item_ra_parent: DataManagerDataObject | null = dataManager.get(RA_Parent);
-    const item: DataManagerDataObject | null = dataManager.get(itemId);
-    const item_next: DataManagerDataObject | null = dataManager.get(nextId);
-
-    // eslint-disable-line @typescript-eslint/no-empty-function
-    expect(item_ra?._enabled).toEqual(false);
-    expect(item_ra_parent?._enabled).toEqual(false);
-    expect(item?._enabled).toEqual(false);
-    expect(item_next?._enabled).toEqual(false);
-  });
-
   test('Disable flag by ID - should disable all children and should not disable parent', async () => {
     //enable two children of RA
     dataManager.enable(itemId);
