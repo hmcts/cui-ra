@@ -37,14 +37,14 @@ Then(/^I am navigated to 'I need adjustments to get to, into and around our buil
 });
 When(/^I select all the options and click Continue$/, async function () {
   // I.wait(2);
-  await I.click({ css: '#checkbox-label-PF0001-RA0001-RA0004-RA0022' });
-  await I.click({ css: '#checkbox-label-PF0001-RA0001-RA0004-RA0025' });
-  await I.click({ css: '#checkbox-label-PF0001-RA0001-RA0004-RA0023' });
-  await I.click({ css: '#checkbox-label-PF0001-RA0001-RA0004-RA0021' });
-  await I.fillField({ css: '#flagComment-PF0001-RA0001-RA0004-RA0021' }, 'Parking Space');
-  await I.click({ css: '#checkbox-label-PF0001-RA0001-RA0004-RA0019' });
-  await I.click({ css: '#checkbox-label-PF0001-RA0001-RA0004-RA0020' });
-  await I.click({ css: '#main-content > div > div > form > div.govuk-button-group > button' });
+  I.click({ css: '#checkbox-label-PF0001-RA0001-RA0004-RA0022' });
+  I.click({ css: '#checkbox-label-PF0001-RA0001-RA0004-RA0025' });
+  I.click({ css: '#checkbox-label-PF0001-RA0001-RA0004-RA0023' });
+  I.click({ css: '#checkbox-label-PF0001-RA0001-RA0004-RA0021' });
+  I.fillField({ css: '#flagComment-PF0001-RA0001-RA0004-RA0021' }, 'Parking Space');
+  I.click({ css: '#checkbox-label-PF0001-RA0001-RA0004-RA0019' });
+  I.click({ css: '#checkbox-label-PF0001-RA0001-RA0004-RA0020' });
+  I.click({ css: '#main-content > div > div > form > div.govuk-button-group > button' });
 });
 
 Then(/^I am navigated to 'I need documents in an alternative format' page$/, async function () {
@@ -189,5 +189,26 @@ Then(/^I am navigated to 'Review the support you've requested'$/, async function
 });
 
 When(/^I click on 'Add a new support request' button$/, async function () {
-  await I.click('#main-content > div > div > a');
+  I.click('#main-content > div > div > a');
+});
+
+When(/^I select the following checkboxes and click continue$/, async data => {
+  const labels = data.rows.map(row => row.cells[0].value);
+  labels.forEach(label => I.click(label));
+  I.click({ css: '#main-content > div > div > form > div.govuk-button-group > button' });
+});
+
+When('I click continue', async () =>
+  I.click({ css: '#main-content > div > div > form > div.govuk-button-group > button' })
+);
+
+Then('I am presented with an error message', async () => {
+  I.waitForText('Select whether you need adjustments to get to, into and around our buildings');
+});
+
+When('I click back', async () => I.click('body > div > a.govuk-back-link'));
+
+Then('I see selected options', async data => {
+  const labels = data.rows.map(row => row.cells[0].value);
+  labels.forEach(label => I.seeCheckboxIsChecked(label));
 });
