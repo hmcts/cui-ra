@@ -43,6 +43,7 @@ export class SessionStorage {
         host,
         port: port ?? 6380,
         password: key,
+        keepAlive: 10000,
         retryStrategy: times => {
           // Use a custom retry strategy if needed
           return Math.min(times * 50, 2000);
@@ -56,9 +57,6 @@ export class SessionStorage {
         });
       }
       const client = new Redis(redisConfig);
-      client.on('connect', function () {
-        client.stream.setKeepAlive(true, 120000);
-      });
 
       client.on('error', this.logger.error);
       const store = new RedisStore({
