@@ -43,8 +43,6 @@ export class SessionStorage {
         host,
         port: port ?? 6380,
         password: key,
-        connectionTimeout: 120000,
-        keepAlive: 120000,
         retryStrategy: times => {
           // Use a custom retry strategy if needed
           return Math.min(times * 50, 2000);
