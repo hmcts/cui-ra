@@ -62,10 +62,10 @@ export class SessionStorage {
       client.on('ready', () => {
         setInterval(() => {
           client.ping();
-        }, 10000); // 10s
+        }, 60000); // 60s
       });
 
-      client.on('error', err => this.logger.error(err));
+      client.on('error',this.logger.error);
       const store = new RedisStore({
         client,
       });
