@@ -65,7 +65,7 @@ export class SessionStorage {
         }, 60000); // 60s
       });
 
-      client.on('error',this.logger.error);
+      client.on('error', this.logger.error);
       const store = new RedisStore({
         client,
       });
