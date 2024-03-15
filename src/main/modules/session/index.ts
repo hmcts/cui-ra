@@ -56,6 +56,15 @@ export class SessionStorage {
         });
       }
       const client = new Redis(redisConfig);
+
+      // Azure Cache for Redis has issues with a 10 minute connection idle timeout, the recommendation is to keep the connection alive
+      // https://gist.github.com/JonCole/925630df72be1351b21440625ff2671f#file-redis-bestpractices-node-js-md
+      client.on('ready', () => {
+        setInterval(() => {
+          client.ping();
+        }, 10000); // 10s
+      });
+
       client.on('error', err => this.logger.error(err));
       const store = new RedisStore({
         client,
