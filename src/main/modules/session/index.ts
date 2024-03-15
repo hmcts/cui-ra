@@ -56,8 +56,7 @@ export class SessionStorage {
         });
       }
       const client = new Redis(redisConfig);
-
-      client.on('error', this.logger.error);
+      client.on('error', err => this.logger.error(err));
       const store = new RedisStore({
         client,
       });
