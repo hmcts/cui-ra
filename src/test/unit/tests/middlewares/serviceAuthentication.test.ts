@@ -1,5 +1,4 @@
 import { Request, Response, NextFunction } from 'express';
-
 import { mockServiceAuth } from './../../mocks';
 import { ServiceAuthentication } from './../../../../main/middlewares';
 import { ServiceAuth } from './../../../../main/interfaces';
@@ -42,16 +41,31 @@ describe('ServiceAuthentication', () => {
   });
 
   test('should call the next function when service token is valid', async () => {
-    req.headers = { 'service-token': 'validToken' };
+    req.headers = { 'service-token': 'service-a' };
 
-    (serviceMock.validateToken as jest.Mock).mockImplementation(() => Promise.resolve('validToken'));
+    (serviceMock.validateToken as jest.Mock).mockImplementation(() => Promise.resolve('service-a'));
 
     await serviceAuthentication.check(req, res, next);
 
-    expect(serviceMock.validateToken).toHaveBeenCalledWith('validToken');
+    expect(serviceMock.validateToken).toHaveBeenCalledWith('service-a');
     expect(next).toHaveBeenCalled();
     expect(res.status).not.toHaveBeenCalled();
     expect(res.json).not.toHaveBeenCalled();
+  });
+
+  test('should return 401 status and error response when service token is not whitelisted', async () => {
+    req.headers = { 'service-token': 'service-c' };
+
+    (serviceMock.validateToken as jest.Mock).mockImplementation(() =>
+      Promise.resolve('service-not-in-allowedServices')
+    );
+
+    await serviceAuthentication.check(req, res, next);
+
+    expect(serviceMock.validateToken).toHaveBeenCalledWith('service-c');
+    expect(res.status).toHaveBeenCalledWith(401);
+    expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.UNAUTHORISED });
+    expect(next).not.toHaveBeenCalled();
   });
 
   test('should return 401 status and error response when service token is invalid', async () => {

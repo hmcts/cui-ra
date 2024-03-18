@@ -14,7 +14,8 @@
   },
   "services": {
     "s2s": {
-      "endpoint": "SERVICES_S2S_ENDPOINT"
+      "endpoint": "SERVICES_S2S_ENDPOINT",
+      "allowedServices": "S2S_ALLOWED_SERVICES"
     },
     "refdata": {
       "endpoint": "SERVICES_REFDATA_ENDPOINT"
