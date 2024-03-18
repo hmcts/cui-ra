@@ -45,6 +45,9 @@ export class RedisClient implements RedisClientInterface {
   private onReady(): void {
     this.ready = true;
     this.logger.info('Redis Ready');
+    setInterval(() => {
+      this.client.ping();
+    }, 60000); // 60s
   }
 
   private onDisconnect(): void {
