@@ -11,3 +11,12 @@ span.error-message {
   color: #d4351c;
   font-weight: 700;
 }
+
+.flex {
+  display: flex;
+  width: 100%;
+}
+
+.overview-col1 {
+  flex: 0 1 58%;
+}
