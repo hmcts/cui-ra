@@ -21,53 +21,41 @@
             <a href="/home/intro" class="govuk-link govuk-link--no-visited-state">{{ _t('overview.changeMySupportOptions') }}</a>
         </p>
 
-        <table class="govuk-table govuk-!-margin-top-8">
-            <caption class="govuk-table__caption govuk-table__caption--m">{{ _t('overview.tableHeading') }}</caption>
-            <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">{{ _t('overview.column1Heading') }}</th>
-                <th scope="col" class="govuk-table__header">{{ _t('overview.column2Heading') }}</th>
-                </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-                {% for item in existingFlags %}
-                    <tr class="govuk-table__row">
-                    <td scope="row" class="govuk-table__cell">
-                        {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
-                        {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
-                            <br/>
-                            {{ item.value.path.slice(-1).pop().name }}
-                        {% endif %}
-                    </td>
-                    {% if item.value.status == status.REQUESTED %}
-                        <td class="govuk-table__cell">
-                            <strong class="govuk-tag govuk-tag--yellow">
-                                {{ _t('overview.status.requested') }}
-                            </strong>
-                        </td>
-                    {% elseif item.value.status == status.ACTIVE %}
-                        <td class="govuk-table__cell">
-                            <strong class="govuk-tag govuk-tag--turquoise">
-                                {{ _t('overview.status.active') }}
-                            </strong>
-                        </td>
-                    {% elseif item.value.status == status.INACTIVE %}
-                        <td class="govuk-table__cell">
-                            <strong class="govuk-tag govuk-tag--grey">
-                                {{ _t('overview.status.inactive') }}
-                            </strong>
-                        </td>
-                    {% elseif item.value.status == status.NOT_APPROVED %}
-                        <td class="govuk-table__cell">
-                            <strong class="govuk-tag govuk-tag--orange">
-                                {{ _t('overview.status.notApproved') }}
-                            </strong>
-                        </td>
-                    {% endif %}
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+        <h2 class="govuk-heading-m">{{ _t('overview.tableHeading') }}</h2>
+
+        <h3 class="flex govuk-heading-s govuk-!-margin-bottom-2" >
+          <div class="overview-col1">{{ _t('overview.column1Heading') }}</div>
+          <div>{{ _t('overview.column2Heading') }}</div>
+        </h3>
+
+      {% macro govuktag(status, colour) %}
+      <strong class="govuk-tag govuk-tag--{{colour}}">{{ status }}</strong>
+      {% endmacro %}
+
+      <ul class="govuk-list">
+        {% for item in existingFlags %}
+        <li class="flex govuk-task-list__item">
+          <div class="overview-col1">
+            {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
+            {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
+            <br/>
+            {{ item.value.path.slice(-1).pop().name }}
+            {% endif %}
+          </div>
+          <div>
+            {% if item.value.status == status.REQUESTED %}
+            {{ govuktag(_t('overview.status.requested'), 'yellow')}}
+            {% elif item.value.status == status.ACTIVE %}
+            {{ govuktag(_t('overview.status.active'), 'turquoise')}}
+            {% elif item.value.status == status.INACTIVE %}
+            {{ govuktag(_t('overview.status.inactive'), 'grey')}}
+            {% elif item.value.status == status.NOT_APPROVED %}
+            {{ govuktag(_t('overview.status.notApproved'), 'orange')}}
+            {% endif %}
+          </div>
+        </li>
+        {% endfor %}
+        </ul>
     </div>
   </div>
 {% endblock %}
