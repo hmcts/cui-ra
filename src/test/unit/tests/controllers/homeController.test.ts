@@ -5,7 +5,8 @@ import { Session, SessionData } from 'express-session';
 import { PayloadCollectionItem } from '../../../../main/interfaces';
 import { ExistingFlagsManager } from '../../../../main/managers';
 import { Route } from '../../../../main/constants';
-import { ExistingFlagProcessor } from './../../../../main/processors';
+import { ExistingFlagProcessor } from '../../../../main/processors';
+import { CustomSort } from '../../../../main/utilities';
 
 const host = 'www.test.com';
 const protocol = 'https';
@@ -26,7 +27,7 @@ describe('Home Controller', () => {
       session: {
         partyName: '',
         logoutUrl: host,
-        existingManager: {},
+        existingmanager: {},
         destroy: jest.fn().mockImplementation(),
       } as unknown as Session & Partial<SessionData>,
       protocol: protocol,
@@ -41,6 +42,7 @@ describe('Home Controller', () => {
       render: jest.fn().mockReturnThis(),
     };
     mockNext = jest.fn();
+    CustomSort.alphabeticalAsc = jest.fn();
     homeController = new HomeController();
   });
 
@@ -75,11 +77,12 @@ describe('Home Controller', () => {
     // Need to set stuff on an actual session here and not the request??
     mockRequest.session = {
       partyName: 'demo',
-      existingManager: dataManagerExisting,
+      existingmanager: dataManagerExisting,
     } as unknown as Session & Partial<SessionData>;
 
     homeController.overview(mockRequest as Request, mockResponse as Response, mockNext);
     expect(mockResponse.render).toBeCalledWith('overview', expect.any(Object));
+    expect(CustomSort.alphabeticalAsc).toBeCalledWith(dataManagerExisting.data, mockRequest);
   });
 
   test('Should throw error rendering overview page', async () => {
@@ -93,7 +96,7 @@ describe('Home Controller', () => {
     // Need to set stuff on an actual session here and not the request??
     mockRequest.session = {
       partyName: 'demo',
-      existingManager: dataManagerExisting,
+      existingmanager: dataManagerExisting,
     } as unknown as Session & Partial<SessionData>;
 
     mockResponse.render = jest.fn().mockImplementation(() => {
