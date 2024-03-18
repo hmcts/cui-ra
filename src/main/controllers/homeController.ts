@@ -1,4 +1,5 @@
 import { Route, Status } from '../constants';
+import { CustomSort } from '../utilities';
 
 import autobind from 'autobind-decorator';
 import { NextFunction, Request, Response } from 'express';
@@ -17,7 +18,7 @@ export class HomeController {
     // Add checks here to ensure the required data is on the session???
     try {
       res.render('overview', {
-        existingFlags: req.session.existingmanager?.data,
+        existingFlags: CustomSort.alphabeticalAsc(req.session.existingmanager?.data ?? [], req),
         name: req.session.partyname,
         status: Status,
       });
