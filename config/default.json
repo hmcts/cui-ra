@@ -2,7 +2,7 @@
   "useCSRFProtection": true,
   "appInsights": {
     "connectionString": false,
-    "samplingPercentage": 33
+    "samplingPercentage": 100
   },
   "demo": {
     "enabled": true
