@@ -60,42 +60,30 @@ describe('CustomSort', () => {
 
     test('Should sort the data provided by name (english) putting other as last', () => {
       var sortedItems = CustomSort.alphabeticalAscOtherLast<PayloadCollectionItem>(items, mockRequest(false));
-
-      expect(sortedItems[0].value.name).toBe('apple');
-      expect(sortedItems[1].value.name).toBe('banana');
-      expect(sortedItems[2].value.name).toBe('cat');
-      expect(sortedItems[3].value.name).toBe('zebra');
-      expect(sortedItems[4].value.name).toBe('other');
+      const expectedOrder = ['apple', 'banana', 'cat', 'zebra', 'other'];
+      const receivedOrder = sortedItems.map(item => item.value.name);
+      expect(expectedOrder).toEqual(receivedOrder);
     });
 
     test('Should sort the data provided by name_cy (welsh) putting other as last', () => {
       var sortedItems = CustomSort.alphabeticalAscOtherLast<PayloadCollectionItem>(items, mockRequest(true));
-
-      expect(sortedItems[0].value.name_cy).toBe('apple_cy');
-      expect(sortedItems[1].value.name_cy).toBe('banana_cy');
-      expect(sortedItems[2].value.name_cy).toBe('cat_cy');
-      expect(sortedItems[3].value.name_cy).toBe('zebra_cy');
-      expect(sortedItems[4].value.name_cy).toBe('other_cy');
+      const expectedOrder = ['apple_cy', 'banana_cy', 'cat_cy', 'zebra_cy', 'other_cy'];
+      const receivedOrder = sortedItems.map(item => item.value.name_cy);
+      expect(expectedOrder).toEqual(receivedOrder);
     });
 
     test('Should sort the data provided by name (english)', () => {
       var sortedItems = CustomSort.alphabeticalAsc<PayloadCollectionItem>(items, mockRequest(true));
-
-      expect(sortedItems[0].value.name_cy).toBe('apple_cy');
-      expect(sortedItems[1].value.name_cy).toBe('banana_cy');
-      expect(sortedItems[2].value.name_cy).toBe('cat_cy');
-      expect(sortedItems[3].value.name_cy).toBe('other_cy');
-      expect(sortedItems[4].value.name_cy).toBe('zebra_cy');
+      const expectedOrder = ['apple', 'banana', 'cat', 'other', 'zebra'];
+      const receivedOrder = sortedItems.map(item => item.value.name);
+      expect(expectedOrder).toEqual(receivedOrder);
     });
 
     test('Should sort the data provided by name_cy (welsh)', () => {
       var sortedItems = CustomSort.alphabeticalAsc<PayloadCollectionItem>(items, mockRequest(true));
-
-      expect(sortedItems[0].value.name_cy).toBe('apple_cy');
-      expect(sortedItems[1].value.name_cy).toBe('banana_cy');
-      expect(sortedItems[2].value.name_cy).toBe('cat_cy');
-      expect(sortedItems[3].value.name_cy).toBe('other_cy');
-      expect(sortedItems[4].value.name_cy).toBe('zebra_cy');
+      const expectedOrder = ['apple_cy', 'banana_cy', 'cat_cy', 'other_cy', 'zebra_cy'];
+      const receivedOrder = sortedItems.map(item => item.value.name_cy);
+      expect(expectedOrder).toEqual(receivedOrder);
     });
   });
 });
