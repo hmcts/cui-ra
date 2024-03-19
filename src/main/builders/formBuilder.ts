@@ -2,6 +2,7 @@ import { ErrorMessages } from './../constants';
 import { DataManagerDataObject } from './../interfaces';
 import { CustomSort } from './../utilities';
 
+import config from 'config';
 import { Request, Response } from 'express';
 
 //this should decide what element to render and create the model to pass to the pages
@@ -14,10 +15,15 @@ export class FormBuilder {
     validationErrors: { [key: string]: string } = {}
   ): void | Response {
     let template = '';
+    const listOfValuesLength = JSON.parse(config.get('radio.listOfValuesLength'));
     //check the types here
-    if (parent?._listOfValuesLength && parent?._listOfValuesLength > 0 && parent?._listOfValuesLength < 10) {
+    if (
+      parent?._listOfValuesLength &&
+      parent?._listOfValuesLength > 0 &&
+      parent?._listOfValuesLength < listOfValuesLength
+    ) {
       template = 'forms/radio-group';
-    } else if (parent?._listOfValuesLength && parent?._listOfValuesLength >= 10) {
+    } else if (parent?._listOfValuesLength && parent?._listOfValuesLength >= listOfValuesLength) {
       template = 'forms/type-ahead';
     } else if (parent?._isCategoryPage) {
       template = 'forms/checkbox-group';

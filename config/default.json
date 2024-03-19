@@ -29,5 +29,8 @@
     "refdata": {
       "endpoint": "http://rd-commondata-api-aat.service.core-compute-aat.internal"
     }
+  },
+  "radio": {
+    "listOfValuesLength": 10
   }
 }

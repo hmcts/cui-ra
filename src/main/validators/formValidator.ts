@@ -6,6 +6,7 @@ import { checkboxSchema, formData, radioSchema, typeaheadSchema } from './../sch
 import Ajv from 'ajv';
 import addErrors from 'ajv-errors';
 import addFormats from 'ajv-formats';
+import config from 'config';
 import { JSONSchema4, JSONSchema6, JSONSchema7 } from 'json-schema';
 
 export type SchemaType = JSONSchema4 | JSONSchema6 | JSONSchema7;
@@ -24,6 +25,7 @@ export class FormValidator {
     const ajv: Ajv = new Ajv({ allErrors: true });
     addFormats(ajv);
     addErrors(ajv);
+    const listOfValuesLength = JSON.parse(config.get('radio.listOfValuesLength'));
 
     const [schema, type] = this.getSchema(parent);
 
@@ -45,7 +47,17 @@ export class FormValidator {
         if (errors && errors[0] && errors[0].message) {
           const message = `${key}.${errors[0].message}`;
           item._errors.push(message);
-          validationErrors[item.id] = message;
+          if (item._flagComment) {
+            validationErrors[`flagComment-${item.id}`] = message;
+          } else if (item._listOfValuesLength > 0 && item._listOfValuesLength >= listOfValuesLength && !item._other) {
+            validationErrors['custom-accessible-autocomplete'] = message;
+          } else if (item._listOfValuesLength > 0 && item._listOfValuesLength >= listOfValuesLength && item._other) {
+            validationErrors['other'] = message;
+          } else if (item._listOfValuesLength > 0 && item._listOfValuesLength < listOfValuesLength && item._other) {
+            validationErrors['other-text-area'] = message;
+          } else {
+            validationErrors[item.id] = message;
+          }
         }
         processedItems[i] = item;
       }
@@ -59,10 +71,11 @@ export class FormValidator {
   }
 
   private static getSchema(parent: DataManagerDataObject): SchemaType {
-    if (parent._listOfValuesLength > 0 && parent._listOfValuesLength < 10) {
+    const listOfValuesLength = JSON.parse(config.get('radio.listOfValuesLength'));
+    if (parent._listOfValuesLength > 0 && parent._listOfValuesLength < listOfValuesLength) {
       //radio
       return [radioSchema(), parentType.parent];
-    } else if (parent._listOfValuesLength > 0 && parent._listOfValuesLength >= 10) {
+    } else if (parent._listOfValuesLength > 0 && parent._listOfValuesLength >= listOfValuesLength) {
       //type ahead
       return [typeaheadSchema(), parentType.parent];
     } else if (parent._isCategoryPage) {
@@ -95,7 +108,16 @@ export class FormValidator {
       const errors = await validate.errors;
       if (errors && errors[0] && errors[0].message) {
         const message = `${key}.${errors[0].message}`;
-        validationErrors[flag.id] = message;
+        if (flag._isParent) {
+          validationErrors[`_enabled-${flag._childIds[0]}`] = message;
+        } else if (
+          flag._listOfValuesLength > 0 &&
+          flag._listOfValuesLength < JSON.parse(config.get('radio.listOfValuesLength'))
+        ) {
+          validationErrors[`_enabled-${flag._listOfValues[0].key}`] = message;
+        } else {
+          validationErrors[flag.id] = message;
+        }
       }
     }
 
