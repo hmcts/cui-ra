@@ -26,7 +26,7 @@ export class FormBuilder {
     }
 
     if (children) {
-      children = CustomSort.alphabeticalAsc<DataManagerDataObject>(children, req);
+      children = CustomSort.alphabeticalAscOtherLast<DataManagerDataObject>(children, req);
     }
 
     return res.render(template, {
