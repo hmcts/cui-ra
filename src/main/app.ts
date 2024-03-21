@@ -37,6 +37,9 @@ app.locals.appRoot = path.resolve(path.join(__dirname, '..', '..'));
 
 const logger = Logger.getLogger('app');
 
+// secure the application by adding various HTTP headers to its responses
+new Helmet(developmentMode).enableFor(app);
+
 app.use(favicon(path.join(__dirname, '/public/assets/images/favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -50,8 +53,6 @@ new AppInsights().enable();
 new HealthCheck().enableFor(app);
 new SessionStorage(logger).enableFor(app);
 new Nunjucks(developmentMode).enableFor(app);
-// secure the application by adding various HTTP headers to its responses
-new Helmet(developmentMode).enableFor(app);
 new CSRFToken().enableFor(app);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
