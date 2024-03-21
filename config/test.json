@@ -4,5 +4,10 @@
   },
   "session": {
     "secure": false
+  },
+  "services": {
+    "s2s": {
+      "allowedServices": ["service-a", "service-b"]
+    }
   }
 }

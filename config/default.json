@@ -23,7 +23,8 @@
   "services": {
     "s2s": {
       "secret": "",
-      "endpoint": "http://rpe-service-auth-provider-aat.service.core-compute-aat.internal"
+      "endpoint": "http://rpe-service-auth-provider-aat.service.core-compute-aat.internal",
+      "allowedServices": ["private-law"]
     },
     "refdata": {
       "endpoint": "http://rd-commondata-api-aat.service.core-compute-aat.internal"

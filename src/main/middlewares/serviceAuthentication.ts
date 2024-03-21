@@ -2,6 +2,7 @@ import { ServiceAuth } from './../../main/interfaces';
 import { ErrorMessages, HeaderParams } from './../constants';
 
 import autobind from 'autobind-decorator';
+import config from 'config';
 import { NextFunction, Request, Response } from 'express';
 
 @autobind
@@ -22,8 +23,11 @@ export class ServiceAuthentication {
 
     try {
       const service = await this.serviceAuth.validateToken(serviceToken);
-      if (service) {
+      const allowedServices: string[] = config.get('services.s2s.allowedServices') ?? [];
+      if (service && allowedServices.includes(service.toLowerCase())) {
         next();
+      } else {
+        throw new Error(ErrorMessages.UNAUTHORISED);
       }
     } catch (ex) {
       return res.status(401).json({ error: ErrorMessages.UNAUTHORISED });
