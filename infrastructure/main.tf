@@ -6,7 +6,8 @@ locals {
   app_full_name = "${var.product}-${var.component}"
   aseName       = "core-compute-${var.env}"
   vaultName     = "${var.product}-${var.env}"
-  common_tags = 
+  common_tags = merge(
+    var.common_tags,
     {
       "environment"  = "${var.env}"
       "Team Name"    = "${var.team_name}"
@@ -16,12 +17,13 @@ locals {
       "application"   = "${var.application}"
       "businessArea"   = "${var.businessArea}"
     }
+  )
 }
 
 resource "azurerm_resource_group" "rg" {
   name     = "${var.product}-shared-${var.env}"
   location = var.location
-  tags     = var.common_tags
+  tags     = common_tags
 }
 
 module "key-vault" {
@@ -32,7 +34,7 @@ module "key-vault" {
   object_id               = var.jenkins_AAD_objectId
   resource_group_name     = azurerm_resource_group.rg.name
   product_group_name      = "dcd_ccd"
-  common_tags             = var.common_tags
+  common_tags             = common_tags
   create_managed_identity = true
 }
 
@@ -51,7 +53,7 @@ module "application_insights" {
 
   resource_group_name = azurerm_resource_group.rg.name
 
-  common_tags = var.common_tags
+  common_tags = common_tags
 }
 
 moved {
@@ -96,7 +98,7 @@ module "redis6-cache" {
   redis_version                 = "6"
   business_area                 = "cft"
   public_network_access_enabled = false
-  common_tags                   = var.common_tags
+  common_tags                   = common_tags
   sku_name                      = var.sku_name
   family                        = var.family
   capacity                      = var.capacity
