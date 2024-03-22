@@ -47,3 +47,32 @@ variable "capacity" {
   default     = "1"
   description = "The size of the Redis cache to deploy. Valid values are 1, 2, 3, 4, 5"
 }
+
+variable "managedBy" {
+  description = "Managed By"
+  default     = "cui-ra"
+}
+
+variable "team_name" {
+  description = "Team name"
+  default     = "CUI-RA"
+}
+variable "contactSlackChannel" {
+  description = "Slack Channel"
+  default     = "#cui-ra-support"
+}
+
+variable "application" {
+  description = "Application Name"
+  default     = "cui-ra"
+}
+
+variable "businessArea" {
+  description = "Business Area"
+  default     = "CFT"
+}
+
+variable "BuiltFrom" {
+  description = "Built From"
+  default     = "https://github.com/hmcts/cui-ra.git"
+}

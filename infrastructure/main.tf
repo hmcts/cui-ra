@@ -6,6 +6,16 @@ locals {
   app_full_name = "${var.product}-${var.component}"
   aseName       = "core-compute-${var.env}"
   vaultName     = "${var.product}-${var.env}"
+  common_tags = 
+    {
+      "environment"  = "${var.env}"
+      "Team Name"    = "${var.team_name}"
+      "managedBy"   = "${var.managedBy}"
+      "BuiltFrom"   = "${var.BuiltFrom}"
+      "contactSlackChannel"   = "${var.contactSlackChannel}"
+      "application"   = "${var.application}"
+      "businessArea"   = "${var.businessArea}"
+    }
 }
 
 resource "azurerm_resource_group" "rg" {
@@ -102,3 +112,4 @@ resource "azurerm_key_vault_secret" "redis_access_key" {
   value        = module.redis6-cache.access_key
   key_vault_id = data.azurerm_key_vault.key_vault.id
 }
+
