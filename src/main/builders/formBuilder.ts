@@ -33,6 +33,22 @@ export class FormBuilder {
 
     if (children) {
       children = CustomSort.alphabeticalAscOtherLast<DataManagerDataObject>(children, req);
+      const keys = Object.keys(validationErrors);
+      let newKey = '';
+      if (keys.length > 0) {
+        const errorKey = keys[0];
+        const errorKeys = errorKey.split('_enabled-');
+        const childrenId = errorKeys[1];
+        if (parent._isParent) {
+          newKey = errorKey.replace(childrenId, children[0].id);
+        } else if (parent._listOfValuesLength > 0 && parent._listOfValuesLength < listOfValuesLength) {
+          newKey = errorKey.replace(childrenId, parent._listOfValues[0].key);
+        }
+        validationErrors[newKey] = validationErrors[errorKey];
+        if (newKey !== errorKey) {
+          delete validationErrors[errorKey];
+        }
+      }
     }
 
     return res.render(template, {

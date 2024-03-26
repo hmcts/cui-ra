@@ -44,9 +44,12 @@
             <div class="govuk-error-summary__body">
               <ul class="govuk-list govuk-error-summary__list">
                 {% for key, error in validationErrors %}
-                <li>
-                  <a id="error-id-{{key}}" href="#{{key}}">{% if _t(error) %}{{ _t(error) }}{% else %}error{% endif %}</a>
-                </li>
+                   {% if key.includes('flagComment') and welsh === true %}
+                      {% set key = key.replace('flagComment','flagComment_cy') %}
+                   {% endif %}
+                  <li>
+                      <a id="error-id-{{key}}" href="#{{key}}">{% if _t(error) %}{{ _t(error) }}{% else %}error{% endif %}</a>
+                  </li>
                 {% endfor %}
               </ul>
             </div>
