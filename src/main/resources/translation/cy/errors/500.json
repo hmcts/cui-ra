@@ -1,1 +1,12 @@
-{}
+{
+  "500": {
+    "heading": "Mae'n ddrwg gennym, mae problem gyda'r gwasanaeth",
+    "paragraph1": "Dewisiwch eich gwasanaeth isod os gwelwch yn dda:",
+    "services": {
+      "ABA5": {
+        "link-url": "https://www.apply-to-court-about-child-arrangements-c100.service.gov.uk/dashboard",
+        "link-text": "Dychwelyd i’r achos trefniadau plant/gwaharddeb teulu"
+      }
+    }
+  }
+}
