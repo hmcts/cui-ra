@@ -88,7 +88,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-prettier", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.1.0"],\
             ["eslint-plugin-import", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.29.1"],\
             ["eslint-plugin-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:27.9.0"],\
-            ["express", "npm:4.18.3"],\
+            ["express", "npm:4.19.2"],\
             ["express-nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.1.1"],\
             ["express-session", "npm:1.18.0"],\
             ["glob", "npm:10.3.10"],\
@@ -3740,7 +3740,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@hmcts-info-provider-npm-1.1.0-ff33fd10d2-e1ddca0e05.zip/node_modules/@hmcts/info-provider/",\
           "packageDependencies": [\
             ["@hmcts/info-provider", "npm:1.1.0"],\
-            ["express", "npm:4.18.3"],\
+            ["express", "npm:4.19.2"],\
             ["js-yaml", "npm:4.1.0"]\
           ],\
           "linkType": "HARD"\
@@ -8801,13 +8801,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:0.5.0", {\
-          "packageLocation": "./.yarn/cache/cookie-npm-0.5.0-e2d58a161a-1f4bd2ca57.zip/node_modules/cookie/",\
-          "packageDependencies": [\
-            ["cookie", "npm:0.5.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:0.6.0", {\
           "packageLocation": "./.yarn/cache/cookie-npm-0.6.0-362d6a2e45-f56a7d32a0.zip/node_modules/cookie/",\
           "packageDependencies": [\
@@ -9201,7 +9194,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-prettier", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.1.0"],\
             ["eslint-plugin-import", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.29.1"],\
             ["eslint-plugin-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:27.9.0"],\
-            ["express", "npm:4.18.3"],\
+            ["express", "npm:4.19.2"],\
             ["express-nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.1.1"],\
             ["express-session", "npm:1.18.0"],\
             ["glob", "npm:10.3.10"],\
@@ -10774,16 +10767,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["express", [\
-        ["npm:4.18.3", {\
-          "packageLocation": "./.yarn/cache/express-npm-4.18.3-05dacc6333-3d7fc8762a.zip/node_modules/express/",\
+        ["npm:4.19.2", {\
+          "packageLocation": "./.yarn/cache/express-npm-4.19.2-f81334a22a-212dbd6c2c.zip/node_modules/express/",\
           "packageDependencies": [\
-            ["express", "npm:4.18.3"],\
+            ["express", "npm:4.19.2"],\
             ["accepts", "npm:1.3.8"],\
             ["array-flatten", "npm:1.1.1"],\
             ["body-parser", "npm:1.20.2"],\
             ["content-disposition", "npm:0.5.4"],\
             ["content-type", "npm:1.0.4"],\
-            ["cookie", "npm:0.5.0"],\
+            ["cookie", "npm:0.6.0"],\
             ["cookie-signature", "npm:1.0.6"],\
             ["debug", "virtual:44738662cf800ff2863ba9baeabb817b24a959a14f86e20a31680e5dc79a4a738f7ceb7dca32753d579fae475aa061dffad8228a3391f3a9546b122f077e29a5#npm:2.6.9"],\
             ["depd", "npm:2.0.0"],\
@@ -10827,7 +10820,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express-nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.1.1"],\
             ["@types/express", "npm:4.17.21"],\
             ["@types/nunjucks", "npm:3.2.6"],\
-            ["express", "npm:4.18.3"],\
+            ["express", "npm:4.19.2"],\
             ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
             ["nunjucks-async-loader", "virtual:5a3226ebfdc5ef140572213dbd4e734ff8d1893c10677dafd7a1ce030e2a6be7416e390621139192dcf805122802b03e22c3b373c8ea73c8b7fdc96ebed4ffc9#npm:2.1.2"]\
           ],\
