@@ -1,7 +1,7 @@
 {
   "ABA5": {
     "contact": {
-      "content": "<h2 class='govuk-heading-m'>Service Details TBA</h2><p class='govuk-body'>Email: <a href='#' class='govuk-link'>service@justice.gov.uk</a></p><p class='govuk-body'>Telephone: 0xxx xxx xxxx</p>"
+      "content": "<h2 class='govuk-heading-m'>Contact us for help</h2><p class='govuk-body'>You can <a href='https://www.gov.uk/find-court-tribunal' target='_blank' class='govuk-link'>contact the court (opens in a new tab)</a> if you have any urgent support needs.</p><p class='govuk-body'>They cannot give you legal advice or answer questions about submitted applications.</p>"
     }
   }
 }
