@@ -2,10 +2,16 @@ nodejs:
   applicationPort: 3100
   aadIdentityName: cui
   ingressHost: cui-ra.{{ .Values.global.environment }}.platform.hmcts.net
+  replicas: 1
+  memoryRequests: '768Mi'
+  cpuRequests: '50m'
+  memoryLimits: '1024Mi'
+  cpuLimits: '500m'
+  autoscaling:
+    enabled: false
   spotInstances:
     enabled: true
   image: 'hmctspublic.azurecr.io/cui/ra:latest'
-  #  Uncomment once the vault containing the app insights key has been set up
   readinessDelay: 45
   readinessTimeout: 5
   readinessPeriod: 15
