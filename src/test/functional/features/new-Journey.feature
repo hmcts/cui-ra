@@ -5,24 +5,34 @@ Feature: New Journey
     Given I am on the Home page
     When I click on the button 'Enter New Journey'
     Then I navigate to 'Do you have a physical, mental or learning disability or health condition that means you need support during your case?' page
+    Then I find 'Contact us for help' text
     When I select all the checkboxes and click continue
     Then I am navigated to 'I need adjustments to get to, into and around our buildings'
+    Then I find 'Contact us for help' text
     When I select all the options and click Continue
     Then I am navigated to 'I need documents in an alternative format' page
+    Then I find 'Contact us for help' text
     When I select all the options and continue to next page
     Then I am navigated to 'I need help communicating and understanding' page
+    Then I find 'Contact us for help' text
     When I select all the options and click continue to next page
     Then I am navigated to 'Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)' page
+    Then I find 'Contact us for help' text
     When I select all four options and click continue
     Then I am navigated to 'Which Sign Language Interpreter do you need to request?' page
+    Then I find 'Contact us for help' text
     When I type in the dynamic dropdown and select an option and click continue
     Then I am navigated to 'I need something to feel comfortable during my hearing' page
+    Then I find 'Contact us for help' text
     When I select all the five options and click continue
     Then I am navigated to 'I need to bring support with me to a hearing' page
+    Then I find 'Contact us for help' text
     When I select all the given options and click continue
     Then I am navigated to 'I need to request a certain type of hearing' page
+    Then I find 'Contact us for help' text
     When I select all the four options and click continue
     Then I am navigated to 'Review the support you've requested' page
+    Then I find 'Contact us for help' text
     When I review and click Submit
     Then I must see a successful message
 
