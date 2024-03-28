@@ -1,6 +1,12 @@
 {
   "500": {
     "heading": "Sorry, there is a problem with the service",
-    "paragraph1": "Try again later."
+    "paragraph1": "Please select your service below:",
+    "services": {
+      "ABA5": {
+        "link-url": "https://www.apply-to-court-about-child-arrangements-c100.service.gov.uk/dashboard",
+        "link-text": "Return to child arrangements/family injunction case"
+      }
+    }
   }
 }
