@@ -1,6 +1,8 @@
 import { Common, ErrorMessages } from './../constants';
 import { DataManagerDataObject } from './../interfaces';
 import { Form } from './../models';
+
+import config from 'config';
 //process the form data
 export class FormProcessor {
   public static process(
@@ -52,7 +54,8 @@ export class FormProcessor {
   }
 
   private static processListValues(body: Form, parent: DataManagerDataObject): DataManagerDataObject[] {
-    const isRadioType = parent._listOfValuesLength > 0 && parent._listOfValuesLength < 10;
+    const isRadioType =
+      parent._listOfValuesLength > 0 && parent._listOfValuesLength < JSON.parse(config.get('radio.listOfValuesLength'));
 
     parent._enabled = true;
     parent._other = false;
