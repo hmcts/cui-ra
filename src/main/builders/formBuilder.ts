@@ -37,16 +37,36 @@ export class FormBuilder {
       let newKey = '';
       if (keys.length > 0) {
         const errorKey = keys[0];
-        const errorKeys = errorKey.split('_enabled-');
-        const childrenId = errorKeys[1];
-        if (parent._isParent) {
-          newKey = errorKey.replace(childrenId, children[0].id);
-        } else if (parent._listOfValuesLength > 0 && parent._listOfValuesLength < listOfValuesLength) {
-          newKey = errorKey.replace(childrenId, parent._listOfValues[0].key);
-        }
-        validationErrors[newKey] = validationErrors[errorKey];
-        if (newKey !== errorKey) {
-          delete validationErrors[errorKey];
+        if (errorKey.includes('_enabled-')) {
+          const errorKeys = errorKey.split('_enabled-');
+          const childrenId = errorKeys[1];
+          if (parent._isParent) {
+            newKey = errorKey.replace(childrenId, children[0].id);
+          } else if (parent._listOfValuesLength > 0 && parent._listOfValuesLength < listOfValuesLength) {
+            newKey = errorKey.replace(childrenId, parent._listOfValues[0].key);
+          }
+          validationErrors[newKey] = validationErrors[errorKey];
+          if (newKey !== errorKey) {
+            delete validationErrors[errorKey];
+          }
+        } else {
+          const newValidationErrors: Map<{ key: string }, string> = new Map();
+          for (let i = 0; i < children.length; i++) {
+            const childKey = children[i].id;
+            for (let j = 0; j < keys.length; j++) {
+              const validationKey = keys[j];
+              if (validationKey.includes(childKey)) {
+                newValidationErrors[validationKey] = validationErrors[validationKey];
+                delete validationErrors[validationKey];
+              }
+            }
+          }
+          const newValidationKeys = Object.keys(newValidationErrors);
+          for (let k = 0; k < newValidationKeys.length; k++) {
+            const newValidationKey = newValidationKeys[k];
+            const newValidationError = newValidationErrors[newValidationKey];
+            validationErrors[newValidationKey] = newValidationError;
+          }
         }
       }
     }
