@@ -397,4 +397,53 @@ describe('FormController', () => {
     // Assert expected behavior here
     expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 404));
   });
+
+  test('Post with other empty data should return the same form with errors', async () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-RA0001-RA0004'
+    )[0];
+    const child: DataManagerDataObject[] = dataProcessorResultJson.filter((item: DataManagerDataObject) =>
+      parent._childIds.includes(item.id)
+    );
+    const next: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-RA0001-RA0004-RA0021'
+    )[0];
+    // Set up mock data and session
+    const mockSession = {
+      newmanager: {
+        get: jest.fn().mockReturnValue(parent),
+        hasUnaswered: jest.fn().mockReturnValue(true),
+        getChildren: jest.fn().mockReturnValue(child),
+        save: jest.fn(),
+        getNext: jest.fn().mockReturnValue(next),
+      },
+    };
+
+    mockedRequest = mockRequest(null);
+    mockedResponse = mockResponse();
+
+    mockedRequest.query = { change: true };
+    mockedRequest.params = { id: 'someId' };
+    mockedRequest.session = mockSession;
+    mockedRequest.protocol = protocol;
+    mockedRequest.headers = {
+      host: host,
+    };
+
+    const PostData = {
+      'PF0001-RA0001-RA0004-RA0021': {
+        flagComment: '',
+      },
+    };
+
+    mockedRequest.body = {
+      data: PostData,
+      enabled: ['PF0001-RA0001-RA0004-RA0021', 'PF0001-RA0001-RA0004-OT0001'],
+    }; // Mock request body
+
+    await formController.post(mockedRequest, mockedResponse, mockNext);
+
+    // Assert expected behavior here
+    expect(mockedResponse.render).toHaveBeenCalledWith('forms/checkbox-group', expect.any(Object));
+  });
 });
