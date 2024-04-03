@@ -24,7 +24,7 @@
     "s2s": {
       "secret": "",
       "endpoint": "http://rpe-service-auth-provider-aat.service.core-compute-aat.internal",
-      "allowedServices": ["private-law"]
+      "allowedServices": ["prl_citizen_frontend"]
     },
     "refdata": {
       "endpoint": "http://rd-commondata-api-aat.service.core-compute-aat.internal"
