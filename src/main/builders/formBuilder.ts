@@ -1,6 +1,6 @@
 import { ErrorMessages } from './../constants';
 import { DataManagerDataObject } from './../interfaces';
-import { CustomSort } from './../utilities';
+import { CustomSort, ErrorSort } from './../utilities';
 
 import config from 'config';
 import { Request, Response } from 'express';
@@ -33,7 +33,10 @@ export class FormBuilder {
 
     if (children) {
       children = CustomSort.alphabeticalAscOtherLast<DataManagerDataObject>(children, req);
+
       const keys = Object.keys(validationErrors);
+
+
       let newKey = '';
       if (keys.length > 0) {
         const errorKey = keys[0];
@@ -49,6 +52,9 @@ export class FormBuilder {
           delete validationErrors[errorKey];
         }
       }
+
+      //sort errors based on children
+      validationErrors = ErrorSort.matchSorting(children, validationErrors);
     }
 
     return res.render(template, {

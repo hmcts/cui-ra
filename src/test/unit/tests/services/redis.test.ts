@@ -6,6 +6,8 @@ jest.mock('redis', () => ({
   createClient: jest.fn(),
 }));
 
+jest.useFakeTimers();
+
 describe('RedisClient', () => {
   let mockedLogger = mockLogger();
   let mockedRedisNode = mockRedisNode();
@@ -27,6 +29,11 @@ describe('RedisClient', () => {
     redisClient = new RedisClient(mockedLogger, host, port, key, urlStart);
     redisClient['client'] = mockedRedisNode;
   });
+
+  afterEach(() => {
+    jest.clearAllTimers(); // Clear all intervals after each test
+  });
+
 
   test('should initialize with default values', () => {
     expect(redisClient.isConnected()).toBe(false);
