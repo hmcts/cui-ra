@@ -34,7 +34,6 @@ describe('RedisClient', () => {
     jest.clearAllTimers(); // Clear all intervals after each test
   });
 
-
   test('should initialize with default values', () => {
     expect(redisClient.isConnected()).toBe(false);
     expect(redisClient.isReady()).toBe(false);

@@ -36,7 +36,6 @@ export class FormBuilder {
 
       const keys = Object.keys(validationErrors);
 
-
       let newKey = '';
       if (keys.length > 0) {
         const errorKey = keys[0];

@@ -2,13 +2,9 @@ import { DataManagerDataObject } from '../../../../main/interfaces';
 import { ErrorSort } from '../../../../main/utilities';
 
 describe('ErrorSort', () => {
-
   test('should sort validation errors according to items', () => {
     // Mock data
-    const items: DataManagerDataObject[] = [
-      { id: '1' },
-      { id: '2' },
-    ] as unknown as DataManagerDataObject[];
+    const items: DataManagerDataObject[] = [{ id: '1' }, { id: '2' }] as unknown as DataManagerDataObject[];
 
     const validationErrors = {
       error1_1: 'Error 1 for item 1',
@@ -45,5 +41,4 @@ describe('ErrorSort', () => {
     // Expect the result to be an empty object
     expect(sortedErrors).toEqual({});
   });
-
 });
