@@ -85,7 +85,13 @@ function runPally(url: string, options: {} = {}): Promise<Pa11yResult> {
     wait: 500,
   };
   Object.assign(opt, options);
-  return pa11y(url, opt);
+
+  try {
+    return pa11y(url, opt);
+  } catch (error) {
+    console.error('Error occurred while capturing screenshot:', error);
+    return Promise.reject<Pa11yResult>(error);
+  }
 }
 
 function expectNoErrors(messages: PallyIssue[]): void {
