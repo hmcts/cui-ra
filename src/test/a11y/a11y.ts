@@ -91,6 +91,8 @@ function runPally(url: string, options: {} = {}): Promise<Pa11yResult> {
 function expectNoErrors(messages: PallyIssue[]): void {
   const errors = messages.filter(m => m.type === 'error');
 
+  console.log(errors);
+
   if (errors.length > 0) {
     const errorsAsJson = `${JSON.stringify(errors, null, 2)}`;
     throw new Error(`There are accessibility issues: \n${errorsAsJson}\n`);
