@@ -11,7 +11,7 @@ const pa11y = require('pa11y');
 const port = 53236;
 const host = `http://localhost:${port}`;
 const server = app.listen(port);
-const timeoutInMs = 30 * 1000;
+const timeoutInMs = 10 * 1000;
 
 supertest.agent(server);
 
