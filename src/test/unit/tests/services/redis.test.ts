@@ -6,8 +6,6 @@ jest.mock('redis', () => ({
   createClient: jest.fn(),
 }));
 
-jest.useFakeTimers();
-
 describe('RedisClient', () => {
   let mockedLogger = mockLogger();
   let mockedRedisNode = mockRedisNode();
@@ -26,6 +24,7 @@ describe('RedisClient', () => {
 
   beforeEach(() => {
     //jest.clearAllMocks();
+    jest.useFakeTimers();
     redisClient = new RedisClient(mockedLogger, host, port, key, urlStart);
     redisClient['client'] = mockedRedisNode;
   });
