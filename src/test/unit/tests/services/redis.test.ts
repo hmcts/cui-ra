@@ -31,6 +31,7 @@ describe('RedisClient', () => {
 
   afterEach(() => {
     jest.clearAllTimers(); // Clear all intervals after each test
+    jest.useRealTimers();
   });
 
   test('should initialize with default values', () => {
