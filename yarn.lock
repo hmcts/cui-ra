@@ -4931,7 +4931,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axe-core@npm:~4.8.2":
+"axe-core@npm:~4.8.4":
   version: 4.8.4
   resolution: "axe-core@npm:4.8.4"
   checksum: 644da2fec17bcf6f834edaab1baa5a75a9a3ee370c323215c73da6d7e45fac11d01470d92d0a3d5f26695e15c1d9b781733dfbe1fe09d505076c58f09ed74e02
@@ -6223,7 +6223,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:11.1.0, commander@npm:~11.1.0":
+"commander@npm:11.1.0":
   version: 11.1.0
   resolution: "commander@npm:11.1.0"
   checksum: fd1a8557c6b5b622c89ecdfde703242ab7db3b628ea5d1755784c79b8e7cb0d74d65b4a262289b533359cd58e1bfc0bf50245dfbcd2954682a6f367c828b79ef
@@ -6262,6 +6262,13 @@ __metadata:
   version: 9.5.0
   resolution: "commander@npm:9.5.0"
   checksum: c7a3e27aa59e913b54a1bafd366b88650bc41d6651f0cbe258d4ff09d43d6a7394232a4dadd0bf518b3e696fdf595db1028a0d82c785b88bd61f8a440cecfade
+  languageName: node
+  linkType: hard
+
+"commander@npm:~12.0.0":
+  version: 12.0.0
+  resolution: "commander@npm:12.0.0"
+  checksum: bce9e243dc008baba6b8d923f95b251ad115e6e7551a15838d7568abebcca0fc832da1800cf37caf37852f35ce4b7fb794ba7a4824b88c5adb1395f9268642df
   languageName: node
   linkType: hard
 
@@ -6747,7 +6754,7 @@ __metadata:
     nodemon: ^3.1.0
     nunjucks: ^3.2.4
     otplib: ^12.0.1
-    pa11y: 7.0.0
+    pa11y: ^8.0.0
     playwright: 1.42.1
     prettier: ^3.2.5
     puppeteer: ^22.3.0
@@ -6773,7 +6780,7 @@ __metadata:
     typescript: ~5.4.0
     webpack: ^5.90.3
     webpack-cli: ^5.0.0
-    webpack-dev-middleware: ^7.0.0
+    webpack-dev-middleware: 7.0.0
     webpack-node-externals: ^3.0.0
   languageName: unknown
   linkType: soft
@@ -7483,7 +7490,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"envinfo@npm:~7.11.0":
+"envinfo@npm:~7.11.1":
   version: 7.11.1
   resolution: "envinfo@npm:7.11.1"
   bin:
@@ -12304,7 +12311,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"on-finished@npm:2.4.1, on-finished@npm:^2.3.0, on-finished@npm:^2.4.1":
+"on-finished@npm:2.4.1, on-finished@npm:^2.3.0":
   version: 2.4.1
   resolution: "on-finished@npm:2.4.1"
   dependencies:
@@ -12521,13 +12528,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"p-timeout@npm:~4.1.0":
-  version: 4.1.0
-  resolution: "p-timeout@npm:4.1.0"
-  checksum: 321fec524c23a754e3f1487f2b0a5516fd32aba960d5610490eac56f8a0114b549a93f9919ffc05aa68956dc52e8330e0519f3ddf951d208d19c845f9cd778de
-  languageName: node
-  linkType: hard
-
 "p-try@npm:^2.0.0":
   version: 2.2.0
   resolution: "p-try@npm:2.2.0"
@@ -12535,24 +12535,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pa11y@npm:7.0.0":
-  version: 7.0.0
-  resolution: "pa11y@npm:7.0.0"
+"pa11y@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "pa11y@npm:8.0.0"
   dependencies:
-    axe-core: ~4.8.2
+    axe-core: ~4.8.4
     bfj: ~8.0.0
-    commander: ~11.1.0
-    envinfo: ~7.11.0
+    commander: ~12.0.0
+    envinfo: ~7.11.1
     html_codesniffer: ~2.5.1
     kleur: ~4.1.5
     mustache: ~4.2.0
     node.extend: ~2.0.3
-    p-timeout: ~4.1.0
-    puppeteer: ^20.9.0
-    semver: ~7.5.4
+    puppeteer: ^22.3.0
+    semver: ~7.6.0
   bin:
     pa11y: bin/pa11y.js
-  checksum: c96f0bd390902cda58d79407e0413d96df5bb718fcfdcb0898b994aec50a58adce757acc8a127e350d3963998e09e57fcd0918bd1b31c102755fee30af69fc8d
+  checksum: 8554b013b5210f3899779e507f0f4f990b18d52d5ec5848b35c58fd8272ebb40a31a8474aced782260962bd93caa0d9c170ba4a9dc28e5fb1a1535160ce67806
   languageName: node
   linkType: hard
 
@@ -15984,14 +15983,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack-dev-middleware@npm:^7.0.0":
-  version: 7.1.1
-  resolution: "webpack-dev-middleware@npm:7.1.1"
+"webpack-dev-middleware@npm:7.0.0":
+  version: 7.0.0
+  resolution: "webpack-dev-middleware@npm:7.0.0"
   dependencies:
     colorette: ^2.0.10
     memfs: ^4.6.0
     mime-types: ^2.1.31
-    on-finished: ^2.4.1
     range-parser: ^1.2.1
     schema-utils: ^4.0.0
   peerDependencies:
@@ -15999,7 +15997,7 @@ __metadata:
   peerDependenciesMeta:
     webpack:
       optional: true
-  checksum: 54b748ba354649bb5d80862f8828a05e75c0037a64ef3228722ebff1a6a9d5498467edc1a9fe210ed0ff8f37b2d32d2271273d8b6576f8249371881f14a309ad
+  checksum: 90f6c87c80bd5849c34f3a1761ac7dc1b123def2e6e9922f55102ff4b7532538641fa8c7169ce8254b0d471c27d882cdf4a1c32979952474fc8eacc8b3447915
   languageName: node
   linkType: hard
 

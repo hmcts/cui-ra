@@ -124,7 +124,7 @@
     "mini-css-extract-plugin": "^2.6.1",
     "nock": "^13.5.3",
     "nodemon": "^3.1.0",
-    "pa11y": "7.0.0",
+    "pa11y": "^8.0.0",
     "playwright": "1.42.1",
     "prettier": "^3.2.5",
     "puppeteer": "^22.3.0",
@@ -139,7 +139,7 @@
     "ts-loader": "^9.5.1",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.0.0",
-    "webpack-dev-middleware": "^7.0.0",
+    "webpack-dev-middleware": "7.0.0",
     "webpack-node-externals": "^3.0.0"
   },
   "lint-staged": {
