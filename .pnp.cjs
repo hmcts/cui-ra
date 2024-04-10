@@ -109,7 +109,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nodemon", "npm:3.1.0"],\
             ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
             ["otplib", "npm:12.0.1"],\
-            ["pa11y", "npm:8.0.0"],\
+            ["pa11y", "npm:7.0.0"],\
             ["playwright", "npm:1.42.1"],\
             ["prettier", "npm:3.2.5"],\
             ["puppeteer", "npm:22.4.1"],\
@@ -8631,13 +8631,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:12.0.0", {\
-          "packageLocation": "./.yarn/cache/commander-npm-12.0.0-6d673541cb-bce9e243dc.zip/node_modules/commander/",\
-          "packageDependencies": [\
-            ["commander", "npm:12.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:2.20.3", {\
           "packageLocation": "./.yarn/cache/commander-npm-2.20.3-d8dcbaa39b-ab8c07884e.zip/node_modules/commander/",\
           "packageDependencies": [\
@@ -9229,7 +9222,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nodemon", "npm:3.1.0"],\
             ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
             ["otplib", "npm:12.0.1"],\
-            ["pa11y", "npm:8.0.0"],\
+            ["pa11y", "npm:7.0.0"],\
             ["playwright", "npm:1.42.1"],\
             ["prettier", "npm:3.2.5"],\
             ["puppeteer", "npm:22.4.1"],\
@@ -15775,6 +15768,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["p-timeout", [\
+        ["npm:4.1.0", {\
+          "packageLocation": "./.yarn/cache/p-timeout-npm-4.1.0-d6c6e20c58-321fec524c.zip/node_modules/p-timeout/",\
+          "packageDependencies": [\
+            ["p-timeout", "npm:4.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["p-try", [\
         ["npm:2.2.0", {\
           "packageLocation": "./.yarn/cache/p-try-npm-2.2.0-e0390dbaf8-f8a8e9a769.zip/node_modules/p-try/",\
@@ -15785,18 +15787,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["pa11y", [\
-        ["npm:8.0.0", {\
-          "packageLocation": "./.yarn/cache/pa11y-npm-8.0.0-5516e74ddf-8554b013b5.zip/node_modules/pa11y/",\
+        ["npm:7.0.0", {\
+          "packageLocation": "./.yarn/cache/pa11y-npm-7.0.0-bcaf156327-c96f0bd390.zip/node_modules/pa11y/",\
           "packageDependencies": [\
-            ["pa11y", "npm:8.0.0"],\
+            ["pa11y", "npm:7.0.0"],\
             ["axe-core", "npm:4.8.4"],\
             ["bfj", "npm:8.0.0"],\
-            ["commander", "npm:12.0.0"],\
+            ["commander", "npm:11.1.0"],\
             ["envinfo", "npm:7.11.1"],\
             ["html_codesniffer", "npm:2.5.1"],\
             ["kleur", "npm:4.1.5"],\
             ["mustache", "npm:4.2.0"],\
             ["node.extend", "npm:2.0.3"],\
+            ["p-timeout", "npm:4.1.0"],\
             ["puppeteer", "npm:22.4.1"],\
             ["semver", "npm:7.6.0"]\
           ],\
