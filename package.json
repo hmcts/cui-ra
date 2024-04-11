@@ -155,6 +155,7 @@
     "http-cache-semantics": "^4.1.1",
     "qs": "^6.11.2",
     "puppeteer": "^22.0.0",
-    "semver": "^7.6.0"
+    "semver": "^7.6.0",
+    "tar": "6.2.1"
   }
 }
