@@ -24,8 +24,14 @@ describe('RedisClient', () => {
 
   beforeEach(() => {
     //jest.clearAllMocks();
+    jest.useFakeTimers();
     redisClient = new RedisClient(mockedLogger, host, port, key, urlStart);
     redisClient['client'] = mockedRedisNode;
+  });
+
+  afterEach(() => {
+    jest.clearAllTimers(); // Clear all intervals after each test
+    jest.useRealTimers();
   });
 
   test('should initialize with default values', () => {
