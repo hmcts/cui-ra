@@ -87,6 +87,7 @@
 
       <div class="govuk-button-group">
         {{ govukButton({
+          id: 'form-submit-button',
           text: _t('form.submitButton'),
           type: "submit",
           preventDoubleClick: true
@@ -96,7 +97,7 @@
         {% set queryParam = "?change=true" %}
         {% endif %}
 
-        <a href="{{ route.CANCEL }}{{ queryParam }}" class="govuk-link govuk-link--no-visited-state">{{ _t('cancel') }}</a>
+        <a id='form-cancel-button' href="{{ route.CANCEL }}{{ queryParam }}" class="govuk-link govuk-link--no-visited-state">{{ _t('cancel') }}</a>
       </div>
     </form>
 
