@@ -1,12 +1,22 @@
-@new-journey-e2e
-Feature: New Journey
+@existing-journey-e2e
+Feature: Existing Journey
 
-  Scenario: The home page loads and I click on New Journey
+  Scenario: The home page loads and I click on Existing Journey
     Given I am on the Home page
+    When I click the button with ID '#demoexisting'
+    Then I am navigated to 'Support for' page
 
-    When I click the button with ID '#demonew'
+    When I click the button with ID '#change-my-support'
 
-    Then I am navigated to 'Do you have a physical, mental or learning disability or health condition that means you need support during your case?' page
+    Then I am navigated to 'I want to tell you that my support needs have changed' page
+
+    When I click the button with ID '#start-now'
+    
+    Then I am navigated to "Review the support you've requested" page
+
+    When I click the button with ID '#review-action-new'
+    
+    Then I navigate to 'Do you have a physical, mental or learning disability or health condition that means you need support during your case?' page
     Then I find 'Contact us for help' text
 
     When I select the following checkboxes
@@ -124,7 +134,7 @@ Feature: New Journey
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0005-RA0026' with value 'Carer'
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0005-RA0029' with value 'Dog'
 
-    When I click on the button labeled 'Continue'
+    When I click the button with ID "#form-submit-button"
 
     Then I am navigated to 'I need to request a certain type of hearing' page
     Then I find 'Contact us for help' text
@@ -136,7 +146,7 @@ Feature: New Journey
         #checkbox-label-PF0001-RA0001-RA0007-RA0035
         """
 
-    When I click on the button labeled 'Continue'
+    When I click the button with ID "#form-submit-button"
 
     Then I am navigated to "Review the support you've requested" page
     Then I find 'Contact us for help' text

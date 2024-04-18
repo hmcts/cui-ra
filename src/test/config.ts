@@ -3,7 +3,7 @@ process.on('unhandledRejection', reason => {
   throw reason;
 });
 
-const url = process.env.TEST_URL ? `${process.env.TEST_URL}/demo` : 'https://localhost:3100/demo';
+const url = process.env.TEST_URL ? `${process.env.TEST_URL}/demo` : 'http://localhost:3100/demo';
 
 export const config = {
   TEST_URL: url,
