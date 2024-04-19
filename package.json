@@ -46,7 +46,7 @@
     "@types/helmet": "^4.0.0",
     "@types/i18n": "^0.13.6",
     "@types/lodash": "^4.14.185",
-    "@types/node": "^20.11.20",
+    "@types/node": "20.11.20",
     "@types/nunjucks": "^3.2.2",
     "@types/require-directory": "^2.1.2",
     "@types/serve-favicon": "^2.5.3",
