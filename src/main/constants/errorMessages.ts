@@ -9,4 +9,5 @@ export const ErrorMessages = {
   UNAUTHORISED: 'Unauthorised',
   MASTER_NOT_FOUND: 'Master flag cannot be found',
   FLAG_CANNOT_BE_EDITED: 'The following flag cannot be edited',
+  PARENT_NOT_FOUND: 'Parent cannot be found',
 } as const;

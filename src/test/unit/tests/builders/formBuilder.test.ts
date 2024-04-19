@@ -80,4 +80,58 @@ describe('FormBuilder', () => {
       })
     );
   });
+
+  test('should determine radio-group template', () => {
+    const parent = { _listOfValuesLength: 5 } as unknown as DataManagerDataObject;
+    const template = FormBuilder['determineTemplate'](parent, 10);
+    expect(template).toBe('forms/radio-group');
+  });
+
+  test('should determine type-ahead template', () => {
+    const parent = { _listOfValuesLength: 15 } as unknown as DataManagerDataObject;
+    const template = FormBuilder['determineTemplate'](parent, 10);
+    expect(template).toBe('forms/type-ahead');
+  });
+
+  test('should determine checkbox-group template', () => {
+    const parent = { _isCategoryPage: true } as unknown as DataManagerDataObject;
+    const template = FormBuilder['determineTemplate'](parent, 10);
+    expect(template).toBe('forms/checkbox-group');
+  });
+
+  test('should throw error for unexpected condition in determineTemplate', () => {
+    const parent = { _listOfValuesLength: undefined, _isCategoryPage: false } as unknown as DataManagerDataObject;
+    expect(() => FormBuilder['determineTemplate'](parent, 10)).toThrowError(ErrorMessages.UNEXPECTED_ERROR);
+  });
+
+  test('should modify validation errors for parent and children', () => {
+    const parent = {
+      _isParent: true,
+      _listOfValuesLength: 5,
+      _listOfValues: [{ key: 'key1' }],
+    } as unknown as DataManagerDataObject;
+    const children = [{ id: 'childId1' }] as unknown as DataManagerDataObject[];
+    const validationErrors: { [key: string]: string } = { '_enabled-childId_xyz': 'error message' };
+
+    FormBuilder['modifyValidationErrors'](validationErrors, parent, children, 10);
+
+    expect(validationErrors).toEqual({ '_enabled-childId1': 'error message' });
+  });
+
+  test('should modify validation errors for parent only', () => {
+    const parent = { _isParent: true } as unknown as DataManagerDataObject;
+    const validationErrors: { [key: string]: string } = { '_enabled-xyz': 'error message' };
+
+    FormBuilder['modifyValidationErrors'](validationErrors, parent, null, 10);
+
+    expect(validationErrors).toEqual({ '_enabled-xyz': 'error message' });
+  });
+
+  test('should not modify validation errors if no keys exist', () => {
+    const validationErrors: { [key: string]: string } = {};
+
+    FormBuilder['modifyValidationErrors'](validationErrors, {} as DataManagerDataObject, null, 10);
+
+    expect(validationErrors).toEqual({});
+  });
 });
