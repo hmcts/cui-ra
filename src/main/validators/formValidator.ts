@@ -16,90 +16,104 @@ export enum parentType {
   child = 'child',
 }
 
+export interface ValidationErrors {
+  [key: string]: string;
+}
+
 //validate form data
 export class FormValidator {
-  public static async validate(
+  private static ajv: Ajv;
+
+  static initialize(): void {
+    this.ajv = new Ajv({ allErrors: true });
+    addFormats(this.ajv);
+    addErrors(this.ajv);
+  }
+
+  static async validate(
     processedItems: DataManagerDataObject[],
     parent: DataManagerDataObject
-  ): Promise<[{ [key: string]: string }, DataManagerDataObject, DataManagerDataObject[] | null]> {
-    const ajv: Ajv = new Ajv({ allErrors: true });
-    addFormats(ajv);
-    addErrors(ajv);
-    const listOfValuesLength = JSON.parse(config.get('radio.listOfValuesLength'));
+  ): Promise<[ValidationErrors, DataManagerDataObject, DataManagerDataObject[] | null]> {
+    this.initialize();
 
     const [schema, type] = this.getSchema(parent);
+    const validate = this.ajv.compile(schema);
+    const validationErrors: ValidationErrors = {};
 
-    const validate = ajv.compile(schema);
-
-    const validationErrors: { [key: string]: string } = {};
-
-    for (let i = 0; i < processedItems.length; i++) {
-      const item: DataManagerDataObject = processedItems[i];
-      //clear errors
+    for (const item of processedItems) {
       item._errors = [];
-      let key = `${item.value.flagCode}.error`;
-      if (item.value.flagCode === Common.OTHER_FLAG_CODE) {
-        key = `${parent.value.flagCode}.${Common.OTHER_FLAG_CODE}.error`;
-      }
+      const key = this.getKey(item, parent);
       const isValid = await validate(item);
+
       if (!isValid) {
         const errors = await validate.errors;
         if (errors && errors[0] && errors[0].message) {
           const message = `${key}.${errors[0].message}`;
-          item._errors.push(message);
-          if (item._flagComment) {
-            validationErrors[`flagComment-${item.id}`] = message;
-          } else if (item._listOfValuesLength > 0 && item._listOfValuesLength >= listOfValuesLength && !item._other) {
-            validationErrors['custom-accessible-autocomplete'] = message;
-          } else if (item._listOfValuesLength > 0 && item._listOfValuesLength >= listOfValuesLength && item._other) {
-            validationErrors['other'] = message;
-          } else if (item._listOfValuesLength > 0 && item._listOfValuesLength < listOfValuesLength && item._other) {
-            validationErrors['other-text-area'] = message;
-          } else {
-            validationErrors[item.id] = message;
-          }
+          this.handleValidationErrors(item, message, validationErrors);
         }
-        processedItems[i] = item;
       }
     }
 
-    if (type === parentType.parent) {
-      return [validationErrors, processedItems[0], null];
+    return type === parentType.parent
+      ? [validationErrors, processedItems[0], null]
+      : [validationErrors, parent, processedItems];
+  }
+
+  private static getKey(item: DataManagerDataObject, parent: DataManagerDataObject): string {
+    if (item.value.flagCode === Common.OTHER_FLAG_CODE) {
+      return `${parent.value.flagCode}.${Common.OTHER_FLAG_CODE}.error`;
+    }
+    return `${item.value.flagCode}.error`;
+  }
+
+  private static handleValidationErrors(
+    item: DataManagerDataObject,
+    message: string,
+    validationErrors: ValidationErrors
+  ): void {
+    if (item._flagComment) {
+      validationErrors[`flagComment-${item.id}`] = message;
+    } else if (
+      item._listOfValuesLength > 0 &&
+      item._listOfValuesLength >= JSON.parse(config.get('radio.listOfValuesLength')) &&
+      !item._other
+    ) {
+      validationErrors['custom-accessible-autocomplete'] = message;
+    } else if (
+      item._listOfValuesLength > 0 &&
+      item._listOfValuesLength >= JSON.parse(config.get('radio.listOfValuesLength')) &&
+      item._other
+    ) {
+      validationErrors['other'] = message;
+    } else if (
+      item._listOfValuesLength > 0 &&
+      item._listOfValuesLength < JSON.parse(config.get('radio.listOfValuesLength')) &&
+      item._other
+    ) {
+      validationErrors['other-text-area'] = message;
     } else {
-      return [validationErrors, parent, processedItems];
+      validationErrors[item.id] = message;
     }
   }
 
-  private static getSchema(parent: DataManagerDataObject): SchemaType {
+  private static getSchema(parent: DataManagerDataObject): [SchemaType, parentType] {
     const listOfValuesLength = JSON.parse(config.get('radio.listOfValuesLength'));
     if (parent._listOfValuesLength > 0 && parent._listOfValuesLength < listOfValuesLength) {
-      //radio
       return [radioSchema(), parentType.parent];
     } else if (parent._listOfValuesLength > 0 && parent._listOfValuesLength >= listOfValuesLength) {
-      //type ahead
       return [typeaheadSchema(), parentType.parent];
     } else if (parent._isCategoryPage) {
-      //checkbox
       return [checkboxSchema(), parentType.child];
     } else {
       throw new Error(ErrorMessages.UNEXPECTED_ERROR);
     }
   }
 
-  public static async validateBody(
-    flag: DataManagerDataObject,
-    form: Form
-  ): Promise<[boolean, { [key: string]: string }]> {
-    const ajv: Ajv = new Ajv({ allErrors: true });
-    addFormats(ajv);
-    addErrors(ajv);
-
+  static async validateBody(flag: DataManagerDataObject, form: Form): Promise<[boolean, ValidationErrors]> {
+    this.initialize();
     const schema = formData();
-
-    const validate = ajv.compile(schema);
-
-    const validationErrors: { [key: string]: string } = {};
-
+    const validate = this.ajv.compile(schema);
+    const validationErrors: ValidationErrors = {};
     const key = `${flag.value.flagCode}.error`;
 
     const isValid = await validate(form);
@@ -108,19 +122,27 @@ export class FormValidator {
       const errors = await validate.errors;
       if (errors && errors[0] && errors[0].message) {
         const message = `${key}.${errors[0].message}`;
-        if (flag._isParent) {
-          validationErrors[`_enabled-${flag._childIds[0]}`] = message;
-        } else if (
-          flag._listOfValuesLength > 0 &&
-          flag._listOfValuesLength < JSON.parse(config.get('radio.listOfValuesLength'))
-        ) {
-          validationErrors[`_enabled-${flag._listOfValues[0].key}`] = message;
-        } else {
-          validationErrors[flag.id] = message;
-        }
+        this.handleBodyValidationErrors(flag, message, validationErrors);
       }
     }
 
     return [isValid, validationErrors];
+  }
+
+  private static handleBodyValidationErrors(
+    flag: DataManagerDataObject,
+    message: string,
+    validationErrors: ValidationErrors
+  ): void {
+    if (flag._isParent) {
+      validationErrors[`_enabled-${flag._childIds[0]}`] = message;
+    } else if (
+      flag._listOfValuesLength > 0 &&
+      flag._listOfValuesLength < JSON.parse(config.get('radio.listOfValuesLength'))
+    ) {
+      validationErrors[`_enabled-${flag._listOfValues[0].key}`] = message;
+    } else {
+      validationErrors[flag.id] = message;
+    }
   }
 }
