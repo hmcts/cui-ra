@@ -10,11 +10,11 @@ def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
 withPipeline(type, product, component) {
   before('smoketest:preview') {
-    sh 'yarn install && yarn playwright install'
+    sh 'rm -rf /home/jenkinsssh/.cache/ms-playwright && yarn install && yarn playwright install'
   }
 
   before('smoketest:aat') {
-    sh 'yarn install && yarn playwright install'
+    sh 'rm -rf /home/jenkinsssh/.cache/ms-playwright && yarn install && yarn playwright install'
   }
 
   afterAlways('build') {
