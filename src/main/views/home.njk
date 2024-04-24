@@ -1,5 +1,20 @@
 {% extends "template.njk" %}
 
-{% block mainContent %}
-  <h1 class="govuk-heading-xl">Default page template</h1>
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Page not found</h1>
+
+        <p class="govuk-body">
+          You may need to select back or forward in your internet browser to return to the page you were on.
+        </p>
+
+        <p class="govuk-body">
+          If you do not need to do anything else, you can close this window or <a href="https://www.gov.uk" class="govuk-link">return to GOV.UK.</a>
+        </p>
+    </div>
+  </div>
 {% endblock %}
+
