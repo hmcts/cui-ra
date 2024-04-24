@@ -1,5 +1,5 @@
-import { HTTPError } from './../HttpError';
-import { ErrorMessages, Route } from './../constants';
+import { Route } from './../constants';
+import { DataNotFoundError, MasterNotFoundError } from './../errors';
 import {
   DataManagerDataObject,
   ExistingFlagProcessorInterface,
@@ -39,14 +39,14 @@ export class DataController {
       const id: string = req.params.id.toString();
       //Check the key exists
       if (!(await this.redisClient.exists(id))) {
-        throw new HTTPError(ErrorMessages.DATA_NOT_FOUND, 404);
+        throw new DataNotFoundError(`Data with ID ${id} not found`);
       }
 
       //Get data from redis store
       const data: string | null = await this.redisClient.get(id);
 
       if (!data) {
-        throw new HTTPError(ErrorMessages.DATA_NOT_FOUND, 404);
+        throw new DataNotFoundError(`Data with ID ${id} not found`);
       }
 
       const payloadStore: InboundPayloadStore = plainToClass(
@@ -109,7 +109,7 @@ export class DataController {
 
       const master: DataManagerDataObject | null = req.session.newmanager.setMaster(req.session.masterflagcode);
       if (!master) {
-        throw new HTTPError(ErrorMessages.MASTER_NOT_FOUND, 500);
+        throw new MasterNotFoundError(`Master flag with code ${req.session.masterflagcode} not found`);
       }
       req.session.mastername = master.value.name;
       req.session.mastername_cy = master.value.name_cy;
