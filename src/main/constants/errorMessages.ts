@@ -9,4 +9,5 @@ export const ErrorMessages = {
   UNAUTHORIZED: 'Unauthorized: Access to the resource is restricted.',
   MASTER_NOT_FOUND: 'The master flag could not be found.',
   FLAG_CANNOT_BE_EDITED: 'The specified flag cannot be edited.',
+  PARENT_NOT_FOUND: 'Parent cannot be found',
 } as const;

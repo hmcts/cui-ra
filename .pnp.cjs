@@ -53,7 +53,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/i18n", "npm:0.13.10"],\
             ["@types/jest", "npm:29.5.12"],\
             ["@types/lodash", "npm:4.17.0"],\
-            ["@types/node", "npm:20.11.28"],\
+            ["@types/node", "npm:20.11.20"],\
             ["@types/nunjucks", "npm:3.2.6"],\
             ["@types/require-directory", "npm:2.1.6"],\
             ["@types/serve-favicon", "npm:2.5.7"],\
@@ -110,7 +110,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
             ["otplib", "npm:12.0.1"],\
             ["pa11y", "npm:8.0.0"],\
-            ["playwright", "npm:1.42.1"],\
+            ["playwright", "npm:1.43.0"],\
             ["prettier", "npm:3.2.5"],\
             ["puppeteer", "npm:22.4.1"],\
             ["redis", "npm:4.6.13"],\
@@ -5411,6 +5411,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/node", [\
+        ["npm:20.11.20", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-20.11.20-0036cdf1c0-79d339622f.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:20.11.20"],\
+            ["undici-types", "npm:5.26.5"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:20.11.28", {\
           "packageLocation": "./.yarn/cache/@types-node-npm-20.11.28-6be967407c-83fe7e649c.zip/node_modules/@types/node/",\
           "packageDependencies": [\
@@ -9192,7 +9200,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/i18n", "npm:0.13.10"],\
             ["@types/jest", "npm:29.5.12"],\
             ["@types/lodash", "npm:4.17.0"],\
-            ["@types/node", "npm:20.11.28"],\
+            ["@types/node", "npm:20.11.20"],\
             ["@types/nunjucks", "npm:3.2.6"],\
             ["@types/require-directory", "npm:2.1.6"],\
             ["@types/serve-favicon", "npm:2.5.7"],\
@@ -9249,7 +9257,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
             ["otplib", "npm:12.0.1"],\
             ["pa11y", "npm:8.0.0"],\
-            ["playwright", "npm:1.42.1"],\
+            ["playwright", "npm:1.43.0"],\
             ["prettier", "npm:3.2.5"],\
             ["puppeteer", "npm:22.4.1"],\
             ["redis", "npm:4.6.13"],\
@@ -16173,21 +16181,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["playwright", [\
-        ["npm:1.42.1", {\
-          "packageLocation": "./.yarn/cache/playwright-npm-1.42.1-ad14b1d04e-06c16bcd07.zip/node_modules/playwright/",\
+        ["npm:1.43.0", {\
+          "packageLocation": "./.yarn/cache/playwright-npm-1.43.0-ae536c7ce9-edd4ef9644.zip/node_modules/playwright/",\
           "packageDependencies": [\
-            ["playwright", "npm:1.42.1"],\
+            ["playwright", "npm:1.43.0"],\
             ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"],\
-            ["playwright-core", "npm:1.42.1"]\
+            ["playwright-core", "npm:1.43.0"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["playwright-core", [\
-        ["npm:1.42.1", {\
-          "packageLocation": "./.yarn/unplugged/playwright-core-npm-1.42.1-9ffc4604de/node_modules/playwright-core/",\
+        ["npm:1.43.0", {\
+          "packageLocation": "./.yarn/unplugged/playwright-core-npm-1.43.0-75b6fd65dc/node_modules/playwright-core/",\
           "packageDependencies": [\
-            ["playwright-core", "npm:1.42.1"]\
+            ["playwright-core", "npm:1.43.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -19071,7 +19079,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/node12", "npm:1.0.11"],\
             ["@tsconfig/node14", "npm:1.0.3"],\
             ["@tsconfig/node16", "npm:1.0.3"],\
-            ["@types/node", "npm:20.11.28"],\
+            ["@types/node", "npm:20.11.20"],\
             ["@types/swc__core", null],\
             ["@types/swc__wasm", null],\
             ["@types/typescript", null],\
