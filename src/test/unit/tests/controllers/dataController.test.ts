@@ -1,10 +1,10 @@
 import { Request, Response, NextFunction } from 'express';
 import { DataController } from '../../../../main/controllers';
-import { ErrorMessages, Route } from '../../../../main/constants';
+import { Route } from '../../../../main/constants';
 import { UrlRoute } from './../../../../main/utilities';
 import { mockLogger, mockRedisClient, mockServiceAuth, mockRefData, mockFlagProcessor } from '../../mocks';
 import { Session, SessionData } from 'express-session';
-import { HTTPError } from './../../../../main/HttpError';
+import { DataNotFoundError, MasterNotFoundError } from './../../../../main/errors';
 import { ExistingFlagProcessor } from './../../../../main/processors';
 import fs from 'fs';
 
@@ -20,6 +20,7 @@ let mockedFlagProcessor = mockFlagProcessor();
 let existingFlagProcessor = new ExistingFlagProcessor();
 const host = 'www.test.com';
 const protocol = 'https';
+const mockId = 'mockId';
 
 describe('DataController', () => {
   let dataController: DataController;
@@ -30,7 +31,7 @@ describe('DataController', () => {
   beforeEach(() => {
     // Initialize the mock objects and dependencies
     mockRequest = {
-      params: { id: 'mockId' },
+      params: { id: mockId },
       session: {} as Session & Partial<SessionData>,
       protocol: protocol,
       headers: {
@@ -62,8 +63,7 @@ describe('DataController', () => {
     mockedRedis.exists = jest.fn().mockResolvedValue(false);
 
     await dataController.process(mockRequest as Request, mockResponse as Response, mockNext);
-
-    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.DATA_NOT_FOUND, 404));
+    expect(mockNext).toHaveBeenCalledWith(new DataNotFoundError(`Data with ID ${mockId} not found`));
   });
 
   test('should handle 404 when data is empty in the redis store', async () => {
@@ -76,7 +76,7 @@ describe('DataController', () => {
 
     //expect(mockResponse.status).toHaveBeenCalledWith(404);
     //expect(mockResponse.send).toHaveBeenCalledWith(ErrorMessages.DATA_NOT_FOUND);
-    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.DATA_NOT_FOUND, 404));
+    expect(mockNext).toHaveBeenCalledWith(new DataNotFoundError(`Data with ID ${mockId} not found`));
   });
 
   test('should process data and redirect to new flags setup when no existing flags are found', async () => {
@@ -230,6 +230,6 @@ describe('DataController', () => {
 
     await dataController.process(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.MASTER_NOT_FOUND, 500));
+    expect(mockNext).toHaveBeenCalledWith(new MasterNotFoundError(`Master flag with code RA9999 not found`));
   });
 });

@@ -1,6 +1,8 @@
 import { S2S } from '../../../../main/services';
 import { mockAxios, mockLogger } from '../../mocks';
 import { authenticator } from 'otplib';
+import { S2SError, TokenFormatError, TokenInvalidError, UnauthorisedError } from './../../../../main/errors';
+import { ErrorMessages } from './../../../../main/constants';
 
 const axios = mockAxios();
 const mockedLogger = mockLogger();
@@ -27,12 +29,11 @@ describe('s2s service class', () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     (axios.post as jest.Mock).mockImplementation(() => Promise.resolve(Object.assign({}, response, { status: 401 })));
 
-    const err = new Error('Unauthorized');
-
     try {
       await service.getToken();
     } catch (error) {
-      expect(error).toEqual(err);
+      expect(error).toBeInstanceOf(UnauthorisedError);
+      expect(error.message).toEqual(ErrorMessages.UNAUTHORISED);
     }
   });
 
@@ -45,23 +46,23 @@ describe('s2s service class', () => {
       })
     );
 
-    const err = new Error('Response is not a valid string');
-
     try {
       await service.getToken();
     } catch (error) {
-      expect(error).toEqual(err);
+      expect(error).toBeInstanceOf(TokenFormatError);
+      expect(error.message).toEqual(ErrorMessages.SERVICE_TOKEN_INCORRECT_FORMAT);
     }
   });
 
   test('Should throw and error when trying to get service token', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    (axios.post as jest.Mock).mockRejectedValueOnce({ error: 'Internal Server Error' });
+    (axios.post as jest.Mock).mockRejectedValueOnce(new S2SError('Failed to get S2S token: Internal Server Error'));
 
     try {
       await service.getToken();
     } catch (error) {
-      expect(error).toEqual({ error: 'Internal Server Error' });
+      expect(error).toBeInstanceOf(S2SError);
+      expect(error.message).toEqual('Failed to get S2S token: Internal Server Error');
     }
   });
 
@@ -75,12 +76,11 @@ describe('s2s service class', () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     (axios.get as jest.Mock).mockImplementation(() => Promise.resolve(Object.assign({}, response, { status: 401 })));
 
-    const err = new Error('Invalid token');
-
     try {
       await service.validateToken(expectedToken);
     } catch (error) {
-      expect(error).toEqual(err);
+      expect(error).toBeInstanceOf(TokenInvalidError);
+      expect(error.message).toEqual(ErrorMessages.SERVICE_TOKEN_INVALID);
     }
   });
 
@@ -93,22 +93,23 @@ describe('s2s service class', () => {
       })
     );
 
-    const err = new Error('Response is not a valid string');
-
     try {
       await service.validateToken(expectedToken);
     } catch (error) {
-      expect(error).toEqual(err);
+      expect(error).toBeInstanceOf(TokenFormatError);
+      expect(error.message).toEqual(ErrorMessages.SERVICE_TOKEN_INCORRECT_FORMAT);
     }
   });
 
   test('Validate Service Token but throw an error', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-    (axios.get as jest.Mock).mockRejectedValueOnce({ error: 'Internal Server Error' });
+    (axios.get as jest.Mock).mockRejectedValueOnce(new S2SError('Failed to get S2S token: Internal Server Error'));
+
     try {
       await service.validateToken(expectedToken);
     } catch (error) {
-      expect(error).toEqual({ error: 'Internal Server Error' });
+      expect(error).toBeInstanceOf(S2SError);
+      expect(error.message).toEqual('Failed to get S2S token: Internal Server Error');
     }
   });
 
