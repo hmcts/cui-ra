@@ -35,7 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.24.0"],\
             ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
             ["@codeceptjs/configure", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.1"],\
-            ["@eslint/js", "npm:8.57.0"],\
+            ["@eslint/js", "npm:9.1.1"],\
             ["@hmcts/info-provider", "npm:1.1.0"],\
             ["@hmcts/nodejs-healthcheck", "npm:1.8.4"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
@@ -3694,6 +3694,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@eslint-js-npm-8.57.0-00ead3710a-315dc65b0e.zip/node_modules/@eslint/js/",\
           "packageDependencies": [\
             ["@eslint/js", "npm:8.57.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:9.1.1", {\
+          "packageLocation": "./.yarn/cache/@eslint-js-npm-9.1.1-75607987be-b71844776d.zip/node_modules/@eslint/js/",\
+          "packageDependencies": [\
+            ["@eslint/js", "npm:9.1.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9182,7 +9189,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.24.0"],\
             ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
             ["@codeceptjs/configure", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.1"],\
-            ["@eslint/js", "npm:8.57.0"],\
+            ["@eslint/js", "npm:9.1.1"],\
             ["@hmcts/info-provider", "npm:1.1.0"],\
             ["@hmcts/nodejs-healthcheck", "npm:1.8.4"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
