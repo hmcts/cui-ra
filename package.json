@@ -58,7 +58,7 @@
     "applicationinsights": "^2.9.4",
     "autobind-decorator": "^2.4.0",
     "awilix": "^10.0.0",
-    "axios": "^1.0.0",
+    "axios": "^1.6.8",
     "body-parser": "^1.20.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
@@ -151,7 +151,7 @@
   },
   "packageManager": "yarn@3.8.1",
   "resolutions": {
-    "axios": "^1.6.5",
+    "axios": "^1.6.8",
     "cookiejar": "^2.1.4",
     "express": "^4.19.2",
     "follow-redirects": "^1.15.6",
