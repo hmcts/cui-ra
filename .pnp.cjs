@@ -36,21 +36,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
             ["@codeceptjs/configure", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.1"],\
             ["@eslint/js", "npm:8.57.0"],\
-            ["@hmcts/info-provider", "npm:1.1.0"],\
-            ["@hmcts/nodejs-healthcheck", "npm:1.8.4"],\
+            ["@hmcts/info-provider", "npm:1.2.1"],\
+            ["@hmcts/nodejs-healthcheck", "npm:1.8.5"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
             ["@hmcts/properties-volume", "npm:1.1.0"],\
             ["@types/body-parser", "npm:1.19.5"],\
             ["@types/chai-as-promised", "npm:7.1.8"],\
-            ["@types/config", "npm:3.3.3"],\
+            ["@types/config", "npm:3.3.4"],\
             ["@types/cookie-parser", "npm:1.4.7"],\
             ["@types/csurf", "npm:1.11.5"],\
             ["@types/es6-promisify", "npm:6.0.4"],\
             ["@types/express", "npm:4.17.21"],\
             ["@types/express-session", "npm:1.18.0"],\
             ["@types/glob", "npm:8.1.0"],\
-            ["@types/helmet", "npm:4.0.0"],\
-            ["@types/i18n", "npm:0.13.10"],\
+            ["@types/i18n", "npm:0.13.12"],\
             ["@types/jest", "npm:29.5.12"],\
             ["@types/lodash", "npm:4.17.0"],\
             ["@types/node", "npm:20.11.20"],\
@@ -3736,10 +3735,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@hmcts/info-provider", [\
-        ["npm:1.1.0", {\
-          "packageLocation": "./.yarn/cache/@hmcts-info-provider-npm-1.1.0-ff33fd10d2-e1ddca0e05.zip/node_modules/@hmcts/info-provider/",\
+        ["npm:1.2.1", {\
+          "packageLocation": "./.yarn/cache/@hmcts-info-provider-npm-1.2.1-0c905c3d08-ec2f55f056.zip/node_modules/@hmcts/info-provider/",\
           "packageDependencies": [\
-            ["@hmcts/info-provider", "npm:1.1.0"],\
+            ["@hmcts/info-provider", "npm:1.2.1"],\
             ["express", "npm:4.19.2"],\
             ["js-yaml", "npm:4.1.0"]\
           ],\
@@ -3747,13 +3746,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@hmcts/nodejs-healthcheck", [\
-        ["npm:1.8.4", {\
-          "packageLocation": "./.yarn/cache/@hmcts-nodejs-healthcheck-npm-1.8.4-1a9c485eb9-8b2a6d1745.zip/node_modules/@hmcts/nodejs-healthcheck/",\
+        ["npm:1.8.5", {\
+          "packageLocation": "./.yarn/cache/@hmcts-nodejs-healthcheck-npm-1.8.5-fa7409827a-2e3201c1f9.zip/node_modules/@hmcts/nodejs-healthcheck/",\
           "packageDependencies": [\
-            ["@hmcts/nodejs-healthcheck", "npm:1.8.4"],\
+            ["@hmcts/nodejs-healthcheck", "npm:1.8.5"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
-            ["js-yaml", "npm:3.14.1"],\
-            ["superagent", "npm:8.1.2"]\
+            ["js-yaml", "npm:4.1.0"],\
+            ["superagent", "npm:9.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5102,10 +5101,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/config", [\
-        ["npm:3.3.3", {\
-          "packageLocation": "./.yarn/cache/@types-config-npm-3.3.3-a1da4acecf-738c616fc3.zip/node_modules/@types/config/",\
+        ["npm:3.3.4", {\
+          "packageLocation": "./.yarn/cache/@types-config-npm-3.3.4-a6d2df0049-c8f2e26257.zip/node_modules/@types/config/",\
           "packageDependencies": [\
-            ["@types/config", "npm:3.3.3"]\
+            ["@types/config", "npm:3.3.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5272,16 +5271,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@types/helmet", [\
-        ["npm:4.0.0", {\
-          "packageLocation": "./.yarn/cache/@types-helmet-npm-4.0.0-48d8baa6ce-ded60d8d99.zip/node_modules/@types/helmet/",\
-          "packageDependencies": [\
-            ["@types/helmet", "npm:4.0.0"],\
-            ["helmet", "npm:7.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@types/html-minifier-terser", [\
         ["npm:6.1.0", {\
           "packageLocation": "./.yarn/cache/@types-html-minifier-terser-npm-6.1.0-707ea07fcb-eb843f6a8d.zip/node_modules/@types/html-minifier-terser/",\
@@ -5292,10 +5281,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/i18n", [\
-        ["npm:0.13.10", {\
-          "packageLocation": "./.yarn/cache/@types-i18n-npm-0.13.10-2ba5b4c08f-633f6dee1e.zip/node_modules/@types/i18n/",\
+        ["npm:0.13.12", {\
+          "packageLocation": "./.yarn/cache/@types-i18n-npm-0.13.12-147c05ee75-dceac7da2a.zip/node_modules/@types/i18n/",\
           "packageDependencies": [\
-            ["@types/i18n", "npm:0.13.10"]\
+            ["@types/i18n", "npm:0.13.12"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9183,21 +9172,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
             ["@codeceptjs/configure", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.1"],\
             ["@eslint/js", "npm:8.57.0"],\
-            ["@hmcts/info-provider", "npm:1.1.0"],\
-            ["@hmcts/nodejs-healthcheck", "npm:1.8.4"],\
+            ["@hmcts/info-provider", "npm:1.2.1"],\
+            ["@hmcts/nodejs-healthcheck", "npm:1.8.5"],\
             ["@hmcts/nodejs-logging", "npm:4.0.4"],\
             ["@hmcts/properties-volume", "npm:1.1.0"],\
             ["@types/body-parser", "npm:1.19.5"],\
             ["@types/chai-as-promised", "npm:7.1.8"],\
-            ["@types/config", "npm:3.3.3"],\
+            ["@types/config", "npm:3.3.4"],\
             ["@types/cookie-parser", "npm:1.4.7"],\
             ["@types/csurf", "npm:1.11.5"],\
             ["@types/es6-promisify", "npm:6.0.4"],\
             ["@types/express", "npm:4.17.21"],\
             ["@types/express-session", "npm:1.18.0"],\
             ["@types/glob", "npm:8.1.0"],\
-            ["@types/helmet", "npm:4.0.0"],\
-            ["@types/i18n", "npm:0.13.10"],\
+            ["@types/i18n", "npm:0.13.12"],\
             ["@types/jest", "npm:29.5.12"],\
             ["@types/lodash", "npm:4.17.0"],\
             ["@types/node", "npm:20.11.20"],\
@@ -11318,6 +11306,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["qs", "npm:6.12.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:3.5.1", {\
+          "packageLocation": "./.yarn/cache/formidable-npm-3.5.1-257e5eab8a-46b21496f9.zip/node_modules/formidable/",\
+          "packageDependencies": [\
+            ["formidable", "npm:3.5.1"],\
+            ["dezalgo", "npm:1.0.4"],\
+            ["hexoid", "npm:1.0.0"],\
+            ["once", "npm:1.4.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["forwarded", [\
@@ -12014,13 +12012,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["helmet", [\
-        ["npm:7.0.0", {\
-          "packageLocation": "./.yarn/cache/helmet-npm-7.0.0-13c1e96edf-3622b8b68b.zip/node_modules/helmet/",\
-          "packageDependencies": [\
-            ["helmet", "npm:7.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:7.1.0", {\
           "packageLocation": "./.yarn/cache/helmet-npm-7.1.0-0f9f70fa93-16aaa0df99.zip/node_modules/helmet/",\
           "packageDependencies": [\
@@ -18493,6 +18484,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fast-safe-stringify", "npm:2.1.1"],\
             ["form-data", "npm:4.0.0"],\
             ["formidable", "npm:2.1.2"],\
+            ["methods", "npm:1.1.2"],\
+            ["mime", "npm:2.6.0"],\
+            ["qs", "npm:6.12.0"],\
+            ["semver", "npm:7.6.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:9.0.1", {\
+          "packageLocation": "./.yarn/cache/superagent-npm-9.0.1-de90d6ad61-c332ef5609.zip/node_modules/superagent/",\
+          "packageDependencies": [\
+            ["superagent", "npm:9.0.1"],\
+            ["component-emitter", "npm:1.3.0"],\
+            ["cookiejar", "npm:2.1.4"],\
+            ["debug", "virtual:428f325a939c2653ad822eb3d75efb02ac311523dd0d4f9645afc39ea00bd86eceac35a9d59c9b6977d76b670a4ef0ae057ea572338a44729aa592711a8c05a3#npm:4.3.4"],\
+            ["fast-safe-stringify", "npm:2.1.1"],\
+            ["form-data", "npm:4.0.0"],\
+            ["formidable", "npm:3.5.1"],\
             ["methods", "npm:1.1.2"],\
             ["mime", "npm:2.6.0"],\
             ["qs", "npm:6.12.0"],\
