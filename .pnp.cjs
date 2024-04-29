@@ -61,7 +61,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/supertest", "npm:6.0.2"],\
             ["@typescript-eslint/eslint-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.2.0"],\
             ["@typescript-eslint/parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.2.0"],\
-            ["accessible-autocomplete", "npm:2.0.4"],\
+            ["accessible-autocomplete", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.0.0"],\
             ["ajv", "npm:8.12.0"],\
             ["ajv-errors", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.0.0"],\
             ["ajv-formats", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.0.1"],\
@@ -6299,11 +6299,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["accessible-autocomplete", [\
-        ["npm:2.0.4", {\
-          "packageLocation": "./.yarn/cache/accessible-autocomplete-npm-2.0.4-307dcafc0e-e1eeff2785.zip/node_modules/accessible-autocomplete/",\
+        ["npm:3.0.0", {\
+          "packageLocation": "./.yarn/cache/accessible-autocomplete-npm-3.0.0-c5ab7ab6c8-4f1c27ec66.zip/node_modules/accessible-autocomplete/",\
           "packageDependencies": [\
-            ["accessible-autocomplete", "npm:2.0.4"],\
-            ["preact", "npm:8.5.3"]\
+            ["accessible-autocomplete", "npm:3.0.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/accessible-autocomplete-virtual-f5ac94698d/0/cache/accessible-autocomplete-npm-3.0.0-c5ab7ab6c8-4f1c27ec66.zip/node_modules/accessible-autocomplete/",\
+          "packageDependencies": [\
+            ["accessible-autocomplete", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.0.0"],\
+            ["@types/preact", null],\
+            ["preact", null]\
+          ],\
+          "packagePeers": [\
+            "@types/preact",\
+            "preact"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9208,7 +9220,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/supertest", "npm:6.0.2"],\
             ["@typescript-eslint/eslint-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.2.0"],\
             ["@typescript-eslint/parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.2.0"],\
-            ["accessible-autocomplete", "npm:2.0.4"],\
+            ["accessible-autocomplete", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.0.0"],\
             ["ajv", "npm:8.12.0"],\
             ["ajv-errors", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.0.0"],\
             ["ajv-formats", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.0.1"],\
@@ -16403,15 +16415,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/postcss-value-parser-npm-4.2.0-3cef602a6a-819ffab0c9.zip/node_modules/postcss-value-parser/",\
           "packageDependencies": [\
             ["postcss-value-parser", "npm:4.2.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["preact", [\
-        ["npm:8.5.3", {\
-          "packageLocation": "./.yarn/unplugged/preact-npm-8.5.3-20c7a48524/node_modules/preact/",\
-          "packageDependencies": [\
-            ["preact", "npm:8.5.3"]\
           ],\
           "linkType": "HARD"\
         }]\
