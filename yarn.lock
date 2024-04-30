@@ -6947,6 +6947,7 @@ __metadata:
     express-nunjucks: ^3.1.2
     express-session: ^1.18.0
     glob: ^10.3.12
+    globby: ^14.0.1
     govuk-frontend: ^5.3.1
     helmet: ^7.1.0
     html-webpack-plugin: ^5.6.0
@@ -9323,7 +9324,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:^14.0.0":
+"globby@npm:^14.0.0, globby@npm:^14.0.1":
   version: 14.0.1
   resolution: "globby@npm:14.0.1"
   dependencies:
