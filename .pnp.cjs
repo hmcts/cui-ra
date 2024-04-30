@@ -4155,10 +4155,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@isaacs/fs-minipass", [\
-        ["npm:4.0.0", {\
-          "packageLocation": "./.yarn/cache/@isaacs-fs-minipass-npm-4.0.0-24e397d17d-a8f46881bc.zip/node_modules/@isaacs/fs-minipass/",\
+        ["npm:4.0.1", {\
+          "packageLocation": "./.yarn/cache/@isaacs-fs-minipass-npm-4.0.1-677026e841-5d36d28996.zip/node_modules/@isaacs/fs-minipass/",\
           "packageDependencies": [\
-            ["@isaacs/fs-minipass", "npm:4.0.0"],\
+            ["@isaacs/fs-minipass", "npm:4.0.1"],\
             ["minipass", "npm:7.0.4"]\
           ],\
           "linkType": "HARD"\
@@ -7432,6 +7432,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["axios", [\
+        ["npm:0.26.1", {\
+          "packageLocation": "./.yarn/cache/axios-npm-0.26.1-a6641ce4e3-d9eb58ff4b.zip/node_modules/axios/",\
+          "packageDependencies": [\
+            ["axios", "npm:0.26.1"],\
+            ["follow-redirects", "virtual:85cf1e7152e3c0d8e39e61ad2b81b59a43fb6bdb8f3bf49869bb97804b1403ecaee4505fcb0d4869cfdd99ee3eaa880b79498575407fb770c800bf64c64156ec#npm:1.15.6"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.6.7", {\
+          "packageLocation": "./.yarn/cache/axios-npm-1.6.7-d7b9974d1b-87d4d42992.zip/node_modules/axios/",\
+          "packageDependencies": [\
+            ["axios", "npm:1.6.7"],\
+            ["follow-redirects", "virtual:85cf1e7152e3c0d8e39e61ad2b81b59a43fb6bdb8f3bf49869bb97804b1403ecaee4505fcb0d4869cfdd99ee3eaa880b79498575407fb770c800bf64c64156ec#npm:1.15.6"],\
+            ["form-data", "npm:4.0.0"],\
+            ["proxy-from-env", "npm:1.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:1.6.8", {\
           "packageLocation": "./.yarn/cache/axios-npm-1.6.8-85cf1e7152-bf007fa4b2.zip/node_modules/axios/",\
           "packageDependencies": [\
@@ -8867,7 +8885,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@xmldom/xmldom", "npm:0.8.10"],\
             ["acorn", "npm:8.11.3"],\
             ["arrify", "npm:2.0.1"],\
-            ["axios", "npm:1.6.8"],\
+            ["axios", "npm:1.6.7"],\
             ["chai", "npm:5.0.3"],\
             ["chai-deep-match", "virtual:0f260612f43d62f390b7c799a6d835ee2a70036c46318983810c9645356da12a32ffa66b9a29be816548aaa485243032e8cbbe0967390766206b2817a3eada37#npm:1.2.1"],\
             ["chai-exclude", "virtual:0f260612f43d62f390b7c799a6d835ee2a70036c46318983810c9645356da12a32ffa66b9a29be816548aaa485243032e8cbbe0967390766206b2817a3eada37#npm:2.1.0"],\
@@ -16207,7 +16225,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/openai-npm-3.2.1-8bb9cccf51-ef3942e9b5.zip/node_modules/openai/",\
           "packageDependencies": [\
             ["openai", "npm:3.2.1"],\
-            ["axios", "npm:1.6.8"],\
+            ["axios", "npm:0.26.1"],\
             ["form-data", "npm:4.0.0"]\
           ],\
           "linkType": "HARD"\
@@ -19272,7 +19290,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tar-npm-7.0.1-28f3fbecb4-9c6d9119e2.zip/node_modules/tar/",\
           "packageDependencies": [\
             ["tar", "npm:7.0.1"],\
-            ["@isaacs/fs-minipass", "npm:4.0.0"],\
+            ["@isaacs/fs-minipass", "npm:4.0.1"],\
             ["chownr", "npm:3.0.0"],\
             ["minipass", "npm:5.0.0"],\
             ["minizlib", "npm:3.0.1"],\

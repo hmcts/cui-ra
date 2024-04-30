@@ -150,13 +150,7 @@
   },
   "packageManager": "yarn@3.8.1",
   "resolutions": {
-    "axios": "^1.6.8",
-    "cookiejar": "^2.1.4",
-    "express": "^4.19.2",
-    "follow-redirects": "^1.15.6",
-    "http-cache-semantics": "^4.1.1",
     "qs": "^6.12.1",
-    "puppeteer": "^22.7.1",
     "semver": "^7.6.0",
     "tar": "7.0.1"
   }
