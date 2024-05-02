@@ -19,3 +19,6 @@ FROM base as runtime
 COPY --from=build $WORKDIR/src/main ./src/main
 # TODO: expose the right port for your application
 EXPOSE 3100
+
+HEALTHCHECK --interval=30s --timeout=15s --start-period=60s --retries=3 \
+    CMD wget -q --spider localhost:3100/health || exit 1
