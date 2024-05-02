@@ -25,7 +25,7 @@ services:
       - ./secrets:/mnt/secrets:ro
   nginx:
     container_name: cui-nginx
-    image: nginx:latest
+    image: nginx:stable-perl
     ports:
       - '443:443'
     volumes:
