@@ -44,7 +44,12 @@ app.use(favicon(path.join(__dirname, '/public/assets/images/favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(
+  express.static(path.join(__dirname, 'public'), {
+    maxAge: 604800000,
+    immutable: true,
+  })
+);
 
 new Translation().enableFor(app);
 new PropertiesVolume().enableFor(app);
@@ -57,7 +62,6 @@ new CSRFToken().enableFor(app);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
   res.setHeader('Cache-Control', 'no-cache, max-age=0, must-revalidate, no-store');
-  res.setHeader('Permissions-Policy', 'geolocation=(), microphone=(), camera=()');
   next();
 });
 
