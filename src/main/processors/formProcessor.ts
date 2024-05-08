@@ -89,7 +89,8 @@ export class FormProcessor {
     if (selectedItem) {
       parent.value.subTypeKey = selectedItem.key;
       parent.value.subTypeValue = selectedItem.value;
-      parent.value.subTypeValue_cy = selectedItem.value_cy;
+      parent.value.subTypeValue_cy =
+        selectedItem.value_cy !== '' && selectedItem.value_cy ? selectedItem.value_cy : undefined;
     }
 
     return [parent];
@@ -113,7 +114,8 @@ export class FormProcessor {
     if (selectedItem) {
       parent.value.subTypeKey = selectedItem.key;
       parent.value.subTypeValue = selectedItem.value;
-      parent.value.subTypeValue_cy = selectedItem.value_cy;
+      parent.value.subTypeValue_cy =
+        selectedItem.value_cy !== '' && selectedItem.value_cy ? selectedItem.value_cy : undefined;
     }
 
     return [parent];

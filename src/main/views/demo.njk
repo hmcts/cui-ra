@@ -48,6 +48,13 @@
         </button>
     </form>
 
+    <form action="/start-demo" method="get">
+        {{ csrfProtection(csrfToken) }}
+        <button id="demonewparty" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" value="newparty" name="action">
+            Enter New Journey as a Party
+        </button>
+    </form>
+
     <p class="govuk-body govuk-!-font-weight-bold">Existing User - Go to overview</p>
     <form action="/start-demo" method="get">
         {{ csrfProtection(csrfToken) }}
