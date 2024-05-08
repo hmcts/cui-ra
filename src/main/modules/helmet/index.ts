@@ -1,5 +1,6 @@
 import * as express from 'express';
 import helmet from 'helmet';
+import { NextFunction, Request, Response } from 'express';
 
 const googleAnalyticsDomain = '*.google-analytics.com';
 const self = "'self'";
@@ -9,6 +10,7 @@ const self = "'self'";
  */
 export class Helmet {
   private readonly developmentMode: boolean;
+
   constructor(developmentMode: boolean) {
     this.developmentMode = developmentMode;
   }
@@ -24,6 +26,11 @@ export class Helmet {
       // seems to be related to webpack
       scriptSrc.push("'unsafe-eval'");
     }
+
+    app.use((req: Request, res: Response, next: NextFunction) => {
+      res.setHeader('Permissions-Policy', 'geolocation=(), microphone=(), camera=()');
+      next();
+    });
 
     app.use(
       helmet({
