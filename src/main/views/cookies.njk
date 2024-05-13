@@ -1,4 +1,6 @@
 {% extends "template.njk" %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
 {% block mainContent %}
  {% if welsh !== true %}
@@ -21,7 +23,7 @@
 
   <p class="govuk-body">To store the answers you’ve given during your visit (known as a ‘session’)</p>
   <p class="govuk-body">Session cookies are stored on your computer as you travel through a website, and let the website know what you’ve seen and done so far. These are temporary cookies and are automatically deleted a short while after you leave the website.</p>
-            
+
   <table class="govuk-table">
   
     <thead class="govuk-table__head">
@@ -275,4 +277,56 @@
 <p class="govuk-body">Rydym yn defnyddio un math o gwci. Cwcis gwbl angenrheidiol</p>
 <p class="govuk-body">Mae angen iddynt fod ymlaen drwy’r amser.</p>
 {% endif %}
+
+ <form class="cookie-preferences-form">
+  {{ govukRadios({
+    classes: 'govuk-radios',
+    idPrefix: 'analytics',
+    name: 'analytics',
+    fieldset: {
+      legend: {
+        text: _t('cookiePage.analytics.legend'),
+        classes: "govuk-fieldset__legend--s"
+      }
+    },
+    items: [
+      {
+        value: 'on',
+        text: _t('cookiePage.analytics.items.on')
+      },
+      {
+        value: 'off',
+        text: _t('cookiePage.analytics.items.off'),
+        checked: true
+      }
+    ]
+  }) }}
+
+  {{ govukRadios({
+    classes: 'govuk-radios',
+    idPrefix: 'apm',
+    name: 'apm',
+    fieldset: {
+      legend: {
+        text: _t('cookiePage.apm.legend'),
+        classes: "govuk-fieldset__legend--s"
+      }
+    },
+    items: [
+      {
+        value: 'on',
+        text: _t('cookiePage.apm.items.on')
+      },
+      {
+        value: 'off',
+        text: _t('cookiePage.apm.items.off'),
+        checked: true
+      }
+    ]
+  }) }}
+
+  {{ govukButton({
+    text: _t('cookiePage.submit')
+  }) }}
+</form>
 {% endblock %}

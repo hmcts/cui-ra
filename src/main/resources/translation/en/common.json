@@ -91,5 +91,35 @@
       "new": "Add a new support request",
       "submit": "Submit"
     }
+  },
+  "cookieBanner": {
+    "title": "Cookies on Your Support",
+    "message": {
+        "base": "We use some essential cookies to make this service work. We’d also like to use analytics cookies so we can understand how you use the service and make improvements.",
+        "accept": "You’ve accepted analytics cookies. You can <a class='govuk-link' href='/home/cookies'>change your cookie settings</a> at any time.",
+        "reject": "You’ve rejected analytics cookies. You can <a class='govuk-link' href='/home/cookies'>change your cookie settings</a> at any time."
+    },
+    "buttons": {
+        "accept": "Accept analytics cookies",
+        "reject": "Reject analytics cookies",
+        "viewCookies": "View cookies"
+    }
+  },
+  "cookiePage":{
+    "analytics": {
+      "legend": "Allow cookies that measure website use?",
+      "items": {
+        "on": "Use cookies that measure my website use",
+        "off": "Do not use cookies that measure my website use"
+      }
+    },
+    "apm": {
+      "legend": "Allow cookies that measure website application performance monitoring?",
+      "items": {
+        "on": "Use cookies that measure website application performance monitoring",
+        "off": "Do not use cookies that measure website application performance monitoring"
+      }
+    },
+    "submit": "Save"
   }
 }

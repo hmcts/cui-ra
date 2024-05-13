@@ -15,6 +15,8 @@
 {% endblock %}
 
 {% block header %}
+{% include "cookies-banner.njk" %}
+
   {% if hasSession %}
   {% set menuNavigation = [
       {
