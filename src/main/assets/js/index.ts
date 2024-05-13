@@ -67,56 +67,46 @@ cookieManager.init({
     cookieName: 'cui-ra-cookie-preferences',
   },
   cookieBanner: {
-      class: 'cookie-banner',
-      actions: [
-          {
-              name: 'accept',
-              buttonClass: 'cookie-banner-accept-button',
-              confirmationClass: 'cookie-banner-accept-message',
-              consent: true
-          },
-          {
-              name: 'reject',
-              buttonClass: 'cookie-banner-reject-button',
-              confirmationClass: 'cookie-banner-reject-message',
-              consent: false
-          },
-          {
-              name: 'hide',
-              buttonClass: 'cookie-banner-hide-button',
-          }
-      ]
+    class: 'cookie-banner',
+    actions: [
+      {
+        name: 'accept',
+        buttonClass: 'cookie-banner-accept-button',
+        confirmationClass: 'cookie-banner-accept-message',
+        consent: true,
+      },
+      {
+        name: 'reject',
+        buttonClass: 'cookie-banner-reject-button',
+        confirmationClass: 'cookie-banner-reject-message',
+        consent: false,
+      },
+      {
+        name: 'hide',
+        buttonClass: 'cookie-banner-hide-button',
+      },
+    ],
   },
   preferencesForm: {
-    class:'cookie-preferences-form'
+    class: 'cookie-preferences-form',
   },
   cookieManifest: [
     {
       categoryName: 'essential',
       optional: false,
       matchBy: 'exact',
-      cookies: [
-        'cui-session'
-      ]
+      cookies: ['cui-session'],
     },
     {
       categoryName: 'apm',
       optional: true,
       matchBy: 'exact',
-      cookies: [
-        'dtCookie',
-        'dtPC',
-        'dtSa',
-        'rxVisitor',
-        'rxvt'
-      ]
+      cookies: ['dtCookie', 'dtPC', 'dtSa', 'rxVisitor', 'rxvt'],
     },
     {
       categoryName: 'analytics',
       optional: true,
-      cookies: [
-        'analytics-cookie-one',
-      ]
-    }
-  ]
+      cookies: ['analytics-cookie-one'],
+    },
+  ],
 });
