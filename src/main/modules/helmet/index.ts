@@ -1,8 +1,10 @@
 import * as express from 'express';
 import helmet from 'helmet';
 import { NextFunction, Request, Response } from 'express';
+import { randomUUID } from 'crypto';
 
 const googleAnalyticsDomain = '*.google-analytics.com';
+
 const self = "'self'";
 
 /**
@@ -16,8 +18,16 @@ export class Helmet {
   }
 
   public enableFor(app: express.Express): void {
+    //create nonce for inline scripts and styles
+    let nonce = randomUUID();
+
     // include default helmet functions
-    const scriptSrc = [self, googleAnalyticsDomain, "'sha256-GUQ5ad8JK5KmEWmROf3LZd9ge94daqNvd8xy9YS1iDw='"];
+    const scriptSrc = [
+      self,
+      googleAnalyticsDomain,
+      "'sha256-GUQ5ad8JK5KmEWmROf3LZd9ge94daqNvd8xy9YS1iDw='",
+      `'nonce-${nonce}'`,
+    ];
 
     if (this.developmentMode) {
       // Uncaught EvalError: Refused to evaluate a string as JavaScript because 'unsafe-eval'
@@ -29,6 +39,8 @@ export class Helmet {
 
     app.use((req: Request, res: Response, next: NextFunction) => {
       res.setHeader('Permissions-Policy', 'geolocation=(), microphone=(), camera=()');
+      // add nonce to every request
+      res.locals.cspNonce = nonce;
       next();
     });
 
