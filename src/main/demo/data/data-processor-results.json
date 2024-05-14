@@ -741,7 +741,7 @@
     "_parentId": "PF0001"
   },
   {
-    "_flagComment": true,
+    "_flagComment": false,
     "_isCategoryPage": true,
     "_enabled": false,
     "_other": false,
@@ -1796,7 +1796,7 @@
     "_parentId": "PF0001"
   },
   {
-    "_flagComment": true,
+    "_flagComment": false,
     "_isCategoryPage": true,
     "_enabled": false,
     "_other": false,
