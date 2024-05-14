@@ -129,6 +129,21 @@ export class DemoController {
 
           return res.redirect('home/overview');
         }
+        case 'newparty': {
+          const NewFlag = new NewFlagsManager();
+          NewFlag.set(this.new);
+          NewFlag.setMaster('PF0001');
+
+          req.session.newmanager = NewFlag;
+          req.session.existingmanager = new ExistingFlagsManager();
+          req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
+          req.session.logoutUrl = Route.ROOT;
+          req.session.hmctsserviceid = 'ABA5';
+          req.session.sessioninit = true;
+          req.session.welsh = false;
+
+          return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001' }, UrlRoute.url(req)));
+        }
       }
       return res.render('demo');
     } catch (e) {

@@ -55,6 +55,7 @@ export class FormController {
 
       //validate form body
       const [bodyValid, bodyErrors] = await FormValidator.validateBody(flag, formModel);
+
       if (!bodyValid) {
         const tempManager = req.session.newmanager;
 
