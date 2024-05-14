@@ -106,7 +106,7 @@ cookieManager.init({
     {
       categoryName: 'analytics',
       optional: true,
-      cookies: ['analytics-cookie-one'],
+      cookies: ['_ga'],
     },
   ],
 });
