@@ -32,6 +32,10 @@ export class DemoController {
     fs.readFileSync(path.join(__dirname, '..', 'demo', 'data', 'BAA5-processor-results.json'), 'utf-8')
   );
 
+  private new_party: DataManagerDataObject[] = JSON.parse(
+    fs.readFileSync(path.join(__dirname, '..', 'demo', 'data', 'data-processor-results-party.json'), 'utf-8')
+  );
+
   public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
     // Add code here to populate payloads/session for demo purposes.
     // Speak to Sonny about multiple versions to test blank payload and populated payload
@@ -131,8 +135,14 @@ export class DemoController {
         }
         case 'newparty': {
           const NewFlag = new NewFlagsManager();
-          NewFlag.set(this.new);
+          NewFlag.set(this.new_party);
           NewFlag.setMaster('PF0001');
+          const master: DataManagerDataObject | null = NewFlag.setMaster('PF0001');
+          req.session.masterflagcode = 'PF0001';
+          if(master){
+            req.session.mastername = master.value.name;
+            req.session.mastername_cy = master.value.name_cy;
+          }
 
           req.session.newmanager = NewFlag;
           req.session.existingmanager = new ExistingFlagsManager();
