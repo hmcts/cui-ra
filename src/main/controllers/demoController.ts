@@ -139,7 +139,7 @@ export class DemoController {
           NewFlag.setMaster('PF0001');
           const master: DataManagerDataObject | null = NewFlag.setMaster('PF0001');
           req.session.masterflagcode = 'PF0001';
-          if(master){
+          if (master) {
             req.session.mastername = master.value.name;
             req.session.mastername_cy = master.value.name_cy;
           }

@@ -455,11 +455,7 @@
     "_isParent": true,
     "_isMaster": true,
     "_errors": [],
-    "_childIds": [
-      "PF0001-PF0015",
-      "PF0001-RA0001",
-      "PF0001-SM0001"
-    ],
+    "_childIds": ["PF0001-PF0015", "PF0001-RA0001", "PF0001-SM0001"],
     "id": "PF0001",
     "value": {
       "name": "Party",
