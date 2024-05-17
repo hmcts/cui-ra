@@ -11,10 +11,17 @@
 {% endblock %}
 
 {% block head %}
+  {% include "tagmanager/head.njk" %}
   {% include "webpack/css.njk" %}
 {% endblock %}
 
+{% block bodyStart %}
+  {% include "tagmanager/body.njk" %}
+{% endblock %}
+
 {% block header %}
+{% include "cookies-banner.njk" %}
+
   {% if hasSession %}
   {% set menuNavigation = [
       {
