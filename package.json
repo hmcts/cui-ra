@@ -35,6 +35,7 @@
     "pvmount:ithc": "REMOTE_ENV=cui-ithc NAMESPACE=cui node bin/mount-property-volume.js"
   },
   "dependencies": {
+    "@hmcts/cookie-manager": "^1.0.0",
     "@hmcts/info-provider": "^1.2.1",
     "@hmcts/nodejs-healthcheck": "^1.8.5",
     "@hmcts/nodejs-logging": "^4.0.4",
