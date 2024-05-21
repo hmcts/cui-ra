@@ -1,5 +1,5 @@
-const LATEST_MAC = 'macOS 10.15';
-const LATEST_WINDOWS = 'Windows 10';
+const LATEST_MAC = 'macOS 13';
+const LATEST_WINDOWS = 'Windows 11';
 
 const supportedBrowsers = {
   microsoft: {
@@ -8,7 +8,7 @@ const supportedBrowsers = {
       platformName: LATEST_WINDOWS,
       browserVersion: 'latest',
       'sauce:options': {
-        name: 'CUI E2E Tests - : Edge_Win10',
+        name: 'CUI E2E Tests - : Edge_Win11',
         extendedDebugging: true,
         capturePerformance: true,
       },
@@ -17,7 +17,7 @@ const supportedBrowsers = {
   safari: {
     safari_mac: {
       browserName: 'safari',
-      platformName: 'macOS 10.14',
+      platformName: LATEST_MAC,
       browserVersion: 'latest',
       'sauce:options': {
         name: 'CUI E2E Tests - : MAC_SAFARI',
