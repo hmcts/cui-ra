@@ -7,7 +7,7 @@ const sauceKey = process.env.SAUCE_ACCESS_KEY;
 
 function updateSauceLabsResult(result, sessionId) {
   console.log('SauceOnDemandSessionID=' + sessionId + ' job-name=cui-ra');
-  
+
   return (
     'curl -X PUT -s -d \'{"passed": ' +
     result +
