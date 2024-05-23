@@ -4,6 +4,7 @@ import { NextFunction, Request, Response } from 'express';
 import { randomUUID } from 'crypto';
 
 const googleAnalyticsDomain = '*.google-analytics.com';
+const dynatraqceDomain = '*.dynatrace.com';
 
 const self = "'self'";
 
@@ -25,6 +26,7 @@ export class Helmet {
     const scriptSrc = [
       self,
       googleAnalyticsDomain,
+      dynatraqceDomain,
       "'sha256-GUQ5ad8JK5KmEWmROf3LZd9ge94daqNvd8xy9YS1iDw='",
       `'nonce-${nonce}'`,
     ];
@@ -48,7 +50,7 @@ export class Helmet {
       helmet({
         contentSecurityPolicy: {
           directives: {
-            connectSrc: [self],
+            connectSrc: [self, dynatraqceDomain],
             defaultSrc: ["'none'"],
             fontSrc: [self, 'data:'],
             imgSrc: [self, googleAnalyticsDomain],
