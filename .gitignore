@@ -39,3 +39,4 @@ version
 !.yarn/sdks
 !.yarn/versions
 secrets/*
+config/local-development.json
