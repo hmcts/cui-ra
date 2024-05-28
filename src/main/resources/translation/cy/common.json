@@ -93,33 +93,33 @@
     }
   },
   "cookieBanner": {
-    "title": "Cookies on Your Support",
+    "title": "Cwcis ar gyfer Eich Cymorth",
     "message": {
-      "base": "We use some essential cookies to make this service work. We’d also like to use analytics cookies so we can understand how you use the service and make improvements.",
-      "accept": "You’ve accepted analytics cookies. You can <a class='govuk-link' href='/home/cookies'>change your cookie settings</a> at any time.",
-      "reject": "You’ve rejected analytics cookies. You can <a class='govuk-link' href='/home/cookies'>change your cookie settings</a> at any time."
+      "base": "Rydym yn defnyddio rhai cwcis hanfodol i wneud i’r gwasanaeth hwn weithio. Hoffwn hefyd ddefnyddio cwcis dadansoddol fel y gallwn ddeall sut rydych chi’n defnyddio’r gwasanaeth ac i wneud gwelliannau.",
+      "accept": "Rydych wedi derbyn cwcis dadansoddol. Gallwch <a class=’govuk-link’ href=’/home/cookies’>newid eich gosodiadau cwcis</a> ar unrhyw adeg.",
+      "reject": "Rydych wedi gwrthod cwcis dadansoddol. Gallwch <a class=’govuk-link’ href=’/home/cookies’>newid eich gosodiadau cwcis</a> ar unrhyw adeg."
     },
     "buttons": {
-      "accept": "Accept analytics cookies",
-      "reject": "Reject analytics cookies",
-      "viewCookies": "View cookies"
+      "accept": "Derbyn cwcis dadansoddol",
+      "reject": "Gwrthod cwcis dadansoddol",
+      "viewCookies": "Gweld cwcis"
     }
   },
   "cookiePage": {
     "analytics": {
-      "legend": "Allow cookies that measure website use?",
+      "legend": "Caniatáu cwcis sy’n mesur y defnydd sydd o’r wefan?",
       "items": {
-        "on": "Use cookies that measure my website use",
-        "off": "Do not use cookies that measure my website use"
+        "on": "Defnyddio cwcis sy’n mesur fy nefnydd i o’r wefan",
+        "off": "Peidio â defnyddio cwcis sy’n mesur fy nefnydd i o’r wefan"
       }
     },
     "apm": {
-      "legend": "Allow cookies that measure website application performance monitoring?",
+      "legend": "Caniatáu cwcis sy'n mesur y broses o fonitro perfformiad gwefannau?",
       "items": {
-        "on": "Use cookies that measure website application performance monitoring",
-        "off": "Do not use cookies that measure website application performance monitoring"
+        "on": "Defnyddio cwcis sy’n mesur y broses o fonitro perfformiad gwefannau",
+        "off": "Peidio â defnyddio cwcis sy’n mesur y broses o fonitro perfformiad gwefannau"
       }
     },
-    "submit": "Save"
+    "submit": "Cadw"
   }
 }
