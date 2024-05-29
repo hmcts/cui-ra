@@ -209,4 +209,118 @@ describe('FormProcessor', () => {
 
     expect(error).toBe(ErrorMessages.UNEXPECTED_ERROR);
   });
+
+  test('process radio form data selected item no value_cy', () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-PF1115'
+    )[0];
+
+    const children: DataManagerDataObject[] = [];
+
+    const body = new Form();
+    body.selected = 'abr';
+
+    const results: DataManagerDataObject[] = FormProcessor.process(body, parent, children);
+
+    const item: DataManagerDataObject | undefined = results.find(
+      (i: DataManagerDataObject) => i.id === 'PF0001-PF1115'
+    );
+
+    if (item) {
+      expect(item._enabled).toBe(true);
+      expect(item.value.subTypeValue).toBe('Brong');
+      expect(item.value.subTypeValue_cy).toBe(undefined);
+    }
+  });
+
+  test('process radio form data selected item with value_cy', () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-PF1115'
+    )[0];
+    parent._listOfValues[0].value_cy = 'Brong_cy';
+
+    const children: DataManagerDataObject[] = [];
+
+    const body = new Form();
+    body.selected = 'abr';
+
+    const results: DataManagerDataObject[] = FormProcessor.process(body, parent, children);
+
+    const item: DataManagerDataObject | undefined = results.find(
+      (i: DataManagerDataObject) => i.id === 'PF0001-PF1115'
+    );
+
+    if (item) {
+      expect(item._enabled).toBe(true);
+      expect(item.value.subTypeValue).toBe('Brong');
+      expect(item.value.subTypeValue_cy).toBe('Brong_cy');
+    }
+  });
+
+  test('process typeahead form data selected item no value_cy', () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-PF0015'
+    )[0];
+
+    const children: DataManagerDataObject[] = [];
+
+    const body = new Form();
+    body.selected = 'abr';
+
+    const results: DataManagerDataObject[] = FormProcessor.process(body, parent, children);
+
+    const item: DataManagerDataObject | undefined = results.find(
+      (i: DataManagerDataObject) => i.id === 'PF0001-PF0015'
+    );
+
+    if (item) {
+      expect(item._enabled).toBe(true);
+      expect(item.value.subTypeValue).toBe('Brong');
+      expect(item.value.subTypeValue_cy).toBe(undefined);
+    }
+  });
+
+  test('process typeahead form data selected item with value_cy', () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-PF0015'
+    )[0];
+    parent._listOfValues[0].value_cy = 'Brong_cy';
+
+    const children: DataManagerDataObject[] = [];
+
+    const body = new Form();
+    body.selected = 'abr';
+
+    const results: DataManagerDataObject[] = FormProcessor.process(body, parent, children);
+
+    const item: DataManagerDataObject | undefined = results.find(
+      (i: DataManagerDataObject) => i.id === 'PF0001-PF0015'
+    );
+
+    if (item) {
+      expect(item._enabled).toBe(true);
+      expect(item.value.subTypeValue).toBe('Brong');
+      expect(item.value.subTypeValue_cy).toBe('Brong_cy');
+    }
+  });
+
+  test('process throw error', () => {
+    const parent: DataManagerDataObject = {
+      id: 'PF0001-PF1115',
+      _isCategoryPage: false,
+    } as unknown as DataManagerDataObject;
+
+    const children: DataManagerDataObject[] = [];
+
+    const body = new Form();
+    let error = '';
+
+    try {
+      FormProcessor.process(body, parent, children);
+    } catch (e) {
+      error = e.message;
+    }
+
+    expect(error).toBe(ErrorMessages.UNEXPECTED_ERROR);
+  });
 });
