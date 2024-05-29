@@ -307,9 +307,8 @@ describe('FormProcessor', () => {
   test('process throw error', () => {
     const parent: DataManagerDataObject = {
       id: 'PF0001-PF1115',
-      _isCategoryPage: false
+      _isCategoryPage: false,
     } as unknown as DataManagerDataObject;
-    
 
     const children: DataManagerDataObject[] = [];
 
@@ -324,5 +323,4 @@ describe('FormProcessor', () => {
 
     expect(error).toBe(ErrorMessages.UNEXPECTED_ERROR);
   });
-
 });
