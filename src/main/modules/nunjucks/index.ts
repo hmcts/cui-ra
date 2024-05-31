@@ -2,6 +2,7 @@ import * as path from 'path';
 
 import { Common, Route } from './../../constants';
 import { UrlRoute } from './../../utilities';
+import config from 'config';
 
 import * as express from 'express';
 import * as nunjucks from 'nunjucks';
@@ -27,6 +28,7 @@ export class Nunjucks {
       res.locals.fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
       res.locals.welsh = req.session?.welsh ?? false;
       res.locals.hasSession = req.session?.sessioninit ?? false;
+      res.locals.isDev = JSON.parse(config.get('isDev'));
       res.locals._t = (key: string) => {
         const lang = req.session?.welsh ? 'cy' : 'en';
         const serviceId = req.session && req.session.hmctsserviceid ? req.session.hmctsserviceid.toUpperCase() : null;

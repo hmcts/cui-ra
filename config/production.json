@@ -1,5 +1,6 @@
 {
   "demo": {
     "enabled": false
-  }
+  },
+  "isDev": false
 }
