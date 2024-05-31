@@ -2,6 +2,7 @@
   "demo": {
     "enabled": "DEMO_ENABLED"
   },
+  "isDev": "IS_DEV",
   "serviceName": "cui_ra",
   "session": {
     "secure": "SESSION_SECURE",
