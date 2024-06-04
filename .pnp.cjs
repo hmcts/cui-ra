@@ -123,7 +123,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:14.2.1"],\
             ["serve-favicon", "npm:2.5.0"],\
             ["session-file-store", "npm:1.5.0"],\
-            ["sinon", "npm:17.0.1"],\
+            ["sinon", "npm:18.0.0"],\
             ["striptags", "npm:3.2.0"],\
             ["style-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:4.0.0"],\
             ["stylelint", "npm:16.4.0"],\
@@ -5277,6 +5277,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["type-detect", "npm:4.0.8"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:3.0.1", {\
+          "packageLocation": "./.yarn/cache/@sinonjs-commons-npm-3.0.1-bffb9f5a53-a7c3e7cc61.zip/node_modules/@sinonjs/commons/",\
+          "packageDependencies": [\
+            ["@sinonjs/commons", "npm:3.0.1"],\
+            ["type-detect", "npm:4.0.8"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@sinonjs/fake-timers", [\
@@ -9945,7 +9953,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:14.2.1"],\
             ["serve-favicon", "npm:2.5.0"],\
             ["session-file-store", "npm:1.5.0"],\
-            ["sinon", "npm:17.0.1"],\
+            ["sinon", "npm:18.0.0"],\
             ["striptags", "npm:3.2.0"],\
             ["style-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:4.0.0"],\
             ["stylelint", "npm:16.4.0"],\
@@ -10551,13 +10559,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/diff-npm-5.0.0-ad6900db18-f19fe29284.zip/node_modules/diff/",\
           "packageDependencies": [\
             ["diff", "npm:5.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:5.1.0", {\
-          "packageLocation": "./.yarn/cache/diff-npm-5.1.0-d24d222280-c7bf0df7c9.zip/node_modules/diff/",\
-          "packageDependencies": [\
-            ["diff", "npm:5.1.0"]\
           ],\
           "linkType": "HARD"\
         }],\
@@ -16468,10 +16469,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["nise", [\
-        ["npm:5.1.7", {\
-          "packageLocation": "./.yarn/cache/nise-npm-5.1.7-9a11225767-bc1f43825f.zip/node_modules/nise/",\
+        ["npm:6.0.0", {\
+          "packageLocation": "./.yarn/cache/nise-npm-6.0.0-a555b2bffd-86d6ebe5ba.zip/node_modules/nise/",\
           "packageDependencies": [\
-            ["nise", "npm:5.1.7"],\
+            ["nise", "npm:6.0.0"],\
             ["@sinonjs/commons", "npm:3.0.0"],\
             ["@sinonjs/fake-timers", "npm:11.2.2"],\
             ["@sinonjs/text-encoding", "npm:0.7.2"],\
@@ -19274,15 +19275,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["sinon", [\
-        ["npm:17.0.1", {\
-          "packageLocation": "./.yarn/cache/sinon-npm-17.0.1-997c13081d-a807c2997d.zip/node_modules/sinon/",\
+        ["npm:18.0.0", {\
+          "packageLocation": "./.yarn/cache/sinon-npm-18.0.0-a220c4846c-5d7bc61c6c.zip/node_modules/sinon/",\
           "packageDependencies": [\
-            ["sinon", "npm:17.0.1"],\
-            ["@sinonjs/commons", "npm:3.0.0"],\
+            ["sinon", "npm:18.0.0"],\
+            ["@sinonjs/commons", "npm:3.0.1"],\
             ["@sinonjs/fake-timers", "npm:11.2.2"],\
             ["@sinonjs/samsam", "npm:8.0.0"],\
-            ["diff", "npm:5.1.0"],\
-            ["nise", "npm:5.1.7"],\
+            ["diff", "npm:5.2.0"],\
+            ["nise", "npm:6.0.0"],\
             ["supports-color", "npm:7.2.0"]\
           ],\
           "linkType": "HARD"\
