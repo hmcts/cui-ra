@@ -19,10 +19,10 @@ export class ReviewController {
     try {
       if (req.session.callbackUrl) {
         let url;
-        try{
+        try {
           url = new URL(UrlRoute.make(req.session.callbackUrl, { id: '' }));
-        }catch(err){
-          throw new Error(ErrorMessages.UNEXPECTED_ERROR + ':' +  err);
+        } catch (err) {
+          throw new Error(ErrorMessages.UNEXPECTED_ERROR + ':' + err);
         }
         res.set('Content-Security-Policy', `form-action 'self' ${url}`);
       }
