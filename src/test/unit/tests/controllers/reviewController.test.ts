@@ -227,6 +227,6 @@ describe('Review Controller', () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockResponse.redirect).toBeCalledWith('https://localhost/callback/random-string-uuid');
+    expect(mockResponse.redirect).toBeCalledWith(new URL('https://localhost/callback/random-string-uuid'));
   });
 });
