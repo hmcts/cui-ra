@@ -156,14 +156,11 @@ export class ReviewController {
       //Save data to redis store
       await this.redisClient.set(uuid, JSON.stringify(payload));
 
+      //Create Url from callback to service to redirect the user
+      const url = UrlRoute.make(req.session.callbackUrl, { id: uuid });
+      
       req.session.destroy(function () {});
-      let url;
-      try {
-        //Create Url from callback to service to redirect the user
-        url = new URL(UrlRoute.make(req.session.callbackUrl, { id: uuid }));
-      } catch (err) {
-        throw new Error(ErrorMessages.UNEXPECTED_ERROR + ':' + err);
-      }
+      
       res.set('Content-Security-Policy', `form-action 'self' ${url}`);
 
       //redirect back to invoking service with unique id
