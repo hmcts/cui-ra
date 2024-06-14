@@ -158,9 +158,9 @@ export class ReviewController {
 
       //Create Url from callback to service to redirect the user
       const url = UrlRoute.make(req.session.callbackUrl, { id: uuid });
-      
+
       req.session.destroy(function () {});
-      
+
       res.set('Content-Security-Policy', `form-action 'self' ${url}`);
 
       //redirect back to invoking service with unique id
