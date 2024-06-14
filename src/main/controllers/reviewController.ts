@@ -18,7 +18,12 @@ export class ReviewController {
   public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
       if (req.session.callbackUrl) {
-        const url = UrlRoute.make(req.session.callbackUrl, { id: '' });
+        let url;
+        try{
+          url = new URL(UrlRoute.make(req.session.callbackUrl, { id: '' }));
+        }catch(err){
+          throw new Error(ErrorMessages.UNEXPECTED_ERROR + ':' +  err);
+        }
         res.set('Content-Security-Policy', `form-action 'self' ${url}`);
       }
 
