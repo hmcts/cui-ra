@@ -21,10 +21,10 @@ export class ReviewController {
         let url;
         try {
           url = new URL(UrlRoute.make(req.session.callbackUrl, { id: '' }));
+          res.set('Content-Security-Policy', `form-action 'self' ${url}`);
         } catch (err) {
           throw new Error(ErrorMessages.UNEXPECTED_ERROR + ':' + err);
         }
-        res.set('Content-Security-Policy', `form-action 'self' ${url}`);
       }
 
       const requestedFlags = req.session.existingmanager?.find('value.status', 'Requested') ?? [];
@@ -160,12 +160,11 @@ export class ReviewController {
       let url;
       try {
         url = new URL(UrlRoute.make(req.session.callbackUrl, { id: uuid }));
+        res.set('Content-Security-Policy', `form-action 'self' ${url}`);
       } catch (err) {
         throw new Error(ErrorMessages.UNEXPECTED_ERROR + ':' + err);
       }
       req.session.destroy(function () {});
-
-      res.set('Content-Security-Policy', `form-action 'self' ${url}`);
 
       //redirect back to invoking service with unique id
       return res.status(301).redirect(url);
