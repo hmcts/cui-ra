@@ -18,7 +18,12 @@ export class ReviewController {
   public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
       if (req.session.callbackUrl) {
-        const url = UrlRoute.make(req.session.callbackUrl, { id: '' });
+        let url;
+        try {
+          url = new URL(UrlRoute.make(req.session.callbackUrl, { id: '' }));
+        } catch (err) {
+          throw new Error(ErrorMessages.UNEXPECTED_ERROR + ':' + err);
+        }
         res.set('Content-Security-Policy', `form-action 'self' ${url}`);
       }
 
@@ -152,9 +157,14 @@ export class ReviewController {
       await this.redisClient.set(uuid, JSON.stringify(payload));
 
       //Create Url from callback to service to redirect the user
-      const url = UrlRoute.make(req.session.callbackUrl, { id: uuid });
-
+      let url;
+      try {
+        url = new URL(UrlRoute.make(req.session.callbackUrl, { id: uuid }));
+      } catch (err) {
+        throw new Error(ErrorMessages.UNEXPECTED_ERROR + ':' + err);
+      }
       req.session.destroy(function () {});
+
       res.set('Content-Security-Policy', `form-action 'self' ${url}`);
 
       //redirect back to invoking service with unique id
