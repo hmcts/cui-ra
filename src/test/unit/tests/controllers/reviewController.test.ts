@@ -10,6 +10,7 @@ import { ExistingFlagProcessor } from './../../../../main/processors';
 
 const host = 'www.test.com';
 const protocol = 'https';
+const invalidURLError = 'TypeError: Invalid URL';
 
 /* eslint-disable jest/expect-expect */
 describe('Review Controller', () => {
@@ -70,6 +71,27 @@ describe('Review Controller', () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
     expect(mockResponse.render).toBeCalledWith('review', expect.any(Object));
+  });
+
+  test('Should not render review page', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    mockRequest = {
+      body: {},
+      query: {},
+      params: {},
+      session: {
+        partyName: 'demo name',
+        callbackUrl: 'https://localhost[/]callback/:id',
+        destroy: () => {},
+      } as unknown as Session & Partial<SessionData>,
+      protocol: protocol,
+      headers: {
+        host: host,
+      },
+    };
+
+    reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
+    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR + invalidURLError));
   });
 
   test('Should render review page with empty editable flags', async () => {
@@ -228,5 +250,27 @@ describe('Review Controller', () => {
     await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
 
     expect(mockResponse.redirect).toBeCalledWith(new URL('https://localhost/callback/random-string-uuid'));
+  });
+
+  test('Should submit review and fail to callback', async () => {
+    // eslint-disable-line @typescript-eslint/no-empty-function
+    mockRequest = {
+      body: {},
+      query: {},
+      params: {},
+      session: {
+        partyName: 'demo name',
+        callbackUrl: 'https://localhost[/]callback/:id',
+        destroy: () => {},
+      } as unknown as Session & Partial<SessionData>,
+      protocol: protocol,
+      headers: {
+        host: host,
+      },
+    };
+    await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
+    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR + invalidURLError));
+
+    //expect(mockResponse.redirect).toBeCalledWith(new URL('https://localhost/callback/random-string-uuid'));
   });
 });
