@@ -267,7 +267,5 @@ describe('Review Controller', () => {
     };
     await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
     expect(mockNext).toBeCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR + ErrorMessages.INVALID_URL));
-
-    //expect(mockResponse.redirect).toBeCalledWith(new URL('https://localhost/callback/random-string-uuid'));
   });
 });
