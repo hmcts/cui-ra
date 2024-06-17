@@ -73,7 +73,6 @@ describe('Review Controller', () => {
   });
 
   test('Should not render review page', async () => {
-    // eslint-disable-line @typescript-eslint/no-empty-function
     mockRequest = {
       body: {},
       query: {},
@@ -252,7 +251,6 @@ describe('Review Controller', () => {
   });
 
   test('Should submit review and fail to callback', async () => {
-    // eslint-disable-line @typescript-eslint/no-empty-function
     mockRequest = {
       body: {},
       query: {},
