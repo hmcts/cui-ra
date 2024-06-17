@@ -10,7 +10,6 @@ import { ExistingFlagProcessor } from './../../../../main/processors';
 
 const host = 'www.test.com';
 const protocol = 'https';
-const invalidURLError = 'TypeError: Invalid URL';
 
 /* eslint-disable jest/expect-expect */
 describe('Review Controller', () => {
@@ -91,7 +90,7 @@ describe('Review Controller', () => {
     };
 
     reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR + invalidURLError));
+    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR + ErrorMessages.INVALID_URL));
   });
 
   test('Should render review page with empty editable flags', async () => {
@@ -269,7 +268,7 @@ describe('Review Controller', () => {
       },
     };
     await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR + invalidURLError));
+    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR + ErrorMessages.INVALID_URL));
 
     //expect(mockResponse.redirect).toBeCalledWith(new URL('https://localhost/callback/random-string-uuid'));
   });
