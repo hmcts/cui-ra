@@ -22,7 +22,7 @@ export class ReviewController {
           const url = new URL(UrlRoute.make(req.session.callbackUrl, { id: '' }));
           res.set('Content-Security-Policy', `form-action 'self' ${url}`);
         } catch (err) {
-          throw new Error(ErrorMessages.UNEXPECTED_ERROR + ':' + err);
+          throw new Error(ErrorMessages.UNEXPECTED_ERROR + err);
         }
       }
 
@@ -160,7 +160,7 @@ export class ReviewController {
       try {
         url = new URL(UrlRoute.make(req.session.callbackUrl, { id: uuid }));
       } catch (err) {
-        throw new Error(ErrorMessages.UNEXPECTED_ERROR + ':' + err);
+        throw new Error(ErrorMessages.UNEXPECTED_ERROR + err);
       }
       req.session.destroy(function () {});
       res.set('Content-Security-Policy', `form-action 'self' ${url}`);

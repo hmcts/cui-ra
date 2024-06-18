@@ -72,6 +72,26 @@ describe('Review Controller', () => {
     expect(mockResponse.render).toBeCalledWith('review', expect.any(Object));
   });
 
+  test('Should not render review page', async () => {
+    mockRequest = {
+      body: {},
+      query: {},
+      params: {},
+      session: {
+        partyName: 'demo name',
+        callbackUrl: 'https://localhost[/]callback/:id',
+        destroy: () => {},
+      } as unknown as Session & Partial<SessionData>,
+      protocol: protocol,
+      headers: {
+        host: host,
+      },
+    };
+
+    reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
+    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR + ErrorMessages.INVALID_URL));
+  });
+
   test('Should render review page with empty editable flags', async () => {
     // Initialize the mock objects and dependencies
     mockRequest = {
@@ -228,5 +248,24 @@ describe('Review Controller', () => {
     await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
 
     expect(mockResponse.redirect).toBeCalledWith(new URL('https://localhost/callback/random-string-uuid'));
+  });
+
+  test('Should submit review and fail to callback', async () => {
+    mockRequest = {
+      body: {},
+      query: {},
+      params: {},
+      session: {
+        partyName: 'demo name',
+        callbackUrl: 'https://localhost[/]callback/:id',
+        destroy: () => {},
+      } as unknown as Session & Partial<SessionData>,
+      protocol: protocol,
+      headers: {
+        host: host,
+      },
+    };
+    await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
+    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR + ErrorMessages.INVALID_URL));
   });
 });

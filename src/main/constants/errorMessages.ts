@@ -11,4 +11,5 @@ export const ErrorMessages = {
   MASTER_NOT_FOUND: 'The master flag could not be found.',
   FLAG_CANNOT_BE_EDITED: 'The specified flag cannot be edited.',
   PARENT_NOT_FOUND: 'Parent cannot be found',
+  INVALID_URL: 'TypeError: Invalid URL',
 } as const;
