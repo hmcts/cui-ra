@@ -77,7 +77,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["class-transformer", "npm:0.5.1"],\
             ["class-validator", "npm:0.14.1"],\
             ["codeceptjs", "npm:3.6.4"],\
-            ["config", "npm:3.3.11"],\
+            ["config", "npm:3.3.12"],\
             ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.1"],\
             ["cookie-parser", "npm:1.4.6"],\
             ["copy-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.1.0"],\
@@ -105,7 +105,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:15.2.7"],\
             ["lodash", "npm:4.17.21"],\
             ["mini-css-extract-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.9.0"],\
-            ["mocha", "npm:10.5.0"],\
+            ["mocha", "npm:10.5.1"],\
             ["mocha-multi", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.1.7"],\
             ["mochawesome", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.3"],\
             ["nock", "npm:13.5.4"],\
@@ -113,7 +113,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
             ["otplib", "npm:12.0.1"],\
             ["pa11y", "npm:8.0.0"],\
-            ["playwright", "npm:1.44.1"],\
+            ["playwright", "npm:1.45.0"],\
             ["prettier", "npm:3.3.2"],\
             ["puppeteer", "npm:22.12.0"],\
             ["redis", "npm:4.6.14"],\
@@ -10070,10 +10070,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["config", [\
-        ["npm:3.3.11", {\
-          "packageLocation": "./.yarn/cache/config-npm-3.3.11-a270a6a709-84d783978c.zip/node_modules/config/",\
+        ["npm:3.3.12", {\
+          "packageLocation": "./.yarn/cache/config-npm-3.3.12-ad44bb207f-db1b7718ff.zip/node_modules/config/",\
           "packageDependencies": [\
-            ["config", "npm:3.3.11"],\
+            ["config", "npm:3.3.12"],\
             ["json5", "npm:2.2.3"]\
           ],\
           "linkType": "HARD"\
@@ -10643,7 +10643,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["class-transformer", "npm:0.5.1"],\
             ["class-validator", "npm:0.14.1"],\
             ["codeceptjs", "npm:3.6.4"],\
-            ["config", "npm:3.3.11"],\
+            ["config", "npm:3.3.12"],\
             ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.1"],\
             ["cookie-parser", "npm:1.4.6"],\
             ["copy-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.1.0"],\
@@ -10671,7 +10671,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:15.2.7"],\
             ["lodash", "npm:4.17.21"],\
             ["mini-css-extract-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.9.0"],\
-            ["mocha", "npm:10.5.0"],\
+            ["mocha", "npm:10.5.1"],\
             ["mocha-multi", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.1.7"],\
             ["mochawesome", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.3"],\
             ["nock", "npm:13.5.4"],\
@@ -10679,7 +10679,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
             ["otplib", "npm:12.0.1"],\
             ["pa11y", "npm:8.0.0"],\
-            ["playwright", "npm:1.44.1"],\
+            ["playwright", "npm:1.45.0"],\
             ["prettier", "npm:3.3.2"],\
             ["puppeteer", "npm:22.12.0"],\
             ["redis", "npm:4.6.14"],\
@@ -17603,10 +17603,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:10.5.0", {\
-          "packageLocation": "./.yarn/cache/mocha-npm-10.5.0-7c3b33a047-fb9dbd1356.zip/node_modules/mocha/",\
+        ["npm:10.5.1", {\
+          "packageLocation": "./.yarn/cache/mocha-npm-10.5.1-8ada492894-2d1974a236.zip/node_modules/mocha/",\
           "packageDependencies": [\
-            ["mocha", "npm:10.5.0"],\
+            ["mocha", "npm:10.5.1"],\
             ["ansi-colors", "npm:4.1.1"],\
             ["browser-stdout", "npm:1.3.1"],\
             ["chokidar", "npm:3.6.0"],\
@@ -17648,7 +17648,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-string", "npm:1.0.7"],\
             ["lodash.once", "npm:4.1.1"],\
             ["mkdirp", "npm:1.0.4"],\
-            ["mocha", "npm:10.5.0"],\
+            ["mocha", "npm:10.5.1"],\
             ["object-assign", "npm:4.1.1"]\
           ],\
           "packagePeers": [\
@@ -17678,7 +17678,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash.isfunction", "npm:3.0.9"],\
             ["lodash.isobject", "npm:3.0.2"],\
             ["lodash.isstring", "npm:4.0.1"],\
-            ["mocha", "npm:10.5.0"],\
+            ["mocha", "npm:10.5.1"],\
             ["mochawesome-report-generator", "npm:6.2.0"],\
             ["strip-ansi", "npm:6.0.1"],\
             ["uuid", "npm:8.3.2"]\
@@ -19094,21 +19094,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["playwright", [\
-        ["npm:1.44.1", {\
-          "packageLocation": "./.yarn/cache/playwright-npm-1.44.1-48cda4a2b6-c2e8ff0a85.zip/node_modules/playwright/",\
+        ["npm:1.45.0", {\
+          "packageLocation": "./.yarn/cache/playwright-npm-1.45.0-8ae9f06534-2a5f827fdc.zip/node_modules/playwright/",\
           "packageDependencies": [\
-            ["playwright", "npm:1.44.1"],\
+            ["playwright", "npm:1.45.0"],\
             ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"],\
-            ["playwright-core", "npm:1.44.1"]\
+            ["playwright-core", "npm:1.45.0"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["playwright-core", [\
-        ["npm:1.44.1", {\
-          "packageLocation": "./.yarn/unplugged/playwright-core-npm-1.44.1-20a69ac9fc/node_modules/playwright-core/",\
+        ["npm:1.45.0", {\
+          "packageLocation": "./.yarn/unplugged/playwright-core-npm-1.45.0-84fc2ff2f7/node_modules/playwright-core/",\
           "packageDependencies": [\
-            ["playwright-core", "npm:1.44.1"]\
+            ["playwright-core", "npm:1.45.0"]\
           ],\
           "linkType": "HARD"\
         }]\
