@@ -120,7 +120,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["reflect-metadata", "npm:0.2.2"],\
             ["require-directory", "npm:2.1.1"],\
             ["sass", "npm:1.77.8"],\
-            ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:14.2.1"],\
+            ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.0"],\
             ["serve-favicon", "npm:2.5.0"],\
             ["session-file-store", "npm:1.5.0"],\
             ["sinon", "npm:18.0.0"],\
@@ -10919,7 +10919,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["reflect-metadata", "npm:0.2.2"],\
             ["require-directory", "npm:2.1.1"],\
             ["sass", "npm:1.77.8"],\
-            ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:14.2.1"],\
+            ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.0"],\
             ["serve-favicon", "npm:2.5.0"],\
             ["session-file-store", "npm:1.5.0"],\
             ["sinon", "npm:18.0.0"],\
@@ -21060,17 +21060,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["sass-loader", [\
-        ["npm:14.2.1", {\
-          "packageLocation": "./.yarn/cache/sass-loader-npm-14.2.1-dc50026ea1-f0c4710587.zip/node_modules/sass-loader/",\
+        ["npm:16.0.0", {\
+          "packageLocation": "./.yarn/cache/sass-loader-npm-16.0.0-00ff36714a-0ac3dfc2ae.zip/node_modules/sass-loader/",\
           "packageDependencies": [\
-            ["sass-loader", "npm:14.2.1"]\
+            ["sass-loader", "npm:16.0.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:14.2.1", {\
-          "packageLocation": "./.yarn/__virtual__/sass-loader-virtual-23dd8e5a40/0/cache/sass-loader-npm-14.2.1-dc50026ea1-f0c4710587.zip/node_modules/sass-loader/",\
+        ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/sass-loader-virtual-86df261efe/0/cache/sass-loader-npm-16.0.0-00ff36714a-0ac3dfc2ae.zip/node_modules/sass-loader/",\
           "packageDependencies": [\
-            ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:14.2.1"],\
+            ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.0"],\
             ["@rspack/core", null],\
             ["@types/node-sass", null],\
             ["@types/rspack__core", null],\

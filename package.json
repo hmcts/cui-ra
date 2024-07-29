@@ -137,7 +137,7 @@
     "prettier": "^3.2.5",
     "puppeteer": "^22.7.1",
     "sass": "^1.75.0",
-    "sass-loader": "^14.2.1",
+    "sass-loader": "^16.0.0",
     "sinon": "^18.0.0",
     "striptags": "3.2.0",
     "style-loader": "^4.0.0",
