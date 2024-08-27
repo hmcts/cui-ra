@@ -158,8 +158,6 @@
   "packageManager": "yarn@3.8.3",
   "resolutions": {
     "axios": "^1.7.4",
-    "braces": "^3.0.3",
-    "detox": "^20.22.2",
-    "socks": "^2.0.0"
+    "micromatch": "4.0.8"
   }
 }
