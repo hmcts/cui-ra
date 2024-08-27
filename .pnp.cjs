@@ -67,7 +67,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ajv-formats", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.0.1"],\
             ["applicationinsights", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.9.5"],\
             ["autobind-decorator", "npm:2.4.0"],\
-            ["awilix", "npm:10.0.2"],\
+            ["awilix", "npm:11.0.0"],\
             ["axios", "npm:1.7.4"],\
             ["axios-debug-log", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.0"],\
             ["babel-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.1.3"],\
@@ -8401,10 +8401,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["awilix", [\
-        ["npm:10.0.2", {\
-          "packageLocation": "./.yarn/cache/awilix-npm-10.0.2-b7f71a18e3-cf7641c2e6.zip/node_modules/awilix/",\
+        ["npm:11.0.0", {\
+          "packageLocation": "./.yarn/cache/awilix-npm-11.0.0-7a6c15d6e5-0ea5d87a1e.zip/node_modules/awilix/",\
           "packageDependencies": [\
-            ["awilix", "npm:10.0.2"],\
+            ["awilix", "npm:11.0.0"],\
             ["camel-case", "npm:4.1.2"],\
             ["fast-glob", "npm:3.3.2"]\
           ],\
@@ -10869,7 +10869,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ajv-formats", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.0.1"],\
             ["applicationinsights", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.9.5"],\
             ["autobind-decorator", "npm:2.4.0"],\
-            ["awilix", "npm:10.0.2"],\
+            ["awilix", "npm:11.0.0"],\
             ["axios", "npm:1.7.4"],\
             ["axios-debug-log", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.0"],\
             ["babel-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.1.3"],\
