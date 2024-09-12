@@ -61,14 +61,14 @@
     "autobind-decorator": "^2.4.0",
     "awilix": "^11.0.0",
     "axios": "^1.6.8",
-    "body-parser": "^1.20.2",
+    "body-parser": "^1.20.3",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
     "config": "^3.3.11",
     "connect-redis": "^7.1.1",
     "cookie-parser": "^1.4.6",
     "csurf": "^1.11.0",
-    "express": "^4.19.2",
+    "express": "^4.21.0",
     "express-nunjucks": "^3.1.2",
     "express-session": "^1.18.0",
     "glob": "^11.0.0",
@@ -159,6 +159,7 @@
   "resolutions": {
     "axios": "^1.7.4",
     "detox": "^20.22.2",
+    "express": "^4.21.0",
     "micromatch": "4.0.8"
   }
 }
