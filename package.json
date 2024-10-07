@@ -160,6 +160,7 @@
     "axios": "^1.7.4",
     "detox": "^20.22.2",
     "express": "^4.21.0",
-    "micromatch": "4.0.8"
+    "micromatch": "4.0.8",
+    "cookie": "0.7.2"
   }
 }
