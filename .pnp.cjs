@@ -46,7 +46,7 @@ const RAW_RUNTIME_STATE =
           ["@types/cookie-parser", "npm:1.4.7"],\
           ["@types/csurf", "npm:1.11.5"],\
           ["@types/es6-promisify", "npm:6.0.4"],\
-          ["@types/express", "npm:4.17.21"],\
+          ["@types/express", "npm:5.0.0"],\
           ["@types/express-session", "npm:1.18.0"],\
           ["@types/glob", "npm:8.1.0"],\
           ["@types/i18n", "npm:0.13.12"],\
@@ -6358,6 +6358,17 @@ const RAW_RUNTIME_STATE =
           ["@types/serve-static", "npm:1.15.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:5.0.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-express-npm-5.0.0-a645691cd5-10c0.zip/node_modules/@types/express/",\
+        "packageDependencies": [\
+          ["@types/express", "npm:5.0.0"],\
+          ["@types/body-parser", "npm:1.19.5"],\
+          ["@types/express-serve-static-core", "npm:5.0.0"],\
+          ["@types/qs", "npm:6.9.7"],\
+          ["@types/serve-static", "npm:1.15.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@types/express-serve-static-core", [\
@@ -6378,6 +6389,17 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:20.11.28"],\
           ["@types/qs", "npm:6.9.7"],\
           ["@types/range-parser", "npm:1.2.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:5.0.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-express-serve-static-core-npm-5.0.0-d89b918522-10c0.zip/node_modules/@types/express-serve-static-core/",\
+        "packageDependencies": [\
+          ["@types/express-serve-static-core", "npm:5.0.0"],\
+          ["@types/node", "npm:20.11.28"],\
+          ["@types/qs", "npm:6.9.7"],\
+          ["@types/range-parser", "npm:1.2.4"],\
+          ["@types/send", "npm:0.17.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6517,6 +6539,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/mime", [\
+      ["npm:1.3.5", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-mime-npm-1.3.5-48d28990db-10c0.zip/node_modules/@types/mime/",\
+        "packageDependencies": [\
+          ["@types/mime", "npm:1.3.5"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:3.0.1", {\
         "packageLocation": "../../../../cache/others/berry/cache/@types-mime-npm-3.0.1-dec03536dc-10c0.zip/node_modules/@types/mime/",\
         "packageDependencies": [\
@@ -6593,6 +6622,17 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/@types-require-directory-npm-2.1.6-fdefe29c4e-10c0.zip/node_modules/@types/require-directory/",\
         "packageDependencies": [\
           ["@types/require-directory", "npm:2.1.6"],\
+          ["@types/node", "npm:20.11.28"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/send", [\
+      ["npm:0.17.4", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-send-npm-0.17.4-9d7c55577f-10c0.zip/node_modules/@types/send/",\
+        "packageDependencies": [\
+          ["@types/send", "npm:0.17.4"],\
+          ["@types/mime", "npm:1.3.5"],\
           ["@types/node", "npm:20.11.28"]\
         ],\
         "linkType": "HARD"\
@@ -10843,7 +10883,7 @@ const RAW_RUNTIME_STATE =
           ["@types/cookie-parser", "npm:1.4.7"],\
           ["@types/csurf", "npm:1.11.5"],\
           ["@types/es6-promisify", "npm:6.0.4"],\
-          ["@types/express", "npm:4.17.21"],\
+          ["@types/express", "npm:5.0.0"],\
           ["@types/express-session", "npm:1.18.0"],\
           ["@types/glob", "npm:8.1.0"],\
           ["@types/i18n", "npm:0.13.12"],\
@@ -12836,7 +12876,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/express-nunjucks-virtual-7f98349e78/5/cache/others/berry/cache/express-nunjucks-npm-3.1.2-3e9cb7ed22-10c0.zip/node_modules/express-nunjucks/",\
         "packageDependencies": [\
           ["express-nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.1.2"],\
-          ["@types/express", "npm:4.17.21"],\
+          ["@types/express", "npm:5.0.0"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["express", "npm:4.21.0"],\
           ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
