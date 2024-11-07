@@ -96,7 +96,6 @@ const RAW_RUNTIME_STATE =
           ["html-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.6.0"],\
           ["husky", "npm:9.0.11"],\
           ["i18n", "npm:0.15.1"],\
-          ["import-in-the-middle", "npm:1.11.2"],\
           ["ioredis", "npm:5.4.1"],\
           ["jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.7.0"],\
           ["jest-html-reporter", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.10.2"],\
@@ -5227,7 +5226,7 @@ const RAW_RUNTIME_STATE =
           ["@opentelemetry/api", "npm:1.4.1"],\
           ["@types/opentelemetry__api", null],\
           ["@types/shimmer", "npm:1.0.2"],\
-          ["import-in-the-middle", "npm:1.4.2"],\
+          ["import-in-the-middle", "npm:1.11.2"],\
           ["require-in-the-middle", "npm:7.2.0"],\
           ["semver", "npm:7.6.0"],\
           ["shimmer", "npm:1.2.1"]\
@@ -7514,28 +7513,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/acorn-npm-8.8.0-9ef399ab45-10c0.zip/node_modules/acorn/",\
         "packageDependencies": [\
           ["acorn", "npm:8.8.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["acorn-import-assertions", [\
-      ["npm:1.9.0", {\
-        "packageLocation": "../../.yarn/berry/cache/acorn-import-assertions-npm-1.9.0-22f56507c7-10c0.zip/node_modules/acorn-import-assertions/",\
-        "packageDependencies": [\
-          ["acorn-import-assertions", "npm:1.9.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:0d6260c99a008f5be9e4359f808b7c212ffb01364e5d58ad3ffaa6cd86111a6eebcd70235a8529093b0d0158115bda51bd421ad8029e342e4db4485408536ce2#npm:1.9.0", {\
-        "packageLocation": "./.yarn/__virtual__/acorn-import-assertions-virtual-2f04282092/3/.yarn/berry/cache/acorn-import-assertions-npm-1.9.0-22f56507c7-10c0.zip/node_modules/acorn-import-assertions/",\
-        "packageDependencies": [\
-          ["acorn-import-assertions", "virtual:0d6260c99a008f5be9e4359f808b7c212ffb01364e5d58ad3ffaa6cd86111a6eebcd70235a8529093b0d0158115bda51bd421ad8029e342e4db4485408536ce2#npm:1.9.0"],\
-          ["@types/acorn", null],\
-          ["acorn", "npm:8.10.0"]\
-        ],\
-        "packagePeers": [\
-          "@types/acorn",\
-          "acorn"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -10907,7 +10884,6 @@ const RAW_RUNTIME_STATE =
           ["html-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.6.0"],\
           ["husky", "npm:9.0.11"],\
           ["i18n", "npm:0.15.1"],\
-          ["import-in-the-middle", "npm:1.11.2"],\
           ["ioredis", "npm:5.4.1"],\
           ["jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.7.0"],\
           ["jest-html-reporter", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.10.2"],\
@@ -14622,17 +14598,6 @@ const RAW_RUNTIME_STATE =
           ["import-in-the-middle", "npm:1.11.2"],\
           ["acorn", "npm:8.10.0"],\
           ["acorn-import-attributes", "virtual:bd0de6f92a7661612e01b7154625a4ba75ce6410b5fe5a75264a24ba405c17e2fad4f90bce2ea6d519a8327d77ce24367103a5c65440111a8f5a28ccb4e9928d#npm:1.9.5"],\
-          ["cjs-module-lexer", "npm:1.2.3"],\
-          ["module-details-from-path", "npm:1.0.3"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:1.4.2", {\
-        "packageLocation": "../../.yarn/berry/cache/import-in-the-middle-npm-1.4.2-0d6260c99a-10c0.zip/node_modules/import-in-the-middle/",\
-        "packageDependencies": [\
-          ["import-in-the-middle", "npm:1.4.2"],\
-          ["acorn", "npm:8.10.0"],\
-          ["acorn-import-assertions", "virtual:0d6260c99a008f5be9e4359f808b7c212ffb01364e5d58ad3ffaa6cd86111a6eebcd70235a8529093b0d0158115bda51bd421ad8029e342e4db4485408536ce2#npm:1.9.0"],\
           ["cjs-module-lexer", "npm:1.2.3"],\
           ["module-details-from-path", "npm:1.0.3"]\
         ],\
