@@ -161,6 +161,7 @@
     "detox": "^20.22.2",
     "express": "^4.21.0",
     "micromatch": "4.0.8",
-    "cookie": "0.7.2"
+    "cookie": "0.7.2",
+    "import-in-the-middle": "1.11.2"
   }
 }
