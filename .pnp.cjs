@@ -52,7 +52,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:29.5.12"],\
           ["@types/lodash", "npm:4.17.6"],\
-          ["@types/node", "npm:20.14.10"],\
+          ["@types/node", "npm:22.10.1"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.6"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -104,7 +104,7 @@ const RAW_RUNTIME_STATE =
           ["lint-staged", "npm:15.2.7"],\
           ["lodash", "npm:4.17.21"],\
           ["mini-css-extract-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.9.0"],\
-          ["mocha", "npm:10.6.0"],\
+          ["mocha", "npm:11.0.2"],\
           ["mocha-multi", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.1.7"],\
           ["mochawesome", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.3"],\
           ["nock", "npm:13.5.4"],\
@@ -6552,11 +6552,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:20.14.10", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-20.14.10-5efcbc9009-10c0.zip/node_modules/@types/node/",\
+      ["npm:22.10.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-22.10.1-db989fc54b-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:20.14.10"],\
-          ["undici-types", "npm:5.26.5"]\
+          ["@types/node", "npm:22.10.1"],\
+          ["undici-types", "npm:6.20.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -10840,7 +10840,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:29.5.12"],\
           ["@types/lodash", "npm:4.17.6"],\
-          ["@types/node", "npm:20.14.10"],\
+          ["@types/node", "npm:22.10.1"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.6"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -10892,7 +10892,7 @@ const RAW_RUNTIME_STATE =
           ["lint-staged", "npm:15.2.7"],\
           ["lodash", "npm:4.17.21"],\
           ["mini-css-extract-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.9.0"],\
-          ["mocha", "npm:10.6.0"],\
+          ["mocha", "npm:11.0.2"],\
           ["mocha-multi", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.1.7"],\
           ["mochawesome", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.3"],\
           ["nock", "npm:13.5.4"],\
@@ -13749,6 +13749,19 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/glob-npm-10.4.3-bf249cfb31-10c0.zip/node_modules/glob/",\
         "packageDependencies": [\
           ["glob", "npm:10.4.3"],\
+          ["foreground-child", "npm:3.1.1"],\
+          ["jackspeak", "npm:3.2.3"],\
+          ["minimatch", "npm:9.0.4"],\
+          ["minipass", "npm:7.1.2"],\
+          ["package-json-from-dist", "npm:1.0.0"],\
+          ["path-scurry", "npm:1.11.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:10.4.5", {\
+        "packageLocation": "../../../../cache/others/berry/cache/glob-npm-10.4.5-8c63175f05-10c0.zip/node_modules/glob/",\
+        "packageDependencies": [\
+          ["glob", "npm:10.4.5"],\
           ["foreground-child", "npm:3.1.1"],\
           ["jackspeak", "npm:3.2.3"],\
           ["minimatch", "npm:9.0.4"],\
@@ -17954,6 +17967,33 @@ const RAW_RUNTIME_STATE =
           ["yargs-unparser", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:11.0.2", {\
+        "packageLocation": "../../../../cache/others/berry/cache/mocha-npm-11.0.2-b5d6b95284-10c0.zip/node_modules/mocha/",\
+        "packageDependencies": [\
+          ["mocha", "npm:11.0.2"],\
+          ["ansi-colors", "npm:4.1.3"],\
+          ["browser-stdout", "npm:1.3.1"],\
+          ["chokidar", "npm:3.6.0"],\
+          ["debug", "virtual:beef11acfb1353074f35a99f047bc25c9618765d086774277a190b9f6823dd409390307c2c4809a03ce6fe9bed65346c960cd29ea244005043babd98401d09ad#npm:4.3.5"],\
+          ["diff", "npm:5.2.0"],\
+          ["escape-string-regexp", "npm:4.0.0"],\
+          ["find-up", "npm:5.0.0"],\
+          ["glob", "npm:10.4.5"],\
+          ["he", "npm:1.2.0"],\
+          ["js-yaml", "npm:4.1.0"],\
+          ["log-symbols", "npm:4.1.0"],\
+          ["minimatch", "npm:5.1.6"],\
+          ["ms", "npm:2.1.3"],\
+          ["serialize-javascript", "npm:6.0.2"],\
+          ["strip-json-comments", "npm:3.1.1"],\
+          ["supports-color", "npm:8.1.1"],\
+          ["workerpool", "npm:6.5.1"],\
+          ["yargs", "npm:16.2.0"],\
+          ["yargs-parser", "npm:20.2.9"],\
+          ["yargs-unparser", "npm:2.0.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["mocha-multi", [\
@@ -17973,7 +18013,7 @@ const RAW_RUNTIME_STATE =
           ["is-string", "npm:1.0.7"],\
           ["lodash.once", "npm:4.1.1"],\
           ["mkdirp", "npm:1.0.4"],\
-          ["mocha", "npm:10.6.0"],\
+          ["mocha", "npm:11.0.2"],\
           ["object-assign", "npm:4.1.1"]\
         ],\
         "packagePeers": [\
@@ -18003,7 +18043,7 @@ const RAW_RUNTIME_STATE =
           ["lodash.isfunction", "npm:3.0.9"],\
           ["lodash.isobject", "npm:3.0.2"],\
           ["lodash.isstring", "npm:4.0.1"],\
-          ["mocha", "npm:10.6.0"],\
+          ["mocha", "npm:11.0.2"],\
           ["mochawesome-report-generator", "npm:6.2.0"],\
           ["strip-ansi", "npm:6.0.1"],\
           ["uuid", "npm:8.3.2"]\
@@ -23014,7 +23054,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.3"],\
-          ["@types/node", "npm:20.14.10"],\
+          ["@types/node", "npm:22.10.1"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
@@ -23415,6 +23455,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/undici-types-npm-5.26.5-de4f7c7bb9-10c0.zip/node_modules/undici-types/",\
         "packageDependencies": [\
           ["undici-types", "npm:5.26.5"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:6.20.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/undici-types-npm-6.20.0-bd21e669af-10c0.zip/node_modules/undici-types/",\
+        "packageDependencies": [\
+          ["undici-types", "npm:6.20.0"]\
         ],\
         "linkType": "HARD"\
       }]\
