@@ -52,7 +52,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:29.5.12"],\
           ["@types/lodash", "npm:4.17.6"],\
-          ["@types/node", "npm:20.14.10"],\
+          ["@types/node", "npm:22.10.1"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.6"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -6552,11 +6552,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:20.14.10", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-20.14.10-5efcbc9009-10c0.zip/node_modules/@types/node/",\
+      ["npm:22.10.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-22.10.1-db989fc54b-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:20.14.10"],\
-          ["undici-types", "npm:5.26.5"]\
+          ["@types/node", "npm:22.10.1"],\
+          ["undici-types", "npm:6.20.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -10433,10 +10433,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["cookie", [\
-      ["npm:0.7.2", {\
-        "packageLocation": "../../../../cache/others/berry/cache/cookie-npm-0.7.2-6ea9ee4231-10c0.zip/node_modules/cookie/",\
+      ["npm:1.0.2", {\
+        "packageLocation": "../../../../cache/others/berry/cache/cookie-npm-1.0.2-7a4273d897-10c0.zip/node_modules/cookie/",\
         "packageDependencies": [\
-          ["cookie", "npm:0.7.2"]\
+          ["cookie", "npm:1.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -10446,7 +10446,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/cookie-parser-npm-1.4.6-a68f84d02a-10c0.zip/node_modules/cookie-parser/",\
         "packageDependencies": [\
           ["cookie-parser", "npm:1.4.6"],\
-          ["cookie", "npm:0.7.2"],\
+          ["cookie", "npm:1.0.2"],\
           ["cookie-signature", "npm:1.0.6"]\
         ],\
         "linkType": "HARD"\
@@ -10802,7 +10802,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/csurf-npm-1.11.0-c1b9cbb35b-10c0.zip/node_modules/csurf/",\
         "packageDependencies": [\
           ["csurf", "npm:1.11.0"],\
-          ["cookie", "npm:0.7.2"],\
+          ["cookie", "npm:1.0.2"],\
           ["cookie-signature", "npm:1.0.6"],\
           ["csrf", "npm:3.1.0"],\
           ["http-errors", "npm:1.7.3"]\
@@ -10840,7 +10840,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:29.5.12"],\
           ["@types/lodash", "npm:4.17.6"],\
-          ["@types/node", "npm:20.14.10"],\
+          ["@types/node", "npm:22.10.1"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.6"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -12785,7 +12785,7 @@ const RAW_RUNTIME_STATE =
           ["body-parser", "npm:1.20.3"],\
           ["content-disposition", "npm:0.5.4"],\
           ["content-type", "npm:1.0.4"],\
-          ["cookie", "npm:0.7.2"],\
+          ["cookie", "npm:1.0.2"],\
           ["cookie-signature", "npm:1.0.6"],\
           ["debug", "virtual:c7b184cd14c02e3ce555ab1875e60cf5033c617e17d82c4c02ea822101d3c817f48bf25a766b4d4335742dc5c9c14c2e88a57ed955a56c4ad0613899f82f5618#npm:2.6.9"],\
           ["depd", "npm:2.0.0"],\
@@ -12847,7 +12847,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/express-session-npm-1.18.1-b1aa040a8f-10c0.zip/node_modules/express-session/",\
         "packageDependencies": [\
           ["express-session", "npm:1.18.1"],\
-          ["cookie", "npm:0.7.2"],\
+          ["cookie", "npm:1.0.2"],\
           ["cookie-signature", "npm:1.0.7"],\
           ["debug", "virtual:c7b184cd14c02e3ce555ab1875e60cf5033c617e17d82c4c02ea822101d3c817f48bf25a766b4d4335742dc5c9c14c2e88a57ed955a56c4ad0613899f82f5618#npm:2.6.9"],\
           ["depd", "npm:2.0.0"],\
@@ -23014,7 +23014,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.3"],\
-          ["@types/node", "npm:20.14.10"],\
+          ["@types/node", "npm:22.10.1"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
@@ -23415,6 +23415,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/undici-types-npm-5.26.5-de4f7c7bb9-10c0.zip/node_modules/undici-types/",\
         "packageDependencies": [\
           ["undici-types", "npm:5.26.5"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:6.20.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/undici-types-npm-6.20.0-bd21e669af-10c0.zip/node_modules/undici-types/",\
+        "packageDependencies": [\
+          ["undici-types", "npm:6.20.0"]\
         ],\
         "linkType": "HARD"\
       }]\
