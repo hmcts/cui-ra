@@ -87,9 +87,9 @@ const RAW_RUNTIME_STATE =
           ["eslint-config-prettier", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.1.0"],\
           ["eslint-plugin-import", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.29.1"],\
           ["eslint-plugin-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:28.6.0"],\
-          ["express", "npm:4.21.0"],\
+          ["express", "npm:4.21.2"],\
           ["express-nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.1.2"],\
-          ["express-session", "npm:1.18.0"],\
+          ["express-session", "npm:1.18.1"],\
           ["glob", "npm:11.0.0"],\
           ["govuk-frontend", "npm:5.4.1"],\
           ["helmet", "npm:8.0.0"],\
@@ -4393,7 +4393,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/@hmcts-info-provider-npm-1.2.1-0c905c3d08-10c0.zip/node_modules/@hmcts/info-provider/",\
         "packageDependencies": [\
           ["@hmcts/info-provider", "npm:1.2.1"],\
-          ["express", "npm:4.21.0"],\
+          ["express", "npm:4.21.2"],\
           ["js-yaml", "npm:4.1.0"]\
         ],\
         "linkType": "HARD"\
@@ -10351,7 +10351,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.1"],\
           ["@types/express-session", "npm:1.18.0"],\
-          ["express-session", "npm:1.18.0"]\
+          ["express-session", "npm:1.18.1"]\
         ],\
         "packagePeers": [\
           "@types/express-session",\
@@ -10866,9 +10866,9 @@ const RAW_RUNTIME_STATE =
           ["eslint-config-prettier", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.1.0"],\
           ["eslint-plugin-import", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.29.1"],\
           ["eslint-plugin-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:28.6.0"],\
-          ["express", "npm:4.21.0"],\
+          ["express", "npm:4.21.2"],\
           ["express-nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.1.2"],\
-          ["express-session", "npm:1.18.0"],\
+          ["express-session", "npm:1.18.1"],\
           ["glob", "npm:11.0.0"],\
           ["govuk-frontend", "npm:5.4.1"],\
           ["helmet", "npm:8.0.0"],\
@@ -12767,10 +12767,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["express", [\
-      ["npm:4.21.0", {\
-        "packageLocation": "../../.yarn/berry/cache/express-npm-4.21.0-377d90d8f4-10c0.zip/node_modules/express/",\
+      ["npm:4.21.2", {\
+        "packageLocation": "../../.yarn/berry/cache/express-npm-4.21.2-9b3bd32250-10c0.zip/node_modules/express/",\
         "packageDependencies": [\
-          ["express", "npm:4.21.0"],\
+          ["express", "npm:4.21.2"],\
           ["accepts", "npm:1.3.8"],\
           ["array-flatten", "npm:1.1.1"],\
           ["body-parser", "npm:1.20.3"],\
@@ -12790,7 +12790,7 @@ const RAW_RUNTIME_STATE =
           ["methods", "npm:1.1.2"],\
           ["on-finished", "npm:2.4.1"],\
           ["parseurl", "npm:1.3.3"],\
-          ["path-to-regexp", "npm:0.1.10"],\
+          ["path-to-regexp", "npm:0.1.12"],\
           ["proxy-addr", "npm:2.0.7"],\
           ["qs", "npm:6.13.0"],\
           ["range-parser", "npm:1.2.1"],\
@@ -12820,7 +12820,7 @@ const RAW_RUNTIME_STATE =
           ["express-nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.1.2"],\
           ["@types/express", "npm:4.17.21"],\
           ["@types/nunjucks", "npm:3.2.6"],\
-          ["express", "npm:4.21.0"],\
+          ["express", "npm:4.21.2"],\
           ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
           ["nunjucks-async-loader", "virtual:7f98349e78b7b821d558af7885cb679285914ddcc57698b61460b1eefe5af0d4f6fdc260ae4bb728469ceeed3f1626e3e1fd05ae4d35792c4f0a6b02141cde7e#npm:2.1.3"]\
         ],\
@@ -12834,10 +12834,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["express-session", [\
-      ["npm:1.18.0", {\
-        "packageLocation": "../../.yarn/berry/cache/express-session-npm-1.18.0-a285922921-10c0.zip/node_modules/express-session/",\
+      ["npm:1.18.1", {\
+        "packageLocation": "../../.yarn/berry/cache/express-session-npm-1.18.1-b1aa040a8f-10c0.zip/node_modules/express-session/",\
         "packageDependencies": [\
-          ["express-session", "npm:1.18.0"],\
+          ["express-session", "npm:1.18.1"],\
           ["cookie", "npm:0.7.2"],\
           ["cookie-signature", "npm:1.0.7"],\
           ["debug", "virtual:c7b184cd14c02e3ce555ab1875e60cf5033c617e17d82c4c02ea822101d3c817f48bf25a766b4d4335742dc5c9c14c2e88a57ed955a56c4ad0613899f82f5618#npm:2.6.9"],\
@@ -19239,10 +19239,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["path-to-regexp", [\
-      ["npm:0.1.10", {\
-        "packageLocation": "../../.yarn/berry/cache/path-to-regexp-npm-0.1.10-63516149e0-10c0.zip/node_modules/path-to-regexp/",\
+      ["npm:0.1.12", {\
+        "packageLocation": "../../.yarn/berry/cache/path-to-regexp-npm-0.1.12-a9bf1de212-10c0.zip/node_modules/path-to-regexp/",\
         "packageDependencies": [\
-          ["path-to-regexp", "npm:0.1.10"]\
+          ["path-to-regexp", "npm:0.1.12"]\
         ],\
         "linkType": "HARD"\
       }],\
