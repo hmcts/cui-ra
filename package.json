@@ -79,6 +79,7 @@
     "jquery": "^3.7.1",
     "json-schema": "^0.4.0",
     "lodash": "^4.17.21",
+    "nanoid": "^5.0.9",
     "nunjucks": "^3.2.4",
     "otplib": "^12.0.1",
     "redis": "^4.6.13",
