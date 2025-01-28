@@ -107,7 +107,7 @@ const RAW_RUNTIME_STATE =
           ["mocha", "npm:11.0.2"],\
           ["mocha-multi", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.1.7"],\
           ["mochawesome", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.3"],\
-          ["nock", "npm:13.5.6"],\
+          ["nock", "npm:14.0.0"],\
           ["nodemon", "npm:3.1.9"],\
           ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
           ["otplib", "npm:12.0.1"],\
@@ -5541,6 +5541,21 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@mswjs/interceptors", [\
+      ["npm:0.37.5", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@mswjs-interceptors-npm-0.37.5-065eecd6e6-10c0.zip/node_modules/@mswjs/interceptors/",\
+        "packageDependencies": [\
+          ["@mswjs/interceptors", "npm:0.37.5"],\
+          ["@open-draft/deferred-promise", "npm:2.2.0"],\
+          ["@open-draft/logger", "npm:0.3.0"],\
+          ["@open-draft/until", "npm:2.1.0"],\
+          ["is-node-process", "npm:1.2.0"],\
+          ["outvariant", "npm:1.4.3"],\
+          ["strict-event-emitter", "npm:0.5.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@nicolo-ribaudo/eslint-scope-5-internals", [\
       ["npm:5.1.1-v1", {\
         "packageLocation": "../../../../cache/others/berry/cache/@nicolo-ribaudo-eslint-scope-5-internals-npm-5.1.1-v1-87df86be4b-10c0.zip/node_modules/@nicolo-ribaudo/eslint-scope-5-internals/",\
@@ -5618,6 +5633,35 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/@one-ini-wasm-npm-0.1.1-cee8120e33-10c0.zip/node_modules/@one-ini/wasm/",\
         "packageDependencies": [\
           ["@one-ini/wasm", "npm:0.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@open-draft/deferred-promise", [\
+      ["npm:2.2.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@open-draft-deferred-promise-npm-2.2.0-adf396dc9f-10c0.zip/node_modules/@open-draft/deferred-promise/",\
+        "packageDependencies": [\
+          ["@open-draft/deferred-promise", "npm:2.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@open-draft/logger", [\
+      ["npm:0.3.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@open-draft-logger-npm-0.3.0-12b03e55aa-10c0.zip/node_modules/@open-draft/logger/",\
+        "packageDependencies": [\
+          ["@open-draft/logger", "npm:0.3.0"],\
+          ["is-node-process", "npm:1.2.0"],\
+          ["outvariant", "npm:1.4.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@open-draft/until", [\
+      ["npm:2.1.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@open-draft-until-npm-2.1.0-e27da33c52-10c0.zip/node_modules/@open-draft/until/",\
+        "packageDependencies": [\
+          ["@open-draft/until", "npm:2.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11512,7 +11556,7 @@ const RAW_RUNTIME_STATE =
           ["mocha", "npm:11.0.2"],\
           ["mocha-multi", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.1.7"],\
           ["mochawesome", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.3"],\
-          ["nock", "npm:13.5.6"],\
+          ["nock", "npm:14.0.0"],\
           ["nodemon", "npm:3.1.9"],\
           ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
           ["otplib", "npm:12.0.1"],\
@@ -15916,6 +15960,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["is-node-process", [\
+      ["npm:1.2.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/is-node-process-npm-1.2.0-34f2abe8e1-10c0.zip/node_modules/is-node-process/",\
+        "packageDependencies": [\
+          ["is-node-process", "npm:1.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["is-number", [\
       ["npm:7.0.0", {\
         "packageLocation": "../../../../cache/others/berry/cache/is-number-npm-7.0.0-060086935c-10c0.zip/node_modules/is-number/",\
@@ -19238,11 +19291,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["nock", [\
-      ["npm:13.5.6", {\
-        "packageLocation": "../../../../cache/others/berry/cache/nock-npm-13.5.6-6fbafbb636-10c0.zip/node_modules/nock/",\
+      ["npm:14.0.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/nock-npm-14.0.0-d6dfa91ed4-10c0.zip/node_modules/nock/",\
         "packageDependencies": [\
-          ["nock", "npm:13.5.6"],\
-          ["debug", "virtual:428f325a939c2653ad822eb3d75efb02ac311523dd0d4f9645afc39ea00bd86eceac35a9d59c9b6977d76b670a4ef0ae057ea572338a44729aa592711a8c05a3#npm:4.4.0"],\
+          ["nock", "npm:14.0.0"],\
+          ["@mswjs/interceptors", "npm:0.37.5"],\
           ["json-stringify-safe", "npm:5.0.1"],\
           ["propagate", "npm:2.0.1"]\
         ],\
@@ -19874,6 +19927,15 @@ const RAW_RUNTIME_STATE =
           ["@otplib/core", "npm:12.0.1"],\
           ["@otplib/preset-default", "npm:12.0.1"],\
           ["@otplib/preset-v11", "npm:12.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["outvariant", [\
+      ["npm:1.4.3", {\
+        "packageLocation": "../../../../cache/others/berry/cache/outvariant-npm-1.4.3-192f951f81-10c0.zip/node_modules/outvariant/",\
+        "packageDependencies": [\
+          ["outvariant", "npm:1.4.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -22886,6 +22948,15 @@ const RAW_RUNTIME_STATE =
           ["bare-events", "npm:2.2.0"],\
           ["fast-fifo", "npm:1.3.2"],\
           ["queue-tick", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["strict-event-emitter", [\
+      ["npm:0.5.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/strict-event-emitter-npm-0.5.1-8414bf36b3-10c0.zip/node_modules/strict-event-emitter/",\
+        "packageDependencies": [\
+          ["strict-event-emitter", "npm:0.5.1"]\
         ],\
         "linkType": "HARD"\
       }]\
