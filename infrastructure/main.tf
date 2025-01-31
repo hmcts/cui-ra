@@ -77,7 +77,7 @@ resource "azurerm_key_vault_secret" "s2s" {
 }
 
 module "redis6-cache" {
-  source                        = "git@github.com:hmcts/cnp-module-redis?ref=master"
+  source                        = "git@github.com:hmcts/cnp-module-redis?ref=4.x"
   product                       = var.product
   name                          = "${var.product}-${var.component}-${var.env}"
   location                      = var.location
