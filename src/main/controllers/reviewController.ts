@@ -19,6 +19,7 @@ export class ReviewController {
     try {
       if (req.session.callbackUrl) {
         try {
+          this.logger.info(`Callback URL @review: ${req.session.callbackUrl}`);
           const url = new URL(UrlRoute.make(req.session.callbackUrl, { id: '' }));
           res.set('Content-Security-Policy', `form-action 'self' ${url}`);
         } catch (err) {
