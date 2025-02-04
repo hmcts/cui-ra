@@ -61,6 +61,7 @@ export class DataController {
       req.session.partyname = payloadStore.payload.existingFlags.partyName;
       req.session.roleoncase = payloadStore.payload.existingFlags.roleOnCase;
       req.session.callbackUrl = payloadStore.payload.callbackUrl;
+      this.logger.info(`${serviceId} provided callback URL : "${payloadStore.payload.callbackUrl}"`);
       req.session.logoutUrl = payloadStore.payload.logoutUrl;
       if (payloadStore.payload.masterFlagCode) {
         req.session.masterflagcode = payloadStore.payload.masterFlagCode.toUpperCase();
