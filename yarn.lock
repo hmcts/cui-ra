@@ -3008,20 +3008,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/console@npm:^29.0.3":
-  version: 29.0.3
-  resolution: "@jest/console@npm:29.0.3"
-  dependencies:
-    "@jest/types": "npm:^29.0.3"
-    "@types/node": "npm:*"
-    chalk: "npm:^4.0.0"
-    jest-message-util: "npm:^29.0.3"
-    jest-util: "npm:^29.0.3"
-    slash: "npm:^3.0.0"
-  checksum: 10c0/0b72ecedf90a21bca876b68bce1d296a15eaa09ff483d564741984ed04542388c43c2e734221d9ccbb81c223fda349f767bc665c8c49de6067f107575a2d1041
-  languageName: node
-  linkType: hard
-
 "@jest/console@npm:^29.7.0":
   version: 29.7.0
   resolution: "@jest/console@npm:29.7.0"
@@ -3218,18 +3204,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/test-result@npm:^29.0.2":
-  version: 29.0.3
-  resolution: "@jest/test-result@npm:29.0.3"
-  dependencies:
-    "@jest/console": "npm:^29.0.3"
-    "@jest/types": "npm:^29.0.3"
-    "@types/istanbul-lib-coverage": "npm:^2.0.0"
-    collect-v8-coverage: "npm:^1.0.0"
-  checksum: 10c0/72a81912bf12ea75ef73046c30ecc6cf329364997f5e8f7ca1a88fcd062db00fabade9e60551c320ebebea4ae5615aebe905f9c230a77eb1d6e096cb619b6ade
-  languageName: node
-  linkType: hard
-
 "@jest/test-result@npm:^29.7.0":
   version: 29.7.0
   resolution: "@jest/test-result@npm:29.7.0"
@@ -3290,7 +3264,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/types@npm:^29.0.2, @jest/types@npm:^29.0.3":
+"@jest/types@npm:^29.0.3":
   version: 29.0.3
   resolution: "@jest/types@npm:29.0.3"
   dependencies:
@@ -8414,7 +8388,7 @@ __metadata:
     i18n: "npm:^0.15.1"
     ioredis: "npm:^5.4.1"
     jest: "npm:^29.7.0"
-    jest-html-reporter: "npm:^3.10.2"
+    jest-html-reporter: "npm:^4.0.0"
     jquery: "npm:^3.7.1"
     json-schema: "npm:^0.4.0"
     lint-staged: "npm:^15.2.2"
@@ -13010,12 +12984,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-html-reporter@npm:^3.10.2":
-  version: 3.10.2
-  resolution: "jest-html-reporter@npm:3.10.2"
+"jest-html-reporter@npm:^4.0.0":
+  version: 4.0.1
+  resolution: "jest-html-reporter@npm:4.0.1"
   dependencies:
-    "@jest/test-result": "npm:^29.0.2"
-    "@jest/types": "npm:^29.0.2"
+    "@jest/reporters": "npm:^29.7.0"
+    "@jest/test-result": "npm:^29.7.0"
+    "@jest/types": "npm:^29.6.3"
     dateformat: "npm:3.0.2"
     mkdirp: "npm:^1.0.3"
     strip-ansi: "npm:6.0.1"
@@ -13023,7 +12998,7 @@ __metadata:
   peerDependencies:
     jest: 19.x - 29.x
     typescript: ^3.7.x || ^4.3.x || ^5.x
-  checksum: 10c0/b94ed8f14c82632e5a20d354e05fb92e582322a52bb6d494e5ba2e9c60ef914f02d49e846bb66a5c76f8eb9f36ad7f99d63ec7fc8a8c3921ad133c794cb43af4
+  checksum: 10c0/396529236871902fc8ac2deeaf44709d2a8bc9b1d47055aff1623f8e8dd4d08c9958da797f58438b1a3f87071449875793f37eb6fe6754486629b8c0a672b130
   languageName: node
   linkType: hard
 
