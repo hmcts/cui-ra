@@ -4,7 +4,7 @@ Reasonable Adjustments Microsite for Citizen UI Flags is an application designed
 
 ![flow diagram](https://tools.hmcts.net/confluence/rest/gliffy/1.0/embeddedDiagrams/1af0db44-738c-4f98-bb17-2c98a59c36ce.png)
 
-## Getting Started
+## Getting Started.
 
 ### Prerequisites
 
