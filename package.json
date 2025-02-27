@@ -163,6 +163,6 @@
     "cookie": "1.0.2",
     "import-in-the-middle": "1.12.0",
     "cross-spawn": "7.0.6",
-    "nanoid": "^3.3.8"
+    "nanoid": "^5.0.0"
   }
 }
