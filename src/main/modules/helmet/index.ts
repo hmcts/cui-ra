@@ -50,7 +50,7 @@ export class Helmet {
       helmet({
         contentSecurityPolicy: {
           directives: {
-            connectSrc: [self, dynatraqceDomain],
+            connectSrc: [self, dynatraqceDomain, googleAnalyticsDomain],
             defaultSrc: ["'none'"],
             fontSrc: [self, 'data:'],
             imgSrc: [self, googleAnalyticsDomain],
