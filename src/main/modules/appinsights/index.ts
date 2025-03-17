@@ -13,8 +13,7 @@ export class AppInsights {
         .setAutoCollectExceptions(true)
         .setAutoCollectDependencies(false) // Disable dependency tracking
         .setAutoDependencyCorrelation(false) //  Disable automatic dependency correlation
-        .setAutoCollect
-        .start();
+        .setAutoCollect.start();
 
       appInsights.defaultClient.config.samplingPercentage = config.get('appInsights.samplingPercentage');
       appInsights.defaultClient.context.tags[appInsights.defaultClient.context.keys.cloudRole] = 'cui-ra';
