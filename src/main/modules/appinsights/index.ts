@@ -11,6 +11,9 @@ export class AppInsights {
         .setSendLiveMetrics(true)
         .setAutoCollectConsole(true, true)
         .setAutoCollectExceptions(true)
+        .setAutoCollectDependencies(false) // Disable dependency tracking
+        .setAutoDependencyCorrelation(false) //  Disable automatic dependency correlation
+        .setAutoCollect
         .start();
 
       appInsights.defaultClient.config.samplingPercentage = config.get('appInsights.samplingPercentage');
