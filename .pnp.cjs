@@ -114,7 +114,7 @@ const RAW_RUNTIME_STATE =
           ["pa11y", "npm:8.0.0"],\
           ["playwright", "npm:1.51.0"],\
           ["prettier", "npm:3.5.3"],\
-          ["puppeteer", "npm:23.11.1"],\
+          ["puppeteer", "npm:24.4.0"],\
           ["redis", "npm:4.7.0"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["require-directory", "npm:2.1.1"],\
@@ -5959,21 +5959,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:2.6.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@puppeteer-browsers-npm-2.6.1-49890a06d7-10c0.zip/node_modules/@puppeteer/browsers/",\
-        "packageDependencies": [\
-          ["@puppeteer/browsers", "npm:2.6.1"],\
-          ["debug", "virtual:428f325a939c2653ad822eb3d75efb02ac311523dd0d4f9645afc39ea00bd86eceac35a9d59c9b6977d76b670a4ef0ae057ea572338a44729aa592711a8c05a3#npm:4.4.0"],\
-          ["extract-zip", "npm:2.0.1"],\
-          ["progress", "npm:2.0.3"],\
-          ["proxy-agent", "npm:6.5.0"],\
-          ["semver", "npm:7.6.3"],\
-          ["tar-fs", "npm:3.0.6"],\
-          ["unbzip2-stream", "npm:1.4.3"],\
-          ["yargs", "npm:17.7.2"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:2.8.0", {\
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/@puppeteer-browsers-npm-2.8.0-86b8ae036e-10c0.zip/node_modules/@puppeteer/browsers/",\
         "packageDependencies": [\
@@ -10325,17 +10310,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["chromium-bidi", [\
-      ["npm:0.11.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/chromium-bidi-npm-0.11.0-46ae0fed44-10c0.zip/node_modules/chromium-bidi/",\
-        "packageDependencies": [\
-          ["chromium-bidi", "npm:0.11.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
       ["npm:0.6.3", {\
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/chromium-bidi-npm-0.6.3-ae4efa3e9c-10c0.zip/node_modules/chromium-bidi/",\
         "packageDependencies": [\
           ["chromium-bidi", "npm:0.6.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["npm:2.1.2", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/chromium-bidi-npm-2.1.2-954fe1d8c8-10c0.zip/node_modules/chromium-bidi/",\
+        "packageDependencies": [\
+          ["chromium-bidi", "npm:2.1.2"]\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -10355,14 +10340,14 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:b665e87bf50321842d35697c74dbc5a3518af03d6c038121c205598718294694863a501e8e115de5a417d7a92986de9af2fdc90617f9f1254944445f29a7f573#npm:0.11.0", {\
-        "packageLocation": "./.yarn/__virtual__/chromium-bidi-virtual-2f5b714496/7/runner/cache/others/berry/cache/chromium-bidi-npm-0.11.0-46ae0fed44-10c0.zip/node_modules/chromium-bidi/",\
+      ["virtual:5eaf660359743d644f14a3ce91783d61c15c56def6b885ec9a2164c61e42d340507660ea7b70b641f662c0187957f38436e9527a6e714c99b4df9d68a9f30dac#npm:2.1.2", {\
+        "packageLocation": "./.yarn/__virtual__/chromium-bidi-virtual-8904233368/7/runner/cache/others/berry/cache/chromium-bidi-npm-2.1.2-954fe1d8c8-10c0.zip/node_modules/chromium-bidi/",\
         "packageDependencies": [\
-          ["chromium-bidi", "virtual:b665e87bf50321842d35697c74dbc5a3518af03d6c038121c205598718294694863a501e8e115de5a417d7a92986de9af2fdc90617f9f1254944445f29a7f573#npm:0.11.0"],\
+          ["chromium-bidi", "virtual:5eaf660359743d644f14a3ce91783d61c15c56def6b885ec9a2164c61e42d340507660ea7b70b641f662c0187957f38436e9527a6e714c99b4df9d68a9f30dac#npm:2.1.2"],\
           ["@types/devtools-protocol", null],\
-          ["devtools-protocol", "npm:0.0.1367902"],\
+          ["devtools-protocol", "npm:0.0.1413902"],\
           ["mitt", "npm:3.0.1"],\
-          ["zod", "npm:3.23.8"]\
+          ["zod", "npm:3.24.2"]\
         ],\
         "packagePeers": [\
           "@types/devtools-protocol",\
@@ -11455,7 +11440,7 @@ const RAW_RUNTIME_STATE =
           ["pa11y", "npm:8.0.0"],\
           ["playwright", "npm:1.51.0"],\
           ["prettier", "npm:3.5.3"],\
-          ["puppeteer", "npm:23.11.1"],\
+          ["puppeteer", "npm:24.4.0"],\
           ["redis", "npm:4.7.0"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["require-directory", "npm:2.1.1"],\
@@ -12017,10 +12002,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:0.0.1367902", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/devtools-protocol-npm-0.0.1367902-8b9faf64a7-10c0.zip/node_modules/devtools-protocol/",\
+      ["npm:0.0.1413902", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/devtools-protocol-npm-0.0.1413902-3a3edfdb33-10c0.zip/node_modules/devtools-protocol/",\
         "packageDependencies": [\
-          ["devtools-protocol", "npm:0.0.1367902"]\
+          ["devtools-protocol", "npm:0.0.1413902"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20905,15 +20890,15 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:23.11.1", {\
-        "packageLocation": "./.yarn/unplugged/puppeteer-npm-23.11.1-4fad6aaf7a/node_modules/puppeteer/",\
+      ["npm:24.4.0", {\
+        "packageLocation": "./.yarn/unplugged/puppeteer-npm-24.4.0-48bfa8de41/node_modules/puppeteer/",\
         "packageDependencies": [\
-          ["puppeteer", "npm:23.11.1"],\
-          ["@puppeteer/browsers", "npm:2.6.1"],\
-          ["chromium-bidi", "virtual:b665e87bf50321842d35697c74dbc5a3518af03d6c038121c205598718294694863a501e8e115de5a417d7a92986de9af2fdc90617f9f1254944445f29a7f573#npm:0.11.0"],\
+          ["puppeteer", "npm:24.4.0"],\
+          ["@puppeteer/browsers", "npm:2.8.0"],\
+          ["chromium-bidi", "virtual:5eaf660359743d644f14a3ce91783d61c15c56def6b885ec9a2164c61e42d340507660ea7b70b641f662c0187957f38436e9527a6e714c99b4df9d68a9f30dac#npm:2.1.2"],\
           ["cosmiconfig", "virtual:fa225bdb634e1cbc539c15f52d21e8c24930965df910bda33d9b1290d228e0a64585d7b53da6663575dc8acfbfbe07bcf6d81ab99b1b2b3701c454c9cc8cf6e7#npm:9.0.0"],\
-          ["devtools-protocol", "npm:0.0.1367902"],\
-          ["puppeteer-core", "npm:23.11.1"],\
+          ["devtools-protocol", "npm:0.0.1413902"],\
+          ["puppeteer-core", "npm:24.4.0"],\
           ["typed-query-selector", "npm:2.12.0"]\
         ],\
         "linkType": "HARD"\
@@ -20932,16 +20917,16 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:23.11.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/puppeteer-core-npm-23.11.1-b665e87bf5-10c0.zip/node_modules/puppeteer-core/",\
+      ["npm:24.4.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/puppeteer-core-npm-24.4.0-5eaf660359-10c0.zip/node_modules/puppeteer-core/",\
         "packageDependencies": [\
-          ["puppeteer-core", "npm:23.11.1"],\
-          ["@puppeteer/browsers", "npm:2.6.1"],\
-          ["chromium-bidi", "virtual:b665e87bf50321842d35697c74dbc5a3518af03d6c038121c205598718294694863a501e8e115de5a417d7a92986de9af2fdc90617f9f1254944445f29a7f573#npm:0.11.0"],\
+          ["puppeteer-core", "npm:24.4.0"],\
+          ["@puppeteer/browsers", "npm:2.8.0"],\
+          ["chromium-bidi", "virtual:5eaf660359743d644f14a3ce91783d61c15c56def6b885ec9a2164c61e42d340507660ea7b70b641f662c0187957f38436e9527a6e714c99b4df9d68a9f30dac#npm:2.1.2"],\
           ["debug", "virtual:428f325a939c2653ad822eb3d75efb02ac311523dd0d4f9645afc39ea00bd86eceac35a9d59c9b6977d76b670a4ef0ae057ea572338a44729aa592711a8c05a3#npm:4.4.0"],\
-          ["devtools-protocol", "npm:0.0.1367902"],\
+          ["devtools-protocol", "npm:0.0.1413902"],\
           ["typed-query-selector", "npm:2.12.0"],\
-          ["ws", "virtual:2dabb1e0b8013e2fdaca43a04ff5516e907d269a5b47d4ffc6f2b442eb957d8cb548f1c54645d78ef91af0b871a6b7fcdd66cbf007351b1269163c63d2b058f7#npm:8.18.0"]\
+          ["ws", "virtual:5eaf660359743d644f14a3ce91783d61c15c56def6b885ec9a2164c61e42d340507660ea7b70b641f662c0187957f38436e9527a6e714c99b4df9d68a9f30dac#npm:8.18.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -25555,6 +25540,13 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:8.18.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/ws-npm-8.18.1-369b0f5491-10c0.zip/node_modules/ws/",\
+        "packageDependencies": [\
+          ["ws", "npm:8.18.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["virtual:0e2fea89b074c2763a660aa2249258d4562bb5d623cc65472f8068587cbe73e6672bf910f600fffcf2aa59f2a2dc7ba21da63ec2f626b724b55b6da911e4308e#npm:7.5.10", {\
         "packageLocation": "./.yarn/__virtual__/ws-virtual-ec0f9c4259/7/runner/cache/others/berry/cache/ws-npm-7.5.10-878ccb886b-10c0.zip/node_modules/ws/",\
         "packageDependencies": [\
@@ -25613,6 +25605,23 @@ const RAW_RUNTIME_STATE =
           ["@types/bufferutil", null],\
           ["@types/utf-8-validate", null],\
           ["async-limiter", "npm:1.0.1"],\
+          ["bufferutil", null],\
+          ["utf-8-validate", null]\
+        ],\
+        "packagePeers": [\
+          "@types/bufferutil",\
+          "@types/utf-8-validate",\
+          "bufferutil",\
+          "utf-8-validate"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:5eaf660359743d644f14a3ce91783d61c15c56def6b885ec9a2164c61e42d340507660ea7b70b641f662c0187957f38436e9527a6e714c99b4df9d68a9f30dac#npm:8.18.1", {\
+        "packageLocation": "./.yarn/__virtual__/ws-virtual-66647514af/7/runner/cache/others/berry/cache/ws-npm-8.18.1-369b0f5491-10c0.zip/node_modules/ws/",\
+        "packageDependencies": [\
+          ["ws", "virtual:5eaf660359743d644f14a3ce91783d61c15c56def6b885ec9a2164c61e42d340507660ea7b70b641f662c0187957f38436e9527a6e714c99b4df9d68a9f30dac#npm:8.18.1"],\
+          ["@types/bufferutil", null],\
+          ["@types/utf-8-validate", null],\
           ["bufferutil", null],\
           ["utf-8-validate", null]\
         ],\
@@ -25808,6 +25817,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/zod-npm-3.23.8-11c49c85b5-10c0.zip/node_modules/zod/",\
         "packageDependencies": [\
           ["zod", "npm:3.23.8"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:3.24.2", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/zod-npm-3.24.2-ab80dc0969-10c0.zip/node_modules/zod/",\
+        "packageDependencies": [\
+          ["zod", "npm:3.24.2"]\
         ],\
         "linkType": "HARD"\
       }]\
