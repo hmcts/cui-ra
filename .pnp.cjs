@@ -52,7 +52,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:29.5.14"],\
           ["@types/lodash", "npm:4.17.16"],\
-          ["@types/node", "npm:22.13.10"],\
+          ["@types/node", "npm:22.13.11"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.6"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -128,7 +128,7 @@ const RAW_RUNTIME_STATE =
           ["stylelint", "npm:16.16.0"],\
           ["stylelint-config-standard", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:37.0.0"],\
           ["stylelint-config-standard-scss", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:14.0.0"],\
-          ["supertest", "npm:7.0.0"],\
+          ["supertest", "npm:7.1.0"],\
           ["traverse", "npm:0.6.11"],\
           ["ts-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.2.6"],\
           ["ts-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.5.2"],\
@@ -6785,10 +6785,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:22.13.10", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-node-npm-22.13.10-af5336e62b-10c0.zip/node_modules/@types/node/",\
+      ["npm:22.13.11", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-node-npm-22.13.11-07edd664a8-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:22.13.10"],\
+          ["@types/node", "npm:22.13.11"],\
           ["undici-types", "npm:6.20.0"]\
         ],\
         "linkType": "HARD"\
@@ -10962,7 +10962,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:29.5.14"],\
           ["@types/lodash", "npm:4.17.16"],\
-          ["@types/node", "npm:22.13.10"],\
+          ["@types/node", "npm:22.13.11"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.6"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -11038,7 +11038,7 @@ const RAW_RUNTIME_STATE =
           ["stylelint", "npm:16.16.0"],\
           ["stylelint-config-standard", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:37.0.0"],\
           ["stylelint-config-standard-scss", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:14.0.0"],\
-          ["supertest", "npm:7.0.0"],\
+          ["supertest", "npm:7.1.0"],\
           ["traverse", "npm:0.6.11"],\
           ["ts-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.2.6"],\
           ["ts-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.5.2"],\
@@ -22822,10 +22822,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["supertest", [\
-      ["npm:7.0.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/supertest-npm-7.0.0-8060c32e4d-10c0.zip/node_modules/supertest/",\
+      ["npm:7.1.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/supertest-npm-7.1.0-76eb506602-10c0.zip/node_modules/supertest/",\
         "packageDependencies": [\
-          ["supertest", "npm:7.0.0"],\
+          ["supertest", "npm:7.1.0"],\
           ["methods", "npm:1.1.2"],\
           ["superagent", "npm:9.0.1"]\
         ],\
@@ -23485,7 +23485,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.3"],\
-          ["@types/node", "npm:22.13.10"],\
+          ["@types/node", "npm:22.13.11"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
