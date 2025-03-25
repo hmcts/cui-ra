@@ -122,7 +122,7 @@ const RAW_RUNTIME_STATE =
           ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.5"],\
           ["serve-favicon", "npm:2.5.0"],\
           ["session-file-store", "npm:1.5.0"],\
-          ["sinon", "npm:19.0.5"],\
+          ["sinon", "npm:20.0.0"],\
           ["striptags", "npm:3.2.0"],\
           ["style-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:4.0.0"],\
           ["stylelint", "npm:16.16.0"],\
@@ -6299,14 +6299,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:13.0.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@sinonjs-fake-timers-npm-13.0.1-d483530592-10c0.zip/node_modules/@sinonjs/fake-timers/",\
-        "packageDependencies": [\
-          ["@sinonjs/fake-timers", "npm:13.0.1"],\
-          ["@sinonjs/commons", "npm:3.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:13.0.5", {\
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/@sinonjs-fake-timers-npm-13.0.5-b25ae4bd2b-10c0.zip/node_modules/@sinonjs/fake-timers/",\
         "packageDependencies": [\
@@ -6324,15 +6316,6 @@ const RAW_RUNTIME_STATE =
           ["@sinonjs/commons", "npm:3.0.1"],\
           ["lodash.get", "npm:4.4.2"],\
           ["type-detect", "npm:4.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@sinonjs/text-encoding", [\
-      ["npm:0.7.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@sinonjs-text-encoding-npm-0.7.3-3d861e5a19-10c0.zip/node_modules/@sinonjs/text-encoding/",\
-        "packageDependencies": [\
-          ["@sinonjs/text-encoding", "npm:0.7.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11032,7 +11015,7 @@ const RAW_RUNTIME_STATE =
           ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.5"],\
           ["serve-favicon", "npm:2.5.0"],\
           ["session-file-store", "npm:1.5.0"],\
-          ["sinon", "npm:19.0.5"],\
+          ["sinon", "npm:20.0.0"],\
           ["striptags", "npm:3.2.0"],\
           ["style-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:4.0.0"],\
           ["stylelint", "npm:16.16.0"],\
@@ -16985,15 +16968,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["just-extend", [\
-      ["npm:6.2.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/just-extend-npm-6.2.0-25e57ed812-10c0.zip/node_modules/just-extend/",\
-        "packageDependencies": [\
-          ["just-extend", "npm:6.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["jwa", [\
       ["npm:1.4.1", {\
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/jwa-npm-1.4.1-4f19d6572c-10c0.zip/node_modules/jwa/",\
@@ -18677,20 +18651,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["nise", [\
-      ["npm:6.1.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/nise-npm-6.1.1-78045699a5-10c0.zip/node_modules/nise/",\
-        "packageDependencies": [\
-          ["nise", "npm:6.1.1"],\
-          ["@sinonjs/commons", "npm:3.0.1"],\
-          ["@sinonjs/fake-timers", "npm:13.0.1"],\
-          ["@sinonjs/text-encoding", "npm:0.7.3"],\
-          ["just-extend", "npm:6.2.0"],\
-          ["path-to-regexp", "npm:8.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["no-case", [\
       ["npm:3.0.4", {\
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/no-case-npm-3.0.4-12884c3d98-10c0.zip/node_modules/no-case/",\
@@ -19651,13 +19611,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/path-to-regexp-npm-0.1.12-a9bf1de212-10c0.zip/node_modules/path-to-regexp/",\
         "packageDependencies": [\
           ["path-to-regexp", "npm:0.1.12"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:8.1.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/path-to-regexp-npm-8.1.0-a82a7a7724-10c0.zip/node_modules/path-to-regexp/",\
-        "packageDependencies": [\
-          ["path-to-regexp", "npm:8.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -21950,15 +21903,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["sinon", [\
-      ["npm:19.0.5", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/sinon-npm-19.0.5-698c38b345-10c0.zip/node_modules/sinon/",\
+      ["npm:20.0.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/sinon-npm-20.0.0-7df4ef86e3-10c0.zip/node_modules/sinon/",\
         "packageDependencies": [\
-          ["sinon", "npm:19.0.5"],\
+          ["sinon", "npm:20.0.0"],\
           ["@sinonjs/commons", "npm:3.0.1"],\
           ["@sinonjs/fake-timers", "npm:13.0.5"],\
           ["@sinonjs/samsam", "npm:8.0.2"],\
           ["diff", "npm:7.0.0"],\
-          ["nise", "npm:6.1.1"],\
           ["supports-color", "npm:7.2.0"]\
         ],\
         "linkType": "HARD"\
