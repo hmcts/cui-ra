@@ -5,6 +5,7 @@ import { randomUUID } from 'crypto';
 
 const googleAnalyticsDomain = '*.google-analytics.com';
 const dynatraqceDomain = '*.dynatrace.com';
+const googleTagManager = '*.googletagmanager.com';
 
 const self = "'self'";
 
@@ -27,6 +28,7 @@ export class Helmet {
       self,
       googleAnalyticsDomain,
       dynatraqceDomain,
+      googleTagManager,
       "'sha256-GUQ5ad8JK5KmEWmROf3LZd9ge94daqNvd8xy9YS1iDw='",
       `'nonce-${nonce}'`,
     ];
@@ -50,10 +52,10 @@ export class Helmet {
       helmet({
         contentSecurityPolicy: {
           directives: {
-            connectSrc: [self, dynatraqceDomain, googleAnalyticsDomain],
+            connectSrc: [self, dynatraqceDomain, googleAnalyticsDomain, googleTagManager],
             defaultSrc: ["'none'"],
             fontSrc: [self, 'data:'],
-            imgSrc: [self, googleAnalyticsDomain],
+            imgSrc: [self, googleAnalyticsDomain, googleTagManager],
             objectSrc: [self],
             scriptSrc,
             styleSrc: [self],
