@@ -2301,7 +2301,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@codeceptjs/configure@npm:1.0.3, @codeceptjs/configure@npm:^1.0.1":
+"@codeceptjs/configure@npm:1.0.3":
   version: 1.0.3
   resolution: "@codeceptjs/configure@npm:1.0.3"
   dependencies:
@@ -2310,6 +2310,18 @@ __metadata:
   peerDependencies:
     codeceptjs: ">=2.3.3 <100.0.0"
   checksum: 10c0/096c74790caa000796def03e27648ea46e40a483a8fdf9a178f4e956d355ed316793ff678a2b77e1007260b70a0a982cdc16bb1fe8b650521b99b340a0e25ef8
+  languageName: node
+  linkType: hard
+
+"@codeceptjs/configure@npm:^1.0.1":
+  version: 1.0.4
+  resolution: "@codeceptjs/configure@npm:1.0.4"
+  dependencies:
+    lodash.merge: "npm:^4.6.2"
+    lodash.mergewith: "npm:^4.6.2"
+  peerDependencies:
+    codeceptjs: ">=2.3.3 <100.0.0"
+  checksum: 10c0/e303efafbb098cdcf7104fab2050cc14ced069db0340122fca81cd34e7e875fb8cc01035071ca9f780d07b79d5756c65d429e9794a0d2e51c9c4535252ae13ae
   languageName: node
   linkType: hard
 
@@ -4384,12 +4396,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:22.13.17":
-  version: 22.13.17
-  resolution: "@types/node@npm:22.13.17"
+"@types/node@npm:22.14.0":
+  version: 22.14.0
+  resolution: "@types/node@npm:22.14.0"
   dependencies:
-    undici-types: "npm:~6.20.0"
-  checksum: 10c0/77a052fec0fe02f60557e1c5f3f28eb09cd9bee426be88328a94689150a3c0df5b4b6b69fad28157fb34521693dad0b311ecd7f613845d681ff973991310c20e
+    undici-types: "npm:~6.21.0"
+  checksum: 10c0/9d79f3fa1af9c2c869514f419c4a4905b34c10e12915582fd1784868ac4e74c6d306cf5eb47ef889b6750ab85a31be96618227b86739c4a3e0b1c15063f384c6
   languageName: node
   linkType: hard
 
@@ -4993,11 +5005,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wix-pilot/core@npm:^3.1.6":
-  version: 3.1.6
-  resolution: "@wix-pilot/core@npm:3.1.6"
+"@wix-pilot/core@npm:^3.2.2":
+  version: 3.2.2
+  resolution: "@wix-pilot/core@npm:3.2.2"
   dependencies:
-    ora: "npm:^5.4.1"
     pngjs: "npm:^7.0.0"
     winston: "npm:^3.17.0"
   peerDependencies:
@@ -5005,7 +5016,7 @@ __metadata:
   peerDependenciesMeta:
     expect:
       optional: true
-  checksum: 10c0/822ba56028577dec7a61ddeb1d0a09cff75f0723e7141be57d8af816ef9cb3a7866a6bc646b3c9a372dbcf3ec2694a3a268e5863f83daff050ea7b054a74a50b
+  checksum: 10c0/5ab62828ef6cd6a6047bfa58f6ef03b2fcacf3f3c36ebf90d72072a552dbbe2e405d971b243268c446241be1fa9a45650aa34abb813b2c022ccb66d9cc3ae44c
   languageName: node
   linkType: hard
 
@@ -7745,7 +7756,7 @@ __metadata:
     "@types/i18n": "npm:^0.13.12"
     "@types/jest": "npm:^29.5.12"
     "@types/lodash": "npm:^4.17.0"
-    "@types/node": "npm:22.13.17"
+    "@types/node": "npm:22.14.0"
     "@types/nunjucks": "npm:^3.2.6"
     "@types/require-directory": "npm:^2.1.6"
     "@types/serve-favicon": "npm:^2.5.7"
@@ -8186,10 +8197,10 @@ __metadata:
   linkType: hard
 
 "detox@npm:^20.22.2":
-  version: 20.36.3
-  resolution: "detox@npm:20.36.3"
+  version: 20.36.4
+  resolution: "detox@npm:20.36.4"
   dependencies:
-    "@wix-pilot/core": "npm:^3.1.6"
+    "@wix-pilot/core": "npm:^3.2.2"
     "@wix-pilot/detox": "npm:^1.0.11"
     ajv: "npm:^8.6.3"
     bunyan: "npm:^1.8.12"
@@ -8233,7 +8244,7 @@ __metadata:
       optional: true
   bin:
     detox: local-cli/cli.js
-  checksum: 10c0/b291822c332766e56c4fe770a36b6f8004fbbb6b31dd582a914fd03f47332551c0694bfe53db99b720e9e9c9766861cef706343f67f909a3df4e583b114c413b
+  checksum: 10c0/f112f5f536fb50e35d0f7ba2975a8423e78a5ec6bce9b4680731a43f8a9326cb6425b0cd669f40967f0f81c3178747302a72700a3e2a94ca2c032e04b719ac79
   languageName: node
   linkType: hard
 
@@ -17062,8 +17073,8 @@ __metadata:
   linkType: hard
 
 "sass@npm:^1.75.0":
-  version: 1.86.1
-  resolution: "sass@npm:1.86.1"
+  version: 1.86.2
+  resolution: "sass@npm:1.86.2"
   dependencies:
     "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^4.0.0"
@@ -17074,7 +17085,7 @@ __metadata:
       optional: true
   bin:
     sass: sass.js
-  checksum: 10c0/16733c7cd7ebb180d12c7aa8fdf4647de857901ab55c369f810b3654aa1c4cd61bb0274981d7792f0ccdfb29755aab17afc13c9daad69d8ffc4d761a8314c93a
+  checksum: 10c0/fe40b63a19e867f460369d495bcdc979598c0b105c9d52164a7e9cc4e12ab91c27337702a1b58575f7da8fd08256b85fd2f34cc8275eb7c57699bfc5029f54a3
   languageName: node
   linkType: hard
 
@@ -19300,10 +19311,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~6.20.0":
-  version: 6.20.0
-  resolution: "undici-types@npm:6.20.0"
-  checksum: 10c0/68e659a98898d6a836a9a59e6adf14a5d799707f5ea629433e025ac90d239f75e408e2e5ff086afc3cace26f8b26ee52155293564593fbb4a2f666af57fc59bf
+"undici-types@npm:~6.21.0":
+  version: 6.21.0
+  resolution: "undici-types@npm:6.21.0"
+  checksum: 10c0/c01ed51829b10aa72fc3ce64b747f8e74ae9b60eafa19a7b46ef624403508a54c526ffab06a14a26b3120d055e1104d7abe7c9017e83ced038ea5cf52f8d5e04
   languageName: node
   linkType: hard
 
