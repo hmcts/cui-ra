@@ -6,3 +6,4 @@ nodejs:
   devmemoryLimits: 1024Mi
   environment:
     REDIS_HOST: 'cui-ra-{{ .Values.global.environment }}.redis.cache.windows.net'
+    DEMO_ENABLED: 'true'
