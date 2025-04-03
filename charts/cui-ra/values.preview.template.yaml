@@ -5,4 +5,5 @@ nodejs:
   devmemoryRequests: 768Mi
   devmemoryLimits: 1024Mi
   environment:
+    DEMO_ENABLED: 'true'
     ENV_INSTANCE: preview
