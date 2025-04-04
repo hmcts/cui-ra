@@ -31,6 +31,7 @@ export class Helmet {
       googleTagManager,
       "'sha256-GUQ5ad8JK5KmEWmROf3LZd9ge94daqNvd8xy9YS1iDw='",
       `'nonce-${nonce}'`,
+      
     ];
 
     /*if (this.developmentMode) {
@@ -53,7 +54,7 @@ export class Helmet {
         contentSecurityPolicy: {
           directives: {
             connectSrc: [self, dynatraqceDomain, googleAnalyticsDomain, googleTagManager],
-            defaultSrc: ["'none'"],
+            defaultSrc: ["'self'"],
             fontSrc: [self, 'data:'],
             imgSrc: [self, googleAnalyticsDomain, googleTagManager],
             objectSrc: [self],
