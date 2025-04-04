@@ -13,7 +13,7 @@ const self = "'self'";
  * Module that enables helmet in the application
  */
 export class Helmet {
-  private readonly developmentMode: boolean;
+  //private readonly developmentMode: boolean;
 
   constructor(developmentMode: boolean) {
     this.developmentMode = developmentMode;
