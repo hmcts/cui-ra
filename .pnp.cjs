@@ -33,7 +33,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/eslint-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.27.0"],\
           ["@babel/preset-env", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.26.9"],\
           ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
-          ["@codeceptjs/configure", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.4"],\
+          ["@codeceptjs/configure", "virtual:a4dfd5249395ba27fd4fee2c0247b5de5614b74521312830ec126fd8af59e498ad73524cfc1036b3eb1901168be2efa802dfffbd0e8e7293ba9274f0c1d3f09e#npm:1.0.3"],\
           ["@eslint/js", "npm:9.23.0"],\
           ["@hmcts/cookie-manager", "npm:1.0.0"],\
           ["@hmcts/info-provider", "npm:1.2.3"],\
@@ -4040,28 +4040,6 @@ const RAW_RUNTIME_STATE =
           ["@codeceptjs/configure", "npm:1.0.3"]\
         ],\
         "linkType": "SOFT"\
-      }],\
-      ["npm:1.0.4", {\
-        "packageLocation": "../../.yarn/berry/cache/@codeceptjs-configure-npm-1.0.4-794427cd72-10c0.zip/node_modules/@codeceptjs/configure/",\
-        "packageDependencies": [\
-          ["@codeceptjs/configure", "npm:1.0.4"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.4", {\
-        "packageLocation": "./.yarn/__virtual__/@codeceptjs-configure-virtual-9c054667ed/3/.yarn/berry/cache/@codeceptjs-configure-npm-1.0.4-794427cd72-10c0.zip/node_modules/@codeceptjs/configure/",\
-        "packageDependencies": [\
-          ["@codeceptjs/configure", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.4"],\
-          ["@types/codeceptjs", null],\
-          ["codeceptjs", "npm:3.7.3"],\
-          ["lodash.merge", "npm:4.6.2"],\
-          ["lodash.mergewith", "npm:4.6.2"]\
-        ],\
-        "packagePeers": [\
-          "@types/codeceptjs",\
-          "codeceptjs"\
-        ],\
-        "linkType": "HARD"\
       }],\
       ["virtual:a4dfd5249395ba27fd4fee2c0247b5de5614b74521312830ec126fd8af59e498ad73524cfc1036b3eb1901168be2efa802dfffbd0e8e7293ba9274f0c1d3f09e#npm:1.0.3", {\
         "packageLocation": "./.yarn/__virtual__/@codeceptjs-configure-virtual-f6ad2ef915/3/.yarn/berry/cache/@codeceptjs-configure-npm-1.0.3-456ecfd32e-10c0.zip/node_modules/@codeceptjs/configure/",\
@@ -10792,7 +10770,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/eslint-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.27.0"],\
           ["@babel/preset-env", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.26.9"],\
           ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
-          ["@codeceptjs/configure", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.4"],\
+          ["@codeceptjs/configure", "virtual:a4dfd5249395ba27fd4fee2c0247b5de5614b74521312830ec126fd8af59e498ad73524cfc1036b3eb1901168be2efa802dfffbd0e8e7293ba9274f0c1d3f09e#npm:1.0.3"],\
           ["@eslint/js", "npm:9.23.0"],\
           ["@hmcts/cookie-manager", "npm:1.0.0"],\
           ["@hmcts/info-provider", "npm:1.2.3"],\

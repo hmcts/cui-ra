@@ -2313,18 +2313,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@codeceptjs/configure@npm:^1.0.1":
-  version: 1.0.4
-  resolution: "@codeceptjs/configure@npm:1.0.4"
-  dependencies:
-    lodash.merge: "npm:^4.6.2"
-    lodash.mergewith: "npm:^4.6.2"
-  peerDependencies:
-    codeceptjs: ">=2.3.3 <100.0.0"
-  checksum: 10c0/e303efafbb098cdcf7104fab2050cc14ced069db0340122fca81cd34e7e875fb8cc01035071ca9f780d07b79d5756c65d429e9794a0d2e51c9c4535252ae13ae
-  languageName: node
-  linkType: hard
-
 "@codeceptjs/detox-helper@npm:1.1.7":
   version: 1.1.7
   resolution: "@codeceptjs/detox-helper@npm:1.1.7"
