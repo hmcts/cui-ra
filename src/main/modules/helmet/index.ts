@@ -13,11 +13,11 @@ const self = "'self'";
  * Module that enables helmet in the application
  */
 export class Helmet {
-  //private readonly developmentMode: boolean;
+  /*private readonly developmentMode: boolean;
 
   constructor(developmentMode: boolean) {
     this.developmentMode = developmentMode;
-  }
+  }*/
 
   public enableFor(app: express.Express): void {
     //create nonce for inline scripts and styles
