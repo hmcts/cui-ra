@@ -7,7 +7,6 @@
   "demo": {
     "enabled": true
   },
-  "isDev": true,
   "serviceName": "cui_ra",
   "session": {
     "secret": "local",
