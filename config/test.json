@@ -2,6 +2,7 @@
   "demo": {
     "enabled": true
   },
+  "isDev": true,
   "session": {
     "secure": false
   },
