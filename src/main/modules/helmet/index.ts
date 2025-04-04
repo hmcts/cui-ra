@@ -53,11 +53,11 @@ export class Helmet {
         contentSecurityPolicy: {
           directives: {
             connectSrc: [self, dynatraqceDomain, googleAnalyticsDomain, googleTagManager],
-            defaultSrc: ["'self'"],
+            defaultSrc: [self],
             fontSrc: [self, 'data:'],
             imgSrc: [self, googleAnalyticsDomain, googleTagManager],
             objectSrc: [self],
-            scriptSrc,
+            scriptSrc: scriptSrc,
             styleSrc: [self],
             manifestSrc: [self],
           },
