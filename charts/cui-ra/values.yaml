@@ -19,7 +19,7 @@ nodejs:
         - s2s-secret
         - redis-access-key
   environment:
-    DEMO_ENABLED: 'false'
+    DEMO_ENABLED: 'true'
     ENV_INSTANCE: '{{ .Values.global.environment }}'
     REDIS_HOST: cui-ra-{{ .Values.global.environment }}.redis.cache.windows.net
     REDIS_PORT: 6380
