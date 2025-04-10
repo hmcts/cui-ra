@@ -155,7 +155,7 @@
     "*.{js,ts}": "eslint --cache --fix",
     "*.{js,ts,css,md,html,json}": "prettier --write"
   },
-  "packageManager": "yarn@4.8.1",
+  "packageManager": "yarn@4.9.0",
   "resolutions": {
     "axios": "^1.7.4",
     "detox": "^20.22.2",
