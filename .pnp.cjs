@@ -8502,6 +8502,16 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["axios", [\
+      ["npm:1.8.3", {\
+        "packageLocation": "../../.yarn/berry/cache/axios-npm-1.8.3-b472059d00-10c0.zip/node_modules/axios/",\
+        "packageDependencies": [\
+          ["axios", "npm:1.8.3"],\
+          ["follow-redirects", "virtual:007b36cf567c5c0b0b89b54b5fd89ec08f3a2a884d74d5c6d450b18bf5cf65f53734a0c801662b1c2259c9afe08585fed46b3182771fef81b1aa08fab6405199#npm:1.15.6"],\
+          ["form-data", "npm:4.0.0"],\
+          ["proxy-from-env", "npm:1.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:1.9.0", {\
         "packageLocation": "../../.yarn/berry/cache/axios-npm-1.9.0-007b36cf56-10c0.zip/node_modules/axios/",\
         "packageDependencies": [\
@@ -10040,7 +10050,7 @@ const RAW_RUNTIME_STATE =
           ["@xmldom/xmldom", "npm:0.9.8"],\
           ["acorn", "npm:8.14.1"],\
           ["arrify", "npm:3.0.0"],\
-          ["axios", "npm:1.9.0"],\
+          ["axios", "npm:1.8.3"],\
           ["chalk", "npm:4.1.2"],\
           ["cheerio", "npm:1.0.0"],\
           ["codeceptjs", "npm:3.7.3"],\
