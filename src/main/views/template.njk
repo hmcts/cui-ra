@@ -28,8 +28,7 @@
       {{ govukHeader({
         serviceName: _t('header.title'),
         homepageUrl: _t('header.url'),
-        navigation: [],
-        classes: "govuk-header--custom"
+        serviceUrl: route.CANCEL
       }) }}
 
       {% if hasSession %}
