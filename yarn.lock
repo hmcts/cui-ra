@@ -8483,7 +8483,7 @@ __metadata:
     pa11y: "npm:^8.0.0"
     playwright: "npm:^1.43.1"
     prettier: "npm:^3.2.5"
-    puppeteer: "npm:^24.7.2"
+    puppeteer: "npm:^24.0.0"
     redis: "npm:^4.6.13"
     reflect-metadata: "npm:^0.2.2"
     require-directory: "npm:^2.1.1"
@@ -16911,7 +16911,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer@npm:^24.7.2":
+"puppeteer@npm:^24.0.0":
   version: 24.8.2
   resolution: "puppeteer@npm:24.8.2"
   dependencies:
