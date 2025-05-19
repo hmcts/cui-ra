@@ -51,8 +51,7 @@
             </div>
           </li>
         {% endfor %}
-      </ul>
-
+        </ul>
         {% endif %}
 
         {# Newly requested #}
@@ -95,7 +94,8 @@
         <ul class="govuk-task-list">
         {% for item in notRequired %}
           <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <div class="govuk-task-list__name-and-hint" id="add-name-{{ item.id }}">{% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
+            <div class="govuk-task-list__name-and-hint" id="add-name-{{ item.id }}">
+            {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
             {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
             {{ item.value.path.slice(-1).pop().name }}
             {% endif %}
