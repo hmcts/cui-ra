@@ -115,9 +115,15 @@
         </ul>
         {% endif %}
 
-        <button id="review-action-new" href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: masterId } ) }}?change=true&new=true" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    <form method="GET" action="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: masterId } ) }}">
+       {{ csrfProtection(csrfToken) }}
+        <input type="hidden" name="change" value="true">
+        <input type="hidden" name="new" value="true">
+        <button id="review-action-new" type="submit"  data-prevent-double-click="true" class="govuk-button govuk-button--secondary" data-module="govuk-button">
             {{ _t("review.actions.new") }}
         </button>
+    </form>
+
         <form method="POST">
             {{ csrfProtection(csrfToken) }}
             <div class="govuk-button-group">
