@@ -95,11 +95,11 @@
         {% for item in notRequired %}
           <li class="govuk-task-list__item govuk-task-list__item--with-link">
             <div class="govuk-task-list__name-and-hint" id="add-name-{{ item.id }}">
-            {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
-            {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
-            {{ item.value.path.slice(-1).pop().name }}
-            {% endif %}
-             </div>
+              {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
+              {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
+                {{ item.value.path.slice(-1).pop().name }}
+              {% endif %}
+            </div>
             <div class="govuk-task-list__status">
               <a id="add-{{ item.id }}" class="govuk-link govuk-link--no-visited-state" href="{{ route.SET_REQUESTED }}?id={{ item.id }}" aria-labelledby="add-{{ item.id }} add-name-{{ item.id }}"> {{ _t("review.actions.add") }}</a>
             </div>
