@@ -40,19 +40,17 @@
         <ul class="govuk-task-list">
         {% for item in requested %}
           <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <div class="govuk-task-list__name-and-hint">
-              <span id="remove-name-{{ item.id }}">{% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
+            <div class="govuk-task-list__name-and-hint" id="remove-name-{{ item.id }}">
+              {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
               {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
-                <br/>
                 {{ item.value.path.slice(-1).pop().name }}
               {% endif %}
-              </span>
             </div>
             <div class="govuk-task-list__status">
-              <a aria-labelledby="remove-{{ item.id }} remove-name-{{ item.id }}" id="remove-{{ item.id }}" class='govuk-link govuk-link--no-visited-state' href="{{ route.SET_INACTIVE }}?id={{ item.id }}">{{ _t('review.actions.remove') }}</a>
+              <a class="govuk-link govuk-link--no-visited-state" id="remove-{{ item.id }}" aria-labelledby="remove-{{ item.id }} remove-name-{{ item.id }}" href="{{ route.SET_INACTIVE }}?id={{ item.id }}">{{ _t('review.actions.remove') }}</a>
             </div>
           </li>
-          {% endfor %}
+        {% endfor %}
         </ul>
         {% endif %}
 
@@ -69,24 +67,21 @@
           {% endif %}
           <li class="govuk-task-list__item govuk-task-list__item--with-link">
             <div class="govuk-task-list__name-and-hint">
-              <span id="change-name-{{ item.id }}">{% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
+              <div id="change-name-{{ item.id }}">{% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
               {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
-                <br/>
-                 {% if welsh === false %}{{ item.value.otherDescription }}{% else %}{{ item.value.otherDescription_cy }}{% endif %}
+                {% if welsh === false %}{{ item.value.otherDescription }}{% else %}{{ item.value.otherDescription_cy }}{% endif %}
               {% endif %}
-              </span>
-              <br/>
-              <span id="change-value-{{ item.id }}" class="govuk-hint">
+              </div>
+              <div id="change-value-{{ item.id }}" class="govuk-hint">
               {% if item._listOfValuesLength %}
                 {% if welsh === false %}{{ item.value.subTypeValue }}{% else %}{{ item.value.subTypeValue_cy }}{% endif %}
               {% else %}
                 {% if welsh === false %}{{ item.value.flagComment }}{% else %}{{ item.value.flagComment_cy }}{% endif %}
               {% endif %}
-              </span>
+             </div>
             </div>
             <div class="govuk-task-list__status">
               <a aria-labelledby="change-{{ item.id }} change-name-{{ item.id }} change-value-{{ item.id }}" id="change-{{ item.id }}" class='govuk-link govuk-link--no-visited-state' href="{{ _route( route.JOURNEY_DISPLAY_FLAGS, { id: page } ) }}?change=true">{{ _t("review.actions.change") }}</a>
-            </div>
           </li>
           {% endfor %}
         </ul>
@@ -99,16 +94,14 @@
         <ul class="govuk-task-list">
         {% for item in notRequired %}
           <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <div class="govuk-task-list__name-and-hint">
-              <span id="add-name-{{ item.id }}">{% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
+            <div class="govuk-task-list__name-and-hint" id="add-name-{{ item.id }}">
+              {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
               {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
-                <br/>
-              {{ item.value.path.slice(-1).pop().name }}
+                {{ item.value.path.slice(-1).pop().name }}
               {% endif %}
-              </span>
             </div>
             <div class="govuk-task-list__status">
-              <a aria-labelledby="add-{{ item.id }} add-name-{{ item.id }}" id="add-{{ item.id }}" class='govuk-link govuk-link--no-visited-state' href="{{ route.SET_REQUESTED }}?id={{ item.id }}">{{ _t("review.actions.add") }}</a>
+              <a id="add-{{ item.id }}" class="govuk-link govuk-link--no-visited-state" href="{{ route.SET_REQUESTED }}?id={{ item.id }}" aria-labelledby="add-{{ item.id }} add-name-{{ item.id }}"> {{ _t("review.actions.add") }}</a>
             </div>
           </li>
         {% endfor %}
