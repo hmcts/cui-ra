@@ -6864,7 +6864,7 @@ __metadata:
   resolution: "brace-expansion@npm:2.0.2"
   dependencies:
     balanced-match: "npm:^1.0.0"
-  checksum: 10/01dff195e3646bc4b0d27b63d9bab84d2ebc06121ff5013ad6e5356daa5a9d6b60fa26cf73c74797f2dc3fbec112af13578d51f75228c1112b26c790a87b0488
+  checksum: 10c0/6d117a4c793488af86b83172deb6af143e94c17bc53b0b3cec259733923b4ca84679d506ac261f4ba3c7ed37c46018e2ff442f9ce453af8643ecd64f4a54e6cf
   languageName: node
   linkType: hard
 
@@ -7947,12 +7947,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"config@npm:^3.3.11":
-  version: 3.3.12
-  resolution: "config@npm:3.3.12"
+"config@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "config@npm:4.0.0"
   dependencies:
     json5: "npm:^2.2.3"
-  checksum: 10c0/496b3ef740754527cbc59d11df234f5be5b5f44511d14ca7fa6117fda0959ccd4cc6d8da2d94cb0dfcdf77d9d7aaaa34558d6dcce0a7860a3a8cf8a54c77b237
+  checksum: 10c0/8dee527a8aefa02eebc7cabcb793608619010cf9c8645aae1dff9dba3ee41ff49790ad8b7267952b7a6d9a1bae5e724e0fa9f3da44be1f9b8abb035df1d7a361
   languageName: node
   linkType: hard
 
@@ -8428,7 +8428,7 @@ __metadata:
     class-transformer: "npm:^0.5.1"
     class-validator: "npm:^0.14.1"
     codeceptjs: "npm:^3.6.5"
-    config: "npm:^3.3.11"
+    config: "npm:^4.0.0"
     connect-redis: "npm:^8.0.0"
     cookie-parser: "npm:^1.4.6"
     copy-webpack-plugin: "npm:9.1.0"
