@@ -38,7 +38,7 @@ const RAW_RUNTIME_STATE =
           ["@eslint/js", "npm:9.26.0"],\
           ["@hmcts/cookie-manager", "npm:1.0.0"],\
           ["@hmcts/info-provider", "npm:1.2.3"],\
-          ["@hmcts/nodejs-healthcheck", "npm:1.8.5"],\
+          ["@hmcts/nodejs-healthcheck", "npm:1.8.6"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
           ["@hmcts/properties-volume", "npm:1.2.0"],\
           ["@types/body-parser", "npm:1.19.5"],\
@@ -5420,13 +5420,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@hmcts/nodejs-healthcheck", [\
-      ["npm:1.8.5", {\
-        "packageLocation": "../../.yarn/berry/cache/@hmcts-nodejs-healthcheck-npm-1.8.5-fa7409827a-10c0.zip/node_modules/@hmcts/nodejs-healthcheck/",\
+      ["npm:1.8.6", {\
+        "packageLocation": "../../.yarn/berry/cache/@hmcts-nodejs-healthcheck-npm-1.8.6-da4b651ec1-10c0.zip/node_modules/@hmcts/nodejs-healthcheck/",\
         "packageDependencies": [\
-          ["@hmcts/nodejs-healthcheck", "npm:1.8.5"],\
+          ["@hmcts/nodejs-healthcheck", "npm:1.8.6"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
           ["js-yaml", "npm:4.1.0"],\
-          ["superagent", "npm:9.0.1"]\
+          ["superagent", "npm:10.2.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -10047,11 +10047,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["brace-expansion", [\
-      ["npm:2.0.1", {\
-        "packageLocation": "../../.yarn/berry/cache/brace-expansion-npm-2.0.1-17aa2616f9-10c0.zip/node_modules/brace-expansion/",\
+      ["npm:2.0.2", {\
+        "packageLocation": "../../.yarn/berry/cache/brace-expansion-npm-2.0.2-bc7f134bbc-10c0.zip/node_modules/brace-expansion/",\
         "packageDependencies": [\
           ["balanced-match", "npm:1.0.2"],\
-          ["brace-expansion", "npm:2.0.1"]\
+          ["brace-expansion", "npm:2.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11761,7 +11761,7 @@ const RAW_RUNTIME_STATE =
           ["@eslint/js", "npm:9.26.0"],\
           ["@hmcts/cookie-manager", "npm:1.0.0"],\
           ["@hmcts/info-provider", "npm:1.2.3"],\
-          ["@hmcts/nodejs-healthcheck", "npm:1.8.5"],\
+          ["@hmcts/nodejs-healthcheck", "npm:1.8.6"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
           ["@hmcts/properties-volume", "npm:1.2.0"],\
           ["@types/body-parser", "npm:1.19.5"],\
@@ -19064,7 +19064,7 @@ const RAW_RUNTIME_STATE =
       ["npm:10.0.1", {\
         "packageLocation": "../../.yarn/berry/cache/minimatch-npm-10.0.1-eabcc0d3a0-10c0.zip/node_modules/minimatch/",\
         "packageDependencies": [\
-          ["brace-expansion", "npm:2.0.1"],\
+          ["brace-expansion", "npm:2.0.2"],\
           ["minimatch", "npm:10.0.1"]\
         ],\
         "linkType": "HARD"\
@@ -19072,7 +19072,7 @@ const RAW_RUNTIME_STATE =
       ["npm:3.1.2", {\
         "packageLocation": "../../.yarn/berry/cache/minimatch-npm-3.1.2-9405269906-10c0.zip/node_modules/minimatch/",\
         "packageDependencies": [\
-          ["brace-expansion", "npm:2.0.1"],\
+          ["brace-expansion", "npm:2.0.2"],\
           ["minimatch", "npm:3.1.2"]\
         ],\
         "linkType": "HARD"\
@@ -19080,7 +19080,7 @@ const RAW_RUNTIME_STATE =
       ["npm:5.1.0", {\
         "packageLocation": "../../.yarn/berry/cache/minimatch-npm-5.1.0-34f6240621-10c0.zip/node_modules/minimatch/",\
         "packageDependencies": [\
-          ["brace-expansion", "npm:2.0.1"],\
+          ["brace-expansion", "npm:2.0.2"],\
           ["minimatch", "npm:5.1.0"]\
         ],\
         "linkType": "HARD"\
@@ -19088,7 +19088,7 @@ const RAW_RUNTIME_STATE =
       ["npm:5.1.6", {\
         "packageLocation": "../../.yarn/berry/cache/minimatch-npm-5.1.6-1e71429f4c-10c0.zip/node_modules/minimatch/",\
         "packageDependencies": [\
-          ["brace-expansion", "npm:2.0.1"],\
+          ["brace-expansion", "npm:2.0.2"],\
           ["minimatch", "npm:5.1.6"]\
         ],\
         "linkType": "HARD"\
@@ -19096,7 +19096,7 @@ const RAW_RUNTIME_STATE =
       ["npm:9.0.1", {\
         "packageLocation": "../../.yarn/berry/cache/minimatch-npm-9.0.1-277fdc6fbd-10c0.zip/node_modules/minimatch/",\
         "packageDependencies": [\
-          ["brace-expansion", "npm:2.0.1"],\
+          ["brace-expansion", "npm:2.0.2"],\
           ["minimatch", "npm:9.0.1"]\
         ],\
         "linkType": "HARD"\
@@ -19104,7 +19104,7 @@ const RAW_RUNTIME_STATE =
       ["npm:9.0.4", {\
         "packageLocation": "../../.yarn/berry/cache/minimatch-npm-9.0.4-7be5a33efc-10c0.zip/node_modules/minimatch/",\
         "packageDependencies": [\
-          ["brace-expansion", "npm:2.0.1"],\
+          ["brace-expansion", "npm:2.0.2"],\
           ["minimatch", "npm:9.0.4"]\
         ],\
         "linkType": "HARD"\
@@ -23622,8 +23622,8 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:9.0.1", {\
-        "packageLocation": "../../.yarn/berry/cache/superagent-npm-9.0.1-de90d6ad61-10c0.zip/node_modules/superagent/",\
+      ["npm:10.2.2", {\
+        "packageLocation": "../../.yarn/berry/cache/superagent-npm-10.2.2-e8b673973b-10c0.zip/node_modules/superagent/",\
         "packageDependencies": [\
           ["component-emitter", "npm:1.3.0"],\
           ["cookiejar", "npm:2.1.4"],\
@@ -23634,8 +23634,7 @@ const RAW_RUNTIME_STATE =
           ["methods", "npm:1.1.2"],\
           ["mime", "npm:2.6.0"],\
           ["qs", "npm:6.12.1"],\
-          ["semver", "npm:7.6.0"],\
-          ["superagent", "npm:9.0.1"]\
+          ["superagent", "npm:10.2.2"]\
         ],\
         "linkType": "HARD"\
       }]\
