@@ -1,25 +1,25 @@
 const path = require('path');
 
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const rootExport = require.resolve('govuk-frontend');
-const root = path.resolve(rootExport, '..');
-const sass = path.resolve(root, 'all.scss');
-const javascript = path.resolve(root, 'all.js');
-const components = path.resolve(root, 'components');
-const macros = path.resolve(root, 'macros');
-const assets = path.resolve(root, 'assets');
-const images = path.resolve(assets, 'images');
-const fonts = path.resolve(assets, 'fonts');
+const root = path.dirname(rootExport);
+const sass = path.join(root, 'all.scss');
+const javascript = path.join(root, 'all.js');
+const components = path.join(root, 'components');
+const macros = path.join(root, 'macros');
+const assets = path.join(root, 'assets');
+const images = path.join(assets, 'images');
+const fonts = path.join(assets, 'fonts');
 
-const copyGovukTemplateAssets = new CopyWebpackPlugin({
+const copyGovukTemplateAssets = new CopyPlugin({
   patterns: [
     { from: images, to: 'assets/images' },
     { from: fonts, to: 'assets/fonts' },
-    { from: `${root}/template.njk`, to: '../views/govuk' },
-    { from: `${root}/components`, to: '../views/govuk/components' },
-    { from: `${root}/macros`, to: '../views/govuk/macros' },
-    { from: `${assets}/manifest.json`, to: 'assets/manifest.json' },
+    { from: path.join(root, '/template.njk'), to: '../views/govuk' },
+    { from: path.join(root, '/components'), to: '../views/govuk/components' },
+    { from: path.join(root, '/macros'), to: '../views/govuk/macros' },
+    { from: path.join(assets, 'manifest.json'), to: 'assets/manifest.json' },
   ],
 });
 
