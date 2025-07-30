@@ -1,7 +1,7 @@
 {
   "title": "Addasiadau Rhesymol – HMCTS - GOV.UK",
   "phase": "Beta",
-  "feedback": "Mae hwn yn wasanaeth newydd – bydd eich <a href=\"https://www.smartsurvey.co.uk/s/your_support/?pageurl={url}\" class=\"govuk-link\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"Feedback: This link will open in a new tab. You'll need to return to this tab to continue with your application.\">adborth</a> yn ein helpu i'w wella.",
+  "feedback": "Mae hwn yn wasanaeth newydd. Helpwch ni i'w wella a <a href=\"https://www.smartsurvey.co.uk/s/your_support/?pageurl={url}\" class=\"govuk-link\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"Feedback: This link will open in a new tab. You'll need to return to this tab to continue with your application.\">rhowch eich adborth (agor mewn tab newydd).</a>",
   "startNow": "Dechrau nawr",
   "continue": "Parhau",
   "cancel": "Canslo",
