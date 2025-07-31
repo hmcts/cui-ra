@@ -7943,12 +7943,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"connect-redis@npm:^8.0.0":
-  version: 8.0.3
-  resolution: "connect-redis@npm:8.0.3"
+"connect-redis@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "connect-redis@npm:9.0.0"
   peerDependencies:
     express-session: ">=1"
-  checksum: 10c0/c8fb17e1c060ce2b1097feddd711f29fc48723d7b1f59729940c4a7b81e00cc577291d9cb4b247bbdd1d103f3fff92f90c63a269e020e2db9cc295ff37491ce6
+    redis: ">=5"
+  checksum: 10c0/85616db0760f7974ed14f0676488dab168c111ae2068fae645a8b1acd0acf72d3c57d2252deb50eff662c22db72a6028e1635d9ff8450f3cac853278aa64051a
   languageName: node
   linkType: hard
 
@@ -8414,7 +8415,7 @@ __metadata:
     class-validator: "npm:^0.14.1"
     codeceptjs: "npm:^3.6.5"
     config: "npm:^4.0.0"
-    connect-redis: "npm:^8.0.0"
+    connect-redis: "npm:^9.0.0"
     cookie-parser: "npm:^1.4.6"
     copy-webpack-plugin: "npm:13.0.0"
     css-loader: "npm:^7.1.1"
