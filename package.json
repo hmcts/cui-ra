@@ -161,7 +161,7 @@
     "cookie": "1.0.2",
     "import-in-the-middle": "1.13.2",
     "cross-spawn": "7.0.6",
-    "brace-expansion": "^2.0.1"
+    "brace-expansion": "^4.0.0"
   },
   "dependenciesMeta": {
     "govuk-frontend@5.10.1": {
