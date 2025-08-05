@@ -65,7 +65,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   next();
 });
 
-app.post('*', sanitizeRequest);
+app.post('/{*allreqs}', sanitizeRequest);
 
 //Set up routes
 routes(app);

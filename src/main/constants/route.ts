@@ -1,7 +1,7 @@
 export const Route = {
   ROOT: '/',
   DATA_PROCESS: '/dc/p/:id',
-  API_ROOT: '/api/*',
+  API_ROOT: '/api/*rest',
   API_POST_PAYLOAD: '/api/payload',
   API_GET_PAYLOAD: '/api/payload/:id',
   JOURNEY_DISPLAY_FLAGS: '/journey/flags/display/:id',

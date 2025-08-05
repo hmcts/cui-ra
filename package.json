@@ -164,7 +164,7 @@
     "brace-expansion": "^2.0.1"
   },
   "dependenciesMeta": {
-    "govuk-frontend@5.10.1": {
+    "govuk-frontend": {
       "unplugged": true
     }
   }
