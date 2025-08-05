@@ -100,6 +100,7 @@ const RAW_RUNTIME_STATE =
           ["ioredis", "npm:5.7.0"],\
           ["jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.7.0"],\
           ["jest-html-reporter", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:4.3.0"],\
+          ["jest-util", "npm:29.7.0"],\
           ["jquery", "npm:3.7.1"],\
           ["json-schema", "npm:0.4.0"],\
           ["lint-staged", "npm:16.1.4"],\
@@ -10278,6 +10279,7 @@ const RAW_RUNTIME_STATE =
           ["ioredis", "npm:5.7.0"],\
           ["jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.7.0"],\
           ["jest-html-reporter", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:4.3.0"],\
+          ["jest-util", "npm:29.7.0"],\
           ["jquery", "npm:3.7.1"],\
           ["json-schema", "npm:0.4.0"],\
           ["lint-staged", "npm:16.1.4"],\
@@ -21014,7 +21016,7 @@ const RAW_RUNTIME_STATE =
           ["fast-json-stable-stringify", "npm:2.1.0"],\
           ["handlebars", "npm:4.7.8"],\
           ["jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.7.0"],\
-          ["jest-util", null],\
+          ["jest-util", "npm:29.7.0"],\
           ["json5", "npm:2.2.3"],\
           ["lodash.memoize", "npm:4.1.2"],\
           ["make-error", "npm:1.3.6"],\
