@@ -117,7 +117,7 @@ const RAW_RUNTIME_STATE =
           ["playwright", "npm:1.54.2"],\
           ["prettier", "npm:3.6.2"],\
           ["puppeteer", "npm:24.16.0"],\
-          ["redis", "npm:4.7.1"],\
+          ["redis", "npm:5.8.0"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["require-directory", "npm:2.1.1"],\
           ["sass", "npm:1.90.0"],\
@@ -5661,18 +5661,18 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@redis/bloom", [\
-      ["npm:1.2.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@redis-bloom-npm-1.2.0-c3ffcb341a-10c0.zip/node_modules/@redis/bloom/",\
+      ["npm:5.8.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@redis-bloom-npm-5.8.0-436cff1687-10c0.zip/node_modules/@redis/bloom/",\
         "packageDependencies": [\
-          ["@redis/bloom", "npm:1.2.0"]\
+          ["@redis/bloom", "npm:5.8.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:4d37e2db97ddd8acf6c7015fb7ec8a46b5b70e5e617d6b7411e28186b4d591cf51424a7ed60a838ee88265a5c5a41df3afaaa0e9168530eb621a50630c4d62c1#npm:1.2.0", {\
-        "packageLocation": "./.yarn/__virtual__/@redis-bloom-virtual-3f2522cebc/7/runner/cache/others/berry/cache/@redis-bloom-npm-1.2.0-c3ffcb341a-10c0.zip/node_modules/@redis/bloom/",\
+      ["virtual:e751103f9dc23b85db9a3e9ed9d84e59b61ba3b5081db4c23dd5b2f8b7f459469e830369b11fec8b9bda07c2706645a709232c937fb05f52a93bfcf0a24e9208#npm:5.8.0", {\
+        "packageLocation": "./.yarn/__virtual__/@redis-bloom-virtual-ebd5507ad8/7/runner/cache/others/berry/cache/@redis-bloom-npm-5.8.0-436cff1687-10c0.zip/node_modules/@redis/bloom/",\
         "packageDependencies": [\
-          ["@redis/bloom", "virtual:4d37e2db97ddd8acf6c7015fb7ec8a46b5b70e5e617d6b7411e28186b4d591cf51424a7ed60a838ee88265a5c5a41df3afaaa0e9168530eb621a50630c4d62c1#npm:1.2.0"],\
-          ["@redis/client", "npm:1.6.1"],\
+          ["@redis/bloom", "virtual:e751103f9dc23b85db9a3e9ed9d84e59b61ba3b5081db4c23dd5b2f8b7f459469e830369b11fec8b9bda07c2706645a709232c937fb05f52a93bfcf0a24e9208#npm:5.8.0"],\
+          ["@redis/client", "npm:5.8.0"],\
           ["@types/redis__client", null]\
         ],\
         "packagePeers": [\
@@ -5683,52 +5683,28 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@redis/client", [\
-      ["npm:1.6.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@redis-client-npm-1.6.1-d6f1be93ad-10c0.zip/node_modules/@redis/client/",\
+      ["npm:5.8.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@redis-client-npm-5.8.0-3bdc0e2d9d-10c0.zip/node_modules/@redis/client/",\
         "packageDependencies": [\
-          ["@redis/client", "npm:1.6.1"],\
-          ["cluster-key-slot", "npm:1.1.2"],\
-          ["generic-pool", "npm:3.9.0"],\
-          ["yallist", "npm:4.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@redis/graph", [\
-      ["npm:1.1.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@redis-graph-npm-1.1.1-c9b94b077a-10c0.zip/node_modules/@redis/graph/",\
-        "packageDependencies": [\
-          ["@redis/graph", "npm:1.1.1"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:4d37e2db97ddd8acf6c7015fb7ec8a46b5b70e5e617d6b7411e28186b4d591cf51424a7ed60a838ee88265a5c5a41df3afaaa0e9168530eb621a50630c4d62c1#npm:1.1.1", {\
-        "packageLocation": "./.yarn/__virtual__/@redis-graph-virtual-ff966b9563/7/runner/cache/others/berry/cache/@redis-graph-npm-1.1.1-c9b94b077a-10c0.zip/node_modules/@redis/graph/",\
-        "packageDependencies": [\
-          ["@redis/client", "npm:1.6.1"],\
-          ["@redis/graph", "virtual:4d37e2db97ddd8acf6c7015fb7ec8a46b5b70e5e617d6b7411e28186b4d591cf51424a7ed60a838ee88265a5c5a41df3afaaa0e9168530eb621a50630c4d62c1#npm:1.1.1"],\
-          ["@types/redis__client", null]\
-        ],\
-        "packagePeers": [\
-          "@redis/client",\
-          "@types/redis__client"\
+          ["@redis/client", "npm:5.8.0"],\
+          ["cluster-key-slot", "npm:1.1.2"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@redis/json", [\
-      ["npm:1.0.7", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@redis-json-npm-1.0.7-f6715a905f-10c0.zip/node_modules/@redis/json/",\
+      ["npm:5.8.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@redis-json-npm-5.8.0-c6aea5063f-10c0.zip/node_modules/@redis/json/",\
         "packageDependencies": [\
-          ["@redis/json", "npm:1.0.7"]\
+          ["@redis/json", "npm:5.8.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:4d37e2db97ddd8acf6c7015fb7ec8a46b5b70e5e617d6b7411e28186b4d591cf51424a7ed60a838ee88265a5c5a41df3afaaa0e9168530eb621a50630c4d62c1#npm:1.0.7", {\
-        "packageLocation": "./.yarn/__virtual__/@redis-json-virtual-5d7f3d4a23/7/runner/cache/others/berry/cache/@redis-json-npm-1.0.7-f6715a905f-10c0.zip/node_modules/@redis/json/",\
+      ["virtual:e751103f9dc23b85db9a3e9ed9d84e59b61ba3b5081db4c23dd5b2f8b7f459469e830369b11fec8b9bda07c2706645a709232c937fb05f52a93bfcf0a24e9208#npm:5.8.0", {\
+        "packageLocation": "./.yarn/__virtual__/@redis-json-virtual-6711f9fe73/7/runner/cache/others/berry/cache/@redis-json-npm-5.8.0-c6aea5063f-10c0.zip/node_modules/@redis/json/",\
         "packageDependencies": [\
-          ["@redis/client", "npm:1.6.1"],\
-          ["@redis/json", "virtual:4d37e2db97ddd8acf6c7015fb7ec8a46b5b70e5e617d6b7411e28186b4d591cf51424a7ed60a838ee88265a5c5a41df3afaaa0e9168530eb621a50630c4d62c1#npm:1.0.7"],\
+          ["@redis/client", "npm:5.8.0"],\
+          ["@redis/json", "virtual:e751103f9dc23b85db9a3e9ed9d84e59b61ba3b5081db4c23dd5b2f8b7f459469e830369b11fec8b9bda07c2706645a709232c937fb05f52a93bfcf0a24e9208#npm:5.8.0"],\
           ["@types/redis__client", null]\
         ],\
         "packagePeers": [\
@@ -5739,18 +5715,18 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@redis/search", [\
-      ["npm:1.2.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@redis-search-npm-1.2.0-21b616db68-10c0.zip/node_modules/@redis/search/",\
+      ["npm:5.8.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@redis-search-npm-5.8.0-cd8c59f8e9-10c0.zip/node_modules/@redis/search/",\
         "packageDependencies": [\
-          ["@redis/search", "npm:1.2.0"]\
+          ["@redis/search", "npm:5.8.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:4d37e2db97ddd8acf6c7015fb7ec8a46b5b70e5e617d6b7411e28186b4d591cf51424a7ed60a838ee88265a5c5a41df3afaaa0e9168530eb621a50630c4d62c1#npm:1.2.0", {\
-        "packageLocation": "./.yarn/__virtual__/@redis-search-virtual-2cf4d70031/7/runner/cache/others/berry/cache/@redis-search-npm-1.2.0-21b616db68-10c0.zip/node_modules/@redis/search/",\
+      ["virtual:e751103f9dc23b85db9a3e9ed9d84e59b61ba3b5081db4c23dd5b2f8b7f459469e830369b11fec8b9bda07c2706645a709232c937fb05f52a93bfcf0a24e9208#npm:5.8.0", {\
+        "packageLocation": "./.yarn/__virtual__/@redis-search-virtual-9611997a8f/7/runner/cache/others/berry/cache/@redis-search-npm-5.8.0-cd8c59f8e9-10c0.zip/node_modules/@redis/search/",\
         "packageDependencies": [\
-          ["@redis/client", "npm:1.6.1"],\
-          ["@redis/search", "virtual:4d37e2db97ddd8acf6c7015fb7ec8a46b5b70e5e617d6b7411e28186b4d591cf51424a7ed60a838ee88265a5c5a41df3afaaa0e9168530eb621a50630c4d62c1#npm:1.2.0"],\
+          ["@redis/client", "npm:5.8.0"],\
+          ["@redis/search", "virtual:e751103f9dc23b85db9a3e9ed9d84e59b61ba3b5081db4c23dd5b2f8b7f459469e830369b11fec8b9bda07c2706645a709232c937fb05f52a93bfcf0a24e9208#npm:5.8.0"],\
           ["@types/redis__client", null]\
         ],\
         "packagePeers": [\
@@ -5761,18 +5737,18 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@redis/time-series", [\
-      ["npm:1.1.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@redis-time-series-npm-1.1.0-f132273b08-10c0.zip/node_modules/@redis/time-series/",\
+      ["npm:5.8.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@redis-time-series-npm-5.8.0-a8eada922a-10c0.zip/node_modules/@redis/time-series/",\
         "packageDependencies": [\
-          ["@redis/time-series", "npm:1.1.0"]\
+          ["@redis/time-series", "npm:5.8.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:4d37e2db97ddd8acf6c7015fb7ec8a46b5b70e5e617d6b7411e28186b4d591cf51424a7ed60a838ee88265a5c5a41df3afaaa0e9168530eb621a50630c4d62c1#npm:1.1.0", {\
-        "packageLocation": "./.yarn/__virtual__/@redis-time-series-virtual-17ea829b2d/7/runner/cache/others/berry/cache/@redis-time-series-npm-1.1.0-f132273b08-10c0.zip/node_modules/@redis/time-series/",\
+      ["virtual:e751103f9dc23b85db9a3e9ed9d84e59b61ba3b5081db4c23dd5b2f8b7f459469e830369b11fec8b9bda07c2706645a709232c937fb05f52a93bfcf0a24e9208#npm:5.8.0", {\
+        "packageLocation": "./.yarn/__virtual__/@redis-time-series-virtual-6fd5bb71d4/7/runner/cache/others/berry/cache/@redis-time-series-npm-5.8.0-a8eada922a-10c0.zip/node_modules/@redis/time-series/",\
         "packageDependencies": [\
-          ["@redis/client", "npm:1.6.1"],\
-          ["@redis/time-series", "virtual:4d37e2db97ddd8acf6c7015fb7ec8a46b5b70e5e617d6b7411e28186b4d591cf51424a7ed60a838ee88265a5c5a41df3afaaa0e9168530eb621a50630c4d62c1#npm:1.1.0"],\
+          ["@redis/client", "npm:5.8.0"],\
+          ["@redis/time-series", "virtual:e751103f9dc23b85db9a3e9ed9d84e59b61ba3b5081db4c23dd5b2f8b7f459469e830369b11fec8b9bda07c2706645a709232c937fb05f52a93bfcf0a24e9208#npm:5.8.0"],\
           ["@types/redis__client", null]\
         ],\
         "packagePeers": [\
@@ -10296,7 +10272,7 @@ const RAW_RUNTIME_STATE =
           ["playwright", "npm:1.54.2"],\
           ["prettier", "npm:3.6.2"],\
           ["puppeteer", "npm:24.16.0"],\
-          ["redis", "npm:4.7.1"],\
+          ["redis", "npm:5.8.0"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["require-directory", "npm:2.1.1"],\
           ["sass", "npm:1.90.0"],\
@@ -12724,15 +12700,6 @@ const RAW_RUNTIME_STATE =
           ["node-fetch", "npm:3.3.2"],\
           ["tar-fs", "npm:3.1.0"],\
           ["which", "npm:5.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["generic-pool", [\
-      ["npm:3.9.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/generic-pool-npm-3.9.0-21fff1a77f-10c0.zip/node_modules/generic-pool/",\
-        "packageDependencies": [\
-          ["generic-pool", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18796,16 +18763,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["redis", [\
-      ["npm:4.7.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/redis-npm-4.7.1-4d37e2db97-10c0.zip/node_modules/redis/",\
+      ["npm:5.8.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/redis-npm-5.8.0-e751103f9d-10c0.zip/node_modules/redis/",\
         "packageDependencies": [\
-          ["@redis/bloom", "virtual:4d37e2db97ddd8acf6c7015fb7ec8a46b5b70e5e617d6b7411e28186b4d591cf51424a7ed60a838ee88265a5c5a41df3afaaa0e9168530eb621a50630c4d62c1#npm:1.2.0"],\
-          ["@redis/client", "npm:1.6.1"],\
-          ["@redis/graph", "virtual:4d37e2db97ddd8acf6c7015fb7ec8a46b5b70e5e617d6b7411e28186b4d591cf51424a7ed60a838ee88265a5c5a41df3afaaa0e9168530eb621a50630c4d62c1#npm:1.1.1"],\
-          ["@redis/json", "virtual:4d37e2db97ddd8acf6c7015fb7ec8a46b5b70e5e617d6b7411e28186b4d591cf51424a7ed60a838ee88265a5c5a41df3afaaa0e9168530eb621a50630c4d62c1#npm:1.0.7"],\
-          ["@redis/search", "virtual:4d37e2db97ddd8acf6c7015fb7ec8a46b5b70e5e617d6b7411e28186b4d591cf51424a7ed60a838ee88265a5c5a41df3afaaa0e9168530eb621a50630c4d62c1#npm:1.2.0"],\
-          ["@redis/time-series", "virtual:4d37e2db97ddd8acf6c7015fb7ec8a46b5b70e5e617d6b7411e28186b4d591cf51424a7ed60a838ee88265a5c5a41df3afaaa0e9168530eb621a50630c4d62c1#npm:1.1.0"],\
-          ["redis", "npm:4.7.1"]\
+          ["@redis/bloom", "virtual:e751103f9dc23b85db9a3e9ed9d84e59b61ba3b5081db4c23dd5b2f8b7f459469e830369b11fec8b9bda07c2706645a709232c937fb05f52a93bfcf0a24e9208#npm:5.8.0"],\
+          ["@redis/client", "npm:5.8.0"],\
+          ["@redis/json", "virtual:e751103f9dc23b85db9a3e9ed9d84e59b61ba3b5081db4c23dd5b2f8b7f459469e830369b11fec8b9bda07c2706645a709232c937fb05f52a93bfcf0a24e9208#npm:5.8.0"],\
+          ["@redis/search", "virtual:e751103f9dc23b85db9a3e9ed9d84e59b61ba3b5081db4c23dd5b2f8b7f459469e830369b11fec8b9bda07c2706645a709232c937fb05f52a93bfcf0a24e9208#npm:5.8.0"],\
+          ["@redis/time-series", "virtual:e751103f9dc23b85db9a3e9ed9d84e59b61ba3b5081db4c23dd5b2f8b7f459469e830369b11fec8b9bda07c2706645a709232c937fb05f52a93bfcf0a24e9208#npm:5.8.0"],\
+          ["redis", "npm:5.8.0"]\
         ],\
         "linkType": "HARD"\
       }]\
