@@ -113,7 +113,7 @@
     "chai": "^4.4.1",
     "chokidar": "^4.0.0",
     "codeceptjs": "^3.6.5",
-    "copy-webpack-plugin": "13.0.0",
+    "copy-webpack-plugin": "13.0.1",
     "css-loader": "^7.1.1",
     "debug": "^4.3.4",
     "eslint": "^9.1.1",
