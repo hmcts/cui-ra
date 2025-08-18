@@ -52,7 +52,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:29.5.14"],\
           ["@types/lodash", "npm:4.17.20"],\
-          ["@types/node", "npm:22.17.1"],\
+          ["@types/node", "npm:22.17.2"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.6"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -76,7 +76,7 @@ const RAW_RUNTIME_STATE =
           ["class-transformer", "npm:0.5.1"],\
           ["class-validator", "npm:0.14.2"],\
           ["codeceptjs", "npm:3.7.3"],\
-          ["config", "npm:4.1.0"],\
+          ["config", "npm:4.1.1"],\
           ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:8.1.0"],\
           ["cookie-parser", "npm:1.4.7"],\
           ["copy-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:13.0.1"],\
@@ -6418,10 +6418,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:22.17.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-node-npm-22.17.1-83f89abe9b-10c0.zip/node_modules/@types/node/",\
+      ["npm:22.17.2", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-node-npm-22.17.2-e8f59372a8-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:22.17.1"],\
+          ["@types/node", "npm:22.17.2"],\
           ["undici-types", "npm:6.21.0"]\
         ],\
         "linkType": "HARD"\
@@ -9915,10 +9915,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["config", [\
-      ["npm:4.1.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/config-npm-4.1.0-342e6fdbcd-10c0.zip/node_modules/config/",\
+      ["npm:4.1.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/config-npm-4.1.1-59fd6fcb8f-10c0.zip/node_modules/config/",\
         "packageDependencies": [\
-          ["config", "npm:4.1.0"],\
+          ["config", "npm:4.1.1"],\
           ["json5", "npm:2.2.3"]\
         ],\
         "linkType": "HARD"\
@@ -10415,7 +10415,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:29.5.14"],\
           ["@types/lodash", "npm:4.17.20"],\
-          ["@types/node", "npm:22.17.1"],\
+          ["@types/node", "npm:22.17.2"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.6"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -10439,7 +10439,7 @@ const RAW_RUNTIME_STATE =
           ["class-transformer", "npm:0.5.1"],\
           ["class-validator", "npm:0.14.2"],\
           ["codeceptjs", "npm:3.7.3"],\
-          ["config", "npm:4.1.0"],\
+          ["config", "npm:4.1.1"],\
           ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:8.1.0"],\
           ["cookie-parser", "npm:1.4.7"],\
           ["copy-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:13.0.1"],\
@@ -21289,7 +21289,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:22.17.1"],\
+          ["@types/node", "npm:22.17.2"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
