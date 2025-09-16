@@ -25,7 +25,7 @@ services:
       - ./secrets:/mnt/secrets:ro
   nginx:
     container_name: cui-nginx
-    image: nginx:1.29.0
+    image: nginx:1.29.1
     ports:
       - '443:443'
     volumes:
@@ -34,7 +34,7 @@ services:
     depends_on:
       - cui-ra
   redis:
-    image: 'redis:8.2.0'
+    image: 'redis:8.2.1'
     container_name: 'cui-redis-container'
     command: sh -c 'if [ -f /mnt/secrets/cui/redis-access-key ]; then cat /mnt/secrets/cui/redis-access-key; else echo "password"; fi | redis-server --requirepass $(cat)'
     ports:
