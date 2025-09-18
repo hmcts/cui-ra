@@ -52,7 +52,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:29.5.14"],\
           ["@types/lodash", "npm:4.17.20"],\
-          ["@types/node", "npm:22.18.5"],\
+          ["@types/node", "npm:22.18.6"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.6"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -132,7 +132,7 @@ const RAW_RUNTIME_STATE =
           ["stylelint-config-standard-scss", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.0"],\
           ["supertest", "npm:7.1.4"],\
           ["traverse", "npm:0.6.11"],\
-          ["ts-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.4.2"],\
+          ["ts-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.4.3"],\
           ["ts-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.5.4"],\
           ["ts-node", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.9.2"],\
           ["tsconfig-paths", "npm:4.2.0"],\
@@ -6447,10 +6447,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:22.18.5", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-node-npm-22.18.5-c88a7568b8-10c0.zip/node_modules/@types/node/",\
+      ["npm:22.18.6", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-node-npm-22.18.6-def3297ca5-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:22.18.5"],\
+          ["@types/node", "npm:22.18.6"],\
           ["undici-types", "npm:6.21.0"]\
         ],\
         "linkType": "HARD"\
@@ -10412,7 +10412,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:29.5.14"],\
           ["@types/lodash", "npm:4.17.20"],\
-          ["@types/node", "npm:22.18.5"],\
+          ["@types/node", "npm:22.18.6"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.6"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -10492,7 +10492,7 @@ const RAW_RUNTIME_STATE =
           ["stylelint-config-standard-scss", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.0"],\
           ["supertest", "npm:7.1.4"],\
           ["traverse", "npm:0.6.11"],\
-          ["ts-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.4.2"],\
+          ["ts-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.4.3"],\
           ["ts-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.5.4"],\
           ["ts-node", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.9.2"],\
           ["tsconfig-paths", "npm:4.2.0"],\
@@ -21137,15 +21137,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["ts-jest", [\
-      ["npm:29.4.2", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/ts-jest-npm-29.4.2-1fc50073bc-10c0.zip/node_modules/ts-jest/",\
+      ["npm:29.4.3", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/ts-jest-npm-29.4.3-8668f32a0f-10c0.zip/node_modules/ts-jest/",\
         "packageDependencies": [\
-          ["ts-jest", "npm:29.4.2"]\
+          ["ts-jest", "npm:29.4.3"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.4.2", {\
-        "packageLocation": "./.yarn/__virtual__/ts-jest-virtual-28b2eaec8b/7/runner/cache/others/berry/cache/ts-jest-npm-29.4.2-1fc50073bc-10c0.zip/node_modules/ts-jest/",\
+      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.4.3", {\
+        "packageLocation": "./.yarn/__virtual__/ts-jest-virtual-22b9fb2cf1/7/runner/cache/others/berry/cache/ts-jest-npm-29.4.3-8668f32a0f-10c0.zip/node_modules/ts-jest/",\
         "packageDependencies": [\
           ["@babel/core", "npm:7.28.4"],\
           ["@jest/transform", null],\
@@ -21169,7 +21169,7 @@ const RAW_RUNTIME_STATE =
           ["lodash.memoize", "npm:4.1.2"],\
           ["make-error", "npm:1.3.6"],\
           ["semver", "npm:7.7.2"],\
-          ["ts-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.4.2"],\
+          ["ts-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.4.3"],\
           ["type-fest", "npm:4.41.0"],\
           ["typescript", "patch:typescript@npm%3A5.9.2#optional!builtin<compat/typescript>::version=5.9.2&hash=5786d5"],\
           ["yargs-parser", "npm:21.1.1"]\
@@ -21244,7 +21244,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:22.18.5"],\
+          ["@types/node", "npm:22.18.6"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
