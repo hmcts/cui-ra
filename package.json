@@ -153,12 +153,8 @@
   },
   "packageManager": "yarn@4.11.0",
   "resolutions": {
-    "detox": "^20.22.2",
-    "micromatch": "4.0.8",
-    "cookie": "1.0.2",
-    "cross-spawn": "7.0.6",
-    "brace-expansion": "^2.0.1",
-    "@messageformat/runtime": "3.0.2"
+    "cookie": "^1.0.2",
+    "js-yaml": "^4.1.1"
   },
   "dependenciesMeta": {
     "govuk-frontend": {
