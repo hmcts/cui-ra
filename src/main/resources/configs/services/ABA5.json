@@ -3,10 +3,6 @@
     {
       "flagCode": "RA0001.OT0001",
       "remove": true
-    },
-    {
-      "flagCode": "RA0024",
-      "remove": true
     }
   ]
 }
