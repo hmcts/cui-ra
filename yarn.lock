@@ -3888,13 +3888,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/validator@npm:^13.11.8":
-  version: 13.15.2
-  resolution: "@types/validator@npm:13.15.2"
-  checksum: 10c0/2c7ce5b745e2c856d0ecd193469cf0edd5081b17208dfab4f03dd5801b8893dcf4cbcfcb662c2b6a42032940effd33e16a56a7eba9e2776b1804111118e320dc
-  languageName: node
-  linkType: hard
-
 "@types/which@npm:^2.0.1":
   version: 2.0.2
   resolution: "@types/which@npm:2.0.2"
@@ -6034,17 +6027,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"class-validator@npm:^0.14.1":
-  version: 0.14.2
-  resolution: "class-validator@npm:0.14.2"
-  dependencies:
-    "@types/validator": "npm:^13.11.8"
-    libphonenumber-js: "npm:^1.11.1"
-    validator: "npm:^13.9.0"
-  checksum: 10c0/5bb67389d38fa23d342dffdd8e2dcee8235e1906e59799df5b2050278a6d89292fcaa88167f0215e3ddd684f47dcd51b004efa7be32d8aded91ee06cb317b3b8
-  languageName: node
-  linkType: hard
-
 "clean-css@npm:^5.2.2, clean-css@npm:~5.3.2":
   version: 5.3.3
   resolution: "clean-css@npm:5.3.3"
@@ -6840,7 +6822,6 @@ __metadata:
     chai: "npm:^4.4.1"
     chokidar: "npm:^4.0.0"
     class-transformer: "npm:^0.5.1"
-    class-validator: "npm:^0.14.1"
     codeceptjs: "npm:^3.6.5"
     config: "npm:^4.0.0"
     connect-redis: "npm:^8.0.0"
@@ -11391,13 +11372,6 @@ __metadata:
     prelude-ls: "npm:~1.1.2"
     type-check: "npm:~0.3.2"
   checksum: 10c0/e440df9de4233da0b389cd55bd61f0f6aaff766400bebbccd1231b81801f6dbc1d816c676ebe8d70566394b749fa624b1ed1c68070e9c94999f0bdecc64cb676
-  languageName: node
-  linkType: hard
-
-"libphonenumber-js@npm:^1.11.1":
-  version: 1.12.10
-  resolution: "libphonenumber-js@npm:1.12.10"
-  checksum: 10c0/c348aee275c4161e289b14f2ffd0c00f2923dcd5b2cfd99415b2f5ea15fa0632adffb78c51373b3a2839416223b65452bee11cc5386d2352782e1b064aaaf0ce
   languageName: node
   linkType: hard
 
@@ -16611,7 +16585,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"validator@npm:^13.6.0, validator@npm:^13.9.0":
+"validator@npm:^13.6.0":
   version: 13.15.15
   resolution: "validator@npm:13.15.15"
   checksum: 10c0/f5349d1fbb9cc36f9f6c5dab1880764ddad1d0d2b084e2a71e5964f7de1635d20e406611559df9a3db24828ce775cbee5e3b6dd52f0d555a61939ed7ea5990bd
