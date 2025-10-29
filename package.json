@@ -48,7 +48,7 @@
     "@types/express": "^5.0.0",
     "@types/i18n": "^0.13.12",
     "@types/lodash": "^4.17.0",
-    "@types/node": "22.18.12",
+    "@types/node": "22.18.13",
     "@types/nunjucks": "^3.2.6",
     "@types/require-directory": "^2.1.6",
     "@types/serve-favicon": "^2.5.7",
