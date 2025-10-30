@@ -11,11 +11,11 @@ Feature: Existing Journey
     Then I am navigated to 'I want to tell you that my support needs have changed' page
 
     When I click the button with ID '#start-now'
-    
+
     Then I am navigated to "Review the support you've requested" page
 
     When I click the button with ID '#review-action-new'
-    
+
     Then I navigate to 'Do you have a physical, mental or learning disability or health condition that means you need support during your case?' page
     Then I find 'Contact us for help' text
 
@@ -36,6 +36,7 @@ Feature: Existing Journey
 
     When I select the following checkboxes
         """
+        #checkbox-label-PF0001-RA0001-RA0004-RA0024
         #checkbox-label-PF0001-RA0001-RA0004-RA0022
         #checkbox-label-PF0001-RA0001-RA0004-RA0025
         #checkbox-label-PF0001-RA0001-RA0004-RA0023
@@ -82,7 +83,7 @@ Feature: Existing Journey
         """
 
     When I click on the button labeled 'Continue'
-        
+
     Then I am navigated to 'Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)' page
     Then I find 'Contact us for help' text
 
@@ -92,7 +93,7 @@ Feature: Existing Journey
         #checkbox-label-PF0001-RA0001-RA0008-RA0009-RA0045
         #checkbox-label-PF0001-RA0001-RA0008-RA0009-RA0044
         """
-    
+
     When I click on the button labeled 'Continue'
 
     Then I am navigated to 'Which Sign Language Interpreter do you need to request?' page
@@ -129,7 +130,7 @@ Feature: Existing Journey
         #checkbox-label-PF0001-RA0001-RA0005-RA0026
         #checkbox-label-PF0001-RA0001-RA0005-RA0029
         """
-    
+
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0005-RA0027' with value 'Mother'
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0005-RA0026' with value 'Carer'
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0005-RA0029' with value 'Dog'
