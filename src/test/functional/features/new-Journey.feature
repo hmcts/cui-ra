@@ -26,6 +26,7 @@ Feature: New Journey
 
     When I select the following checkboxes
         """
+        #checkbox-label-PF0001-RA0001-RA0004-RA0024
         #checkbox-label-PF0001-RA0001-RA0004-RA0022
         #checkbox-label-PF0001-RA0001-RA0004-RA0025
         #checkbox-label-PF0001-RA0001-RA0004-RA0023
@@ -72,7 +73,7 @@ Feature: New Journey
         """
 
     When I click on the button labeled 'Continue'
-        
+
     Then I am navigated to 'Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)' page
     Then I find 'Contact us for help' text
 
@@ -82,7 +83,7 @@ Feature: New Journey
         #checkbox-label-PF0001-RA0001-RA0008-RA0009-RA0045
         #checkbox-label-PF0001-RA0001-RA0008-RA0009-RA0044
         """
-    
+
     When I click on the button labeled 'Continue'
 
     Then I am navigated to 'Which Sign Language Interpreter do you need to request?' page
@@ -119,7 +120,7 @@ Feature: New Journey
         #checkbox-label-PF0001-RA0001-RA0005-RA0026
         #checkbox-label-PF0001-RA0001-RA0005-RA0029
         """
-    
+
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0005-RA0027' with value 'Mother'
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0005-RA0026' with value 'Carer'
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0005-RA0029' with value 'Dog'
