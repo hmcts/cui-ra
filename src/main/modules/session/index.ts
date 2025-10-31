@@ -5,7 +5,7 @@ import { RedisStore } from 'connect-redis';
 import { Application } from 'express';
 import session from 'express-session';
 
-const Redis = require('ioredis');
+import { createClient, type RedisClientType } from 'redis';
 
 export class SessionStorage {
   constructor(private logger: Logger) {}
@@ -39,36 +39,23 @@ export class SessionStorage {
     const tlsOn: boolean = JSON.parse(config.get('session.redis.tls'));
 
     if (host && key) {
-      const redisConfig = {
-        host,
-        port: port ?? 6380,
-        password: key,
-        retryStrategy: times => {
-          // Use a custom retry strategy if needed
-          return Math.min(times * 50, 2000);
-        },
-      };
+      const protocol = tlsOn ? 'rediss' : 'redis';
+      const portOrDefault = port ?? 6380;
+      const url = `${protocol}://:${key}@${host}:${portOrDefault}`;
 
-      if (tlsOn === true) {
-        this.logger.info('TLS Enabled on Redis Client');
-        Object.assign(redisConfig, {
-          tls: true,
-        });
-      }
-      const client = new Redis(redisConfig);
+      const client: RedisClientType = createClient({ url });
+
+      client.on('error', err => this.logger.error(err));
+      client.connect().catch(this.logger.error);
 
       // Azure Cache for Redis has issues with a 10 minute connection idle timeout, the recommendation is to keep the connection alive
       // https://gist.github.com/JonCole/925630df72be1351b21440625ff2671f#file-redis-bestpractices-node-js-md
       client.on('ready', () => {
         setInterval(() => {
           client.ping();
-        }, 60000); // 60s
+        }, 60_000); // 60s
       });
-
-      client.on('error', this.logger.error);
-      const store = new RedisStore({
-        client,
-      });
+      const store = new RedisStore({ client });
       return store;
     }
 
