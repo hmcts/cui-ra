@@ -7274,8 +7274,8 @@ __metadata:
   linkType: hard
 
 "detox@npm:^20.22.2":
-  version: 20.45.0
-  resolution: "detox@npm:20.45.0"
+  version: 20.45.1
+  resolution: "detox@npm:20.45.1"
   dependencies:
     "@wix-pilot/core": "npm:^3.4.2"
     "@wix-pilot/detox": "npm:^1.0.13"
@@ -7321,7 +7321,7 @@ __metadata:
       optional: true
   bin:
     detox: local-cli/cli.js
-  checksum: 10c0/e7ef44d08628f294c82c7b8c4a9869d25d964773e07945cde766a9c6d330ae25b7d71addd84e34293d9afad4f2e56aed6a5d0b6aea58b415ad99176d8509a0ac
+  checksum: 10c0/b647ac5e4d20454a25c57bb6475c9b9706bca88aaeb102b895f5de09147941af236fc61ef7d5cf54e6754f437ca7e370eb1088e0ab02e3d06ba5f9f6e9479ee2
   languageName: node
   linkType: hard
 
@@ -9672,8 +9672,8 @@ __metadata:
   linkType: hard
 
 "i18n@npm:^0.15.1":
-  version: 0.15.2
-  resolution: "i18n@npm:0.15.2"
+  version: 0.15.3
+  resolution: "i18n@npm:0.15.3"
   dependencies:
     "@messageformat/core": "npm:^3.4.0"
     debug: "npm:^4.4.3"
@@ -9681,7 +9681,7 @@ __metadata:
     make-plural: "npm:^7.4.0"
     math-interval-parser: "npm:^2.0.1"
     mustache: "npm:^4.2.0"
-  checksum: 10c0/2451e7a46fb8d8b06bf6e6e4aa0c302bd8974ef9fd15b73343a01775161d83e38c436592cd87826910e7159cfffe17666f7aadc21b0921c870790f902412b5dc
+  checksum: 10c0/f6fbbc444083947cb0ec3c3a1a2ad952c3216a0511b297e89791fe54ba9888e6e35ba154ed3dc602f2dce92a66aebf2c9f726ac41ff2fea2aac2ba8ca35eb4d3
   languageName: node
   linkType: hard
 
