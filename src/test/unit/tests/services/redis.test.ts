@@ -132,7 +132,7 @@ describe('RedisClient', () => {
   });
 
   test('should return a unique string', async () => {
-    mockedRedisNode.exists = jest.fn().mockResolvedValue(false);
+    (mockedRedisNode.exists as jest.Mock).mockResolvedValue(0);
     // Delete data
     const uuid = await redisClient.generateUUID();
 
