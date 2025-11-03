@@ -4643,7 +4643,7 @@ const RAW_RUNTIME_STATE =
           ["@messageformat/date-skeleton", "npm:1.1.0"],\
           ["@messageformat/number-skeleton", "npm:1.2.0"],\
           ["@messageformat/parser", "npm:5.1.1"],\
-          ["@messageformat/runtime", "npm:3.0.1"],\
+          ["@messageformat/runtime", "npm:3.0.2"],\
           ["make-plural", "npm:7.4.0"],\
           ["safe-identifier", "npm:0.4.2"]\
         ],\
@@ -4679,10 +4679,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@messageformat/runtime", [\
-      ["npm:3.0.1", {\
-        "packageLocation": "../../.yarn/berry/cache/@messageformat-runtime-npm-3.0.1-c9ecf3b770-10c0.zip/node_modules/@messageformat/runtime/",\
+      ["npm:3.0.2", {\
+        "packageLocation": "../../.yarn/berry/cache/@messageformat-runtime-npm-3.0.2-9447cbb656-10c0.zip/node_modules/@messageformat/runtime/",\
         "packageDependencies": [\
-          ["@messageformat/runtime", "npm:3.0.1"],\
+          ["@messageformat/runtime", "npm:3.0.2"],\
           ["make-plural", "npm:7.4.0"]\
         ],\
         "linkType": "HARD"\
