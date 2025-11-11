@@ -106,7 +106,7 @@
     "@typescript-eslint/parser": "^8.0.0",
     "axios-debug-log": "^1.0.0",
     "babel-loader": "^10.0.0",
-    "chai": "^4.4.1",
+    "chai": "^6.0.0",
     "chokidar": "^4.0.0",
     "codeceptjs": "^3.6.5",
     "copy-webpack-plugin": "13.0.1",
