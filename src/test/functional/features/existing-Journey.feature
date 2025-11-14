@@ -36,6 +36,7 @@ Feature: Existing Journey
 
     When I select the following checkboxes
         """
+        #checkbox-label-PF0001-RA0001-RA0004-RA0024
         #checkbox-label-PF0001-RA0001-RA0004-RA0022
         #checkbox-label-PF0001-RA0001-RA0004-RA0025
         #checkbox-label-PF0001-RA0001-RA0004-RA0023

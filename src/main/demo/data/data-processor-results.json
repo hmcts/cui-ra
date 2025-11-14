@@ -1997,6 +1997,7 @@
     "_errors": [],
     "_childIds": [
       "PF0001-RA0001-RA0004-RA0022",
+      "PF0001-RA0001-RA0004-RA0024",
       "PF0001-RA0001-RA0004-RA0025",
       "PF0001-RA0001-RA0004-RA0023",
       "PF0001-RA0001-RA0004-RA0021",
@@ -2152,6 +2153,39 @@
       ],
       "hearingRelevant": "Yes",
       "flagCode": "RA0023",
+      "status": "Active",
+      "availableExternally": "Yes"
+    },
+    "_parentId": "PF0001-RA0001-RA0004"
+  },
+  {
+    "_flagComment": false,
+    "_isCategoryPage": false,
+    "_enabled": false,
+    "_other": false,
+    "_isParent": false,
+    "_isMaster": false,
+    "_errors": [],
+    "_childIds": [],
+    "id": "PF0001-RA0001-RA0004-RA0024",
+    "value": {
+      "name": "A different type of chair",
+      "name_cy": "Math gwahanol o gadair",
+      "dateTimeModified": "12-07-2023 13:28:21",
+      "dateTimeCreated": "12-07-2023 13:28:21",
+      "path": [
+        {
+          "name": "Party"
+        },
+        {
+          "name": "Reasonable adjustment"
+        },
+        {
+          "name": "I need adjustments to get to, into and around our buildings"
+        }
+      ],
+      "hearingRelevant": "Yes",
+      "flagCode": "RA0024",
       "status": "Active",
       "availableExternally": "Yes"
     },
