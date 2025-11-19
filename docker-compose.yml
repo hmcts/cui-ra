@@ -34,7 +34,7 @@ services:
     depends_on:
       - cui-ra
   redis:
-    image: 'redis:8.2.3'
+    image: 'redis:8.4.0'
     container_name: 'cui-redis-container'
     command: sh -c 'if [ -f /mnt/secrets/cui/redis-access-key ]; then cat /mnt/secrets/cui/redis-access-key; else echo "password"; fi | redis-server --requirepass $(cat)'
     ports:
