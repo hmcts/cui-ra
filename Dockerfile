@@ -19,6 +19,7 @@ RUN yarn install --immutable && \
 FROM base AS runtime
 
 COPY --from=build $WORKDIR/dist ./dist
+COPY --from=build $WORKDIR/src/main/assets/scss ./dist/assets/scss
 COPY --from=build $WORKDIR/src/main/views ./dist/views
 COPY --from=build $WORKDIR/src/main/public ./dist/public
 COPY --from=build $WORKDIR/src/main/resources/configs ./dist/resources/configs
