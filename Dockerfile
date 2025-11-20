@@ -23,6 +23,7 @@ COPY --from=build $WORKDIR/src/main/views ./dist/views
 COPY --from=build $WORKDIR/src/main/public ./dist/public
 COPY --from=build $WORKDIR/src/main/resources/configs ./dist/resources/configs
 COPY --from=build $WORKDIR/src/main/resources/translation ./dist/resources/translation
+COPY --from=build $WORKDIR/src/main/demo/data ./dist/demo/data
 COPY --from=build $WORKDIR/.yarn .yarn/
 COPY --from=build $WORKDIR/.pnp.cjs .pnp.cjs
 COPY --from=build $WORKDIR/.pnp.loader.mjs .pnp.loader.mjs
