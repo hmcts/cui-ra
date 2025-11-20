@@ -89,7 +89,7 @@ const RAW_RUNTIME_STATE =
           ["express", "npm:5.1.0"],\
           ["express-nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.1.2"],\
           ["express-session", "npm:1.18.2"],\
-          ["glob", "npm:11.1.0"],\
+          ["glob", "npm:13.0.0"],\
           ["govuk-frontend", "npm:5.13.0"],\
           ["helmet", "npm:8.1.0"],\
           ["html-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.6.5"],\
@@ -9777,7 +9777,7 @@ const RAW_RUNTIME_STATE =
           ["express", "npm:5.1.0"],\
           ["express-nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.1.2"],\
           ["express-session", "npm:1.18.2"],\
-          ["glob", "npm:11.1.0"],\
+          ["glob", "npm:13.0.0"],\
           ["govuk-frontend", "npm:5.13.0"],\
           ["helmet", "npm:8.1.0"],\
           ["html-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.6.5"],\
@@ -12283,6 +12283,16 @@ const RAW_RUNTIME_STATE =
           ["minimatch", "npm:10.1.1"],\
           ["minipass", "npm:7.1.2"],\
           ["package-json-from-dist", "npm:1.0.1"],\
+          ["path-scurry", "npm:2.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:13.0.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/glob-npm-13.0.0-8e50143ca8-10c0.zip/node_modules/glob/",\
+        "packageDependencies": [\
+          ["glob", "npm:13.0.0"],\
+          ["minimatch", "npm:10.1.1"],\
+          ["minipass", "npm:7.1.2"],\
           ["path-scurry", "npm:2.0.1"]\
         ],\
         "linkType": "HARD"\
