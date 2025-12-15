@@ -1795,10 +1795,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.39.1, @eslint/js@npm:^9.1.1":
-  version: 9.39.1
-  resolution: "@eslint/js@npm:9.39.1"
-  checksum: 10c0/6f7f26f8cdb7ad6327bbf9741973b6278eb946f18f70e35406e88194b0d5c522d0547a34a02f2a208eec95c5d1388cdf7ccb20039efd2e4cb6655615247a50f1
+"@eslint/js@npm:9.39.2, @eslint/js@npm:^9.1.1":
+  version: 9.39.2
+  resolution: "@eslint/js@npm:9.39.2"
+  checksum: 10c0/00f51c52b04ac79faebfaa65a9652b2093b9c924e945479f1f3945473f78aee83cbc76c8d70bbffbf06f7024626575b16d97b66eab16182e1d0d39daff2f26f5
   languageName: node
   linkType: hard
 
@@ -3658,12 +3658,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:24.10.3":
-  version: 24.10.3
-  resolution: "@types/node@npm:24.10.3"
+"@types/node@npm:24.10.4":
+  version: 24.10.4
+  resolution: "@types/node@npm:24.10.4"
   dependencies:
     undici-types: "npm:~7.16.0"
-  checksum: 10c0/58ddaf9ce3dd9d3aa55f7dfacb7b8f16481ad64a47b99f1890fa3d4498d1958def78699838f422c0a81851d6be8b9de7ffc344435a60abcf02c0e2c085008b20
+  checksum: 10c0/069639cb7233ee747df1897b5e784f6b6c5da765c96c94773c580aac888fa1a585048d2a6e95eb8302d89c7a9df75801c8b5a0b7d0221d4249059cf09a5f4228
   languageName: node
   linkType: hard
 
@@ -6656,7 +6656,7 @@ __metadata:
     "@types/i18n": "npm:^0.13.12"
     "@types/jest": "npm:^29.5.12"
     "@types/lodash": "npm:^4.17.0"
-    "@types/node": "npm:24.10.3"
+    "@types/node": "npm:24.10.4"
     "@types/nunjucks": "npm:^3.2.6"
     "@types/require-directory": "npm:^2.1.6"
     "@types/serve-favicon": "npm:^2.5.7"
@@ -7790,8 +7790,8 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-jest@npm:^29.0.0":
-  version: 29.2.1
-  resolution: "eslint-plugin-jest@npm:29.2.1"
+  version: 29.5.0
+  resolution: "eslint-plugin-jest@npm:29.5.0"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.0.0"
   peerDependencies:
@@ -7803,7 +7803,7 @@ __metadata:
       optional: true
     jest:
       optional: true
-  checksum: 10c0/9115e35a537d458b37236c0ebba2ce357226d24cc0a2345c29fd8b14a63681343fc71ef0d4f0bbb47575f5c6a76b21da6dee183db4d8e0ccf9d8f4bfbb8c743f
+  checksum: 10c0/e135181330a593018611c754c5a6449ac683080803e6c9931f2a8e432d133c33e5ac5f1df52ff52c4a6ca14267ceffc57739d602e11909e3691acfbd2a923f66
   languageName: node
   linkType: hard
 
@@ -7849,8 +7849,8 @@ __metadata:
   linkType: hard
 
 "eslint@npm:^9.1.1":
-  version: 9.39.1
-  resolution: "eslint@npm:9.39.1"
+  version: 9.39.2
+  resolution: "eslint@npm:9.39.2"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.8.0"
     "@eslint-community/regexpp": "npm:^4.12.1"
@@ -7858,7 +7858,7 @@ __metadata:
     "@eslint/config-helpers": "npm:^0.4.2"
     "@eslint/core": "npm:^0.17.0"
     "@eslint/eslintrc": "npm:^3.3.1"
-    "@eslint/js": "npm:9.39.1"
+    "@eslint/js": "npm:9.39.2"
     "@eslint/plugin-kit": "npm:^0.4.1"
     "@humanfs/node": "npm:^0.16.6"
     "@humanwhocodes/module-importer": "npm:^1.0.1"
@@ -7893,7 +7893,7 @@ __metadata:
       optional: true
   bin:
     eslint: bin/eslint.js
-  checksum: 10c0/59b2480639404ba24578ca480f973683b87b7aac8aa7e349240474a39067804fd13cd8b9cb22fee074170b8c7c563b57bab703ec0f0d3f81ea017e5d2cad299d
+  checksum: 10c0/bb88ca8fd16bb7e1ac3e13804c54d41c583214460c0faa7b3e7c574e69c5600c7122295500fb4b0c06067831111db740931e98da1340329527658e1cf80073d3
   languageName: node
   linkType: hard
 
@@ -13524,9 +13524,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer-core@npm:24.32.1":
-  version: 24.32.1
-  resolution: "puppeteer-core@npm:24.32.1"
+"puppeteer-core@npm:24.33.0":
+  version: 24.33.0
+  resolution: "puppeteer-core@npm:24.33.0"
   dependencies:
     "@puppeteer/browsers": "npm:2.11.0"
     chromium-bidi: "npm:11.0.0"
@@ -13535,23 +13535,23 @@ __metadata:
     typed-query-selector: "npm:^2.12.0"
     webdriver-bidi-protocol: "npm:0.3.9"
     ws: "npm:^8.18.3"
-  checksum: 10c0/814df095cecfc331a79b5984fc071fbe429e32175bb27949984b49f92212e9a0f26e80f12441d535c7a9dc335d0b90cd2ea7eb686271e26dbfca00166dd8255c
+  checksum: 10c0/9aac80cfba7b5bb2013fc44e7ab99f41c84c76cc612b25736b52df5f6772d1c1a0f28058bb0d31ea6691e13de25eb3ba8529ad62074b488c39b0709c923356da
   languageName: node
   linkType: hard
 
 "puppeteer@npm:^24.12.1, puppeteer@npm:^24.7.2":
-  version: 24.32.1
-  resolution: "puppeteer@npm:24.32.1"
+  version: 24.33.0
+  resolution: "puppeteer@npm:24.33.0"
   dependencies:
     "@puppeteer/browsers": "npm:2.11.0"
     chromium-bidi: "npm:11.0.0"
     cosmiconfig: "npm:^9.0.0"
     devtools-protocol: "npm:0.0.1534754"
-    puppeteer-core: "npm:24.32.1"
+    puppeteer-core: "npm:24.33.0"
     typed-query-selector: "npm:^2.12.0"
   bin:
     puppeteer: lib/cjs/puppeteer/node/cli.js
-  checksum: 10c0/13ea933513312908b2f36938fffd26e10d7be1299b4691f48c5db7ed1bf46dea7ff5bca005cd79e5746e34040b9b1ea382a5c9541a1d6663bf7079354bf81126
+  checksum: 10c0/06d30aa0970df9e1c0a9282bc5dec61ce76a2a777f57bb03ddcb331fa72c5701730007cb918924a02198520fc7581ca168645e7e5a7ae138b59eed0ad72315b7
   languageName: node
   linkType: hard
 
