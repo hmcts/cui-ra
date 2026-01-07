@@ -3,10 +3,19 @@
   "extends": ["local>hmcts/.github:renovate-config", "local>hmcts/.github//renovate/automerge-minor"],
   "packageRules": [
     {
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch",
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchPackageNames": ["chai"],
+      "allowedVersions": "<5.0.0"
+    },
+    {
+      "matchPackageNames": ["chokidar"],
+      "allowedVersions": "<5.0.0"
+    },
+    {
+      "groupName": "all patch dependencies",
+      "groupSlug": "all-patch",
+      "matchUpdateTypes": ["patch"],
+      "matchPackageNames": ["*"]
     }
-  ]
+  ],
+  "schedule": ["after 3pm and before 7pm every weekday"]
 }
