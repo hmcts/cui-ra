@@ -69,7 +69,7 @@ const RAW_RUNTIME_STATE =
           ["axios", "npm:1.13.2"],\
           ["axios-debug-log", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.0"],\
           ["babel-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.0.0"],\
-          ["body-parser", "npm:2.2.1"],\
+          ["body-parser", "npm:2.2.2"],\
           ["chai", "npm:4.5.0"],\
           ["chokidar", "npm:4.0.3"],\
           ["class-transformer", "npm:0.5.1"],\
@@ -8272,10 +8272,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["body-parser", [\
-      ["npm:2.2.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/body-parser-npm-2.2.1-79691d0c2a-10c0.zip/node_modules/body-parser/",\
+      ["npm:2.2.2", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/body-parser-npm-2.2.2-2aa532c1f4-10c0.zip/node_modules/body-parser/",\
         "packageDependencies": [\
-          ["body-parser", "npm:2.2.1"],\
+          ["body-parser", "npm:2.2.2"],\
           ["bytes", "npm:3.1.2"],\
           ["content-type", "npm:1.0.5"],\
           ["debug", "virtual:643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d#npm:4.4.3"],\
@@ -9821,7 +9821,7 @@ const RAW_RUNTIME_STATE =
           ["axios", "npm:1.13.2"],\
           ["axios-debug-log", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.0"],\
           ["babel-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.0.0"],\
-          ["body-parser", "npm:2.2.1"],\
+          ["body-parser", "npm:2.2.2"],\
           ["chai", "npm:4.5.0"],\
           ["chokidar", "npm:4.0.3"],\
           ["class-transformer", "npm:0.5.1"],\
@@ -11526,7 +11526,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/express-npm-5.2.1-d1e97b99e1-10c0.zip/node_modules/express/",\
         "packageDependencies": [\
           ["accepts", "npm:2.0.0"],\
-          ["body-parser", "npm:2.2.1"],\
+          ["body-parser", "npm:2.2.2"],\
           ["content-disposition", "npm:1.0.0"],\
           ["content-type", "npm:1.0.5"],\
           ["cookie", "npm:1.1.1"],\
