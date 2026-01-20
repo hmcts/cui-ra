@@ -16,7 +16,8 @@ import { NextFunction, Request, Response } from 'express';
 export class FormController {
   public async display(req: Request, res: Response, next: NextFunction): Promise<void | Response> {
     try {
-      const id = req.params.id;
+      const idParam = req.params.id;
+      const id = Array.isArray(idParam) ? idParam[0] : idParam;
       const change = !!(req.query && typeof req.query.change !== 'undefined');
 
       //Get flag
@@ -39,7 +40,8 @@ export class FormController {
 
   public async post(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
     try {
-      const id = req.params.id;
+      const idParam = req.params.id;
+      const id = Array.isArray(idParam) ? idParam[0] : idParam;
       const change = !!(req.query && typeof req.query.change !== 'undefined');
       const newQuery = !!(req.query && typeof req.query.new !== 'undefined');
 

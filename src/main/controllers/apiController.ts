@@ -50,7 +50,8 @@ export class ApiController {
   }
 
   public async getPayload(req: Request, res: Response): Promise<Response> {
-    const id: string = req.params.id;
+    const idParam = req.params.id;
+    const id = Array.isArray(idParam) ? idParam[0] : idParam;
     try {
       //Check the key exists
       if (!(await this.redisClient.exists(id))) {
