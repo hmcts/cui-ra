@@ -225,9 +225,7 @@ describe('FormController', () => {
     const validationErrors = { some: 'error' };
     const validateBodySpy = jest.spyOn(FormValidator, 'validateBody').mockResolvedValue([true, {}]);
     const processSpy = jest.spyOn(FormProcessor, 'process').mockReturnValue([parent]);
-    const validateSpy = jest
-      .spyOn(FormValidator, 'validate')
-      .mockResolvedValue([validationErrors, parent, null]);
+    const validateSpy = jest.spyOn(FormValidator, 'validate').mockResolvedValue([validationErrors, parent, null]);
 
     await formController.post(mockedRequest, mockedResponse, mockNext);
 
