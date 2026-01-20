@@ -4,7 +4,7 @@ import { Logger, ServiceAuth } from './../interfaces';
 
 import autobind from 'autobind-decorator';
 import { AxiosInstance } from 'axios';
-import { authenticator } from "otplib";
+import { authenticator } from 'otplib';
 
 @autobind
 export class S2S implements ServiceAuth {

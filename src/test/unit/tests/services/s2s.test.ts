@@ -1,6 +1,6 @@
 import { S2S } from '../../../../main/services';
 import { mockAxios, mockLogger } from '../../mocks';
-import { authenticator } from "otplib";
+import { authenticator } from 'otplib';
 import { S2SError, TokenFormatError, TokenInvalidError, UnauthorisedError } from './../../../../main/errors';
 import { ErrorMessages } from './../../../../main/constants';
 
