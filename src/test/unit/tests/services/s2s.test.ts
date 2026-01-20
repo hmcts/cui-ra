@@ -1,6 +1,6 @@
 import { S2S } from '../../../../main/services';
 import { mockAxios, mockLogger } from '../../mocks';
-import { authenticator } from "otplib/authenticator";
+import { totp } from "otplib";
 import { S2SError, TokenFormatError, TokenInvalidError, UnauthorisedError } from './../../../../main/errors';
 import { ErrorMessages } from './../../../../main/constants';
 
@@ -116,7 +116,7 @@ describe('s2s service class', () => {
   test('Get one Time token', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
 
-    const otp = authenticator.generate(secret);
+    const otp = totp.generate(secret);
 
     expect(await service.getOneTimeToken()).toEqual(otp);
   });
