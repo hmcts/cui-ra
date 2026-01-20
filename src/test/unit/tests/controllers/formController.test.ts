@@ -7,6 +7,8 @@ import { NewFlagsManager } from '../../../../main/managers';
 import { UrlRoute } from '../../../../main/utilities';
 import { ErrorMessages, Route } from '../../../../main/constants';
 import { HTTPError } from './../../../../main/HttpError';
+import { FormProcessor } from '../../../../main/processors';
+import { FormValidator } from '../../../../main/validators';
 
 const dataProcessorResultJson: DataManagerDataObject[] = JSON.parse(
   fs.readFileSync(__dirname + '/../../data/data-processor-results.json', 'utf-8')
@@ -184,6 +186,59 @@ describe('FormController', () => {
     expect(mockedResponse.redirect).toHaveBeenCalledWith(
       UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: next.id }, UrlRoute.url(mockedRequest))
     );
+  });
+
+  test('should re-render the form when validation errors are returned', async () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
+    )[0];
+
+    const mockSession = {
+      newmanager: {
+        get: jest.fn().mockReturnValue(parent),
+        hasUnaswered: jest.fn().mockReturnValue(false),
+        getChildren: jest.fn().mockReturnValue([]),
+        save: jest.fn(),
+        getNext: jest.fn(),
+      },
+    };
+
+    mockedRequest = mockRequest(null);
+    mockedResponse = mockResponse();
+
+    mockedRequest.params = { id: 'someId' };
+    mockedRequest.session = mockSession;
+    mockedRequest.protocol = protocol;
+    mockedRequest.headers = {
+      host: host,
+    };
+
+    mockedRequest.body = {
+      data: {
+        'PF0001-RA0001-RA0002': {
+          flagComment: 'one',
+        },
+      },
+      enabled: ['PF0001-RA0001-RA0004'],
+    };
+
+    const validationErrors = { some: 'error' };
+    const validateBodySpy = jest.spyOn(FormValidator, 'validateBody').mockResolvedValue([true, {}]);
+    const processSpy = jest.spyOn(FormProcessor, 'process').mockReturnValue([parent]);
+    const validateSpy = jest
+      .spyOn(FormValidator, 'validate')
+      .mockResolvedValue([validationErrors, parent, null]);
+
+    await formController.post(mockedRequest, mockedResponse, mockNext);
+
+    expect(mockedResponse.render).toHaveBeenCalledWith(
+      'forms/checkbox-group',
+      expect.objectContaining({ validationErrors })
+    );
+
+    validateBodySpy.mockRestore();
+    processSpy.mockRestore();
+    validateSpy.mockRestore();
   });
 
   test('should handle post request with valid flag and data - changed = true | unAswered true', async () => {

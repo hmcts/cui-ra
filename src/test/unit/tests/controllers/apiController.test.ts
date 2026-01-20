@@ -64,6 +64,22 @@ describe('ApiController', () => {
       expect(res.status).toHaveBeenCalledWith(401);
       expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.TOKENS_INCORRECT_FORMAT });
     });
+
+    test('should return 500 when redis set fails', async () => {
+      const errorRedis = {
+        ...mockedRedis,
+        set: jest.fn().mockRejectedValue(new Error('redis failure')),
+      };
+      controller = new ApiController(mockedLogger, errorRedis as any);
+      const req = mockRequest({ key: 'value' }, 'valid_idam_token', 'valid_service_token');
+      const res = mockResponse();
+
+      await controller.postPayload(req, res);
+
+      expect(mockedLogger.error).toHaveBeenCalledWith('redis failure');
+      expect(res.status).toHaveBeenCalledWith(500);
+      expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.UNEXPECTED_ERROR });
+    });
   });
 
   describe('getPayload', () => {
@@ -99,6 +115,23 @@ describe('ApiController', () => {
 
       expect(res.status).toHaveBeenCalledWith(404);
       expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.DATA_NOT_FOUND });
+    });
+
+    test('should return 500 when redis get fails', async () => {
+      const errorRedis = {
+        ...mockedRedis,
+        exists: jest.fn().mockResolvedValue(true),
+        get: jest.fn().mockRejectedValue(new Error('redis failure')),
+      };
+      controller = new ApiController(mockedLogger, errorRedis as any);
+      const req = mockRequest('existing_key');
+      const res = mockResponse();
+
+      await controller.getPayload(req, res);
+
+      expect(mockedLogger.error).toHaveBeenCalledWith('redis failure');
+      expect(res.status).toHaveBeenCalledWith(500);
+      expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.UNEXPECTED_ERROR });
     });
   });
 });
