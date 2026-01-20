@@ -83,9 +83,9 @@ describe('ApiController', () => {
   });
 
   describe('getPayload', () => {
-    const mockRequest = (id: string): Request => {
+    const mockRequest = (id: string | string[] | undefined): Request => {
       return {
-        params: { id },
+        params: id === undefined ? {} : { id },
       } as unknown as Request;
     };
 
@@ -109,6 +109,26 @@ describe('ApiController', () => {
 
     test('should return 404 when the key does not exist in redis', async () => {
       const req = mockRequest('non_existing_key');
+      const res = mockResponse();
+
+      await controller.getPayload(req, res);
+
+      expect(res.status).toHaveBeenCalledWith(404);
+      expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.DATA_NOT_FOUND });
+    });
+
+    test('should use the first id when multiple ids are provided', async () => {
+      const req = mockRequest(['existing_key', 'other_key']);
+      const res = mockResponse();
+
+      await controller.getPayload(req, res);
+
+      expect(res.status).toHaveBeenCalledWith(200);
+      expect(res.json).toHaveBeenCalledWith({ test: 'data' });
+    });
+
+    test('should return 404 when first id in array does not exist', async () => {
+      const req = mockRequest(['non_existing_key', 'existing_key']);
       const res = mockResponse();
 
       await controller.getPayload(req, res);

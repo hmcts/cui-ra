@@ -58,6 +58,31 @@ describe('FormController', () => {
     expect(mockedResponse.render).toHaveBeenCalledWith('forms/checkbox-group', expect.any(Object));
   });
 
+  test('should use the first id when multiple ids are provided on display', async () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
+    )[0];
+
+    const mockSession = {
+      newmanager: {
+        get: jest.fn().mockReturnValue(parent),
+        hasUnaswered: jest.fn().mockReturnValue(false),
+        getChildren: jest.fn().mockReturnValue([]),
+      },
+    };
+
+    mockedRequest = mockRequest(null);
+    mockedResponse = mockResponse();
+
+    mockedRequest.params = { id: ['someId', 'otherId'] };
+    mockedRequest.session = mockSession;
+
+    await formController.display(mockedRequest, mockedResponse, mockNext);
+
+    expect(mockSession.newmanager.get).toHaveBeenCalledWith('someId');
+    expect(mockedResponse.render).toHaveBeenCalledWith('forms/checkbox-group', expect.any(Object));
+  });
+
   test('should fail to display the form', async () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
       (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
@@ -185,6 +210,54 @@ describe('FormController', () => {
     // Assert expected behavior here
     expect(mockedResponse.redirect).toHaveBeenCalledWith(
       UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: next.id }, UrlRoute.url(mockedRequest))
+    );
+  });
+
+  test('should append new query when new journey is requested', async () => {
+    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
+    )[0];
+    const child: DataManagerDataObject[] = dataProcessorResultJson.filter((item: DataManagerDataObject) =>
+      parent._childIds.includes(item.id)
+    );
+    const next: DataManagerDataObject = dataProcessorResultJson.filter(
+      (item: DataManagerDataObject) => item.id === 'PF0001-RA0001-RA0004'
+    )[0];
+    const mockSession = {
+      newmanager: {
+        get: jest.fn().mockReturnValue(parent),
+        hasUnaswered: jest.fn().mockReturnValue(false),
+        getChildren: jest.fn().mockReturnValue(child),
+        save: jest.fn(),
+        getNext: jest.fn().mockReturnValue(next),
+      },
+    };
+
+    mockedRequest = mockRequest(null);
+    mockedResponse = mockResponse();
+
+    mockedRequest.query = { new: true };
+    mockedRequest.params = { id: ['someId', 'otherId'] };
+    mockedRequest.session = mockSession;
+    mockedRequest.protocol = protocol;
+    mockedRequest.headers = {
+      host: host,
+    };
+
+    mockedRequest.body = {
+      data: {
+        'PF0001-RA0001-RA0002': {
+          flagComment: 'one',
+        },
+      },
+      enabled: ['PF0001-RA0001-RA0004'],
+    };
+
+    await formController.post(mockedRequest, mockedResponse, mockNext);
+
+    expect(mockSession.newmanager.get).toHaveBeenCalledWith('someId');
+    expect(mockedResponse.redirect).toHaveBeenCalledWith(
+      `${UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: next.id }, UrlRoute.url(mockedRequest))}?new=true`
     );
   });
 
