@@ -109,7 +109,7 @@ const RAW_RUNTIME_STATE =
           ["nock", "npm:14.0.10"],\
           ["nodemon", "npm:3.1.11"],\
           ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
-          ["otplib", "npm:12.0.1"],\
+          ["otplib", "npm:13.1.1"],\
           ["pa11y", "npm:9.0.1"],\
           ["playwright", "npm:1.57.0"],\
           ["prettier", "npm:3.7.4"],\
@@ -4589,6 +4589,13 @@ const RAW_RUNTIME_STATE =
           ["@noble/hashes", "npm:1.8.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:2.0.1", {\
+        "packageLocation": "../../.yarn/berry/cache/@noble-hashes-npm-2.0.1-3deaaa8c92-10c0.zip/node_modules/@noble/hashes/",\
+        "packageDependencies": [\
+          ["@noble/hashes", "npm:2.0.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@nodelib/fs.scandir", [\
@@ -4909,55 +4916,65 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@otplib/core", [\
-      ["npm:12.0.1", {\
-        "packageLocation": "../../.yarn/berry/cache/@otplib-core-npm-12.0.1-4b9787d379-10c0.zip/node_modules/@otplib/core/",\
+      ["npm:13.1.1", {\
+        "packageLocation": "../../.yarn/berry/cache/@otplib-core-npm-13.1.1-1e6747c143-10c0.zip/node_modules/@otplib/core/",\
         "packageDependencies": [\
-          ["@otplib/core", "npm:12.0.1"]\
+          ["@otplib/core", "npm:13.1.1"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@otplib/plugin-crypto", [\
-      ["npm:12.0.1", {\
-        "packageLocation": "../../.yarn/berry/cache/@otplib-plugin-crypto-npm-12.0.1-d0dc5d1d98-10c0.zip/node_modules/@otplib/plugin-crypto/",\
+    ["@otplib/hotp", [\
+      ["npm:13.1.1", {\
+        "packageLocation": "../../.yarn/berry/cache/@otplib-hotp-npm-13.1.1-2078ffc3fb-10c0.zip/node_modules/@otplib/hotp/",\
         "packageDependencies": [\
-          ["@otplib/core", "npm:12.0.1"],\
-          ["@otplib/plugin-crypto", "npm:12.0.1"]\
+          ["@otplib/core", "npm:13.1.1"],\
+          ["@otplib/hotp", "npm:13.1.1"],\
+          ["@otplib/uri", "npm:13.1.1"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@otplib/plugin-thirty-two", [\
-      ["npm:12.0.1", {\
-        "packageLocation": "../../.yarn/berry/cache/@otplib-plugin-thirty-two-npm-12.0.1-b85109b20e-10c0.zip/node_modules/@otplib/plugin-thirty-two/",\
+    ["@otplib/plugin-base32-scure", [\
+      ["npm:13.1.1", {\
+        "packageLocation": "../../.yarn/berry/cache/@otplib-plugin-base32-scure-npm-13.1.1-469aa8d84e-10c0.zip/node_modules/@otplib/plugin-base32-scure/",\
         "packageDependencies": [\
-          ["@otplib/core", "npm:12.0.1"],\
-          ["@otplib/plugin-thirty-two", "npm:12.0.1"],\
-          ["thirty-two", "npm:1.0.2"]\
+          ["@otplib/core", "npm:13.1.1"],\
+          ["@otplib/plugin-base32-scure", "npm:13.1.1"],\
+          ["@scure/base", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@otplib/preset-default", [\
-      ["npm:12.0.1", {\
-        "packageLocation": "../../.yarn/berry/cache/@otplib-preset-default-npm-12.0.1-77f04f54c4-10c0.zip/node_modules/@otplib/preset-default/",\
+    ["@otplib/plugin-crypto-noble", [\
+      ["npm:13.1.1", {\
+        "packageLocation": "../../.yarn/berry/cache/@otplib-plugin-crypto-noble-npm-13.1.1-2d75ca9b14-10c0.zip/node_modules/@otplib/plugin-crypto-noble/",\
         "packageDependencies": [\
-          ["@otplib/core", "npm:12.0.1"],\
-          ["@otplib/plugin-crypto", "npm:12.0.1"],\
-          ["@otplib/plugin-thirty-two", "npm:12.0.1"],\
-          ["@otplib/preset-default", "npm:12.0.1"]\
+          ["@noble/hashes", "npm:2.0.1"],\
+          ["@otplib/core", "npm:13.1.1"],\
+          ["@otplib/plugin-crypto-noble", "npm:13.1.1"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@otplib/preset-v11", [\
-      ["npm:12.0.1", {\
-        "packageLocation": "../../.yarn/berry/cache/@otplib-preset-v11-npm-12.0.1-df44c202c1-10c0.zip/node_modules/@otplib/preset-v11/",\
+    ["@otplib/totp", [\
+      ["npm:13.1.1", {\
+        "packageLocation": "../../.yarn/berry/cache/@otplib-totp-npm-13.1.1-9352ee617d-10c0.zip/node_modules/@otplib/totp/",\
         "packageDependencies": [\
-          ["@otplib/core", "npm:12.0.1"],\
-          ["@otplib/plugin-crypto", "npm:12.0.1"],\
-          ["@otplib/plugin-thirty-two", "npm:12.0.1"],\
-          ["@otplib/preset-v11", "npm:12.0.1"]\
+          ["@otplib/core", "npm:13.1.1"],\
+          ["@otplib/hotp", "npm:13.1.1"],\
+          ["@otplib/totp", "npm:13.1.1"],\
+          ["@otplib/uri", "npm:13.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@otplib/uri", [\
+      ["npm:13.1.1", {\
+        "packageLocation": "../../.yarn/berry/cache/@otplib-uri-npm-13.1.1-963e142b98-10c0.zip/node_modules/@otplib/uri/",\
+        "packageDependencies": [\
+          ["@otplib/core", "npm:13.1.1"],\
+          ["@otplib/uri", "npm:13.1.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5421,6 +5438,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/@rtsao-scc-npm-1.1.0-f4ba9ceb2c-10c0.zip/node_modules/@rtsao/scc/",\
         "packageDependencies": [\
           ["@rtsao/scc", "npm:1.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@scure/base", [\
+      ["npm:2.0.0", {\
+        "packageLocation": "../../.yarn/berry/cache/@scure-base-npm-2.0.0-97a775035d-10c0.zip/node_modules/@scure/base/",\
+        "packageDependencies": [\
+          ["@scure/base", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9861,7 +9887,7 @@ const RAW_RUNTIME_STATE =
           ["nock", "npm:14.0.10"],\
           ["nodemon", "npm:3.1.11"],\
           ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
-          ["otplib", "npm:12.0.1"],\
+          ["otplib", "npm:13.1.1"],\
           ["pa11y", "npm:9.0.1"],\
           ["playwright", "npm:1.57.0"],\
           ["prettier", "npm:3.7.4"],\
@@ -10378,31 +10404,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["diff", [\
-      ["npm:4.0.2", {\
-        "packageLocation": "../../.yarn/berry/cache/diff-npm-4.0.2-73133c7102-10c0.zip/node_modules/diff/",\
+      ["npm:8.0.3", {\
+        "packageLocation": "../../.yarn/berry/cache/diff-npm-8.0.3-6f5c127138-10c0.zip/node_modules/diff/",\
         "packageDependencies": [\
-          ["diff", "npm:4.0.2"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:5.2.0", {\
-        "packageLocation": "../../.yarn/berry/cache/diff-npm-5.2.0-f523a581f3-10c0.zip/node_modules/diff/",\
-        "packageDependencies": [\
-          ["diff", "npm:5.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:7.0.0", {\
-        "packageLocation": "../../.yarn/berry/cache/diff-npm-7.0.0-dcfd888f89-10c0.zip/node_modules/diff/",\
-        "packageDependencies": [\
-          ["diff", "npm:7.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:8.0.2", {\
-        "packageLocation": "../../.yarn/berry/cache/diff-npm-8.0.2-8e9bd0086d-10c0.zip/node_modules/diff/",\
-        "packageDependencies": [\
-          ["diff", "npm:8.0.2"]\
+          ["diff", "npm:8.0.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16030,7 +16035,7 @@ const RAW_RUNTIME_STATE =
           ["browser-stdout", "npm:1.3.1"],\
           ["chokidar", "npm:4.0.3"],\
           ["debug", "virtual:488175d82091d4ca3a3bc6ffe48c48f684a1375da06eeaae9c1710766b61aa655712e77980f3337389da5a19e21912b4a57ffab0bd92cf7769b084c4efa68695#npm:4.4.3"],\
-          ["diff", "npm:7.0.0"],\
+          ["diff", "npm:8.0.3"],\
           ["escape-string-regexp", "npm:4.0.0"],\
           ["find-up", "npm:5.0.0"],\
           ["glob", "npm:10.5.0"],\
@@ -16057,7 +16062,7 @@ const RAW_RUNTIME_STATE =
           ["browser-stdout", "npm:1.3.1"],\
           ["chokidar", "npm:4.0.3"],\
           ["debug", "virtual:488175d82091d4ca3a3bc6ffe48c48f684a1375da06eeaae9c1710766b61aa655712e77980f3337389da5a19e21912b4a57ffab0bd92cf7769b084c4efa68695#npm:4.4.3"],\
-          ["diff", "npm:7.0.0"],\
+          ["diff", "npm:8.0.3"],\
           ["escape-string-regexp", "npm:4.0.0"],\
           ["find-up", "npm:5.0.0"],\
           ["glob", "npm:10.5.0"],\
@@ -16120,7 +16125,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/mocha", null],\
           ["chalk", "npm:4.1.2"],\
-          ["diff", "npm:5.2.0"],\
+          ["diff", "npm:8.0.3"],\
           ["json-stringify-safe", "npm:5.0.1"],\
           ["lodash.isempty", "npm:4.4.0"],\
           ["lodash.isfunction", "npm:3.0.9"],\
@@ -16453,7 +16458,7 @@ const RAW_RUNTIME_STATE =
           ["nopt", "npm:9.0.0"],\
           ["proc-log", "npm:6.0.0"],\
           ["semver", "npm:7.7.3"],\
-          ["tar", "npm:7.5.2"],\
+          ["tar", "npm:7.5.4"],\
           ["tinyglobby", "npm:0.2.15"],\
           ["which", "npm:6.0.0"]\
         ],\
@@ -16875,13 +16880,16 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["otplib", [\
-      ["npm:12.0.1", {\
-        "packageLocation": "../../.yarn/berry/cache/otplib-npm-12.0.1-77263e8084-10c0.zip/node_modules/otplib/",\
+      ["npm:13.1.1", {\
+        "packageLocation": "../../.yarn/berry/cache/otplib-npm-13.1.1-9cf32dd317-10c0.zip/node_modules/otplib/",\
         "packageDependencies": [\
-          ["@otplib/core", "npm:12.0.1"],\
-          ["@otplib/preset-default", "npm:12.0.1"],\
-          ["@otplib/preset-v11", "npm:12.0.1"],\
-          ["otplib", "npm:12.0.1"]\
+          ["@otplib/core", "npm:13.1.1"],\
+          ["@otplib/hotp", "npm:13.1.1"],\
+          ["@otplib/plugin-base32-scure", "npm:13.1.1"],\
+          ["@otplib/plugin-crypto-noble", "npm:13.1.1"],\
+          ["@otplib/totp", "npm:13.1.1"],\
+          ["@otplib/uri", "npm:13.1.1"],\
+          ["otplib", "npm:13.1.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18962,7 +18970,7 @@ const RAW_RUNTIME_STATE =
           ["@sinonjs/commons", "npm:3.0.1"],\
           ["@sinonjs/fake-timers", "npm:15.1.0"],\
           ["@sinonjs/samsam", "npm:8.0.3"],\
-          ["diff", "npm:8.0.2"],\
+          ["diff", "npm:8.0.3"],\
           ["sinon", "npm:21.0.1"],\
           ["supports-color", "npm:7.2.0"]\
         ],\
@@ -19794,14 +19802,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["tar", [\
-      ["npm:7.5.2", {\
-        "packageLocation": "../../.yarn/berry/cache/tar-npm-7.5.2-6d8cfb7a13-10c0.zip/node_modules/tar/",\
+      ["npm:7.5.4", {\
+        "packageLocation": "../../.yarn/berry/cache/tar-npm-7.5.4-9413ae778a-10c0.zip/node_modules/tar/",\
         "packageDependencies": [\
           ["@isaacs/fs-minipass", "npm:4.0.1"],\
           ["chownr", "npm:3.0.0"],\
           ["minipass", "npm:7.1.2"],\
           ["minizlib", "npm:3.1.0"],\
-          ["tar", "npm:7.5.2"],\
+          ["tar", "npm:7.5.4"],\
           ["yallist", "npm:5.0.0"]\
         ],\
         "linkType": "HARD"\
@@ -19962,15 +19970,6 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@types/tslib",\
           "tslib"\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["thirty-two", [\
-      ["npm:1.0.2", {\
-        "packageLocation": "../../.yarn/berry/cache/thirty-two-npm-1.0.2-9d9270aa34-10c0.zip/node_modules/thirty-two/",\
-        "packageDependencies": [\
-          ["thirty-two", "npm:1.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20287,7 +20286,7 @@ const RAW_RUNTIME_STATE =
           ["acorn-walk", "npm:8.3.4"],\
           ["arg", "npm:4.1.3"],\
           ["create-require", "npm:1.1.1"],\
-          ["diff", "npm:4.0.2"],\
+          ["diff", "npm:8.0.3"],\
           ["make-error", "npm:1.3.6"],\
           ["ts-node", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
