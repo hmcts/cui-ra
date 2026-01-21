@@ -10378,31 +10378,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["diff", [\
-      ["npm:4.0.2", {\
-        "packageLocation": "../../.yarn/berry/cache/diff-npm-4.0.2-73133c7102-10c0.zip/node_modules/diff/",\
+      ["npm:8.0.3", {\
+        "packageLocation": "../../.yarn/berry/cache/diff-npm-8.0.3-6f5c127138-10c0.zip/node_modules/diff/",\
         "packageDependencies": [\
-          ["diff", "npm:4.0.2"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:5.2.0", {\
-        "packageLocation": "../../.yarn/berry/cache/diff-npm-5.2.0-f523a581f3-10c0.zip/node_modules/diff/",\
-        "packageDependencies": [\
-          ["diff", "npm:5.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:7.0.0", {\
-        "packageLocation": "../../.yarn/berry/cache/diff-npm-7.0.0-dcfd888f89-10c0.zip/node_modules/diff/",\
-        "packageDependencies": [\
-          ["diff", "npm:7.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:8.0.2", {\
-        "packageLocation": "../../.yarn/berry/cache/diff-npm-8.0.2-8e9bd0086d-10c0.zip/node_modules/diff/",\
-        "packageDependencies": [\
-          ["diff", "npm:8.0.2"]\
+          ["diff", "npm:8.0.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16030,7 +16009,7 @@ const RAW_RUNTIME_STATE =
           ["browser-stdout", "npm:1.3.1"],\
           ["chokidar", "npm:4.0.3"],\
           ["debug", "virtual:488175d82091d4ca3a3bc6ffe48c48f684a1375da06eeaae9c1710766b61aa655712e77980f3337389da5a19e21912b4a57ffab0bd92cf7769b084c4efa68695#npm:4.4.3"],\
-          ["diff", "npm:7.0.0"],\
+          ["diff", "npm:8.0.3"],\
           ["escape-string-regexp", "npm:4.0.0"],\
           ["find-up", "npm:5.0.0"],\
           ["glob", "npm:10.5.0"],\
@@ -16057,7 +16036,7 @@ const RAW_RUNTIME_STATE =
           ["browser-stdout", "npm:1.3.1"],\
           ["chokidar", "npm:4.0.3"],\
           ["debug", "virtual:488175d82091d4ca3a3bc6ffe48c48f684a1375da06eeaae9c1710766b61aa655712e77980f3337389da5a19e21912b4a57ffab0bd92cf7769b084c4efa68695#npm:4.4.3"],\
-          ["diff", "npm:7.0.0"],\
+          ["diff", "npm:8.0.3"],\
           ["escape-string-regexp", "npm:4.0.0"],\
           ["find-up", "npm:5.0.0"],\
           ["glob", "npm:10.5.0"],\
@@ -16120,7 +16099,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/mocha", null],\
           ["chalk", "npm:4.1.2"],\
-          ["diff", "npm:5.2.0"],\
+          ["diff", "npm:8.0.3"],\
           ["json-stringify-safe", "npm:5.0.1"],\
           ["lodash.isempty", "npm:4.4.0"],\
           ["lodash.isfunction", "npm:3.0.9"],\
@@ -16453,7 +16432,7 @@ const RAW_RUNTIME_STATE =
           ["nopt", "npm:9.0.0"],\
           ["proc-log", "npm:6.0.0"],\
           ["semver", "npm:7.7.3"],\
-          ["tar", "npm:7.5.2"],\
+          ["tar", "npm:7.5.4"],\
           ["tinyglobby", "npm:0.2.15"],\
           ["which", "npm:6.0.0"]\
         ],\
@@ -18962,7 +18941,7 @@ const RAW_RUNTIME_STATE =
           ["@sinonjs/commons", "npm:3.0.1"],\
           ["@sinonjs/fake-timers", "npm:15.1.0"],\
           ["@sinonjs/samsam", "npm:8.0.3"],\
-          ["diff", "npm:8.0.2"],\
+          ["diff", "npm:8.0.3"],\
           ["sinon", "npm:21.0.1"],\
           ["supports-color", "npm:7.2.0"]\
         ],\
@@ -19794,14 +19773,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["tar", [\
-      ["npm:7.5.2", {\
-        "packageLocation": "../../.yarn/berry/cache/tar-npm-7.5.2-6d8cfb7a13-10c0.zip/node_modules/tar/",\
+      ["npm:7.5.4", {\
+        "packageLocation": "../../.yarn/berry/cache/tar-npm-7.5.4-9413ae778a-10c0.zip/node_modules/tar/",\
         "packageDependencies": [\
           ["@isaacs/fs-minipass", "npm:4.0.1"],\
           ["chownr", "npm:3.0.0"],\
           ["minipass", "npm:7.1.2"],\
           ["minizlib", "npm:3.1.0"],\
-          ["tar", "npm:7.5.2"],\
+          ["tar", "npm:7.5.4"],\
           ["yallist", "npm:5.0.0"]\
         ],\
         "linkType": "HARD"\
@@ -20287,7 +20266,7 @@ const RAW_RUNTIME_STATE =
           ["acorn-walk", "npm:8.3.4"],\
           ["arg", "npm:4.1.3"],\
           ["create-require", "npm:1.1.1"],\
-          ["diff", "npm:4.0.2"],\
+          ["diff", "npm:8.0.3"],\
           ["make-error", "npm:1.3.6"],\
           ["ts-node", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
