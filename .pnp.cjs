@@ -37,7 +37,7 @@ const RAW_RUNTIME_STATE =
           ["@codeceptjs/configure", "virtual:46cee4d60d6c18ae693933817dc6c475ee95f6df75adc0da7ae946dd66238e02e946f9df6c136d53c0a3323eb3d7fdd557567f7c0884b7059b6c15b52a20c5ed#npm:1.0.6"],\
           ["@eslint/js", "npm:9.39.2"],\
           ["@hmcts/cookie-manager", "npm:1.1.0"],\
-          ["@hmcts/info-provider", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.3.0"],\
+          ["@hmcts/info-provider", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.4.0"],\
           ["@hmcts/nodejs-healthcheck", "npm:1.8.6"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
           ["@hmcts/properties-volume", "npm:1.3.0"],\
@@ -3837,17 +3837,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@hmcts/info-provider", [\
-      ["npm:1.3.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@hmcts-info-provider-npm-1.3.0-912f8923f0-10c0.zip/node_modules/@hmcts/info-provider/",\
+      ["npm:1.4.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@hmcts-info-provider-npm-1.4.0-3e4acc49b8-10c0.zip/node_modules/@hmcts/info-provider/",\
         "packageDependencies": [\
-          ["@hmcts/info-provider", "npm:1.3.0"]\
+          ["@hmcts/info-provider", "npm:1.4.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.3.0", {\
-        "packageLocation": "./.yarn/__virtual__/@hmcts-info-provider-virtual-74f18dae21/7/runner/cache/others/berry/cache/@hmcts-info-provider-npm-1.3.0-912f8923f0-10c0.zip/node_modules/@hmcts/info-provider/",\
+      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.4.0", {\
+        "packageLocation": "./.yarn/__virtual__/@hmcts-info-provider-virtual-91518334ba/7/runner/cache/others/berry/cache/@hmcts-info-provider-npm-1.4.0-3e4acc49b8-10c0.zip/node_modules/@hmcts/info-provider/",\
         "packageDependencies": [\
-          ["@hmcts/info-provider", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.3.0"],\
+          ["@hmcts/info-provider", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.4.0"],\
           ["@types/express", "npm:5.0.6"],\
           ["express", "npm:5.2.1"],\
           ["js-yaml", "npm:4.1.1"]\
@@ -9965,7 +9965,7 @@ const RAW_RUNTIME_STATE =
           ["@codeceptjs/configure", "virtual:46cee4d60d6c18ae693933817dc6c475ee95f6df75adc0da7ae946dd66238e02e946f9df6c136d53c0a3323eb3d7fdd557567f7c0884b7059b6c15b52a20c5ed#npm:1.0.6"],\
           ["@eslint/js", "npm:9.39.2"],\
           ["@hmcts/cookie-manager", "npm:1.1.0"],\
-          ["@hmcts/info-provider", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.3.0"],\
+          ["@hmcts/info-provider", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.4.0"],\
           ["@hmcts/nodejs-healthcheck", "npm:1.8.6"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
           ["@hmcts/properties-volume", "npm:1.3.0"],\
