@@ -111,7 +111,7 @@ const RAW_RUNTIME_STATE =
           ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
           ["otplib", "npm:12.0.1"],\
           ["pa11y", "npm:9.0.1"],\
-          ["playwright", "npm:1.58.0"],\
+          ["playwright", "npm:1.58.1"],\
           ["prettier", "npm:3.8.1"],\
           ["puppeteer", "npm:24.36.1"],\
           ["redis", "npm:5.10.0"],\
@@ -10049,7 +10049,7 @@ const RAW_RUNTIME_STATE =
           ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
           ["otplib", "npm:12.0.1"],\
           ["pa11y", "npm:9.0.1"],\
-          ["playwright", "npm:1.58.0"],\
+          ["playwright", "npm:1.58.1"],\
           ["prettier", "npm:3.8.1"],\
           ["puppeteer", "npm:24.36.1"],\
           ["redis", "npm:5.10.0"],\
@@ -17414,21 +17414,21 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["playwright", [\
-      ["npm:1.58.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/playwright-npm-1.58.0-e962aa7ad7-10c0.zip/node_modules/playwright/",\
+      ["npm:1.58.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/playwright-npm-1.58.1-789800a9d5-10c0.zip/node_modules/playwright/",\
         "packageDependencies": [\
           ["fsevents", "patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"],\
-          ["playwright", "npm:1.58.0"],\
-          ["playwright-core", "npm:1.58.0"]\
+          ["playwright", "npm:1.58.1"],\
+          ["playwright-core", "npm:1.58.1"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["playwright-core", [\
-      ["npm:1.58.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/playwright-core-npm-1.58.0-5753f9e161-10c0.zip/node_modules/playwright-core/",\
+      ["npm:1.58.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/playwright-core-npm-1.58.1-bfc3b0dea7-10c0.zip/node_modules/playwright-core/",\
         "packageDependencies": [\
-          ["playwright-core", "npm:1.58.0"]\
+          ["playwright-core", "npm:1.58.1"]\
         ],\
         "linkType": "HARD"\
       }]\
