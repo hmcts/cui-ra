@@ -109,7 +109,7 @@ const RAW_RUNTIME_STATE =
           ["nodemon", "npm:3.1.11"],\
           ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
           ["otplib", "npm:12.0.1"],\
-          ["pa11y", "npm:9.0.1"],\
+          ["pa11y", "npm:9.1.0"],\
           ["playwright", "npm:1.58.1"],\
           ["prettier", "npm:3.8.1"],\
           ["puppeteer", "npm:24.36.1"],\
@@ -5209,6 +5209,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@pa11y/html_codesniffer", [\
+      ["npm:2.6.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@pa11y-html_codesniffer-npm-2.6.0-602b7f5502-10c0.zip/node_modules/@pa11y/html_codesniffer/",\
+        "packageDependencies": [\
+          ["@pa11y/html_codesniffer", "npm:2.6.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@paralleldrive/cuid2", [\
       ["npm:2.3.1", {\
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/@paralleldrive-cuid2-npm-2.3.1-34889f1c27-10c0.zip/node_modules/@paralleldrive/cuid2/",\
@@ -7911,10 +7920,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["axe-core", [\
-      ["npm:4.10.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/axe-core-npm-4.10.3-3534c4324b-10c0.zip/node_modules/axe-core/",\
+      ["npm:4.11.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/axe-core-npm-4.11.1-87a6aa2514-10c0.zip/node_modules/axe-core/",\
         "packageDependencies": [\
-          ["axe-core", "npm:4.10.3"]\
+          ["axe-core", "npm:4.11.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9477,17 +9486,17 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:13.1.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/commander-npm-13.1.0-bdbbfaaf9d-10c0.zip/node_modules/commander/",\
-        "packageDependencies": [\
-          ["commander", "npm:13.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:14.0.2", {\
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/commander-npm-14.0.2-538b84c387-10c0.zip/node_modules/commander/",\
         "packageDependencies": [\
           ["commander", "npm:14.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:14.0.3", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/commander-npm-14.0.3-93ab31471d-10c0.zip/node_modules/commander/",\
+        "packageDependencies": [\
+          ["commander", "npm:14.0.3"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -10108,7 +10117,7 @@ const RAW_RUNTIME_STATE =
           ["nodemon", "npm:3.1.11"],\
           ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
           ["otplib", "npm:12.0.1"],\
-          ["pa11y", "npm:9.0.1"],\
+          ["pa11y", "npm:9.1.0"],\
           ["playwright", "npm:1.58.1"],\
           ["prettier", "npm:3.8.1"],\
           ["puppeteer", "npm:24.36.1"],\
@@ -11031,13 +11040,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["envinfo", [\
-      ["npm:7.14.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/envinfo-npm-7.14.0-624fecc5a5-10c0.zip/node_modules/envinfo/",\
-        "packageDependencies": [\
-          ["envinfo", "npm:7.14.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:7.15.0", {\
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/envinfo-npm-7.15.0-d7ce619568-10c0.zip/node_modules/envinfo/",\
         "packageDependencies": [\
@@ -11049,6 +11051,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/envinfo-npm-7.20.0-cadb719ee9-10c0.zip/node_modules/envinfo/",\
         "packageDependencies": [\
           ["envinfo", "npm:7.20.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:7.21.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/envinfo-npm-7.21.0-90b5724340-10c0.zip/node_modules/envinfo/",\
+        "packageDependencies": [\
+          ["envinfo", "npm:7.21.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -13048,15 +13057,6 @@ const RAW_RUNTIME_STATE =
           "@types/rspack__core",\
           "@types/webpack",\
           "webpack"\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["html_codesniffer", [\
-      ["npm:2.5.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/html_codesniffer-npm-2.5.1-5621e5bca3-10c0.zip/node_modules/html_codesniffer/",\
-        "packageDependencies": [\
-          ["html_codesniffer", "npm:2.5.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17168,18 +17168,18 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["pa11y", [\
-      ["npm:9.0.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/pa11y-npm-9.0.1-65a2fcb723-10c0.zip/node_modules/pa11y/",\
+      ["npm:9.1.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/pa11y-npm-9.1.0-fc1d038381-10c0.zip/node_modules/pa11y/",\
         "packageDependencies": [\
-          ["axe-core", "npm:4.10.3"],\
+          ["@pa11y/html_codesniffer", "npm:2.6.0"],\
+          ["axe-core", "npm:4.11.1"],\
           ["bfj", "npm:9.1.2"],\
-          ["commander", "npm:13.1.0"],\
-          ["envinfo", "npm:7.14.0"],\
-          ["html_codesniffer", "npm:2.5.1"],\
+          ["commander", "npm:14.0.3"],\
+          ["envinfo", "npm:7.21.0"],\
           ["kleur", "npm:4.1.5"],\
           ["mustache", "npm:4.2.0"],\
           ["node.extend", "npm:2.0.3"],\
-          ["pa11y", "npm:9.0.1"],\
+          ["pa11y", "npm:9.1.0"],\
           ["puppeteer", "npm:24.36.1"],\
           ["semver", "npm:7.7.3"]\
         ],\
