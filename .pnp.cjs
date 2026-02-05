@@ -52,7 +52,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:29.5.14"],\
           ["@types/lodash", "npm:4.17.23"],\
-          ["@types/node", "npm:24.10.10"],\
+          ["@types/node", "npm:24.10.11"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.7"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -6178,10 +6178,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:24.10.10", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-node-npm-24.10.10-c15756552a-10c0.zip/node_modules/@types/node/",\
+      ["npm:24.10.11", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-node-npm-24.10.11-a32dd0cf95-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:24.10.10"],\
+          ["@types/node", "npm:24.10.11"],\
           ["undici-types", "npm:7.16.0"]\
         ],\
         "linkType": "HARD"\
@@ -10060,7 +10060,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:29.5.14"],\
           ["@types/lodash", "npm:4.17.23"],\
-          ["@types/node", "npm:24.10.10"],\
+          ["@types/node", "npm:24.10.11"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.7"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -20548,7 +20548,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:24.10.10"],\
+          ["@types/node", "npm:24.10.11"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
