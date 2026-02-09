@@ -52,4 +52,12 @@ describe('UrlRoute', () => {
       expect(result).toBe(expectedUrl);
     });
   });
+
+  describe('isCallbackUrlWhitelisted', () => {
+    test('should return false when callbackUrl is empty', () => {
+      const result = UrlRoute.isCallbackUrlWhitelisted('');
+
+      expect(result).toBe(false);
+    });
+  });
 });

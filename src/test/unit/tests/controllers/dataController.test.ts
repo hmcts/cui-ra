@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { DataController } from '../../../../main/controllers';
-import { Route } from '../../../../main/constants';
+import { ErrorMessages, Route } from '../../../../main/constants';
 import { UrlRoute } from './../../../../main/utilities';
 import { mockLogger, mockRedisClient, mockServiceAuth, mockRefData, mockFlagProcessor } from '../../mocks';
 import { Session, SessionData } from 'express-session';
@@ -90,7 +90,7 @@ describe('DataController', () => {
           existingFlags: { details: [] },
           hmctsServiceId: 'mockHmctsServiceId',
           masterFlagCode: 'RA0001',
-          callbackUrl: 'mockCallbackUrl',
+          callbackUrl: 'https://service.gov.uk',
           logoutUrl: 'mockLogoutUrl',
         },
       })
@@ -115,6 +115,31 @@ describe('DataController', () => {
           } as Request)
         )
       )
+    );
+  });
+
+  test('should return 400 when callback URL is not whitelisted', async () => {
+    mockedRedis.exists = jest.fn().mockResolvedValue(true);
+    mockedRedis.get = jest.fn().mockResolvedValue(
+      JSON.stringify({
+        idamToken: 'mockIdamToken',
+        payload: {
+          existingFlags: { details: [] },
+          hmctsServiceId: 'mockHmctsServiceId',
+          masterFlagCode: 'RA0001',
+          callbackUrl: 'mockReturnUrl',
+          logoutUrl: 'mockLogoutUrl',
+        },
+      })
+    );
+
+    await dataController.process(mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(mockNext).toHaveBeenCalledWith(
+      expect.objectContaining({
+        status: 400,
+        message: ErrorMessages.INVALID_URL,
+      })
     );
   });
 
@@ -168,7 +193,7 @@ describe('DataController', () => {
           },
           hmctsServiceId: 'mockHmctsServiceId',
           masterFlagCode: 'RA0001',
-          callbackUrl: 'mockCallbackUrl',
+          callbackUrl: 'https://service.gov.uk',
           logoutUrl: 'mockLogoutUrl',
         },
       })
@@ -219,7 +244,7 @@ describe('DataController', () => {
           existingFlags: { details: [] },
           hmctsServiceId: 'mockHmctsServiceId',
           masterFlagCode: 'RA9999',
-          callbackUrl: 'mockCallbackUrl',
+          callbackUrl: 'https://service.gov.uk',
           logoutUrl: 'mockLogoutUrl',
         },
       })
