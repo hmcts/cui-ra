@@ -132,7 +132,7 @@ const RAW_RUNTIME_STATE =
           ["ts-node", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.9.2"],\
           ["tsconfig-paths", "npm:4.2.0"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
-          ["webdriverio", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.23.3"],\
+          ["webdriverio", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.24.0"],\
           ["webpack", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.105.1"],\
           ["webpack-cli", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.0.1"],\
           ["webpack-dev-middleware", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.4.5"],\
@@ -6750,13 +6750,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@wdio/config", [\
-      ["npm:9.23.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@wdio-config-npm-9.23.3-ec46616b64-10c0.zip/node_modules/@wdio/config/",\
+      ["npm:9.24.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@wdio-config-npm-9.24.0-f5463f7169-10c0.zip/node_modules/@wdio/config/",\
         "packageDependencies": [\
-          ["@wdio/config", "npm:9.23.3"],\
+          ["@wdio/config", "npm:9.24.0"],\
           ["@wdio/logger", "npm:9.18.0"],\
-          ["@wdio/types", "npm:9.23.3"],\
-          ["@wdio/utils", "npm:9.23.3"],\
+          ["@wdio/types", "npm:9.24.0"],\
+          ["@wdio/utils", "npm:9.24.0"],\
           ["deepmerge-ts", "npm:7.1.5"],\
           ["glob", "npm:10.5.0"],\
           ["import-meta-resolve", "npm:4.2.0"],\
@@ -6780,10 +6780,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@wdio/protocols", [\
-      ["npm:9.23.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@wdio-protocols-npm-9.23.3-2690b88fea-10c0.zip/node_modules/@wdio/protocols/",\
+      ["npm:9.24.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@wdio-protocols-npm-9.24.0-93352d13f6-10c0.zip/node_modules/@wdio/protocols/",\
         "packageDependencies": [\
-          ["@wdio/protocols", "npm:9.23.3"]\
+          ["@wdio/protocols", "npm:9.24.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6799,23 +6799,23 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@wdio/types", [\
-      ["npm:9.23.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@wdio-types-npm-9.23.3-4d2bdabd88-10c0.zip/node_modules/@wdio/types/",\
+      ["npm:9.24.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@wdio-types-npm-9.24.0-aa4edc2f29-10c0.zip/node_modules/@wdio/types/",\
         "packageDependencies": [\
           ["@types/node", "npm:20.19.25"],\
-          ["@wdio/types", "npm:9.23.3"]\
+          ["@wdio/types", "npm:9.24.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@wdio/utils", [\
-      ["npm:9.23.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@wdio-utils-npm-9.23.3-4fc5a093b3-10c0.zip/node_modules/@wdio/utils/",\
+      ["npm:9.24.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@wdio-utils-npm-9.24.0-50cb3eb86f-10c0.zip/node_modules/@wdio/utils/",\
         "packageDependencies": [\
           ["@puppeteer/browsers", "npm:2.10.13"],\
           ["@wdio/logger", "npm:9.18.0"],\
-          ["@wdio/types", "npm:9.23.3"],\
-          ["@wdio/utils", "npm:9.23.3"],\
+          ["@wdio/types", "npm:9.24.0"],\
+          ["@wdio/utils", "npm:9.24.0"],\
           ["decamelize", "npm:6.0.1"],\
           ["deepmerge-ts", "npm:7.1.5"],\
           ["edgedriver", "npm:6.1.2"],\
@@ -10140,7 +10140,7 @@ const RAW_RUNTIME_STATE =
           ["ts-node", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.9.2"],\
           ["tsconfig-paths", "npm:4.2.0"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
-          ["webdriverio", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.23.3"],\
+          ["webdriverio", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.24.0"],\
           ["webpack", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.105.1"],\
           ["webpack-cli", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:6.0.1"],\
           ["webpack-dev-middleware", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.4.5"],\
@@ -21167,21 +21167,21 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["webdriver", [\
-      ["npm:9.23.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/webdriver-npm-9.23.3-f2b72efa95-10c0.zip/node_modules/webdriver/",\
+      ["npm:9.24.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/webdriver-npm-9.24.0-9cfdc401d2-10c0.zip/node_modules/webdriver/",\
         "packageDependencies": [\
           ["@types/node", "npm:20.19.25"],\
           ["@types/ws", "npm:8.18.1"],\
-          ["@wdio/config", "npm:9.23.3"],\
+          ["@wdio/config", "npm:9.24.0"],\
           ["@wdio/logger", "npm:9.18.0"],\
-          ["@wdio/protocols", "npm:9.23.3"],\
-          ["@wdio/types", "npm:9.23.3"],\
-          ["@wdio/utils", "npm:9.23.3"],\
+          ["@wdio/protocols", "npm:9.24.0"],\
+          ["@wdio/types", "npm:9.24.0"],\
+          ["@wdio/utils", "npm:9.24.0"],\
           ["deepmerge-ts", "npm:7.1.5"],\
           ["https-proxy-agent", "npm:7.0.6"],\
           ["undici", "npm:6.22.0"],\
-          ["webdriver", "npm:9.23.3"],\
-          ["ws", "virtual:f2b72efa953ec6adfadc61d201e9ced004a83c0053cdd3e09b1df46e78e4255eb4e4ae2518347187d4a3f5311c2cbcc86bceac4f94cccdd9fb3b42133055b2c7#npm:8.18.3"]\
+          ["webdriver", "npm:9.24.0"],\
+          ["ws", "virtual:9cfdc401d23554c1b117650724616bb83fb5c87223445a14d868f382dd81edaec64f3ce5dbc5b7eff8757b0482576ba342d2f7501f2332cc39085d57491f20ac#npm:8.18.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -21196,25 +21196,25 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["webdriverio", [\
-      ["npm:9.23.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/webdriverio-npm-9.23.3-be996e5bba-10c0.zip/node_modules/webdriverio/",\
+      ["npm:9.24.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/webdriverio-npm-9.24.0-4f849b6327-10c0.zip/node_modules/webdriverio/",\
         "packageDependencies": [\
-          ["webdriverio", "npm:9.23.3"]\
+          ["webdriverio", "npm:9.24.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.23.3", {\
-        "packageLocation": "./.yarn/__virtual__/webdriverio-virtual-feb2cb215a/7/runner/cache/others/berry/cache/webdriverio-npm-9.23.3-be996e5bba-10c0.zip/node_modules/webdriverio/",\
+      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.24.0", {\
+        "packageLocation": "./.yarn/__virtual__/webdriverio-virtual-93b2d864d2/7/runner/cache/others/berry/cache/webdriverio-npm-9.24.0-4f849b6327-10c0.zip/node_modules/webdriverio/",\
         "packageDependencies": [\
           ["@types/node", "npm:20.19.25"],\
           ["@types/puppeteer-core", null],\
           ["@types/sinonjs__fake-timers", "npm:8.1.5"],\
-          ["@wdio/config", "npm:9.23.3"],\
+          ["@wdio/config", "npm:9.24.0"],\
           ["@wdio/logger", "npm:9.18.0"],\
-          ["@wdio/protocols", "npm:9.23.3"],\
+          ["@wdio/protocols", "npm:9.24.0"],\
           ["@wdio/repl", "npm:9.16.2"],\
-          ["@wdio/types", "npm:9.23.3"],\
-          ["@wdio/utils", "npm:9.23.3"],\
+          ["@wdio/types", "npm:9.24.0"],\
+          ["@wdio/utils", "npm:9.24.0"],\
           ["archiver", "npm:7.0.1"],\
           ["aria-query", "npm:5.3.2"],\
           ["cheerio", "npm:1.1.2"],\
@@ -21232,8 +21232,8 @@ const RAW_RUNTIME_STATE =
           ["rgb2hex", "npm:0.2.5"],\
           ["serialize-error", "npm:12.0.0"],\
           ["urlpattern-polyfill", "npm:10.1.0"],\
-          ["webdriver", "npm:9.23.3"],\
-          ["webdriverio", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.23.3"]\
+          ["webdriver", "npm:9.24.0"],\
+          ["webdriverio", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.24.0"]\
         ],\
         "packagePeers": [\
           "@types/puppeteer-core",\
@@ -21725,14 +21725,14 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:bd5f34323628a01023a96d9aaf0ba1578a3d19c1d33380fa00158e7602f1bb0579d42ce2044418eb3651ca78999e398f179025133eb2433dee0df3170364b248#npm:8.19.0", {\
-        "packageLocation": "./.yarn/__virtual__/ws-virtual-3c0c2d0d4f/7/runner/cache/others/berry/cache/ws-npm-8.19.0-c967c046a5-10c0.zip/node_modules/ws/",\
+      ["virtual:9cfdc401d23554c1b117650724616bb83fb5c87223445a14d868f382dd81edaec64f3ce5dbc5b7eff8757b0482576ba342d2f7501f2332cc39085d57491f20ac#npm:8.18.3", {\
+        "packageLocation": "./.yarn/__virtual__/ws-virtual-4e574dd5fa/7/runner/cache/others/berry/cache/ws-npm-8.18.3-665d39209d-10c0.zip/node_modules/ws/",\
         "packageDependencies": [\
           ["@types/bufferutil", null],\
           ["@types/utf-8-validate", null],\
           ["bufferutil", null],\
           ["utf-8-validate", null],\
-          ["ws", "virtual:bd5f34323628a01023a96d9aaf0ba1578a3d19c1d33380fa00158e7602f1bb0579d42ce2044418eb3651ca78999e398f179025133eb2433dee0df3170364b248#npm:8.19.0"]\
+          ["ws", "virtual:9cfdc401d23554c1b117650724616bb83fb5c87223445a14d868f382dd81edaec64f3ce5dbc5b7eff8757b0482576ba342d2f7501f2332cc39085d57491f20ac#npm:8.18.3"]\
         ],\
         "packagePeers": [\
           "@types/bufferutil",\
@@ -21742,14 +21742,14 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:f2b72efa953ec6adfadc61d201e9ced004a83c0053cdd3e09b1df46e78e4255eb4e4ae2518347187d4a3f5311c2cbcc86bceac4f94cccdd9fb3b42133055b2c7#npm:8.18.3", {\
-        "packageLocation": "./.yarn/__virtual__/ws-virtual-2f7d313793/7/runner/cache/others/berry/cache/ws-npm-8.18.3-665d39209d-10c0.zip/node_modules/ws/",\
+      ["virtual:bd5f34323628a01023a96d9aaf0ba1578a3d19c1d33380fa00158e7602f1bb0579d42ce2044418eb3651ca78999e398f179025133eb2433dee0df3170364b248#npm:8.19.0", {\
+        "packageLocation": "./.yarn/__virtual__/ws-virtual-3c0c2d0d4f/7/runner/cache/others/berry/cache/ws-npm-8.19.0-c967c046a5-10c0.zip/node_modules/ws/",\
         "packageDependencies": [\
           ["@types/bufferutil", null],\
           ["@types/utf-8-validate", null],\
           ["bufferutil", null],\
           ["utf-8-validate", null],\
-          ["ws", "virtual:f2b72efa953ec6adfadc61d201e9ced004a83c0053cdd3e09b1df46e78e4255eb4e4ae2518347187d4a3f5311c2cbcc86bceac4f94cccdd9fb3b42133055b2c7#npm:8.18.3"]\
+          ["ws", "virtual:bd5f34323628a01023a96d9aaf0ba1578a3d19c1d33380fa00158e7602f1bb0579d42ce2044418eb3651ca78999e398f179025133eb2433dee0df3170364b248#npm:8.19.0"]\
         ],\
         "packagePeers": [\
           "@types/bufferutil",\
