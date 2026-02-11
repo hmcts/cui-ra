@@ -35,6 +35,6 @@
     "listOfValuesLength": 10
   },
   "callbackUrlWhitelist": {
-    "domains": [".service.gov.uk", ".platform.hmcts.net","localhost"]
+    "domains": [".service.gov.uk", ".platform.hmcts.net", "localhost"]
   }
 }
