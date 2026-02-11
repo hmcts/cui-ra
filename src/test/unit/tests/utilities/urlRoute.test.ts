@@ -54,64 +54,28 @@ describe('UrlRoute', () => {
   });
 
   describe('isCallbackUrlWhitelisted', () => {
-    test('should return false when callbackUrl is empty', () => {
-      const result = UrlRoute.isCallbackUrlWhitelisted('');
+    test.each([
+      '',
+      'https://example.com/callback',
+      'https://evil-site.com/phish',
+      'https://service.gov.uk.evil.com/callback',
+      'https://example.com/service.gov.uk/callback',
+      'https://localhost[/]callback/:id',
+    ])('should return false for non-whitelisted URL: %s', url => {
+      const result = UrlRoute.isCallbackUrlWhitelisted(url);
 
       expect(result).toBe(false);
     });
 
-    test('should allow whitelisted domain service.gov.uk', () => {
-      const result = UrlRoute.isCallbackUrlWhitelisted('https://example.service.gov.uk/callback');
+    test.each([
+      'https://example.service.gov.uk/callback',
+      'https://a.b.platform.hmcts.net/callback',
+      'https://localhost/callback',
+      'http://localhost:3000/callback',
+    ])('should return true for whitelisted URL: %s', url => {
+      const result = UrlRoute.isCallbackUrlWhitelisted(url);
 
       expect(result).toBe(true);
-    });
-
-    test('should allow whitelisted domain platform.hmcts.net', () => {
-      const result = UrlRoute.isCallbackUrlWhitelisted('https://a.b.platform.hmcts.net/callback');
-
-      expect(result).toBe(true);
-    });
-
-    test('should allow localhost https prefix', () => {
-      const result = UrlRoute.isCallbackUrlWhitelisted('https://localhost/callback');
-
-      expect(result).toBe(true);
-    });
-
-    test('should allow localhost http prefix', () => {
-      const result = UrlRoute.isCallbackUrlWhitelisted('http://localhost:3000/callback');
-
-      expect(result).toBe(true);
-    });
-
-    test('should reject non-whitelisted domain', () => {
-      const result = UrlRoute.isCallbackUrlWhitelisted('https://example.com/callback');
-
-      expect(result).toBe(false);
-    });
-
-    test('should reject known bad domain', () => {
-      const result = UrlRoute.isCallbackUrlWhitelisted('https://evil-site.com/phish');
-
-      expect(result).toBe(false);
-    });
-
-    test('should reject domain that only contains whitelisted text', () => {
-      const result = UrlRoute.isCallbackUrlWhitelisted('https://service.gov.uk.evil.com/callback');
-
-      expect(result).toBe(false);
-    });
-
-    test('should reject when whitelisted text appears in path, not domain', () => {
-      const result = UrlRoute.isCallbackUrlWhitelisted('https://example.com/service.gov.uk/callback');
-
-      expect(result).toBe(false);
-    });
-
-    test('should reject invalid URL', () => {
-      const result = UrlRoute.isCallbackUrlWhitelisted('https://localhost[/]callback/:id');
-
-      expect(result).toBe(false);
     });
   });
 });
