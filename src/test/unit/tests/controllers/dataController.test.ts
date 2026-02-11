@@ -90,7 +90,7 @@ describe('DataController', () => {
           existingFlags: { details: [] },
           hmctsServiceId: 'mockHmctsServiceId',
           masterFlagCode: 'RA0001',
-          callbackUrl: 'https://service.gov.uk',
+          callbackUrl: 'https://example.service.gov.uk',
           logoutUrl: 'mockLogoutUrl',
         },
       })
@@ -193,7 +193,7 @@ describe('DataController', () => {
           },
           hmctsServiceId: 'mockHmctsServiceId',
           masterFlagCode: 'RA0001',
-          callbackUrl: 'https://service.gov.uk',
+          callbackUrl: 'https://example.service.gov.uk',
           logoutUrl: 'mockLogoutUrl',
         },
       })
@@ -244,7 +244,7 @@ describe('DataController', () => {
           existingFlags: { details: [] },
           hmctsServiceId: 'mockHmctsServiceId',
           masterFlagCode: 'RA9999',
-          callbackUrl: 'https://service.gov.uk',
+          callbackUrl: 'https://example.service.gov.uk',
           logoutUrl: 'mockLogoutUrl',
         },
       })

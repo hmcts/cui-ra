@@ -61,6 +61,10 @@ describe('UrlRoute', () => {
       'https://service.gov.uk.evil.com/callback',
       'https://example.com/service.gov.uk/callback',
       'https://localhost[/]callback/:id',
+      'https://evil-service.gov.uk',
+      'http://localhost-app.com/callback',
+      'https://localhost.net/callback',
+      'http://example.service.gov.uk/callback',
     ])('should return false for non-whitelisted URL: %s', url => {
       const result = UrlRoute.isCallbackUrlWhitelisted(url);
 
@@ -69,7 +73,7 @@ describe('UrlRoute', () => {
 
     test.each([
       'https://example.service.gov.uk/callback',
-      'https://a.b.platform.hmcts.net/callback',
+      'https://example.platform.hmcts.net/callback',
       'https://localhost/callback',
       'http://localhost:3000/callback',
     ])('should return true for whitelisted URL: %s', url => {

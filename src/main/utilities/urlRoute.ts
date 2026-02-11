@@ -35,19 +35,23 @@ export class UrlRoute {
     }
     try {
       // Parse the URL and extract the hostname
-      const { hostname } = new URL(callbackUrl);
+      const { hostname, protocol } = new URL(callbackUrl);
 
       // Define the whitelisted domains and prefixes
       const whitelistedDomains: string[] = config.get('callbackUrlWhitelist.domains');
-      const whitelistedPrefixes: string[] = config.get('callbackUrlWhitelist.prefixes');
 
       // Check if the hostname matches any of the whitelisted domains
       const isDomainWhitelisted = whitelistedDomains.some(domain => hostname.endsWith(domain));
 
-      // Check if the hostname starts with any of the whitelisted prefixes
-      const isPrefixWhitelisted = whitelistedPrefixes.some(prefix => callbackUrl.startsWith(prefix));
-
-      return isDomainWhitelisted || isPrefixWhitelisted;
+      // Only allow http for localhost; https for whitelisted domains (and localhost)
+      const isLocalhost = hostname === 'localhost';
+      if (protocol === 'http:') {
+        return isLocalhost;
+      }
+      if (protocol === 'https:') {
+        return isDomainWhitelisted || isLocalhost;
+      }
+      return false;
     } catch (e) {
       const message = e instanceof Error ? e.message : String(e);
       logger.warn(`Invalid callback URL: "${callbackUrl}". ${message}`);
