@@ -1,4 +1,5 @@
-import { Route } from './../constants';
+import { ErrorMessages, Route } from './../constants';
+import { HTTPError } from './../HttpError';
 import { DataNotFoundError, MasterNotFoundError } from './../errors';
 import {
   DataManagerDataObject,
@@ -60,8 +61,12 @@ export class DataController {
       // Store the exisitng flags manages in session data
       req.session.partyname = payloadStore.payload.existingFlags.partyName;
       req.session.roleoncase = payloadStore.payload.existingFlags.roleOnCase;
-      req.session.callbackUrl = payloadStore.payload.callbackUrl;
-      this.logger.info(`${serviceId} provided callback URL : "${payloadStore.payload.callbackUrl}"`);
+      const callbackUrl = payloadStore.payload.callbackUrl;
+      if (!UrlRoute.isCallbackUrlWhitelisted(callbackUrl)) {
+        this.logger.warn(`${serviceId} provided non-whitelisted callback URL: "${callbackUrl}"`);
+        throw new HTTPError(ErrorMessages.INVALID_URL, 400);
+      }
+      req.session.callbackUrl = callbackUrl;
       req.session.logoutUrl = payloadStore.payload.logoutUrl;
       if (payloadStore.payload.masterFlagCode) {
         req.session.masterflagcode = payloadStore.payload.masterFlagCode.toUpperCase();

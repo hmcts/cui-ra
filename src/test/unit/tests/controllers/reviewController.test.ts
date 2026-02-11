@@ -5,6 +5,7 @@ import { Session, SessionData } from 'express-session';
 import { PayloadCollectionItem } from '../../../../main/interfaces';
 import { ExistingFlagsManager, NewFlagsManager } from '../../../../main/managers';
 import { ErrorMessages, Status, Route } from '../../../../main/constants';
+import { UrlRoute } from '../../../../main/utilities';
 import { mockLogger, mockRedisClient } from './../../mocks';
 import { ExistingFlagProcessor } from './../../../../main/processors';
 
@@ -72,7 +73,7 @@ describe('Review Controller', () => {
     expect(mockResponse.render).toBeCalledWith('review', expect.any(Object));
   });
 
-  test('Should not render review page', async () => {
+  test('Should not render review page when URL parsing fails', async () => {
     mockRequest = {
       body: {},
       query: {},
@@ -89,7 +90,38 @@ describe('Review Controller', () => {
     };
 
     reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR + ErrorMessages.INVALID_URL));
+    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.INVALID_URL));
+  });
+
+  test('Should not render review page when callback URL is not whitelisted', async () => {
+    mockRequest.session = {
+      partyName: 'demo name',
+      callbackUrl: 'https://example.com/callback/:id',
+      destroy: () => {},
+    } as unknown as Session & Partial<SessionData>;
+
+    reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(mockNext).toHaveBeenCalledWith(
+      expect.objectContaining({
+        status: 400,
+        message: ErrorMessages.INVALID_URL,
+      })
+    );
+  });
+
+  test('Should not render review page when URL building throws non-error', async () => {
+    const whitelistSpy = jest.spyOn(UrlRoute, 'isCallbackUrlWhitelisted').mockReturnValue(true);
+    const makeSpy = jest.spyOn(UrlRoute, 'make').mockImplementation(() => {
+      throw 'boom';
+    });
+
+    reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR + 'boom'));
+
+    whitelistSpy.mockRestore();
+    makeSpy.mockRestore();
   });
 
   test('Should render review page with empty editable flags', async () => {
@@ -250,6 +282,52 @@ describe('Review Controller', () => {
     expect(mockResponse.redirect).toBeCalledWith(new URL('https://localhost/callback/random-string-uuid'));
   });
 
+  test('Should fail to submit review when session is missing', async () => {
+    mockRequest.session = undefined;
+
+    await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(mockNext).toHaveBeenCalledWith(
+      expect.objectContaining({
+        status: 500,
+        message: ErrorMessages.UNEXPECTED_ERROR,
+      })
+    );
+  });
+
+  test('Should not submit review when callback URL is not whitelisted', async () => {
+    mockRequest.session = {
+      partyName: 'demo name',
+      callbackUrl: 'https://example.com/callback/:id',
+      destroy: () => {},
+    } as unknown as Session & Partial<SessionData>;
+
+    await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(mockResponse.redirect).not.toBeCalled();
+    expect(mockNext).toHaveBeenCalledWith(
+      expect.objectContaining({
+        status: 400,
+        message: ErrorMessages.INVALID_URL,
+      })
+    );
+  });
+
+  test('Should submit review and wrap URL parsing error', async () => {
+    const whitelistSpy = jest.spyOn(UrlRoute, 'isCallbackUrlWhitelisted').mockReturnValue(true);
+    const makeSpy = jest.spyOn(UrlRoute, 'make').mockReturnValue('not-a-valid-url');
+
+    await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(mockResponse.redirect).not.toBeCalled();
+    const error = (mockNext as jest.Mock).mock.calls[0][0] as Error;
+    expect(error.message).toContain(ErrorMessages.UNEXPECTED_ERROR);
+    expect(error.message).toContain('Invalid URL');
+
+    whitelistSpy.mockRestore();
+    makeSpy.mockRestore();
+  });
+
   test('Should submit review and fail to callback', async () => {
     mockRequest = {
       body: {},
@@ -266,6 +344,19 @@ describe('Review Controller', () => {
       },
     };
     await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR + ErrorMessages.INVALID_URL));
+    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.INVALID_URL));
+  });
+
+  test('Should not cancel when callback URL is not whitelisted', async () => {
+    mockRequest.session = {
+      partyName: 'demo name',
+      callbackUrl: 'https://example.com/callback/:id',
+      destroy: () => {},
+    } as unknown as Session & Partial<SessionData>;
+
+    await reviewController.cancel(mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(mockResponse.redirect).not.toBeCalled();
+    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.INVALID_URL));
   });
 });

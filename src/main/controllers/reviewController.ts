@@ -19,11 +19,18 @@ export class ReviewController {
     try {
       if (req.session.callbackUrl) {
         try {
+          if (!UrlRoute.isCallbackUrlWhitelisted(req.session.callbackUrl)) {
+            throw new HTTPError(ErrorMessages.INVALID_URL, 400);
+          }
           this.logger.info(`Callback URL @review: ${req.session.callbackUrl}`);
           const url = new URL(UrlRoute.make(req.session.callbackUrl, { id: '' }));
           res.set('Content-Security-Policy', `form-action 'self' ${url}`);
         } catch (err) {
-          throw new Error(ErrorMessages.UNEXPECTED_ERROR + err);
+          if (err instanceof HTTPError) {
+            throw err;
+          }
+          const message = err instanceof Error ? err.message : String(err);
+          throw new Error(ErrorMessages.UNEXPECTED_ERROR + message);
         }
       }
 
@@ -122,6 +129,10 @@ export class ReviewController {
         return res.redirect(Route.REVIEW);
       }
 
+      if (!UrlRoute.isCallbackUrlWhitelisted(req.session.callbackUrl)) {
+        throw new HTTPError(ErrorMessages.INVALID_URL, 400);
+      }
+
       const payload: OutboundPayload = PayloadBuilder.build(req, Actions.CANCEL);
 
       //gen id
@@ -148,6 +159,9 @@ export class ReviewController {
       if (!req.session || !req.session.callbackUrl) {
         throw new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 500);
       }
+      if (!UrlRoute.isCallbackUrlWhitelisted(req.session.callbackUrl)) {
+        throw new HTTPError(ErrorMessages.INVALID_URL, 400);
+      }
       const payload: OutboundPayload = PayloadBuilder.build(req);
 
       //gen id
@@ -161,7 +175,8 @@ export class ReviewController {
       try {
         url = new URL(UrlRoute.make(req.session.callbackUrl, { id: uuid }));
       } catch (err) {
-        throw new Error(ErrorMessages.UNEXPECTED_ERROR + err);
+        const message = err instanceof Error ? err.message : String(err);
+        throw new Error(ErrorMessages.UNEXPECTED_ERROR + message);
       }
       req.session.destroy(function () {});
       res.set('Content-Security-Policy', `form-action 'self' ${url}`);

@@ -52,4 +52,34 @@ describe('UrlRoute', () => {
       expect(result).toBe(expectedUrl);
     });
   });
+
+  describe('isCallbackUrlWhitelisted', () => {
+    test.each([
+      '',
+      'https://example.com/callback',
+      'https://evil-site.com/phish',
+      'https://service.gov.uk.evil.com/callback',
+      'https://example.com/service.gov.uk/callback',
+      'https://localhost[/]callback/:id',
+      'https://evil-service.gov.uk',
+      'http://localhost-app.com/callback',
+      'https://localhost.net/callback',
+      'http://example.service.gov.uk/callback',
+    ])('should return false for non-whitelisted URL: %s', url => {
+      const result = UrlRoute.isCallbackUrlWhitelisted(url);
+
+      expect(result).toBe(false);
+    });
+
+    test.each([
+      'https://example.service.gov.uk/callback',
+      'https://example.platform.hmcts.net/callback',
+      'https://localhost/callback',
+      'http://localhost:3000/callback',
+    ])('should return true for whitelisted URL: %s', url => {
+      const result = UrlRoute.isCallbackUrlWhitelisted(url);
+
+      expect(result).toBe(true);
+    });
+  });
 });
