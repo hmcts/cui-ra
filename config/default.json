@@ -33,5 +33,9 @@
   },
   "radio": {
     "listOfValuesLength": 10
+  },
+  "callbackUrlWhitelist": {
+    "domains": ["service.gov.uk", "platform.hmcts.net"],
+    "prefixes": ["https://localhost", "http://localhost"]
   }
 }

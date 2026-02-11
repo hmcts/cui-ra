@@ -1,4 +1,5 @@
 import { Request } from 'express';
+import config from 'config';
 const { Logger } = require('@hmcts/nodejs-logging');
 
 const logger = Logger.getLogger('urlRoute');
@@ -37,8 +38,8 @@ export class UrlRoute {
       const { hostname } = new URL(callbackUrl);
 
       // Define the whitelisted domains and prefixes
-      const whitelistedDomains = ['service.gov.uk', 'platform.hmcts.net'];
-      const whitelistedPrefixes = ['https://localhost', 'http://localhost'];
+      const whitelistedDomains: string[] = config.get('callbackUrlWhitelist.domains');
+      const whitelistedPrefixes: string[] = config.get('callbackUrlWhitelist.prefixes');
 
       // Check if the hostname matches any of the whitelisted domains
       const isDomainWhitelisted = whitelistedDomains.some(domain => hostname.endsWith(domain));
