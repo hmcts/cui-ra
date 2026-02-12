@@ -5218,12 +5218,11 @@ __metadata:
   linkType: hard
 
 "awilix@npm:^12.0.0":
-  version: 12.0.5
-  resolution: "awilix@npm:12.0.5"
+  version: 12.1.0
+  resolution: "awilix@npm:12.1.0"
   dependencies:
-    camel-case: "npm:^4.1.2"
     fast-glob: "npm:^3.3.3"
-  checksum: 10c0/39c387b58521aa4830289d3a79d38485e50a22ba66feb17924faf59b2b2cb2f04b59fdc2800ae07ab2481a40f4a09f72d3f0a470f6081994c336e07685db1f4e
+  checksum: 10c0/b96e9694087cfc87d75a12a6572850453a7fd16dda1456f109934960fc6fd87ac4677fccd30251394af5545ab7f33921ac802b2cc8ed410e7c68daeeb79bf1c1
   languageName: node
   linkType: hard
 
