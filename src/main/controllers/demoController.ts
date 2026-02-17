@@ -65,7 +65,7 @@ export class DemoController {
 
           req.session.newmanager = NewFlag;
           req.session.existingmanager = new ExistingFlagsManager();
-          req.session.callbackUrl = 'https://example.com/callback;
+          req.session.callbackUrl = 'https://example.com/callback';
           req.session.logoutUrl = Route.ROOT;
           req.session.hmctsserviceid = 'ABA5';
           req.session.sessioninit = true;
