@@ -8,6 +8,9 @@ let mockedRedis = mockRedisClient();
 
 describe('ApiController', () => {
   let controller: ApiController;
+  const validPayload = {
+    callbackUrl: 'https://example.service.gov.uk/callback',
+  };
 
   beforeEach(() => {
     controller = new ApiController(mockedLogger, mockedRedis);
@@ -33,7 +36,7 @@ describe('ApiController', () => {
     };
 
     test('should return 201 and url when valid tokens and payload are provided', async () => {
-      const req = mockRequest({ key: 'value' }, 'valid_idam_token', 'valid_service_token');
+      const req = mockRequest(validPayload, 'valid_idam_token', 'valid_service_token');
       const res = mockResponse();
 
       await controller.postPayload(req, res);
@@ -45,7 +48,7 @@ describe('ApiController', () => {
     });
 
     test('should throw an error when tokens are missing', async () => {
-      const req = mockRequest({ key: 'value' });
+      const req = mockRequest(validPayload);
       const res = mockResponse();
 
       await controller.postPayload(req, res);
@@ -56,13 +59,23 @@ describe('ApiController', () => {
     });
 
     test('should throw an error when tokens are not in correct format', async () => {
-      const req = mockRequest({ key: 'value' }, ['123'], ['123']);
+      const req = mockRequest(validPayload, ['123'], ['123']);
       const res = mockResponse();
 
       await controller.postPayload(req, res);
 
       expect(res.status).toHaveBeenCalledWith(401);
       expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.TOKENS_INCORRECT_FORMAT });
+    });
+
+    test('should return 400 when callbackUrl is not whitelisted', async () => {
+      const req = mockRequest({ callbackUrl: 'https://example.com/callback' }, 'valid_idam_token', 'valid_service_token');
+      const res = mockResponse();
+
+      await controller.postPayload(req, res);
+
+      expect(res.status).toHaveBeenCalledWith(400);
+      expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.INVALID_URL });
     });
   });
 

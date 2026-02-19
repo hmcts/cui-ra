@@ -30,6 +30,11 @@ export class ApiController {
       //Bind posted data to class
       const payload: InboundPayload = plainToClass(InboundPayload, req.body);
 
+      if (!UrlRoute.isCallbackUrlWhitelisted(payload.callbackUrl)) {
+        this.logger.warn(`Received non-whitelisted callback URL: "${payload.callbackUrl}"`);
+        return res.status(400).json({ error: ErrorMessages.INVALID_URL });
+      }
+
       //save data
       const payloadStore = new InboundPayloadStore(idamToken, serviceToken, payload);
 
