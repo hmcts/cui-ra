@@ -97,7 +97,7 @@ const RAW_RUNTIME_STATE =
           ["jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.7.0"],\
           ["jest-html-reporter", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:4.3.0"],\
           ["jest-util", "npm:29.7.0"],\
-          ["jquery", "npm:3.7.1"],\
+          ["jquery", "npm:4.0.0"],\
           ["json-schema", "npm:0.4.0"],\
           ["lint-staged", "npm:16.2.7"],\
           ["lodash", "npm:4.17.23"],\
@@ -10126,7 +10126,7 @@ const RAW_RUNTIME_STATE =
           ["jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.7.0"],\
           ["jest-html-reporter", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:4.3.0"],\
           ["jest-util", "npm:29.7.0"],\
-          ["jquery", "npm:3.7.1"],\
+          ["jquery", "npm:4.0.0"],\
           ["json-schema", "npm:0.4.0"],\
           ["lint-staged", "npm:16.2.7"],\
           ["lodash", "npm:4.17.23"],\
@@ -14808,10 +14808,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["jquery", [\
-      ["npm:3.7.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/jquery-npm-3.7.1-eeeac0f21e-10c0.zip/node_modules/jquery/",\
+      ["npm:4.0.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/jquery-npm-4.0.0-a7e8df4e00-10c0.zip/node_modules/jquery/",\
         "packageDependencies": [\
-          ["jquery", "npm:3.7.1"]\
+          ["jquery", "npm:4.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
