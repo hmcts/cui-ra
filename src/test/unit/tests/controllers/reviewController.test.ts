@@ -358,7 +358,6 @@ describe('Review Controller', () => {
 
     await reviewController.cancel(mockRequest as Request, mockResponse as Response, mockNext);
 
-
     expect(mockNext).toBeCalledWith(new Error(ErrorMessages.INVALID_CALLBACK_URL));
   });
 });
