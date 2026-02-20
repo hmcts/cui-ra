@@ -69,7 +69,11 @@ describe('ApiController', () => {
     });
 
     test('should return 400 when callbackUrl is not whitelisted', async () => {
-      const req = mockRequest({ callbackUrl: 'https://example.com/callback' }, 'valid_idam_token', 'valid_service_token');
+      const req = mockRequest(
+        { callbackUrl: 'https://example.com/callback' },
+        'valid_idam_token',
+        'valid_service_token'
+      );
       const res = mockResponse();
 
       await controller.postPayload(req, res);
