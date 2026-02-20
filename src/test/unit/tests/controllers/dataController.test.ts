@@ -138,7 +138,7 @@ describe('DataController', () => {
     expect(mockNext).toHaveBeenCalledWith(
       expect.objectContaining({
         status: 400,
-        message: ErrorMessages.INVALID_URL,
+        message: ErrorMessages.INVALID_CALLBACK_URL,
       })
     );
   });

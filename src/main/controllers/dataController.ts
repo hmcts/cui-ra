@@ -64,7 +64,7 @@ export class DataController {
       const callbackUrl = payloadStore.payload.callbackUrl;
       if (!UrlRoute.isCallbackUrlWhitelisted(callbackUrl)) {
         this.logger.warn(`${serviceId} provided non-whitelisted callback URL: "${callbackUrl}"`);
-        throw new HTTPError(ErrorMessages.INVALID_URL, 400);
+        throw new HTTPError(ErrorMessages.INVALID_CALLBACK_URL, 400);
       }
       req.session.callbackUrl = callbackUrl;
       req.session.logoutUrl = payloadStore.payload.logoutUrl;

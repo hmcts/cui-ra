@@ -32,7 +32,7 @@ export class ApiController {
 
       if (!UrlRoute.isCallbackUrlWhitelisted(payload.callbackUrl)) {
         this.logger.warn(`Received non-whitelisted callback URL: "${payload.callbackUrl}"`);
-        return res.status(400).json({ error: ErrorMessages.INVALID_URL });
+        return res.status(400).json({ error: ErrorMessages.INVALID_CALLBACK_URL });
       }
 
       //save data

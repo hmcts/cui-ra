@@ -79,7 +79,7 @@ describe('ApiController', () => {
       await controller.postPayload(req, res);
 
       expect(res.status).toHaveBeenCalledWith(400);
-      expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.INVALID_URL });
+      expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.INVALID_CALLBACK_URL });
     });
   });
 
