@@ -108,7 +108,7 @@ const RAW_RUNTIME_STATE =
           ["nock", "npm:14.0.11"],\
           ["nodemon", "npm:3.1.11"],\
           ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
-          ["otplib", "npm:12.0.1"],\
+          ["otplib", "npm:13.3.0"],\
           ["pa11y", "npm:9.1.0"],\
           ["playwright", "npm:1.58.2"],\
           ["prettier", "npm:3.8.1"],\
@@ -4843,6 +4843,13 @@ const RAW_RUNTIME_STATE =
           ["@noble/hashes", "npm:1.8.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:2.0.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@noble-hashes-npm-2.0.1-3deaaa8c92-10c0.zip/node_modules/@noble/hashes/",\
+        "packageDependencies": [\
+          ["@noble/hashes", "npm:2.0.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@nodelib/fs.scandir", [\
@@ -5163,55 +5170,65 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@otplib/core", [\
-      ["npm:12.0.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@otplib-core-npm-12.0.1-4b9787d379-10c0.zip/node_modules/@otplib/core/",\
+      ["npm:13.3.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@otplib-core-npm-13.3.0-1b1453eece-10c0.zip/node_modules/@otplib/core/",\
         "packageDependencies": [\
-          ["@otplib/core", "npm:12.0.1"]\
+          ["@otplib/core", "npm:13.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@otplib/plugin-crypto", [\
-      ["npm:12.0.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@otplib-plugin-crypto-npm-12.0.1-d0dc5d1d98-10c0.zip/node_modules/@otplib/plugin-crypto/",\
+    ["@otplib/hotp", [\
+      ["npm:13.3.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@otplib-hotp-npm-13.3.0-d4fa13b152-10c0.zip/node_modules/@otplib/hotp/",\
         "packageDependencies": [\
-          ["@otplib/core", "npm:12.0.1"],\
-          ["@otplib/plugin-crypto", "npm:12.0.1"]\
+          ["@otplib/core", "npm:13.3.0"],\
+          ["@otplib/hotp", "npm:13.3.0"],\
+          ["@otplib/uri", "npm:13.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@otplib/plugin-thirty-two", [\
-      ["npm:12.0.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@otplib-plugin-thirty-two-npm-12.0.1-b85109b20e-10c0.zip/node_modules/@otplib/plugin-thirty-two/",\
+    ["@otplib/plugin-base32-scure", [\
+      ["npm:13.3.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@otplib-plugin-base32-scure-npm-13.3.0-fdd0324898-10c0.zip/node_modules/@otplib/plugin-base32-scure/",\
         "packageDependencies": [\
-          ["@otplib/core", "npm:12.0.1"],\
-          ["@otplib/plugin-thirty-two", "npm:12.0.1"],\
-          ["thirty-two", "npm:1.0.2"]\
+          ["@otplib/core", "npm:13.3.0"],\
+          ["@otplib/plugin-base32-scure", "npm:13.3.0"],\
+          ["@scure/base", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@otplib/preset-default", [\
-      ["npm:12.0.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@otplib-preset-default-npm-12.0.1-77f04f54c4-10c0.zip/node_modules/@otplib/preset-default/",\
+    ["@otplib/plugin-crypto-noble", [\
+      ["npm:13.3.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@otplib-plugin-crypto-noble-npm-13.3.0-176189d99a-10c0.zip/node_modules/@otplib/plugin-crypto-noble/",\
         "packageDependencies": [\
-          ["@otplib/core", "npm:12.0.1"],\
-          ["@otplib/plugin-crypto", "npm:12.0.1"],\
-          ["@otplib/plugin-thirty-two", "npm:12.0.1"],\
-          ["@otplib/preset-default", "npm:12.0.1"]\
+          ["@noble/hashes", "npm:2.0.1"],\
+          ["@otplib/core", "npm:13.3.0"],\
+          ["@otplib/plugin-crypto-noble", "npm:13.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@otplib/preset-v11", [\
-      ["npm:12.0.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@otplib-preset-v11-npm-12.0.1-df44c202c1-10c0.zip/node_modules/@otplib/preset-v11/",\
+    ["@otplib/totp", [\
+      ["npm:13.3.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@otplib-totp-npm-13.3.0-7433e65088-10c0.zip/node_modules/@otplib/totp/",\
         "packageDependencies": [\
-          ["@otplib/core", "npm:12.0.1"],\
-          ["@otplib/plugin-crypto", "npm:12.0.1"],\
-          ["@otplib/plugin-thirty-two", "npm:12.0.1"],\
-          ["@otplib/preset-v11", "npm:12.0.1"]\
+          ["@otplib/core", "npm:13.3.0"],\
+          ["@otplib/hotp", "npm:13.3.0"],\
+          ["@otplib/totp", "npm:13.3.0"],\
+          ["@otplib/uri", "npm:13.3.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@otplib/uri", [\
+      ["npm:13.3.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@otplib-uri-npm-13.3.0-344bf578d0-10c0.zip/node_modules/@otplib/uri/",\
+        "packageDependencies": [\
+          ["@otplib/core", "npm:13.3.0"],\
+          ["@otplib/uri", "npm:13.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5684,6 +5701,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/@rtsao-scc-npm-1.1.0-f4ba9ceb2c-10c0.zip/node_modules/@rtsao/scc/",\
         "packageDependencies": [\
           ["@rtsao/scc", "npm:1.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@scure/base", [\
+      ["npm:2.0.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@scure-base-npm-2.0.0-97a775035d-10c0.zip/node_modules/@scure/base/",\
+        "packageDependencies": [\
+          ["@scure/base", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -10137,7 +10163,7 @@ const RAW_RUNTIME_STATE =
           ["nock", "npm:14.0.11"],\
           ["nodemon", "npm:3.1.11"],\
           ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
-          ["otplib", "npm:12.0.1"],\
+          ["otplib", "npm:13.3.0"],\
           ["pa11y", "npm:9.1.0"],\
           ["playwright", "npm:1.58.2"],\
           ["prettier", "npm:3.8.1"],\
@@ -17102,13 +17128,16 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["otplib", [\
-      ["npm:12.0.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/otplib-npm-12.0.1-77263e8084-10c0.zip/node_modules/otplib/",\
+      ["npm:13.3.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/otplib-npm-13.3.0-c045e68951-10c0.zip/node_modules/otplib/",\
         "packageDependencies": [\
-          ["@otplib/core", "npm:12.0.1"],\
-          ["@otplib/preset-default", "npm:12.0.1"],\
-          ["@otplib/preset-v11", "npm:12.0.1"],\
-          ["otplib", "npm:12.0.1"]\
+          ["@otplib/core", "npm:13.3.0"],\
+          ["@otplib/hotp", "npm:13.3.0"],\
+          ["@otplib/plugin-base32-scure", "npm:13.3.0"],\
+          ["@otplib/plugin-crypto-noble", "npm:13.3.0"],\
+          ["@otplib/totp", "npm:13.3.0"],\
+          ["@otplib/uri", "npm:13.3.0"],\
+          ["otplib", "npm:13.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20219,15 +20248,6 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@types/tslib",\
           "tslib"\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["thirty-two", [\
-      ["npm:1.0.2", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/thirty-two-npm-1.0.2-9d9270aa34-10c0.zip/node_modules/thirty-two/",\
-        "packageDependencies": [\
-          ["thirty-two", "npm:1.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
