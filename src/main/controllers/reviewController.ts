@@ -20,7 +20,7 @@ export class ReviewController {
       if (req.session.callbackUrl) {
         try {
           if (!UrlRoute.isCallbackUrlWhitelisted(req.session.callbackUrl)) {
-            throw new HTTPError(ErrorMessages.INVALID_URL, 400);
+            throw new HTTPError(ErrorMessages.INVALID_CALLBACK_URL, 400);
           }
           this.logger.info(`Callback URL @review: ${req.session.callbackUrl}`);
           const url = new URL(UrlRoute.make(req.session.callbackUrl, { id: '' }));
@@ -130,7 +130,7 @@ export class ReviewController {
       }
 
       if (!UrlRoute.isCallbackUrlWhitelisted(req.session.callbackUrl)) {
-        throw new HTTPError(ErrorMessages.INVALID_URL, 400);
+        throw new HTTPError(ErrorMessages.INVALID_CALLBACK_URL, 400);
       }
 
       const payload: OutboundPayload = PayloadBuilder.build(req, Actions.CANCEL);
@@ -160,7 +160,7 @@ export class ReviewController {
         throw new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 500);
       }
       if (!UrlRoute.isCallbackUrlWhitelisted(req.session.callbackUrl)) {
-        throw new HTTPError(ErrorMessages.INVALID_URL, 400);
+        throw new HTTPError(ErrorMessages.INVALID_CALLBACK_URL, 400);
       }
       const payload: OutboundPayload = PayloadBuilder.build(req);
 

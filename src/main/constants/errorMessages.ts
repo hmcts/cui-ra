@@ -12,4 +12,5 @@ export const ErrorMessages = {
   FLAG_CANNOT_BE_EDITED: 'The specified flag cannot be edited.',
   PARENT_NOT_FOUND: 'Parent cannot be found',
   INVALID_URL: 'TypeError: Invalid URL',
+  INVALID_CALLBACK_URL: 'Invalid callback URL provided',
 } as const;
