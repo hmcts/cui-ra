@@ -1,10 +1,7 @@
-import * as os from 'os';
-
 import { Route } from './constants';
 import { History, InitSession, RequireIdam, SchemaValidator, ServiceAuthentication } from './middlewares';
 import { InboundPayloadSchema } from './schemas';
 
-import { infoRequestHandler } from '@hmcts/info-provider';
 import config from 'config';
 import { Application } from 'express';
 
@@ -78,16 +75,4 @@ export default function (app: Application): void {
     app.locals.container.cradle.formController.display
   );
   app.post(Route.JOURNEY_DISPLAY_FLAGS, initSession.init, app.locals.container.cradle.formController.post);
-
-  app.get(
-    Route.INFO,
-    infoRequestHandler({
-      extraBuildInfo: {
-        host: os.hostname(),
-        name: 'cui-ra',
-        uptime: process.uptime(),
-      },
-      info: {},
-    })
-  );
 }

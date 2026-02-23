@@ -1,5 +1,3 @@
-import os from 'os';
-
 import { RedisClientInterface } from './../../interfaces';
 
 import healthcheck from '@hmcts/nodejs-healthcheck';
@@ -17,18 +15,12 @@ export class HealthCheck {
 
     healthcheck.addTo(app, {
       checks: {
-        sampleCheck: healthcheck.raw(() => healthcheck.up()),
         redis,
         'service-auth': healthcheck.web(new URL('/health', config.get('services.s2s.endpoint'))),
         'reference-data': healthcheck.web(new URL('/health', config.get('services.refdata.endpoint'))),
       },
       readinessChecks: {
         redis,
-      },
-      buildInfo: {
-        name: 'cui-ra',
-        host: os.hostname(),
-        uptime: process.uptime(),
       },
     });
   }
