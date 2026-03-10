@@ -67,7 +67,7 @@ const RAW_RUNTIME_STATE =
           ["awilix", "npm:12.1.1"],\
           ["axios", "npm:1.13.6"],\
           ["axios-debug-log", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.0"],\
-          ["babel-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.0.0"],\
+          ["babel-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.1.1"],\
           ["body-parser", "npm:2.2.2"],\
           ["chai", "npm:4.5.0"],\
           ["chokidar", "npm:4.0.3"],\
@@ -8052,26 +8052,30 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["babel-loader", [\
-      ["npm:10.0.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/babel-loader-npm-10.0.0-0ac52159c5-10c0.zip/node_modules/babel-loader/",\
+      ["npm:10.1.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/babel-loader-npm-10.1.1-20e52285c9-10c0.zip/node_modules/babel-loader/",\
         "packageDependencies": [\
-          ["babel-loader", "npm:10.0.0"]\
+          ["babel-loader", "npm:10.1.1"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/babel-loader-virtual-631db8dece/7/runner/cache/others/berry/cache/babel-loader-npm-10.0.0-0ac52159c5-10c0.zip/node_modules/babel-loader/",\
+      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/babel-loader-virtual-ea5a9f1473/7/runner/cache/others/berry/cache/babel-loader-npm-10.1.1-20e52285c9-10c0.zip/node_modules/babel-loader/",\
         "packageDependencies": [\
           ["@babel/core", "npm:7.29.0"],\
+          ["@rspack/core", null],\
           ["@types/babel__core", null],\
+          ["@types/rspack__core", null],\
           ["@types/webpack", null],\
-          ["babel-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.0.0"],\
+          ["babel-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.1.1"],\
           ["find-up", "npm:5.0.0"],\
           ["webpack", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.105.4"]\
         ],\
         "packagePeers": [\
           "@babel/core",\
+          "@rspack/core",\
           "@types/babel__core",\
+          "@types/rspack__core",\
           "@types/webpack",\
           "webpack"\
         ],\
@@ -10092,7 +10096,7 @@ const RAW_RUNTIME_STATE =
           ["awilix", "npm:12.1.1"],\
           ["axios", "npm:1.13.6"],\
           ["axios-debug-log", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.0"],\
-          ["babel-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.0.0"],\
+          ["babel-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.1.1"],\
           ["body-parser", "npm:2.2.2"],\
           ["chai", "npm:4.5.0"],\
           ["chokidar", "npm:4.0.3"],\
