@@ -115,7 +115,7 @@ const RAW_RUNTIME_STATE =
           ["redis", "npm:5.11.0"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["require-directory", "npm:2.1.1"],\
-          ["sass", "npm:1.97.3"],\
+          ["sass", "npm:1.98.0"],\
           ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.7"],\
           ["serve-favicon", "npm:2.5.1"],\
           ["sinon", "npm:21.0.2"],\
@@ -10144,7 +10144,7 @@ const RAW_RUNTIME_STATE =
           ["redis", "npm:5.11.0"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["require-directory", "npm:2.1.1"],\
-          ["sass", "npm:1.97.3"],\
+          ["sass", "npm:1.98.0"],\
           ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.7"],\
           ["serve-favicon", "npm:2.5.1"],\
           ["sinon", "npm:21.0.2"],\
@@ -13307,10 +13307,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["immutable", [\
-      ["npm:5.1.4", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/immutable-npm-5.1.4-cddca3d05c-10c0.zip/node_modules/immutable/",\
+      ["npm:5.1.5", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/immutable-npm-5.1.5-65d37ab8d3-10c0.zip/node_modules/immutable/",\
         "packageDependencies": [\
-          ["immutable", "npm:5.1.4"]\
+          ["immutable", "npm:5.1.5"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18727,13 +18727,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["sass", [\
-      ["npm:1.97.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/sass-npm-1.97.3-632c69cd32-10c0.zip/node_modules/sass/",\
+      ["npm:1.98.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/sass-npm-1.98.0-408fe061b6-10c0.zip/node_modules/sass/",\
         "packageDependencies": [\
           ["@parcel/watcher", "npm:2.5.1"],\
           ["chokidar", "npm:4.0.3"],\
-          ["immutable", "npm:5.1.4"],\
-          ["sass", "npm:1.97.3"],\
+          ["immutable", "npm:5.1.5"],\
+          ["sass", "npm:1.98.0"],\
           ["source-map-js", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
@@ -18758,7 +18758,7 @@ const RAW_RUNTIME_STATE =
           ["@types/webpack", null],\
           ["neo-async", "npm:2.6.2"],\
           ["node-sass", null],\
-          ["sass", "npm:1.97.3"],\
+          ["sass", "npm:1.98.0"],\
           ["sass-embedded", null],\
           ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.7"],\
           ["webpack", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.105.4"]\
