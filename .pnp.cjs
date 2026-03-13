@@ -64,7 +64,7 @@ const RAW_RUNTIME_STATE =
           ["ajv-formats", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.0.1"],\
           ["applicationinsights", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.9.8"],\
           ["autobind-decorator", "npm:2.4.0"],\
-          ["awilix", "npm:12.1.1"],\
+          ["awilix", "npm:13.0.3"],\
           ["axios", "npm:1.13.6"],\
           ["axios-debug-log", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.0"],\
           ["babel-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.1.1"],\
@@ -7920,10 +7920,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["awilix", [\
-      ["npm:12.1.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/awilix-npm-12.1.1-757ed66e20-10c0.zip/node_modules/awilix/",\
+      ["npm:13.0.3", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/awilix-npm-13.0.3-3d0e6bc246-10c0.zip/node_modules/awilix/",\
         "packageDependencies": [\
-          ["awilix", "npm:12.1.1"],\
+          ["awilix", "npm:13.0.3"],\
           ["fast-glob", "npm:3.3.3"]\
         ],\
         "linkType": "HARD"\
@@ -10093,7 +10093,7 @@ const RAW_RUNTIME_STATE =
           ["ajv-formats", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.0.1"],\
           ["applicationinsights", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.9.8"],\
           ["autobind-decorator", "npm:2.4.0"],\
-          ["awilix", "npm:12.1.1"],\
+          ["awilix", "npm:13.0.3"],\
           ["axios", "npm:1.13.6"],\
           ["axios-debug-log", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.0.0"],\
           ["babel-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.1.1"],\
