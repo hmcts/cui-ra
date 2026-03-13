@@ -55,7 +55,7 @@ const RAW_RUNTIME_STATE =
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.7"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
-          ["@types/supertest", "npm:6.0.3"],\
+          ["@types/supertest", "npm:7.2.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:8.57.0"],\
           ["@typescript-eslint/parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:8.57.0"],\
           ["accessible-autocomplete", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.0.1"],\
@@ -6292,12 +6292,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/supertest", [\
-      ["npm:6.0.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-supertest-npm-6.0.3-0d43ae5953-10c0.zip/node_modules/@types/supertest/",\
+      ["npm:7.2.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-supertest-npm-7.2.0-dea36e6d28-10c0.zip/node_modules/@types/supertest/",\
         "packageDependencies": [\
           ["@types/methods", "npm:1.1.4"],\
           ["@types/superagent", "npm:8.1.9"],\
-          ["@types/supertest", "npm:6.0.3"]\
+          ["@types/supertest", "npm:7.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -10084,7 +10084,7 @@ const RAW_RUNTIME_STATE =
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.7"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
-          ["@types/supertest", "npm:6.0.3"],\
+          ["@types/supertest", "npm:7.2.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:8.57.0"],\
           ["@typescript-eslint/parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:8.57.0"],\
           ["accessible-autocomplete", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.0.1"],\
