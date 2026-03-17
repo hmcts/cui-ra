@@ -5,6 +5,7 @@
   "isDev": "IS_DEV",
   "serviceName": "cui_ra",
   "session": {
+    "secret": "SESSION_SECRET",
     "secure": "SESSION_SECURE",
     "redis": {
       "host": "REDIS_HOST",

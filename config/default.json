@@ -10,7 +10,7 @@
   "isDev": true,
   "serviceName": "cui_ra",
   "session": {
-    "secret": "local",
+    "secret": "",
     "maxAge": 1800000,
     "secure": true,
     "redis": {
