@@ -98,7 +98,7 @@ const RAW_RUNTIME_STATE =
           ["jest-util", "npm:29.7.0"],\
           ["jquery", "npm:3.7.1"],\
           ["json-schema", "npm:0.4.0"],\
-          ["lint-staged", "npm:16.3.3"],\
+          ["lint-staged", "npm:16.4.0"],\
           ["lodash", "npm:4.17.23"],\
           ["mini-css-extract-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.10.1"],\
           ["mocha", "npm:11.7.5"],\
@@ -10127,7 +10127,7 @@ const RAW_RUNTIME_STATE =
           ["jest-util", "npm:29.7.0"],\
           ["jquery", "npm:3.7.1"],\
           ["json-schema", "npm:0.4.0"],\
-          ["lint-staged", "npm:16.3.3"],\
+          ["lint-staged", "npm:16.4.0"],\
           ["lodash", "npm:4.17.23"],\
           ["mini-css-extract-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.10.1"],\
           ["mocha", "npm:11.7.5"],\
@@ -15191,15 +15191,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lint-staged", [\
-      ["npm:16.3.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/lint-staged-npm-16.3.3-0327960cee-10c0.zip/node_modules/lint-staged/",\
+      ["npm:16.4.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/lint-staged-npm-16.4.0-bc70d40d4b-10c0.zip/node_modules/lint-staged/",\
         "packageDependencies": [\
           ["commander", "npm:14.0.3"],\
-          ["lint-staged", "npm:16.3.3"],\
+          ["lint-staged", "npm:16.4.0"],\
           ["listr2", "npm:9.0.5"],\
-          ["micromatch", "npm:4.0.8"],\
+          ["picomatch", "npm:4.0.3"],\
           ["string-argv", "npm:0.3.2"],\
-          ["tinyexec", "npm:1.0.2"],\
+          ["tinyexec", "npm:1.0.4"],\
           ["yaml", "npm:2.8.2"]\
         ],\
         "linkType": "HARD"\
@@ -20204,10 +20204,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["tinyexec", [\
-      ["npm:1.0.2", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/tinyexec-npm-1.0.2-321b713e56-10c0.zip/node_modules/tinyexec/",\
+      ["npm:1.0.4", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/tinyexec-npm-1.0.4-c1df9ff8b1-10c0.zip/node_modules/tinyexec/",\
         "packageDependencies": [\
-          ["tinyexec", "npm:1.0.2"]\
+          ["tinyexec", "npm:1.0.4"]\
         ],\
         "linkType": "HARD"\
       }]\
