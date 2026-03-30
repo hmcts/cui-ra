@@ -17315,10 +17315,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["path-to-regexp", [\
-      ["npm:8.3.0", {\
-        "packageLocation": "../../.yarn/berry/cache/path-to-regexp-npm-8.3.0-ef82f1008e-10c0.zip/node_modules/path-to-regexp/",\
+      ["npm:8.4.0", {\
+        "packageLocation": "../../.yarn/berry/cache/path-to-regexp-npm-8.4.0-af7787178e-10c0.zip/node_modules/path-to-regexp/",\
         "packageDependencies": [\
-          ["path-to-regexp", "npm:8.3.0"]\
+          ["path-to-regexp", "npm:8.4.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18513,7 +18513,7 @@ const RAW_RUNTIME_STATE =
           ["depd", "npm:2.0.0"],\
           ["is-promise", "npm:4.0.0"],\
           ["parseurl", "npm:1.3.3"],\
-          ["path-to-regexp", "npm:8.3.0"],\
+          ["path-to-regexp", "npm:8.4.0"],\
           ["router", "npm:2.2.0"]\
         ],\
         "linkType": "HARD"\
