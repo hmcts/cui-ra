@@ -143,6 +143,31 @@ describe('DataController', () => {
     );
   });
 
+  test('should return 400 when logout URL is not whitelisted', async () => {
+    mockedRedis.exists = jest.fn().mockResolvedValue(true);
+    mockedRedis.get = jest.fn().mockResolvedValue(
+      JSON.stringify({
+        idamToken: 'mockIdamToken',
+        payload: {
+          existingFlags: { details: [] },
+          hmctsServiceId: 'mockHmctsServiceId',
+          masterFlagCode: 'RA0001',
+          callbackUrl: 'https://example.service.gov.uk',
+          logoutUrl: 'mockLogoutUrl',
+        },
+      })
+    );
+
+    await dataController.process(mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(mockNext).toHaveBeenCalledWith(
+      expect.objectContaining({
+        status: 400,
+        message: ErrorMessages.INVALID_LOGOUT_URL,
+      })
+    );
+  });
+
   test('should process data and redirect to existing flags when existing flags are found', async () => {
     // Mock the exists method in the redisClient to return true
     // Mock the get method in the redisClient to return a valid payload with existing flags
