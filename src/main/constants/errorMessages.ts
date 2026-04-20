@@ -13,4 +13,5 @@ export const ErrorMessages = {
   PARENT_NOT_FOUND: 'Parent cannot be found',
   INVALID_URL: 'TypeError: Invalid URL',
   INVALID_CALLBACK_URL: 'Invalid callback URL provided',
+  INVALID_LOGOUT_URL: 'Invalid logout URL provided',
 } as const;

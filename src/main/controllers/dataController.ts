@@ -67,7 +67,13 @@ export class DataController {
         throw new HTTPError(ErrorMessages.INVALID_CALLBACK_URL, 400);
       }
       req.session.callbackUrl = callbackUrl;
-      req.session.logoutUrl = payloadStore.payload.logoutUrl;
+      const logoutUrl = payloadStore.payload.logoutUrl;
+      if (logoutUrl && !UrlRoute.isCallbackUrlWhitelisted(logoutUrl)) {
+        this.logger.warn(`${serviceId} provided non-whitelisted logout URL: "${logoutUrl}"`);
+        throw new HTTPError(ErrorMessages.INVALID_LOGOUT_URL, 400);
+      }
+
+      req.session.logoutUrl = logoutUrl;
       if (payloadStore.payload.masterFlagCode) {
         req.session.masterflagcode = payloadStore.payload.masterFlagCode.toUpperCase();
       } else {
