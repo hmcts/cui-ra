@@ -70,7 +70,7 @@ describe('Review Controller', () => {
   test('Should render review page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockResponse.render).toBeCalledWith('review', expect.any(Object));
+    expect(mockResponse.render).toHaveBeenCalledWith('review', expect.any(Object));
   });
 
   test('Should not render review page when URL parsing fails', async () => {
@@ -90,7 +90,7 @@ describe('Review Controller', () => {
     };
 
     reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.INVALID_CALLBACK_URL));
+    expect(mockNext).toHaveBeenCalledWith(new Error(ErrorMessages.INVALID_CALLBACK_URL));
   });
 
   test('Should not render review page when callback URL is not whitelisted', async () => {
@@ -118,7 +118,7 @@ describe('Review Controller', () => {
 
     reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR + 'boom'));
+    expect(mockNext).toHaveBeenCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR + 'boom'));
 
     whitelistSpy.mockRestore();
     makeSpy.mockRestore();
@@ -142,7 +142,7 @@ describe('Review Controller', () => {
     };
 
     reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockResponse.render).toBeCalledWith(
+    expect(mockResponse.render).toHaveBeenCalledWith(
       'review',
       expect.objectContaining({
         requested: [],
@@ -156,7 +156,7 @@ describe('Review Controller', () => {
     });
     // eslint-disable-line @typescript-eslint/no-empty-function
     reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockNext).toBeCalledWith(new Error('User not found'));
+    expect(mockNext).toHaveBeenCalledWith(new Error('User not found'));
   });
 
   test('Should set requested to inactive and render review page', async () => {
@@ -177,7 +177,7 @@ describe('Review Controller', () => {
       expect(mockRequest.session?.existingmanager.get(id)?.value.status).toBe(Status.INACTIVE);
     }
 
-    expect(mockResponse.redirect).toBeCalledWith(Route.REVIEW);
+    expect(mockResponse.redirect).toHaveBeenCalledWith(Route.REVIEW);
   });
 
   test('Should set active to inactive and render review page', async () => {
@@ -198,7 +198,7 @@ describe('Review Controller', () => {
       expect(mockRequest.session?.existingmanager.get(id)?.value.status).toBe(Status.INACTIVE);
     }
 
-    expect(mockResponse.redirect).toBeCalledWith(Route.REVIEW);
+    expect(mockResponse.redirect).toHaveBeenCalledWith(Route.REVIEW);
   });
 
   test('Should fail to set inactive and render review page', async () => {
@@ -215,7 +215,7 @@ describe('Review Controller', () => {
 
     await reviewController.setInactive(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockNext).toBeCalledWith(new Error('User not found'));
+    expect(mockNext).toHaveBeenCalledWith(new Error('User not found'));
   });
 
   test('Should set requested and render review page', async () => {
@@ -232,7 +232,7 @@ describe('Review Controller', () => {
       expect(mockRequest.session?.existingmanager?.get(id)?.value.status).toBe(Status.REQUESTED);
     }
 
-    expect(mockResponse.redirect).toBeCalledWith('/review');
+    expect(mockResponse.redirect).toHaveBeenCalledWith('/review');
   });
 
   test('Should fail to set requested and render review page', async () => {
@@ -249,14 +249,14 @@ describe('Review Controller', () => {
 
     await reviewController.setRequested(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockNext).toBeCalledWith(new Error('User not found'));
+    expect(mockNext).toHaveBeenCalledWith(new Error('User not found'));
   });
 
   test('Should cancel and redirect to callback', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     await reviewController.cancel(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockResponse.redirect).toBeCalledWith(302, 'https://localhost/callback/random-string-uuid');
+    expect(mockResponse.redirect).toHaveBeenCalledWith(302, 'https://localhost/callback/random-string-uuid');
   });
 
   test('Should fail cancel and redirect to callback', async () => {
@@ -264,7 +264,7 @@ describe('Review Controller', () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     await reviewController.cancel(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR));
+    expect(mockNext).toHaveBeenCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR));
   });
 
   test('Should cancel and redirect to callback', async () => {
@@ -272,14 +272,14 @@ describe('Review Controller', () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     await reviewController.cancel(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockResponse.redirect).toBeCalledWith(Route.REVIEW);
+    expect(mockResponse.redirect).toHaveBeenCalledWith(Route.REVIEW);
   });
 
   test('Should submit review and redirect to callback', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockResponse.redirect).toBeCalledWith(new URL('https://localhost/callback/random-string-uuid'));
+    expect(mockResponse.redirect).toHaveBeenCalledWith(new URL('https://localhost/callback/random-string-uuid'));
   });
 
   test('Should fail to submit review when session is missing', async () => {
@@ -304,7 +304,7 @@ describe('Review Controller', () => {
 
     await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockResponse.redirect).not.toBeCalled();
+    expect(mockResponse.redirect).not.toHaveBeenCalled();
     expect(mockNext).toHaveBeenCalledWith(
       expect.objectContaining({
         status: 400,
@@ -319,7 +319,7 @@ describe('Review Controller', () => {
 
     await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockResponse.redirect).not.toBeCalled();
+    expect(mockResponse.redirect).not.toHaveBeenCalled();
     const error = (mockNext as jest.Mock).mock.calls[0][0] as Error;
     expect(error.message).toContain(ErrorMessages.UNEXPECTED_ERROR);
     expect(error.message).toContain('Invalid URL');
@@ -358,6 +358,6 @@ describe('Review Controller', () => {
 
     await reviewController.cancel(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockNext).toBeCalledWith(new Error(ErrorMessages.INVALID_CALLBACK_URL));
+    expect(mockNext).toHaveBeenCalledWith(new Error(ErrorMessages.INVALID_CALLBACK_URL));
   });
 });

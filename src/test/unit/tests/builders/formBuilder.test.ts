@@ -45,7 +45,7 @@ describe('FormBuilder', () => {
 
   test('should throw an error for unexpected conditions', () => {
     const parent = { _listOfValuesLength: undefined, _isCategoryPage: false } as unknown as DataManagerDataObject;
-    expect(() => FormBuilder.build(req, res, parent)).toThrowError(ErrorMessages.UNEXPECTED_ERROR);
+    expect(() => FormBuilder.build(req, res, parent)).toThrow(ErrorMessages.UNEXPECTED_ERROR);
   });
 
   test('should handle errorKeys and populate validationErrors accordingly', () => {
@@ -101,7 +101,7 @@ describe('FormBuilder', () => {
 
   test('should throw error for unexpected condition in determineTemplate', () => {
     const parent = { _listOfValuesLength: undefined, _isCategoryPage: false } as unknown as DataManagerDataObject;
-    expect(() => FormBuilder['determineTemplate'](parent, 10)).toThrowError(ErrorMessages.UNEXPECTED_ERROR);
+    expect(() => FormBuilder['determineTemplate'](parent, 10)).toThrow(ErrorMessages.UNEXPECTED_ERROR);
   });
 
   test('should modify validation errors for parent and children', () => {
