@@ -47,7 +47,7 @@ describe('Demo Controller', () => {
   test('Should render demo page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     await demoController.get(mockRequest, mockResponse, mockNext);
-    expect(mockResponse.render).toBeCalledWith('demo');
+    expect(mockResponse.render).toHaveBeenCalledWith('demo');
   });
 
   test('Should render intro page', async () => {
@@ -56,7 +56,7 @@ describe('Demo Controller', () => {
     mockRequest.query = { action: 'new' };
     demoController.startDemo(mockRequest, mockResponse, mockNext);
 
-    expect(mockResponse.redirect).toBeCalledWith(
+    expect(mockResponse.redirect).toHaveBeenCalledWith(
       UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: id }, UrlRoute.url(mockRequest))
     );
   });
@@ -67,7 +67,7 @@ describe('Demo Controller', () => {
     mockRequest.query = { action: 'new_cy' };
     demoController.startDemo(mockRequest, mockResponse, mockNext);
 
-    expect(mockResponse.redirect).toBeCalledWith(
+    expect(mockResponse.redirect).toHaveBeenCalledWith(
       UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: id }, UrlRoute.url(mockRequest))
     );
   });
@@ -90,6 +90,6 @@ describe('Demo Controller', () => {
     } as unknown as Session & Partial<SessionData>;
 
     demoController.startDemo(mockRequest, mockResponse, mockNext);
-    expect(mockResponse.redirect).toBeCalledWith('home/overview');
+    expect(mockResponse.redirect).toHaveBeenCalledWith('home/overview');
   });
 });

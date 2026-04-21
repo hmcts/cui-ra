@@ -53,7 +53,7 @@ describe('Home Controller', () => {
   test('Should render home page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     homeController.get(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockResponse.render).toBeCalledWith('home');
+    expect(mockResponse.render).toHaveBeenCalledWith('home');
   });
 
   test('Should throw error rendering home page', async () => {
@@ -63,7 +63,7 @@ describe('Home Controller', () => {
 
     // eslint-disable-line @typescript-eslint/no-empty-function
     homeController.get(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockNext).toBeCalledWith(new Error('User not found'));
+    expect(mockNext).toHaveBeenCalledWith(new Error('User not found'));
   });
 
   test('Should render overview page', async () => {
@@ -81,8 +81,8 @@ describe('Home Controller', () => {
     } as unknown as Session & Partial<SessionData>;
 
     homeController.overview(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockResponse.render).toBeCalledWith('overview', expect.any(Object));
-    expect(CustomSort.alphabeticalAsc).toBeCalledWith(dataManagerExisting.data, mockRequest);
+    expect(mockResponse.render).toHaveBeenCalledWith('overview', expect.any(Object));
+    expect(CustomSort.alphabeticalAsc).toHaveBeenCalledWith(dataManagerExisting.data, mockRequest);
   });
 
   test('Should throw error rendering overview page', async () => {
@@ -105,13 +105,13 @@ describe('Home Controller', () => {
 
     homeController.overview(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockNext).toBeCalledWith(new Error('User not found'));
+    expect(mockNext).toHaveBeenCalledWith(new Error('User not found'));
   });
 
   test('Should render intro page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     homeController.intro(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockResponse.render).toBeCalledWith('intro');
+    expect(mockResponse.render).toHaveBeenCalledWith('intro');
   });
 
   test('Should throw error rendering intro page', async () => {
@@ -120,13 +120,13 @@ describe('Home Controller', () => {
     });
     // eslint-disable-line @typescript-eslint/no-empty-function
     homeController.intro(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockNext).toBeCalledWith(new Error('User not found'));
+    expect(mockNext).toHaveBeenCalledWith(new Error('User not found'));
   });
 
   test('Should render cookies page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     homeController.cookies(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockResponse.render).toBeCalledWith('cookies');
+    expect(mockResponse.render).toHaveBeenCalledWith('cookies');
   });
 
   test('Should throw error rendering cookies page', async () => {
@@ -135,13 +135,13 @@ describe('Home Controller', () => {
     });
     // eslint-disable-line @typescript-eslint/no-empty-function
     homeController.cookies(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockNext).toBeCalledWith(new Error('User not found'));
+    expect(mockNext).toHaveBeenCalledWith(new Error('User not found'));
   });
 
   test('Should render privacy policy page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     homeController.privacyPolicy(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockResponse.render).toBeCalledWith('privacy-policy');
+    expect(mockResponse.render).toHaveBeenCalledWith('privacy-policy');
   });
 
   test('Should throw error rendering privacy policy page', async () => {
@@ -150,13 +150,13 @@ describe('Home Controller', () => {
     });
     // eslint-disable-line @typescript-eslint/no-empty-function
     homeController.privacyPolicy(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockNext).toBeCalledWith(new Error('User not found'));
+    expect(mockNext).toHaveBeenCalledWith(new Error('User not found'));
   });
 
   test('Should render terms and conditions page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     homeController.termsAndConditions(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockResponse.render).toBeCalledWith('terms-and-conditions');
+    expect(mockResponse.render).toHaveBeenCalledWith('terms-and-conditions');
   });
 
   test('Should throw error rendering terms and conditions page', async () => {
@@ -165,13 +165,13 @@ describe('Home Controller', () => {
     });
     // eslint-disable-line @typescript-eslint/no-empty-function
     homeController.termsAndConditions(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockNext).toBeCalledWith(new Error('User not found'));
+    expect(mockNext).toHaveBeenCalledWith(new Error('User not found'));
   });
 
   test('Should render accessibility statement page', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     homeController.accessibilityStatement(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockResponse.render).toBeCalledWith('accessibility-statement');
+    expect(mockResponse.render).toHaveBeenCalledWith('accessibility-statement');
   });
 
   test('Should throw error rendering accessibility statement page', async () => {
@@ -180,13 +180,13 @@ describe('Home Controller', () => {
     });
     // eslint-disable-line @typescript-eslint/no-empty-function
     homeController.accessibilityStatement(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockNext).toBeCalledWith(new Error('User not found'));
+    expect(mockNext).toHaveBeenCalledWith(new Error('User not found'));
   });
 
   test('Should redirect to logoutUrl', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     homeController.signOut(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockResponse.redirect).toBeCalledWith(host);
+    expect(mockResponse.redirect).toHaveBeenCalledWith(host);
     //expect(mockRequest.session?.destroy).toHaveBeenCalled();
   });
 
@@ -198,7 +198,7 @@ describe('Home Controller', () => {
     } as unknown as Session & Partial<SessionData>;
     // eslint-disable-line @typescript-eslint/no-empty-function
     homeController.signOut(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockNext).toBeCalledWith(new Error('User not found'));
+    expect(mockNext).toHaveBeenCalledWith(new Error('User not found'));
     //expect(mockRequest.session?.destroy).toHaveBeenCalled();
   });
 
@@ -208,7 +208,7 @@ describe('Home Controller', () => {
       mockRequest.session.logoutUrl = '';
 
       homeController.signOut(mockRequest as Request, mockResponse as Response, mockNext);
-      expect(mockResponse.redirect).toBeCalledWith(Route.ROOT);
+      expect(mockResponse.redirect).toHaveBeenCalledWith(Route.ROOT);
     }
   });
 
