@@ -3,7 +3,7 @@ import { PayloadBuilder } from '../builders';
 import { Actions, ErrorMessages, Route, Status } from '../constants';
 import { DataManagerDataObject, Logger, PayloadDataObject, RedisClientInterface } from '../interfaces';
 import { OutboundPayload } from '../models';
-import { CustomSort, UrlRoute } from '../utilities';
+import { CustomSort, UrlRoute, validateUrls } from '../utilities';
 
 import autobind from 'autobind-decorator';
 import { NextFunction, Request, Response } from 'express';
@@ -19,8 +19,9 @@ export class ReviewController {
     try {
       if (req.session.callbackUrl) {
         try {
-          if (!UrlRoute.isCallbackUrlWhitelisted(req.session.callbackUrl)) {
-            throw new HTTPError(ErrorMessages.INVALID_CALLBACK_URL, 400);
+          const urlErrors = validateUrls({ callbackUrl: req.session.callbackUrl });
+          if (urlErrors.length > 0) {
+            throw new HTTPError(ErrorMessages.INVALID_URL, 400, urlErrors);
           }
           this.logger.info(`Callback URL @review: ${req.session.callbackUrl}`);
           const url = new URL(UrlRoute.make(req.session.callbackUrl, { id: '' }));
@@ -129,8 +130,9 @@ export class ReviewController {
         return res.redirect(Route.REVIEW);
       }
 
-      if (!UrlRoute.isCallbackUrlWhitelisted(req.session.callbackUrl)) {
-        throw new HTTPError(ErrorMessages.INVALID_CALLBACK_URL, 400);
+      const urlErrors = validateUrls({ callbackUrl: req.session.callbackUrl });
+      if (urlErrors.length > 0) {
+        throw new HTTPError(ErrorMessages.INVALID_URL, 400, urlErrors);
       }
 
       const payload: OutboundPayload = PayloadBuilder.build(req, Actions.CANCEL);
@@ -156,11 +158,15 @@ export class ReviewController {
 
   public async post(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
     try {
-      if (!req.session || !req.session.callbackUrl) {
+      if (!req.session || !req.session.callbackUrl || !req.session.logoutUrl) {
         throw new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 500);
       }
-      if (!UrlRoute.isCallbackUrlWhitelisted(req.session.callbackUrl)) {
-        throw new HTTPError(ErrorMessages.INVALID_CALLBACK_URL, 400);
+      const urlErrors = validateUrls({
+        callbackUrl: req.session.callbackUrl,
+        logoutUrl: req.session.logoutUrl,
+      });
+      if (urlErrors.length > 0) {
+        throw new HTTPError(ErrorMessages.INVALID_URL, 400, urlErrors);
       }
       const payload: OutboundPayload = PayloadBuilder.build(req);
 
