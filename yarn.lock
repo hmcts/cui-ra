@@ -137,7 +137,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@azure/identity@npm:^4.1.0, @azure/identity@npm:^4.13.0":
+"@azure/identity@npm:^4.13.0, @azure/identity@npm:^4.13.1":
   version: 4.13.1
   resolution: "@azure/identity@npm:4.13.1"
   dependencies:
@@ -217,14 +217,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@azure/msal-common@npm:16.5.1":
+  version: 16.5.1
+  resolution: "@azure/msal-common@npm:16.5.1"
+  checksum: 10c0/7fddcb342572dab5956a639fe1c2b921beaeff1bec025208e317c803a9efe72e74b124a76f3248e02e495b012721023127efb92507f99b8535ee994e08c181c6
+  languageName: node
+  linkType: hard
+
 "@azure/msal-node@npm:^5.1.0":
-  version: 5.1.3
-  resolution: "@azure/msal-node@npm:5.1.3"
+  version: 5.1.4
+  resolution: "@azure/msal-node@npm:5.1.4"
   dependencies:
-    "@azure/msal-common": "npm:16.5.0"
+    "@azure/msal-common": "npm:16.5.1"
     jsonwebtoken: "npm:^9.0.0"
     uuid: "npm:^8.3.0"
-  checksum: 10c0/ba62e6a894da6c986a61796ffa0396d52645753aaf47ab27270767ac30b2089989acb07dc616d270f45953eb2a724ce07c109d6b68c392cbe499106a233887e6
+  checksum: 10c0/6bf6d8668509c1fa35787be23a14fd37149c102819d8fc68d00f0a7f2a5d4fabf207365868e0e3f6352f7536cf119aebb02a9e41bc2f9b2655e9c163bf0f400c
   languageName: node
   linkType: hard
 
@@ -7213,7 +7220,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cui-ra@workspace:."
   dependencies:
-    "@azure/identity": "npm:^4.1.0"
+    "@azure/identity": "npm:^4.13.1"
     "@azure/keyvault-secrets": "npm:^4.8.0"
     "@babel/core": "npm:^7.24.4"
     "@babel/eslint-parser": "npm:^7.24.1"
