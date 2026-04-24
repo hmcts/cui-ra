@@ -76,7 +76,7 @@ const RAW_RUNTIME_STATE =
           ["config", "npm:4.4.1"],\
           ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.0.0"],\
           ["cookie-parser", "npm:1.4.7"],\
-          ["copy-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:13.0.1"],\
+          ["copy-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:14.0.0"],\
           ["css-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.4"],\
           ["csurf", "npm:1.11.0"],\
           ["cui-ra", "workspace:."],\
@@ -10022,22 +10022,22 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["copy-webpack-plugin", [\
-      ["npm:13.0.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/copy-webpack-plugin-npm-13.0.1-1c6a7d964e-10c0.zip/node_modules/copy-webpack-plugin/",\
+      ["npm:14.0.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/copy-webpack-plugin-npm-14.0.0-8758ec6d58-10c0.zip/node_modules/copy-webpack-plugin/",\
         "packageDependencies": [\
-          ["copy-webpack-plugin", "npm:13.0.1"]\
+          ["copy-webpack-plugin", "npm:14.0.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:13.0.1", {\
-        "packageLocation": "./.yarn/__virtual__/copy-webpack-plugin-virtual-c41f3d33af/7/runner/cache/others/berry/cache/copy-webpack-plugin-npm-13.0.1-1c6a7d964e-10c0.zip/node_modules/copy-webpack-plugin/",\
+      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:14.0.0", {\
+        "packageLocation": "./.yarn/__virtual__/copy-webpack-plugin-virtual-88310d524d/7/runner/cache/others/berry/cache/copy-webpack-plugin-npm-14.0.0-8758ec6d58-10c0.zip/node_modules/copy-webpack-plugin/",\
         "packageDependencies": [\
           ["@types/webpack", null],\
-          ["copy-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:13.0.1"],\
+          ["copy-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:14.0.0"],\
           ["glob-parent", "npm:6.0.2"],\
           ["normalize-path", "npm:3.0.0"],\
           ["schema-utils", "npm:4.3.3"],\
-          ["serialize-javascript", "npm:6.0.2"],\
+          ["serialize-javascript", "npm:7.0.5"],\
           ["tinyglobby", "npm:0.2.15"],\
           ["webpack", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.105.4"]\
         ],\
@@ -10355,7 +10355,7 @@ const RAW_RUNTIME_STATE =
           ["config", "npm:4.4.1"],\
           ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.0.0"],\
           ["cookie-parser", "npm:1.4.7"],\
-          ["copy-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:13.0.1"],\
+          ["copy-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:14.0.0"],\
           ["css-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.4"],\
           ["csurf", "npm:1.11.0"],\
           ["cui-ra", "workspace:."],\
@@ -19244,6 +19244,13 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["randombytes", "npm:2.1.0"],\
           ["serialize-javascript", "npm:6.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:7.0.5", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/serialize-javascript-npm-7.0.5-0078177797-10c0.zip/node_modules/serialize-javascript/",\
+        "packageDependencies": [\
+          ["serialize-javascript", "npm:7.0.5"]\
         ],\
         "linkType": "HARD"\
       }]\
