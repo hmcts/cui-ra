@@ -39,7 +39,7 @@ const RAW_RUNTIME_STATE =
           ["@hmcts/cookie-manager", "npm:1.1.0"],\
           ["@hmcts/nodejs-healthcheck", "npm:1.8.6"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
-          ["@hmcts/properties-volume", "npm:1.3.1"],\
+          ["@hmcts/properties-volume", "npm:1.4.0"],\
           ["@types/body-parser", "npm:1.19.6"],\
           ["@types/chai-as-promised", "npm:8.0.2"],\
           ["@types/config", "npm:3.3.5"],\
@@ -3975,13 +3975,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@hmcts/properties-volume", [\
-      ["npm:1.3.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@hmcts-properties-volume-npm-1.3.1-8b26153881-10c0.zip/node_modules/@hmcts/properties-volume/",\
+      ["npm:1.4.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@hmcts-properties-volume-npm-1.4.0-c2be5d086e-10c0.zip/node_modules/@hmcts/properties-volume/",\
         "packageDependencies": [\
           ["@azure/identity", "npm:4.13.1"],\
           ["@azure/keyvault-secrets", "npm:4.11.1"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
-          ["@hmcts/properties-volume", "npm:1.3.1"],\
+          ["@hmcts/properties-volume", "npm:1.4.0"],\
           ["js-yaml", "npm:4.1.1"],\
           ["lodash", "npm:4.18.1"]\
         ],\
@@ -10322,7 +10322,7 @@ const RAW_RUNTIME_STATE =
           ["@hmcts/cookie-manager", "npm:1.1.0"],\
           ["@hmcts/nodejs-healthcheck", "npm:1.8.6"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
-          ["@hmcts/properties-volume", "npm:1.3.1"],\
+          ["@hmcts/properties-volume", "npm:1.4.0"],\
           ["@types/body-parser", "npm:1.19.6"],\
           ["@types/chai-as-promised", "npm:8.0.2"],\
           ["@types/config", "npm:3.3.5"],\
