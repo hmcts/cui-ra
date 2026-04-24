@@ -47,7 +47,7 @@ const RAW_RUNTIME_STATE =
           ["@types/csurf", "npm:1.11.5"],\
           ["@types/es6-promisify", "npm:6.0.4"],\
           ["@types/express", "npm:5.0.6"],\
-          ["@types/express-session", "npm:1.18.2"],\
+          ["@types/express-session", "npm:1.19.0"],\
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:30.0.0"],\
           ["@types/lodash", "npm:4.17.24"],\
@@ -6191,11 +6191,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/express-session", [\
-      ["npm:1.18.2", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-express-session-npm-1.18.2-8d3c6f2e85-10c0.zip/node_modules/@types/express-session/",\
+      ["npm:1.19.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-express-session-npm-1.19.0-212d1a5b21-10c0.zip/node_modules/@types/express-session/",\
         "packageDependencies": [\
           ["@types/express", "npm:5.0.6"],\
-          ["@types/express-session", "npm:1.18.2"]\
+          ["@types/express-session", "npm:1.19.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9910,7 +9910,7 @@ const RAW_RUNTIME_STATE =
       ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.0.0", {\
         "packageLocation": "./.yarn/__virtual__/connect-redis-virtual-e3cd8e24c2/7/runner/cache/others/berry/cache/connect-redis-npm-9.0.0-44b8c73dee-10c0.zip/node_modules/connect-redis/",\
         "packageDependencies": [\
-          ["@types/express-session", "npm:1.18.2"],\
+          ["@types/express-session", "npm:1.19.0"],\
           ["@types/redis", null],\
           ["connect-redis", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.0.0"],\
           ["express-session", "npm:1.19.0"],\
@@ -10330,7 +10330,7 @@ const RAW_RUNTIME_STATE =
           ["@types/csurf", "npm:1.11.5"],\
           ["@types/es6-promisify", "npm:6.0.4"],\
           ["@types/express", "npm:5.0.6"],\
-          ["@types/express-session", "npm:1.18.2"],\
+          ["@types/express-session", "npm:1.19.0"],\
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:30.0.0"],\
           ["@types/lodash", "npm:4.17.24"],\
