@@ -44,6 +44,7 @@ describe('Review Controller', () => {
         partyName: 'demo name',
         existingmanager: dataManagerExisting,
         callbackUrl: 'https://localhost/callback/:id',
+        logoutUrl: 'https://localhost/logout',
         newmanager: dataManagerNew,
         destroy: () => {},
       } as unknown as Session & Partial<SessionData>,
@@ -89,8 +90,13 @@ describe('Review Controller', () => {
       },
     };
 
-    reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
-    expect(mockNext).toHaveBeenCalledWith(new Error(ErrorMessages.INVALID_CALLBACK_URL));
+    await reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
+    expect(mockNext).toHaveBeenCalledWith(
+      expect.objectContaining({
+        status: 400,
+        errors: expect.arrayContaining([expect.objectContaining({ message: ErrorMessages.INVALID_CALLBACK_URL })]),
+      })
+    );
   });
 
   test('Should not render review page when callback URL is not whitelisted', async () => {
@@ -100,12 +106,12 @@ describe('Review Controller', () => {
       destroy: () => {},
     } as unknown as Session & Partial<SessionData>;
 
-    reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
+    await reviewController.get(mockRequest as Request, mockResponse as Response, mockNext);
 
     expect(mockNext).toHaveBeenCalledWith(
       expect.objectContaining({
         status: 400,
-        message: ErrorMessages.INVALID_CALLBACK_URL,
+        errors: expect.arrayContaining([expect.objectContaining({ message: ErrorMessages.INVALID_CALLBACK_URL })]),
       })
     );
   });
@@ -299,6 +305,7 @@ describe('Review Controller', () => {
     mockRequest.session = {
       partyName: 'demo name',
       callbackUrl: 'https://example.com/callback/:id',
+      logoutUrl: 'https://localhost/logout',
       destroy: () => {},
     } as unknown as Session & Partial<SessionData>;
 
@@ -308,7 +315,7 @@ describe('Review Controller', () => {
     expect(mockNext).toHaveBeenCalledWith(
       expect.objectContaining({
         status: 400,
-        message: ErrorMessages.INVALID_CALLBACK_URL,
+        errors: expect.arrayContaining([expect.objectContaining({ message: ErrorMessages.INVALID_CALLBACK_URL })]),
       })
     );
   });
@@ -336,6 +343,7 @@ describe('Review Controller', () => {
       session: {
         partyName: 'demo name',
         callbackUrl: 'https://localhost[/]callback/:id',
+        logoutUrl: 'https://localhost/logout',
         destroy: () => {},
       } as unknown as Session & Partial<SessionData>,
       protocol: protocol,
@@ -345,8 +353,12 @@ describe('Review Controller', () => {
     };
     await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
     //expect(mockNext).toBeCalledWith(new Error(ErrorMessages.INVALID_URL));
-    const error = (mockNext as jest.Mock).mock.calls[0][0] as Error;
-    expect(error.message).toContain(ErrorMessages.INVALID_CALLBACK_URL);
+    const error = (mockNext as jest.Mock).mock.calls[0][0] as {
+      errors?: Array<{ message: string }>;
+    };
+    expect(error.errors).toEqual(
+      expect.arrayContaining([expect.objectContaining({ message: ErrorMessages.INVALID_CALLBACK_URL })])
+    );
   });
 
   test('Should not cancel when callback URL is not whitelisted', async () => {
@@ -358,6 +370,47 @@ describe('Review Controller', () => {
 
     await reviewController.cancel(mockRequest as Request, mockResponse as Response, mockNext);
 
-    expect(mockNext).toHaveBeenCalledWith(new Error(ErrorMessages.INVALID_CALLBACK_URL));
+    expect(mockNext).toHaveBeenCalledWith(
+      expect.objectContaining({
+        status: 400,
+        errors: expect.arrayContaining([expect.objectContaining({ message: ErrorMessages.INVALID_CALLBACK_URL })]),
+      })
+    );
+  });
+
+  test('Should fail to submit review when logoutUrl is missing', async () => {
+    mockRequest.session = {
+      partyName: 'demo name',
+      callbackUrl: 'https://localhost/callback/:id',
+      destroy: () => {},
+    } as unknown as Session & Partial<SessionData>;
+
+    await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(mockNext).toHaveBeenCalledWith(
+      expect.objectContaining({
+        status: 500,
+        message: ErrorMessages.UNEXPECTED_ERROR,
+      })
+    );
+  });
+
+  test('Should not submit review when logout URL is not whitelisted', async () => {
+    mockRequest.session = {
+      partyName: 'demo name',
+      callbackUrl: 'https://localhost/callback/:id',
+      logoutUrl: 'https://example.com/logout',
+      destroy: () => {},
+    } as unknown as Session & Partial<SessionData>;
+
+    await reviewController.post(mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(mockResponse.redirect).not.toHaveBeenCalled();
+    expect(mockNext).toHaveBeenCalledWith(
+      expect.objectContaining({
+        status: 400,
+        errors: expect.arrayContaining([expect.objectContaining({ message: ErrorMessages.INVALID_LOGOUT_URL })]),
+      })
+    );
   });
 });

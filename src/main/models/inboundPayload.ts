@@ -20,7 +20,7 @@ export class InboundPayloadStore {
 
 export class InboundPayload implements PayloadInbound {
   callbackUrl!: string;
-  logoutUrl: string | undefined;
+  logoutUrl!: string;
   existingFlags!: MainPayloadDetail;
   hmctsServiceId!: string;
   masterFlagCode!: string;

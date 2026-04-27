@@ -88,10 +88,15 @@ app.use((err: Error, req: express.Request, res: express.Response, _next: NextFun
   };
   res.locals._r = () => null;
 
+  const httpStatus = err instanceof HTTPError ? (err.status ?? 500) : 500;
+
+  if (err instanceof HTTPError && err.errors && err.errors.length > 0) {
+    return res.status(httpStatus).json({ error: err.errors });
+  }
+
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = developmentMode ? err : {};
-  const httpStatus = err instanceof HTTPError ? (err.status ?? 500) : 500;
   const template = httpStatus === 404 ? 'error/404' : 'error/500';
   res.status(httpStatus).render(template);
 });
