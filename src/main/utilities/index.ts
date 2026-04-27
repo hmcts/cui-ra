@@ -3,3 +3,4 @@ export * from './urlRoute';
 export * from './customSort';
 export * from './serviceConfig';
 export * from './errorSort';
+export * from './urlValidation';

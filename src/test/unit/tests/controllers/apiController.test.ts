@@ -10,6 +10,7 @@ describe('ApiController', () => {
   let controller: ApiController;
   const validPayload = {
     callbackUrl: 'https://example.service.gov.uk/callback',
+    logoutUrl: 'https://example.service.gov.uk/logout',
   };
 
   beforeEach(() => {
@@ -70,7 +71,10 @@ describe('ApiController', () => {
 
     test('should return 400 when callbackUrl is not whitelisted', async () => {
       const req = mockRequest(
-        { callbackUrl: 'https://example.com/callback' },
+        {
+          callbackUrl: 'https://example.com/callback',
+          logoutUrl: 'https://example.service.gov.uk/logout',
+        },
         'valid_idam_token',
         'valid_service_token'
       );
@@ -79,7 +83,9 @@ describe('ApiController', () => {
       await controller.postPayload(req, res);
 
       expect(res.status).toHaveBeenCalledWith(400);
-      expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.INVALID_CALLBACK_URL });
+      expect(res.json).toHaveBeenCalledWith({
+        error: [{ message: ErrorMessages.INVALID_CALLBACK_URL }],
+      });
     });
   });
 

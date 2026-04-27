@@ -10,7 +10,7 @@ export interface PayloadBase {
 
 export interface PayloadInbound extends PayloadBase {
   callbackUrl: string;
-  logoutUrl: string | undefined;
+  logoutUrl: string;
   existingFlags: PayloadDetail;
 }
 
