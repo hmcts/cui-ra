@@ -5027,14 +5027,14 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@noble/hashes", [\
       ["npm:1.8.0", {\
-        "packageLocation": "../../.yarn/berry/cache/@noble-hashes-npm-1.8.0-a397449e64-10c0.zip/node_modules/@noble/hashes/",\
+        "packageLocation": "./.yarn/unplugged/@noble-hashes-npm-1.8.0-a397449e64/node_modules/@noble/hashes/",\
         "packageDependencies": [\
           ["@noble/hashes", "npm:1.8.0"]\
         ],\
         "linkType": "HARD"\
       }],\
       ["npm:2.2.0", {\
-        "packageLocation": "../../.yarn/berry/cache/@noble-hashes-npm-2.2.0-edea701f99-10c0.zip/node_modules/@noble/hashes/",\
+        "packageLocation": "./.yarn/unplugged/@noble-hashes-npm-2.2.0-edea701f99/node_modules/@noble/hashes/",\
         "packageDependencies": [\
           ["@noble/hashes", "npm:2.2.0"]\
         ],\
@@ -17626,7 +17626,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["otplib", [\
       ["npm:13.4.0", {\
-        "packageLocation": "../../.yarn/berry/cache/otplib-npm-13.4.0-369ed4f2ef-10c0.zip/node_modules/otplib/",\
+        "packageLocation": "./.yarn/unplugged/otplib-npm-13.4.0-369ed4f2ef/node_modules/otplib/",\
         "packageDependencies": [\
           ["@otplib/core", "npm:13.4.0"],\
           ["@otplib/hotp", "npm:13.4.0"],\

@@ -7414,7 +7414,13 @@ __metadata:
     webpack-dev-middleware: "npm:^7.2.1"
     webpack-node-externals: "npm:^3.0.0"
   dependenciesMeta:
+    "@noble/hashes@1.8.0":
+      unplugged: true
+    "@noble/hashes@2.2.0":
+      unplugged: true
     govuk-frontend:
+      unplugged: true
+    otplib@13.4.0:
       unplugged: true
   languageName: unknown
   linkType: soft

@@ -1,6 +1,6 @@
 import { S2S } from '../../../../main/services';
 import { mockAxios, mockLogger } from '../../mocks';
-import { authenticator } from 'otplib';
+import { generateSync } from 'otplib';
 import { S2SError, TokenFormatError, TokenInvalidError, UnauthorisedError } from './../../../../main/errors';
 import { ErrorMessages } from './../../../../main/constants';
 
@@ -15,6 +15,10 @@ const response = {
 
 const secret = 'randomstring';
 const service = new S2S(secret, 'servicename', axios, mockedLogger);
+
+jest.mock('otplib', () => ({
+  generateSync: jest.fn(() => secret),
+}));
 
 /* eslint-disable jest/expect-expect */
 describe('s2s service class', () => {
@@ -116,7 +120,7 @@ describe('s2s service class', () => {
   test('Get one Time token', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
 
-    const otp = authenticator.generate(secret);
+    const otp = generateSync({ secret });
 
     expect(await service.getOneTimeToken()).toEqual(otp);
   });

@@ -4,7 +4,7 @@ import { Logger, ServiceAuth } from './../interfaces';
 
 import autobind from 'autobind-decorator';
 import { AxiosInstance } from 'axios';
-import { authenticator } from 'otplib';
+import { generateSync } from 'otplib';
 
 @autobind
 export class S2S implements ServiceAuth {
@@ -17,7 +17,7 @@ export class S2S implements ServiceAuth {
 
   public getOneTimeToken(): string {
     try {
-      return authenticator.generate(this.secret);
+      return generateSync({ secret: this.secret });
     } catch (error) {
       this.logger.error(error);
       throw new S2SError('Failed to generate one-time token');

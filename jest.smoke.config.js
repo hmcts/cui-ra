@@ -4,8 +4,9 @@ module.exports = {
   testEnvironment: 'node',
   testRunner: 'jest-circus/runner',
   transform: {
-    '^.+\\.ts$': 'ts-jest',
+    '^.+\\.[jt]s?$': 'ts-jest',
   },
+  transformIgnorePatterns: ['/node_modules/(?!(otplib|@otplib/plugin-base32-scure|@scure/base|@noble)/)'],
   moduleFileExtensions: ['ts', 'js', 'json'],
   reporters: [
     'default',

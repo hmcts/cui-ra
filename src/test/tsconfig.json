@@ -8,6 +8,7 @@
     "esModuleInterop": true,
     "module": "commonjs",
     "strictNullChecks": true,
+    "allowJs": true,
     "types": ["codeceptjs", "jest", "node"]
   }
 }

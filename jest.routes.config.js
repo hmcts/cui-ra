@@ -4,6 +4,7 @@ module.exports = {
   moduleFileExtensions: ['ts', 'js', 'json'],
   testEnvironment: 'node',
   transform: {
-    '^.+\\.ts?$': 'ts-jest',
+    '^.+\\.[jt]s?$': 'ts-jest',
   },
+  transformIgnorePatterns: ['/node_modules/(?!(otplib|@otplib/plugin-base32-scure|@scure/base|@noble)/)'],
 };

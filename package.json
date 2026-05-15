@@ -158,7 +158,16 @@
     "brace-expansion": "^5.0.5"
   },
   "dependenciesMeta": {
+    "@noble/hashes@1.8.0": {
+      "unplugged": true
+    },
+    "@noble/hashes@2.2.0": {
+      "unplugged": true
+    },
     "govuk-frontend": {
+      "unplugged": true
+    },
+    "otplib@13.4.0": {
       "unplugged": true
     }
   }
