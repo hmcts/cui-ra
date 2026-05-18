@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "engines": {
-    "node": ">=24.12.0"
+    "node": ">=24.14.1"
   },
   "scripts": {
     "start": "NODE_ENV=production node dist/server.js",
@@ -48,7 +48,7 @@
     "@types/express": "^5.0.0",
     "@types/i18n": "^0.13.12",
     "@types/lodash": "^4.17.0",
-    "@types/node": "24.12.2",
+    "@types/node": "24.12.4",
     "@types/nunjucks": "^3.2.6",
     "@types/require-directory": "^2.1.6",
     "@types/serve-favicon": "^2.5.7",
@@ -96,7 +96,7 @@
     "@babel/preset-env": "^7.24.4",
     "@codeceptjs/allure-legacy": "^1.0.2",
     "@codeceptjs/configure": "^1.0.1",
-    "@eslint/js": "^9.1.1",
+    "@eslint/js": "^10.0.0",
     "@types/chai-as-promised": "^8.0.0",
     "@types/express-session": "^1.18.0",
     "@types/jest": "^30.0.0",
@@ -108,10 +108,10 @@
     "chai": "^4.4.1",
     "chokidar": "^4.0.0",
     "codeceptjs": "^3.6.5",
-    "copy-webpack-plugin": "13.0.1",
+    "copy-webpack-plugin": "14.0.0",
     "css-loader": "^7.1.1",
     "debug": "^4.3.4",
-    "eslint": "^9.1.1",
+    "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jest": "^29.0.0",
@@ -142,7 +142,7 @@
     "ts-loader": "^9.5.1",
     "webdriverio": "^9.0.0",
     "webpack": "^5.91.0",
-    "webpack-cli": "^6.0.0",
+    "webpack-cli": "^7.0.0",
     "webpack-dev-middleware": "^7.2.1",
     "webpack-node-externals": "^3.0.0"
   },
@@ -150,7 +150,7 @@
     "*.{js,ts}": "eslint --cache --fix",
     "*.{js,ts,css,md,html,json}": "prettier --write"
   },
-  "packageManager": "yarn@4.12.0",
+  "packageManager": "yarn@4.14.1",
   "resolutions": {
     "cookie": "^1.0.2",
     "diff": "^8.0.3",

@@ -21,7 +21,10 @@ export class SchemaValidator {
       if (validate(req.body)) {
         next();
       } else {
-        return res.status(400).json({ error: validate.errors });
+        const validationErrors = (validate.errors ?? []).map(error => ({
+          message: error.message ?? 'Invalid request payload',
+        }));
+        return res.status(400).json({ error: validationErrors });
       }
     };
   }

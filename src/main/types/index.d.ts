@@ -10,8 +10,8 @@ declare module 'express-session' {
     mastername_cy?: string;
     partyname?: string;
     roleoncase?: string;
-    callbackUrl?: string;
-    logoutUrl?: string;
+    callbackUrl: string;
+    logoutUrl: string;
     existingmanager: ExistingFlagsManager;
     newmanager: NewFlagsManager;
     sessioninit: boolean;

@@ -66,7 +66,7 @@ export class DemoController {
           req.session.newmanager = NewFlag;
           req.session.existingmanager = new ExistingFlagsManager();
           req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
-          req.session.logoutUrl = Route.ROOT;
+          req.session.logoutUrl = `${host}${Route.ROOT}`;
           req.session.hmctsserviceid = 'ABA5';
           req.session.sessioninit = true;
           req.session.welsh = false;
@@ -80,7 +80,7 @@ export class DemoController {
           req.session.newmanager = NewFlag;
           req.session.existingmanager = new ExistingFlagsManager();
           req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
-          req.session.logoutUrl = Route.ROOT;
+          req.session.logoutUrl = `${host}${Route.ROOT}`;
           req.session.hmctsserviceid = 'ABA5';
           req.session.sessioninit = true;
           req.session.welsh = true;
@@ -94,7 +94,7 @@ export class DemoController {
           req.session.newmanager = NewFlag;
           req.session.existingmanager = new ExistingFlagsManager();
           req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
-          req.session.logoutUrl = Route.ROOT;
+          req.session.logoutUrl = `${host}${Route.ROOT}`;
           req.session.hmctsserviceid = 'BAA2';
           req.session.sessioninit = true;
           req.session.welsh = false;
@@ -108,7 +108,7 @@ export class DemoController {
           req.session.newmanager = NewFlag;
           req.session.existingmanager = new ExistingFlagsManager();
           req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
-          req.session.logoutUrl = Route.ROOT;
+          req.session.logoutUrl = `${host}${Route.ROOT}`;
           req.session.hmctsserviceid = 'BAA5';
           req.session.sessioninit = true;
           req.session.welsh = false;
@@ -126,7 +126,7 @@ export class DemoController {
           req.session.existingmanager = dataManagerExisting;
           req.session.newmanager = NewFlag;
           req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
-          req.session.logoutUrl = Route.ROOT;
+          req.session.logoutUrl = `${host}${Route.ROOT}`;
           req.session.hmctsserviceid = 'ABA5';
           req.session.sessioninit = true;
           req.session.welsh = false;
@@ -147,7 +147,7 @@ export class DemoController {
           req.session.newmanager = NewFlag;
           req.session.existingmanager = new ExistingFlagsManager();
           req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
-          req.session.logoutUrl = Route.ROOT;
+          req.session.logoutUrl = `${host}${Route.ROOT}`;
           req.session.hmctsserviceid = 'ABA5';
           req.session.sessioninit = true;
           req.session.welsh = false;

@@ -118,7 +118,8 @@ export const InboundPayloadSchema: SchemaType = {
       minLength: 1,
     },
     logoutUrl: {
-      type: ['string', 'null'],
+      type: 'string',
+      minLength: 1,
     },
     hmctsServiceId: {
       type: 'string',
@@ -135,6 +136,6 @@ export const InboundPayloadSchema: SchemaType = {
     },
     existingFlags: existingFlagsSchema,
   },
-  required: ['callbackUrl', 'hmctsServiceId', 'masterFlagCode', 'correlationId', 'existingFlags'],
+  required: ['callbackUrl', 'logoutUrl', 'hmctsServiceId', 'masterFlagCode', 'correlationId', 'existingFlags'],
   additionalProperties: false,
 };

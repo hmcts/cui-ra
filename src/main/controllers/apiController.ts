@@ -1,7 +1,7 @@
 import { ErrorMessages, HeaderParams, Route } from './../constants';
 import { Logger, RedisClientInterface } from './../interfaces';
 import { InboundPayload, InboundPayloadStore } from './../models';
-import { UrlRoute } from './../utilities';
+import { UrlRoute, validateUrls } from './../utilities';
 
 import autobind from 'autobind-decorator';
 import { plainToClass } from 'class-transformer';
@@ -30,9 +30,13 @@ export class ApiController {
       //Bind posted data to class
       const payload: InboundPayload = plainToClass(InboundPayload, req.body);
 
-      if (!UrlRoute.isCallbackUrlWhitelisted(payload.callbackUrl)) {
-        this.logger.warn(`Received non-whitelisted callback URL: "${payload.callbackUrl}"`);
-        return res.status(400).json({ error: ErrorMessages.INVALID_CALLBACK_URL });
+      const validationErrors = validateUrls({
+        callbackUrl: payload.callbackUrl,
+        logoutUrl: payload.logoutUrl,
+      });
+
+      if (validationErrors.length > 0) {
+        return res.status(400).json({ error: validationErrors });
       }
 
       //save data

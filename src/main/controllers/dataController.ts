@@ -15,7 +15,7 @@ import { ExistingFlagsManager, NewFlagsManager } from './../managers';
 import { InboundPayloadStore } from './../models';
 import { languages } from './../modules/translation';
 import { flagResourceType } from './../services';
-import { DataTimeUtilities, ServiceConfig, UrlRoute } from './../utilities';
+import { DataTimeUtilities, ServiceConfig, UrlRoute, validateUrls } from './../utilities';
 
 import autobind from 'autobind-decorator';
 import { plainToClass } from 'class-transformer';
@@ -62,12 +62,16 @@ export class DataController {
       req.session.partyname = payloadStore.payload.existingFlags.partyName;
       req.session.roleoncase = payloadStore.payload.existingFlags.roleOnCase;
       const callbackUrl = payloadStore.payload.callbackUrl;
-      if (!UrlRoute.isCallbackUrlWhitelisted(callbackUrl)) {
-        this.logger.warn(`${serviceId} provided non-whitelisted callback URL: "${callbackUrl}"`);
-        throw new HTTPError(ErrorMessages.INVALID_CALLBACK_URL, 400);
+      const logoutUrl = payloadStore.payload.logoutUrl;
+      const urlErrors = validateUrls({
+        callbackUrl,
+        logoutUrl,
+      });
+      if (urlErrors.length > 0) {
+        throw new HTTPError(ErrorMessages.INVALID_URL, 400, urlErrors);
       }
       req.session.callbackUrl = callbackUrl;
-      req.session.logoutUrl = payloadStore.payload.logoutUrl;
+      req.session.logoutUrl = logoutUrl;
       if (payloadStore.payload.masterFlagCode) {
         req.session.masterflagcode = payloadStore.payload.masterFlagCode.toUpperCase();
       } else {
