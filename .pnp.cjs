@@ -42,7 +42,7 @@ const RAW_RUNTIME_STATE =
           ["@hmcts/properties-volume", "npm:1.4.0"],\
           ["@types/body-parser", "npm:1.19.6"],\
           ["@types/chai-as-promised", "npm:8.0.2"],\
-          ["@types/config", "npm:3.3.5"],\
+          ["@types/config", "npm:4.4.0"],\
           ["@types/cookie-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.4.10"],\
           ["@types/csurf", "npm:1.11.5"],\
           ["@types/es6-promisify", "npm:6.0.4"],\
@@ -6120,10 +6120,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/config", [\
-      ["npm:3.3.5", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-config-npm-3.3.5-fca7f803c9-10c0.zip/node_modules/@types/config/",\
+      ["npm:4.4.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-config-npm-4.4.0-1274b7fc95-10c0.zip/node_modules/@types/config/",\
         "packageDependencies": [\
-          ["@types/config", "npm:3.3.5"]\
+          ["@types/config", "npm:4.4.0"],\
+          ["config", "npm:4.4.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -10447,7 +10448,7 @@ const RAW_RUNTIME_STATE =
           ["@hmcts/properties-volume", "npm:1.4.0"],\
           ["@types/body-parser", "npm:1.19.6"],\
           ["@types/chai-as-promised", "npm:8.0.2"],\
-          ["@types/config", "npm:3.3.5"],\
+          ["@types/config", "npm:4.4.0"],\
           ["@types/cookie-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.4.10"],\
           ["@types/csurf", "npm:1.11.5"],\
           ["@types/es6-promisify", "npm:6.0.4"],\
