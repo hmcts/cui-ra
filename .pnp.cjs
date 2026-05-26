@@ -88,7 +88,7 @@ const RAW_RUNTIME_STATE =
           ["express-nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.1.2"],\
           ["express-session", "npm:1.19.0"],\
           ["govuk-frontend", "npm:5.14.0"],\
-          ["helmet", "npm:8.1.0"],\
+          ["helmet", "npm:8.2.0"],\
           ["html-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.6.7"],\
           ["husky", "npm:9.1.7"],\
           ["i18n", "npm:0.15.3"],\
@@ -10469,7 +10469,7 @@ const RAW_RUNTIME_STATE =
           ["express-nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.1.2"],\
           ["express-session", "npm:1.19.0"],\
           ["govuk-frontend", "npm:5.14.0"],\
-          ["helmet", "npm:8.1.0"],\
+          ["helmet", "npm:8.2.0"],\
           ["html-webpack-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.6.7"],\
           ["husky", "npm:9.1.7"],\
           ["i18n", "npm:0.15.3"],\
@@ -13289,10 +13289,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["helmet", [\
-      ["npm:8.1.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/helmet-npm-8.1.0-a2193b660c-10c0.zip/node_modules/helmet/",\
+      ["npm:8.2.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/helmet-npm-8.2.0-04ebb5e2f9-10c0.zip/node_modules/helmet/",\
         "packageDependencies": [\
-          ["helmet", "npm:8.1.0"]\
+          ["helmet", "npm:8.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18573,7 +18573,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["qs", [\
       ["npm:6.15.2", {\
-        "packageLocation": "../../.yarn/berry/cache/qs-npm-6.15.2-4fbd3d7cd4-10c0.zip/node_modules/qs/",\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/qs-npm-6.15.2-4fbd3d7cd4-10c0.zip/node_modules/qs/",\
         "packageDependencies": [\
           ["qs", "npm:6.15.2"],\
           ["side-channel", "npm:1.1.0"]\
