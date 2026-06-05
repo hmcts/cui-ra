@@ -126,7 +126,7 @@ const RAW_RUNTIME_STATE =
           ["supertest", "npm:7.2.2"],\
           ["traverse", "npm:0.6.11"],\
           ["ts-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.4.11"],\
-          ["ts-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.5.7"],\
+          ["ts-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.6.0"],\
           ["ts-node", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.9.2"],\
           ["tsconfig-paths", "npm:4.2.0"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
@@ -10465,7 +10465,7 @@ const RAW_RUNTIME_STATE =
           ["supertest", "npm:7.2.2"],\
           ["traverse", "npm:0.6.11"],\
           ["ts-jest", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:29.4.11"],\
-          ["ts-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.5.7"],\
+          ["ts-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.6.0"],\
           ["ts-node", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.9.2"],\
           ["tsconfig-paths", "npm:4.2.0"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
@@ -21067,30 +21067,34 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["ts-loader", [\
-      ["npm:9.5.7", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/ts-loader-npm-9.5.7-c6cf2bfeb2-10c0.zip/node_modules/ts-loader/",\
+      ["npm:9.6.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/ts-loader-npm-9.6.0-8980682f33-10c0.zip/node_modules/ts-loader/",\
         "packageDependencies": [\
-          ["ts-loader", "npm:9.5.7"]\
+          ["ts-loader", "npm:9.6.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.5.7", {\
-        "packageLocation": "./.yarn/__virtual__/ts-loader-virtual-e3dbe7377b/7/runner/cache/others/berry/cache/ts-loader-npm-9.5.7-c6cf2bfeb2-10c0.zip/node_modules/ts-loader/",\
+      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.6.0", {\
+        "packageLocation": "./.yarn/__virtual__/ts-loader-virtual-36b8e25d34/7/runner/cache/others/berry/cache/ts-loader-npm-9.6.0-8980682f33-10c0.zip/node_modules/ts-loader/",\
         "packageDependencies": [\
+          ["@types/loader-utils", null],\
           ["@types/typescript", null],\
           ["@types/webpack", null],\
           ["chalk", "npm:4.1.2"],\
           ["enhanced-resolve", "npm:5.18.3"],\
+          ["loader-utils", null],\
           ["micromatch", "npm:4.0.8"],\
           ["semver", "npm:7.7.3"],\
           ["source-map", "npm:0.7.6"],\
-          ["ts-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.5.7"],\
+          ["ts-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.6.0"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
           ["webpack", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.107.2"]\
         ],\
         "packagePeers": [\
+          "@types/loader-utils",\
           "@types/typescript",\
           "@types/webpack",\
+          "loader-utils",\
           "typescript",\
           "webpack"\
         ],\
