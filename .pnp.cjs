@@ -50,7 +50,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:30.0.0"],\
           ["@types/lodash", "npm:4.17.24"],\
-          ["@types/node", "npm:24.12.4"],\
+          ["@types/node", "npm:24.13.1"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.7"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -6345,11 +6345,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:24.12.4", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-node-npm-24.12.4-fb0c00261b-10c0.zip/node_modules/@types/node/",\
+      ["npm:24.13.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-node-npm-24.13.1-376494e757-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:24.12.4"],\
-          ["undici-types", "npm:7.16.0"]\
+          ["@types/node", "npm:24.13.1"],\
+          ["undici-types", "npm:7.18.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -10389,7 +10389,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:30.0.0"],\
           ["@types/lodash", "npm:4.17.24"],\
-          ["@types/node", "npm:24.12.4"],\
+          ["@types/node", "npm:24.13.1"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.7"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -21126,7 +21126,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:24.12.4"],\
+          ["@types/node", "npm:24.13.1"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
@@ -21455,6 +21455,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/undici-types-npm-7.16.0-0e23b08124-10c0.zip/node_modules/undici-types/",\
         "packageDependencies": [\
           ["undici-types", "npm:7.16.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:7.18.2", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/undici-types-npm-7.18.2-3e6d69d829-10c0.zip/node_modules/undici-types/",\
+        "packageDependencies": [\
+          ["undici-types", "npm:7.18.2"]\
         ],\
         "linkType": "HARD"\
       }]\
