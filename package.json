@@ -47,7 +47,7 @@
     "@types/express": "^5.0.0",
     "@types/i18n": "^0.13.12",
     "@types/lodash": "^4.17.0",
-    "@types/node": "24.12.4",
+    "@types/node": "24.13.1",
     "@types/nunjucks": "^3.2.6",
     "@types/require-directory": "^2.1.6",
     "@types/serve-favicon": "^2.5.7",
@@ -149,7 +149,7 @@
     "*.{js,ts}": "eslint --cache --fix",
     "*.{js,ts,css,md,html,json}": "prettier --write"
   },
-  "packageManager": "yarn@4.14.1",
+  "packageManager": "yarn@4.16.0",
   "resolutions": {
     "cookie": "^1.0.2",
     "diff": "^8.0.3",
