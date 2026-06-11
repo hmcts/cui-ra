@@ -152,7 +152,7 @@ export class DemoController {
           req.session.existingmanager = new ExistingFlagsManager();
           req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
           req.session.logoutUrl = `${host}${Route.ROOT}`;
-          req.session.hmctsserviceid = 'ABA5';
+          req.session.hmctsserviceid = 'XXXX';
           req.session.sessioninit = true;
           req.session.welsh = false;
 
