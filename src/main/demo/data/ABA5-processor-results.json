@@ -34,14 +34,15 @@
     "_isMaster": false,
     "_errors": [],
     "_childIds": [
-        "PF0001-RA0001-RA0002",
-        "PF0001-RA0001-RA0003", 
-        "PF0001-RA0001-RA0004",
-        "PF0001-RA0001-RA0005",
-        "PF0001-RA0001-RA0006",
-        "PF0001-RA0001-RA0007",
-        "PF0001-RA0001-RA0008",  
-        "PF0001-RA0001-OT0001"],
+      "PF0001-RA0001-RA0002",
+      "PF0001-RA0001-RA0003",
+      "PF0001-RA0001-RA0004",
+      "PF0001-RA0001-RA0005",
+      "PF0001-RA0001-RA0006",
+      "PF0001-RA0001-RA0007",
+      "PF0001-RA0001-RA0008",
+      "PF0001-RA0001-OT0001"
+    ],
     "id": "PF0001-RA0001",
     "value": {
       "name": "Reasonable adjustment",
@@ -67,9 +68,16 @@
     "_isParent": true,
     "_isMaster": false,
     "_errors": [],
-    "_childIds": ["PF0001-RA0001-RA0002-RA0010", "PF0001-RA0001-RA0002-RA0011", "PF0001-RA0001-RA0002-RA0012",
-    "PF0001-RA0001-RA0002-RA0013", "PF0001-RA0001-RA0002-RA0014", "PF0001-RA0001-RA0002-RA0015",
-    "PF0001-RA0001-RA0002-RA0016","PF0001-RA0001-RA0002-OT0001"],
+    "_childIds": [
+      "PF0001-RA0001-RA0002-RA0010",
+      "PF0001-RA0001-RA0002-RA0011",
+      "PF0001-RA0001-RA0002-RA0012",
+      "PF0001-RA0001-RA0002-RA0013",
+      "PF0001-RA0001-RA0002-RA0014",
+      "PF0001-RA0001-RA0002-RA0015",
+      "PF0001-RA0001-RA0002-RA0016",
+      "PF0001-RA0001-RA0002-OT0001"
+    ],
     "id": "PF0001-RA0001-RA0002",
     "value": {
       "name": "I need documents in an alternative format",
@@ -716,7 +724,7 @@
     },
     "_parentId": "PF0001-RA0001-RA0004"
   },
-   {
+  {
     "_flagComment": false,
     "_isCategoryPage": false,
     "_enabled": false,
@@ -1052,7 +1060,7 @@
     },
     "_parentId": "PF0001-RA0001-RA0006"
   },
- {
+  {
     "_flagComment": false,
     "_isCategoryPage": false,
     "_enabled": false,
@@ -1151,7 +1159,7 @@
     },
     "_parentId": "PF0001-RA0001-RA0006"
   },
-{
+  {
     "_flagComment": true,
     "_isCategoryPage": false,
     "_enabled": false,
