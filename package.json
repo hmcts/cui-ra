@@ -28,7 +28,7 @@
     "test:functional:new-journey-errors": "NODE_TLS_REJECT_UNAUTHORIZED=1 codeceptjs run --config ./src/test/functional/codecept.conf.js --steps --grep @new-journey-errors",
     "test:crossbrowser": "./bin/run-crossbrowser-tests.sh",
     "test-crossbrowser-e2e": "NODE_ENV=testing ALLOW_CONFIG_MUTATIONS=true LOG_LEVEL=OFF NODE_TLS_REJECT_UNAUTHORIZED=1 codeceptjs run-multiple ${BROWSER_GROUP:-'--all'} -c src/test/crossbrowser/saucelabs.conf.js",
-    "cichecks": "PUPPETEER_SKIP_DOWNLOAD=false PUPPETEER_SKIP_CHROME_DOWNLOAD=false PUPPETEER_SKIP_CHROME_HEADLESS_SHELL_DOWNLOAD=true node node_modules/puppeteer/install.mjs && yarn add puppeteer && yarn build && yarn rebuild puppeteer && yarn lint && yarn test && yarn test:routes",
+    "cichecks": "PUPPETEER_SKIP_DOWNLOAD=true && yarn add puppeteer && yarn build && yarn rebuild puppeteer && yarn lint && yarn test && yarn test:routes",
     "prepare": "husky install",
     "pvmount:demo": "REMOTE_ENV=cui-demo NAMESPACE=cui node bin/mount-property-volume.js",
     "pvmount:aat": "REMOTE_ENV=cui-aat NAMESPACE=cui node bin/mount-property-volume.js",
