@@ -67,13 +67,7 @@ export class DemoController {
           const NewFlag = new NewFlagsManager();
           NewFlag.set(this.new);
 
-          req.session.newmanager = NewFlag;
-          req.session.existingmanager = new ExistingFlagsManager();
-          req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
-          req.session.logoutUrl = `${host}${Route.ROOT}`;
-          req.session.hmctsserviceid = 'XXXX';
-          req.session.sessioninit = true;
-          req.session.welsh = false;
+          this.setSessionData(req, host, NewFlag, 'XXXX', false);
 
           return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
         }
@@ -81,13 +75,7 @@ export class DemoController {
           const NewFlag = new NewFlagsManager();
           NewFlag.set(this.new_welsh);
 
-          req.session.newmanager = NewFlag;
-          req.session.existingmanager = new ExistingFlagsManager();
-          req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
-          req.session.logoutUrl = `${host}${Route.ROOT}`;
-          req.session.hmctsserviceid = 'XXXX';
-          req.session.sessioninit = true;
-          req.session.welsh = true;
+          this.setSessionData(req, host, NewFlag, 'XXXX', true);
 
           return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
         }
@@ -95,13 +83,7 @@ export class DemoController {
           const NewFlag = new NewFlagsManager();
           NewFlag.set(this.BAA2);
 
-          req.session.newmanager = NewFlag;
-          req.session.existingmanager = new ExistingFlagsManager();
-          req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
-          req.session.logoutUrl = `${host}${Route.ROOT}`;
-          req.session.hmctsserviceid = 'BAA2';
-          req.session.sessioninit = true;
-          req.session.welsh = false;
+          this.setSessionData(req, host, NewFlag, 'BAA2', false);
 
           return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
         }
@@ -109,13 +91,7 @@ export class DemoController {
           const NewFlag = new NewFlagsManager();
           NewFlag.set(this.BAA5);
 
-          req.session.newmanager = NewFlag;
-          req.session.existingmanager = new ExistingFlagsManager();
-          req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
-          req.session.logoutUrl = `${host}${Route.ROOT}`;
-          req.session.hmctsserviceid = 'BAA5';
-          req.session.sessioninit = true;
-          req.session.welsh = false;
+          this.setSessionData(req, host, NewFlag, 'BAA5', false);
 
           return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
         }
@@ -127,13 +103,7 @@ export class DemoController {
           const NewFlag = new NewFlagsManager();
           NewFlag.set(this.new);
 
-          req.session.existingmanager = dataManagerExisting;
-          req.session.newmanager = NewFlag;
-          req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
-          req.session.logoutUrl = `${host}${Route.ROOT}`;
-          req.session.hmctsserviceid = 'XXXX';
-          req.session.sessioninit = true;
-          req.session.welsh = false;
+          this.setSessionData(req, host, NewFlag, 'XXXX', false, dataManagerExisting);
 
           return res.redirect('home/overview');
         }
@@ -148,13 +118,7 @@ export class DemoController {
             req.session.mastername_cy = master.value.name_cy;
           }
 
-          req.session.newmanager = NewFlag;
-          req.session.existingmanager = new ExistingFlagsManager();
-          req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
-          req.session.logoutUrl = `${host}${Route.ROOT}`;
-          req.session.hmctsserviceid = 'XXXX';
-          req.session.sessioninit = true;
-          req.session.welsh = false;
+          this.setSessionData(req, host, NewFlag, 'XXXX', false);
 
           return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001' }, UrlRoute.url(req)));
         }
@@ -162,13 +126,7 @@ export class DemoController {
           const NewFlag = new NewFlagsManager();
           NewFlag.set(this.ABA5);
 
-          req.session.newmanager = NewFlag;
-          req.session.existingmanager = new ExistingFlagsManager();
-          req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
-          req.session.logoutUrl = `${host}${Route.ROOT}`;
-          req.session.hmctsserviceid = 'ABA5';
-          req.session.sessioninit = true;
-          req.session.welsh = false;
+          this.setSessionData(req, host, NewFlag, 'ABA5', false);
 
           return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
         }
@@ -189,5 +147,22 @@ export class DemoController {
     } catch (e) {
       return next(e);
     }
+  }
+
+  private setSessionData(
+    req: Request,
+    host: string,
+    newManager: NewFlagsManager,
+    hmctsServiceId: string,
+    welsh: boolean,
+    existingManager: ExistingFlagsManager = new ExistingFlagsManager()
+  ): void {
+    req.session.newmanager = newManager;
+    req.session.existingmanager = existingManager;
+    req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
+    req.session.logoutUrl = `${host}${Route.ROOT}`;
+    req.session.hmctsserviceid = hmctsServiceId;
+    req.session.sessioninit = true;
+    req.session.welsh = welsh;
   }
 }
