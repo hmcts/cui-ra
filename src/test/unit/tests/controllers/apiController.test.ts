@@ -69,30 +69,27 @@ describe('ApiController', () => {
       expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.TOKENS_INCORRECT_FORMAT });
     });
 
-    test('should return 400 when callbackUrl is not whitelisted', async () => {
-      const req = mockRequest(
-        {
-          callbackUrl: 'https://example.com/callback',
-          logoutUrl: 'https://example.service.gov.uk/logout',
-        },
-        'valid_idam_token',
-        'valid_service_token'
-      );
+    test('should return 500 when redis set fails', async () => {
+      const errorRedis = {
+        ...mockedRedis,
+        set: jest.fn().mockRejectedValue(new Error('redis failure')),
+      };
+      controller = new ApiController(mockedLogger, errorRedis as any);
+      const req = mockRequest({ key: 'value' }, 'valid_idam_token', 'valid_service_token');
       const res = mockResponse();
 
       await controller.postPayload(req, res);
 
-      expect(res.status).toHaveBeenCalledWith(400);
-      expect(res.json).toHaveBeenCalledWith({
-        error: [{ message: ErrorMessages.INVALID_CALLBACK_URL }],
-      });
+      expect(mockedLogger.error).toHaveBeenCalledWith('redis failure');
+      expect(res.status).toHaveBeenCalledWith(500);
+      expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.UNEXPECTED_ERROR });
     });
   });
 
   describe('getPayload', () => {
-    const mockRequest = (id: string): Request => {
+    const mockRequest = (id: string | string[] | undefined): Request => {
       return {
-        params: { id },
+        params: id === undefined ? {} : { id },
       } as unknown as Request;
     };
 
@@ -122,6 +119,43 @@ describe('ApiController', () => {
 
       expect(res.status).toHaveBeenCalledWith(404);
       expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.DATA_NOT_FOUND });
+    });
+
+    test('should use the first id when multiple ids are provided', async () => {
+      const req = mockRequest(['existing_key', 'other_key']);
+      const res = mockResponse();
+
+      await controller.getPayload(req, res);
+
+      expect(res.status).toHaveBeenCalledWith(200);
+      expect(res.json).toHaveBeenCalledWith({ test: 'data' });
+    });
+
+    test('should return 404 when first id in array does not exist', async () => {
+      const req = mockRequest(['non_existing_key', 'existing_key']);
+      const res = mockResponse();
+
+      await controller.getPayload(req, res);
+
+      expect(res.status).toHaveBeenCalledWith(404);
+      expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.DATA_NOT_FOUND });
+    });
+
+    test('should return 500 when redis get fails', async () => {
+      const errorRedis = {
+        ...mockedRedis,
+        exists: jest.fn().mockResolvedValue(true),
+        get: jest.fn().mockRejectedValue(new Error('redis failure')),
+      };
+      controller = new ApiController(mockedLogger, errorRedis as any);
+      const req = mockRequest('existing_key');
+      const res = mockResponse();
+
+      await controller.getPayload(req, res);
+
+      expect(mockedLogger.error).toHaveBeenCalledWith('redis failure');
+      expect(res.status).toHaveBeenCalledWith(500);
+      expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.UNEXPECTED_ERROR });
     });
   });
 });

@@ -51,6 +51,32 @@ describe('UrlRoute', () => {
 
       expect(result).toBe(expectedUrl);
     });
+
+    test('should use the first host when multiple hosts are provided', () => {
+      const mockRequest = {
+        protocol: 'https',
+        headers: {
+          host: ['example.com', 'backup.example.com'],
+        },
+      } as unknown as Request;
+
+      const expectedUrl = 'https://example.com';
+      const result = UrlRoute.url(mockRequest);
+
+      expect(result).toBe(expectedUrl);
+    });
+
+    test('should handle missing host header', () => {
+      const mockRequest = {
+        protocol: 'https',
+        headers: {},
+      } as unknown as Request;
+
+      const expectedUrl = 'https://';
+      const result = UrlRoute.url(mockRequest);
+
+      expect(result).toBe(expectedUrl);
+    });
   });
 
   describe('isCallbackUrlWhitelisted', () => {

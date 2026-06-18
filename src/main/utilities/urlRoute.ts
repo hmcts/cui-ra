@@ -21,7 +21,8 @@ export class UrlRoute {
   }
 
   public static url(req: Request): string {
-    return `${req.protocol}://${req.headers.host}`;
+    const host = Array.isArray(req.headers.host) ? req.headers.host[0] : req.headers.host || '';
+    return `${req.protocol}://${host}`;
   }
 
   /**
