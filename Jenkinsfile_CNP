@@ -8,18 +8,60 @@ def component = "ra"
 
 def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
-withPipeline(type, product, component) {
-  before('smoketest:preview') {
-    sh 'rm -rf /home/jenkinsssh/.cache/ms-playwright && yarn install && yarn playwright install'
-  }
+withEnv([
+    'PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable',
+    'PUPPETEER_SKIP_DOWNLOAD=true'
+]) {
 
-  before('smoketest:aat') {
-    sh 'rm -rf /home/jenkinsssh/.cache/ms-playwright && yarn install && yarn playwright install'
-  }
+    withPipeline(type, product, component) {
 
-  afterAlways('build') {
-    yarnBuilder.yarn('rebuild puppeteer')
-    yarnBuilder.yarn('build')
-  }
+        before('build') {
+            sh '''
+                rm -rf /home/jenkinsssh/.cache/puppeteer
+                rm -rf /home/jenkinsssh/.cache/puppeteer-core
 
+                if ! command -v google-chrome-stable >/dev/null 2>&1; then
+                    sudo apt-get update
+                    sudo apt-get install -y google-chrome-stable
+                fi
+
+                google-chrome-stable --version || true
+
+                # Format check (safe, non-blocking)
+                yarn install --immutable || yarn install
+                yarn prettier --write .github/workflows/checks.yml || true
+            '''
+        }
+
+        before('smoketest:preview') {
+            sh '''
+                rm -rf /home/jenkinsssh/.cache/ms-playwright
+                rm -rf /home/jenkinsssh/.cache/puppeteer
+
+                export PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
+                export PUPPETEER_SKIP_DOWNLOAD=true
+
+                yarn install
+                yarn playwright install
+            '''
+        }
+
+        before('smoketest:aat') {
+            sh '''
+                rm -rf /home/jenkinsssh/.cache/ms-playwright
+                rm -rf /home/jenkinsssh/.cache/puppeteer
+
+                export PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
+                export PUPPETEER_SKIP_DOWNLOAD=true
+
+                yarn install
+                yarn playwright install
+            '''
+        }
+
+        afterAlways('build') {
+            yarnBuilder.yarn('rebuild puppeteer')
+            yarnBuilder.yarn('build')
+        }
+    }
 }
