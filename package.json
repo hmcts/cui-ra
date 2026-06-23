@@ -47,7 +47,7 @@
     "@types/express": "^5.0.0",
     "@types/i18n": "^0.13.12",
     "@types/lodash": "^4.17.0",
-    "@types/node": "24.13.1",
+    "@types/node": "24.13.2",
     "@types/nunjucks": "^3.2.6",
     "@types/require-directory": "^2.1.6",
     "@types/serve-favicon": "^2.5.7",
@@ -151,10 +151,13 @@
   },
   "packageManager": "yarn@4.16.0",
   "resolutions": {
+    "@opentelemetry/core": "^2.8.0",
+    "brace-expansion": "^5.0.5",
     "cookie": "^1.0.2",
     "diff": "^8.0.3",
+    "js-yaml": "^4.2.0",
     "minimatch@^10.1.1": "^10.2.4",
-    "brace-expansion": "^5.0.5"
+    "tar": "^7.5.16"
   },
   "dependenciesMeta": {
     "govuk-frontend": {

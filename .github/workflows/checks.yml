@@ -2,21 +2,41 @@ name: CI Checks
 
 on:
   pull_request:
-    branches:
-      - master
+    branches: [master]
   push:
-    branches:
-      - master
+    branches: [master]
 
 permissions: read-all
 
 jobs:
   build:
     runs-on: ubuntu-24.04
+
+    env:
+      PUPPETEER_SKIP_DOWNLOAD: '1'
+      PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome-stable
+
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
         with:
-          node-version: 24.16.0
-      - run: corepack enable && yarn --version
-      - run: yarn cichecks
+          node-version: 24.17.0
+
+      - name: Enable Corepack
+        run: |
+          corepack enable
+          yarn --version
+
+      - name: Clean Puppeteer cache
+        run: |
+          rm -rf ~/.cache/puppeteer
+          rm -rf ~/.cache/puppeteer-core
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Run CI checks
+        run: yarn cichecks
