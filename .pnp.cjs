@@ -10940,10 +10940,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["diff", [\
-      ["npm:8.0.4", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/diff-npm-8.0.4-88b039fd53-10c0.zip/node_modules/diff/",\
+      ["npm:9.0.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/diff-npm-9.0.0-7def25b473-10c0.zip/node_modules/diff/",\
         "packageDependencies": [\
-          ["diff", "npm:8.0.4"]\
+          ["diff", "npm:9.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16746,7 +16746,7 @@ const RAW_RUNTIME_STATE =
           ["browser-stdout", "npm:1.3.1"],\
           ["chokidar", "npm:4.0.3"],\
           ["debug", "virtual:1968420b2d6933ddb33951f1bab491453fa5b45949cbeb10f639eba83f29960e830a6b34392fd1182a22037f822f26308ecf33f29c31b066e1dcff029c74acca#npm:4.4.3"],\
-          ["diff", "npm:8.0.4"],\
+          ["diff", "npm:9.0.0"],\
           ["escape-string-regexp", "npm:4.0.0"],\
           ["find-up", "npm:5.0.0"],\
           ["glob", "npm:10.5.0"],\
@@ -16774,7 +16774,7 @@ const RAW_RUNTIME_STATE =
           ["browser-stdout", "npm:1.3.1"],\
           ["chokidar", "npm:4.0.3"],\
           ["debug", "virtual:1968420b2d6933ddb33951f1bab491453fa5b45949cbeb10f639eba83f29960e830a6b34392fd1182a22037f822f26308ecf33f29c31b066e1dcff029c74acca#npm:4.4.3"],\
-          ["diff", "npm:8.0.4"],\
+          ["diff", "npm:9.0.0"],\
           ["escape-string-regexp", "npm:4.0.0"],\
           ["find-up", "npm:5.0.0"],\
           ["glob", "npm:10.5.0"],\
@@ -16837,7 +16837,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/mocha", null],\
           ["chalk", "npm:4.1.2"],\
-          ["diff", "npm:8.0.4"],\
+          ["diff", "npm:9.0.0"],\
           ["json-stringify-safe", "npm:5.0.1"],\
           ["lodash.isempty", "npm:4.4.0"],\
           ["lodash.isfunction", "npm:3.0.9"],\
@@ -19713,7 +19713,7 @@ const RAW_RUNTIME_STATE =
           ["@sinonjs/commons", "npm:3.0.1"],\
           ["@sinonjs/fake-timers", "npm:15.4.0"],\
           ["@sinonjs/samsam", "npm:10.0.2"],\
-          ["diff", "npm:8.0.4"],\
+          ["diff", "npm:9.0.0"],\
           ["sinon", "npm:21.1.2"]\
         ],\
         "linkType": "HARD"\
@@ -21110,7 +21110,7 @@ const RAW_RUNTIME_STATE =
           ["acorn-walk", "npm:8.3.4"],\
           ["arg", "npm:4.1.3"],\
           ["create-require", "npm:1.1.1"],\
-          ["diff", "npm:8.0.4"],\
+          ["diff", "npm:9.0.0"],\
           ["make-error", "npm:1.3.6"],\
           ["ts-node", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
