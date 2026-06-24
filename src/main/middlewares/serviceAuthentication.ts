@@ -23,7 +23,11 @@ export class ServiceAuthentication {
 
     try {
       const service = await this.serviceAuth.validateToken(serviceToken);
-      const allowedServices: string[] = config.get('services.s2s.allowedServices') ?? [];
+      const allowedServices: string[] = (config.get<string>('services.s2s.allowedServices') ?? '')
+        .split(',')
+        .map((service: string) => service.trim().toLowerCase())
+        .filter(Boolean);
+
       if (service && allowedServices.includes(service.toLowerCase())) {
         next();
       } else {
