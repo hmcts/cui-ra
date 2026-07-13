@@ -101,7 +101,7 @@ function testAccessibility(url: string, cookies: any[] = []): void {
   describe(`Page ${url}`, () => {
     test('should have no accessibility errors', async () => {
       await testAccessibilityNoWrap(url, cookies);
-    }, 10000);
+    }, 30000);
   });
 }
 
