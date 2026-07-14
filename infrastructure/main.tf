@@ -19,6 +19,12 @@ data "azurerm_user_assigned_identity" "jenkins" {
   resource_group_name = "managed-identities-${var.env}-rg"
 }
 
+data "azurerm_subnet" "core_infra_redis_subnet" {
+  name                 = "core-infra-subnet-1-${var.env}"
+  virtual_network_name = "core-infra-vnet-${var.env}"
+  resource_group_name  = "core-infra-${var.env}"
+}
+
 module "key-vault" {
   source                       = "git@github.com:hmcts/cnp-module-key-vault?ref=DTSPO-31965/remove-jenkins-ptl-access"
   product                      = var.product
@@ -50,17 +56,6 @@ module "application_insights" {
 
   common_tags = var.common_tags
 }
-
-moved {
-  from = azurerm_application_insights.appinsights
-  to   = module.application_insights.azurerm_application_insights.this
-}
-
-//data "azurerm_subnet" "core_infra_redis_subnet" {
-//  name                 = "core-infra-subnet-1-${var.env}"
-//  virtual_network_name = "core-infra-vnet-${var.env}"
-//  resource_group_name = "core-infra-${var.env}"
-//}
 
 data "azurerm_key_vault" "key_vault" {
   name                = "${var.product}-${var.env}"    # update these values if required
@@ -100,9 +95,45 @@ module "redis6-cache" {
 
 }
 
+module "cuira-managed-redis" {
+  source      = "git@github.com:hmcts/terraform-module-azure-managed-redis?ref=main"
+  product     = var.product
+  location    = var.location
+  env         = var.env
+  common_tags = var.common_tags
+  component   = var.component
+
+  sku_name = var.managed_sku_name
+
+  public_network_access   = "Disabled"
+  create_private_endpoint = true
+  subnet_id               = data.azurerm_subnet.core_infra_redis_subnet.id
+  private_dns_zone_ids    = ["/subscriptions/${var.private_dns_subscription_id}/resourceGroups/core-infra-intsvc-rg/providers/Microsoft.Network/privateDnsZones/privatelink.redis.azure.net"]
+
+  access_keys_authentication_enabled = true
+}
+
 ////////////////////////////////
 // Populate Vault with redis info
 ////////////////////////////////
+
+resource "azurerm_key_vault_secret" "redis_host" {
+  name         = "managed-redis-host"
+  value        = module.cuira-managed-redis.hostname
+  key_vault_id = data.azurerm_key_vault.key_vault.id
+}
+
+resource "azurerm_key_vault_secret" "redis_port" {
+  name         = "managed-redis-port"
+  value        = module.cuira-managed-redis.port
+  key_vault_id = data.azurerm_key_vault.key_vault.id
+}
+
+resource "azurerm_key_vault_secret" "managed_redis_access_key" {
+  name         = "managed-redis-access-key"
+  value        = module.cuira-managed-redis.primary_access_key
+  key_vault_id = data.azurerm_key_vault.key_vault.id
+}
 
 resource "azurerm_key_vault_secret" "redis_access_key" {
   name         = "redis-access-key"
