@@ -59,6 +59,19 @@ withEnv([
             '''
         }
 
+        before('functional:aat') {
+            sh '''
+                rm -rf /home/jenkinsssh/.cache/ms-playwright
+                rm -rf /home/jenkinsssh/.cache/puppeteer
+
+                export PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
+                export PUPPETEER_SKIP_DOWNLOAD=true
+
+                yarn install
+                yarn playwright install
+            '''
+        }
+
         afterAlways('build') {
             yarnBuilder.yarn('rebuild puppeteer')
             yarnBuilder.yarn('build')
