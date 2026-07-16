@@ -59,7 +59,7 @@ withEnv([
             '''
         }
 
-        before('functional:aat') {
+        before('functionaltest:aat') {
             sh '''
                 rm -rf /home/jenkinsssh/.cache/ms-playwright
                 rm -rf /home/jenkinsssh/.cache/puppeteer
