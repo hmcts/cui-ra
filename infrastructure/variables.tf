@@ -58,6 +58,6 @@ variable "private_dns_subscription_id" {
 }
 
 variable "managed_sku_name" {
-  default     = "Balanced_B0"
+  default     = "Balanced_B1"
   description = "The SKU of Redis to use. E.g. Balanced_B1, MemoryOptimized_M10, FlashOptimized_A250"
 }
