@@ -39,7 +39,7 @@ const RAW_RUNTIME_STATE =
           ["@hmcts/cookie-manager", "npm:1.1.0"],\
           ["@hmcts/nodejs-healthcheck", "npm:1.8.6"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
-          ["@hmcts/properties-volume", "npm:1.4.0"],\
+          ["@hmcts/properties-volume", "npm:1.4.1"],\
           ["@types/body-parser", "npm:1.19.6"],\
           ["@types/chai-as-promised", "npm:8.0.2"],\
           ["@types/cookie-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.4.10"],\
@@ -3969,13 +3969,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@hmcts/properties-volume", [\
-      ["npm:1.4.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@hmcts-properties-volume-npm-1.4.0-c2be5d086e-10c0.zip/node_modules/@hmcts/properties-volume/",\
+      ["npm:1.4.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@hmcts-properties-volume-npm-1.4.1-b28ede9351-10c0.zip/node_modules/@hmcts/properties-volume/",\
         "packageDependencies": [\
           ["@azure/identity", "npm:4.13.1"],\
           ["@azure/keyvault-secrets", "npm:4.11.2"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
-          ["@hmcts/properties-volume", "npm:1.4.0"],\
+          ["@hmcts/properties-volume", "npm:1.4.1"],\
           ["js-yaml", "npm:4.3.0"],\
           ["lodash", "npm:4.18.1"]\
         ],\
@@ -10409,7 +10409,7 @@ const RAW_RUNTIME_STATE =
           ["@hmcts/cookie-manager", "npm:1.1.0"],\
           ["@hmcts/nodejs-healthcheck", "npm:1.8.6"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
-          ["@hmcts/properties-volume", "npm:1.4.0"],\
+          ["@hmcts/properties-volume", "npm:1.4.1"],\
           ["@types/body-parser", "npm:1.19.6"],\
           ["@types/chai-as-promised", "npm:8.0.2"],\
           ["@types/cookie-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.4.10"],\
