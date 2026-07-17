@@ -95,6 +95,11 @@ module "redis6-cache" {
 
 }
 
+import {
+  to = module.cuira-managed-redis.azurerm_managed_redis.redis
+  id = "/subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourceGroups/cui-ra-prod-rg/providers/Microsoft.Cache/redisEnterprise/cui-ra-prod"
+}
+
 module "cuira-managed-redis" {
   source      = "git@github.com:hmcts/terraform-module-azure-managed-redis?ref=main"
   product     = var.product
