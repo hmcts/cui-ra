@@ -132,7 +132,7 @@ const RAW_RUNTIME_STATE =
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
           ["webdriverio", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.29.1"],\
           ["webpack", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.108.4"],\
-          ["webpack-cli", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.0.3"],\
+          ["webpack-cli", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.2.1"],\
           ["webpack-dev-middleware", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.4.5"],\
           ["webpack-node-externals", "npm:3.0.0"]\
         ],\
@@ -10502,7 +10502,7 @@ const RAW_RUNTIME_STATE =
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
           ["webdriverio", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:9.29.1"],\
           ["webpack", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.108.4"],\
-          ["webpack-cli", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.0.3"],\
+          ["webpack-cli", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.2.1"],\
           ["webpack-dev-middleware", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.4.5"],\
           ["webpack-node-externals", "npm:3.0.0"]\
         ],\
@@ -11410,13 +11410,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["envinfo", [\
-      ["npm:7.20.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/envinfo-npm-7.20.0-cadb719ee9-10c0.zip/node_modules/envinfo/",\
-        "packageDependencies": [\
-          ["envinfo", "npm:7.20.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:7.21.0", {\
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/envinfo-npm-7.21.0-90b5724340-10c0.zip/node_modules/envinfo/",\
         "packageDependencies": [\
@@ -21993,7 +21986,7 @@ const RAW_RUNTIME_STATE =
           ["tapable", "npm:2.3.0"],\
           ["watchpack", "npm:2.5.2"],\
           ["webpack", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.108.4"],\
-          ["webpack-cli", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.0.3"],\
+          ["webpack-cli", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.2.1"],\
           ["webpack-sources", "npm:3.5.0"]\
         ],\
         "packagePeers": [\
@@ -22004,36 +21997,48 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["webpack-cli", [\
-      ["npm:7.0.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/webpack-cli-npm-7.0.3-999f1fb742-10c0.zip/node_modules/webpack-cli/",\
+      ["npm:7.2.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/webpack-cli-npm-7.2.1-f69888dbfc-10c0.zip/node_modules/webpack-cli/",\
         "packageDependencies": [\
-          ["webpack-cli", "npm:7.0.3"]\
+          ["webpack-cli", "npm:7.2.1"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.0.3", {\
-        "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-c26db6aa99/7/runner/cache/others/berry/cache/webpack-cli-npm-7.0.3-999f1fb742-10c0.zip/node_modules/webpack-cli/",\
+      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.2.1", {\
+        "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-1de877fc44/7/runner/cache/others/berry/cache/webpack-cli-npm-7.2.1-f69888dbfc-10c0.zip/node_modules/webpack-cli/",\
         "packageDependencies": [\
           ["@discoveryjs/json-ext", "npm:1.1.0"],\
+          ["@types/js-yaml", null],\
+          ["@types/json5", null],\
+          ["@types/toml", null],\
           ["@types/webpack", null],\
           ["@types/webpack-bundle-analyzer", null],\
           ["@types/webpack-dev-server", null],\
           ["commander", "npm:14.0.3"],\
           ["cross-spawn", "npm:7.0.6"],\
-          ["envinfo", "npm:7.20.0"],\
+          ["envinfo", "npm:7.21.0"],\
           ["import-local", "npm:3.2.0"],\
           ["interpret", "npm:3.1.1"],\
+          ["js-yaml", null],\
+          ["json5", null],\
           ["rechoir", "npm:0.8.0"],\
+          ["toml", null],\
           ["webpack", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.108.4"],\
           ["webpack-bundle-analyzer", null],\
-          ["webpack-cli", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.0.3"],\
+          ["webpack-cli", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.2.1"],\
           ["webpack-dev-server", null],\
           ["webpack-merge", "npm:6.0.1"]\
         ],\
         "packagePeers": [\
+          "@types/js-yaml",\
+          "@types/json5",\
+          "@types/toml",\
           "@types/webpack-bundle-analyzer",\
           "@types/webpack-dev-server",\
           "@types/webpack",\
+          "js-yaml",\
+          "json5",\
+          "toml",\
           "webpack-bundle-analyzer",\
           "webpack-dev-server",\
           "webpack"\
