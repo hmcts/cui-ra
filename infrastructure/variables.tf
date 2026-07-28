@@ -52,3 +52,12 @@ variable "session_secret_rotation" {
   default     = "1"
   description = "Bump to rotate the cuira session secret."
 }
+
+variable "private_dns_subscription_id" {
+  default = "1baf5470-1c3e-40d3-a6f7-74bfbce4b348"
+}
+
+variable "managed_sku_name" {
+  default     = "Balanced_B1"
+  description = "The SKU of Redis to use. E.g. Balanced_B1, MemoryOptimized_M10, FlashOptimized_A250"
+}

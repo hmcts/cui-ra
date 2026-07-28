@@ -47,7 +47,7 @@
     "@types/express": "^5.0.0",
     "@types/i18n": "^0.13.12",
     "@types/lodash": "^4.17.0",
-    "@types/node": "24.13.2",
+    "@types/node": "24.13.3",
     "@types/nunjucks": "^3.2.6",
     "@types/require-directory": "^2.1.6",
     "@types/serve-favicon": "^2.5.7",
@@ -149,15 +149,10 @@
     "*.{js,ts}": "eslint --cache --fix",
     "*.{js,ts,css,md,html,json}": "prettier --write"
   },
-  "packageManager": "yarn@4.16.0",
+  "packageManager": "yarn@4.17.1",
   "resolutions": {
     "@opentelemetry/core": "^2.8.0",
-    "brace-expansion": "^5.0.5",
-    "cookie": "^1.0.2",
-    "diff": "^9.0.0",
-    "js-yaml": "^4.2.0",
-    "minimatch@^10.1.1": "^10.2.4",
-    "tar": "^7.5.16"
+    "cookie": "^1.0.2"
   },
   "dependenciesMeta": {
     "govuk-frontend": {

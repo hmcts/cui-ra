@@ -3,6 +3,16 @@ import { mockServiceAuth } from './../../mocks';
 import { ServiceAuthentication } from './../../../../main/middlewares';
 import { ServiceAuth } from './../../../../main/interfaces';
 import { ErrorMessages } from './../../../../main/constants';
+import config from 'config';
+
+jest.mock('config', () => ({
+  __esModule: true,
+  default: {
+    get: jest.fn(),
+  },
+}));
+
+const mockedConfig = config as unknown as { get: jest.Mock };
 
 describe('ServiceAuthentication', () => {
   let req: Request;
@@ -17,6 +27,8 @@ describe('ServiceAuthentication', () => {
     next = jest.fn();
     serviceMock = mockServiceAuth();
     serviceAuthentication = new ServiceAuthentication(serviceMock);
+
+    mockedConfig.get.mockReturnValue('service-a, service-b');
 
     res.status = jest.fn().mockReturnThis();
     res.json = jest.fn();
@@ -80,5 +92,20 @@ describe('ServiceAuthentication', () => {
     expect(res.status).toHaveBeenCalledWith(401);
     expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.UNAUTHORISED });
     expect(next).not.toHaveBeenCalled();
+  });
+
+  test('should return 401 status when no service is defined in allowedServices', async () => {
+    const configSpy = jest.spyOn(mockedConfig, 'get').mockReturnValue(undefined as never);
+    req.headers = { 'service-token': 'service-a' };
+
+    (serviceMock.validateToken as jest.Mock).mockImplementation(() => Promise.resolve('service-a'));
+
+    await serviceAuthentication.check(req, res, next);
+
+    expect(res.status).toHaveBeenCalledWith(401);
+    expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.UNAUTHORISED });
+    expect(next).not.toHaveBeenCalled();
+
+    configSpy.mockRestore();
   });
 });
