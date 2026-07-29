@@ -1,6 +1,6 @@
 #!groovy
 
-@Library("Infrastructure@cve-dashboard")
+@Library("Infrastructure@2.4.4")
 
 def type = "nodejs"
 def product = "cui"
@@ -14,7 +14,6 @@ withEnv([
 ]) {
 
     withPipeline(type, product, component) {
-        enableCveDashboardIngestion()
 
         before('build') {
             sh '''
@@ -48,6 +47,19 @@ withEnv([
         }
 
         before('smoketest:aat') {
+            sh '''
+                rm -rf /home/jenkinsssh/.cache/ms-playwright
+                rm -rf /home/jenkinsssh/.cache/puppeteer
+
+                export PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
+                export PUPPETEER_SKIP_DOWNLOAD=true
+
+                yarn install
+                yarn playwright install
+            '''
+        }
+
+        before('functionaltest:aat') {
             sh '''
                 rm -rf /home/jenkinsssh/.cache/ms-playwright
                 rm -rf /home/jenkinsssh/.cache/puppeteer

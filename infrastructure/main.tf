@@ -20,16 +20,17 @@ data "azurerm_user_assigned_identity" "jenkins" {
 }
 
 module "key-vault" {
-  source                  = "git@github.com:hmcts/cnp-module-key-vault?ref=master"
-  product                 = var.product
-  env                     = var.env
-  tenant_id               = var.tenant_id
-  object_id               = var.jenkins_AAD_objectId
-  jenkins_object_id       = data.azurerm_user_assigned_identity.jenkins.principal_id
-  resource_group_name     = azurerm_resource_group.rg.name
-  product_group_name      = "dcd_ccd"
-  common_tags             = var.common_tags
-  create_managed_identity = true
+  source                       = "git@github.com:hmcts/cnp-module-key-vault?ref=DTSPO-31965/remove-jenkins-ptl-access"
+  product                      = var.product
+  env                          = var.env
+  tenant_id                    = var.tenant_id
+  object_id                    = var.jenkins_AAD_objectId
+  jenkins_object_id            = data.azurerm_user_assigned_identity.jenkins.principal_id
+  resource_group_name          = azurerm_resource_group.rg.name
+  product_group_name           = "dcd_ccd"
+  common_tags                  = var.common_tags
+  create_managed_identity      = true
+  grant_preview_jenkins_access = var.env == "aat"
 }
 
 resource "azurerm_key_vault_secret" "app-insights-connection-string" {
@@ -49,17 +50,6 @@ module "application_insights" {
 
   common_tags = var.common_tags
 }
-
-moved {
-  from = azurerm_application_insights.appinsights
-  to   = module.application_insights.azurerm_application_insights.this
-}
-
-//data "azurerm_subnet" "core_infra_redis_subnet" {
-//  name                 = "core-infra-subnet-1-${var.env}"
-//  virtual_network_name = "core-infra-vnet-${var.env}"
-//  resource_group_name = "core-infra-${var.env}"
-//}
 
 data "azurerm_key_vault" "key_vault" {
   name                = "${var.product}-${var.env}"    # update these values if required
@@ -98,10 +88,6 @@ module "redis6-cache" {
   capacity                      = var.capacity
 
 }
-
-////////////////////////////////
-// Populate Vault with redis info
-////////////////////////////////
 
 resource "azurerm_key_vault_secret" "redis_access_key" {
   name         = "redis-access-key"
