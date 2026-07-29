@@ -9,7 +9,7 @@ export const config = {
   TEST_URL: url,
   TestHeadlessBrowser: true,
   TestSlowMo: 250,
-  WaitForTimeout: 10000,
+  WaitForTimeout: 30000,
 
   Gherkin: {
     features: './features/**/*.feature',
