@@ -6,6 +6,10 @@
       "ABA5": {
         "link-url": "https://www.apply-to-court-about-child-arrangements-c100.service.gov.uk/dashboard",
         "link-text": "Dychwelyd i’r achos trefniadau plant/gwaharddeb teulu"
+      },
+      "AAA3": {
+        "link-url": "https://pcs.platform.hmcts.net",
+        "link-text": "Dychwelyd i Hawliad Morgais a Hawliad Perchnogaeth Landlord"
       }
     }
   }
