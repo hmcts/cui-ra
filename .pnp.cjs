@@ -97,7 +97,7 @@ const RAW_RUNTIME_STATE =
           ["jest-util", "npm:30.4.1"],\
           ["jquery", "npm:4.0.0"],\
           ["json-schema", "npm:0.4.0"],\
-          ["lint-staged", "npm:17.2.0"],\
+          ["lint-staged", "npm:17.3.0"],\
           ["lodash", "npm:4.18.1"],\
           ["mini-css-extract-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.10.2"],\
           ["mocha", "npm:11.7.6"],\
@@ -10418,7 +10418,7 @@ const RAW_RUNTIME_STATE =
           ["jest-util", "npm:30.4.1"],\
           ["jquery", "npm:4.0.0"],\
           ["json-schema", "npm:0.4.0"],\
-          ["lint-staged", "npm:17.2.0"],\
+          ["lint-staged", "npm:17.3.0"],\
           ["lodash", "npm:4.18.1"],\
           ["mini-css-extract-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.10.2"],\
           ["mocha", "npm:11.7.6"],\
@@ -15636,10 +15636,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lint-staged", [\
-      ["npm:17.2.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/lint-staged-npm-17.2.0-656223f14d-10c0.zip/node_modules/lint-staged/",\
+      ["npm:17.3.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/lint-staged-npm-17.3.0-8aaa067ba2-10c0.zip/node_modules/lint-staged/",\
         "packageDependencies": [\
-          ["lint-staged", "npm:17.2.0"],\
+          ["lint-staged", "npm:17.3.0"],\
           ["picomatch", "npm:4.0.5"],\
           ["string-argv", "npm:0.3.2"],\
           ["tinyexec", "npm:1.2.4"],\
