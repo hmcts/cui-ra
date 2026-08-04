@@ -6,6 +6,10 @@
       "ABA5": {
         "link-url": "https://www.apply-to-court-about-child-arrangements-c100.service.gov.uk/dashboard",
         "link-text": "Return to child arrangements/family injunction case"
+      },
+      "AAA3": {
+        "link-url": "https://pcs.platform.hmcts.net",
+        "link-text": "Return to Mortgage and Landlord Possession Claim"
       }
     }
   }
