@@ -100,7 +100,7 @@ const RAW_RUNTIME_STATE =
           ["lint-staged", "npm:17.3.0"],\
           ["lodash", "npm:4.18.1"],\
           ["mini-css-extract-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.10.2"],\
-          ["mocha", "npm:11.7.6"],\
+          ["mocha", "npm:11.8.0"],\
           ["mocha-multi", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.1.7"],\
           ["mochawesome", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.4"],\
           ["nock", "npm:14.0.17"],\
@@ -10421,7 +10421,7 @@ const RAW_RUNTIME_STATE =
           ["lint-staged", "npm:17.3.0"],\
           ["lodash", "npm:4.18.1"],\
           ["mini-css-extract-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.10.2"],\
-          ["mocha", "npm:11.7.6"],\
+          ["mocha", "npm:11.8.0"],\
           ["mocha-multi", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.1.7"],\
           ["mochawesome", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.4"],\
           ["nock", "npm:14.0.17"],\
@@ -16772,8 +16772,8 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:11.7.6", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/mocha-npm-11.7.6-4a91363d4e-10c0.zip/node_modules/mocha/",\
+      ["npm:11.8.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/mocha-npm-11.8.0-8763e403e8-10c0.zip/node_modules/mocha/",\
         "packageDependencies": [\
           ["browser-stdout", "npm:1.3.1"],\
           ["chokidar", "npm:4.0.3"],\
@@ -16787,7 +16787,7 @@ const RAW_RUNTIME_STATE =
           ["js-yaml", "npm:4.3.0"],\
           ["log-symbols", "npm:4.1.0"],\
           ["minimatch", "npm:9.0.9"],\
-          ["mocha", "npm:11.7.6"],\
+          ["mocha", "npm:11.8.0"],\
           ["ms", "npm:2.1.3"],\
           ["picocolors", "npm:1.1.1"],\
           ["serialize-javascript", "npm:6.0.2"],\
@@ -16817,7 +16817,7 @@ const RAW_RUNTIME_STATE =
           ["is-string", "npm:1.1.1"],\
           ["lodash.once", "npm:4.1.1"],\
           ["mkdirp", "npm:1.0.4"],\
-          ["mocha", "npm:11.7.6"],\
+          ["mocha", "npm:11.8.0"],\
           ["mocha-multi", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.1.7"],\
           ["object-assign", "npm:4.1.1"]\
         ],\
@@ -16847,7 +16847,7 @@ const RAW_RUNTIME_STATE =
           ["lodash.isfunction", "npm:3.0.9"],\
           ["lodash.isobject", "npm:3.0.2"],\
           ["lodash.isstring", "npm:4.0.1"],\
-          ["mocha", "npm:11.7.6"],\
+          ["mocha", "npm:11.8.0"],\
           ["mochawesome", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.4"],\
           ["mochawesome-report-generator", "npm:6.3.2"],\
           ["strip-ansi", "npm:6.0.1"],\
