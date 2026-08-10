@@ -13,7 +13,9 @@
       },
       "BHA1": {
         "link-url": "https://www.claim-employment-tribunals.service.gov.uk/",
-        "link-text": "Make a claim to an employment tribunal"
+        "link-text": "Make a claim to an employment tribunal",
+        "link-url-respondent": "https://www.gov.uk/being-taken-to-employment-tribunal-by-employee",
+        "link-text-respondent": "Respond to an Employment Tribunal claim"
       }
     }
   }
