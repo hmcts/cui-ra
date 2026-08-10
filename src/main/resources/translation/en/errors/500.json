@@ -10,6 +10,10 @@
       "AAA3": {
         "link-url": "https://pcs.platform.hmcts.net",
         "link-text": "Return to Mortgage and Landlord Possession Claim"
+      },
+      "BHA1": {
+        "link-url": "https://www.claim-employment-tribunals.service.gov.uk/",
+        "link-text": "Make a claim to an employment tribunal"
       }
     }
   }

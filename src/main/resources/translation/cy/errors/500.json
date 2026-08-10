@@ -10,6 +10,10 @@
       "AAA3": {
         "link-url": "https://pcs.platform.hmcts.net",
         "link-text": "Dychwelyd i’r Hawliad Morgais a Meddiant Landlord"
+      },
+      "BHA1": {
+        "link-url": "https://www.claim-employment-tribunals.service.gov.uk/",
+        "link-text": "Gwneud hawliad i dribiwnlys cyflogaeth"
       }
     }
   }
