@@ -141,7 +141,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@azure-rest/core-client", [\
       ["npm:2.5.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-rest-core-client-npm-2.5.1-33ab19c97e-10c0.zip/node_modules/@azure-rest/core-client/",\
+        "packageLocation": "../../.yarn/berry/cache/@azure-rest-core-client-npm-2.5.1-33ab19c97e-10c0.zip/node_modules/@azure-rest/core-client/",\
         "packageDependencies": [\
           ["@azure-rest/core-client", "npm:2.5.1"],\
           ["@azure/abort-controller", "npm:2.1.2"],\
@@ -156,7 +156,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@azure/abort-controller", [\
       ["npm:2.1.2", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-abort-controller-npm-2.1.2-a36d73ebb9-10c0.zip/node_modules/@azure/abort-controller/",\
+        "packageLocation": "../../.yarn/berry/cache/@azure-abort-controller-npm-2.1.2-a36d73ebb9-10c0.zip/node_modules/@azure/abort-controller/",\
         "packageDependencies": [\
           ["@azure/abort-controller", "npm:2.1.2"],\
           ["tslib", "npm:2.8.1"]\
