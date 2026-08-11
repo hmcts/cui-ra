@@ -67,7 +67,7 @@ export class DemoController {
           const NewFlag = new NewFlagsManager();
           NewFlag.set(this.new);
 
-          this.setSessionData(req, host, NewFlag, 'XXXX', false);
+          this.setSessionData(req, host, NewFlag, 'BHA1', false);
 
           return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
         }
@@ -75,7 +75,7 @@ export class DemoController {
           const NewFlag = new NewFlagsManager();
           NewFlag.set(this.new_welsh);
 
-          this.setSessionData(req, host, NewFlag, 'XXXX', true);
+          this.setSessionData(req, host, NewFlag, 'BHA1', true);
 
           return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
         }
