@@ -13,7 +13,9 @@
       },
       "BHA1": {
         "link-url": "https://www.claim-employment-tribunals.service.gov.uk/",
-        "link-text": "Gwneud hawliad i dribiwnlys cyflogaeth"
+        "link-text": "Gwneud hawliad i dribiwnlys cyflogaeth",
+        "link-url-respondent": "https://www.gov.uk/being-taken-to-employment-tribunal-by-employee",
+        "link-text-respondent": "Ymateb i hawliad Tribiwnlys Cyflogaeth"
       }
     }
   }
