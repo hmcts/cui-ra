@@ -1,0 +1,60 @@
+{
+  "BHA1": {
+    "RA0001": { 
+
+        "blurb": "Some people need support to access information and use our services. We call this a reasonable adjustment. Some reasonable adjustments need to be agreed by the judge or HMCTS. You can discuss with the tribunal if your needs change.", 
+
+        "command": "Select all that apply to you - you can give more details later"
+        } 
+    },
+    "RA0002": { 
+
+        "blurb": "Think about all communications with the tribunal, including what you might need at a hearing. Consider remote and in-person hearings in case your preferred hearing type is not possible."
+    },
+    "RA0005": {
+
+        "blurb": "Think about what you would need if a hearing was in person, by phone or video."
+    },
+    "RA0006": {
+
+        "blurb": "Think about what you would need if a hearing was in person, by phone or video."
+    },
+    "RA0008": {
+
+        "blurb": "Think about all communications with the tribunal, as well as what you might need at a hearing. Consider remote and in-person hearings in case your preferred hearing type is not possible."
+    },
+    "RA0009": {
+
+        "hint": "You can tell us which type of hearing enhancement in the next step"
+    },
+    "RA0011": {
+
+        "hint": "Information written in simple language with pictures"
+    },
+    "RA0026": {
+        "control": "Tell us which support worker or carer you want to bring and why"
+,       "error": {
+          "empty": "Tell us which support worker or carer you want to bring and why"
+        }
+    },
+    "RA0027": {
+        "control": "Tell us which friend or family member you want to bring and why"
+,       "error": {
+          "empty": "Tell us which friend or family member you want to bring and why"
+        }
+    },
+    "RA0029": {
+        "control": "Tell us what type of therapy animal you want to bring and why"
+,       "error": {
+          "empty": "Tell us what type of therapy animal you want to bring and why"
+        }
+    },
+    "RA0038": {
+
+        "hint": "A person to help you if you have communication needs by providing professional support to participate in a hearing"
+    },
+    "RA0042": {
+
+        "hint": "You can tell us which type of interpreter in the next step"
+    }
+}
