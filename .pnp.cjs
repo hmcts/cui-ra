@@ -11588,15 +11588,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["eslint", [\
-      ["npm:10.8.0", {\
-        "packageLocation": "../../.yarn/berry/cache/eslint-npm-10.8.0-08c4ab8f6d-10c0.zip/node_modules/eslint/",\
+      ["npm:10.8.1", {\
+        "packageLocation": "../../.yarn/berry/cache/eslint-npm-10.8.1-4201629ecb-10c0.zip/node_modules/eslint/",\
         "packageDependencies": [\
           ["eslint", "npm:10.8.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.8.0", {\
-        "packageLocation": "./.yarn/__virtual__/eslint-virtual-a7ae99e61d/3/.yarn/berry/cache/eslint-npm-10.8.0-08c4ab8f6d-10c0.zip/node_modules/eslint/",\
+      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:10.8.1", {\
+        "packageLocation": "./.yarn/__virtual__/eslint-virtual-22b4228283/3/.yarn/berry/cache/eslint-npm-10.8.1-4201629ecb-10c0.zip/node_modules/eslint/",\
         "packageDependencies": [\
           ["@eslint-community/eslint-utils", "virtual:714e6d5e67e6bc49629861d3d8734b0167a301879e13a3568a9b27e803c2c3fd815470ec285c4704a47fb8802dfa72ca39e70085c17d9d9d1199dcb0d2c588f5#npm:4.9.0"],\
           ["@eslint-community/regexpp", "npm:4.12.2"],\
