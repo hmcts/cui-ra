@@ -7,7 +7,7 @@ Feature: New Journey
     When I click the button with ID '#demonew'
 
     Then I am navigated to 'Do you have a physical, mental or learning disability or health condition that means you need support during your case?' page
-    Then I find 'Contact us for help' text
+    Then I find 'Contact details' text
 
     When I select the following checkboxes
         """
@@ -22,7 +22,7 @@ Feature: New Journey
     When I click on the button labeled 'Continue'
 
     Then I am navigated to 'I need adjustments to get to, into and around our buildings' page
-    Then I find 'Contact us for help' text
+    Then I find 'Contact details' text
 
     When I select the following checkboxes
         """
@@ -40,7 +40,7 @@ Feature: New Journey
     When I click on the button labeled 'Continue'
 
     Then I am navigated to 'I need documents in an alternative format' page
-    Then I find 'Contact us for help' text
+    Then I find 'Contact details' text
 
     When I select the following checkboxes
         """
@@ -59,7 +59,7 @@ Feature: New Journey
     When I click on the button labeled 'Continue'
 
     Then I am navigated to 'I need help communicating and understanding' page
-    Then I find 'Contact us for help' text
+    Then I find 'Contact details' text
 
     When I select the following checkboxes
         """
@@ -75,7 +75,7 @@ Feature: New Journey
     When I click on the button labeled 'Continue'
 
     Then I am navigated to 'Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)' page
-    Then I find 'Contact us for help' text
+    Then I find 'Contact details' text
 
     When I select the following checkboxes
         """
@@ -87,7 +87,7 @@ Feature: New Journey
     When I click on the button labeled 'Continue'
 
     Then I am navigated to 'Which Sign Language Interpreter do you need to request?' page
-    Then I find 'Contact us for help' text
+    Then I find 'Contact details' text
 
     When I click the input with ID '#custom-accessible-autocomplete'
     When I fill the textbox with ID '#custom-accessible-autocomplete' with value 'British Sign Language (BSL)'
@@ -96,7 +96,7 @@ Feature: New Journey
     When I click on the button labeled 'Continue'
 
     Then I am navigated to 'I need something to feel comfortable during my hearing' page
-    Then I find 'Contact us for help' text
+    Then I find 'Contact details' text
 
     When I select the following checkboxes
         """
@@ -111,7 +111,7 @@ Feature: New Journey
     When I click on the button labeled 'Continue'
 
     Then I am navigated to 'I need to bring support with me to a hearing' page
-    Then I find 'Contact us for help' text
+    Then I find 'Contact details' text
 
     When I select the following checkboxes
         """
@@ -128,7 +128,7 @@ Feature: New Journey
     When I click on the button labeled 'Continue'
 
     Then I am navigated to 'I need to request a certain type of hearing' page
-    Then I find 'Contact us for help' text
+    Then I find 'Contact details' text
 
     When I select the following checkboxes
         """
@@ -140,7 +140,7 @@ Feature: New Journey
     When I click on the button labeled 'Continue'
 
     Then I am navigated to "Review the support you've requested" page
-    Then I find 'Contact us for help' text
+    Then I find 'Contact details' text
 
     When I click the button with ID "#submit-review"
 
