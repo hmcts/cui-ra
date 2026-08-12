@@ -1,7 +1,7 @@
 {
   "BHA1": {
     "contact": {
-      "content": "<h2 class='govuk-heading-m'>Manylion cyswllt</h2><p class='govuk-body'>Ffoniwch un o'n canolfannau cyswllt cwsmeriaid tribiwnlys cyflogaeth. Ni allant roi cyngor cyfreithiol i chi.</p><p class='govuk-body'>Dydd Llun i ddydd Gwener, 9am i 5pm</p><p class='govuk-body'>Ffôn: 0300 323 0196</p><p class='govuk-body'>Ffôn: 0300 303 5176 (Cymraeg)</p><p class='govuk-body'>Ffôn: 0300 790 6234 (Yr Alban)</p><p class='govuk-body'><a href='https://www.gov.uk/call-charges'>Rhagor o wybodaeth am gost galwadau (yn agor mewn tab newydd)</a></p>"
+      "content": "<h2 class='govuk-heading-m'>Manylion cyswllt</h2><p class='govuk-body'>Ffoniwch un o'n canolfannau cyswllt cwsmeriaid tribiwnlys cyflogaeth. Ni allant roi cyngor cyfreithiol i chi.</p><p class='govuk-body'>Dydd Llun i ddydd Gwener, 9am i 5pm</p><p class='govuk-body'>Ffôn: 0300 323 0196</p><p class='govuk-body'>Ffôn: 0300 303 5176 (Cymraeg)</p><p class='govuk-body'>Ffôn: 0300 790 6234 (Yr Alban)</p><p class='govuk-body'><a href='https://www.gov.uk/call-charges' target='_blank' class='govuk-link'>Rhagor o wybodaeth am gost galwadau (yn agor mewn tab newydd)</a></p>"
     }
   }
 }
