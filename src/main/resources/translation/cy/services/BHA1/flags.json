@@ -1,51 +1,51 @@
 {
   "BHA1": {
     "RA0001": {
-      "blurb": "Some people need support to access information and use our services. We call this a reasonable adjustment. Some reasonable adjustments need to be agreed by the judge or HMCTS. You can discuss with the tribunal if your needs change.",
+      "blurb": "Mae rhai pobl angen cymorth i gael mynediad at wybodaeth ac i ddefnyddio ein gwasanaethau. Gelwir hyn yn addasiad rhesymol. Rhaid i rai addasiadau rhesymol gael eu cytuno arnynt gan farnwr neu GLlTEF. Gallwch drafod gyda’r tribiwnlys os bydd eich anghenion yn newid.",
 
-      "command": "Select all that apply to you - you can give more details later"
+      "command": "Dewiswch bob un sy'n berthnasol i chi - gallwch roi mwy o fanylion nes ymlaen."
     }
   },
   "RA0002": {
-    "blurb": "Think about all communications with the tribunal, including what you might need at a hearing. Consider remote and in-person hearings in case your preferred hearing type is not possible."
+    "blurb": "Meddyliwch am yr holl ohebiaeth â’r tribiwnlys, gan gynnwys yr hyn y gallwch fod ei angen mewn gwrandawiad. Ystyriwch wrandawiadau o bell a rhai wyneb yn wyneb, rhag ofn bod y math o wrandawiad o’ch dewis ddim yn bosibl."
   },
   "RA0005": {
-    "blurb": "Think about what you would need if a hearing was in person, by phone or video."
+    "blurb": "Meddyliwch am yr hyn y byddwch ei angen os bydd eich gwrandawiad yn un wyneb yn wyneb, trwy fideo neu dros y ffôn."
   },
   "RA0006": {
-    "blurb": "Think about what you would need if a hearing was in person, by phone or video."
+    "blurb": "Meddyliwch am yr hyn y byddwch ei angen os bydd eich gwrandawiad yn un wyneb yn wyneb, trwy fideo neu dros y ffôn."
   },
   "RA0008": {
-    "blurb": "Think about all communications with the tribunal, as well as what you might need at a hearing. Consider remote and in-person hearings in case your preferred hearing type is not possible."
+    "blurb": "Meddyliwch am yr holl ohebiaeth â’r tribiwnlys, ynghyd â’r hyn y gallwch fod ei angen mewn gwrandawiad. Ystyriwch wrandawiadau o bell a rhai wyneb yn wyneb, rhag ofn bod y math o wrandawiad o’ch dewis ddim yn bosibl."
   },
   "RA0009": {
-    "hint": "You can tell us which type of hearing enhancement in the next step"
+    "hint": "Gallwch ddweud wrthym pa fath o addasiad i'r gwrandawiad yr hoffech ei gael yn y cam nesaf"
   },
   "RA0011": {
-    "hint": "Information written in simple language with pictures"
+    "hint": "Gwybodaeth wedi'i hysgrifennu mewn iaith syml â lluniau"
   },
   "RA0026": {
-    "control": "Tell us which support worker or carer you want to bring and why",
+    "control": "Dywedwch wrthym pa weithiwr cymorth neu ofalwr yr hoffech ddod gyda chi a pham",
     "error": {
-      "empty": "Tell us which support worker or carer you want to bring and why"
+      "empty": "Dywedwch wrthym pa weithiwr cymorth neu ofalwr yr hoffech ddod gyda chi a pham"
     }
   },
   "RA0027": {
-    "control": "Tell us which friend or family member you want to bring and why",
+    "control": "Dywedwch wrthym pa ffrind neu aelod o'r teulu yr hoffech ddod gyda chi a pham",
     "error": {
-      "empty": "Tell us which friend or family member you want to bring and why"
+      "empty": "Dywedwch wrthym pa ffrind neu aelod o'r teulu yr hoffech ddod gyda chi a pham"
     }
   },
   "RA0029": {
-    "control": "Tell us what type of therapy animal you want to bring and why",
+    "control": "Dywedwch wrthym pa fath o anifail therapi yr hoffech ddod gyda chi a pham",
     "error": {
-      "empty": "Tell us what type of therapy animal you want to bring and why"
+      "empty": "Dywedwch wrthym pa fath o anifail therapi yr hoffech ddod gyda chi a pham"
     }
   },
   "RA0038": {
-    "hint": "A person to help you if you have communication needs by providing professional support to participate in a hearing"
+    "hint": "Rhywun i’ch helpu os oes gennych anghenion cyfathrebu drwy ddarparu cymorth proffesiynol i gymryd rhan mewn gwrandawiad"
   },
   "RA0042": {
-    "hint": "You can tell us which type of interpreter in the next step"
+    "hint": "Gallwch ddweud wrthym pa fath o ddehonglydd neu gyfieithydd yn y cam nesaf"
   }
 }
