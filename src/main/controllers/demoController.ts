@@ -130,6 +130,14 @@ export class DemoController {
 
           return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
         }
+        case 'AAA3': {
+          const NewFlag = new NewFlagsManager();
+          NewFlag.set(this.new);
+
+          this.setSessionData(req, host, NewFlag, 'AAA3', false);
+
+          return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
+        }
       }
       return res.render('demo');
     } catch (e) {
