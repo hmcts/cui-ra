@@ -1713,7 +1713,7 @@
     "_parentId": "PF0001-RA0001"
   },
   {
-    "_flagComment": false,
+    "_flagComment": true,
     "_isCategoryPage": false,
     "_enabled": false,
     "_other": false,
@@ -1745,7 +1745,7 @@
     "_parentId": "PF0001-RA0001-RA0003"
   },
   {
-    "_flagComment": false,
+    "_flagComment": true,
     "_isCategoryPage": false,
     "_enabled": false,
     "_other": false,
