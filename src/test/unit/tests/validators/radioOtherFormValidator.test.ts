@@ -24,6 +24,8 @@ describe('FormValidator', () => {
       const keys = Object.keys(validationErrors);
 
       expect(keys).not.toHaveLength(0);
+      expect(validationErrors).toHaveProperty('other-text-area');
+      expect(validationErrors['other-text-area']).toContain('.OT0001.error.');
     });
 
     test('should pass on sign language interpreter radio other validation', async () => {

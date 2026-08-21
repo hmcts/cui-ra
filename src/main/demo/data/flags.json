@@ -776,7 +776,7 @@
                   "Path": ["Party", "Reasonable adjustment"]
                 },
                 {
-                  "name": "I need to request a certain type of hearing",
+                  "name": "I need to ask for a certain type of hearing",
                   "hearingRelevant": false,
                   "flagComment": false,
                   "defaultStatus": "Active",
@@ -794,7 +794,7 @@
                       "nativeFlagCode": "RA0034",
                       "childFlags": [],
                       "isParent": false,
-                      "Path": ["Party", "Reasonable adjustment", "I need to request a certain type of hearing"]
+                      "Path": ["Party", "Reasonable adjustment", "I need to ask for a certain type of hearing"]
                     },
                     {
                       "name": "Video hearing",
@@ -806,7 +806,7 @@
                       "nativeFlagCode": "RA0035",
                       "childFlags": [],
                       "isParent": false,
-                      "Path": ["Party", "Reasonable adjustment", "I need to request a certain type of hearing"]
+                      "Path": ["Party", "Reasonable adjustment", "I need to ask for a certain type of hearing"]
                     },
                     {
                       "name": "Phone hearing",
@@ -818,7 +818,7 @@
                       "nativeFlagCode": "RA0036",
                       "childFlags": [],
                       "isParent": false,
-                      "Path": ["Party", "Reasonable adjustment", "I need to request a certain type of hearing"]
+                      "Path": ["Party", "Reasonable adjustment", "I need to ask for a certain type of hearing"]
                     },
                     {
                       "name": "Other",
@@ -830,7 +830,7 @@
                       "nativeFlagCode": "OT0001",
                       "childFlags": [],
                       "isParent": false,
-                      "Path": ["Party", "Reasonable adjustment", "I need to request a certain type of hearing"]
+                      "Path": ["Party", "Reasonable adjustment", "I need to ask for a certain type of hearing"]
                     }
                   ],
                   "isParent": true,

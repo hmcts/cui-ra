@@ -2214,7 +2214,7 @@
     ],
     "id": "PF0001-RA0001-RA0007",
     "value": {
-      "name": "I need to request a certain type of hearing",
+      "name": "I need to ask for a certain type of hearing",
       "name_cy": "Rwyf angen gofyn am fath penodol o wrandawiad",
       "dateTimeCreated": "12-07-2023 13:28:21",
       "path": [
@@ -2254,7 +2254,7 @@
           "name": "Reasonable adjustment"
         },
         {
-          "name": "I need to request a certain type of hearing"
+          "name": "I need to ask for a certain type of hearing"
         }
       ],
       "hearingRelevant": "Yes",
@@ -2286,7 +2286,7 @@
           "name": "Reasonable adjustment"
         },
         {
-          "name": "I need to request a certain type of hearing"
+          "name": "I need to ask for a certain type of hearing"
         }
       ],
       "hearingRelevant": "Yes",
@@ -2318,7 +2318,7 @@
           "name": "Reasonable adjustment"
         },
         {
-          "name": "I need to request a certain type of hearing"
+          "name": "I need to ask for a certain type of hearing"
         }
       ],
       "hearingRelevant": "Yes",
@@ -2350,7 +2350,7 @@
           "name": "Reasonable adjustment"
         },
         {
-          "name": "I need to request a certain type of hearing"
+          "name": "I need to ask for a certain type of hearing"
         }
       ],
       "hearingRelevant": "Yes",
