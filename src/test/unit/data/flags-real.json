@@ -665,7 +665,7 @@
                   "nativeFlagCode": "RA0005",
                   "childFlags": [
                     {
-                      "name": "Support worker or carer with me",
+                      "name": "Support worker or carer",
                       "hearingRelevant": true,
                       "flagComment": false,
                       "defaultStatus": "Requested",
