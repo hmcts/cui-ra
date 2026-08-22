@@ -90,9 +90,9 @@
   "devDependencies": {
     "@azure/identity": "^4.13.1",
     "@azure/keyvault-secrets": "^4.8.0",
-    "@babel/core": "^7.24.4",
-    "@babel/eslint-parser": "^7.24.1",
-    "@babel/preset-env": "^7.24.4",
+    "@babel/core": "^8.0.0",
+    "@babel/eslint-parser": "^8.0.0",
+    "@babel/preset-env": "^8.0.0",
     "@codeceptjs/allure-legacy": "^1.0.2",
     "@codeceptjs/configure": "^1.0.1",
     "@eslint/js": "^10.0.0",
