@@ -14,14 +14,54 @@
     "RA0006": {
       "blurb": "Think about what you would need if a hearing was in person, by phone or video."
     },
+    "RA0007": {
+      "blurb": "The tribunal will consider your request for a hearing type and tell you if they can support it.  The tribunal may need to decide the hearing type. We will send you instructions on how to attend before the hearing."
+    },
     "RA0008": {
       "blurb": "Think about all communications with the tribunal, as well as what you might need at a hearing. Consider remote and in-person hearings in case your preferred hearing type is not possible."
     },
     "RA0009": {
+      "blurb": "Think about all communications with the tribunal, as well as what you might need at a hearing. Consider remote and in-person hearings, in case your preferred hearing type is not possible.",
       "hint": "You can tell us which type of hearing enhancement in the next step"
     },
     "RA0011": {
       "hint": "Information written in simple language with pictures"
+    },
+    "RA0017": {
+      "control": "Describe what guidance you need to complete forms",
+      "error": {
+        "empty": "Describe what guidance you need to complete forms"
+      }
+    },
+    "RA0018": {
+      "control": "Describe what support you need with filling forms",
+      "error": {
+        "empty": "Describe what support you need with filling forms"
+      }
+    },
+    "RA0020": {
+      "control": "Tell us why you need use of a venue wheelchair",
+      "error": {
+        "empty": "Tell us why you need use of a venue wheelchair"
+      }
+    },
+    "RA0021": {
+      "control": "Tell us why you need a parking space close to the venue",
+      "error": {
+        "empty": "Tell us why you need a parking space close to the venue"
+      }
+    },
+    "RA0023": {
+      "control": "Tell us what help you would need to use the lift",
+      "error": {
+        "empty": "Tell us what help you would need to use the lift"
+      }
+    },
+    "RA0025": {
+      "control": "Describe what help you would need being guided in the building",
+      "error": {
+        "empty": "Describe what help you would need being guided in the building"
+      }
     },
     "RA0026": {
       "control": "Tell us which support worker or carer you want to bring and why",
@@ -41,8 +81,53 @@
         "empty": "Tell us what type of therapy animal you want to bring and why"
       }
     },
+    "RA0033": {
+      "control": "Tell us why you would need a private waiting area",
+      "error": {
+        "empty": "Tell us why you would need a private waiting area"
+      }
+    },
+    "RA0034": {
+      "hint": "Where you attend the tribunal",
+      "control": "Tell us why you would need an in-person hearing",
+      "error": {
+        "empty": "Tell us why you would need an in-person hearing"
+      }
+    },
+    "RA0035": {
+      "hint": "Where you can attend by video from a place suitable to you",
+      "control": "Tell us why you would need a video hearing",
+      "error": {
+        "empty": "Tell us why you would need a video hearing"
+      }
+    },
+    "RA0036": {
+      "hint": "Where you can attend by phone from a place suitable to you",
+      "control": "Tell us why you would need a phone hearing",
+      "error": {
+        "empty": "Tell us why you would need a phone hearing"
+      }
+    },
+    "RA0037": {
+      "control": "Tell us why you would need extra time to think and explain yourself",
+      "error": {
+        "empty": "Tell us why you would need extra time to think and explain yourself"
+      }
+    },
     "RA0038": {
       "hint": "A person to help you if you have communication needs by providing professional support to participate in a hearing"
+    },
+    "RA0040": {
+      "control": "Tell us why you would need to be close to who is speaking",
+      "error": {
+        "empty": "Tell us why you would need to be close to who is speaking"
+      }
+    },
+    "RA0046": {
+      "control": "Tell us why you would need a visit to the venue before the hearing",
+      "error": {
+        "empty": "Tell us why you would need a visit to the venue before the hearing"
+      }
     },
     "RA0042": {
       "hint": "You can tell us which type of interpreter in the next step"
