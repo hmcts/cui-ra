@@ -2268,11 +2268,7 @@
     "_isParent": true,
     "_isMaster": false,
     "_errors": [],
-    "_childIds": [
-      "PF0001-RA0001-RA0007-RA0034",
-      "PF0001-RA0001-RA0007-RA0036",
-      "PF0001-RA0001-RA0007-RA0035"
-    ],
+    "_childIds": ["PF0001-RA0001-RA0007-RA0034", "PF0001-RA0001-RA0007-RA0036", "PF0001-RA0001-RA0007-RA0035"],
     "id": "PF0001-RA0001-RA0007",
     "value": {
       "name": "I need to ask for a certain type of hearing",

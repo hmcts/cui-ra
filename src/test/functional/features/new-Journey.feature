@@ -36,6 +36,7 @@ Feature: New Journey
         """
 
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0004-RA0021' with value 'Parking Space'
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0004-RA0024' with value 'Different type of chair'
 
     When I click on the button labeled 'Continue'
 
