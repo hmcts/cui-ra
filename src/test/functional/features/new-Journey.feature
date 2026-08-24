@@ -36,6 +36,9 @@ Feature: New Journey
         """
 
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0004-RA0021' with value 'Parking Space'
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0004-RA0025' with value 'Guiding in the building'
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0004-RA0023' with value 'Help using lift'
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0004-RA0020' with value 'Use of wheel chair'
 
     When I click on the button labeled 'Continue'
 
