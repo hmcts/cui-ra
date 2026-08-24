@@ -99,6 +99,20 @@ Feature: New Journey
 
     When I click on the button labeled 'Continue'
 
+    Then I am navigated to 'I need help with forms' page
+    Then I find 'Contact us for help' text
+
+    When I select the following checkboxes
+        """
+        #checkbox-label-PF0001-RA0001-RA0003-RA0017
+        #checkbox-label-PF0001-RA0001-RA0003-RA0018
+        """
+
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0003-RA0017' with value 'Guidance to fill form'
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0003-RA0018' with value 'Support to fill form'
+
+    When I click on the button labeled 'Continue'
+
     Then I am navigated to 'I need something to feel comfortable during my hearing' page
     Then I find 'Contact us for help' text
 
