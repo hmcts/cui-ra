@@ -1,0 +1,51 @@
+{
+  "BHA1": {
+    "RA0001": {
+      "blurb": "Mae rhai pobl angen cymorth i gael mynediad at wybodaeth ac i ddefnyddio ein gwasanaethau. Gelwir hyn yn addasiad rhesymol. Rhaid i rai addasiadau rhesymol gael eu cytuno arnynt gan farnwr neu GLlTEF. Gallwch drafod gyda’r tribiwnlys os bydd eich anghenion yn newid.",
+
+      "command": "Dewiswch bob un sy'n berthnasol i chi - gallwch roi mwy o fanylion nes ymlaen"
+    },
+    "RA0002": {
+      "blurb": "Meddyliwch am yr holl ohebiaeth â’r tribiwnlys, gan gynnwys yr hyn y gallwch fod ei angen mewn gwrandawiad. Ystyriwch wrandawiadau o bell a rhai wyneb yn wyneb, rhag ofn bod y math o wrandawiad o’ch dewis ddim yn bosibl."
+    },
+    "RA0005": {
+      "blurb": "Meddyliwch am yr hyn y byddwch ei angen os bydd eich gwrandawiad yn un wyneb yn wyneb, trwy fideo neu dros y ffôn."
+    },
+    "RA0006": {
+      "blurb": "Meddyliwch am yr hyn y byddwch ei angen os bydd eich gwrandawiad yn un wyneb yn wyneb, trwy fideo neu dros y ffôn."
+    },
+    "RA0008": {
+      "blurb": "Meddyliwch am yr holl ohebiaeth â’r tribiwnlys, ynghyd â’r hyn y gallwch fod ei angen mewn gwrandawiad. Ystyriwch wrandawiadau o bell a rhai wyneb yn wyneb, rhag ofn bod y math o wrandawiad o’ch dewis ddim yn bosibl."
+    },
+    "RA0009": {
+      "hint": "Gallwch ddweud wrthym pa fath o addasiad i'r gwrandawiad yr hoffech ei gael yn y cam nesaf"
+    },
+    "RA0011": {
+      "hint": "Gwybodaeth wedi'i hysgrifennu mewn iaith syml â lluniau"
+    },
+    "RA0026": {
+      "control": "Dywedwch wrthym pa weithiwr cymorth neu ofalwr yr hoffech ddod gyda chi a pham",
+      "error": {
+        "empty": "Dywedwch wrthym pa weithiwr cymorth neu ofalwr yr hoffech ddod gyda chi a pham"
+      }
+    },
+    "RA0027": {
+      "control": "Dywedwch wrthym pa ffrind neu aelod o'r teulu yr hoffech ddod gyda chi a pham",
+      "error": {
+        "empty": "Dywedwch wrthym pa ffrind neu aelod o'r teulu yr hoffech ddod gyda chi a pham"
+      }
+    },
+    "RA0029": {
+      "control": "Dywedwch wrthym pa fath o anifail therapi yr hoffech ddod gyda chi a pham",
+      "error": {
+        "empty": "Dywedwch wrthym pa fath o anifail therapi yr hoffech ddod gyda chi a pham"
+      }
+    },
+    "RA0038": {
+      "hint": "Rhywun i’ch helpu os oes gennych anghenion cyfathrebu drwy ddarparu cymorth proffesiynol i gymryd rhan mewn gwrandawiad"
+    },
+    "RA0042": {
+      "hint": "Gallwch ddweud wrthym pa fath o ddehonglydd neu gyfieithydd yn y cam nesaf"
+    }
+  }
+}
