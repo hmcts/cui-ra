@@ -79,7 +79,7 @@ Feature: New Journey
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0008-RA0037' with value 'Extra time'
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0008-RA0040' with value 'Need to be close with someone'
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0008-RA0046' with value 'Visit to court'
-    
+
     When I click on the button labeled 'Continue'
 
     Then I am navigated to 'Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)' page
@@ -129,6 +129,7 @@ Feature: New Journey
         """
 
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0006-RA0030' with value 'Describe what type of lighting you need'
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0006-RA0033' with value 'Private waiting area'
 
     When I click on the button labeled 'Continue'
 
@@ -158,6 +159,10 @@ Feature: New Journey
         #checkbox-label-PF0001-RA0001-RA0007-RA0036
         #checkbox-label-PF0001-RA0001-RA0007-RA0035
         """
+
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0007-RA0034' with value 'In person hearing'
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0007-RA0036' with value 'Phone Hearing'
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0007-RA0035' with value 'Video Hearing'
 
     When I click on the button labeled 'Continue'
 
