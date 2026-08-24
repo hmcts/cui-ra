@@ -36,10 +36,6 @@ Feature: New Journey
         """
 
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0004-RA0021' with value 'Parking Space'
-    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0004-RA0025' with value 'Guiding in the building'
-    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0004-RA0023' with value 'Help using lift'
-    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0004-RA0020' with value 'Use of wheel chair'
-    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0004-RA0024' with value 'Different type of chair'
 
     When I click on the button labeled 'Continue'
 
@@ -76,10 +72,6 @@ Feature: New Journey
         #checkbox-label-PF0001-RA0001-RA0008-RA0046
         """
 
-    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0008-RA0037' with value 'Extra time'
-    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0008-RA0040' with value 'Need to be close with someone'
-    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0008-RA0046' with value 'Visit to court'
-
     When I click on the button labeled 'Continue'
 
     Then I am navigated to 'Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)' page
@@ -103,20 +95,6 @@ Feature: New Journey
 
     When I click on the button labeled 'Continue'
 
-    Then I am navigated to 'I need help with forms' page
-    Then I find 'Contact us for help' text
-
-    When I select the following checkboxes
-        """
-        #checkbox-label-PF0001-RA0001-RA0003-RA0017
-        #checkbox-label-PF0001-RA0001-RA0003-RA0018
-        """
-
-    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0003-RA0017' with value 'Guidance to fill form'
-    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0003-RA0018' with value 'Support to fill form'
-
-    When I click on the button labeled 'Continue'
-
     Then I am navigated to 'I need something to feel comfortable during my hearing' page
     Then I find 'Contact us for help' text
 
@@ -129,7 +107,6 @@ Feature: New Journey
         """
 
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0006-RA0030' with value 'Describe what type of lighting you need'
-    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0006-RA0033' with value 'Private waiting area'
 
     When I click on the button labeled 'Continue'
 
@@ -159,10 +136,6 @@ Feature: New Journey
         #checkbox-label-PF0001-RA0001-RA0007-RA0036
         #checkbox-label-PF0001-RA0001-RA0007-RA0035
         """
-
-    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0007-RA0034' with value 'In person hearing'
-    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0007-RA0036' with value 'Phone Hearing'
-    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0007-RA0035' with value 'Video Hearing'
 
     When I click on the button labeled 'Continue'
 
