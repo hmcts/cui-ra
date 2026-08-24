@@ -7,7 +7,7 @@ const url = process.env.TEST_URL ? `${process.env.TEST_URL}/demo` : 'http://loca
 
 export const config = {
   TEST_URL: url,
-  TestHeadlessBrowser: false,
+  TestHeadlessBrowser: true,
   TestSlowMo: 250,
   WaitForTimeout: 30000,
 
