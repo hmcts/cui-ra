@@ -76,6 +76,10 @@ Feature: New Journey
         #checkbox-label-PF0001-RA0001-RA0008-RA0046
         """
 
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0008-RA0037' with value 'Extra time'
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0008-RA0040' with value 'Need to be close with someone'
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0008-RA0046' with value 'Visit to court'
+    
     When I click on the button labeled 'Continue'
 
     Then I am navigated to 'Hearing Enhancement System (Hearing/Induction Loop, Infrared Receiver)' page
