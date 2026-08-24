@@ -28,7 +28,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@azure/identity", "npm:4.13.1"],\
+          ["@azure/identity", "npm:4.13.2"],\
           ["@azure/keyvault-secrets", "npm:4.11.2"],\
           ["@babel/core", "npm:7.29.7"],\
           ["@babel/eslint-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.29.7"],\
@@ -114,7 +114,7 @@ const RAW_RUNTIME_STATE =
           ["redis", "npm:5.12.1"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["require-directory", "npm:2.1.1"],\
-          ["sass", "npm:1.102.0"],\
+          ["sass", "npm:1.103.1"],\
           ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.8"],\
           ["serve-favicon", "npm:2.5.1"],\
           ["sinon", "npm:21.1.2"],\
@@ -225,6 +225,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@azure/core-process", [\
+      ["npm:1.0.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-core-process-npm-1.0.0-166ced4765-10c0.zip/node_modules/@azure/core-process/",\
+        "packageDependencies": [\
+          ["@azure/core-process", "npm:1.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@azure/core-rest-pipeline", [\
       ["npm:1.16.3", {\
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-core-rest-pipeline-npm-1.16.3-4226fffbc7-10c0.zip/node_modules/@azure/core-rest-pipeline/",\
@@ -279,19 +288,20 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@azure/identity", [\
-      ["npm:4.13.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-identity-npm-4.13.1-28285ed826-10c0.zip/node_modules/@azure/identity/",\
+      ["npm:4.13.2", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-identity-npm-4.13.2-c400a0294d-10c0.zip/node_modules/@azure/identity/",\
         "packageDependencies": [\
           ["@azure/abort-controller", "npm:2.1.2"],\
           ["@azure/core-auth", "npm:1.10.1"],\
           ["@azure/core-client", "npm:1.10.1"],\
+          ["@azure/core-process", "npm:1.0.0"],\
           ["@azure/core-rest-pipeline", "npm:1.22.2"],\
           ["@azure/core-tracing", "npm:1.3.1"],\
           ["@azure/core-util", "npm:1.13.1"],\
-          ["@azure/identity", "npm:4.13.1"],\
+          ["@azure/identity", "npm:4.13.2"],\
           ["@azure/logger", "npm:1.3.0"],\
           ["@azure/msal-browser", "npm:5.7.0"],\
-          ["@azure/msal-node", "npm:5.1.5"],\
+          ["@azure/msal-node", "npm:5.6.0"],\
           ["open", "npm:10.2.0"],\
           ["tslib", "npm:2.8.1"]\
         ],\
@@ -357,27 +367,27 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@azure/msal-common", [\
+      ["npm:16.13.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-msal-common-npm-16.13.0-5514c573cd-10c0.zip/node_modules/@azure/msal-common/",\
+        "packageDependencies": [\
+          ["@azure/msal-common", "npm:16.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:16.5.0", {\
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-msal-common-npm-16.5.0-e39af5f2bd-10c0.zip/node_modules/@azure/msal-common/",\
         "packageDependencies": [\
           ["@azure/msal-common", "npm:16.5.0"]\
         ],\
         "linkType": "HARD"\
-      }],\
-      ["npm:16.5.2", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-msal-common-npm-16.5.2-0b62ca295f-10c0.zip/node_modules/@azure/msal-common/",\
-        "packageDependencies": [\
-          ["@azure/msal-common", "npm:16.5.2"]\
-        ],\
-        "linkType": "HARD"\
       }]\
     ]],\
     ["@azure/msal-node", [\
-      ["npm:5.1.5", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-msal-node-npm-5.1.5-9dc2d17588-10c0.zip/node_modules/@azure/msal-node/",\
+      ["npm:5.6.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-msal-node-npm-5.6.0-dd87ed4591-10c0.zip/node_modules/@azure/msal-node/",\
         "packageDependencies": [\
-          ["@azure/msal-common", "npm:16.5.2"],\
-          ["@azure/msal-node", "npm:5.1.5"],\
+          ["@azure/msal-common", "npm:16.13.0"],\
+          ["@azure/msal-node", "npm:5.6.0"],\
           ["jsonwebtoken", "npm:9.0.2"]\
         ],\
         "linkType": "HARD"\
@@ -3972,7 +3982,7 @@ const RAW_RUNTIME_STATE =
       ["npm:1.4.1", {\
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/@hmcts-properties-volume-npm-1.4.1-b28ede9351-10c0.zip/node_modules/@hmcts/properties-volume/",\
         "packageDependencies": [\
-          ["@azure/identity", "npm:4.13.1"],\
+          ["@azure/identity", "npm:4.13.2"],\
           ["@azure/keyvault-secrets", "npm:4.11.2"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
           ["@hmcts/properties-volume", "npm:1.4.1"],\
@@ -10349,7 +10359,7 @@ const RAW_RUNTIME_STATE =
       ["workspace:.", {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@azure/identity", "npm:4.13.1"],\
+          ["@azure/identity", "npm:4.13.2"],\
           ["@azure/keyvault-secrets", "npm:4.11.2"],\
           ["@babel/core", "npm:7.29.7"],\
           ["@babel/eslint-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.29.7"],\
@@ -10435,7 +10445,7 @@ const RAW_RUNTIME_STATE =
           ["redis", "npm:5.12.1"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["require-directory", "npm:2.1.1"],\
-          ["sass", "npm:1.102.0"],\
+          ["sass", "npm:1.103.1"],\
           ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.8"],\
           ["serve-favicon", "npm:2.5.1"],\
           ["sinon", "npm:21.1.2"],\
@@ -19263,13 +19273,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["sass", [\
-      ["npm:1.102.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/sass-npm-1.102.0-f68ceaf025-10c0.zip/node_modules/sass/",\
+      ["npm:1.103.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/sass-npm-1.103.1-55ef967990-10c0.zip/node_modules/sass/",\
         "packageDependencies": [\
           ["@parcel/watcher", "npm:2.5.1"],\
           ["chokidar", "npm:5.0.0"],\
           ["immutable", "npm:5.1.5"],\
-          ["sass", "npm:1.102.0"],\
+          ["sass", "npm:1.103.1"],\
           ["source-map-js", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
@@ -19294,7 +19304,7 @@ const RAW_RUNTIME_STATE =
           ["@types/webpack", null],\
           ["neo-async", "npm:2.6.2"],\
           ["node-sass", null],\
-          ["sass", "npm:1.102.0"],\
+          ["sass", "npm:1.103.1"],\
           ["sass-embedded", null],\
           ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.8"],\
           ["webpack", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.109.2"]\
