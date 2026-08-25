@@ -30,21 +30,21 @@
                 label: _t('form.typeahead.hint')
         }) }}
 
-      <p class="govuk-body">{{ _t('orDivider') }}</p>
+      <div class="govuk-checkboxes__divider">{{ _t('orDivider') }}</div>
 
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 
-    <div class="govuk-checkboxes__item">
-      <input aria-labelledby="{{inputName}}-label" aria-describedby="{{inputName}}-{{ parent.id }}-hint" class="govuk-checkboxes__input clear-autocomplete" id="_enabled-other" name="enabled" type="checkbox" value="OT0001"  data-aria-controls="conditional-other" {% if parent._other === true %}checked{% endif %}>
-      <label id="{{inputName}}-label" class="govuk-label govuk-checkboxes__label" for="other">
-        {{ _t(parent.value.flagCode + '.notListed') or _t('form.typeahead.notListed') }}
-      </label>
-      <div id="{{inputName}}-{{ parent.id }}-hint" class="govuk-hint govuk-checkboxes__hint">
-        {{ _t(parent.value.flagCode + '.hint') or _t('form.typeahead.hint') }}
+      <div class="govuk-checkboxes__item">
+        <input aria-labelledby="{{inputName}}-label" aria-describedby="{{inputName}}-{{ parent.id }}-hint" class="govuk-checkboxes__input clear-autocomplete" id="_enabled-other" name="enabled" type="checkbox" value="OT0001"  data-aria-controls="conditional-other" {% if parent._other === true %}checked{% endif %}>
+        <label id="{{inputName}}-label" class="govuk-label govuk-checkboxes__label" for="other">
+          {{ _t(parent.value.flagCode + '.notListed') or _t('form.typeahead.notListed') }}
+        </label>
+        <div id="{{inputName}}-{{ parent.id }}-hint" class="govuk-hint govuk-checkboxes__hint">
+          {{ _t(parent.value.flagCode + '.hint') or _t('form.typeahead.hint') }}
+        </div>
       </div>
-    </div>
 
-    <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-other">
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-other">
         {% set otherTextError = validationErrors and validationErrors['other'] %}
         <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="{{count}}"
           data-i18n.characters-under-limit.other="{{ _t('form.charCount.charactersUnderLimit.other') }}"

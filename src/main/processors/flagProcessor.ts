@@ -79,31 +79,13 @@ export class FlagProcessor implements FlagProcessorInterface {
       dataItem._isParent = true;
       //we dont want flag comment on parents
       dataItem._flagComment = false;
-      //sort childrent
-      flag.childFlags.sort((a, b) => {
-        //Add short if to check if welsh and use name_cy
-        const nameA = welsh ? a.name_cy.toUpperCase() : a.name.toUpperCase(); // Convert to uppercase for case-insensitive sorting
-        const flagCodeA = a.nativeFlagCode;
-        const nameB = welsh ? b.name_cy.toUpperCase() : b.name.toUpperCase();
-        const flagCodeB = b.nativeFlagCode;
-        // If either object has the name "other", it should be sorted last
-        if (flagCodeA === Common.OTHER_FLAG_CODE && flagCodeB !== Common.OTHER_FLAG_CODE) {
-          return 1;
-        }
-        if (flagCodeA !== Common.OTHER_FLAG_CODE && flagCodeB === Common.OTHER_FLAG_CODE) {
-          return -1;
-        }
-        if (nameA < nameB) {
-          return -1;
-        }
-        if (nameA > nameB) {
-          return 1;
-        }
-        return 0;
-      });
+      const orderedChildFlags = [
+        ...flag.childFlags.filter(child => child.nativeFlagCode !== Common.OTHER_FLAG_CODE),
+        ...flag.childFlags.filter(child => child.nativeFlagCode === Common.OTHER_FLAG_CODE),
+      ];
 
       //Populate child ids
-      dataItem._childIds = flag.childFlags.map(child => {
+      dataItem._childIds = orderedChildFlags.map(child => {
         return `${id}-${child.nativeFlagCode}`;
       });
     }
@@ -117,8 +99,11 @@ export class FlagProcessor implements FlagProcessorInterface {
 
     //loop and add children
     if (flag.childFlags && flag.childFlags.length > 0) {
-      //sort children alphabetically
-      flag.childFlags.forEach((child: ReferenceDataFlagType) => {
+      const orderedChildFlags = [
+        ...flag.childFlags.filter(child => child.nativeFlagCode !== Common.OTHER_FLAG_CODE),
+        ...flag.childFlags.filter(child => child.nativeFlagCode === Common.OTHER_FLAG_CODE),
+      ];
+      orderedChildFlags.forEach((child: ReferenceDataFlagType) => {
         data.push(...this.process(dateTime, child, id));
       });
     }

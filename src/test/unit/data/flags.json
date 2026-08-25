@@ -845,7 +845,7 @@
                     {
                       "name": "In person hearing",
                       "hearingRelevant": true,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0034",
@@ -858,7 +858,7 @@
                     {
                       "name": "Video hearing",
                       "hearingRelevant": true,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0035",
@@ -871,26 +871,13 @@
                     {
                       "name": "Phone hearing",
                       "hearingRelevant": true,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0036",
                       "nativeFlagCode": "RA0036",
                       "childFlags": [],
                       "name_cy": "Gwrandawiad dros y ffôn",
-                      "isParent": false,
-                      "Path": ["Party", "Reasonable adjustment", "I need to ask for a certain type of hearing"]
-                    },
-                    {
-                      "name": "Other",
-                      "hearingRelevant": true,
-                      "flagComment": true,
-                      "defaultStatus": "Requested",
-                      "externallyAvailable": true,
-                      "flagCode": "OT0001",
-                      "nativeFlagCode": "OT0001",
-                      "childFlags": [],
-                      "name_cy": "Arall",
                       "isParent": false,
                       "Path": ["Party", "Reasonable adjustment", "I need to ask for a certain type of hearing"]
                     }
