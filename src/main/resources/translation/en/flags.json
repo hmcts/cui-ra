@@ -220,6 +220,7 @@
   "RA0040": {},
   "RA0041": {},
   "RA0042": {
+    "autoCompleteHint": "Start typing to choose the language",
     "error": {
       "empty": "Select which sign Language Interpreter you need"
     },

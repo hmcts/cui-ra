@@ -22,9 +22,10 @@
 {% endblock %}
 
 {% block form %}
+        {% set autocompleteHint = _t(parent.value.flagCode + '.autoCompleteHint') or _t('form.typeahead.hint') %}
         {{ accessibleAutocomplete({
                 name: "selected",
-                hint: _t('form.typeahead.hint'),
+                hint: autocompleteHint,
                 opts: parent._listOfValues,
                 value: parent.value.subTypeKey,
                 label: _t('form.typeahead.hint')
