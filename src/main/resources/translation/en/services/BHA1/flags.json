@@ -24,6 +24,12 @@
       "blurb": "Think about all communications with the tribunal, as well as what you might need at a hearing. Consider remote and in-person hearings, in case your preferred hearing type is not possible.",
       "hint": "You can tell us which type of hearing enhancement in the next step"
     },
+    "RA0010": {
+      "control": "Describe what colour or colours you need",
+      "error": {
+        "empty": "Describe what colour or colours you need"
+      }
+    },
     "RA0011": {
       "hint": "Information written in simple language with pictures"
     },
