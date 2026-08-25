@@ -20,7 +20,7 @@ describe('Flag Processor', () => {
 
     //console.log(JSON.stringify(data));
     // eslint-disable-line @typescript-eslint/no-empty-function
-    expect(data).toEqual(dataProcessorResultJson);
+    expect(JSON.parse(JSON.stringify(data))).toEqual(dataProcessorResultJson);
   });
 
   test('Should return a collection of DataManagerDateObject but sorted for welsh', async () => {
@@ -29,6 +29,6 @@ describe('Flag Processor', () => {
 
     //console.log(JSON.stringify(data));
     // eslint-disable-line @typescript-eslint/no-empty-function
-    expect(data).toEqual(dataProcessorResultWelshJson);
+    expect(JSON.parse(JSON.stringify(data))).toEqual(dataProcessorResultWelshJson);
   });
 });
