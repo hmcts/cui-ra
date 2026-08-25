@@ -102,7 +102,7 @@ const RAW_RUNTIME_STATE =
           ["mini-css-extract-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.10.2"],\
           ["mocha", "npm:11.8.0"],\
           ["mocha-multi", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.1.7"],\
-          ["mochawesome", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.4"],\
+          ["mochawesome", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:8.0.1"],\
           ["nock", "npm:14.0.17"],\
           ["nodemon", "npm:3.1.14"],\
           ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
@@ -10433,7 +10433,7 @@ const RAW_RUNTIME_STATE =
           ["mini-css-extract-plugin", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:2.10.2"],\
           ["mocha", "npm:11.8.0"],\
           ["mocha-multi", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:1.1.7"],\
-          ["mochawesome", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.4"],\
+          ["mochawesome", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:8.0.1"],\
           ["nock", "npm:14.0.17"],\
           ["nodemon", "npm:3.1.14"],\
           ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
@@ -15733,15 +15733,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["lodash.isempty", [\
-      ["npm:4.4.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/lodash.isempty-npm-4.4.0-9997a8300c-10c0.zip/node_modules/lodash.isempty/",\
-        "packageDependencies": [\
-          ["lodash.isempty", "npm:4.4.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["lodash.isfunction", [\
       ["npm:3.0.9", {\
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/lodash.isfunction-npm-3.0.9-72aaa7f66c-10c0.zip/node_modules/lodash.isfunction/",\
@@ -15765,15 +15756,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/lodash.isnumber-npm-3.0.3-b3bb5f7347-10c0.zip/node_modules/lodash.isnumber/",\
         "packageDependencies": [\
           ["lodash.isnumber", "npm:3.0.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["lodash.isobject", [\
-      ["npm:3.0.2", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/lodash.isobject-npm-3.0.2-ec19461220-10c0.zip/node_modules/lodash.isobject/",\
-        "packageDependencies": [\
-          ["lodash.isobject", "npm:3.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16839,29 +16821,22 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["mochawesome", [\
-      ["npm:7.1.4", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/mochawesome-npm-7.1.4-4da28f16c4-10c0.zip/node_modules/mochawesome/",\
+      ["npm:8.0.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/mochawesome-npm-8.0.1-5a96210a4f-10c0.zip/node_modules/mochawesome/",\
         "packageDependencies": [\
-          ["mochawesome", "npm:7.1.4"]\
+          ["mochawesome", "npm:8.0.1"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.4", {\
-        "packageLocation": "./.yarn/__virtual__/mochawesome-virtual-9290f62f3e/7/runner/cache/others/berry/cache/mochawesome-npm-7.1.4-4da28f16c4-10c0.zip/node_modules/mochawesome/",\
+      ["virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:8.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/mochawesome-virtual-d2800a4b70/7/runner/cache/others/berry/cache/mochawesome-npm-8.0.1-5a96210a4f-10c0.zip/node_modules/mochawesome/",\
         "packageDependencies": [\
           ["@types/mocha", null],\
-          ["chalk", "npm:4.1.2"],\
           ["diff", "npm:5.2.2"],\
           ["json-stringify-safe", "npm:5.0.1"],\
-          ["lodash.isempty", "npm:4.4.0"],\
-          ["lodash.isfunction", "npm:3.0.9"],\
-          ["lodash.isobject", "npm:3.0.2"],\
-          ["lodash.isstring", "npm:4.0.1"],\
           ["mocha", "npm:11.8.0"],\
-          ["mochawesome", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:7.1.4"],\
-          ["mochawesome-report-generator", "npm:6.3.2"],\
-          ["strip-ansi", "npm:6.0.1"],\
-          ["uuid", "npm:8.3.2"]\
+          ["mochawesome", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:8.0.1"],\
+          ["mochawesome-report-generator", "npm:6.3.2"]\
         ],\
         "packagePeers": [\
           "@types/mocha",\
@@ -21585,13 +21560,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/uuid-npm-3.4.0-4fd8ef88ad-10c0.zip/node_modules/uuid/",\
         "packageDependencies": [\
           ["uuid", "npm:3.4.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:8.3.2", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/uuid-npm-8.3.2-eca0baba53-10c0.zip/node_modules/uuid/",\
-        "packageDependencies": [\
-          ["uuid", "npm:8.3.2"]\
         ],\
         "linkType": "HARD"\
       }]\
