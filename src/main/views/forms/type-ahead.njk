@@ -37,37 +37,37 @@
         <div class="govuk-checkboxes__item">
           <input aria-labelledby="{{inputName}}-label" aria-describedby="{{inputName}}-{{ parent.id }}-hint" class="govuk-checkboxes__input clear-autocomplete" id="_enabled-other" name="enabled" type="checkbox" value="OT0001"  data-aria-controls="conditional-other" {% if parent._other === true %}checked{% endif %}>
           <label id="{{inputName}}-label" class="govuk-label govuk-checkboxes__label" for="other">
-            {{ _t(parent.value.flagCode + '.notListed') or _t('form.typeahead.notListed') }}
+             {{ _t(parent.value.flagCode + '.notListed') or _t('form.typeahead.notListed') }}
           </label>
           <div id="{{inputName}}-{{ parent.id }}-hint" class="govuk-hint govuk-checkboxes__hint">
-            {{ _t(parent.value.flagCode + '.hint') or _t('form.typeahead.hint') }}
+             {{ _t(parent.value.flagCode + '.hint') or _t('form.typeahead.hint') }}
           </div>
         </div>
 
         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-other">
           {% set otherTextError = validationErrors and validationErrors['other'] %}
-          <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="{{count}}"
-            data-i18n.characters-under-limit.other="{{ _t('form.charCount.charactersUnderLimit.other') }}"
-            data-i18n.characters-under-limit.one="{{ _t('form.charCount.charactersUnderLimit.one') }}"
-            data-i18n.characters-at-limit="{{ _t('form.charCount.charactersAtLimit') }}"
-            data-i18n.characters-over-limit.other="{{ _t('form.charCount.charactersOverLimit.other') }}"
-            data-i18n.characters-over-limit.one="{{ _t('form.charCount.charactersOverLimit.one') }}"
-          >
-          <div class="govuk-form-group">
-            <label id="other-control" class="govuk-label" for="other">
-              {{ _t(parent.value.flagCode + '.OT0001.control') or _t('form.typeahead.control') }}
-            </label>
-            {% if otherTextError %}
-            <p id="more-detail-error" class="govuk-error-message">
-              <span class="govuk-visually-hidden">Error:</span>
-              {% if _t(otherTextError) %}{{ _t(otherTextError) }}{% else %}error{% endif %}
-            </p>
-            {% endif %}
-            <textarea id="other" rows="{{row}}" aria-label="{{ _t(parent.value.flagCode + '.OT0001.control') or _t('form.typeahead.control') }}" aria-labelledby="other-control" aria-describedby="other-info" class="govuk-textarea govuk-js-character-count {% if otherTextError %}govuk-input--error{% endif %}" name="data[{{ parent.id }}][{{inputName}}]" type="text" spellcheck="false">{% if parent.value.subTypeKey === null or  parent.value.subTypeKey === undefined %}{{ parent.value[inputName] }}{% endif %}</textarea>
-          </div>
-          <div id="other-info" class="govuk-hint govuk-character-count__message">
-            {{ _r(_t('form.charCount.hint'), {count: count}) }}
-          </div>
+            <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="{{count}}"
+              data-i18n.characters-under-limit.other="{{ _t('form.charCount.charactersUnderLimit.other') }}"
+              data-i18n.characters-under-limit.one="{{ _t('form.charCount.charactersUnderLimit.one') }}"
+              data-i18n.characters-at-limit="{{ _t('form.charCount.charactersAtLimit') }}"
+              data-i18n.characters-over-limit.other="{{ _t('form.charCount.charactersOverLimit.other') }}"
+              data-i18n.characters-over-limit.one="{{ _t('form.charCount.charactersOverLimit.one') }}"
+            >
+            <div class="govuk-form-group">
+              <label id="other-control" class="govuk-label" for="other">
+                {{ _t(parent.value.flagCode + '.OT0001.control') or _t('form.typeahead.control') }}
+              </label>
+              {% if otherTextError %}
+              <p id="more-detail-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span>
+                {% if _t(otherTextError) %}{{ _t(otherTextError) }}{% else %}error{% endif %}
+              </p>
+              {% endif %}
+              <textarea id="other" rows="{{row}}" aria-label="{{ _t(parent.value.flagCode + '.OT0001.control') or _t('form.typeahead.control') }}" aria-labelledby="other-control" aria-describedby="other-info" class="govuk-textarea govuk-js-character-count {% if otherTextError %}govuk-input--error{% endif %}" name="data[{{ parent.id }}][{{inputName}}]" type="text" spellcheck="false">{% if parent.value.subTypeKey === null or  parent.value.subTypeKey === undefined %}{{ parent.value[inputName] }}{% endif %}</textarea>
+            </div>
+            <div id="other-info" class="govuk-hint govuk-character-count__message">
+              {{ _r(_t('form.charCount.hint'), {count: count}) }}
+            </div>
         </div>
 
       </div>
