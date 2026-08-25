@@ -99,11 +99,8 @@ export class FlagProcessor implements FlagProcessorInterface {
 
     //loop and add children
     if (flag.childFlags && flag.childFlags.length > 0) {
-      const orderedChildFlags = [
-        ...flag.childFlags.filter(child => child.nativeFlagCode !== Common.OTHER_FLAG_CODE),
-        ...flag.childFlags.filter(child => child.nativeFlagCode === Common.OTHER_FLAG_CODE),
-      ];
-      orderedChildFlags.forEach((child: ReferenceDataFlagType) => {
+      //sort children alphabetically
+      flag.childFlags.forEach((child: ReferenceDataFlagType) => {
         data.push(...this.process(dateTime, child, id));
       });
     }
