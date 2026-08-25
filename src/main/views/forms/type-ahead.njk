@@ -59,6 +59,7 @@
                       </label>
                       {% if otherTextError %}
                         <p id="more-detail-error" class="govuk-error-message">
+                                <span class="govuk-visually-hidden">Error:</span>
                                 {% if _t(otherTextError) %}{{ _t(otherTextError) }}{% else %}error{% endif %}
                         </p>
                       {% endif %}
