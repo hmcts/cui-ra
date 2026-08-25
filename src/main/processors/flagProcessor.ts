@@ -74,13 +74,18 @@ export class FlagProcessor implements FlagProcessorInterface {
     dataItem._parentId = parentId;
     dataItem._flagComment = flag.flagComment;
 
-    if (flag.childFlags && flag.childFlags.length > 0) {
+    const childFlags = (flag.childFlags ?? []).filter(
+      //add the moment only one page has exception ,if there are more then move the list of ids to config
+      child => !(id === 'PF0001-RA0001-RA0007' && child.nativeFlagCode === Common.OTHER_FLAG_CODE)
+    );
+
+    if (childFlags.length > 0) {
       dataItem._isCategoryPage = true;
       dataItem._isParent = true;
       //we dont want flag comment on parents
       dataItem._flagComment = false;
       //sort childrent
-      flag.childFlags.sort((a, b) => {
+      childFlags.sort((a, b) => {
         //Add short if to check if welsh and use name_cy
         const nameA = welsh ? a.name_cy.toUpperCase() : a.name.toUpperCase(); // Convert to uppercase for case-insensitive sorting
         const flagCodeA = a.nativeFlagCode;
@@ -103,7 +108,7 @@ export class FlagProcessor implements FlagProcessorInterface {
       });
 
       //Populate child ids
-      dataItem._childIds = flag.childFlags.map(child => {
+      dataItem._childIds = childFlags.map(child => {
         return `${id}-${child.nativeFlagCode}`;
       });
     }
@@ -116,9 +121,9 @@ export class FlagProcessor implements FlagProcessorInterface {
     data.push(dataItem);
 
     //loop and add children
-    if (flag.childFlags && flag.childFlags.length > 0) {
+    if (childFlags.length > 0) {
       //sort children alphabetically
-      flag.childFlags.forEach((child: ReferenceDataFlagType) => {
+      childFlags.forEach((child: ReferenceDataFlagType) => {
         data.push(...this.process(dateTime, child, id));
       });
     }
