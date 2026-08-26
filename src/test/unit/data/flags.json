@@ -665,7 +665,7 @@
                   "nativeFlagCode": "RA0005",
                   "childFlags": [
                     {
-                      "name": "Support worker or carer",
+                      "name": "Support worker or carer with me",
                       "hearingRelevant": true,
                       "flagComment": true,
                       "defaultStatus": "Requested",
@@ -834,7 +834,7 @@
                   "Path": ["Party", "Reasonable adjustment"]
                 },
                 {
-                  "name": "I need to ask for a certain type of hearing",
+                  "name": "I need to request a certain type of hearing",
                   "hearingRelevant": false,
                   "flagComment": false,
                   "defaultStatus": "Active",
@@ -853,7 +853,7 @@
                       "childFlags": [],
                       "name_cy": "Gwrandawiad wyneb yn wyneb mewn ystafell",
                       "isParent": false,
-                      "Path": ["Party", "Reasonable adjustment", "I need to ask for a certain type of hearing"]
+                      "Path": ["Party", "Reasonable adjustment", "I need to request a certain type of hearing"]
                     },
                     {
                       "name": "Video hearing",
@@ -866,7 +866,7 @@
                       "childFlags": [],
                       "name_cy": "Gwrandawiad fideo",
                       "isParent": false,
-                      "Path": ["Party", "Reasonable adjustment", "I need to ask for a certain type of hearing"]
+                      "Path": ["Party", "Reasonable adjustment", "I need to request a certain type of hearing"]
                     },
                     {
                       "name": "Phone hearing",
@@ -879,7 +879,7 @@
                       "childFlags": [],
                       "name_cy": "Gwrandawiad dros y ffôn",
                       "isParent": false,
-                      "Path": ["Party", "Reasonable adjustment", "I need to ask for a certain type of hearing"]
+                      "Path": ["Party", "Reasonable adjustment", "I need to request a certain type of hearing"]
                     },
                     {
                       "name": "Other",
@@ -892,7 +892,7 @@
                       "childFlags": [],
                       "name_cy": "Arall",
                       "isParent": false,
-                      "Path": ["Party", "Reasonable adjustment", "I need to ask for a certain type of hearing"]
+                      "Path": ["Party", "Reasonable adjustment", "I need to request a certain type of hearing"]
                     }
                   ],
                   "name_cy": "Rwyf angen gofyn am fath penodol o wrandawiad",

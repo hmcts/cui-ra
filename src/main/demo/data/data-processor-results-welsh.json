@@ -2172,7 +2172,7 @@
     "_childIds": [],
     "id": "PF0001-RA0001-RA0005-RA0026",
     "value": {
-      "name": "Support worker or carer",
+      "name": "Support worker or carer with me",
       "name_cy": "Cefnogaeth gan weithiwr cymorth neu ofalwr",
       "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
@@ -2271,7 +2271,7 @@
     "_childIds": ["PF0001-RA0001-RA0007-RA0034", "PF0001-RA0001-RA0007-RA0036", "PF0001-RA0001-RA0007-RA0035"],
     "id": "PF0001-RA0001-RA0007",
     "value": {
-      "name": "I need to ask for a certain type of hearing",
+      "name": "I need to request a certain type of hearing",
       "name_cy": "Rwyf angen gofyn am fath penodol o wrandawiad",
       "dateTimeModified": "12-07-2023 13:28:21",
       "dateTimeCreated": "12-07-2023 13:28:21",
@@ -2313,7 +2313,7 @@
           "name": "Reasonable adjustment"
         },
         {
-          "name": "I need to ask for a certain type of hearing"
+          "name": "I need to request a certain type of hearing"
         }
       ],
       "hearingRelevant": "Yes",
@@ -2346,7 +2346,7 @@
           "name": "Reasonable adjustment"
         },
         {
-          "name": "I need to ask for a certain type of hearing"
+          "name": "I need to request a certain type of hearing"
         }
       ],
       "hearingRelevant": "Yes",
@@ -2379,7 +2379,7 @@
           "name": "Reasonable adjustment"
         },
         {
-          "name": "I need to ask for a certain type of hearing"
+          "name": "I need to request a certain type of hearing"
         }
       ],
       "hearingRelevant": "Yes",
