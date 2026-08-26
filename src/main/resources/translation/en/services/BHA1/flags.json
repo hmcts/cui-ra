@@ -33,6 +33,12 @@
     "RA0011": {
       "hint": "Information written in simple language with pictures"
     },
+    "RA0013": {
+      "control": "Describe what print size you need",
+      "error": {
+        "empty": "Describe what type of print or font you need"
+      }
+    },
     "RA0017": {
       "control": "Describe what guidance you need to complete forms",
       "error": {
@@ -40,9 +46,9 @@
       }
     },
     "RA0018": {
-      "control": "Describe what support you need with filling forms",
+      "control": "Describe what support you need with filling in forms",
       "error": {
-        "empty": "Describe what support you need with filling forms"
+        "empty": "Describe what support you need with filling in forms"
       }
     },
     "RA0020": {
