@@ -40,6 +40,14 @@ export class DemoController {
     fs.readFileSync(path.join(__dirname, '..', 'demo', 'data', 'ABA5-processor-results.json'), 'utf-8')
   );
 
+  private BHA1: DataManagerDataObject[] = JSON.parse(
+    fs.readFileSync(path.join(__dirname, '..', 'demo', 'data', 'BHA1-processor-results.json'), 'utf-8')
+  );
+
+  private BHA1_Welsh: DataManagerDataObject[] = JSON.parse(
+    fs.readFileSync(path.join(__dirname, '..', 'demo', 'data', 'BHA1-processor-results-welsh.json'), 'utf-8')
+  );
+
   public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
     // Add code here to populate payloads/session for demo purposes.
     // Speak to Sonny about multiple versions to test blank payload and populated payload
@@ -127,6 +135,22 @@ export class DemoController {
           NewFlag.set(this.ABA5);
 
           this.setSessionData(req, host, NewFlag, 'ABA5', false);
+
+          return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
+        }
+        case 'BHA1': {
+          const NewFlag = new NewFlagsManager();
+          NewFlag.set(this.BHA1);
+
+          this.setSessionData(req, host, NewFlag, 'BHA1', false);
+
+          return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
+        }
+        case 'BHA1_Welsh': {
+          const NewFlag = new NewFlagsManager();
+          NewFlag.set(this.BHA1_Welsh);
+
+          this.setSessionData(req, host, NewFlag, 'BHA1', true);
 
           return res.redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: 'PF0001-RA0001' }, UrlRoute.url(req)));
         }
