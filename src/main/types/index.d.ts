@@ -5,6 +5,7 @@ import { SessionData } from './../interfaces';
 declare module 'express-session' {
   export interface SessionData {
     hmctsserviceid?: string;
+    serviceName?: string;
     masterflagcode?: string;
     mastername?: string;
     mastername_cy?: string;

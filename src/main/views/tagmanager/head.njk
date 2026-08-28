@@ -1,3 +1,9 @@
+{% if serviceName %}
+<script {%- if cspNonce %} nonce="{{ cspNonce }}"{% endif %}>
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({ event: 'Service context loaded', service_name: '{{ serviceName }}' });
+</script>
+{% endif %}
 <!-- Google Tag Manager -->
 <script {%- if cspNonce %} nonce="{{ cspNonce }}"{% endif %}>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

@@ -40,7 +40,7 @@ export class ApiController {
       }
 
       //save data
-      const payloadStore = new InboundPayloadStore(idamToken, serviceToken, payload);
+      const payloadStore = new InboundPayloadStore(idamToken, serviceToken, payload, res.locals.serviceName);
 
       const uuid = await this.redisClient.generateUUID();
 
