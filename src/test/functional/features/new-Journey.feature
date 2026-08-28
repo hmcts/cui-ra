@@ -142,7 +142,7 @@ Feature: New Journey
 
     When I click on the button labeled 'Continue'
 
-    Then I am navigated to 'I need to ask for a certain type of hearing' page
+    Then I am navigated to 'I need to request a certain type of hearing' page
     Then I find 'Contact us for help' text
 
     When I select the following checkboxes

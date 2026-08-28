@@ -220,17 +220,16 @@
   "RA0040": {},
   "RA0041": {},
   "RA0042": {
-    "autoCompleteHint": "Start typing to choose the language",
+    "autoCompleteHint": "Start typing to choose the sign language",
     "error": {
       "empty": "Select which sign Language Interpreter you need"
     },
-    "blurb": "If you need to ask for an interpreter of your chosen gender, select 'Enter my language requirements manually'.",
-    "hint": "Include your chosen language and gender if required",
-    "notListed": "Enter my language requirements manually",
+    "blurb": "If you need to ask for a sign language interpreter of your chosen gender, select 'Enter my sign language requirements manually'.",
+    "notListed": "Enter my sign language requirements manually",
     "OT0001": {
-      "control": "Enter the type of sign language support you need to ask for",
+      "control": "Enter your sign language - include your preferred gender if required",
       "error": {
-        "empty": "Enter your sign language requirements"
+        "empty": "Enter your sign language - include your preferred gender if required"
       }
     }
   },

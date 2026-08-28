@@ -18,7 +18,7 @@
 {% endif %}
 
 {% block formHeading %}
-  {{ _r(_t('form.typeahead.heading'), { flagName:parent.value[nameValue] }) }}
+  {{ _r(_t('form.typeahead.heading'), { flagName:parent.value[nameValue] | lower }) }}
 {% endblock %}
 
 {% block form %}
@@ -41,7 +41,7 @@
              {{ _t(parent.value.flagCode + '.notListed') or _t('form.typeahead.notListed') }}
           </label>
           <div id="{{inputName}}-{{ parent.id }}-hint" class="govuk-hint govuk-checkboxes__hint">
-             {{ _t(parent.value.flagCode + '.hint') or _t('form.typeahead.hint') }}
+              {{ _t('OT0001.hint') }}
           </div>
         </div>
 
