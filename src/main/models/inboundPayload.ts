@@ -11,10 +11,12 @@ export class InboundPayloadStore {
   idamToken: string;
   serviceToken: string;
   payload: InboundPayload;
-  constructor(idamToken: string, serviceToken: string, payload: InboundPayload) {
+  serviceName: string;
+  constructor(idamToken: string, serviceToken: string, payload: InboundPayload, serviceName: string) {
     this.idamToken = idamToken;
     this.serviceToken = serviceToken;
     this.payload = payload;
+    this.serviceName = serviceName;
   }
 }
 

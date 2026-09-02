@@ -78,6 +78,7 @@ export class DataController {
         req.session.masterflagcode = 'RA0001';
       }
       req.session.hmctsserviceid = serviceId;
+      req.session.serviceName = payloadStore.serviceName;
       req.session.welsh = payloadStore.payload.language === languages.Cy;
       req.session.correlationId = payloadStore.payload.correlationId;
 
