@@ -6,8 +6,7 @@
     "command": "Select all that apply to you - you can give more details later",
     "error": {
       "empty": "Select whether you need support"
-    },
-    "noSupport": "I do not need any reasonable adjustments at this time"
+    }
   },
   "RA0002": {
     "blurb": "Think about all communications with the [court/tribunal], including what you might need at a hearing. Consider remote and in-person hearings in case your preferred hearing type is not possible.",
