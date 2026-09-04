@@ -1,4 +1,5 @@
 import '../scss/main.scss';
+import { trackCookiePreferences } from './analytics';
 import accessibleAutocomplete from 'accessible-autocomplete';
 import { initAll } from 'govuk-frontend';
 import cookieManager from '@hmcts/cookie-manager';
@@ -110,3 +111,5 @@ cookieManager.init({
     },
   ],
 });
+
+trackCookiePreferences(cookieManager);

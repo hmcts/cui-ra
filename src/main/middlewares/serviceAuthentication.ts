@@ -29,6 +29,7 @@ export class ServiceAuthentication {
         .filter(Boolean);
 
       if (service && allowedServices.includes(service.toLowerCase())) {
+        res.locals.serviceName = service;
         next();
       } else {
         throw new Error(ErrorMessages.UNAUTHORISED);

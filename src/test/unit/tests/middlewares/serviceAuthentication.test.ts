@@ -32,6 +32,7 @@ describe('ServiceAuthentication', () => {
 
     res.status = jest.fn().mockReturnThis();
     res.json = jest.fn();
+    res.locals = {};
   });
 
   test('should return 401 status and error response when service token is missing', async () => {
@@ -60,6 +61,7 @@ describe('ServiceAuthentication', () => {
     await serviceAuthentication.check(req, res, next);
 
     expect(serviceMock.validateToken).toHaveBeenCalledWith('service-a');
+    expect(res.locals.serviceName).toBe('service-a');
     expect(next).toHaveBeenCalled();
     expect(res.status).not.toHaveBeenCalled();
     expect(res.json).not.toHaveBeenCalled();

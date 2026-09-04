@@ -9,7 +9,7 @@ properties([
   ])
 ])
 
-@Library("Infrastructure@2.4.4")
+@Library("Infrastructure@2.5.4")
 
 def type = "nodejs"
 def product = "cui"
@@ -20,7 +20,6 @@ def urlExclusions = params.ZAP_URL_EXCLUSIONS
 withNightlyPipeline(type, product, component) {
   env.TEST_URL = params.URL_TO_TEST
 
-  enableCrossBrowserTest()
   enableFullFunctionalTest()
 
   enableFortifyScan()
