@@ -33,6 +33,11 @@ export class Nunjucks {
       res.locals._t = (key: string) => {
         const lang = req.session?.welsh ? 'cy' : 'en';
         const serviceId = req.session && req.session.hmctsserviceid ? req.session.hmctsserviceid.toUpperCase() : null;
+        if (key.endsWith(Common.MAX_LENGTH_ERROR_SUFFIX) && key !== Common.MAX_LENGTH_ERROR_KEY) {
+          const flagError = res.locals._t(key.replace(Common.MAX_LENGTH_ERROR_SUFFIX, '.empty'));
+          const maxLengthError = res.locals._t(Common.MAX_LENGTH_ERROR_KEY);
+          return `${flagError} ${maxLengthError}`;
+        }
         let result;
         if (serviceId) {
           const envInstance = app.locals.ENV_INSTANCE;

@@ -51,6 +51,9 @@
     "command": "Dewiswch bob un sy’n berthnasol i chi",
     "charCount": {
       "hint": "Gallwch ddefnyddio hyd at {count} o nodau",
+      "error": {
+        "long": "yn 200 nod neu lai"
+      },
       "charactersUnderLimit": {
         "other": "Mae gennych %{count} nod yn weddill",
         "one": "Mae gennych %{count} nod yn weddill"

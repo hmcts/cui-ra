@@ -28,6 +28,14 @@ describe('FormValidator', () => {
       expect(validationErrors['other-text-area']).toContain('.OT0001.error.');
     });
 
+    test('should return a long error for a radio other value over 80 characters', async () => {
+      parent.value.subTypeValue = 'a'.repeat(81);
+
+      const [validationErrors] = await FormValidator.validate(processedItems, parent);
+
+      expect(validationErrors['other-text-area']).toContain('.OT0001.error.long');
+    });
+
     test('should pass on sign language interpreter radio other validation', async () => {
       parent.value.subTypeValue = 'test';
 
