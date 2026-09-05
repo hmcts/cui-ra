@@ -36,6 +36,7 @@ Feature: New Journey
         """
 
     When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0004-RA0021' with value 'Parking Space'
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0004-RA0024' with value 'Different type of chair'
 
     When I click on the button labeled 'Continue'
 
@@ -86,12 +87,26 @@ Feature: New Journey
 
     When I click on the button labeled 'Continue'
 
-    Then I am navigated to 'Which Sign Language Interpreter do you need to request?' page
+    Then I am navigated to 'Which Sign Language Interpreter support do you need to ask for?' page
     Then I find 'Contact us for help' text
 
     When I click the input with ID '#custom-accessible-autocomplete'
     When I fill the textbox with ID '#custom-accessible-autocomplete' with value 'British Sign Language (BSL)'
     When I click the input with ID '#custom-accessible-autocomplete__listbox'
+
+    When I click on the button labeled 'Continue'
+
+    Then I am navigated to 'I need help with forms' page
+    Then I find 'Contact us for help' text
+
+    When I select the following checkboxes
+        """
+        #checkbox-label-PF0001-RA0001-RA0003-RA0017
+        #checkbox-label-PF0001-RA0001-RA0003-RA0018
+        """
+
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0003-RA0017' with value 'Guidance to fill form'
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0003-RA0018' with value 'Support to fill form'
 
     When I click on the button labeled 'Continue'
 
@@ -136,6 +151,10 @@ Feature: New Journey
         #checkbox-label-PF0001-RA0001-RA0007-RA0036
         #checkbox-label-PF0001-RA0001-RA0007-RA0035
         """
+
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0007-RA0034' with value 'In person hearing'
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0007-RA0036' with value 'Phone Hearing'
+    When I fill the textbox with ID '#flagComment-PF0001-RA0001-RA0007-RA0035' with value 'Video Hearing'
 
     When I click on the button labeled 'Continue'
 

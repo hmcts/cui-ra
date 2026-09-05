@@ -1,88 +1,91 @@
 {
   "RA0001": {
     "fullQuestion": "Do you have a physical, mental or learning disability or health condition that means you need support during your case?",
-    "blurb": "We know some people need support to access information and use our services. We often call this a reasonable adjustment. Some reasonable adjustments need to be agreed by the judge or HMCTS. You can discuss with the court if your needs change.",
-    "hint": "Select all that apply to you - specific requirements can be given next",
-    "command": "Select all that apply to you - specific requirements can be given next",
+    "blurb": "Some people need support to access information and use our services. We call this a reasonable adjustment. Some reasonable adjustments need to be agreed by the judge or HMCTS. You can discuss with the [court/tribunal] if your needs change.",
+    "hint": "Select all that apply to you - you can give more details later",
+    "command": "Select all that apply to you - you can give more details later",
     "error": {
-      "empty": "Select whether you need a reasonable adjustment"
+      "empty": "Select whether you need support"
     }
   },
   "RA0002": {
-    "blurb": "Think about all communications with the court, as well as what you might need at a hearing. Consider remote and in-person hearings, in case your preferred hearing type is not possible.",
+    "blurb": "Think about all communications with the [court/tribunal], including what you might need at a hearing. Consider remote and in-person hearings in case your preferred hearing type is not possible.",
     "hint": "For example, braille or different colours and text sizes",
     "error": {
-      "empty": "Select whether you need documents in an alternate format"
+      "empty": "Select whether you need documents in an alternative format"
     },
     "OT0001": {
       "control": "Describe what document format or formats you need",
       "error": {
         "empty": "Describe what document format or formats you need"
       }
-    }
+    },
+    "noSupport": "I do not need documents in an alternative format at this time"
   },
   "RA0003": {
+    "hint": "For example, help with completing forms on paper or online",
     "error": {
-      "empty": "Select whether you need support"
+      "empty": "Select whether you need help with forms"
     },
     "OT0001": {
-      "control": "Describe what support you need to help with forms",
+      "control": "Describe what support you need with forms",
       "error": {
-        "empty": "Describe what support you need to help with forms"
+        "empty": "Describe what support you need with forms"
       }
-    }
+    },
+    "noSupport": "I do not need any help with forms at this time"
   },
   "RA0004": {
     "hint": "For example, access and mobility support if a hearing takes place in person",
     "error": {
-      "empty": "Select whether you need adjustments to get to, into and around our buildings"
+      "empty": "Select whether you need help travelling to, or moving around buildings"
     },
     "OT0001": {
       "control": "Describe what support you need travelling to, or around buildings",
       "error": {
         "empty": "Describe what support you need travelling to, or around buildings"
       }
-    }
+    },
+    "noSupport": "I do not need any help travelling or moving around at this time"
   },
   "RA0005": {
-    "blurb": "Think about what you would need if the hearing was in person, by phone or video.",
+    "blurb": "Think about what you would need if a hearing was in person, by phone or video.",
     "hint": "For example, someone you know or an assistance dog",
     "error": {
-      "empty": "Select whether you need to bring support with you to a hearing"
+      "empty": "Select whether you want to bring support with you to a hearing"
     },
     "OT0001": {
-      "control": "Describe what support you need to request for a hearing",
+      "control": "Describe what support you want to bring and why",
       "error": {
-        "empty": "Describe what support you need to request for a hearing"
+        "empty": "Describe what support you want to bring and why"
       }
-    }
+    },
+    "noSupport": "I do not need to bring support with me at this time"
   },
   "RA0006": {
     "blurb": "Think about what you would need if the hearing was in person, by phone or video.",
     "hint": "For example, breaks or extra space",
     "error": {
-      "empty": "Select what you need to feel comfortable during a hearing"
+      "empty": "Select whether you need something to feel comfortable during a hearing"
     },
     "OT0001": {
-      "control": "Describe what support you need to request for a hearing",
+      "control": "Describe what you need to ask for to make you feel comfortable",
       "error": {
-        "empty": "Describe what support you need to request for a hearing"
+        "empty": "Describe what you need to ask for to make you feel comfortable"
       }
-    }
+    },
+    "noSupport": "I do not need something else to feel comfortable at this time"
   },
   "RA0007": {
+    "blurb": "The [court/tribunal] will consider your request for a hearing type and tell you if they can support it.The [court/tribunal] may need to decide on the hearing type. We will send you instructions on how to attend before the hearing.",
+    "hint": "For example, in person, by video or by phone",
     "error": {
-      "empty": "Select whether you need to request a certain type of hearing"
+      "empty": "Select whether you need to ask for a certain type of hearing"
     },
-    "OT0001": {
-      "control": "Describe what support you need to request for a hearing",
-      "error": {
-        "empty": "Describe what support you need to request for a hearing"
-      }
-    }
+    "noSupport": "I do not need to ask for a certain type of hearing at this time"
   },
   "RA0008": {
-    "blurb": "Think about all communications with the court, as well as what you might need at a hearing. Consider remote and in-person hearings, in case your preferred hearing type is not possible.",
+    "blurb": "Think about all communications with the [court/tribunal], as well as what you might need at a hearing. Consider remote and in-person hearings in case your preferred hearing type is not possible.",
     "hint": "For example, hearing, speaking or interpretation",
     "error": {
       "empty": "Select whether you need help communicating and understanding"
@@ -92,26 +95,28 @@
       "error": {
         "empty": "Describe what help you need with communicating and understanding"
       }
-    }
+    },
+    "noSupport": "I do not need help with communicating and understanding at this time"
   },
   "RA0009": {
-    "blurb": "Think about all communications with the court, as well as what you might need at a hearing. Consider remote and in-person hearings, in case your preferred hearing type is not possible.",
+    "blurb": "Think about all communications with the [court/tribunal], as well as what you might need at a hearing. Consider remote and in-person hearings in case your preferred hearing type is not possible.",
     "hint": "you can tell us which type of hearing enhancement in the next step",
     "control": "Type of hearing enhancement system",
     "error": {
-      "empty": "Select what type of hearing enhancement system you need"
+      "empty": "Select which type of hearing enhancement system you need"
     },
     "OT0001": {
       "control": "Describe what type of hearing enhancement you need",
       "error": {
         "empty": "Describe what type of hearing enhancement you need"
       }
-    }
+    },
+    "noSupport": "I do not need any hearing enhancements at this time"
   },
   "RA0010": {
-    "control": "Describe what colour or colours you need to request",
+    "control": "Describe what colour or colours you need",
     "error": {
-      "empty": "Describe what colour or colours you need to request"
+      "empty": "Describe what colour or colours you need"
     }
   },
   "RA0011": {
@@ -121,20 +126,30 @@
   "RA0013": {
     "control": "Describe what print size you need",
     "error": {
-      "empty": "Describe what type of print or font you need to request"
+      "empty": "Describe what type of print size you need"
     }
   },
   "RA0014": {},
   "RA0015": {},
   "RA0016": {},
-  "RA0017": {},
-  "RA0018": {},
+  "RA0017": {
+    "control": "Describe what guidance you need to complete forms",
+    "error": {
+      "empty": "Describe what guidance you need to complete forms"
+    }
+  },
+  "RA0018": {
+    "control": "Describe what support you need with filling forms",
+    "error": {
+      "empty": "Describe what support you need with filling forms"
+    }
+  },
   "RA0019": {},
   "RA0020": {},
   "RA0021": {
-    "control": "Tell us why you need a nearby parking space",
+    "control": "Tell us why you need a parking space close to the venue",
     "error": {
-      "empty": "Tell us why you need a nearby parking space"
+      "empty": "Tell us why you need a parking space close to the venue"
     }
   },
   "RA0022": {},
@@ -148,22 +163,22 @@
   },
   "RA0025": {},
   "RA0026": {
-    "control": "Tell us which support worker or carer you will bring",
+    "control": "Tell us which support worker or carer you want to bring and why",
     "error": {
-      "empty": "Tell us which support worker or carer you will bring"
+      "empty": "Tell us which support worker or carer you want to bring and why"
     }
   },
   "RA0027": {
-    "control": "Tell us which friend or family member you will bring",
+    "control": "Tell us which friend or family member you want to bring and why",
     "error": {
-      "empty": "Tell us which friend or family member you will bring"
+      "empty": "Tell us which friend or family member you want to bring and why"
     }
   },
   "RA0028": {},
   "RA0029": {
-    "control": "Tell us what type of therapy animal you need to request",
+    "control": "Tell us what type of therapy animal you want to bring and why",
     "error": {
-      "empty": "Tell us what type of therapy animal you need to request"
+      "empty": "Tell us what type of therapy animal you want to bring and why"
     }
   },
   "RA0030": {
@@ -175,9 +190,27 @@
   "RA0031": {},
   "RA0032": {},
   "RA0033": {},
-  "RA0034": {},
-  "RA0035": {},
-  "RA0036": {},
+  "RA0034": {
+    "hint": "Where you attend the court orthe tribunal",
+    "control": "Tell us why you would need an in-person hearing",
+    "error": {
+      "empty": "Tell us why you would need an in-person hearing"
+    }
+  },
+  "RA0035": {
+    "hint": "Where you can attend by video from a place suitable to you",
+    "control": "Tell us why you would need to have a video hearing",
+    "error": {
+      "empty": "Tell us why you would need to have a video hearing"
+    }
+  },
+  "RA0036": {
+    "hint": "Where you can attend by phone from a place suitable to you",
+    "control": "Tell us why you would need to have a phone hearing",
+    "error": {
+      "empty": "Tell us why you would need to have a phone hearing"
+    }
+  },
   "RA0037": {},
   "RA0038": {
     "hint": "a person to help you if you have communication needs by providing professional support to participate in a hearing"
@@ -186,10 +219,17 @@
   "RA0040": {},
   "RA0041": {},
   "RA0042": {
-    "hint": "you can tell us which type of interpreter in the next step",
-    "control": "Which sign language interpreter support do you need to request?",
+    "autoCompleteHint": "Start typing to choose the sign language",
     "error": {
-      "empty": "Select which Sign Language Interpreter you need"
+      "empty": "Select which sign Language Interpreter you need"
+    },
+    "blurb": "If you need to ask for a sign language interpreter of your chosen gender, select 'Enter my sign language requirements manually'.",
+    "notListed": "Enter my sign language requirements manually",
+    "OT0001": {
+      "control": "Enter your sign language - include your preferred gender if required",
+      "error": {
+        "empty": "Enter your sign language - include your preferred gender if required"
+      }
     }
   },
   "RA0046": {},

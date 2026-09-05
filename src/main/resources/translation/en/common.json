@@ -48,9 +48,12 @@
     "blurb": "You will be able to review your application before you submit it."
   },
   "form": {
-    "command": "Select all that apply to you",
+    "command": "Select all that apply",
     "charCount": {
       "hint": "You can enter up to {count} characters",
+      "error": {
+        "long": "in 200 characters or less"
+      },
       "charactersUnderLimit": {
         "other": "You have %{count} characters remaining",
         "one": "You have %{count} character remaining"
@@ -61,12 +64,12 @@
         "one": "You have %{count} character too many"
       }
     },
-    "noSupport": "I do not need any support at this time",
+    "noSupport": "I do not need any reasonable adjustments at this time",
     "problem": "There is a problem",
     "submitButton": "Continue",
     "typeahead": {
-      "heading": "Which {flagName} do you need to request?",
-      "hint": "Start typing to choose the support, or select 'The support is not listed",
+      "heading": "Which {flagName} support do you need to ask for?",
+      "hint": "Start typing to choose the support",
       "notListed": "The support is not listed",
       "control": "Enter the type of support you need to request"
     },

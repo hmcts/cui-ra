@@ -63,6 +63,12 @@ export class FormValidator {
     if (item.value.flagCode === Common.OTHER_FLAG_CODE) {
       return `${parent.value.flagCode}.${Common.OTHER_FLAG_CODE}.error`;
     }
+
+    // For radio/type-ahead "Other" free-text, use the OT0001 override path on the parent flag.
+    if (item._listOfValuesLength > 0 && item._other) {
+      return `${item.value.flagCode}.${Common.OTHER_FLAG_CODE}.error`;
+    }
+
     return `${item.value.flagCode}.error`;
   }
 

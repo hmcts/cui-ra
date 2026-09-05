@@ -48,9 +48,12 @@
     "blurb": "Byddwch yn gallu adolygu eich cais cyn i chi ei gyflwyno."
   },
   "form": {
-    "command": "Dewiswch bob un sy’n berthnasol i chi",
+    "command": "Dewiswch bob un sy'n berthnasol",
     "charCount": {
       "hint": "Gallwch ddefnyddio hyd at {count} o nodau",
+      "error": {
+        "long": "mewn 200 o nodau neu lai"
+      },
       "charactersUnderLimit": {
         "other": "Mae gennych %{count} nod yn weddill",
         "one": "Mae gennych %{count} nod yn weddill"
@@ -61,12 +64,12 @@
         "one": "Rydych wedi defnyddio %{count} nod yn ormod"
       }
     },
-    "noSupport": "Na, nid wyf angen unrhyw gymorth ar hyn o bryd",
+    "noSupport": "Nid oes arnaf angen unrhyw gymorth ar hyn o bryd",
     "problem": "Mae yna broblem",
     "submitButton": "Parhau",
     "typeahead": {
-      "heading": "Pa {flagName} ydych chi angen gwneud cais amdano?",
-      "hint": "Dechreuwch deipio i ddewis y gefnogaeth, neu dewiswch ‘Nid yw’r gefnogaeth wedi’i rhestru",
+      "heading": "Pa gymorth {flagName} sydd angen i chi ofyn amdano?",
+      "hint": "Dechreuwch deipio i ddewis y cymorth",
       "notListed": "Nid yw'r gefnogaeth wedi'i chynnwys",
       "control": "Rhowch y math o gefnogaeth y mae arnoch ei hangen"
     },
