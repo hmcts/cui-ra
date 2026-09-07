@@ -52,7 +52,7 @@
     "charCount": {
       "hint": "Gallwch ddefnyddio hyd at {count} o nodau",
       "error": {
-        "long": "mewn 200 o nodau neu lai"
+        "long": "mewn 200 nod neu lai"
       },
       "charactersUnderLimit": {
         "other": "Mae gennych %{count} nod yn weddill",
@@ -68,7 +68,7 @@
     "problem": "Mae yna broblem",
     "submitButton": "Parhau",
     "typeahead": {
-      "heading": "Pa gymorth {flagName} sydd angen i chi ofyn amdano?",
+      "heading": "Pa gefnogaeth {flagName} ydych chi eisiau gofyn amdano?",
       "hint": "Dechreuwch deipio i ddewis y cymorth",
       "notListed": "Nid yw'r gefnogaeth wedi'i chynnwys",
       "control": "Rhowch y math o gefnogaeth y mae arnoch ei hangen"

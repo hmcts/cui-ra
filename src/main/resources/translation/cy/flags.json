@@ -60,7 +60,7 @@
         "empty": "Disgrifiwch pa gymorth rydych chi eisiau dod gyda chi, a pham"
       }
     },
-    "noSupport": "Nid oes angen i mi ddod â chymorth gyda mi ar hyn o bryd"
+    "noSupport": "Nid oes angen i mi ddod â chefnogaeth gyda mi ar hyn o bryd"
   },
   "RA0006": {
     "blurb": "Meddyliwch beth fyddai ei angen arnoch pe bai'r gwrandawiad yn cael ei gynnal mewn adeilad, dros y ffôn neu drwy fideo.",
@@ -133,15 +133,15 @@
   "RA0015": {},
   "RA0016": {},
   "RA0017": {
-    "control": "Describe what guidance you need to complete forms",
+    "control": "Disgrifiwch pa ganllawiau sydd eu hangen arnoch i lenwi ffurflenni",
     "error": {
-      "empty": "Describe what guidance you need to complete forms"
+      "empty": "Disgrifiwch pa ganllawiau sydd eu hangen arnoch i lenwi ffurflenni"
     }
   },
   "RA0018": {
-    "control": "Describe what support you need with filling forms",
+    "control": "Disgrifiwch pa gefnogaeth sydd ei angen arnoch i lenwi ffurflenni",
     "error": {
-      "empty": "Describe what support you need with filling forms"
+      "empty": "Disgrifiwch pa gefnogaeth sydd ei angen arnoch i lenwi ffurflenni"
     }
   },
   "RA0019": {},
@@ -226,9 +226,9 @@
     "blurb": "Os oes arnoch cyfieithydd/dehonglydd sydd y rhyw o'ch dewis chi, dewiswch 'Nodi fy ngofynion iaith'",
     "notListed": "Nodi fy ngofynion iaith ",
     "OT0001": {
-      "control": "Enter your sign language - include your preferred gender if required",
+      "control": "Nodwch eich iaith arwyddion - cynhwyswch eich dewis rhyw os oes angen",
       "error": {
-        "empty": "Enter your sign language - include your preferred gender if required"
+        "empty": "Nodwch eich iaith arwyddion - cynhwyswch eich dewis rhyw os oes angen"
       }
     }
   },
