@@ -25,7 +25,7 @@
         {% set autocompleteHint = _t(parent.value.flagCode + '.autoCompleteHint') or _t('form.typeahead.hint') %}
         {{ accessibleAutocomplete({
                 name: "selected",
-                hint: autocompleteHint,
+                text: autocompleteHint,
                 opts: parent._listOfValues,
                 value: parent.value.subTypeKey,
                 label: _t('form.typeahead.hint')

@@ -28,9 +28,9 @@
       "empty": "Select whether you need help with forms"
     },
     "OT0001": {
-      "control": "Describe what support you need with forms",
+      "control": "Describe what help you need with forms",
       "error": {
-        "empty": "Describe what support you need with forms"
+        "empty": "Describe what help you need with forms"
       }
     },
     "noSupport": "I do not need any help with forms at this time"

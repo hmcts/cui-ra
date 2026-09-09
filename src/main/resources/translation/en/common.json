@@ -1,7 +1,7 @@
 {
   "title": "Reasonable Adjustments – HMCTS - GOV.UK",
   "phase": "Beta",
-  "feedback": "This is a new service.Help us improve it and <a href=\"https://www.smartsurvey.co.uk/s/your_support/?pageurl={url}\" class=\"govuk-link\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"Feedback: This link will open in a new tab. You'll need to return to this tab to continue with your application.\">give your feedback (opens in new tab).</a>",
+  "feedback": "This is a new service. Help us improve it and <a href=\"https://www.smartsurvey.co.uk/s/your_support/?pageurl={url}\" class=\"govuk-link\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"Feedback: This link will open in a new tab. You'll need to return to this tab to continue with your application.\">give your feedback (opens in new tab).</a>",
   "startNow": "Start now",
   "continue": "Continue",
   "cancel": "Cancel",
@@ -80,11 +80,11 @@
     }
   },
   "review": {
-    "heading": "Review the support you've requested",
+    "heading": "Review the support you've asked for",
     "nameOfParty": "Name of party",
     "support": {
-      "previous": "Support you've already requested",
-      "new": "New support you want to request now",
+      "previous": "Support you've already asked for",
+      "new": "New support you want to ask for",
       "notNeeded": "Support you no longer need"
     },
     "actions": {
