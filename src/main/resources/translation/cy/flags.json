@@ -28,9 +28,9 @@
       "empty": "Dewiswch p'un a ydych eisiau cymorth gyda ffurflenni"
     },
     "OT0001": {
-      "control": "Disgrifiwch pa gymorth sydd ei angen arnoch i lenwi ffurflenni",
+      "control": "Disgrifiwch pa gymorth rydych chi ei angen gyda'r ffurflenni",
       "error": {
-        "empty": "Disgrifiwch pa gymorth sydd ei angen arnoch i lenwi ffurflenni"
+        "empty": "Disgrifiwch pa gymorth rydych chi ei angen gyda'r ffurflenni"
       }
     },
     "noSupport": "Nid oes arnaf angen unrhyw gymorth gyda ffurflenni ar hyn o bryd"
