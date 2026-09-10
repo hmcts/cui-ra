@@ -22,7 +22,7 @@ Feature: Not selecting anything and trying to proceed should not de-select paren
 
     When I click on the button labeled 'Continue'
 
-    Then I am presented with the following error message 'Select whether you need adjustments to get to, into and around our buildings'
+    Then I am presented with the following error message 'Select whether you need help travelling to, or moving around buildings'
 
     When I click on the link labeled 'Back'
 

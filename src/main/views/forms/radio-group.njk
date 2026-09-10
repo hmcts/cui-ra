@@ -14,6 +14,24 @@
 {% block form %}
 
 {% set count = '80' %}
+{% set selectionError = '' %}
+{% if validationErrors and (validationErrors | length > 0) %}
+  {% for key, error in validationErrors %}
+    {% if (key.includes('_enabled-') or key === 'selected') and not selectionError %}
+      {% if _t(error) %}
+        {% set selectionError = _t(error) %}
+      {% else %}
+        {% set selectionError = 'error' %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if selectionError %}
+  <p id="radio-group-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> {{ selectionError }}
+  </p>
+{% endif %}
 
       <div class="govuk-radios" data-module="govuk-radios">
 
@@ -34,6 +52,7 @@
         </div>
 
         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other">
+          {% set otherTextError = validationErrors and validationErrors['other-text-area'] %}
             <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="{{count}}"
                 data-i18n.characters-under-limit.other="{{ _t('form.charCount.charactersUnderLimit.other') }}"
                 data-i18n.characters-under-limit.one="{{ _t('form.charCount.charactersUnderLimit.one') }}"
@@ -45,15 +64,14 @@
                     <label id="other-control" class="govuk-label" for="other-text-area">
                         {{ _t('form.radio.control') }}
                     </label>
-                    {% if parent._errors|length %}
+              {% if otherTextError %}
                       <p id="more-detail-error" class="govuk-error-message">
-                          {% for error in parent._errors %}
-                              <span class="govuk-visually-hidden">Error:</span> {% if _t(error) %}{{ _t(error) }}{% else %}error{% endif %}
-                          {% endfor %}
+                  <span class="govuk-visually-hidden">Error:</span>
+                  {% if _t(otherTextError) %}{{ _t(otherTextError) }}{% else %}error{% endif %}
                       </p>
                     {% endif %}
                     <textarea id="other-text-area" rows="5" aria-describedby="other-info other-hint" class="govuk-textarea govuk-js-character-count
-                    {% if parent._errors|length %}govuk-input--error{% endif %}" name="data[{{ parent.id }}][{{inputName}}]" type="text" spellcheck="false">{% if parent.value.subTypeKey === null or  parent.value.subTypeKey === undefined %}{{ parent.value[inputName] }}{% endif %}</textarea>
+              {% if otherTextError %}govuk-input--error{% endif %}" name="data[{{ parent.id }}][{{inputName}}]" type="text" spellcheck="false">{% if parent.value.subTypeKey === null or  parent.value.subTypeKey === undefined %}{{ parent.value[inputName] }}{% endif %}</textarea>
                 </div>
                 <div id="other-info" class="govuk-hint govuk-character-count__message">
                     {{ _r(_t('form.charCount.hint'), {count: count}) }}
@@ -66,7 +84,7 @@
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="none" name="selected" type="radio" value="none">
           <label class="govuk-label govuk-radios__label" for="none">
-            {{ _t('form.noSupport') }}
+            {{ _t(parent.value.flagCode + '.noSupport') or _t('form.noSupport') }}
           </label>
         </div>
 

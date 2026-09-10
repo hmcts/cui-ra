@@ -464,7 +464,7 @@
                     {
                       "name": "Guidance on how to complete forms",
                       "hearingRelevant": false,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0017",
@@ -477,7 +477,7 @@
                     {
                       "name": "Support filling in forms",
                       "hearingRelevant": false,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0018",

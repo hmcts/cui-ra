@@ -3141,12 +3141,7 @@
     "_isParent": true,
     "_isMaster": false,
     "_errors": [],
-    "_childIds": [
-      "PF0001-RA0001-RA0007-RA0034",
-      "PF0001-RA0001-RA0007-RA0036",
-      "PF0001-RA0001-RA0007-RA0035",
-      "PF0001-RA0001-RA0007-OT0001"
-    ],
+    "_childIds": ["PF0001-RA0001-RA0007-RA0034", "PF0001-RA0001-RA0007-RA0036", "PF0001-RA0001-RA0007-RA0035"],
     "id": "PF0001-RA0001-RA0007",
     "value": {
       "name": "I need to request a certain type of hearing",
@@ -3262,39 +3257,6 @@
       ],
       "hearingRelevant": "Yes",
       "flagCode": "RA0035",
-      "status": "Requested",
-      "availableExternally": "Yes"
-    },
-    "_parentId": "PF0001-RA0001-RA0007"
-  },
-  {
-    "_flagComment": true,
-    "_isCategoryPage": false,
-    "_enabled": false,
-    "_other": false,
-    "_isParent": false,
-    "_isMaster": false,
-    "_errors": [],
-    "_childIds": [],
-    "id": "PF0001-RA0001-RA0007-OT0001",
-    "value": {
-      "name": "Other",
-      "name_cy": "Arall",
-      "dateTimeModified": "12-07-2023 13:28:21",
-      "dateTimeCreated": "12-07-2023 13:28:21",
-      "path": [
-        {
-          "name": "Party"
-        },
-        {
-          "name": "Reasonable adjustment"
-        },
-        {
-          "name": "I need to request a certain type of hearing"
-        }
-      ],
-      "hearingRelevant": "Yes",
-      "flagCode": "OT0001",
       "status": "Requested",
       "availableExternally": "Yes"
     },

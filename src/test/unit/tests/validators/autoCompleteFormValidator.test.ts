@@ -24,6 +24,7 @@ describe('FormValidator', () => {
       const keys = Object.keys(validationErrors);
 
       expect(keys).not.toHaveLength(0);
+      expect(validationErrors).toHaveProperty('custom-accessible-autocomplete');
     });
 
     test('should pass on sign language interpreter auto complete list validation', async () => {

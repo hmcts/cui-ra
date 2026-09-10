@@ -21,9 +21,10 @@ describe('FormValidator', () => {
 
   describe('Validate Body', () => {
     test('Should fail body validation', async () => {
-      const [isValid] = await FormValidator.validateBody(parent, formModel);
+      const [isValid, validationErrors] = await FormValidator.validateBody(parent, formModel);
 
       expect(isValid).toBe(false);
+      expect(validationErrors).toHaveProperty(`_enabled-${parent._childIds[0]}`);
     });
   });
 
@@ -40,8 +41,11 @@ describe('FormValidator', () => {
       const [validationErrors] = await FormValidator.validate(children, parent);
 
       const keys = Object.keys(validationErrors);
+      const otherChild = children.find(item => item.value.flagCode === Common.OTHER_FLAG_CODE);
 
       expect(keys).not.toHaveLength(0);
+      expect(otherChild).toBeDefined();
+      expect(validationErrors).toHaveProperty(`flagComment-${otherChild?.id}`);
     });
 
     test('should pass checkbox validation', async () => {

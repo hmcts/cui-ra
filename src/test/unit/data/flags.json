@@ -464,7 +464,7 @@
                     {
                       "name": "Guidance on how to complete forms",
                       "hearingRelevant": false,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0017",
@@ -477,7 +477,7 @@
                     {
                       "name": "Support filling in forms",
                       "hearingRelevant": false,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Active",
                       "externallyAvailable": true,
                       "flagCode": "RA0018",
@@ -845,7 +845,7 @@
                     {
                       "name": "In person hearing",
                       "hearingRelevant": true,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0034",
@@ -858,7 +858,7 @@
                     {
                       "name": "Video hearing",
                       "hearingRelevant": true,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0035",
@@ -871,7 +871,7 @@
                     {
                       "name": "Phone hearing",
                       "hearingRelevant": true,
-                      "flagComment": false,
+                      "flagComment": true,
                       "defaultStatus": "Requested",
                       "externallyAvailable": true,
                       "flagCode": "RA0036",
