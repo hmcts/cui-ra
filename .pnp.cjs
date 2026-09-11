@@ -108,7 +108,7 @@ const RAW_RUNTIME_STATE =
           ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
           ["otplib", "npm:12.0.1"],\
           ["pa11y", "npm:9.1.1"],\
-          ["playwright", "npm:1.62.1"],\
+          ["playwright", "npm:1.63.0"],\
           ["prettier", "npm:3.9.6"],\
           ["puppeteer", "npm:24.43.1"],\
           ["redis", "npm:5.12.1"],\
@@ -10598,7 +10598,7 @@ const RAW_RUNTIME_STATE =
           ["nunjucks", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:3.2.4"],\
           ["otplib", "npm:12.0.1"],\
           ["pa11y", "npm:9.1.1"],\
-          ["playwright", "npm:1.62.1"],\
+          ["playwright", "npm:1.63.0"],\
           ["prettier", "npm:3.9.6"],\
           ["puppeteer", "npm:24.43.1"],\
           ["redis", "npm:5.12.1"],\
@@ -12805,14 +12805,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["fsevents", [\
-      ["patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1", {\
-        "packageLocation": "./.yarn/unplugged/fsevents-patch-19706e7e35/node_modules/fsevents/",\
-        "packageDependencies": [\
-          ["fsevents", "patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"],\
-          ["node-gyp", "npm:12.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1", {\
         "packageLocation": "./.yarn/unplugged/fsevents-patch-6b67494872/node_modules/fsevents/",\
         "packageDependencies": [\
@@ -18128,21 +18120,20 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["playwright", [\
-      ["npm:1.62.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/playwright-npm-1.62.1-e8ce910651-10c0.zip/node_modules/playwright/",\
+      ["npm:1.63.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/playwright-npm-1.63.0-f27e8a40d2-10c0.zip/node_modules/playwright/",\
         "packageDependencies": [\
-          ["fsevents", "patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"],\
-          ["playwright", "npm:1.62.1"],\
-          ["playwright-core", "npm:1.62.1"]\
+          ["playwright", "npm:1.63.0"],\
+          ["playwright-core", "npm:1.63.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["playwright-core", [\
-      ["npm:1.62.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/playwright-core-npm-1.62.1-eeafaf21b5-10c0.zip/node_modules/playwright-core/",\
+      ["npm:1.63.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/playwright-core-npm-1.63.0-ef52743921-10c0.zip/node_modules/playwright-core/",\
         "packageDependencies": [\
-          ["playwright-core", "npm:1.62.1"]\
+          ["playwright-core", "npm:1.63.0"]\
         ],\
         "linkType": "HARD"\
       }]\
