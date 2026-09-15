@@ -10065,10 +10065,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["colord", [\
-      ["npm:2.9.3", {\
-        "packageLocation": "../../.yarn/berry/cache/colord-npm-2.9.3-5c35c27898-10c0.zip/node_modules/colord/",\
+      ["npm:2.10.0", {\
+        "packageLocation": "../../.yarn/berry/cache/colord-npm-2.10.0-08c0b28db5-10c0.zip/node_modules/colord/",\
         "packageDependencies": [\
-          ["colord", "npm:2.9.3"]\
+          ["colord", "npm:2.10.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20489,7 +20489,7 @@ const RAW_RUNTIME_STATE =
           ["@csstools/media-query-list-parser", "virtual:f8bf31973fffb2fafc47647aa16299b488bf6840e7a439e39fb37a7de93c6333159caed191f78d81bb1e4161e606487eb52908be240da0646484b5026ab814f0#npm:5.0.0"],\
           ["@csstools/selector-resolve-nested", "virtual:f8bf31973fffb2fafc47647aa16299b488bf6840e7a439e39fb37a7de93c6333159caed191f78d81bb1e4161e606487eb52908be240da0646484b5026ab814f0#npm:4.0.0"],\
           ["@csstools/selector-specificity", "virtual:f8bf31973fffb2fafc47647aa16299b488bf6840e7a439e39fb37a7de93c6333159caed191f78d81bb1e4161e606487eb52908be240da0646484b5026ab814f0#npm:6.0.0"],\
-          ["colord", "npm:2.9.3"],\
+          ["colord", "npm:2.10.0"],\
           ["cosmiconfig", "virtual:f8bf31973fffb2fafc47647aa16299b488bf6840e7a439e39fb37a7de93c6333159caed191f78d81bb1e4161e606487eb52908be240da0646484b5026ab814f0#npm:9.0.2"],\
           ["css-functions-list", "npm:3.3.3"],\
           ["css-tree", "npm:3.2.1"],\
