@@ -158,7 +158,7 @@ Feature: New Journey
 
     When I click on the button labeled 'Continue'
 
-    Then I am navigated to "Review the support you've requested" page
+    Then I am navigated to "Review the support you've asked for" page
     Then I find 'Contact us for help' text
 
     When I click the button with ID "#submit-review"
