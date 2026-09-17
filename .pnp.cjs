@@ -28,7 +28,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@azure/identity", "npm:4.13.2"],\
+          ["@azure/identity", "npm:4.13.3"],\
           ["@azure/keyvault-secrets", "npm:4.11.2"],\
           ["@babel/core", "npm:8.0.5"],\
           ["@babel/eslint-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:8.0.5"],\
@@ -50,7 +50,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:30.0.0"],\
           ["@types/lodash", "npm:4.17.25"],\
-          ["@types/node", "npm:24.13.4"],\
+          ["@types/node", "npm:24.13.5"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.7"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -109,7 +109,7 @@ const RAW_RUNTIME_STATE =
           ["otplib", "npm:12.0.1"],\
           ["pa11y", "npm:9.1.1"],\
           ["playwright", "npm:1.63.0"],\
-          ["prettier", "npm:3.9.6"],\
+          ["prettier", "npm:3.9.7"],\
           ["puppeteer", "npm:24.43.1"],\
           ["redis", "npm:5.12.1"],\
           ["reflect-metadata", "npm:0.2.2"],\
@@ -288,8 +288,8 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@azure/identity", [\
-      ["npm:4.13.2", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-identity-npm-4.13.2-c400a0294d-10c0.zip/node_modules/@azure/identity/",\
+      ["npm:4.13.3", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-identity-npm-4.13.3-83ab1c9ae9-10c0.zip/node_modules/@azure/identity/",\
         "packageDependencies": [\
           ["@azure/abort-controller", "npm:2.1.2"],\
           ["@azure/core-auth", "npm:1.10.1"],\
@@ -298,10 +298,10 @@ const RAW_RUNTIME_STATE =
           ["@azure/core-rest-pipeline", "npm:1.22.2"],\
           ["@azure/core-tracing", "npm:1.3.1"],\
           ["@azure/core-util", "npm:1.13.1"],\
-          ["@azure/identity", "npm:4.13.2"],\
+          ["@azure/identity", "npm:4.13.3"],\
           ["@azure/logger", "npm:1.3.0"],\
           ["@azure/msal-browser", "npm:5.7.0"],\
-          ["@azure/msal-node", "npm:5.6.0"],\
+          ["@azure/msal-node", "npm:6.0.1"],\
           ["open", "npm:10.2.0"],\
           ["tslib", "npm:2.8.1"]\
         ],\
@@ -367,10 +367,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@azure/msal-common", [\
-      ["npm:16.13.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-msal-common-npm-16.13.0-5514c573cd-10c0.zip/node_modules/@azure/msal-common/",\
+      ["npm:16.14.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-msal-common-npm-16.14.1-54e4c8b52f-10c0.zip/node_modules/@azure/msal-common/",\
         "packageDependencies": [\
-          ["@azure/msal-common", "npm:16.13.0"]\
+          ["@azure/msal-common", "npm:16.14.1"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -383,11 +383,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@azure/msal-node", [\
-      ["npm:5.6.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-msal-node-npm-5.6.0-dd87ed4591-10c0.zip/node_modules/@azure/msal-node/",\
+      ["npm:6.0.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-msal-node-npm-6.0.1-70ef5bab4e-10c0.zip/node_modules/@azure/msal-node/",\
         "packageDependencies": [\
-          ["@azure/msal-common", "npm:16.13.0"],\
-          ["@azure/msal-node", "npm:5.6.0"],\
+          ["@azure/msal-common", "npm:16.14.1"],\
+          ["@azure/msal-node", "npm:6.0.1"],\
           ["jsonwebtoken", "npm:9.0.2"]\
         ],\
         "linkType": "HARD"\
@@ -4172,7 +4172,7 @@ const RAW_RUNTIME_STATE =
       ["npm:1.4.1", {\
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/@hmcts-properties-volume-npm-1.4.1-b28ede9351-10c0.zip/node_modules/@hmcts/properties-volume/",\
         "packageDependencies": [\
-          ["@azure/identity", "npm:4.13.2"],\
+          ["@azure/identity", "npm:4.13.3"],\
           ["@azure/keyvault-secrets", "npm:4.11.2"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
           ["@hmcts/properties-volume", "npm:1.4.1"],\
@@ -6679,10 +6679,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:24.13.4", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-node-npm-24.13.4-5c46224e54-10c0.zip/node_modules/@types/node/",\
+      ["npm:24.13.5", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-node-npm-24.13.5-deb00c4161-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:24.13.4"],\
+          ["@types/node", "npm:24.13.5"],\
           ["undici-types", "npm:7.18.2"]\
         ],\
         "linkType": "HARD"\
@@ -10690,7 +10690,7 @@ const RAW_RUNTIME_STATE =
       ["workspace:.", {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@azure/identity", "npm:4.13.2"],\
+          ["@azure/identity", "npm:4.13.3"],\
           ["@azure/keyvault-secrets", "npm:4.11.2"],\
           ["@babel/core", "npm:8.0.5"],\
           ["@babel/eslint-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:8.0.5"],\
@@ -10712,7 +10712,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:30.0.0"],\
           ["@types/lodash", "npm:4.17.25"],\
-          ["@types/node", "npm:24.13.4"],\
+          ["@types/node", "npm:24.13.5"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.7"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -10771,7 +10771,7 @@ const RAW_RUNTIME_STATE =
           ["otplib", "npm:12.0.1"],\
           ["pa11y", "npm:9.1.1"],\
           ["playwright", "npm:1.63.0"],\
-          ["prettier", "npm:3.9.6"],\
+          ["prettier", "npm:3.9.7"],\
           ["puppeteer", "npm:24.43.1"],\
           ["redis", "npm:5.12.1"],\
           ["reflect-metadata", "npm:0.2.2"],\
@@ -18437,10 +18437,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["prettier", [\
-      ["npm:3.9.6", {\
-        "packageLocation": "./.yarn/unplugged/prettier-npm-3.9.6-ad164eec07/node_modules/prettier/",\
+      ["npm:3.9.7", {\
+        "packageLocation": "./.yarn/unplugged/prettier-npm-3.9.7-30395a20fe/node_modules/prettier/",\
         "packageDependencies": [\
-          ["prettier", "npm:3.9.6"]\
+          ["prettier", "npm:3.9.7"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -21238,7 +21238,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:24.13.4"],\
+          ["@types/node", "npm:24.13.5"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
