@@ -12,7 +12,7 @@ Feature: Existing Journey
 
     When I click the button with ID '#start-now'
 
-    Then I am navigated to "Review the support you've requested" page
+    Then I am navigated to "Review the support you've asked for" page
 
     When I click the button with ID '#review-action-new'
 
