@@ -1,7 +1,7 @@
 {
   "title": "Reasonable Adjustments – HMCTS - GOV.UK",
   "phase": "Beta",
-  "feedback": "This is a new service.Help us improve it and <a href=\"https://www.smartsurvey.co.uk/s/your_support/?pageurl={url}\" class=\"govuk-link\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"Feedback: This link will open in a new tab. You'll need to return to this tab to continue with your application.\">give your feedback (opens in new tab).</a>",
+  "feedback": "This is a new service. Help us improve it and <a href=\"https://www.smartsurvey.co.uk/s/your_support/?pageurl={url}\" class=\"govuk-link\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"Feedback: This link will open in a new tab. You'll need to return to this tab to continue with your application.\">give your feedback (opens in new tab).</a>",
   "startNow": "Start now",
   "continue": "Continue",
   "cancel": "Cancel",
@@ -48,9 +48,12 @@
     "blurb": "You will be able to review your application before you submit it."
   },
   "form": {
-    "command": "Select all that apply to you",
+    "command": "Select all that apply",
     "charCount": {
       "hint": "You can enter up to {count} characters",
+      "error": {
+        "long": "in 200 characters or less"
+      },
       "charactersUnderLimit": {
         "other": "You have %{count} characters remaining",
         "one": "You have %{count} character remaining"
@@ -61,12 +64,12 @@
         "one": "You have %{count} character too many"
       }
     },
-    "noSupport": "I do not need any support at this time",
+    "noSupport": "I do not need any reasonable adjustments at this time",
     "problem": "There is a problem",
     "submitButton": "Continue",
     "typeahead": {
-      "heading": "Which {flagName} do you need to request?",
-      "hint": "Start typing to choose the support, or select 'The support is not listed",
+      "heading": "Which {flagName} support do you need to ask for?",
+      "hint": "Start typing to choose the support",
       "notListed": "The support is not listed",
       "control": "Enter the type of support you need to request"
     },
@@ -77,11 +80,11 @@
     }
   },
   "review": {
-    "heading": "Review the support you've requested",
+    "heading": "Review the support you've asked for",
     "nameOfParty": "Name of party",
     "support": {
-      "previous": "Support you've already requested",
-      "new": "New support you want to request now",
+      "previous": "Support you've already asked for",
+      "new": "New support you want to ask for",
       "notNeeded": "Support you no longer need"
     },
     "actions": {
