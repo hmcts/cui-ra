@@ -61,7 +61,7 @@
                       {% if otherTextError %}
                         <p id="more-detail-error" class="govuk-error-message">
                                 <span class="govuk-visually-hidden">Error:</span>
-                                {% if _t(otherTextError) %}{{ _t(otherTextError) }}{% else %}error{% endif %}
+                                {% if _t(otherTextError, {count: count}) %}{{ _t(otherTextError, {count: count}) }}{% else %}error{% endif %}
                         </p>
                       {% endif %}
                       <textarea id="other" rows="{{row}}" aria-label="{{ _t(parent.value.flagCode + '.OT0001.control') or _t('form.typeahead.control') }}" aria-labelledby="other-control" aria-describedby="other-info" class="govuk-textarea govuk-js-character-count {% if otherTextError %}govuk-input--error{% endif %}" name="data[{{ parent.id }}][{{inputName}}]" type="text" spellcheck="false">{% if parent.value.subTypeKey === null or  parent.value.subTypeKey === undefined %}{{ parent.value[inputName] }}{% endif %}</textarea>

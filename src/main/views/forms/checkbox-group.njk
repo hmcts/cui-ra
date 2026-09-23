@@ -76,7 +76,7 @@
                             {% if commentError %}
                                 <p id="more-detail-error" class="govuk-error-message">
                                     <span class="govuk-visually-hidden">Error:</span>
-                                    {% if _t(commentError) %}{{ _t(commentError) }}{% else %}error{% endif %}
+                                    {% if _t(commentError, {count: count}) %}{{ _t(commentError, {count: count}) }}{% else %}error{% endif %}
                                 </p>
                             {% endif %}
                             <textarea id="{{inputName}}-{{ item.id }}" rows="{{row}}" aria-labelledby="checkbox-label-{{item.id }} {{inputName}}-{{ item.id }}-control" aria-describedby="{{inputName}}-{{ item.id }}-info {{inputName}}-{{ item.id }}-hint" class="govuk-textarea govuk-js-character-count {% if commentError %}govuk-input--error{% endif %}" name="data[{{ item.id }}][{{inputName}}]" type="text" spellcheck="false">{{ item.value[inputName] }}</textarea>

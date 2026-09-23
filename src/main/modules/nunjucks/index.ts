@@ -30,29 +30,29 @@ export class Nunjucks {
       res.locals.hasSession = req.session?.sessioninit ?? false;
       res.locals.serviceName = req.session?.serviceName ?? null;
       res.locals.isDev = JSON.parse(config.get('isDev'));
-      res.locals._t = (key: string) => {
+      res.locals._t = (key: string, values: { [key: string]: string | number } = {}) => {
         const lang = req.session?.welsh ? 'cy' : 'en';
         const serviceId = req.session && req.session.hmctsserviceid ? req.session.hmctsserviceid.toUpperCase() : null;
         if (key.endsWith(Common.MAX_LENGTH_ERROR_SUFFIX) && key !== Common.MAX_LENGTH_ERROR_KEY) {
           const flagError = res.locals._t(key.replace(Common.MAX_LENGTH_ERROR_SUFFIX, '.empty'));
-          const maxLengthError = res.locals._t(Common.MAX_LENGTH_ERROR_KEY);
+          const maxLengthError = res.locals._t(Common.MAX_LENGTH_ERROR_KEY, values);
           return `${flagError} ${maxLengthError}`;
         }
         let result;
         if (serviceId) {
           const envInstance = app.locals.ENV_INSTANCE;
           let serviceKey = `${serviceId}.${key}-${envInstance}`;
-          result = res.__({ phrase: `${serviceKey}`, locale: lang });
+          result = res.__({ phrase: `${serviceKey}`, locale: lang }, values);
           if (result !== serviceKey) {
             return result;
           }
           serviceKey = `${serviceId}.${key}`;
-          result = res.__({ phrase: `${serviceKey}`, locale: lang });
+          result = res.__({ phrase: `${serviceKey}`, locale: lang }, values);
           if (result !== serviceKey) {
             return result;
           }
         }
-        result = res.__({ phrase: `${key}`, locale: lang });
+        result = res.__({ phrase: `${key}`, locale: lang }, values);
         if (result !== key) {
           return result;
         }
