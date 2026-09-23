@@ -77,7 +77,7 @@
     "noSupport": "I do not need something else to feel comfortable at this time"
   },
   "RA0007": {
-    "blurb": "The [court/tribunal] will consider your request for a hearing type and tell you if they can support it.The [court/tribunal] may need to decide on the hearing type. We will send you instructions on how to attend before the hearing.",
+    "blurb": "The [court/tribunal] will consider your request for a hearing type and tell you if they can support it. The [court/tribunal] may need to decide on the hearing type. We will send you instructions on how to attend before the hearing.",
     "hint": "For example, in person, by video or by phone",
     "error": {
       "empty": "Select whether you need to ask for a certain type of hearing"
@@ -191,7 +191,7 @@
   "RA0032": {},
   "RA0033": {},
   "RA0034": {
-    "hint": "Where you attend the court orthe tribunal",
+    "hint": "Where you attend the court or the tribunal",
     "control": "Tell us why you would need an in-person hearing",
     "error": {
       "empty": "Tell us why you would need an in-person hearing"
