@@ -100,7 +100,7 @@
   },
   "RA0009": {
     "blurb": "Think about all communications with the [court/tribunal], as well as what you might need at a hearing. Consider remote and in-person hearings in case your preferred hearing type is not possible.",
-    "hint": "you can tell us which type of hearing enhancement in the next step",
+    "hint": "You can tell us which type of hearing enhancement in the next step",
     "control": "Type of hearing enhancement system",
     "error": {
       "empty": "Select which type of hearing enhancement system you need"
@@ -213,12 +213,13 @@
   },
   "RA0037": {},
   "RA0038": {
-    "hint": "a person to help you if you have communication needs by providing professional support to participate in a hearing"
+    "hint": "A person to help you if you have communication needs by providing professional support to participate in a hearing"
   },
   "RA0039": {},
   "RA0040": {},
   "RA0041": {},
   "RA0042": {
+    "hint": "You can tell us which type of interpreter in the next step",
     "autoCompleteHint": "Start typing to choose the sign language",
     "error": {
       "empty": "Select which sign Language Interpreter you need"

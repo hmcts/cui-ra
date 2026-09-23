@@ -100,7 +100,7 @@
   },
   "RA0009": {
     "blurb": "Meddyliwch am yr holl ohebiaeth â’r [llys/tribiwnlys], ynghyd â’r hyn y gallwch fod ei angen mewn gwrandawiad. Ystyriwch wrandawiadau o bell a rhai wyneb yn wyneb, rhag ofn bod y math o wrandawiad o’ch dewis ddim yn bosibl.",
-    "hint": "gallwch ddweud wrthym pa fath o gymorth clyw yn y cam nesaf",
+    "hint": "Gallwch ddweud wrthym pa fath o gymorth clyw yn y cam nesaf",
     "control": "Math o system gwella clyw",
     "error": {
       "empty": "Dewiswch pa fath o welliannau gwrandawiad mae arnoch angen"
@@ -213,12 +213,13 @@
   },
   "RA0037": {},
   "RA0038": {
-    "hint": "rhywun i’ch helpu os oes gennych anghenion cyfathrebu drwy ddarparu cymorth proffesiynol i gymryd rhan mewn gwrandawiad"
+    "hint": "Rhywun i’ch helpu os oes gennych anghenion cyfathrebu drwy ddarparu cymorth proffesiynol i gymryd rhan mewn gwrandawiad"
   },
   "RA0039": {},
   "RA0040": {},
   "RA0041": {},
   "RA0042": {
+    "hint": "Gallwch ddweud wrthym pa fath o ddehonglydd neu gyfieithydd yn y cam nesaf",
     "autoCompleteHint": "Dechreuwch deipio i ddewis yr iaith",
     "error": {
       "empty": "Dewiswch pa Ddehonglydd Iaith Arwyddion sydd ei angen arnoch"
