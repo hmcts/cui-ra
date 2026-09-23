@@ -3,6 +3,8 @@
 {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
+{% set count = '80' %}
+
 {% if welsh === false %}
     {% set inputName = 'subTypeValue' %}
     {% set radioValue = 'value' %}
@@ -13,13 +15,12 @@
 
 {% block form %}
 
-{% set count = '80' %}
 {% set selectionError = '' %}
 {% if validationErrors and (validationErrors | length > 0) %}
   {% for key, error in validationErrors %}
     {% if (key.includes('_enabled-') or key === 'selected') and not selectionError %}
-      {% if _t(error) %}
-        {% set selectionError = _t(error) %}
+      {% if _t(error, {count: count}) %}
+        {% set selectionError = _t(error, {count: count}) %}
       {% else %}
         {% set selectionError = 'error' %}
       {% endif %}

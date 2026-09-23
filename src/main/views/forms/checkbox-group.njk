@@ -2,6 +2,8 @@
 {% from "govuk/components/input/macro.njk" import govukInput %}
 {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
 
+{% set count = '200' %}
+
 {% if welsh === false %}
     {% set inputName = 'flagComment' %}
 {% else %}
@@ -14,8 +16,8 @@
     {% if validationErrors and (validationErrors | length > 0) %}
         {% for key, error in validationErrors %}
             {% if key.includes('_enabled-') and not checkboxError %}
-                {% if _t(error) %}
-                    {% set checkboxError = _t(error) %}
+                {% if _t(error, {count: count}) %}
+                    {% set checkboxError = _t(error, {count: count}) %}
                 {% else %}
                     {% set checkboxError = 'error' %}
                 {% endif %}
@@ -40,11 +42,9 @@
 
             {% if item.value.flagCode === 'OT0001' %}
                 {% set identifier = parent.value.flagCode + '.' + item.value.flagCode %}
-                {% set count = '200' %}
                 {% set row = '5' %}
             {% else %}
                 {% set identifier = item.value.flagCode %}
-                {% set count = '200' %}
                 {% set row = '1' %}
             {% endif %}
 
