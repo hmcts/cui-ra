@@ -52,7 +52,7 @@
     "charCount": {
       "hint": "You can enter up to {count} characters",
       "error": {
-        "long": "in 200 characters or less"
+        "long": "in %{count} characters or less"
       },
       "charactersUnderLimit": {
         "other": "You have %{count} characters remaining",

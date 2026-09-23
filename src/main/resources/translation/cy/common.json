@@ -52,7 +52,7 @@
     "charCount": {
       "hint": "Gallwch ddefnyddio hyd at {count} o nodau",
       "error": {
-        "long": "mewn 200 nod neu lai"
+        "long": "mewn %{count} nod neu lai"
       },
       "charactersUnderLimit": {
         "other": "Mae gennych %{count} nod yn weddill",
