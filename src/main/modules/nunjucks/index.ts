@@ -30,28 +30,37 @@ export class Nunjucks {
       res.locals.hasSession = req.session?.sessioninit ?? false;
       res.locals.serviceName = req.session?.serviceName ?? null;
       res.locals.isDev = JSON.parse(config.get('isDev'));
-      res.locals._t = (key: string) => {
+      res.locals._t = (key: string, values: { [key: string]: string } = {}) => {
         const lang = req.session?.welsh ? 'cy' : 'en';
         const serviceId = req.session && req.session.hmctsserviceid ? req.session.hmctsserviceid.toUpperCase() : null;
-        let result;
-        if (serviceId) {
-          const envInstance = app.locals.ENV_INSTANCE;
-          let serviceKey = `${serviceId}.${key}-${envInstance}`;
-          result = res.__({ phrase: `${serviceKey}`, locale: lang });
-          if (result !== serviceKey) {
-            return result;
+        const replaceValues = (text: string | null) =>
+          text?.replace(/%\{([^}]+)\}/g, (matched: string, name: string) => values[name] || matched) || null;
+        const translate = (translationKey: string) => {
+          const translationKeys = serviceId
+            ? [
+                `${serviceId}.${translationKey}-${app.locals.ENV_INSTANCE}`,
+                `${serviceId}.${translationKey}`,
+                translationKey,
+              ]
+            : [translationKey];
+
+          for (const candidate of translationKeys) {
+            const result = res.__({ phrase: candidate, locale: lang });
+            if (result !== candidate) {
+              return replaceValues(result);
+            }
           }
-          serviceKey = `${serviceId}.${key}`;
-          result = res.__({ phrase: `${serviceKey}`, locale: lang });
-          if (result !== serviceKey) {
-            return result;
-          }
+
+          return null;
+        };
+
+        if (key.endsWith(Common.MAX_LENGTH_ERROR_SUFFIX) && key !== Common.MAX_LENGTH_ERROR_KEY) {
+          const flagError = translate(key.replace(Common.MAX_LENGTH_ERROR_SUFFIX, '.empty'));
+          const maxLengthError = translate(Common.MAX_LENGTH_ERROR_KEY);
+          return `${flagError} ${maxLengthError}`;
         }
-        result = res.__({ phrase: `${key}`, locale: lang });
-        if (result !== key) {
-          return result;
-        }
-        return null;
+
+        return translate(key);
       };
       res.locals._r = (text: string | undefined, values: { [key: string]: string } = {}) => {
         if (!values || !text) {
