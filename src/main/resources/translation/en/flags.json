@@ -80,9 +80,9 @@
     "blurb": "The [court/tribunal] will consider your request for a hearing type and tell you if they can support it. The [court/tribunal] may need to decide on the hearing type. We will send you instructions on how to attend before the hearing.",
     "hint": "For example, in person, by video or by phone",
     "error": {
-      "empty": "Select whether you need to ask for a certain type of hearing"
+      "empty": "Select whether you need to request for a certain type of hearing"
     },
-    "noSupport": "I do not need to ask for a certain type of hearing at this time"
+    "noSupport": "I do not need to request for a certain type of hearing at this time"
   },
   "RA0008": {
     "blurb": "Think about all communications with the [court/tribunal], as well as what you might need at a hearing. Consider remote and in-person hearings in case your preferred hearing type is not possible.",
