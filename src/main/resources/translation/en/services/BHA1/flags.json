@@ -142,9 +142,9 @@
       }
     },
     "RA0047": {
-      "control": "Tell us why you need an explantion of the court and who is in the hearing",
+      "control": "Tell us why you need an explanation of the court and who is in the hearing",
       "error": {
-        "empty": "Tell us why you need an explantion of the court and who is in the hearing"
+        "empty": "Tell us why you need an explanation of the court and who is in the hearing"
       }
     },
     "RA0042": {
