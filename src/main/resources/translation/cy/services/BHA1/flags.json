@@ -141,6 +141,12 @@
         "empty": "Dywedwch wrthym pam y byddai arnoch angen ymweld â'r lleoliad cyn y gwrandawiad"
       }
     },
+    "RA0047": {
+      "control": "Dywedwch wrthym pam fod arnoch angen esboniad gan y llys a phwy sydd yn y gwrandawiad",
+      "error": {
+        "empty": "Dywedwch wrthym pam fod arnoch angen esboniad gan y llys a phwy sydd yn y gwrandawiad"
+      }
+    },
     "RA0042": {
       "hint": "Gallwch ddweud wrthym pa fath o ddehonglydd neu gyfieithydd yn y cam nesaf"
     }
