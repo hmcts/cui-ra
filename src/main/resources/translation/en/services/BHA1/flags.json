@@ -141,6 +141,12 @@
         "empty": "Tell us why you would need a visit to the venue before the hearing"
       }
     },
+    "RA0047": {
+      "control": "Tell us why you need an explanation of the court and who is in the hearing",
+      "error": {
+        "empty": "Tell us why you need an explanation of the court and who is in the hearing"
+      }
+    },
     "RA0042": {
       "hint": "You can tell us which type of interpreter in the next step"
     }
