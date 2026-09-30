@@ -48,7 +48,7 @@
                       {% set key = key.replace('flagComment','flagComment_cy') %}
                    {% endif %}
                   <li>
-                      <a id="error-id-{{key}}" href="#{{key}}">{% if _t(error) %}{{ _t(error) }}{% else %}error{% endif %}</a>
+                      <a id="error-id-{{key}}" href="#{{key}}">{% if _t(error, {count: count}) %}{{ _t(error, {count: count}) }}{% else %}error{% endif %}</a>
                   </li>
                 {% endfor %}
               </ul>
