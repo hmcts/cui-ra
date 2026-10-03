@@ -50,7 +50,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:30.0.0"],\
           ["@types/lodash", "npm:4.17.25"],\
-          ["@types/node", "npm:24.19.0"],\
+          ["@types/node", "npm:24.19.1"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.7"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -114,7 +114,7 @@ const RAW_RUNTIME_STATE =
           ["redis", "npm:6.3.0"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["require-directory", "npm:2.1.1"],\
-          ["sass", "npm:1.105.0"],\
+          ["sass", "npm:1.105.1"],\
           ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.8"],\
           ["serve-favicon", "npm:2.5.1"],\
           ["sinon", "npm:21.1.2"],\
@@ -6764,10 +6764,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:24.19.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-node-npm-24.19.0-2c356d3955-10c0.zip/node_modules/@types/node/",\
+      ["npm:24.19.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@types-node-npm-24.19.1-7ff7cdf8c6-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:24.19.0"],\
+          ["@types/node", "npm:24.19.1"],\
           ["undici-types", "npm:7.24.6"]\
         ],\
         "linkType": "HARD"\
@@ -10788,7 +10788,7 @@ const RAW_RUNTIME_STATE =
           ["@types/i18n", "npm:0.13.12"],\
           ["@types/jest", "npm:30.0.0"],\
           ["@types/lodash", "npm:4.17.25"],\
-          ["@types/node", "npm:24.19.0"],\
+          ["@types/node", "npm:24.19.1"],\
           ["@types/nunjucks", "npm:3.2.6"],\
           ["@types/require-directory", "npm:2.1.7"],\
           ["@types/serve-favicon", "npm:2.5.7"],\
@@ -10852,7 +10852,7 @@ const RAW_RUNTIME_STATE =
           ["redis", "npm:6.3.0"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["require-directory", "npm:2.1.1"],\
-          ["sass", "npm:1.105.0"],\
+          ["sass", "npm:1.105.1"],\
           ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.8"],\
           ["serve-favicon", "npm:2.5.1"],\
           ["sinon", "npm:21.1.2"],\
@@ -19615,13 +19615,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["sass", [\
-      ["npm:1.105.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/sass-npm-1.105.0-2095efa3a7-10c0.zip/node_modules/sass/",\
+      ["npm:1.105.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/sass-npm-1.105.1-098d53c46e-10c0.zip/node_modules/sass/",\
         "packageDependencies": [\
           ["@parcel/watcher", "npm:2.5.1"],\
           ["chokidar", "npm:5.0.0"],\
           ["immutable", "npm:5.1.5"],\
-          ["sass", "npm:1.105.0"],\
+          ["sass", "npm:1.105.1"],\
           ["source-map-js", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
@@ -19646,7 +19646,7 @@ const RAW_RUNTIME_STATE =
           ["@types/webpack", null],\
           ["neo-async", "npm:2.6.2"],\
           ["node-sass", null],\
-          ["sass", "npm:1.105.0"],\
+          ["sass", "npm:1.105.1"],\
           ["sass-embedded", null],\
           ["sass-loader", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:16.0.8"],\
           ["webpack", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:5.111.1"]\
@@ -21369,7 +21369,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:24.19.0"],\
+          ["@types/node", "npm:24.19.1"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
