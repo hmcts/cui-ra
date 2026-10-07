@@ -29,7 +29,7 @@ export class Helmet {
       googleAnalyticsDomain,
       dynatraqceDomain,
       googleTagManager,
-      "'sha256-GUQ5ad8JK5KmEWmROf3LZd9ge94daqNvd8xy9YS1iDw='",
+      "'sha256-HxG8QnSuzJ7kfEbpeSy56iZdQ3DJYcBBLGZBvy96Pi4='",
       `'nonce-${nonce}'`,
     ];
 
