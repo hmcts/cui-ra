@@ -33,9 +33,6 @@ export class Helmet {
       "'sha256-L7viC3kUpXu9uCOi97VqCR2bLlMwSQlmLmSuuQ93ngU='",
       "'sha256-cOc8/Q4+OATTqNgYJd+hyNrB9tVugysskuk9pwdRAZ0='",
       "'sha256-rBTfOpsIlR4rBhsbh3QOqa2l3gfu4tj0gZGtO2N9jyc='",
-      "'sha256-xwGOGGMGQQ+IV0Om4xzgbDHXUh/+L1c375p0Pb6vF9A='",
-      "'sha256-9HGruJg4WccHXas5I1NmLn7tI1TDh6N26o6+/dy8sm4='",
-      "'sha256-6P5MeWusqb/jlpqd7IN1W3w5cT0VuxA2/MreM2XUQ04='",
       `'nonce-${nonce}'`,
     ];
 
