@@ -64,7 +64,7 @@ export class Helmet {
             imgSrc: [self, googleAnalyticsDomain, googleTagManager, 'fonts.gstatic.com'],
             objectSrc: [self],
             scriptSrc,
-            styleSrc: [self, 'fonts.googleapis.com'],
+            styleSrc: [self, 'fonts.googleapis.com', '*.googletagmanager.com'],
             manifestSrc: [self],
           },
         },
