@@ -61,7 +61,7 @@ export class Helmet {
             connectSrc: [self, dynatraqceDomain, googleAnalyticsDomain, googleTagManager],
             defaultSrc: ["'none'"],
             fontSrc: [self, 'data:', 'fonts.gstatic.com'],
-            imgSrc: [self, googleAnalyticsDomain, googleTagManager,'fonts.gstatic.com'],
+            imgSrc: [self, googleAnalyticsDomain, googleTagManager, 'fonts.gstatic.com'],
             objectSrc: [self],
             scriptSrc,
             styleSrc: [self, 'fonts.googleapis.com'],
