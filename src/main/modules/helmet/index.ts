@@ -60,11 +60,11 @@ export class Helmet {
           directives: {
             connectSrc: [self, dynatraqceDomain, googleAnalyticsDomain, googleTagManager],
             defaultSrc: ["'none'"],
-            fontSrc: [self, 'data:', 'https://fonts.gstatic.com'],
+            fontSrc: [self, 'data:', "https://fonts.gstatic.com"],
             imgSrc: [self, googleAnalyticsDomain, googleTagManager],
             objectSrc: [self],
             scriptSrc,
-            styleSrc: [self, 'https://fonts.googleapis.com'],
+            styleSrc: [self, "https://fonts.googleapis.com"],
             manifestSrc: [self],
           },
         },
