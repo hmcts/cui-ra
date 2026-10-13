@@ -7,7 +7,8 @@ EXIT_STATUS=0
 
 if [[ "$BROWSER_GROUP" == "" ]]
 then
-    BROWSER_GROUP=chrome yarn test-crossbrowser-e2e || EXIT_STATUS=$?
+    # we run functional tests with chrome, no need to repeat
+    # BROWSER_GROUP=chrome yarn test-crossbrowser-e2e || EXIT_STATUS=$?
     BROWSER_GROUP=firefox yarn test-crossbrowser-e2e || EXIT_STATUS=$?
     BROWSER_GROUP=safari yarn test-crossbrowser-e2e || EXIT_STATUS=$?
     BROWSER_GROUP=microsoft yarn test-crossbrowser-e2e || EXIT_STATUS=$?

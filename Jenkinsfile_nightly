@@ -29,7 +29,6 @@ withNightlyPipeline(type, product, component) {
       warnError('Failure in Playwright cross browser tests') {
         timeout(time: 120, unit: 'MINUTES') {
           try {
-            sh 'yarn playwright install msedge'
             sh 'yarn test:crossbrowser'
           } finally {
             steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'functional-output/crossbrowser/**'
