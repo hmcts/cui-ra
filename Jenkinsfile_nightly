@@ -20,6 +20,7 @@ def urlExclusions = params.ZAP_URL_EXCLUSIONS
 withNightlyPipeline(type, product, component) {
   env.TEST_URL = params.URL_TO_TEST
 
+  enableCrossBrowserTest()
   enableFullFunctionalTest()
 
   enableFortifyScan()
