@@ -6,8 +6,11 @@ import { randomUUID } from 'crypto';
 const googleAnalyticsDomain = '*.google-analytics.com';
 const dynatraqceDomain = '*.dynatrace.com';
 const googleTagManager = '*.googletagmanager.com';
-
 const self = "'self'";
+
+//Below are added for preview/debug purpose once tags configured in GA we can remove this
+const fontsGstaticDomain = 'fonts.gstatic.com';
+const fontsGoogleapisDomain = 'fonts.googleapis.com';
 
 /**
  * Module that enables helmet in the application
@@ -57,11 +60,11 @@ export class Helmet {
           directives: {
             connectSrc: [self, dynatraqceDomain, googleAnalyticsDomain, googleTagManager],
             defaultSrc: ["'none'"],
-            fontSrc: [self, 'data:', 'fonts.gstatic.com'],
-            imgSrc: [self, googleAnalyticsDomain, googleTagManager, 'fonts.gstatic.com'],
+            fontSrc: [self, 'data:'],
+            imgSrc: [self, googleAnalyticsDomain, googleTagManager, fontsGstaticDomain],
             objectSrc: [self],
             scriptSrc,
-            styleSrc: [self, 'fonts.googleapis.com', '*.googletagmanager.com'],
+            styleSrc: [self, googleTagManager, fontsGoogleapisDomain],
             manifestSrc: [self],
           },
         },
