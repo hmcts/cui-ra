@@ -11,6 +11,8 @@ const self = "'self'";
 //Below are added for preview/debug purpose once tags configured in GA we can remove this
 const fontsGstaticDomain = 'fonts.gstatic.com';
 const fontsGoogleapisDomain = 'fonts.googleapis.com';
+const sslGstaticDomain = 'https://ssl.gstatic.com';
+const wwwGstaticDomain = 'https://www.gstatic.com';
 
 /**
  * Module that enables helmet in the application
@@ -60,8 +62,8 @@ export class Helmet {
           directives: {
             connectSrc: [self, dynatraqceDomain, googleAnalyticsDomain, googleTagManager],
             defaultSrc: ["'none'"],
-            fontSrc: [self, 'data:'],
-            imgSrc: [self, googleAnalyticsDomain, googleTagManager, fontsGstaticDomain],
+            fontSrc: [self, 'data:', fontsGstaticDomain],
+            imgSrc: [self, googleAnalyticsDomain, googleTagManager, sslGstaticDomain, wwwGstaticDomain],
             objectSrc: [self],
             scriptSrc,
             styleSrc: [self, googleTagManager, fontsGoogleapisDomain],
