@@ -4,28 +4,28 @@ process.on('unhandledRejection', reason => {
 });
 
 const url = process.env.TEST_URL ? `${process.env.TEST_URL}/demo` : 'http://localhost:3100/demo';
+const testHeadlessBrowser = true;
+const waitForTimeout = 30000;
 
 export const config = {
   TEST_URL: url,
-  TestHeadlessBrowser: true,
+  TestHeadlessBrowser: testHeadlessBrowser,
   TestSlowMo: 250,
-  WaitForTimeout: 30000,
+  WaitForTimeout: waitForTimeout,
 
   Gherkin: {
     features: './features/**/*.feature',
     steps: ['../steps/common.ts', '../steps/commonsteps.ts'],
   },
-  helpers: {},
-};
-
-config.helpers = {
-  Playwright: {
-    url: config.TEST_URL,
-    show: !config.TestHeadlessBrowser,
-    browser: 'chromium',
-    waitForTimeout: config.WaitForTimeout,
-    waitForAction: 100, // wait time before acting like "click", "fillField" etc
-    waitForNavigation: 'networkidle0',
-    ignoreHTTPSErrors: true,
+  helpers: {
+    Playwright: {
+      url,
+      show: !testHeadlessBrowser,
+      browser: 'chromium' as const,
+      waitForTimeout,
+      waitForAction: 100, // wait time before acting like "click", "fillField" etc
+      waitForNavigation: 'load' as const,
+      ignoreHTTPSErrors: true,
+    },
   },
 };
