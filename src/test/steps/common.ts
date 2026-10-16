@@ -1,4 +1,5 @@
-import { config as testConfig } from '../config';
+import { config as testConfig } from '../config.js';
+
 
 const { I } = inject();
 

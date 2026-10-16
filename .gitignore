@@ -30,6 +30,7 @@ functional-output/
 version
 
 .eslintcache
+allure-results
 
 .pnp.*
 .yarn/*

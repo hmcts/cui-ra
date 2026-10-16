@@ -1,4 +1,5 @@
-import { config as testConfig } from '../config';
+import { config as testConfig } from '../config.js';
+import { locate } from 'codeceptjs';
 
 const { I } = inject();
 
