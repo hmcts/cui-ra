@@ -6,7 +6,7 @@ import { NextFunction, Request, Response } from 'express';
 
 @autobind
 export class HomeController {
-  public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
+  public get(req: Request, res: Response, next: NextFunction): void {
     try {
       res.render('home');
     } catch (e) {
@@ -14,7 +14,7 @@ export class HomeController {
     }
   }
 
-  public async overview(req: Request, res: Response, next: NextFunction): Promise<void> {
+  public overview(req: Request, res: Response, next: NextFunction): void {
     // Add checks here to ensure the required data is on the session???
     try {
       res.render('overview', {
@@ -27,7 +27,7 @@ export class HomeController {
     }
   }
 
-  public async intro(req: Request, res: Response, next: NextFunction): Promise<void> {
+  public intro(req: Request, res: Response, next: NextFunction): void {
     try {
       res.render('intro');
     } catch (e) {
@@ -35,7 +35,7 @@ export class HomeController {
     }
   }
 
-  public async cookies(req: Request, res: Response, next: NextFunction): Promise<void> {
+  public cookies(req: Request, res: Response, next: NextFunction): void {
     try {
       res.render('cookies');
     } catch (e) {
@@ -43,7 +43,7 @@ export class HomeController {
     }
   }
 
-  public async privacyPolicy(req: Request, res: Response, next: NextFunction): Promise<void> {
+  public privacyPolicy(req: Request, res: Response, next: NextFunction): void {
     try {
       res.render('privacy-policy');
     } catch (e) {
@@ -51,7 +51,7 @@ export class HomeController {
     }
   }
 
-  public async termsAndConditions(req: Request, res: Response, next: NextFunction): Promise<void> {
+  public termsAndConditions(req: Request, res: Response, next: NextFunction): void {
     try {
       res.render('terms-and-conditions');
     } catch (e) {
@@ -59,7 +59,7 @@ export class HomeController {
     }
   }
 
-  public async accessibilityStatement(req: Request, res: Response, next: NextFunction): Promise<void> {
+  public accessibilityStatement(req: Request, res: Response, next: NextFunction): void {
     try {
       res.render('accessibility-statement');
     } catch (e) {
@@ -67,7 +67,7 @@ export class HomeController {
     }
   }
 
-  public async signOut(req: Request, res: Response, next: NextFunction): Promise<void> {
+  public signOut(req: Request, res: Response, next: NextFunction): void {
     try {
       const logoutUrl = req.session.logoutUrl;
 

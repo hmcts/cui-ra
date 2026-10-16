@@ -128,7 +128,9 @@ export class DataController {
       req.session.sessioninit = true;
 
       //remove data from redis
-      this.redisClient.delete(id);
+      await this.redisClient.delete(id).catch(error => {
+        this.logger.error('Failed redis deletion');
+      });
 
       //Redirect to the correct location
       if (req.session.existingmanager.data.length === 0) {
