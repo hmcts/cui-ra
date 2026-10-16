@@ -6,7 +6,7 @@ import { UrlRoute } from './../../main/utilities';
 import puppeteer from 'puppeteer';
 import axios from 'axios';
 
-const pa11y = require('pa11y');
+import pa11y from 'pa11y';
 
 const port = 53236;
 const host = `http://localhost:${port}`;

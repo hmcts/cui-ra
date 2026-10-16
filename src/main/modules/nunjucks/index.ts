@@ -16,7 +16,7 @@ export class Nunjucks {
     app.set('view engine', 'njk');
     nunjucks.configure(path.join(__dirname, '..', '..', 'views'), {
       autoescape: true,
-      watch: this.developmentMode,
+      watch: this.developmentMode && process.env.NODE_ENV !== 'test',
       noCache: true,
       express: app,
     });
