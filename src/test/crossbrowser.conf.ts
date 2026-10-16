@@ -1,8 +1,9 @@
-import { config as testConfig } from './config';
+import { config as testConfig } from './config.js';
 
 export const config = {
   name: 'crossbrowser',
   output: `${process.cwd()}/functional-output/crossbrowser`,
+  noGlobals: true,
 
   gherkin: {
     features: './functional/features/**/*.feature',
