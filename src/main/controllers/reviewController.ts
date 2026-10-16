@@ -15,7 +15,7 @@ export class ReviewController {
     private redisClient: RedisClientInterface
   ) {}
 
-  public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
+  public get(req: Request, res: Response, next: NextFunction): void {
     try {
       if (req.session.callbackUrl) {
         try {
@@ -72,7 +72,7 @@ export class ReviewController {
     }
   }
 
-  public async setRequested(req: Request, res: Response, next: NextFunction): Promise<void> {
+  public setRequested(req: Request, res: Response, next: NextFunction): void {
     try {
       const id: string = req.query.id as string;
 
@@ -93,7 +93,7 @@ export class ReviewController {
     }
   }
 
-  public async setInactive(req: Request, res: Response, next: NextFunction): Promise<void> {
+  public setInactive(req: Request, res: Response, next: NextFunction): void {
     try {
       const id: string = req.query.id as string;
 

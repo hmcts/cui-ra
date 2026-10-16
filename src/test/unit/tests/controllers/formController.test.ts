@@ -26,7 +26,7 @@ describe('FormController', () => {
     formController = new FormController();
   });
 
-  test('should display the form with forms/checkbox with valid flag', async () => {
+  test('should display the form with forms/checkbox with valid flag', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
       (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
     )[0];
@@ -50,13 +50,13 @@ describe('FormController', () => {
     mockedRequest.query = { change: 'true' };
     mockedRequest.session = mockSession;
 
-    await formController.display(mockedRequest, mockedResponse, mockNext);
+    formController.display(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.render).toHaveBeenCalledWith('forms/checkbox-group', expect.any(Object));
   });
 
-  test('should fail to display the form', async () => {
+  test('should fail to display the form', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
       (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
     )[0];
@@ -80,13 +80,13 @@ describe('FormController', () => {
     mockedRequest.query = { change: 'true' };
     mockedRequest.session = mockSession;
 
-    await formController.display(mockedRequest, mockedResponse, mockNext);
+    formController.display(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 404));
   });
 
-  test('should display the form with forms/type-ahead with valid flag', async () => {
+  test('should display the form with forms/type-ahead with valid flag', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
       (item: DataManagerDataObject) => item.id === 'PF0001-PF0015'
     )[0];
@@ -105,13 +105,13 @@ describe('FormController', () => {
     mockedRequest.params = { id: 'someId' };
     mockedRequest.session = mockSession;
 
-    await formController.display(mockedRequest, mockedResponse, mockNext);
+    formController.display(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.render).toHaveBeenCalledWith('forms/type-ahead', expect.any(Object));
   });
 
-  test('should display the form with forms/radio-group with valid flag', async () => {
+  test('should display the form with forms/radio-group with valid flag', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
       (item: DataManagerDataObject) => item.id === 'PF0001-PF1115'
     )[0];
@@ -130,7 +130,7 @@ describe('FormController', () => {
     mockedRequest.params = { id: 'someId' };
     mockedRequest.session = mockSession;
 
-    await formController.display(mockedRequest, mockedResponse, mockNext);
+    formController.display(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.render).toHaveBeenCalledWith('forms/radio-group', expect.any(Object));

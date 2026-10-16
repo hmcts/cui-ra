@@ -5,7 +5,7 @@ import { NextFunction, Request, Response } from 'express';
 
 @autobind
 export class RequireIdam {
-  public async check(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
+  public check(req: Request, res: Response, next: NextFunction): Response | void {
     try {
       const idamToken: string | string[] | undefined = req.headers[HeaderParams.IDAM_TOKEN];
       if (idamToken) {

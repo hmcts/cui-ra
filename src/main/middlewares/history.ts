@@ -3,7 +3,7 @@ import { NextFunction, Request, Response } from 'express';
 
 @autobind
 export class History {
-  public async add(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
+  public add(req: Request, res: Response, next: NextFunction): Response | void {
     try {
       // Initialize navigation history array if it doesn't exist
       req.session.history = req.session.history || [];
