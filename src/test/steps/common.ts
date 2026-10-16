@@ -1,6 +1,5 @@
 import { config as testConfig } from '../config.js';
 
-
 const { I } = inject();
 
 export const iAmOnPage = (text: string): void => {
