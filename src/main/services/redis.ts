@@ -77,7 +77,7 @@ export class RedisClient implements RedisClientInterface {
     this.logger.info(`Redis set key ${key}`);
   }
 
-  public async get(key: string): Promise<string | null> {
+  public get(key: string): Promise<string | null> {
     return this.client.get(key);
   }
 
