@@ -57,7 +57,10 @@ export default function (app: Application): void {
   });
 
   //Secure api
-  app.use(Route.API_ROOT, new ServiceAuthentication(app.locals.container.cradle.serviceAuth).check);
+  app.use(
+    Route.API_ROOT,
+    new ServiceAuthentication(app.locals.container.cradle.serviceAuth, app.locals.container.cradle.logger).check
+  );
 
   //Load all api routes
   app.post(

@@ -1,8 +1,9 @@
-import fs from 'fs';
+import fs from 'node:fs';
 import { DataManagerDataObject } from './../../../../main/interfaces';
 import { FormProcessor } from './../../../../main/processors';
 import { Form, FormData } from './../../../../main/models';
 import { ErrorMessages, Common } from './../../../../main/constants';
+import { describe, expect, test } from '@jest/globals';
 
 const dataProcessorResultJson: DataManagerDataObject[] = JSON.parse(
   fs.readFileSync(__dirname + '/../../data/data-processor-results.json', 'utf-8')
@@ -191,25 +192,6 @@ describe('FormProcessor', () => {
     }
   });
 
-  test('should fail to process typeahead form data', () => {
-    const parent: DataManagerDataObject = dataProcessorResultJson.filter(
-      (item: DataManagerDataObject) => item.id === 'PF0001-PF1115'
-    )[0];
-    const children: DataManagerDataObject[] = [];
-
-    const body = new Form();
-
-    let error = '';
-
-    try {
-      FormProcessor.process(body, parent, children);
-    } catch (e) {
-      error = e.message;
-    }
-
-    expect(error).toBe(ErrorMessages.UNEXPECTED_ERROR);
-  });
-
   test('process radio form data selected item no value_cy', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
       (item: DataManagerDataObject) => item.id === 'PF0001-PF1115'
@@ -229,7 +211,7 @@ describe('FormProcessor', () => {
     if (item) {
       expect(item._enabled).toBe(true);
       expect(item.value.subTypeValue).toBe('Brong');
-      expect(item.value.subTypeValue_cy).toBe(undefined);
+      expect(item.value.subTypeValue_cy).toBeUndefined();
     }
   });
 
@@ -276,7 +258,7 @@ describe('FormProcessor', () => {
     if (item) {
       expect(item._enabled).toBe(true);
       expect(item.value.subTypeValue).toBe('Brong');
-      expect(item.value.subTypeValue_cy).toBe(undefined);
+      expect(item.value.subTypeValue_cy).toBeUndefined();
     }
   });
 

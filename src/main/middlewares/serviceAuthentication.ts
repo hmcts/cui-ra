@@ -1,4 +1,4 @@
-import { ServiceAuth } from './../../main/interfaces';
+import { Logger, ServiceAuth } from './../../main/interfaces';
 import { ErrorMessages, HeaderParams } from './../constants';
 
 import autobind from 'autobind-decorator';
@@ -7,7 +7,10 @@ import { NextFunction, Request, Response } from 'express';
 
 @autobind
 export class ServiceAuthentication {
-  constructor(private readonly serviceAuth: ServiceAuth) {}
+  constructor(
+    private readonly serviceAuth: ServiceAuth,
+    private readonly logger: Logger
+  ) {}
 
   public async check(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
     let serviceToken: string | string[] | undefined;
@@ -35,6 +38,7 @@ export class ServiceAuthentication {
         throw new Error(ErrorMessages.UNAUTHORISED);
       }
     } catch (ex) {
+      this.logger.error(`Service auth failed: ${ex}`);
       return res.status(401).json({ error: ErrorMessages.UNAUTHORISED });
     }
   }

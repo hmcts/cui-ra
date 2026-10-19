@@ -273,7 +273,7 @@ describe('Review Controller', () => {
     expect(mockNext).toHaveBeenCalledWith(new Error(ErrorMessages.UNEXPECTED_ERROR));
   });
 
-  test('Should cancel and redirect to callback', async () => {
+  test('Should cancel and redirect to review page', async () => {
     mockRequest.query = { change: 'true' };
     // eslint-disable-line @typescript-eslint/no-empty-function
     await reviewController.cancel(mockRequest as Request, mockResponse as Response, mockNext);

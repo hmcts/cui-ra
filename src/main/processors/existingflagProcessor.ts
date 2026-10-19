@@ -6,8 +6,7 @@ export class ExistingFlagProcessor implements ExistingFlagProcessorInterface {
   public process(PayloadFlagData: PayloadCollectionItem[]): PayloadDataObject[] {
     const existing: PayloadDataObject[] = [];
     //for each flag
-    for (let i = 0; i < PayloadFlagData.length; i++) {
-      const payload: PayloadCollectionItem = PayloadFlagData[i];
+    for (let payload of PayloadFlagData) {
       existing.push({
         id: payload.id,
         value: payload.value,

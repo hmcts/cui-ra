@@ -20,7 +20,7 @@ describe('Exisiting Flags Manager', () => {
     const eprocessor = new ExistingFlagProcessor();
     dataManager.set(eprocessor.process(dataJson));
     // eslint-disable-line @typescript-eslint/no-empty-function
-    expect(dataManager.data.length).toEqual(dataJson.length);
+    expect(dataManager.data).toHaveLength(dataJson.length);
   });
 
   test('Get Data Item', async () => {

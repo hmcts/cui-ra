@@ -34,7 +34,7 @@ export class FormProcessor {
         item.value.otherDescription = undefined;
         item.value.otherDescription_cy = undefined;
 
-        if (item._enabled && body.data && body.data[item.id]) {
+        if (item._enabled && body.data?.[item.id]) {
           item.value.flagComment = body.data[item.id].flagComment;
           item.value.flagComment_cy = body.data[item.id].flagComment_cy;
           if (item.value.flagCode === Common.OTHER_FLAG_CODE) {

@@ -56,7 +56,7 @@ export class FormController {
       const formModel = plainToInstance(Form, req.body);
 
       //validate form body
-      const [bodyValid, bodyErrors] = await FormValidator.validateBody(flag, formModel);
+      const [bodyValid, bodyErrors] = FormValidator.validateBody(flag, formModel);
 
       if (!bodyValid) {
         this.saveTempFormData(req, id, formModel, flag);
@@ -104,7 +104,10 @@ export class FormController {
       //temp merge data for error
       const formData: DataManagerDataObject[] = FormProcessor.process(formModel, flag, tempManager?.getChildren(id));
       tempManager?.save(formData);
-    } catch (e) {}
+    } catch {
+      // Processing invalid form data may fail.
+      // Continue rendering the form with validation errors.
+    }
   }
 
   private redirectAfterPost(
@@ -121,8 +124,8 @@ export class FormController {
     if (change) {
       res.locals.change = 'true';
       Object.assign(queryParams, { change: true });
-      const hasUnaswered = req.session.newmanager?.hasUnaswered();
-      if (!hasUnaswered && !newQuery) {
+      const hasUnanswered = req.session.newmanager?.hasUnanswered();
+      if (!hasUnanswered && !newQuery) {
         return res.redirect(Route.REVIEW);
       }
     }

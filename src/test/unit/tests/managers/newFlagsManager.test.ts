@@ -19,7 +19,7 @@ describe('New Flags Manager', () => {
   test('Set Data', async () => {
     dataManager.set(dataJson);
     // eslint-disable-line @typescript-eslint/no-empty-function
-    expect(dataManager.data.length).toEqual(dataJson.length);
+    expect(dataManager.data).toHaveLength(dataJson.length);
   });
 
   test('Get Data Item', async () => {
@@ -54,7 +54,7 @@ describe('New Flags Manager', () => {
     //This test will mock a form submission
     const childItems: DataManagerDataObject[] = dataManager.getChildren(itemId);
     // eslint-disable-line @typescript-eslint/no-empty-function
-    expect(childItems.length).toEqual(8);
+    expect(childItems).toHaveLength(8);
   });
 
   test('Get Next Category Page', async () => {
@@ -125,37 +125,37 @@ describe('New Flags Manager', () => {
     expect(item?.id).toEqual(RA_Id);
   });
 
-  test('hasUnaswered - category expect true', async () => {
+  test('hasUnanswered - category expect true', async () => {
     //enable two children of RA
     dataManager.enable(RA_Id);
     dataManager.enable(itemId);
-    const result = dataManager.hasUnaswered();
+    const result = dataManager.hasUnanswered();
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(result).toEqual(true);
   });
 
-  test('hasUnaswered - category expect false', async () => {
+  test('hasUnanswered - category expect false', async () => {
     //enable two children of RA
     dataManager.enable(RA_Id);
     dataManager.enable(itemId);
     dataManager.enable('PF0001-RA0001-RA0004-RA0019');
-    const result = dataManager.hasUnaswered();
+    const result = dataManager.hasUnanswered();
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(result).toEqual(false);
   });
 
-  test('hasUnaswered - flagComment expect true', async () => {
+  test('hasUnanswered - flagComment expect true', async () => {
     //enable two children of RA
     dataManager.enable(RA_Id);
     dataManager.enable(itemId);
     dataManager.enable('PF0001-RA0001-RA0004-RA0019');
     dataManager.enable('PF0001-RA0001-RA0004-RA0021');
-    const result = dataManager.hasUnaswered();
+    const result = dataManager.hasUnanswered();
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(result).toEqual(true);
   });
 
-  test('hasUnaswered - flagComment expect false', async () => {
+  test('hasUnanswered - flagComment expect false', async () => {
     //enable two children of RA
     dataManager.enable(RA_Id);
     dataManager.enable(itemId);
@@ -168,21 +168,21 @@ describe('New Flags Manager', () => {
       dataManager.save([item]);
     }
 
-    const result = dataManager.hasUnaswered();
+    const result = dataManager.hasUnanswered();
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(result).toEqual(false);
   });
 
-  test('hasUnaswered - listofitems expect true', async () => {
+  test('hasUnanswered - listofitems expect true', async () => {
     //enable two children of RA
     dataManager.enable('PF0001-PF0015');
 
-    const result = dataManager.hasUnaswered();
+    const result = dataManager.hasUnanswered();
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(result).toEqual(true);
   });
 
-  test('hasUnaswered - listofitems expect false', async () => {
+  test('hasUnanswered - listofitems expect false', async () => {
     //enable two children of RA
     dataManager.enable('PF0001-PF0015');
 
@@ -192,7 +192,7 @@ describe('New Flags Manager', () => {
       dataManager.save([item]);
     }
 
-    const result = dataManager.hasUnaswered();
+    const result = dataManager.hasUnanswered();
     // eslint-disable-line @typescript-eslint/no-empty-function
     expect(result).toEqual(false);
   });
@@ -203,7 +203,7 @@ describe('New Flags Manager', () => {
 
     const item: DataManagerDataObject | null = dataManager.get('PF0001-PF0015');
 
-    expect(item).toEqual(null);
+    expect(item).toBeNull();
   });
 
   test('delete item by a collection of ids', async () => {
@@ -215,8 +215,8 @@ describe('New Flags Manager', () => {
     const itemOne: DataManagerDataObject | null = dataManager.get('PF0001-PF0015');
     const itemTwo: DataManagerDataObject | null = dataManager.get('PF0001-RA0001-RA0004-RA0019');
 
-    expect(itemOne).toEqual(null);
-    expect(itemTwo).toEqual(null);
+    expect(itemOne).toBeNull();
+    expect(itemTwo).toBeNull();
   });
 
   test('find items ids from flagcode dot notations', async () => {
@@ -234,10 +234,10 @@ describe('New Flags Manager', () => {
 
     const item: DataManagerDataObject | null = dataManager.get('PF0001-RA0001-RA0004');
 
-    expect(item).toEqual(null);
+    expect(item).toBeNull();
   });
 
-  test('delete item from flagcode dot notations', async () => {
+  test('delete two items from flagcode dot notations', async () => {
     dataManager.set(dataJson);
     //enable two children of RA
     dataManager.deleteFlagCodeByDotKey('PF0001.PF0015');
@@ -246,8 +246,8 @@ describe('New Flags Manager', () => {
     const itemOne: DataManagerDataObject | null = dataManager.get('PF0001-PF0015');
     const itemTwo: DataManagerDataObject | null = dataManager.get('PF0001-RA0001-RA0004');
 
-    expect(itemOne).toEqual(null);
-    expect(itemTwo).toEqual(null);
+    expect(itemOne).toBeNull();
+    expect(itemTwo).toBeNull();
   });
 
   test('set master flag', async () => {

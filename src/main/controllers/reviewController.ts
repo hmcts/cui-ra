@@ -120,9 +120,9 @@ export class ReviewController {
 
   public async cancel(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
-      const change = !!(req.query && typeof req.query.change !== 'undefined');
+      const change = req.query?.change !== undefined;
 
-      if (!req.session || !req.session.callbackUrl) {
+      if (!req.session?.callbackUrl) {
         throw new Error(ErrorMessages.UNEXPECTED_ERROR);
       }
 
@@ -158,7 +158,7 @@ export class ReviewController {
 
   public async post(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
     try {
-      if (!req.session || !req.session.callbackUrl || !req.session.logoutUrl) {
+      if (!req.session?.callbackUrl || !req.session?.logoutUrl) {
         throw new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 500);
       }
       const urlErrors = validateUrls({

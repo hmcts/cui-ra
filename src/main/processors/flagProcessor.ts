@@ -8,14 +8,12 @@ export class FlagProcessor implements FlagProcessorInterface {
   public processAll(dateTime: string, response: RefDataResponse, welsh: boolean = false): DataManagerDataObject[] {
     let flagsData: DataManagerDataObject[] = [];
     //for each flag
-    for (let i = 0; i < response.flags.length; i++) {
-      const flagDetail = response.flags[i];
+    for (const flagDetail of response.flags) {
       if (!flagDetail.FlagDetails) {
         continue;
       }
       //for each flag details
-      for (let ii = 0; ii < flagDetail.FlagDetails?.length; ii++) {
-        const flag = flagDetail.FlagDetails[ii];
+      for (const flag of flagDetail.FlagDetails) {
         //process
         const processed: DataManagerDataObject[] = this.process(dateTime, flag, null, welsh);
         flagsData = [...flagsData, ...processed];

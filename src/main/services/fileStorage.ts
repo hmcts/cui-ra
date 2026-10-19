@@ -75,7 +75,7 @@ export class FileStorageClient implements RedisClientInterface {
       const filePath = this.getFilePathForKey(key);
       await fs.promises.access(filePath, fs.constants.F_OK);
       return true;
-    } catch (err) {
+    } catch {
       return false;
     }
   }
@@ -85,7 +85,7 @@ export class FileStorageClient implements RedisClientInterface {
       const filePath = this.getFilePathForKey(key);
       await fs.promises.unlink(filePath);
       return true;
-    } catch (err) {
+    } catch {
       return false;
     }
   }

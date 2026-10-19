@@ -55,11 +55,11 @@ export class RefData implements ReferenceData {
 
     Object.assign(queryParams, { 'available-external-flag': 'Y' });
 
-    if (typeof flagType !== 'undefined') {
+    if (flagType !== undefined) {
       Object.assign(queryParams, { 'flag-type': flagType });
     }
 
-    if (typeof welsh !== 'undefined') {
+    if (welsh !== undefined) {
       const isWelsh = welsh ? 'Y' : 'N';
       Object.assign(queryParams, { 'welsh-required': isWelsh });
     }
@@ -82,13 +82,7 @@ export class RefData implements ReferenceData {
       headers,
     });
 
-    if (
-      response.status !== HttpStatusCode.Ok ||
-      !response.data ||
-      !response.data.flags ||
-      !response.data.flags.length ||
-      !response.data.flags[0].FlagDetails
-    ) {
+    if (response.status !== HttpStatusCode.Ok || !response.data?.flags?.[0]?.FlagDetails) {
       // Note: Reference Data Common API appears to respond with a 404 error rather than send an empty response,
       // so this may be redundant
       throw new Error('No flag types could be retrieved');
