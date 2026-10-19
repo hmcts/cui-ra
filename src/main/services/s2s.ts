@@ -9,9 +9,9 @@ import { authenticator } from 'otplib';
 @autobind
 export class S2S implements ServiceAuth {
   constructor(
-    private secret: string,
-    private service: string,
-    private client: AxiosInstance,
+    private readonly secret: string,
+    private readonly service: string,
+    private readonly client: AxiosInstance,
     private readonly logger: Logger
   ) {}
 

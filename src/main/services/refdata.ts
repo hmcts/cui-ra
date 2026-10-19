@@ -40,7 +40,7 @@ export class RefDataFlagType implements ReferenceDataFlagType {
 
 @autobind
 export class RefData implements ReferenceData {
-  constructor(private client: AxiosInstance) {}
+  constructor(private readonly client: AxiosInstance) {}
 
   public async getFlags(
     serviceToken: string,

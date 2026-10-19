@@ -24,12 +24,12 @@ import { NextFunction, Request, Response } from 'express';
 @autobind
 export class DataController {
   constructor(
-    private logger: Logger,
-    private redisClient: RedisClientInterface,
-    private refdata: ReferenceData,
-    private flagProcessor: FlagProcessorInterface,
-    private existingFlagProcessor: ExistingFlagProcessorInterface,
-    private serviceAuth: ServiceAuth
+    private readonly logger: Logger,
+    private readonly redisClient: RedisClientInterface,
+    private readonly refdata: ReferenceData,
+    private readonly flagProcessor: FlagProcessorInterface,
+    private readonly existingFlagProcessor: ExistingFlagProcessorInterface,
+    private readonly serviceAuth: ServiceAuth
   ) {}
 
   public async process(req: Request, res: Response, next: NextFunction): Promise<Response | void> {

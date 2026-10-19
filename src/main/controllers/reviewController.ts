@@ -11,8 +11,8 @@ import { NextFunction, Request, Response } from 'express';
 @autobind
 export class ReviewController {
   constructor(
-    private logger: Logger,
-    private redisClient: RedisClientInterface
+    private readonly logger: Logger,
+    private readonly redisClient: RedisClientInterface
   ) {}
 
   public get(req: Request, res: Response, next: NextFunction): void {

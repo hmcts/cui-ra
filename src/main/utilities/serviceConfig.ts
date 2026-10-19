@@ -1,16 +1,16 @@
-import * as fs from 'fs';
-import * as path from 'path';
+import * as fs from 'node:fs';
+import * as path from 'node:path';
 
 import { ServiceConfigFlagInterface, ServiceConfigInterface } from './../interfaces';
 
 export class ServiceConfig {
-  private basedir = `${__dirname}/../resources/configs`;
+  private readonly basedir = `${__dirname}/../resources/configs`;
 
-  private default = path.join(this.basedir, 'default.json');
+  private readonly default = path.join(this.basedir, 'default.json');
 
-  private servicedir = path.join(this.basedir, 'services');
+  private readonly servicedir = path.join(this.basedir, 'services');
 
-  private config: ServiceConfigInterface;
+  private readonly config: ServiceConfigInterface;
 
   constructor(id: string | null = null) {
     this.config = this.get(id);
