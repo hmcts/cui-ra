@@ -10,7 +10,7 @@ export class ServiceConfig {
 
   private readonly servicedir = path.join(this.basedir, 'services');
 
-  private readonly config: ServiceConfigInterface;
+  private config: ServiceConfigInterface;
 
   constructor(id: string | null = null) {
     this.config = this.get(id);
