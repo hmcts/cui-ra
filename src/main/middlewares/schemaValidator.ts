@@ -8,7 +8,7 @@ export type SchemaType = JSONSchema4 | JSONSchema6 | JSONSchema7;
 
 @autobind
 export class SchemaValidator {
-  private ajv: Ajv;
+  private readonly ajv: Ajv;
 
   constructor() {
     this.ajv = new Ajv();

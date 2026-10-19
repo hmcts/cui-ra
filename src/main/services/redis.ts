@@ -1,4 +1,4 @@
-import { randomUUID } from 'crypto';
+import { randomUUID } from 'node:crypto';
 
 import { Logger, RedisClientInterface } from './../interfaces';
 
@@ -7,17 +7,17 @@ import { RedisClientType, createClient } from 'redis';
 
 @autobind
 export class RedisClient implements RedisClientInterface {
-  private client: RedisClientType;
+  private readonly client: RedisClientType;
   private connected = false;
   private ready = false;
-  private url: string;
+  private readonly url: string;
 
   constructor(
-    private logger: Logger,
-    private host: string,
-    private port: string,
-    private key: string,
-    private urlStart: string
+    private readonly logger: Logger,
+    private readonly host: string,
+    private readonly port: string,
+    private readonly key: string,
+    private readonly urlStart: string
   ) {
     this.url = `${this.urlStart}://:**REDACTED**@${this.host}:${this.port}`;
     this.client = createClient({

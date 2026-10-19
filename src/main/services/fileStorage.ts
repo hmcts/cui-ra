@@ -1,5 +1,5 @@
-import { randomUUID } from 'crypto';
-import fs from 'fs';
+import { randomUUID } from 'node:crypto';
+import fs from 'node:fs';
 
 import { Logger, RedisClientInterface } from './../interfaces';
 
@@ -9,9 +9,9 @@ import autobind from 'autobind-decorator';
 export class FileStorageClient implements RedisClientInterface {
   private connected = false;
   private ready = false;
-  private filePath = '/tmp';
+  private readonly filePath = '/tmp';
 
-  constructor(private logger: Logger) {
+  constructor(private readonly logger: Logger) {
     try {
       if (!fs.existsSync(this.filePath)) {
         fs.mkdirSync(this.filePath, { recursive: true });

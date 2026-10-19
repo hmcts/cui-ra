@@ -7,7 +7,7 @@ import { NextFunction, Request, Response } from 'express';
 
 @autobind
 export class ServiceAuthentication {
-  constructor(private serviceAuth: ServiceAuth) {}
+  constructor(private readonly serviceAuth: ServiceAuth) {}
 
   public async check(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
     let serviceToken: string | string[] | undefined;
