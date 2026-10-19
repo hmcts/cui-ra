@@ -43,12 +43,12 @@ export class FormValidator {
     for (const item of processedItems) {
       item._errors = [];
       const key = this.getKey(item, parent);
-      const isValid = await validate(item);
+      const isValid = validate(item);
 
       if (!isValid) {
-        const errors = await validate.errors;
-        if (errors && errors[0] && errors[0].message) {
-          const message = `${key}.${errors[0].message}`;
+        const errorMessage = validate.errors?.[0]?.message;
+        if (errorMessage) {
+          const message = `${key}.${errorMessage}`;
           this.handleValidationErrors(item, message, validationErrors);
         }
       }
@@ -115,19 +115,19 @@ export class FormValidator {
     }
   }
 
-  static async validateBody(flag: DataManagerDataObject, form: Form): Promise<[boolean, ValidationErrors]> {
+  static validateBody(flag: DataManagerDataObject, form: Form): [boolean, ValidationErrors] {
     this.initialize();
     const schema = formData();
     const validate = this.ajv.compile(schema);
     const validationErrors: ValidationErrors = {};
     const key = `${flag.value.flagCode}.error`;
 
-    const isValid = await validate(form);
+    const isValid = validate(form);
 
     if (!isValid) {
-      const errors = await validate.errors;
-      if (errors && errors[0] && errors[0].message) {
-        const message = `${key}.${errors[0].message}`;
+      const errorMessage = validate.errors?.[0]?.message;
+      if (errorMessage) {
+        const message = `${key}.${errorMessage}`;
         this.handleBodyValidationErrors(flag, message, validationErrors);
       }
     }

@@ -7,7 +7,7 @@ import { RedisClientType, createClient } from 'redis';
 
 @autobind
 export class RedisClient implements RedisClientInterface {
-  private client: RedisClientType;
+  private readonly client: RedisClientType;
   private connected = false;
   private ready = false;
   private readonly url: string;

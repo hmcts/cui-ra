@@ -8,7 +8,7 @@ import { NextFunction, Request, Response } from 'express';
 @autobind
 export class InitSession {
   public init(req: Request, res: Response, next: NextFunction): Response | void {
-    if (!req.session || req.session.sessioninit !== true) {
+    if (req.session?.sessioninit !== true) {
       return res.redirect(Route.ROOT);
     }
     res.locals.partyname = req.session.partyname;

@@ -14,136 +14,40 @@ describe('sanitizeRequestBody', () => {
     next = jest.fn();
   });
 
-  test('does not change field without html tags', () => {
-    req = {
-      body: {
-        test: 'test',
-      },
-    } as Request;
+  test.each([
+    ['does not change field without html tags', 'test', 'test'],
+    ['removes script html tags', "<script>alert('test')</script>test2", "alert('test')test2"],
+    [
+      'removes comment html tags but left elements inside tags',
+      "<comment>alert('test')</comment>test3",
+      "alert('test')test3",
+    ],
+    [
+      'removes embed html tags but left elements inside tags',
+      "<embed>alert('test')</embed>test4",
+      "alert('test')test4",
+    ],
+    ['remove whole elements with open tag', '<hello world', ''],
+    ['does not remove close tags', 'hello world>', 'hello world>'],
+    ['remove open close tags and elemnts inside it', '<hello world>', ''],
+    ['removes p html tags', '<p>abc<iframe//src=jAva&Tab;script:alert(3)>def</p>', 'abcdef'],
+    ['removes image html tags', '<img src=x onerror=alert(1)//>', ''],
+    ['remove math html tags', '<math><mi//xlink:href="data:x,<script>alert(4)</script>">', ''],
+    ['test table html tags', '<TABLE><tr><td>HELLO</tr></TABL>', 'HELLO'],
+    ['remove svg html tags', '<svg><g/onload=alert(2)//<p>', ''],
+    ['trims form field', '    test\n\t', '    test\n\t'],
+    [
+      'remove complicated html tags',
+      '<script>alert(Hello<script>alert("Hello"</script></script>">',
+      'alert(Helloalert("Hello"">',
+    ],
+    ['remove complicated html tags test1', '<script>alert(Hello<script>alert("Hello"">', 'alert(Helloalert("Hello"">'],
+    ['remove complicated html tags test2', '<test<script>alert(Hello<script>alert("Hello""', ''],
+    ['escaped html tags test', '&lt;script&gt;alert("Test")&lt;/script&gt;Test2', 'alert("Test")Test2'],
+  ])('%s', (_description, input, expected) => {
+    req.body = { test: input };
     sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, 'test');
-  });
-
-  test('removes script html tags', () => {
-    req = {
-      body: {
-        test: "<script>alert('test')</script>test2",
-      },
-    } as Request;
-    sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, "alert('test')test2");
-  });
-
-  test('removes comment html tags but left elements inside tags', () => {
-    req = {
-      body: {
-        test: "<comment>alert('test')</comment>test3",
-      },
-    } as Request;
-    sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, "alert('test')test3");
-  });
-
-  test('removes embed html tags but left elements inside tags', () => {
-    req = {
-      body: {
-        test: "<embed>alert('test')</embed>test4",
-      },
-    } as Request;
-    sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, "alert('test')test4");
-  });
-
-  test('remove whole elements with open tag', () => {
-    req = {
-      body: {
-        test: '<hello world',
-      },
-    } as Request;
-    sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, '');
-  });
-
-  test('does not remove close tags', () => {
-    req = {
-      body: {
-        test: 'hello world>',
-      },
-    } as Request;
-    sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, 'hello world>');
-  });
-
-  test('remove open close tags and elemnts inside it', () => {
-    req = {
-      body: {
-        test: '<hello world>',
-      },
-    } as Request;
-    sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, '');
-  });
-
-  test('removes p html tags', () => {
-    req = {
-      body: {
-        test: '<p>abc<iframe//src=jAva&Tab;script:alert(3)>def</p>',
-      },
-    } as Request;
-    sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, 'abcdef');
-  });
-
-  test('removes image html tags', () => {
-    req = {
-      body: {
-        test: '<img src=x onerror=alert(1)//>',
-      },
-    } as Request;
-    sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, '');
-  });
-
-  test('remove math html tags', () => {
-    req = {
-      body: {
-        test: '<math><mi//xlink:href="data:x,<script>alert(4)</script>">',
-      },
-    } as Request;
-    sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, '');
-  });
-
-  test('test table html tags', () => {
-    req = {
-      body: {
-        test: '<TABLE><tr><td>HELLO</tr></TABL>',
-      },
-    } as Request;
-    sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, 'HELLO');
-  });
-
-  test('remove svg html tags', () => {
-    req = {
-      body: {
-        test: '<svg><g/onload=alert(2)//<p>',
-      },
-    } as Request;
-    sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, '');
+    assert.equal(req.body.test, expected);
   });
 
   test('handles multiple fields', () => {
@@ -157,61 +61,6 @@ describe('sanitizeRequestBody', () => {
 
     assert.equal(req.body.test, 'test 1');
     assert.equal(req.body.test2, 'test 2');
-  });
-
-  test('trims form field', () => {
-    req = {
-      body: {
-        test: '    test\n\t',
-      },
-    } as Request;
-    sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, '    test\n\t');
-  });
-
-  test('remove complicated html tags', () => {
-    req = {
-      body: {
-        test: '<script>alert(Hello<script>alert("Hello"</script></script>">',
-      },
-    } as Request;
-    sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, 'alert(Helloalert("Hello"">');
-  });
-
-  test('remove complicated html tags test1', () => {
-    req = {
-      body: {
-        test: '<script>alert(Hello<script>alert("Hello"">',
-      },
-    } as Request;
-    sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, 'alert(Helloalert("Hello"">');
-  });
-
-  test('remove complicated html tags test2', () => {
-    req = {
-      body: {
-        test: '<test<script>alert(Hello<script>alert("Hello""',
-      },
-    } as Request;
-    sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, '');
-  });
-
-  test('escaped html tags test', () => {
-    req = {
-      body: {
-        test: '&lt;script&gt;alert("Test")&lt;/script&gt;Test2',
-      },
-    } as Request;
-    sanitizeRequest(req, res, next);
-
-    assert.equal(req.body.test, 'alert("Test")Test2');
   });
 
   test('non string value', () => {

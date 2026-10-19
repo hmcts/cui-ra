@@ -44,40 +44,31 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
     return null; // No matching item found
   }
 
-  //shallow check to be used by continue button.
-  public hasUnaswered(): boolean {
-    //get all enabled
-    const enabled = this.data.filter((item: DataManagerDataObject) => item._enabled === true);
-    for (let i = 0; i < enabled.length; i++) {
-      const flag: DataManagerDataObject = enabled[i];
-      if (flag?._isParent) {
-        //check children
-        const children: DataManagerDataObject[] = this.getChildren(flag.id);
-        if (children.length === 0) {
-          //return false;
-          continue;
-        }
-        const answered: DataManagerDataObject[] = children.filter(
-          (item: DataManagerDataObject) => item._enabled === true
-        );
-        if (answered.length === 0) {
-          return true;
-        }
-      } else {
-        if (flag._listOfValuesLength > 0) {
-          if (!flag.value.subTypeValue && !flag.value.subTypeValue_cy) {
-            return true;
-          }
-        } else {
-          if (flag?._flagComment) {
-            if (!flag?.value.flagComment && !flag?.value.flagComment_cy) {
-              return true;
-            }
-          }
-        }
-      }
+  private isFlagUnanswered(flag: DataManagerDataObject): boolean {
+    if (flag._listOfValuesLength > 0) {
+      return !flag.value.subTypeValue && !flag.value.subTypeValue_cy;
+    }
+
+    if (flag._flagComment) {
+      return !flag.value.flagComment && !flag.value.flagComment_cy;
     }
     return false;
+  }
+
+  private isParentUnanswered(flag: DataManagerDataObject): boolean {
+    const children = this.getChildren(flag.id);
+    if (children.length === 0) {
+      return false;
+    }
+
+    return !children.some(child => child._enabled === true);
+  }
+
+  //shallow check to be used by continue button.
+  public hasUnanswered(): boolean {
+    //get all enabled
+    const enabled = this.data.filter((item: DataManagerDataObject) => item._enabled === true);
+    return enabled.some(flag => (flag._isParent ? this.isParentUnanswered(flag) : this.isFlagUnanswered(flag)));
   }
 
   public enable(id: string, enableParent = true): void {
@@ -152,7 +143,7 @@ export class NewFlagsManager extends DataManager<DataManagerDataObject> {
     if (deletedNode._parentId) {
       const parentIndex = this.data.findIndex(node => node.id === deletedNode._parentId);
       if (parentIndex !== -1) {
-        const childIndex = this.data[parentIndex]?._childIds.findIndex(node => node === id);
+        const childIndex = this.data[parentIndex]?._childIds.indexOf(id);
         if (childIndex !== -1) {
           this.data[parentIndex]._childIds.splice(childIndex ?? 0, 1);
         }

@@ -24,7 +24,7 @@ export const validateUrls = ({ callbackUrl, logoutUrl }: ValidateUrlsParams): Ur
     errors.push({ message: ErrorMessages.INVALID_CALLBACK_URL });
   }
 
-  if (typeof logoutUrl !== 'undefined' && (!isValidUrl(logoutUrl) || !UrlRoute.isCallbackUrlWhitelisted(logoutUrl))) {
+  if (logoutUrl !== undefined && (!isValidUrl(logoutUrl) || !UrlRoute.isCallbackUrlWhitelisted(logoutUrl))) {
     errors.push({ message: ErrorMessages.INVALID_LOGOUT_URL });
   }
 

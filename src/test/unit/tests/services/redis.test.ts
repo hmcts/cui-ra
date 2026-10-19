@@ -12,11 +12,6 @@ describe('RedisClient', () => {
   let redisClient: RedisClient;
   (redis.createClient as jest.Mock).mockReturnValue(mockedRedisNode);
 
-  //const createClientMock = jest.fn();
-  //createClientMock.mockImplementation(() => mockedRedisNode());
-  //jest.spyOn(redis, 'createClient').mockImplementation(() => mockedRedisNode);
-  //jest.spyOn(redis, 'createClient').mockReturnValue(mockedRedisNode());
-
   const host = 'localhost';
   const port = '6379';
   const key = 'redis-key';
@@ -26,7 +21,6 @@ describe('RedisClient', () => {
     //jest.clearAllMocks();
     jest.useFakeTimers();
     redisClient = new RedisClient(mockedLogger, host, port, key, urlStart);
-    redisClient['client'] = mockedRedisNode;
   });
 
   afterEach(() => {

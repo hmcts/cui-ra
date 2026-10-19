@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
-import { mockServiceAuth } from './../../mocks';
+import { mockServiceAuth, mockLogger } from './../../mocks';
 import { ServiceAuthentication } from './../../../../main/middlewares';
-import { ServiceAuth } from './../../../../main/interfaces';
+import { Logger, ServiceAuth } from './../../../../main/interfaces';
 import { ErrorMessages } from './../../../../main/constants';
 import config from 'config';
 
@@ -20,13 +20,15 @@ describe('ServiceAuthentication', () => {
   let next: NextFunction;
   let serviceAuthentication: ServiceAuthentication;
   let serviceMock: ServiceAuth;
+  let loggerMock: Logger;
 
   beforeEach(() => {
     req = {} as Request;
     res = {} as Response;
     next = jest.fn();
     serviceMock = mockServiceAuth();
-    serviceAuthentication = new ServiceAuthentication(serviceMock);
+    loggerMock = mockLogger();
+    serviceAuthentication = new ServiceAuthentication(serviceMock, loggerMock);
 
     mockedConfig.get.mockReturnValue('service-a, service-b');
 
@@ -76,6 +78,7 @@ describe('ServiceAuthentication', () => {
 
     await serviceAuthentication.check(req, res, next);
 
+    expect(loggerMock.error).toHaveBeenCalled();
     expect(serviceMock.validateToken).toHaveBeenCalledWith('service-c');
     expect(res.status).toHaveBeenCalledWith(401);
     expect(res.json).toHaveBeenCalledWith({ error: ErrorMessages.UNAUTHORISED });

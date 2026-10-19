@@ -34,7 +34,7 @@ describe('FormController', () => {
     const mockSession = {
       newmanager: {
         get: jest.fn().mockReturnValue(parent),
-        hasUnaswered: jest.fn().mockReturnValue(false),
+        hasUnanswered: jest.fn().mockReturnValue(false),
         getChildren: jest
           .fn()
           .mockReturnValue(
@@ -64,7 +64,7 @@ describe('FormController', () => {
     const mockSession = {
       newmanager: {
         get: jest.fn().mockReturnValue(null),
-        hasUnaswered: jest.fn().mockReturnValue(false),
+        hasUnanswered: jest.fn().mockReturnValue(false),
         getChildren: jest
           .fn()
           .mockReturnValue(
@@ -94,7 +94,7 @@ describe('FormController', () => {
     const mockSession = {
       newmanager: {
         get: jest.fn().mockReturnValue(parent),
-        hasUnaswered: jest.fn().mockReturnValue(false),
+        hasUnanswered: jest.fn().mockReturnValue(false),
         getChildren: jest.fn().mockReturnValue([]),
       },
     };
@@ -119,7 +119,7 @@ describe('FormController', () => {
     const mockSession = {
       newmanager: {
         get: jest.fn().mockReturnValue(parent),
-        hasUnaswered: jest.fn().mockReturnValue(false),
+        hasUnanswered: jest.fn().mockReturnValue(false),
         getChildren: jest.fn().mockReturnValue([]),
       },
     };
@@ -150,7 +150,7 @@ describe('FormController', () => {
     const mockSession = {
       newmanager: {
         get: jest.fn().mockReturnValue(parent),
-        hasUnaswered: jest.fn().mockReturnValue(false),
+        hasUnanswered: jest.fn().mockReturnValue(false),
         getChildren: jest.fn().mockReturnValue(child),
         save: jest.fn(),
         getNext: jest.fn().mockReturnValue(next),
@@ -200,7 +200,7 @@ describe('FormController', () => {
     const mockSession = {
       newmanager: {
         get: jest.fn().mockReturnValue(parent),
-        hasUnaswered: jest.fn().mockReturnValue(true),
+        hasUnanswered: jest.fn().mockReturnValue(true),
         getChildren: jest.fn().mockReturnValue(child),
         save: jest.fn(),
         getNext: jest.fn().mockReturnValue(next),
@@ -251,7 +251,7 @@ describe('FormController', () => {
     const mockSession = {
       newmanager: {
         get: jest.fn().mockReturnValue(parent),
-        hasUnaswered: jest.fn().mockReturnValue(false),
+        hasUnanswered: jest.fn().mockReturnValue(false),
         getChildren: jest.fn().mockReturnValue(child),
         save: jest.fn(),
         getNext: jest.fn().mockReturnValue(next),

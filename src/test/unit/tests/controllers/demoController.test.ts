@@ -61,7 +61,7 @@ describe('Demo Controller', () => {
     );
   });
 
-  test('Should render intro page', async () => {
+  test('Should render intro page in welsh', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
     const id = 'PF0001-RA0001';
     mockRequest.query = { action: 'new_cy' };

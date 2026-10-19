@@ -14,7 +14,7 @@ describe('Data Manager', () => {
   test('Set Data', async () => {
     dataManager.set(dataJson);
     // eslint-disable-line @typescript-eslint/no-empty-function
-    expect(dataManager.data.length).toEqual(dataJson.length);
+    expect(dataManager.data).toHaveLength(dataJson.length);
   });
 
   test('Get Data Item', async () => {
