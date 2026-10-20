@@ -39,7 +39,7 @@ export class FormController {
     }
   }
 
-  public async post(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
+  public post(req: Request, res: Response, next: NextFunction): Response | void {
     try {
       const id = req.params.id;
       const change = req.query?.change !== undefined;
@@ -65,12 +65,7 @@ export class FormController {
 
       //check if no support has been selected
       if (!formModel.enabled.includes('none') && formModel.selected !== 'none') {
-        const { formData, validationErrors, parent, children } = await this.processAndValidate(
-          req,
-          id,
-          formModel,
-          flag
-        );
+        const { formData, validationErrors, parent, children } = this.processAndValidate(req, id, formModel, flag);
 
         if (Object.keys(validationErrors).length > 0) {
           return FormBuilder.build(req, res, parent, children, validationErrors);
@@ -89,10 +84,10 @@ export class FormController {
     }
   }
 
-  private async processAndValidate(req: Request, id: string, formModel: Form, flag: DataManagerDataObject) {
+  private processAndValidate(req: Request, id: string, formModel: Form, flag: DataManagerDataObject) {
     const formData = FormProcessor.process(formModel, flag, req.session.newmanager?.getChildren(id));
     //validate the new filtered data here
-    const [validationErrors, parent, children] = await FormValidator.validate(formData, flag);
+    const [validationErrors, parent, children] = FormValidator.validate(formData, flag);
     return { formData, validationErrors, parent, children };
   }
 

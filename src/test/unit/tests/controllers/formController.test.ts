@@ -136,7 +136,7 @@ describe('FormController', () => {
     expect(mockedResponse.render).toHaveBeenCalledWith('forms/radio-group', expect.any(Object));
   });
 
-  test('should handle post request with valid flag and data', async () => {
+  test('should handle post request with valid flag and data', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
       (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
     )[0];
@@ -178,7 +178,7 @@ describe('FormController', () => {
       enabled: ['PF0001-RA0001-RA0004'],
     }; // Mock request body
 
-    await formController.post(mockedRequest, mockedResponse, mockNext);
+    formController.post(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.redirect).toHaveBeenCalledWith(
@@ -186,7 +186,7 @@ describe('FormController', () => {
     );
   });
 
-  test('should handle post request with valid flag and data - changed = true | unAswered true', async () => {
+  test('should handle post request with valid flag and data - changed = true | unAswered true', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
       (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
     )[0];
@@ -229,7 +229,7 @@ describe('FormController', () => {
       enabled: ['PF0001-RA0001-RA0004'],
     }; // Mock request body
 
-    await formController.post(mockedRequest, mockedResponse, mockNext);
+    formController.post(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.redirect).toHaveBeenCalledWith(
@@ -237,7 +237,7 @@ describe('FormController', () => {
     );
   });
 
-  test('should handle post request with valid flag and data - changed = true | unAswered false', async () => {
+  test('should handle post request with valid flag and data - changed = true | unAswered false', () => {
     const parent: DataManagerDataObject = dataProcessorResultJson.filter(
       (item: DataManagerDataObject) => item.id === 'PF0001-RA0001'
     )[0];
@@ -280,13 +280,13 @@ describe('FormController', () => {
       enabled: ['PF0001-RA0001-RA0004'],
     }; // Mock request body
 
-    await formController.post(mockedRequest, mockedResponse, mockNext);
+    formController.post(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.redirect).toHaveBeenCalledWith(Route.REVIEW);
   });
 
-  test('should handle post request with checkbox no support selected', async () => {
+  test('should handle post request with checkbox no support selected', () => {
     const dataManager = new NewFlagsManager();
     dataManager.set(dataProcessorResultJson);
 
@@ -309,13 +309,13 @@ describe('FormController', () => {
       enabled: ['none'],
     }; // Mock request body
 
-    await formController.post(mockedRequest, mockedResponse, mockNext);
+    formController.post(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.redirect).toHaveBeenCalledWith(Route.REVIEW);
   });
 
-  test('should handle post request with radio no support selected', async () => {
+  test('should handle post request with radio no support selected', () => {
     const dataManager = new NewFlagsManager();
     dataManager.set(dataProcessorResultJson);
 
@@ -338,13 +338,13 @@ describe('FormController', () => {
       selected: 'none',
     }; // Mock request body
 
-    await formController.post(mockedRequest, mockedResponse, mockNext);
+    formController.post(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockedResponse.redirect).toHaveBeenCalledWith(Route.REVIEW);
   });
 
-  test('Post with empty data should return the same form with errors', async () => {
+  test('Post with empty data should return the same form with errors', () => {
     const dataManager = new NewFlagsManager();
     dataManager.set(dataProcessorResultJson);
 
@@ -365,7 +365,7 @@ describe('FormController', () => {
 
     mockedRequest.body = {}; // Mock request body
 
-    await formController.post(mockedRequest, mockedResponse, mockNext);
+    formController.post(mockedRequest, mockedResponse, mockNext);
 
     //console.log(mockedResponse.);
 
@@ -373,7 +373,7 @@ describe('FormController', () => {
     expect(mockedResponse.render).toHaveBeenCalledWith('forms/checkbox-group', expect.any(Object));
   });
 
-  test('should fail to Post', async () => {
+  test('should fail to Post', () => {
     const mockSession = {
       newmanager: {
         get: jest.fn().mockReturnValue(null),
@@ -392,7 +392,7 @@ describe('FormController', () => {
 
     mockedRequest.body = {}; // Mock request body
 
-    await formController.post(mockedRequest, mockedResponse, mockNext);
+    formController.post(mockedRequest, mockedResponse, mockNext);
 
     // Assert expected behavior here
     expect(mockNext).toHaveBeenCalledWith(new HTTPError(ErrorMessages.UNEXPECTED_ERROR, 404));
