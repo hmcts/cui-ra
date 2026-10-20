@@ -30,10 +30,10 @@ export class FormValidator {
     addErrors(this.ajv);
   }
 
-  static async validate(
+  static validate(
     processedItems: DataManagerDataObject[],
     parent: DataManagerDataObject
-  ): Promise<[ValidationErrors, DataManagerDataObject, DataManagerDataObject[] | null]> {
+  ): [ValidationErrors, DataManagerDataObject, DataManagerDataObject[] | null] {
     this.initialize();
 
     const [schema, type] = this.getSchema(parent);
