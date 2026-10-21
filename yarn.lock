@@ -5744,39 +5744,39 @@ __metadata:
   linkType: hard
 
 "allure-codeceptjs@npm:^3.13.0":
-  version: 3.13.0
-  resolution: "allure-codeceptjs@npm:3.13.0"
+  version: 3.14.0
+  resolution: "allure-codeceptjs@npm:3.14.0"
   dependencies:
-    allure-js-commons: "npm:3.13.0"
-    allure-mocha: "npm:3.13.0"
+    allure-js-commons: "npm:3.14.0"
+    allure-mocha: "npm:3.14.0"
   peerDependencies:
     codeceptjs: ">=2.3.6"
-  checksum: 10c0/9e8dab555937bc5cedf46ac3745955fbe1b1190d6d009c26ce7be5cf2bdc68f789292d657a93654dcfed23c9595a933e53db120fac1970da2fc4dbdb3fd4e954
+  checksum: 10c0/46d12f2498551051a437c333fc92c128923a78820007ac0b0a3ea554f4e12888722ed15784ac16f4267b9ed928d6e972a2c6caa43ed5318d3dd0bce9d4989433
   languageName: node
   linkType: hard
 
-"allure-js-commons@npm:3.13.0":
-  version: 3.13.0
-  resolution: "allure-js-commons@npm:3.13.0"
+"allure-js-commons@npm:3.14.0":
+  version: 3.14.0
+  resolution: "allure-js-commons@npm:3.14.0"
   dependencies:
     md5: "npm:^2.3.0"
   peerDependencies:
-    allure-playwright: 3.13.0
+    allure-playwright: 3.14.0
   peerDependenciesMeta:
     allure-playwright:
       optional: true
-  checksum: 10c0/1f196e61e16e342805238688a70dcb39f801fa5bb16204e8a4fe297b44f88ed6fa100c64488ac660d07ad73467ed448dadb91b9da06e43419ceef066cefbd288
+  checksum: 10c0/a61218f7852a88732a37e45d05d7b6f087f51ecb9dd2fdaf85540904d8664f3166a6fdb6a4d078bf84416cdebbe2852551c4b286569f2d328169249fec342b47
   languageName: node
   linkType: hard
 
-"allure-mocha@npm:3.13.0":
-  version: 3.13.0
-  resolution: "allure-mocha@npm:3.13.0"
+"allure-mocha@npm:3.14.0":
+  version: 3.14.0
+  resolution: "allure-mocha@npm:3.14.0"
   dependencies:
-    allure-js-commons: "npm:3.13.0"
+    allure-js-commons: "npm:3.14.0"
   peerDependencies:
     mocha: ">=6.2.0"
-  checksum: 10c0/687b941d67d5b27b6c0d10b7c741825c258cefa71d70f7dcfe5df05c66c99ed46e9e45ecb7cec16d27b15536af13d7425b3b9f982b0099f4ff385284e625a374
+  checksum: 10c0/c7dda625e46fe704b50495bce8e827dbc77f5c010fe0efc5d92443cd3b50b642806f39927babd1b733ab602b77d5c998100f3a64561750c31aac961a1ea0eb37
   languageName: node
   linkType: hard
 
