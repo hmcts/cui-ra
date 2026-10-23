@@ -41,7 +41,7 @@
             <div class="govuk-task-list__name-and-hint" id="remove-name-{{ item.id }}">
               {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
               {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
-                {{ item.value.path.slice(-1).pop().name }}
+                 {% if welsh === false %}{{ item.value.path.slice(-1).pop().name }}{% else %}{{ item.value.path.slice(-1).pop().name_cy }}{% endif %}
               {% endif %}
             </div>
             <div class="govuk-task-list__status">
@@ -95,7 +95,7 @@
             <div class="govuk-task-list__name-and-hint" id="add-name-{{ item.id }}">
               {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
               {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
-                {{ item.value.path.slice(-1).pop().name }}
+                 {% if welsh === false %}{{ item.value.path.slice(-1).pop().name }}{% else %}{{ item.value.path.slice(-1).pop().name_cy }}{% endif %}
               {% endif %}
             </div>
             <div class="govuk-task-list__status">

@@ -64,6 +64,7 @@ export class MainPayloadFlagData implements PayloadFlagData {
 export class MainPayloadFlagPath implements PayloadPath {
   id!: string;
   name!: string;
+  name_cy?: string;
 }
 
 export class OutboundPayload {

@@ -34,6 +34,7 @@ export interface PayloadCollectionItem {
 export interface PayloadPath {
   id: string | undefined;
   name: string;
+  name_cy?: string;
 }
 
 export interface PayloadFlagData {
