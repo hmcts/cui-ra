@@ -36,7 +36,7 @@
           <div class="overview-col1">
             {% if welsh === false %}{{ item.value.name }}{% else %}{{ item.value.name_cy }}{% endif %}
             {% if item.value.flagCode === common.OTHER_FLAG_CODE %}
-            {{ item.value.path.slice(-1).pop().name }}
+              {% if welsh === false %}{{ item.value.otherDescription }}{% else %}{{ item.value.otherDescription_cy }}{% endif %}
             {% endif %}
           </div>
           <div>
