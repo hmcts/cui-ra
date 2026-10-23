@@ -31,9 +31,6 @@ export const detailsSchema: SchemaType = {
                 name: {
                   type: 'string',
                 },
-                name_cy: {
-                  type: 'string',
-                },
                 id: {
                   type: 'string',
                 },
