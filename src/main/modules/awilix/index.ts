@@ -5,6 +5,7 @@ import {
   FormController,
   HomeController,
   ReviewController,
+  InvokerController,
 } from './../../controllers';
 import { Logger } from './../../interfaces';
 import { ExistingFlagProcessor, FlagProcessor } from './../../processors';
@@ -59,6 +60,7 @@ export class Container {
       dataController: asClass(DataController),
       demoController: asClass(DemoController),
       reviewController: asClass(ReviewController),
+      invokerController: asClass(InvokerController),
     });
     app.locals.container = container;
   }

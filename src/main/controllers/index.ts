@@ -4,3 +4,4 @@ export * from './formController';
 export * from './dataController';
 export * from './demoController';
 export * from './reviewController';
+export * from './invokerController';
