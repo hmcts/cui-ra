@@ -32,6 +32,12 @@ export default function (app: Application): void {
     app.get(Route.DEMO_SERVICE_DUMMY, app.locals.container.cradle.demoController.serviceDummy);
   }
 
+  // Invoker Controller
+  app.get(Route.INVOKER, history.add, (req, res) => {
+    // Handle the invoker route
+    res.render('invoker');
+  });
+
   // Review Controller
   app.get(Route.REVIEW, initSession.init, history.add, app.locals.container.cradle.reviewController.get);
   app.get(Route.SET_INACTIVE, initSession.init, app.locals.container.cradle.reviewController.setInactive);

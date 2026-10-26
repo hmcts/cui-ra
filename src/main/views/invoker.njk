@@ -1,0 +1,20 @@
+{% extends "template.njk" %}
+
+{% from "./macros/csrf.njk" import csrfProtection %}
+
+{% if welsh === false %}
+    {% set nameValue = 'name' %}
+    {% set master_name = mastername %}
+{% else %}
+    {% set nameValue = 'name_cy' %}
+    {% set master_name = mastername_cy %}
+{% endif %}
+
+{% block content %}
+    <span class="govuk-caption-xl">{{ master_name }}</span>
+    <h1 class="govuk-heading-xl">Invoker</h1>
+
+    <p class="govuk-body">
+        This is the invoker.
+    </p>
+{% endblock %}
