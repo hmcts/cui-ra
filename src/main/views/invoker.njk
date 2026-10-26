@@ -17,4 +17,23 @@
     <p class="govuk-body">
         This is the invoker.
     </p>
+
+    <form action="/start-invoker" method="get">
+        <label for="journey" class="govuk-body govuk-!-font-weight-bold">Journey:</label>
+
+        <select class="govuk-body" id="journey" name="journey" required>
+          <option value="">-- Select a journey --</option>
+          <option value="new-journey">New Journey</option>
+          <option value="new-journey-welsh">New Journey Welsh</option>
+          <option value="new-journey-prl">New Journey Private Law ABA5</option>
+          <option value="new-journey-BAA2">New Journey BAA2</option>
+          <option value="new-journey-BAA5">New Journey BAA5</option>
+          <option value="new-journey-et">New Journey ET BHA1</option>
+          <option value="new-journey-et-welsh">New Journey Welsh ET BHA1 Welsh</option>
+          <option value="new-journey-party">New Journey as Party</option>
+        </select>
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">Enter</button>
+      </form>
+
 {% endblock %}

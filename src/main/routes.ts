@@ -32,6 +32,7 @@ export default function (app: Application): void {
     app.get(Route.DEMO_SERVICE_DUMMY, app.locals.container.cradle.demoController.serviceDummy);
     // Invoker Controller
     app.get(Route.INVOKER, history.add, app.locals.container.cradle.invokerController.get);
+    app.get(Route.START_INVOKER, history.add, app.locals.container.cradle.invokerController.startInvoker);
   }
 
 

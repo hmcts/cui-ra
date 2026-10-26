@@ -21,4 +21,5 @@ export const Route = {
   CANCEL: '/cancel',
   SIGN_OUT: '/sign-out',
   INVOKER: '/invoker',
+  START_INVOKER: '/start-invoker',
 } as const;
