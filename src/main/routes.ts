@@ -30,13 +30,14 @@ export default function (app: Application): void {
     app.get(Route.DEMO, history.add, app.locals.container.cradle.demoController.get);
     app.get(Route.START_DEMO, history.add, app.locals.container.cradle.demoController.startDemo);
     app.get(Route.DEMO_SERVICE_DUMMY, app.locals.container.cradle.demoController.serviceDummy);
+    // Invoker Controller
+    app.get(Route.INVOKER, history.add, (req, res) => {
+      // Handle the invoker route
+      res.render('invoker');
+    });
   }
 
-  // Invoker Controller
-  app.get(Route.INVOKER, history.add, (req, res) => {
-    // Handle the invoker route
-    res.render('invoker');
-  });
+
 
   // Review Controller
   app.get(Route.REVIEW, initSession.init, history.add, app.locals.container.cradle.reviewController.get);
