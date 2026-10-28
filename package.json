@@ -133,7 +133,7 @@
     "puppeteer": "^25.16.0",
     "sass": "^1.75.0",
     "sass-loader": "^17.0.0",
-    "sinon": "^21.0.0",
+    "sinon": "^22.0.0",
     "striptags": "3.2.0",
     "style-loader": "^4.0.0",
     "supertest": "^7.0.0",
