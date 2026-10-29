@@ -29,7 +29,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@azure/identity", "npm:4.14.0"],\
-          ["@azure/keyvault-secrets", "npm:4.11.2"],\
+          ["@azure/keyvault-secrets", "npm:4.12.0"],\
           ["@babel/core", "npm:8.0.9"],\
           ["@babel/eslint-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:8.0.7"],\
           ["@babel/preset-env", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:8.0.7"],\
@@ -792,8 +792,8 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@azure/keyvault-secrets", [\
-      ["npm:4.11.2", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-keyvault-secrets-npm-4.11.2-eb06abf419-10c0.zip/node_modules/@azure/keyvault-secrets/",\
+      ["npm:4.12.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@azure-keyvault-secrets-npm-4.12.0-37f6da5758-10c0.zip/node_modules/@azure/keyvault-secrets/",\
         "packageDependencies": [\
           ["@azure-rest/core-client", "npm:2.5.1"],\
           ["@azure/abort-controller", "npm:2.1.2"],\
@@ -804,7 +804,7 @@ const RAW_RUNTIME_STATE =
           ["@azure/core-tracing", "npm:1.3.1"],\
           ["@azure/core-util", "npm:1.13.1"],\
           ["@azure/keyvault-common", "npm:2.1.0"],\
-          ["@azure/keyvault-secrets", "npm:4.11.2"],\
+          ["@azure/keyvault-secrets", "npm:4.12.0"],\
           ["@azure/logger", "npm:1.3.0"],\
           ["tslib", "npm:2.8.1"]\
         ],\
@@ -4658,7 +4658,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/@hmcts-properties-volume-npm-1.4.1-b28ede9351-10c0.zip/node_modules/@hmcts/properties-volume/",\
         "packageDependencies": [\
           ["@azure/identity", "npm:4.14.0"],\
-          ["@azure/keyvault-secrets", "npm:4.11.2"],\
+          ["@azure/keyvault-secrets", "npm:4.12.0"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
           ["@hmcts/properties-volume", "npm:1.4.1"],\
           ["js-yaml", "npm:4.3.2"],\
@@ -10421,7 +10421,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@azure/identity", "npm:4.14.0"],\
-          ["@azure/keyvault-secrets", "npm:4.11.2"],\
+          ["@azure/keyvault-secrets", "npm:4.12.0"],\
           ["@babel/core", "npm:8.0.9"],\
           ["@babel/eslint-parser", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:8.0.7"],\
           ["@babel/preset-env", "virtual:1730f2fbf87c831202e1f74ff575c0d8f39bda3d9b31fc681067e5bd9ffc1449519266fe2ce8dfa31ec6e768eed28b92acea6fac57456be77fa54bbae7642c8b#npm:8.0.7"],\
