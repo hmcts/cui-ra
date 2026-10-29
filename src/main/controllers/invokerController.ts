@@ -1,6 +1,6 @@
 import autobind from 'autobind-decorator';
 import { NextFunction, Request, Response } from 'express';
-
+import {localServiceMappings} from '../../../config/localServiceMappings';
 
 @autobind
 export class InvokerController {
@@ -24,9 +24,20 @@ export class InvokerController {
 
   public async startInvoker(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
-      // const service = req.query.journey;
+      const service = req.query.journey;
 
+      console.log(`Service selected: ${service}`);
 
+      const mapping = service ? localServiceMappings[service.toString()] : undefined;
+
+      if (!mapping) {
+        console.log(`No mapping found for service: ${service}`);
+        return
+      }
+
+      const serviceId = mapping[0];
+
+      console.log(service, serviceId);
 
       return res.render('invoker');
     }
