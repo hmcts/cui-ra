@@ -24,6 +24,8 @@ export class InvokerController {
 
   public async startInvoker(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
+
+      // fetch service id based on service selected
       const service = req.query.journey;
 
       console.log(`Service selected: ${service}`);
@@ -38,6 +40,10 @@ export class InvokerController {
       const serviceId = mapping[0];
 
       console.log(service, serviceId);
+
+      // fetch case flags using service id
+
+
 
       return res.render('invoker');
     }
