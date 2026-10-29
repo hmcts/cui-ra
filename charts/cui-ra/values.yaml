@@ -28,3 +28,4 @@ nodejs:
     SERVICES_REFDATA_ENDPOINT: http://rd-commondata-api-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal
     SERVICES_S2S_ENDPOINT: http://rpe-service-auth-provider-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal
     S2S_ALLOWED_SERVICES: 'prl_citizen_frontend, et_sya, et_syr, pcs_frontend'
+    SERVICE_REF_DATA_MAPPING: '[{"service":"IA", "serviceCodes":["BFA1"]}, {"service":"CIVIL", "serviceCodes":["AAA6", "AAA7"]}, {"service":"PRIVATELAW", "serviceCodes":["ABA5"]}, {"service":"PUBLICLAW", "serviceCodes":["ABA3"]}, {"service":"SSCS", "serviceCodes":["BBA3"]}, {"service":"ST_CIC", "serviceCodes":["BBA2"]}, {"service":"EMPLOYMENT", "serviceCodes":["BHA1"]}, {"service":"DIVORCE", "serviceCodes":["ABA1"]}, {"service":"FR", "serviceCodes":["ABA2"]}, {"service":"PROBATE", "serviceCodes":["ABA6"]}, {"service":"PCS", "serviceCodes":["AAA3"]}]'

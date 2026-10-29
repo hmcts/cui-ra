@@ -8,10 +8,11 @@ export class InvokerController {
     // Add code here to populate payloads/session for demo purposes.
     try {
       // these shouldn't be static - setting for now
-      req.session.hmctsserviceid = 'XXXX';
+      // fetch from service/config ?
+      req.session.hmctsserviceid = 'XXXX'; // fetch when service is selected
       req.session.history = [];
       req.session.masterflagcode = 'RA0001';
-      req.session.mastername = 'Reasonable adjustment';
+      req.session.mastername = 'Reasonable adjustment'; // welsh translation, language interpreter
       req.session.mastername_cy = 'Addasiad rhesymol';
       req.session.partyname = 'john doe';
 
@@ -23,49 +24,10 @@ export class InvokerController {
 
   public async startInvoker(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
-      const action = req.query.journey;
+      // const service = req.query.journey;
 
-      switch (action) {
-        case 'new-journey': {
-          console.log('Starting new journey');
-          break;
-        }
 
-        case 'new-journey-welsh': {
-          console.log('Starting new journey in welsh');
-          break;
-        }
 
-        case 'new-journey-prl': {
-          console.log('Starting new journey in prl');
-          break;
-        }
-
-        case 'new-journey-BAA2': {
-          console.log('Starting new journey in BAA2');
-          break;
-        }
-
-        case 'new-journey-BAA5': {
-          console.log('Starting new journey in BAA5');
-          break;
-        }
-
-        case 'new-journey-et': {
-          console.log('Starting new journey in et');
-          break;
-        }
-
-        case 'new-journey-et-welsh': {
-          console.log('Starting new journey in et welsh');
-          break;
-        }
-
-        case 'new-journey-party': {
-          console.log('Starting new journey in party');
-          break;
-        }
-      }
       return res.render('invoker');
     }
     catch (e) {
