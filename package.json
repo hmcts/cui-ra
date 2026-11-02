@@ -152,7 +152,8 @@
   },
   "packageManager": "yarn@4.18.1",
   "resolutions": {
-    "@opentelemetry/core": "^2.8.0"
+    "@opentelemetry/core": "^2.8.0",
+    "glob": "npm:14.0.3"
   },
   "dependenciesMeta": {
     "govuk-frontend": {
