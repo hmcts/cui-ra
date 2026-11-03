@@ -1,9 +1,27 @@
 import autobind from 'autobind-decorator';
 import { NextFunction, Request, Response } from 'express';
 import { localServiceMappings } from '../../../config/localServiceMappings';
+import { IdamTokenService } from '../services/idamToken';
+import {
+  // DataManagerDataObject,
+  // FlagProcessorInterface,
+  ReferenceData,
+  ServiceAuth,
+  // ServiceConfigFlagInterface,
+} from './../interfaces';
+// import { NewFlagsManager } from './../managers';
+import { flagResourceType } from './../services';
+// import { DataTimeUtilities, ServiceConfig } from './../utilities';
+// import { MasterNotFoundError } from '../errors';
 
 @autobind
 export class InvokerController {
+  constructor(
+    private readonly refdata: ReferenceData,
+    // private readonly flagProcessor: FlagProcessorInterface,
+    private readonly serviceAuth: ServiceAuth
+  ) {}
+
   public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
     // Add code here to populate payloads/session for demo purposes.
     try {
@@ -41,6 +59,38 @@ export class InvokerController {
       console.log(service, serviceId);
 
       // fetch case flags using service id
+      // manual check for onboarded services - add services or replace logic later
+      if (serviceId == 'ABA5' || serviceId == 'BHA1' || serviceId == 'AAA3') {
+        console.log('Service onboarded. Fetching case flags...');
+        req.session.hmctsserviceid = serviceId;
+        req.session.welsh = false;
+        req.session.history = [];
+
+        const serviceToken = await this.serviceAuth.getToken();
+
+        const idamToken = await new IdamTokenService().generateIdamToken();
+        if (idamToken) {
+          console.log('IDAM token generated successfully');
+        }
+
+        const refdata = await this.refdata.getFlags(
+          serviceToken,
+          idamToken,
+          serviceId,
+          flagResourceType.PARTY,
+          true
+        );
+
+        if (refdata) {
+          console.log('case flags found');
+        }
+        else {
+          console.log('No case flags found');
+          }
+
+      } else {
+        console.log('Service not yet onboarded.');
+      }
 
       return res.render('invoker');
     } catch (e) {
