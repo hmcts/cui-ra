@@ -3,30 +3,31 @@ import { NextFunction, Request, Response } from 'express';
 import { localServiceMappings } from '../../../config/localServiceMappings';
 import { IdamTokenService } from '../services/idamToken';
 import {
-  // DataManagerDataObject,
-  // FlagProcessorInterface,
+  DataManagerDataObject,
+  FlagProcessorInterface,
   ReferenceData,
   ServiceAuth,
-  // ServiceConfigFlagInterface,
+  ServiceConfigFlagInterface,
 } from './../interfaces';
-// import { NewFlagsManager } from './../managers';
 import { flagResourceType } from './../services';
-// import { DataTimeUtilities, ServiceConfig } from './../utilities';
-// import { MasterNotFoundError } from '../errors';
+import { NewFlagsManager } from '../managers';
+import { DataTimeUtilities, ServiceConfig, UrlRoute } from './../utilities';
+import { MasterNotFoundError } from '../errors';
+import { Route } from '../constants';
 
 @autobind
 export class InvokerController {
   constructor(
     private readonly refdata: ReferenceData,
-    // private readonly flagProcessor: FlagProcessorInterface,
-    private readonly serviceAuth: ServiceAuth
+    private readonly flagProcessor: FlagProcessorInterface,
+    private readonly serviceAuth: ServiceAuth,
   ) {}
 
   public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
     // Add code here to populate payloads/session for demo purposes.
     try {
       // these shouldn't be static - setting for now
-      // fetch from service/config ?
+      // serviceid is currently fetched from the frontend in startInvoker - do I need to fetch it here?
       req.session.hmctsserviceid = 'XXXX'; // fetch when service is selected
       req.session.history = [];
       req.session.masterflagcode = 'RA0001';
@@ -66,6 +67,8 @@ export class InvokerController {
         req.session.welsh = false;
         req.session.history = [];
 
+        // missing option for existing journey
+
         const serviceToken = await this.serviceAuth.getToken();
 
         const idamToken = await new IdamTokenService().generateIdamToken();
@@ -73,21 +76,54 @@ export class InvokerController {
           console.log('IDAM token generated successfully');
         }
 
-        const refdata = await this.refdata.getFlags(
-          serviceToken,
-          idamToken,
-          serviceId,
-          flagResourceType.PARTY,
-          true
-        );
+        const refdata = await this.refdata.getFlags(serviceToken, idamToken, serviceId, flagResourceType.PARTY, true);
 
         if (refdata) {
           console.log('case flags found');
-        }
-        else {
-          console.log('No case flags found');
-          }
+          // console.log(`Case Flags: ${JSON.stringify(refdata)}`);
 
+          const processedData: DataManagerDataObject[] = this.flagProcessor.processAll(
+            DataTimeUtilities.getDateTime(),
+            refdata,
+            req.session.welsh
+          );
+
+          req.session.newmanager = new NewFlagsManager();
+          req.session.newmanager.set(processedData);
+
+          // console.log(`Processed Data: ${JSON.stringify(processedData)}`);
+
+          req.session.newmanager = new NewFlagsManager();
+          req.session.newmanager.set(processedData);
+
+          const config = new ServiceConfig(req.session.hmctsserviceid);
+          //remove flags before processing
+          const flagsToRemove: string[] = config
+            .getFlags()
+            .filter((item: ServiceConfigFlagInterface) => item.remove === true)
+            .map(item => item.flagCode);
+          //newFlagsManager remove items based on flagcodes
+          req.session.newmanager.deleteFlagCodeByDotKeyList(flagsToRemove);
+
+          // using default master flag code - may need to be changed down the line
+          req.session.masterflagcode = 'RA0001';
+          const master: DataManagerDataObject | null = req.session.newmanager.setMaster(req.session.masterflagcode);
+          if (!master) {
+            throw new MasterNotFoundError(`Master flag with code ${req.session.masterflagcode} not found`);
+          }
+          req.session.mastername = master.value.name;
+          req.session.mastername_cy = master.value.name_cy;
+
+          req.session.sessioninit = true;
+
+
+          return res
+            .status(301)
+            .redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: master.id }, UrlRoute.url(req)));
+
+        } else {
+          console.log('No case flags found');
+        }
       } else {
         console.log('Service not yet onboarded.');
       }
