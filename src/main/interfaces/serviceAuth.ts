@@ -1,5 +1,5 @@
 export interface ServiceAuth {
-  getOneTimeToken(): string;
+  getOneTimeToken(): Promise<string>;
   getToken(): Promise<string>;
   validateToken(token: string): Promise<string>;
 }
