@@ -20,7 +20,7 @@ export class S2S implements ServiceAuth {
       return await generate({
         secret: this.secret,
         guardrails: createGuardrails({
-          MIN_SECRET_BYTES: 10, 
+          MIN_SECRET_BYTES: 10,
         }),
       });
     } catch (error) {
