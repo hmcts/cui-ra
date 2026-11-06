@@ -1,6 +1,6 @@
 import { S2S } from '../../../../main/services';
 import { mockAxios, mockLogger } from '../../mocks';
-import { authenticator } from 'otplib';
+import { generate, createGuardrails } from 'otplib';
 import { S2SError, TokenFormatError, TokenInvalidError, UnauthorisedError } from './../../../../main/errors';
 import { ErrorMessages } from './../../../../main/constants';
 
@@ -13,7 +13,7 @@ const response = {
   data: expectedToken,
 };
 
-const secret = 'randomstring';
+const secret = 'JBSWY3DPEHPK3PXP';
 const service = new S2S(secret, 'servicename', axios, mockedLogger);
 
 /* eslint-disable jest/expect-expect */
@@ -115,8 +115,13 @@ describe('s2s service class', () => {
 
   test('Get one Time token', async () => {
     // eslint-disable-line @typescript-eslint/no-empty-function
-
-    const otp = authenticator.generate(secret);
+    //const { generate, createGuardrails } = await import('otplib');
+    const otp = await generate({
+      secret,
+      guardrails: createGuardrails({
+        MIN_SECRET_BYTES: 10,
+      }),
+    });
 
     expect(await service.getOneTimeToken()).toEqual(otp);
   });
