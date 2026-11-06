@@ -13,6 +13,7 @@ const response = {
   data: expectedToken,
 };
 
+// Test-only Base32 secret; it decodes to the 10-byte minimum required by the guardrail.
 const secret = 'JBSWY3DPEHPK3PXP';
 const service = new S2S(secret, 'servicename', axios, mockedLogger);
 
@@ -114,8 +115,6 @@ describe('s2s service class', () => {
   });
 
   test('Get one Time token', async () => {
-    // eslint-disable-line @typescript-eslint/no-empty-function
-    //const { generate, createGuardrails } = await import('otplib');
     const otp = await generate({
       secret,
       guardrails: createGuardrails({
