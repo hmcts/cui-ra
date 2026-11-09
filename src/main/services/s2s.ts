@@ -4,7 +4,7 @@ import { Logger, ServiceAuth } from './../interfaces';
 
 import autobind from 'autobind-decorator';
 import { AxiosInstance } from 'axios';
-import { authenticator } from 'otplib';
+import { generate, createGuardrails } from 'otplib';
 
 @autobind
 export class S2S implements ServiceAuth {
@@ -15,9 +15,14 @@ export class S2S implements ServiceAuth {
     private readonly logger: Logger
   ) {}
 
-  public getOneTimeToken(): string {
+  public async getOneTimeToken(): Promise<string> {
     try {
-      return authenticator.generate(this.secret);
+      return await generate({
+        secret: this.secret,
+        guardrails: createGuardrails({
+          MIN_SECRET_BYTES: 10,
+        }),
+      });
     } catch (error) {
       this.logger.error(error);
       throw new S2SError('Failed to generate one-time token');
@@ -28,7 +33,7 @@ export class S2S implements ServiceAuth {
     try {
       const body = {
         microservice: this.service,
-        oneTimePassword: this.getOneTimeToken(),
+        oneTimePassword: await this.getOneTimeToken(),
       };
       const response = await this.client.post('/lease', body);
       if (response.status !== 200) {
