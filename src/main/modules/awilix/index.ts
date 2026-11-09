@@ -10,6 +10,7 @@ import {
 import { Logger } from './../../interfaces';
 import { ExistingFlagProcessor, FlagProcessor } from './../../processors';
 import { FileStorageClient, RedisClient, RefData, S2S } from './../../services';
+import { IdamTokenService } from '../../services/idamToken';
 
 import { InjectionMode, asClass, asValue, createContainer } from 'awilix';
 import axios from 'axios';
@@ -52,6 +53,7 @@ export class Container {
                 key: config.get('session.redis.key'),
                 urlStart: config.get('session.redis.urlStart'),
               })),
+      idamTokenService: asClass(IdamTokenService).singleton(),
       flagProcessor: asClass(FlagProcessor),
       existingFlagProcessor: asClass(ExistingFlagProcessor),
       homeController: asClass(HomeController),

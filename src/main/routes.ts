@@ -33,6 +33,7 @@ export default function (app: Application): void {
     // Invoker Controller
     app.get(Route.INVOKER, history.add, app.locals.container.cradle.invokerController.get);
     app.get(Route.START_INVOKER, history.add, app.locals.container.cradle.invokerController.startInvoker);
+    app.get(Route.GENERATE_IDAM_TOKEN, app.locals.container.cradle.invokerController.generateIdamToken);
   }
 
   // Review Controller

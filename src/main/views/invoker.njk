@@ -18,10 +18,24 @@
         This is the invoker.
     </p>
 
+    <form action="/generate-idam-token" method="get">
+            {{ csrfProtection() }}
+
+              <input class="govuk-textarea" type="text" id="idamTokenTextbox" name="idamTextbox" value="{{ idamToken }}"
+                                                                                                   readonly>
+              </input>
+
+              <button type="submit" class="govuk-button" data-module="govuk-button">Generate IDAM Token</button>
+
+         </form>
+
+
+
+
     <form action="/start-invoker" method="get">
         <label for="journey" class="govuk-body govuk-!-font-weight-bold">Journey:</label>
 
-        <select class="govuk-body" id="journey" name="journey" required>
+        <select class="govuk-body govuk-select" id="journey" name="journey" required>
           <option value="">-- Select a journey --</option>
           <option value="IA">Immigration and Asylum</option>
           <option value="CIVIL">Civil</option>
@@ -36,12 +50,11 @@
           <option value="PCS">Possession Claims Service</option>
         </select>
 
-        <button type="submit" class="govuk-button" data-module="govuk-button">Enter</button>
-      </form>
-
-      {# generate idam token #}
+        <button type="submit" class="govuk-button" data-module="govuk-button">Start Invoker</button>
 
 
+
+    </form>
 
 
 

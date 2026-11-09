@@ -22,4 +22,5 @@ export const Route = {
   SIGN_OUT: '/sign-out',
   INVOKER: '/invoker',
   START_INVOKER: '/start-invoker',
+  GENERATE_IDAM_TOKEN: '/generate-idam-token',
 } as const;

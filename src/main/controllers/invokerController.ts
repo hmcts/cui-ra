@@ -1,7 +1,6 @@
 import autobind from 'autobind-decorator';
 import { NextFunction, Request, Response } from 'express';
 import { localServiceMappings } from '../../../config/localServiceMappings';
-import { IdamTokenService } from '../services/idamToken';
 import {
   DataManagerDataObject,
   FlagProcessorInterface,
@@ -14,6 +13,7 @@ import { NewFlagsManager } from '../managers';
 import { DataTimeUtilities, ServiceConfig, UrlRoute } from './../utilities';
 import { MasterNotFoundError } from '../errors';
 import { Route } from '../constants';
+import { IdamTokenService } from '../services/idamToken';
 
 @autobind
 export class InvokerController {
@@ -21,6 +21,8 @@ export class InvokerController {
     private readonly refdata: ReferenceData,
     private readonly flagProcessor: FlagProcessorInterface,
     private readonly serviceAuth: ServiceAuth,
+    private readonly idamTokenService: IdamTokenService,
+
   ) {}
 
   public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
@@ -35,7 +37,9 @@ export class InvokerController {
       req.session.mastername_cy = 'Addasiad rhesymol';
       req.session.partyname = 'john doe';
 
-      res.render('invoker');
+      return res.render('invoker', {
+        idamToken: req.session.idamToken ?? '',
+      });
     } catch (e) {
       next(e);
     }
@@ -45,6 +49,8 @@ export class InvokerController {
     try {
       // fetch service id based on service selected
       const service = req.query.journey;
+      // const idamToken: string = req.query.idamTextbox?.toString() ?? '';
+      const idamToken = req.session.idamToken?.toString() ?? '';
 
       console.log(`Service selected: ${service}`);
 
@@ -71,10 +77,12 @@ export class InvokerController {
 
         const serviceToken = await this.serviceAuth.getToken();
 
-        const idamToken = await new IdamTokenService().generateIdamToken();
+        /*const idamToken = await new IdamTokenService().generateIdamToken();
         if (idamToken) {
           console.log('IDAM token generated successfully');
-        }
+        }*/
+
+
 
         const refdata = await this.refdata.getFlags(serviceToken, idamToken, serviceId, flagResourceType.PARTY, true);
 
@@ -145,6 +153,17 @@ export class InvokerController {
       return next(e);
     }
   }
+
+  public async generateIdamToken(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      req.session.idamToken = await this.idamTokenService.generateIdamToken();
+
+      return res.redirect(Route.INVOKER);
+    } catch (e) {
+      return next(e);
+    }
+  }
+
 
   /*private setSessionData(
     req: Request,
