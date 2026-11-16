@@ -9,7 +9,7 @@ import {
   ServiceConfigFlagInterface,
 } from './../interfaces';
 import { flagResourceType } from './../services';
-import { NewFlagsManager } from '../managers';
+import { ExistingFlagsManager, NewFlagsManager } from '../managers';
 import { DataTimeUtilities, ServiceConfig, UrlRoute } from './../utilities';
 import { MasterNotFoundError } from '../errors';
 import { Route } from '../constants';
@@ -21,8 +21,7 @@ export class InvokerController {
     private readonly refdata: ReferenceData,
     private readonly flagProcessor: FlagProcessorInterface,
     private readonly serviceAuth: ServiceAuth,
-    private readonly idamTokenService: IdamTokenService,
-
+    private readonly idamTokenService: IdamTokenService
   ) {}
 
   public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
@@ -51,6 +50,7 @@ export class InvokerController {
       const service = req.query.journey;
       // const idamToken: string = req.query.idamTextbox?.toString() ?? '';
       const idamToken = req.session.idamToken?.toString() ?? '';
+      const host = 'https://cui-ra.aat.platform.hmcts.net';
 
       console.log(`Service selected: ${service}`);
 
@@ -81,8 +81,6 @@ export class InvokerController {
         if (idamToken) {
           console.log('IDAM token generated successfully');
         }*/
-
-
 
         const refdata = await this.refdata.getFlags(serviceToken, idamToken, serviceId, flagResourceType.PARTY, true);
 
@@ -124,11 +122,11 @@ export class InvokerController {
 
           req.session.sessioninit = true;
 
+          this.setSessionData(req, host, req.session.newmanager, serviceId, false);
 
           return res
             .status(301)
             .redirect(UrlRoute.make(Route.JOURNEY_DISPLAY_FLAGS, { id: master.id }, UrlRoute.url(req)));
-
         } else {
           console.log('No case flags found');
         }
@@ -164,13 +162,20 @@ export class InvokerController {
     }
   }
 
-
-  /*private setSessionData(
+  private setSessionData(
     req: Request,
     host: string,
     newManager: NewFlagsManager,
     hmctsServiceId: string,
     welsh: boolean,
     existingManager: ExistingFlagsManager = new ExistingFlagsManager()
-  ): void {}*/
+  ): void {
+    req.session.newmanager = newManager;
+    req.session.existingmanager = existingManager;
+    req.session.callbackUrl = `${host}${Route.DEMO_SERVICE_DUMMY}`;
+    req.session.logoutUrl = `${host}${Route.ROOT}`;
+    req.session.hmctsserviceid = hmctsServiceId;
+    req.session.sessioninit = true;
+    req.session.welsh = welsh;
+  }
 }
