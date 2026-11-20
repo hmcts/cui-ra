@@ -60,6 +60,8 @@
     },
     html: feedbackHtml
   }) }}
+  {# Render the nested beforeContent block (e.g. back links) from child templates #}
+  {{ super() }}
 {% endblock %}
 
 {% block content %}
