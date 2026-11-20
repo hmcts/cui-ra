@@ -1,18 +1,11 @@
-nav.single-item-navigation {
-  @include govuk-media-query($from: desktop) {
-    float: right;
-    margin-right: govuk-spacing(2);
-  }
+// GOV.UK Frontend v6: the header (govukHeader) only shows the GOV.UK logo;
+// the service name and Sign out link live in govukServiceNavigation.
 
-  text-align: right;
-
-  ul {
-    li.govuk-header__navigation-item--active {
-      a:link,
-      a:hover,
-      a:visited {
-        color: govuk-colour('white');
-      }
+.app-service-navigation {
+  // Keep Sign out on the right, next to the service name
+  .govuk-service-navigation__list {
+    @include govuk-media-query($from: tablet) {
+      justify-content: flex-end;
     }
   }
 }

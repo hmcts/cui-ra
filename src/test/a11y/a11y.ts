@@ -80,7 +80,7 @@ function runPally(url: string, options: {} = {}): Promise<Pa11yResult> {
   fs.mkdirSync(screenshotDir, { recursive: true });
   let filename = url.replace(/https?:\/\//gi, '').replace(/[^a-zA-Z0-9.-]/g, '_');
   let opt = {
-    hideElements: '.govuk-footer__licence-logo, .govuk-header__logotype-crown',
+    hideElements: '.govuk-footer__licence-logo, .govuk-footer__crown, .govuk-header__logotype',
     screenCapture: `${screenshotDir}/${filename}.png`,
     wait: 500,
   };
@@ -141,7 +141,7 @@ async function setupSession(url: string): Promise<any[]> {
 
   await page.click('#demonew');
 
-  await page.waitForSelector('.logged-in');
+  await page.waitForSelector('#logout');
 
   const cookies = await page.cookies(url);
 
