@@ -140,8 +140,8 @@ async function setupSession(url: string): Promise<any[]> {
   });
 
   await page.click('#demonew');
-
-  await page.waitForSelector('.logged-in');
+  
+  await page.waitForSelector('#logout');
 
   const cookies = await page.cookies(url);
 
