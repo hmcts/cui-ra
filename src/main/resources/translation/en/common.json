@@ -19,15 +19,15 @@
   "footer": {
     "cookies": "Cookies",
     "cookiesUrl": "/home/cookies",
-    "privacyPolicy": "Privacy Policy",
+    "privacyPolicy": "Privacy",
     "privacyPolicyUrl": "/home/privacy-policy",
-    "termsAndConditions": "Terms and Conditions",
+    "termsAndConditions": "Terms and conditions",
     "termsAndConditionsUrl": "/home/terms-and-conditions",
     "helpUsingGovUk": "Help using GOV.UK",
     "helpUsingGovUkUrl": "https://www.gov.uk/help",
     "contactUs": "Contact us",
     "contactUsUrl": "https://www.gov.uk/contact",
-    "accessibilityStatement": "Accessibility statement",
+    "accessibilityStatement": "Accessibility",
     "accessibilityStatementUrl": "/home/accessibility-statement"
   },
   "overview": {
