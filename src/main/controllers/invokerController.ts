@@ -7,13 +7,13 @@ import {
   ReferenceData,
   ServiceAuth,
   ServiceConfigFlagInterface,
-} from './../interfaces';
-import { flagResourceType } from './../services';
+} from '../interfaces';
+import { flagResourceType } from '../services';
 import { ExistingFlagsManager, NewFlagsManager } from '../managers';
-import { DataTimeUtilities, ServiceConfig, UrlRoute } from './../utilities';
+import { DataTimeUtilities, ServiceConfig, UrlRoute } from '../utilities';
 import { MasterNotFoundError } from '../errors';
 import { Route } from '../constants';
-import { IdamTokenService } from '../services/idamToken';
+import { IdamTokenService } from '../services';
 
 @autobind
 export class InvokerController {
@@ -25,20 +25,10 @@ export class InvokerController {
   ) {}
 
   public async get(req: Request, res: Response, next: NextFunction): Promise<void> {
-    // Add code here to populate payloads/session for demo purposes.
     try {
-      // these shouldn't be static - setting for now
-      // serviceid is currently fetched from the frontend in startInvoker - do I need to fetch it here?
-      req.session.hmctsserviceid = 'XXXX'; // fetch when service is selected
       req.session.history = [];
-      req.session.masterflagcode = 'RA0001';
-      req.session.mastername = 'Reasonable adjustment'; // welsh translation, language interpreter
-      req.session.mastername_cy = 'Addasiad rhesymol';
-      req.session.partyname = 'john doe';
-
-      return res.render('invoker', {
-        idamToken: req.session.idamToken ?? '',
-      });
+      req.session.partyname = 'john doe'
+      return res.render('invoker', {idamToken: req.session.idamToken ?? '', });
     } catch (e) {
       next(e);
     }
@@ -46,14 +36,11 @@ export class InvokerController {
 
   public async startInvoker(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
-      // fetch service id based on service selected
+      // constants
       const service = req.query.journey;
-      // const idamToken: string = req.query.idamTextbox?.toString() ?? '';
       const idamToken = req.session.idamToken?.toString() ?? '';
       const host = 'https://cui-ra.aat.platform.hmcts.net';
-
       console.log(`Service selected: ${service}`);
-
       const mapping = service ? localServiceMappings[service.toString()] : undefined;
 
       if (!mapping) {
@@ -62,31 +49,19 @@ export class InvokerController {
       }
 
       const serviceId = mapping[0];
-
       console.log(service, serviceId);
 
-      // fetch case flags using service id
-      // manual check for onboarded services - add services or replace logic later
+      // fetch case flags using service id. only onboarded services will be reachable.
       if (serviceId == 'ABA5' || serviceId == 'BHA1' || serviceId == 'AAA3') {
         console.log('Service onboarded. Fetching case flags...');
         req.session.hmctsserviceid = serviceId;
         req.session.welsh = false;
-        req.session.history = [];
-
-        // missing option for existing journey
 
         const serviceToken = await this.serviceAuth.getToken();
-
-        /*const idamToken = await new IdamTokenService().generateIdamToken();
-        if (idamToken) {
-          console.log('IDAM token generated successfully');
-        }*/
-
         const refdata = await this.refdata.getFlags(serviceToken, idamToken, serviceId, flagResourceType.PARTY, true);
 
         if (refdata) {
           console.log('case flags found');
-          // console.log(`Case Flags: ${JSON.stringify(refdata)}`);
 
           const processedData: DataManagerDataObject[] = this.flagProcessor.processAll(
             DataTimeUtilities.getDateTime(),
@@ -96,14 +71,7 @@ export class InvokerController {
 
           req.session.newmanager = new NewFlagsManager();
           req.session.newmanager.set(processedData);
-
-          // console.log(`Processed Data: ${JSON.stringify(processedData)}`);
-
-          req.session.newmanager = new NewFlagsManager();
-          req.session.newmanager.set(processedData);
-
           const config = new ServiceConfig(req.session.hmctsserviceid);
-          //remove flags before processing
           const flagsToRemove: string[] = config
             .getFlags()
             .filter((item: ServiceConfigFlagInterface) => item.remove === true)
@@ -111,7 +79,6 @@ export class InvokerController {
           //newFlagsManager remove items based on flagcodes
           req.session.newmanager.deleteFlagCodeByDotKeyList(flagsToRemove);
 
-          // using default master flag code - may need to be changed down the line
           req.session.masterflagcode = 'RA0001';
           const master: DataManagerDataObject | null = req.session.newmanager.setMaster(req.session.masterflagcode);
           if (!master) {
