@@ -18,15 +18,39 @@
         <div class="govuk-grid-column-one-half">
 
 
-          <form action="/generate-idam-token" method="get">
-                  {{ csrfProtection() }}
+          {# IDAM token generation success #}
+            {% if hasIdamToken %}
+              <div
+                class="govuk-notification-banner govuk-notification-banner--success"
+                role="alert"
+                aria-labelledby="idam-token-success-title">
 
-                    <input class="govuk-textarea" type="text" id="idamTokenTextbox" name="idamTextbox" value="{{ idamToken }}">
-                    </input>
+                <div class="govuk-notification-banner__header">
+                  <h2
+                    class="govuk-notification-banner__title"
+                    id="idam-token-success-title">
+                    Success
+                  </h2>
+                </div>
 
-                    <button type="submit" class="govuk-button" data-module="govuk-button">Generate IDAM Token</button>
+                <div class="govuk-notification-banner__content">
+                  <p class="govuk-notification-banner__heading">
+                    IDAM token generated successfully
+                  </p>
+                </div>
+              </div>
+            {% endif %}
 
-               </form>
+            <form action="/generate-idam-token" method="post">
+              {{ csrfProtection(csrfToken) }}
+
+              <button
+                type="submit"
+                class="govuk-button"
+                data-module="govuk-button">
+                Generate IDAM token
+              </button>
+            </form>
 
 
 

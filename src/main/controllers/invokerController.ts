@@ -28,7 +28,11 @@ export class InvokerController {
     try {
       req.session.history = [];
       req.session.partyname = 'john doe'
-      return res.render('invoker', {idamToken: req.session.idamToken ?? '', });
+      res.render('invoker', {
+        hasIdamToken:
+          typeof req.session.idamToken === 'string' &&
+          req.session.idamToken.length > 0,
+      });
     } catch (e) {
       next(e);
     }
@@ -37,19 +41,32 @@ export class InvokerController {
   public async startInvoker(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
       // constants
-      const service = req.query.journey;
-      const idamToken = req.session.idamToken?.toString() ?? '';
-      const host = 'https://cui-ra.aat.platform.hmcts.net';
-      console.log(`Service selected: ${service}`);
-      const mapping = service ? localServiceMappings[service.toString()] : undefined;
+      const idamToken = req.session.idamToken;
 
-      if (!mapping) {
-        console.log(`No mapping found for service: ${service}`);
+      if (typeof idamToken !== 'string' || idamToken.length === 0) {
+        res.status(400).render('invoker', {
+          error: 'Generate an IDAM token before starting a journey.',
+          hasIdamToken: false,
+        });
         return;
       }
 
+      const host = 'https://cui-ra.aat.platform.hmcts.net';
+
+      const ALLOWED_JOURNEYS = new Set(['PRIVATELAW', 'EMPLOYMENT', 'PCS']);
+
+      const journey = req.query.journey;
+
+      if (typeof journey !== 'string' || !ALLOWED_JOURNEYS.has(journey)) {
+        res.status(400).render('invoker', {
+          error: 'Invalid journey selected.',
+        });
+        return;
+      }
+
+      const mapping = localServiceMappings[journey];
       const serviceId = mapping[0];
-      console.log(service, serviceId);
+      console.log(journey, serviceId);
 
       // fetch case flags using service id. only onboarded services will be reachable.
       if (serviceId == 'ABA5' || serviceId == 'BHA1' || serviceId == 'AAA3') {
