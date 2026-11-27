@@ -93,6 +93,13 @@
         "empty": "Tell us what type of therapy animal you want to bring and why"
       }
     },
+    "RA0031": {
+      "hint": "Where you can take breaks during your hearing when needed",
+      "control": "Most hearings have breaks around every two hours. Tell us if you need more frequent breaks and why",
+      "error": {
+        "empty": "Most hearings have breaks around every two hours. Tell us if you need more frequent breaks and why"
+      }
+    }, 
     "RA0033": {
       "control": "Tell us why you would need a private waiting area",
       "error": {

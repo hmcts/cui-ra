@@ -1928,7 +1928,7 @@
     "_parentId": "PF0001-RA0001-RA0006"
   },
   {
-    "_flagComment": false,
+    "_flagComment": true,
     "_isCategoryPage": false,
     "_enabled": false,
     "_other": false,

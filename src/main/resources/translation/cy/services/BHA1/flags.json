@@ -93,6 +93,13 @@
         "empty": "Dywedwch wrthym pa fath o anifail therapi yr hoffech ddod gyda chi a pham"
       }
     },
+    "RA0031": {
+      "hint": "Ble gallwch gymryd seibiau yn ystod eich gwrandawiad lle bo'r angen",
+      "control": "Mae'r mwyafrif o wrandawiadau yn cymryd saib bob dwy awr. Dywedwch wrthym os oes arnoch angen cymryd saib yn fwy aml na hyn a pham",
+      "error": {
+        "empty": "Mae'r mwyafrif o wrandawiadau yn cymryd saib bob dwy awr. Dywedwch wrthym os oes arnoch angen cymryd saib yn fwy aml na hyn a pham"
+      }
+    }, 
     "RA0033": {
       "control": "Dywedwch wrthym pam y byddai angen ardal aros breifat arnoch",
       "error": {
