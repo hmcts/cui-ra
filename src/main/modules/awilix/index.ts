@@ -5,10 +5,12 @@ import {
   FormController,
   HomeController,
   ReviewController,
+  InvokerController,
 } from './../../controllers';
 import { Logger } from './../../interfaces';
 import { ExistingFlagProcessor, FlagProcessor } from './../../processors';
 import { FileStorageClient, RedisClient, RefData, S2S } from './../../services';
+import { IdamTokenService } from '../../services/idamToken';
 
 import { InjectionMode, asClass, asValue, createContainer } from 'awilix';
 import axios from 'axios';
@@ -51,6 +53,7 @@ export class Container {
                 key: config.get('session.redis.key'),
                 urlStart: config.get('session.redis.urlStart'),
               })),
+      idamTokenService: asClass(IdamTokenService).singleton(),
       flagProcessor: asClass(FlagProcessor),
       existingFlagProcessor: asClass(ExistingFlagProcessor),
       homeController: asClass(HomeController),
@@ -59,6 +62,7 @@ export class Container {
       dataController: asClass(DataController),
       demoController: asClass(DemoController),
       reviewController: asClass(ReviewController),
+      invokerController: asClass(InvokerController),
     });
     app.locals.container = container;
   }

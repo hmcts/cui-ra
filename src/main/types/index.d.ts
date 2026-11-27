@@ -19,5 +19,6 @@ declare module 'express-session' {
     history: string[];
     welsh: boolean;
     correlationId?: string;
+    idamToken?: string;
   }
 }

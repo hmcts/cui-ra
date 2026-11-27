@@ -30,6 +30,10 @@ export default function (app: Application): void {
     app.get(Route.DEMO, history.add, app.locals.container.cradle.demoController.get);
     app.get(Route.START_DEMO, history.add, app.locals.container.cradle.demoController.startDemo);
     app.get(Route.DEMO_SERVICE_DUMMY, app.locals.container.cradle.demoController.serviceDummy);
+    // Invoker Controller
+    app.get(Route.INVOKER, history.add, app.locals.container.cradle.invokerController.get);
+    app.get(Route.START_INVOKER, history.add, app.locals.container.cradle.invokerController.startInvoker);
+    app.post(Route.GENERATE_IDAM_TOKEN, app.locals.container.cradle.invokerController.generateIdamToken);
   }
 
   // Review Controller

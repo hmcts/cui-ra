@@ -8,7 +8,7 @@ const { generateToken, csrfSynchronisedProtection } = csrfSync({
 
 export class CSRFToken {
   public enableFor(app: Application): void {
-    app.use([Route.JOURNEY_DISPLAY_FLAGS, Route.REVIEW], csrfSynchronisedProtection, (req, res, next) => {
+    app.use([Route.JOURNEY_DISPLAY_FLAGS, Route.REVIEW, Route.INVOKER, Route.GENERATE_IDAM_TOKEN], csrfSynchronisedProtection, (req, res, next) => {
       res.locals.csrfToken = generateToken(req);
       next();
     });
